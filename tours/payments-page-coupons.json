@@ -1,0 +1,124 @@
+{
+  "id": "payments-page-coupons",
+  "kind": "page",
+  "area": "payments",
+  "screen": "payments.payments-coupons",
+  "title": "Tour: Coupons",
+  "blurb": "Discount codes for your checkouts and bookings.",
+  "icon": "star",
+  "minutes": 2,
+  "keywords": [
+    "coupons",
+    "discount",
+    "promo code",
+    "voucher",
+    "sale",
+    "special"
+  ],
+  "steps": [
+    {
+      "id": "open-payments",
+      "title": "Open Payments",
+      "body": "Click **Payments** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_payments"
+        },
+        {
+          "text": "Payments",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/"
+      }
+    },
+    {
+      "id": "tab-payments-coupons",
+      "title": "Open Coupons",
+      "body": "Click **Coupons** along the top.",
+      "route": "^/payments/",
+      "go": "/payments/coupons",
+      "target": [
+        {
+          "css": "#tb_payments-coupons"
+        },
+        {
+          "text": "Coupons",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/coupons"
+      }
+    },
+    {
+      "id": "what",
+      "title": "What coupons do",
+      "body": "Customers enter a code at checkout to get money off. They work on funnels, your store, payment links and calendar bookings.",
+      "route": "^/payments/coupons",
+      "go": "/payments/coupons",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "create",
+      "title": "Make a coupon",
+      "body": "**Create Coupon** sets up a new code.",
+      "route": "^/payments/coupons",
+      "go": "/payments/coupons",
+      "target": [
+        {
+          "text": "Create Coupon",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create Coupon"
+    },
+    {
+      "id": "list",
+      "title": "Your codes",
+      "body": "See each code, its discount and how often it has been used. Open one to change dates or limits.",
+      "route": "^/payments/coupons",
+      "go": "/payments/coupons",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "limit",
+      "title": "Good to know",
+      "body": "Coupons do not work on invoices or estimates. Add a discount line on the invoice instead.",
+      "route": "^/payments/coupons",
+      "go": "/payments/coupons",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "Next step",
+      "body": "Next: try **Create a coupon code** from the Guide.",
+      "route": "^/payments/coupons",
+      "go": "/payments/coupons",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

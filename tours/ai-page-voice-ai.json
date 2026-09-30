@@ -1,0 +1,139 @@
+{
+  "id": "ai-page-voice-ai",
+  "kind": "page",
+  "area": "ai",
+  "screen": "ai.ai-agents-voice-ai",
+  "title": "Tour Voice AI",
+  "blurb": "An AI receptionist that answers your phone, books jobs and passes calls to you.",
+  "icon": "phone",
+  "minutes": 2,
+  "keywords": [
+    "voice ai",
+    "receptionist",
+    "phone",
+    "answer calls",
+    "ai phone",
+    "tour"
+  ],
+  "steps": [
+    {
+      "id": "open-ai-agents",
+      "title": "Open AI Agents",
+      "body": "Click **AI Agents** in the left menu.",
+      "target": [
+        {
+          "css": "[id='sb_AI Agents']"
+        },
+        {
+          "text": "AI Agents",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/"
+      }
+    },
+    {
+      "id": "open-ai-agents-voice-ai",
+      "title": "Open Voice AI",
+      "body": "Click the **Voice AI** tab.",
+      "route": "^/ai-agents/",
+      "go": "/ai-agents/voice-ai",
+      "target": [
+        {
+          "css": "#tb_ai-agents-voice-ai"
+        },
+        {
+          "text": "Voice AI"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/voice-ai"
+      }
+    },
+    {
+      "id": "list",
+      "title": "Your agents",
+      "body": "**Agent List** shows every voice agent and the number it answers.",
+      "route": "^/ai-agents/voice-ai",
+      "go": "/ai-agents/voice-ai",
+      "target": [
+        {
+          "text": "Agent List"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Agent List"
+    },
+    {
+      "id": "create",
+      "title": "Create an agent",
+      "body": "**Create from scratch** sets up a new receptionist from a template or from scratch.",
+      "route": "^/ai-agents/voice-ai",
+      "go": "/ai-agents/voice-ai",
+      "target": [
+        {
+          "text": "Create from scratch"
+        },
+        {
+          "text": "Create Agent"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create from scratch"
+    },
+    {
+      "id": "dashboard",
+      "title": "Calls and results",
+      "body": "**Dashboard & Logs** shows call volume, bookings made, transfers and full call recordings.",
+      "route": "^/ai-agents/voice-ai",
+      "go": "/ai-agents/voice-ai",
+      "target": [
+        {
+          "text": "Dashboard & Logs"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Dashboard & Logs"
+    },
+    {
+      "id": "before",
+      "title": "Before you go live",
+      "body": "You need a Luubu Phone number and a knowledge base. No number yet? Email hello@luubu.com.",
+      "route": "^/ai-agents/voice-ai",
+      "go": "/ai-agents/voice-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What to do first",
+      "body": "Next: try **Set up an AI receptionist** from the Guide.",
+      "route": "^/ai-agents/voice-ai",
+      "go": "/ai-agents/voice-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "id": "more-page-media-storage",
+  "kind": "page",
+  "area": "more",
+  "screen": "more.app-media",
+  "title": "Tour: Media Storage",
+  "blurb": "One home for your images, videos and documents.",
+  "icon": "image",
+  "minutes": 2,
+  "keywords": [
+    "media",
+    "files",
+    "images",
+    "upload",
+    "storage",
+    "photos",
+    "documents"
+  ],
+  "steps": [
+    {
+      "id": "open-media-storage",
+      "title": "Open Media Storage",
+      "body": "Click **Media Storage** in the left menu. Your images, videos and documents live here.",
+      "target": [
+        {
+          "css": "#sb_app-media"
+        },
+        {
+          "text": "Media Storage",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/media-storage"
+      }
+    },
+    {
+      "id": "upload",
+      "title": "Upload",
+      "body": "**Upload** adds files from your computer. You can also drag files straight onto the page.",
+      "route": "^/media-storage",
+      "go": "/media-storage",
+      "target": [
+        {
+          "text": "Upload",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Upload"
+    },
+    {
+      "id": "folders",
+      "title": "Folders",
+      "body": "Use folders to keep things tidy, like Logos, Job photos or Price lists.",
+      "route": "^/media-storage",
+      "go": "/media-storage",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "view",
+      "title": "Views and search",
+      "body": "Switch between grid and list view, sort by name, size or date, and search across every folder.",
+      "route": "^/media-storage",
+      "go": "/media-storage",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "trash",
+      "title": "Trash",
+      "body": "Deleted files go to **Trash** for 30 days, so you can get them back.",
+      "route": "^/media-storage",
+      "go": "/media-storage",
+      "target": [
+        {
+          "text": "Trash"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Trash"
+    },
+    {
+      "id": "next",
+      "title": "What's next",
+      "body": "Next: try **Upload files to Media Storage** from the Guide.",
+      "route": "^/media-storage",
+      "go": "/media-storage",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

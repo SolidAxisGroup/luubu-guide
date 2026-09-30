@@ -1,0 +1,112 @@
+{
+  "id": "conversations-filter-unread",
+  "kind": "howto",
+  "area": "conversations",
+  "screen": "conversations.conversations-tab",
+  "title": "Filter chats and clear your unread",
+  "blurb": "Find the messages that need you, then mark them read, starred or done.",
+  "icon": "chat",
+  "minutes": 3,
+  "keywords": [
+    "unread",
+    "filter",
+    "mark as read",
+    "star",
+    "assigned",
+    "sort",
+    "bulk",
+    "inbox zero"
+  ],
+  "steps": [
+    {
+      "id": "open-conversations",
+      "title": "Open Conversations",
+      "body": "Click **Conversations** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_conversations"
+        },
+        {
+          "text": "Conversations",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/conversations/"
+      }
+    },
+    {
+      "id": "unread",
+      "title": "See what's unread",
+      "body": "Unread chats are in bold and the counter shows how many are waiting. Opening a chat does not mark it read. It stays unread until you reply or mark it read, so nothing slips through.",
+      "route": "^/conversations/conversations",
+      "go": "/conversations/conversations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "filters",
+      "title": "Open filters",
+      "body": "Click the filter icon above the chat list. Add a rule such as **Filter By Assigned** is me, or **Filter By Tag** is hot-lead. The list updates straight away.",
+      "route": "^/conversations/conversations",
+      "go": "/conversations/conversations",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Filter By Assigned"
+    },
+    {
+      "id": "sort",
+      "title": "Change the order",
+      "body": "Use the sort option to show oldest first, so the people who've waited longest are at the top.",
+      "route": "^/conversations/conversations",
+      "go": "/conversations/conversations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "select",
+      "title": "Select several chats",
+      "body": "Tick the boxes next to the chats you want to tidy up. A toolbar appears at the top of the list.",
+      "route": "^/conversations/conversations",
+      "go": "/conversations/conversations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "bulk",
+      "title": "Mark them read or starred",
+      "body": "Click **Mark as Read** to clear them, or **Add Star** to flag ones to come back to.",
+      "route": "^/conversations/conversations",
+      "go": "/conversations/conversations",
+      "target": [
+        {
+          "text": "Mark as Read",
+          "tag": "button"
+        },
+        {
+          "text": "Add Star",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Mark as Read"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "id": "contacts-bulk-actions-check-import",
+  "kind": "howto",
+  "area": "contacts",
+  "screen": "contacts.bulk-actions",
+  "title": "Check an import and fix errors",
+  "blurb": "See how your spreadsheet import went and re-import any failed rows.",
+  "icon": "users",
+  "minutes": 3,
+  "keywords": [
+    "import status",
+    "import errors",
+    "failed rows",
+    "bulk actions",
+    "error log",
+    "csv"
+  ],
+  "steps": [
+    {
+      "id": "open-contacts",
+      "title": "Open Contacts",
+      "body": "Click **Contacts** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_contacts"
+        },
+        {
+          "text": "Contacts",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/contacts/"
+      }
+    },
+    {
+      "id": "tab-bulk-actions",
+      "title": "Open Bulk Actions",
+      "body": "Click **Bulk Actions** along the top.",
+      "route": "^/(contacts/|tasks|businesses/|settings/fields)",
+      "go": "/contacts/bulk/actions",
+      "target": [
+        {
+          "css": "#tb_bulk-actions"
+        },
+        {
+          "text": "Bulk Actions",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/contacts/bulk"
+      }
+    },
+    {
+      "id": "find",
+      "title": "Find your import",
+      "body": "Look for your import at the top of the list, or filter by action type.",
+      "route": "^/contacts/bulk",
+      "go": "/contacts/bulk/actions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "stats",
+      "title": "Open the stats",
+      "body": "Click **Show Stats** to see how many rows were added, updated or failed.",
+      "route": "^/contacts/bulk",
+      "go": "/contacts/bulk/actions",
+      "target": [
+        {
+          "text": "Show Stats"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Show Stats"
+    },
+    {
+      "id": "errors",
+      "title": "Download the errors",
+      "body": "Open the error list and download it. It tells you why each row failed, like a missing name or a badly formatted phone number.",
+      "route": "^/contacts/bulk",
+      "go": "/contacts/bulk/actions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "fix",
+      "title": "Fix and re-import",
+      "body": "Fix those rows in your spreadsheet, save just them as a new CSV, and import again from the contact list.",
+      "route": "^/contacts/bulk",
+      "go": "/contacts/bulk/actions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

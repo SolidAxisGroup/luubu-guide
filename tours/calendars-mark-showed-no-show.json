@@ -1,0 +1,99 @@
+{
+  "id": "calendars-mark-showed-no-show",
+  "kind": "howto",
+  "area": "calendars",
+  "screen": "calendars.apppontment-tab",
+  "title": "Mark showed or no-show",
+  "blurb": "Keep attendance up to date so follow-ups fire correctly.",
+  "icon": "calendar",
+  "minutes": 2,
+  "keywords": [
+    "showed",
+    "no show",
+    "status",
+    "attendance",
+    "confirmed",
+    "follow up"
+  ],
+  "steps": [
+    {
+      "id": "open-calendars",
+      "title": "Open Calendars",
+      "body": "Click **Calendars** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_calendars"
+        },
+        {
+          "text": "Calendars",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/calendars/"
+      }
+    },
+    {
+      "id": "tab-apppontment-tab",
+      "title": "Open Appointment list view",
+      "body": "Click **Appointment list view** along the top.",
+      "route": "^/calendars/",
+      "go": "/calendars/appointments",
+      "target": [
+        {
+          "css": "#tb_apppontment-tab"
+        },
+        {
+          "text": "Appointment list view",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/calendars/appointments"
+      }
+    },
+    {
+      "id": "find",
+      "title": "Find the booking",
+      "body": "Use **Upcoming** or **All** to find today's appointments.",
+      "route": "^/calendars/appointments",
+      "go": "/calendars/appointments",
+      "target": [
+        {
+          "text": "Upcoming"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Upcoming"
+    },
+    {
+      "id": "status",
+      "title": "Change the status",
+      "body": "Use the status dropdown on the row and pick **Showed** or **No Show**.",
+      "route": "^/calendars/appointments",
+      "go": "/calendars/appointments",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "why",
+      "title": "Why it matters",
+      "body": "Workflows can send a thank-you and review request to showed clients, and a rebook text to no-shows.",
+      "route": "^/calendars/appointments",
+      "go": "/calendars/appointments",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

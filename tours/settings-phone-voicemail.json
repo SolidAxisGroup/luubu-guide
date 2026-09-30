@@ -1,0 +1,118 @@
+{
+  "id": "settings-phone-voicemail",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.phone-system",
+  "title": "Set up your voicemail greeting",
+  "blurb": "Upload the greeting callers hear when nobody picks up.",
+  "icon": "phone",
+  "minutes": 3,
+  "keywords": [
+    "voicemail",
+    "greeting",
+    "message",
+    "mp3",
+    "missed calls",
+    "recording"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-phone-system",
+      "title": "Open Phone System",
+      "body": "Click **Phone System** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/phone_system",
+      "target": [
+        {
+          "css": "[id='sb_phone-system']"
+        },
+        {
+          "text": "Phone System",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/phone_system"
+      }
+    },
+    {
+      "id": "find",
+      "title": "Find voicemail settings",
+      "body": "Open the voice settings and find **Voicemail & Missed Call Text Back**.",
+      "route": "^/settings/phone_system",
+      "go": "/settings/phone_system",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Voicemail",
+      "tip": "See **Your phone system requires configuration**? We need to switch Luubu Phone on for you. Email hello@luubu.com."
+    },
+    {
+      "id": "record",
+      "title": "Record your greeting",
+      "body": "Record a short greeting on your phone and save it as an MP3 or WAV. Say your business name and when you will call back.",
+      "route": "^/settings/phone_system",
+      "go": "/settings/phone_system",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "upload",
+      "title": "Upload it",
+      "body": "Upload the file and save.",
+      "route": "^/settings/phone_system",
+      "go": "/settings/phone_system",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "users",
+      "title": "Staff greetings",
+      "body": "Staff can have their own greeting too. See **Set a team member's call and voicemail settings**.",
+      "route": "^/settings/phone_system",
+      "go": "/settings/phone_system",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "test",
+      "title": "Test it",
+      "body": "Call your number and let it ring out to hear the greeting.",
+      "route": "^/settings/phone_system",
+      "go": "/settings/phone_system",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

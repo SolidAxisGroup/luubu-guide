@@ -1,0 +1,92 @@
+{
+  "id": "reporting-call-recordings-export",
+  "kind": "howto",
+  "area": "reporting",
+  "screen": "reporting.call-reporting",
+  "title": "Listen to recordings and export calls",
+  "blurb": "Play back calls and export a call list to share.",
+  "icon": "phone",
+  "minutes": 2,
+  "keywords": [
+    "call recording",
+    "listen",
+    "export",
+    "csv",
+    "calls",
+    "download"
+  ],
+  "steps": [
+    {
+      "id": "open-reporting",
+      "title": "Open Reporting",
+      "body": "Click **Reporting** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reporting"
+        },
+        {
+          "text": "Reporting",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/"
+      }
+    },
+    {
+      "id": "open-call-reporting",
+      "title": "Open Call Reporting",
+      "body": "Click **Call Reporting**.",
+      "route": "^/reporting/",
+      "go": "/reporting/call",
+      "target": [
+        {
+          "css": "#tb_call-reporting"
+        },
+        {
+          "text": "Call Reporting",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/call"
+      }
+    },
+    {
+      "id": "table",
+      "title": "Find the call",
+      "body": "Scroll to the call table and find the call you want.",
+      "route": "^/reporting/call",
+      "go": "/reporting/call",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "play",
+      "title": "Listen",
+      "body": "Press play to hear the recording. Phone menu (IVR) calls may have more than one recording to choose from.",
+      "route": "^/reporting/call",
+      "go": "/reporting/call",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "export",
+      "title": "Export",
+      "body": "Export the list as a CSV, choosing the columns you want, to share with your team.",
+      "route": "^/reporting/call",
+      "go": "/reporting/call",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

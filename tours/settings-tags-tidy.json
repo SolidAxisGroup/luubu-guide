@@ -1,0 +1,92 @@
+{
+  "id": "settings-tags-tidy",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.tags",
+  "title": "Tidy up your tags",
+  "blurb": "Rename, recolour, group or delete tags in bulk.",
+  "icon": "users",
+  "minutes": 3,
+  "keywords": [
+    "tags",
+    "bulk",
+    "delete tags",
+    "rename",
+    "clean up",
+    "organise"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-tags",
+      "title": "Open Tags",
+      "body": "Click **Tags** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/tags",
+      "target": [
+        {
+          "css": "[id='sb_tags']"
+        },
+        {
+          "text": "Tags",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/tags"
+      }
+    },
+    {
+      "id": "search",
+      "title": "Find tags",
+      "body": "Use search to find similar tags, like \"vip\" and \"VIP customer\".",
+      "route": "^/settings/tags",
+      "go": "/settings/tags",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "bulk",
+      "title": "Bulk changes",
+      "body": "Tick several tags to move them into a category or give them one colour.",
+      "route": "^/settings/tags",
+      "go": "/settings/tags",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "delete",
+      "title": "Delete carefully",
+      "body": "Before deleting a tag, check no workflow, form or smart list uses it, or those will stop working as expected.",
+      "route": "^/settings/tags",
+      "go": "/settings/tags",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

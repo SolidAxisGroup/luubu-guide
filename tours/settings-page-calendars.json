@@ -1,0 +1,144 @@
+{
+  "id": "settings-page-calendars",
+  "kind": "page",
+  "area": "settings",
+  "screen": "settings.calendars",
+  "title": "Tour: Calendar settings",
+  "blurb": "Your booking calendars, availability and calendar connections.",
+  "icon": "calendar",
+  "minutes": 2,
+  "keywords": [
+    "calendar settings",
+    "booking",
+    "availability",
+    "google calendar",
+    "outlook",
+    "schedule"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-calendars",
+      "title": "Open Calendars",
+      "body": "Click **Calendars** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "css": "[id='sb_calendars']"
+        },
+        {
+          "text": "Calendars",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/calendars"
+      }
+    },
+    {
+      "id": "calendars",
+      "title": "Your calendars",
+      "body": "The **Calendars** tab lists each booking calendar. Click one to edit its booking rules, reminders and form.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "text": "Calendars"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Calendars"
+    },
+    {
+      "id": "availability",
+      "title": "Availability",
+      "body": "**Availability** holds shared schedules: the days and hours people can be booked.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "text": "Availability"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Availability"
+    },
+    {
+      "id": "connections",
+      "title": "Connections",
+      "body": "**Connections** links your Google or Outlook calendar so bookings do not clash with your personal plans.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "text": "Connections"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Connections"
+    },
+    {
+      "id": "preferences",
+      "title": "Preferences",
+      "body": "**Preferences** has account-wide calendar options.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "text": "Preferences"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Preferences"
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Next: try **Connect your Google or Outlook calendar** from the Guide.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

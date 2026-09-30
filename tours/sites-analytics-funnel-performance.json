@@ -1,0 +1,105 @@
+{
+  "id": "sites-analytics-funnel-performance",
+  "kind": "howto",
+  "area": "sites",
+  "screen": "sites.analytics",
+  "title": "Check how your funnel is performing",
+  "blurb": "Find where visitors drop off and which pages turn visits into leads.",
+  "icon": "chart",
+  "minutes": 4,
+  "keywords": [
+    "funnel stats",
+    "conversion rate",
+    "drop off",
+    "opt in rate",
+    "page views",
+    "performance"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Analytics",
+      "body": "Click **Analytics** in the Sites menu.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/analytics",
+      "target": [
+        {
+          "css": "#tb_analytics"
+        },
+        {
+          "text": "Analytics",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/analytics"
+      }
+    },
+    {
+      "id": "pick",
+      "title": "Pick your funnel",
+      "body": "Choose **Funnels**, then select the funnel you want to check.",
+      "route": "^/analytics",
+      "go": "/analytics",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "range",
+      "title": "Choose a fair date range",
+      "body": "Pick at least the last 14 days so a slow day does not skew things.",
+      "route": "^/analytics",
+      "go": "/analytics",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "optin",
+      "title": "Look at the opt-in rate",
+      "body": "Click the opt-in card. This is the share of visitors who filled in your form. For a simple quote page, anything above 10 percent is a good start.",
+      "route": "^/analytics",
+      "go": "/analytics",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "steps",
+      "title": "Find the drop-off",
+      "body": "Check page views by step. A big fall between two steps shows which page to improve first.",
+      "route": "^/analytics",
+      "go": "/analytics",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Try a clearer headline or a shorter form, then compare the next two weeks."
+    }
+  ]
+}

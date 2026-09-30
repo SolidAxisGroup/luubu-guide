@@ -1,0 +1,116 @@
+{
+  "id": "sites-quiz-results",
+  "kind": "howto",
+  "area": "sites",
+  "screen": "sites.quiz-builder",
+  "title": "Customise quiz results",
+  "blurb": "Show a different result message and next step for each score range.",
+  "icon": "star",
+  "minutes": 5,
+  "keywords": [
+    "quiz results",
+    "score tiers",
+    "result page",
+    "categories",
+    "outcome"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Quizzes",
+      "body": "Click **Quizzes** and open the quiz.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/quiz-builder/main",
+      "target": [
+        {
+          "css": "#tb_quiz-builder"
+        },
+        {
+          "text": "Quizzes",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/quiz-builder"
+      }
+    },
+    {
+      "id": "settings",
+      "title": "Open settings",
+      "body": "Click **Settings** in the quiz builder.",
+      "route": "^/",
+      "go": "/quiz-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "tiers",
+      "title": "Set score ranges",
+      "body": "Create score tiers, like 0 to 10, 11 to 20 and 21 to 30. Give each a name and colour.",
+      "route": "^/",
+      "go": "/quiz-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "message",
+      "title": "Write each result",
+      "body": "Write a short result for each tier and add a button to the next step, like Book a free check.",
+      "route": "^/",
+      "go": "/quiz-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "categories",
+      "title": "Personality style (optional)",
+      "body": "For a which-type-are-you quiz, use categories instead of a score, and link each answer to a category.",
+      "route": "^/",
+      "go": "/quiz-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save and test",
+      "body": "Click **Save**, then take the quiz a few times to check each result shows.",
+      "route": "^/",
+      "go": "/quiz-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Start a workflow when a quiz is submitted to follow up by result."
+    }
+  ]
+}

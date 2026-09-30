@@ -1,0 +1,136 @@
+{
+  "id": "opportunities-pipeline-create",
+  "kind": "howto",
+  "area": "opportunities",
+  "screen": "opportunities.pipeline",
+  "title": "Create a pipeline",
+  "blurb": "Build a sales pipeline with stages that match how you work.",
+  "icon": "card",
+  "minutes": 4,
+  "keywords": [
+    "create pipeline",
+    "new pipeline",
+    "stages",
+    "sales process",
+    "setup",
+    "kanban"
+  ],
+  "steps": [
+    {
+      "id": "open-opportunities",
+      "title": "Open Opportunities",
+      "body": "Click **Opportunities** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_opportunities"
+        },
+        {
+          "text": "Opportunities",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/opportunities/"
+      }
+    },
+    {
+      "id": "tab-pipeline",
+      "title": "Open Pipelines",
+      "body": "Click **Pipelines** along the top.",
+      "route": "^/opportunities/",
+      "go": "/opportunities/pipeline",
+      "target": [
+        {
+          "css": "#tb_pipeline"
+        },
+        {
+          "text": "Pipelines",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/opportunities/pipeline"
+      }
+    },
+    {
+      "id": "create",
+      "title": "Create a pipeline",
+      "body": "Click **Create pipeline**.",
+      "route": "^/opportunities/pipeline",
+      "go": "/opportunities/pipeline",
+      "target": [
+        {
+          "text": "Create pipeline",
+          "tag": "button"
+        },
+        {
+          "text": "Create new pipeline",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create pipeline"
+    },
+    {
+      "id": "name",
+      "title": "Name it",
+      "body": "Give it a name like \"Sales\" or \"Residential jobs\".",
+      "route": "^/opportunities/pipeline",
+      "go": "/opportunities/pipeline",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "stages",
+      "title": "Add your stages",
+      "body": "Type each stage name and click **Add stage**. Keep it to 4 to 7 stages, like New Enquiry, Quote Sent, Follow Up, Booked.",
+      "route": "^/opportunities/pipeline",
+      "go": "/opportunities/pipeline",
+      "target": [
+        {
+          "text": "Add stage",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add stage"
+    },
+    {
+      "id": "won-lost",
+      "title": "Won and lost are built in",
+      "body": "You don't need stages for won or lost. Every deal has a status you set when it closes.",
+      "route": "^/opportunities/pipeline",
+      "go": "/opportunities/pipeline",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save",
+      "body": "Save the pipeline. It now shows in the pipeline dropdown on the Opportunities board.",
+      "route": "^/opportunities/pipeline",
+      "go": "/opportunities/pipeline",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

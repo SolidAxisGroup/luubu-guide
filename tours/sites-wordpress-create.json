@@ -1,0 +1,117 @@
+{
+  "id": "sites-wordpress-create",
+  "kind": "howto",
+  "area": "sites",
+  "screen": "sites.wordpress-v2",
+  "title": "Create a WordPress site",
+  "blurb": "Install a hosted WordPress site in a few minutes.",
+  "icon": "globe",
+  "minutes": 6,
+  "keywords": [
+    "wordpress",
+    "install",
+    "create site",
+    "hosting",
+    "wp"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "WordPress hosting is an add-on. If it is not switched on, ask us: hello@luubu.com. Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open WordPress",
+      "body": "Click **WordPress**.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/wordpress",
+      "target": [
+        {
+          "css": "#tb_wordpress-v2"
+        },
+        {
+          "text": "WordPress",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/wordpress"
+      }
+    },
+    {
+      "id": "create",
+      "title": "Start the install",
+      "body": "Click **Activate WordPress**.",
+      "route": "^/wordpress",
+      "go": "/wordpress",
+      "target": [
+        {
+          "text": "Activate WordPress",
+          "tag": "button"
+        },
+        {
+          "text": "Create Site",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Activate WordPress",
+      "advance": "click"
+    },
+    {
+      "id": "type",
+      "title": "Pick how to start",
+      "body": "Start from scratch, from a template, or clone an existing site.",
+      "route": "^/wordpress",
+      "go": "/wordpress",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "details",
+      "title": "Add site and login details",
+      "body": "Enter the site name and the admin user details. Use a strong password and store it somewhere safe.",
+      "route": "^/wordpress",
+      "go": "/wordpress",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "wait",
+      "title": "Wait for the install",
+      "body": "It takes a few minutes. When it is ready, open WordPress admin from the site dashboard here.",
+      "route": "^/wordpress",
+      "go": "/wordpress",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "The plugin that links WordPress forms and chat to your CRM is installed for you."
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "id": "memberships-page-communities",
+  "kind": "page",
+  "area": "memberships",
+  "screen": "memberships.communities",
+  "title": "Tour: Communities",
+  "blurb": "Private groups where your members chat, learn and join events.",
+  "icon": "users",
+  "minutes": 2,
+  "keywords": [
+    "community",
+    "communities",
+    "group",
+    "members",
+    "channels",
+    "forum"
+  ],
+  "steps": [
+    {
+      "id": "open-memberships",
+      "title": "Open Memberships",
+      "body": "Click **Memberships** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_memberships"
+        },
+        {
+          "text": "Memberships",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/memberships/"
+      }
+    },
+    {
+      "id": "open-communities",
+      "title": "Open Communities",
+      "body": "Click **Communities**. This is where your community groups live.",
+      "route": "^/memberships/",
+      "go": "/memberships/communities/community-groups",
+      "target": [
+        {
+          "css": "#tb_communities"
+        },
+        {
+          "text": "Communities",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/memberships/communities"
+      }
+    },
+    {
+      "id": "groups",
+      "title": "Your groups",
+      "body": "Each group is its own private space, a bit like a Facebook group you own. Click one to open it.",
+      "route": "^/memberships/communities",
+      "go": "/memberships/communities/community-groups",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "inside",
+      "title": "Inside a group",
+      "body": "Channels sit down the left side. Across the top you will find tabs like **Members**, **Learning** and **Events**.",
+      "route": "^/memberships/communities",
+      "go": "/memberships/communities/community-groups",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "settings",
+      "title": "Group settings",
+      "body": "Group settings cover privacy (public or private), branding and who moderates.",
+      "route": "^/memberships/communities",
+      "go": "/memberships/communities/community-groups",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What's next",
+      "body": "Next: try **Create a community group** from the Guide.",
+      "route": "^/memberships/communities",
+      "go": "/memberships/communities/community-groups",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

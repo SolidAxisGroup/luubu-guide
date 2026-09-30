@@ -1,0 +1,112 @@
+{
+  "id": "settings-page-private-integrations",
+  "kind": "page",
+  "area": "settings",
+  "screen": "settings.common.sidebar.privateIntegrations",
+  "title": "Tour: Private Integrations",
+  "blurb": "API tokens for developers connecting their own tools.",
+  "icon": "cog",
+  "minutes": 2,
+  "keywords": [
+    "api",
+    "token",
+    "private integration",
+    "developer",
+    "key",
+    "zapier"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-private-integrations",
+      "title": "Open Private Integrations",
+      "body": "Click **Private Integrations** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/private-integrations",
+      "target": [
+        {
+          "css": "[id='sb_common.sidebar.privateIntegrations']"
+        },
+        {
+          "text": "Private Integrations",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/private-integrations"
+      }
+    },
+    {
+      "id": "what",
+      "title": "For developers",
+      "body": "Private integrations give a developer a token to connect other software to your Luubu account. Most businesses never need this page.",
+      "route": "^/settings/private-integrations",
+      "go": "/settings/private-integrations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "create",
+      "title": "Create a token",
+      "body": "**Create new Integration** makes a new token with only the access you choose.",
+      "route": "^/settings/private-integrations",
+      "go": "/settings/private-integrations",
+      "target": [
+        {
+          "text": "Create new Integration",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create new Integration"
+    },
+    {
+      "id": "list",
+      "title": "Your tokens",
+      "body": "Existing tokens are listed here. You can rotate or delete them.",
+      "route": "^/settings/private-integrations",
+      "go": "/settings/private-integrations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Next: see **Create a private integration token** in the Guide.",
+      "route": "^/settings/private-integrations",
+      "go": "/settings/private-integrations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

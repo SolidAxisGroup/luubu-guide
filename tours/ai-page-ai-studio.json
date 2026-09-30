@@ -1,0 +1,111 @@
+{
+  "id": "ai-page-ai-studio",
+  "kind": "page",
+  "area": "ai",
+  "screen": "ai.vibe",
+  "title": "Tour AI Studio",
+  "blurb": "Describe a website, landing page or booking page and AI builds it.",
+  "icon": "bot",
+  "minutes": 2,
+  "keywords": [
+    "ai studio",
+    "ai website",
+    "build with ai",
+    "landing page",
+    "vibe",
+    "tour"
+  ],
+  "steps": [
+    {
+      "id": "open-ai-studio",
+      "title": "Open AI Studio",
+      "body": "AI Studio builds pages and small sites from a description. Click **AI Studio** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_vibe"
+        },
+        {
+          "text": "AI Studio",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/vibe"
+      }
+    },
+    {
+      "id": "prompt",
+      "title": "Describe what you want",
+      "body": "Type what to build in the box at the top. Be specific: your trade, your town, what visitors should do, and your colours.",
+      "route": "^/vibe",
+      "go": "/vibe",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "attach",
+      "title": "Add inspiration",
+      "body": "You can attach your logo, photos, a screenshot or a web address you like. AI uses them as a guide for the layout.",
+      "route": "^/vibe",
+      "go": "/vibe",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "projects",
+      "title": "Your projects",
+      "body": "**My Projects** holds everything you have built. **Recently Viewed** and **Starred** help you get back to the ones you use most.",
+      "route": "^/vibe",
+      "go": "/vibe",
+      "target": [
+        {
+          "text": "My Projects"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "My Projects"
+    },
+    {
+      "id": "templates",
+      "title": "Start from a template",
+      "body": "Prefer a head start? **Templates** has ready-made starting points.",
+      "route": "^/vibe",
+      "go": "/vibe",
+      "target": [
+        {
+          "text": "Templates"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Templates"
+    },
+    {
+      "id": "next",
+      "title": "What to do first",
+      "body": "Next: try **Build a landing page with AI Studio** from the Guide.",
+      "route": "^/vibe",
+      "go": "/vibe",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

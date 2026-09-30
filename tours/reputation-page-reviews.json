@@ -1,0 +1,130 @@
+{
+  "id": "reputation-page-reviews",
+  "kind": "page",
+  "area": "reputation",
+  "screen": "reputation.reputations-reviews",
+  "title": "Tour: Reviews",
+  "blurb": "Read and reply to your Google and Facebook reviews in one feed.",
+  "icon": "star",
+  "minutes": 2,
+  "keywords": [
+    "reviews",
+    "reply",
+    "google reviews",
+    "facebook reviews",
+    "respond",
+    "ratings"
+  ],
+  "steps": [
+    {
+      "id": "open-reputation",
+      "title": "Open Reputation",
+      "body": "Click **Reputation** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reputation"
+        },
+        {
+          "text": "Reputation",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reputation/"
+      }
+    },
+    {
+      "id": "open-reviews",
+      "title": "Open Reviews",
+      "body": "Click **Reviews**. All your reviews land here.",
+      "route": "^/reputation/",
+      "go": "/reputation/reviews",
+      "target": [
+        {
+          "css": "#tb_reputations-reviews"
+        },
+        {
+          "text": "Reviews",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reputation/reviews"
+      }
+    },
+    {
+      "id": "feed",
+      "title": "Your reviews",
+      "body": "Google and Facebook reviews appear in one feed, newest first.",
+      "route": "^/reputation/reviews",
+      "go": "/reputation/reviews",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "filters",
+      "title": "Filters",
+      "body": "Use the filters to show certain star ratings or sources. Start with low ratings, they matter most.",
+      "route": "^/reputation/reviews",
+      "go": "/reputation/reviews",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "reply",
+      "title": "Reply",
+      "body": "**Reply** under a review lets you answer it here. It posts to Google or Facebook for you.",
+      "route": "^/reputation/reviews",
+      "go": "/reputation/reviews",
+      "target": [
+        {
+          "text": "Reply"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Reply"
+    },
+    {
+      "id": "ai-reply",
+      "title": "AI Reply",
+      "body": "**AI Reply** drafts a response for you to check and edit before posting.",
+      "route": "^/reputation/reviews",
+      "go": "/reputation/reviews",
+      "target": [
+        {
+          "text": "AI Reply"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "AI Reply"
+    },
+    {
+      "id": "next",
+      "title": "What's next",
+      "body": "Next: try **Reply to a Google or Facebook review** from the Guide.",
+      "route": "^/reputation/reviews",
+      "go": "/reputation/reviews",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

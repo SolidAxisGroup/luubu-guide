@@ -1,0 +1,125 @@
+{
+  "id": "settings-page-billing",
+  "kind": "page",
+  "area": "settings",
+  "screen": "settings.saas-billing",
+  "title": "Tour: Billing",
+  "blurb": "Your Luubu plan, wallet balance, cards and charges.",
+  "icon": "card",
+  "minutes": 2,
+  "keywords": [
+    "billing",
+    "wallet",
+    "plan",
+    "invoice",
+    "card",
+    "payment method",
+    "charges"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-billing",
+      "title": "Open Billing",
+      "body": "Click **Billing** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/company-billing/billing",
+      "target": [
+        {
+          "css": "[id='sb_saas-billing']"
+        },
+        {
+          "text": "Billing",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/company-billing/billing"
+      }
+    },
+    {
+      "id": "plan",
+      "title": "Your plan",
+      "body": "This page shows your Luubu plan and what you are paying each month.",
+      "route": "^/settings/company-billing/billing",
+      "go": "/settings/company-billing/billing",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "wallet",
+      "title": "Wallet",
+      "body": "The **Wallet & Transactions** area shows your credit balance. Texts, calls, emails and AI use draw from this wallet.",
+      "route": "^/settings/company-billing/billing",
+      "go": "/settings/company-billing/billing",
+      "target": [
+        {
+          "text": "Wallet & Transactions"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Wallet & Transactions"
+    },
+    {
+      "id": "cards",
+      "title": "Cards on file",
+      "body": "**Payment Methods** lists the cards we charge. Keep a current card here so your wallet can top up and nothing stops.",
+      "route": "^/settings/company-billing/billing",
+      "go": "/settings/company-billing/billing",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Payment Methods"
+    },
+    {
+      "id": "history",
+      "title": "Charges",
+      "body": "The transaction history shows every top-up and charge, so you can match them to your accounts.",
+      "route": "^/settings/company-billing/billing",
+      "go": "/settings/company-billing/billing",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Next: try **Top up your wallet** from the Guide. Questions about your plan? Email hello@luubu.com.",
+      "route": "^/settings/company-billing/billing",
+      "go": "/settings/company-billing/billing",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

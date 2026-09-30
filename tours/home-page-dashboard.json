@@ -1,0 +1,98 @@
+{
+  "id": "home-page-dashboard",
+  "kind": "page",
+  "area": "home",
+  "screen": "home.dashboard",
+  "title": "Tour: Dashboard",
+  "blurb": "Your business at a glance: leads, deals, appointments and messages.",
+  "icon": "chart",
+  "minutes": 2,
+  "keywords": [
+    "dashboard",
+    "home",
+    "reports",
+    "stats",
+    "overview",
+    "widgets",
+    "numbers"
+  ],
+  "steps": [
+    {
+      "id": "open-dashboard",
+      "title": "Open Dashboard",
+      "body": "Click **Dashboard** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_dashboard"
+        },
+        {
+          "text": "Dashboard",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/dashboard"
+      }
+    },
+    {
+      "id": "widgets",
+      "title": "Your widgets",
+      "body": "Each box is a widget showing one number or chart, such as new leads, pipeline value or unread messages. Hover over a chart for the detail.",
+      "route": "^/dashboard",
+      "go": "/dashboard",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "date",
+      "title": "Pick a date range",
+      "body": "Use the date picker at the top to change the period every widget shows. Luubu remembers your choice next time you log in.",
+      "route": "^/dashboard",
+      "go": "/dashboard",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "switcher",
+      "title": "Switch dashboards",
+      "body": "You can have more than one dashboard, for example one for sales and one for the front desk. Use the dashboard menu at the top left to switch or create a new one.",
+      "route": "^/dashboard",
+      "go": "/dashboard",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "edit",
+      "title": "Make it yours",
+      "body": "Click the pencil icon at the top right to edit. You can then add, move, resize or remove widgets.",
+      "route": "^/dashboard",
+      "go": "/dashboard",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Next: try **Add a widget to your dashboard** from the Guide.",
+      "route": "^/dashboard",
+      "go": "/dashboard",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "id": "payments-create-payment-link",
+  "kind": "howto",
+  "area": "payments",
+  "screen": "payments.payment-links",
+  "title": "Create a payment link",
+  "blurb": "Get paid by text or email in minutes, no website needed.",
+  "icon": "card",
+  "minutes": 3,
+  "keywords": [
+    "payment link",
+    "pay link",
+    "text to pay",
+    "checkout",
+    "collect payment",
+    "share link"
+  ],
+  "steps": [
+    {
+      "id": "open-payments",
+      "title": "Open Payments",
+      "body": "Click **Payments** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_payments"
+        },
+        {
+          "text": "Payments",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/"
+      }
+    },
+    {
+      "id": "tab-payment-links",
+      "title": "Open Payment Links",
+      "body": "Click **Payment Links** along the top.",
+      "route": "^/payments/",
+      "go": "/payments/v2/paymentlinks",
+      "target": [
+        {
+          "css": "#tb_payment-links"
+        },
+        {
+          "text": "Payment Links",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/v2/paymentlinks"
+      }
+    },
+    {
+      "id": "create",
+      "title": "Create a link",
+      "body": "Click **Create Link**.",
+      "tip": "You need a product and Stripe connected first.",
+      "route": "^/payments/v2/paymentlinks",
+      "go": "/payments/v2/paymentlinks",
+      "target": [
+        {
+          "text": "Create Link",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create Link"
+    },
+    {
+      "id": "name",
+      "title": "Name it",
+      "body": "Give the link a name you will recognise, e.g. \"Deposit for kitchen reno\".",
+      "route": "^/payments/v2/paymentlinks",
+      "go": "/payments/v2/paymentlinks",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "product",
+      "title": "Choose the product",
+      "body": "Pick the product and its price.",
+      "route": "^/payments/v2/paymentlinks",
+      "go": "/payments/v2/paymentlinks",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save and preview",
+      "body": "Save the link and preview it to check the checkout looks right.",
+      "route": "^/payments/v2/paymentlinks",
+      "go": "/payments/v2/paymentlinks",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "copy",
+      "title": "Copy and share",
+      "body": "Copy the link and paste it into a text, email or social post.",
+      "route": "^/payments/v2/paymentlinks",
+      "go": "/payments/v2/paymentlinks",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

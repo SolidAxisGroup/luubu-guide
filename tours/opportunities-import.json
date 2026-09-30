@@ -1,0 +1,108 @@
+{
+  "id": "opportunities-import",
+  "kind": "howto",
+  "area": "opportunities",
+  "screen": "opportunities.opportunities-tab",
+  "title": "Import opportunities from a spreadsheet",
+  "blurb": "Load your existing deals in bulk from a CSV file.",
+  "icon": "card",
+  "minutes": 5,
+  "keywords": [
+    "import",
+    "csv",
+    "opportunities",
+    "deals",
+    "spreadsheet",
+    "upload",
+    "migrate"
+  ],
+  "steps": [
+    {
+      "id": "open-opportunities",
+      "title": "Open Opportunities",
+      "body": "Click **Opportunities** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_opportunities"
+        },
+        {
+          "text": "Opportunities",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/opportunities/"
+      }
+    },
+    {
+      "id": "prep",
+      "title": "Set up first",
+      "body": "Create your pipeline and stages before you import. Your CSV needs at least the opportunity name, pipeline and a contact for each row.",
+      "route": "^/opportunities/list",
+      "go": "/opportunities/list",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Imports can't be undone. Test with a few rows first."
+    },
+    {
+      "id": "import",
+      "title": "Start the import",
+      "body": "Click **Import**.",
+      "route": "^/opportunities/list",
+      "go": "/opportunities/list",
+      "target": [
+        {
+          "text": "Import",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Import"
+    },
+    {
+      "id": "type",
+      "title": "Choose what to import",
+      "body": "Pick opportunities only, or contacts and opportunities together if the people aren't in Luubu yet.",
+      "route": "^/opportunities/list",
+      "go": "/opportunities/list",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "map",
+      "title": "Upload and match columns",
+      "body": "Upload your CSV, then match each column to a Luubu field such as pipeline, stage, value and status.",
+      "route": "^/opportunities/list",
+      "go": "/opportunities/list",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "finish",
+      "title": "Start and check",
+      "body": "Review and start the import. Check how it went under the **Bulk Actions** tab.",
+      "route": "^/opportunities/list",
+      "go": "/opportunities/list",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Bulk Actions"
+    }
+  ]
+}

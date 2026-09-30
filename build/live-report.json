@@ -1,0 +1,2935 @@
+{
+ "summary": {
+  "checked": 615,
+  "confirmed": 185,
+  "insideFrame": 132,
+  "notOnLandingScreen": 298
+ },
+ "perScreen": [
+  {
+   "p": "/integration",
+   "framed": false,
+   "ok": 2,
+   "unseen": 1
+  },
+  {
+   "p": "/reputation/reviews",
+   "framed": false,
+   "ok": 0,
+   "unseen": 4
+  },
+  {
+   "p": "/settings/external-tracking",
+   "framed": false,
+   "ok": 2,
+   "unseen": 0
+  },
+  {
+   "p": "/settings/calendars",
+   "framed": false,
+   "ok": 12,
+   "unseen": 30
+  },
+  {
+   "p": "/blogs",
+   "framed": false,
+   "ok": 2,
+   "unseen": 3
+  },
+  {
+   "p": "/marketing/ad-manager/home",
+   "framed": false,
+   "ok": 1,
+   "unseen": 11
+  },
+  {
+   "p": "/dashboard",
+   "framed": false,
+   "ok": 0,
+   "unseen": 3
+  },
+  {
+   "p": "/tasks",
+   "framed": false,
+   "ok": 3,
+   "unseen": 0
+  },
+  {
+   "p": "/reporting/call",
+   "framed": false,
+   "ok": 0,
+   "unseen": 2
+  },
+  {
+   "p": "/memberships/client-portal/dashboard",
+   "framed": false,
+   "ok": 6,
+   "unseen": 10
+  },
+  {
+   "p": "/settings/phone_system",
+   "framed": false,
+   "ok": 5,
+   "unseen": 3
+  },
+  {
+   "p": "/payments/settings/receipts",
+   "framed": false,
+   "ok": 6,
+   "unseen": 3
+  },
+  {
+   "p": "/ai-agents/voice-ai",
+   "framed": false,
+   "ok": 0,
+   "unseen": 19
+  },
+  {
+   "p": "/payments/gift-cards",
+   "framed": false,
+   "ok": 3,
+   "unseen": 3
+  },
+  {
+   "p": "/vibe",
+   "framed": true,
+   "ok": 0,
+   "unseen": 7
+  },
+  {
+   "p": "/marketing/social-planner",
+   "framed": false,
+   "ok": 7,
+   "unseen": 21
+  },
+  {
+   "p": "/contacts/smart_list/All",
+   "framed": false,
+   "ok": 0,
+   "unseen": 7
+  },
+  {
+   "p": "/calendars/appointments",
+   "framed": false,
+   "ok": 5,
+   "unseen": 2
+  },
+  {
+   "p": "/settings/private-integrations",
+   "framed": false,
+   "ok": 2,
+   "unseen": 0
+  },
+  {
+   "p": "/settings/domain",
+   "framed": false,
+   "ok": 7,
+   "unseen": 2
+  },
+  {
+   "p": "/automation/workflows/settings",
+   "framed": true,
+   "ok": 0,
+   "unseen": 3
+  },
+  {
+   "p": "/settings/company",
+   "framed": true,
+   "ok": 0,
+   "unseen": 2
+  },
+  {
+   "p": "/marketing/templates",
+   "framed": false,
+   "ok": 4,
+   "unseen": 5
+  },
+  {
+   "p": "/settings/objects",
+   "framed": false,
+   "ok": 2,
+   "unseen": 2
+  },
+  {
+   "p": "/reputation/widget",
+   "framed": true,
+   "ok": 0,
+   "unseen": 7
+  },
+  {
+   "p": "/quiz-builder/main",
+   "framed": false,
+   "ok": 0,
+   "unseen": 2
+  },
+  {
+   "p": "/wordpress",
+   "framed": false,
+   "ok": 0,
+   "unseen": 2
+  },
+  {
+   "p": "/ai-agents/agent-templates",
+   "framed": false,
+   "ok": 2,
+   "unseen": 1
+  },
+  {
+   "p": "/memberships/courses/dashboard-v2",
+   "framed": false,
+   "ok": 1,
+   "unseen": 18
+  },
+  {
+   "p": "/settings/lc-integrations",
+   "framed": false,
+   "ok": 7,
+   "unseen": 2
+  },
+  {
+   "p": "/funnels-websites/webinars",
+   "framed": false,
+   "ok": 3,
+   "unseen": 0
+  },
+  {
+   "p": "/settings/smtp_service",
+   "framed": true,
+   "ok": 0,
+   "unseen": 4
+  },
+  {
+   "p": "/payments/integrations",
+   "framed": false,
+   "ok": 4,
+   "unseen": 2
+  },
+  {
+   "p": "/memberships/certificates/create-certificates",
+   "framed": false,
+   "ok": 2,
+   "unseen": 4
+  },
+  {
+   "p": "/automation/workflows",
+   "framed": true,
+   "ok": 2,
+   "unseen": 65
+  },
+  {
+   "p": "/funnels-websites/chat-widget",
+   "framed": false,
+   "ok": 2,
+   "unseen": 1
+  },
+  {
+   "p": "/reporting/local-marketing-audit",
+   "framed": true,
+   "ok": 0,
+   "unseen": 5
+  },
+  {
+   "p": "/payments/invoices",
+   "framed": false,
+   "ok": 7,
+   "unseen": 11
+  },
+  {
+   "p": "/reputation/requests",
+   "framed": false,
+   "ok": 2,
+   "unseen": 0
+  },
+  {
+   "p": "/payments/products",
+   "framed": false,
+   "ok": 4,
+   "unseen": 6
+  },
+  {
+   "p": "/settings/fields",
+   "framed": false,
+   "ok": 10,
+   "unseen": 2
+  },
+  {
+   "p": "/media-storage",
+   "framed": false,
+   "ok": 2,
+   "unseen": 7
+  },
+  {
+   "p": "/reputation/settings",
+   "framed": false,
+   "ok": 9,
+   "unseen": 0
+  },
+  {
+   "p": "/marketing/countdown-timer",
+   "framed": false,
+   "ok": 2,
+   "unseen": 1
+  },
+  {
+   "p": "/ai-agents/agent-logs",
+   "framed": false,
+   "ok": 2,
+   "unseen": 0
+  },
+  {
+   "p": "/settings/tags",
+   "framed": false,
+   "ok": 0,
+   "unseen": 2
+  },
+  {
+   "p": "/payments/coupons",
+   "framed": false,
+   "ok": 3,
+   "unseen": 0
+  },
+  {
+   "p": "/payments/v2/subscriptions",
+   "framed": false,
+   "ok": 0,
+   "unseen": 1
+  },
+  {
+   "p": "/settings/company-billing/billing",
+   "framed": false,
+   "ok": 0,
+   "unseen": 6
+  },
+  {
+   "p": "/ask-ai",
+   "framed": false,
+   "ok": 2,
+   "unseen": 0
+  },
+  {
+   "p": "/ai-agents/knowledge-base",
+   "framed": false,
+   "ok": 0,
+   "unseen": 10
+  },
+  {
+   "p": "/reputation/listing",
+   "framed": false,
+   "ok": 2,
+   "unseen": 0
+  },
+  {
+   "p": "/marketing/brand-boards",
+   "framed": false,
+   "ok": 0,
+   "unseen": 7
+  },
+  {
+   "p": "/settings/import-data",
+   "framed": false,
+   "ok": 3,
+   "unseen": 2
+  },
+  {
+   "p": "/reputation/video-testimonials",
+   "framed": false,
+   "ok": 5,
+   "unseen": 6
+  },
+  {
+   "p": "/reporting/reports",
+   "framed": false,
+   "ok": 0,
+   "unseen": 9
+  },
+  {
+   "p": "/opportunities/list",
+   "framed": false,
+   "ok": 3,
+   "unseen": 1
+  },
+  {
+   "p": "/settings/users",
+   "framed": false,
+   "ok": 0,
+   "unseen": 2
+  },
+  {
+   "p": "/marketing/affiliate-manager",
+   "framed": true,
+   "ok": 0,
+   "unseen": 9
+  },
+  {
+   "p": "/conversations/conversations",
+   "framed": false,
+   "ok": 0,
+   "unseen": 1
+  },
+  {
+   "p": "/businesses/list",
+   "framed": false,
+   "ok": 2,
+   "unseen": 0
+  },
+  {
+   "p": "/marketing/emails/statistics",
+   "framed": true,
+   "ok": 0,
+   "unseen": 28
+  },
+  {
+   "p": "/ai-agents/conversation-ai",
+   "framed": false,
+   "ok": 0,
+   "unseen": 15
+  },
+  {
+   "p": "/memberships/communities/community-groups",
+   "framed": false,
+   "ok": 1,
+   "unseen": 5
+  },
+  {
+   "p": "/payments/proposals-estimates",
+   "framed": false,
+   "ok": 5,
+   "unseen": 2
+  },
+  {
+   "p": "/calendars/view",
+   "framed": false,
+   "ok": 0,
+   "unseen": 1
+  },
+  {
+   "p": "/funnels-websites/funnels",
+   "framed": false,
+   "ok": 3,
+   "unseen": 0
+  },
+  {
+   "p": "/conversations/trigger-links",
+   "framed": false,
+   "ok": 2,
+   "unseen": 1
+  },
+  {
+   "p": "/conversations/manual_actions",
+   "framed": false,
+   "ok": 2,
+   "unseen": 2
+  },
+  {
+   "p": "/payments/v2/paymentlinks",
+   "framed": false,
+   "ok": 2,
+   "unseen": 0
+  },
+  {
+   "p": "/form-builder/main",
+   "framed": false,
+   "ok": 0,
+   "unseen": 2
+  },
+  {
+   "p": "/crm-settings",
+   "framed": false,
+   "ok": 0,
+   "unseen": 1
+  },
+  {
+   "p": "/settings/audit/logs",
+   "framed": false,
+   "ok": 1,
+   "unseen": 0
+  },
+  {
+   "p": "/settings/scoring",
+   "framed": false,
+   "ok": 2,
+   "unseen": 0
+  },
+  {
+   "p": "/funnels-websites/stores",
+   "framed": false,
+   "ok": 1,
+   "unseen": 0
+  },
+  {
+   "p": "/automation/overview",
+   "framed": true,
+   "ok": 0,
+   "unseen": 2
+  },
+  {
+   "p": "/funnels-websites/websites",
+   "framed": false,
+   "ok": 4,
+   "unseen": 0
+  },
+  {
+   "p": "/conversations/templates",
+   "framed": false,
+   "ok": 5,
+   "unseen": 2
+  },
+  {
+   "p": "/qr-codes",
+   "framed": false,
+   "ok": 3,
+   "unseen": 0
+  },
+  {
+   "p": "/ai-agents/agent-studio",
+   "framed": false,
+   "ok": 2,
+   "unseen": 7
+  },
+  {
+   "p": "/reputation/overview",
+   "framed": false,
+   "ok": 0,
+   "unseen": 4
+  },
+  {
+   "p": "/marketing/trigger-links",
+   "framed": false,
+   "ok": 2,
+   "unseen": 1
+  },
+  {
+   "p": "/settings/whatsapp",
+   "framed": false,
+   "ok": 0,
+   "unseen": 6
+  },
+  {
+   "p": "/opportunities/bulk-actions",
+   "framed": false,
+   "ok": 0,
+   "unseen": 2
+  },
+  {
+   "p": "/contacts/bulk/actions",
+   "framed": false,
+   "ok": 0,
+   "unseen": 3
+  },
+  {
+   "p": "/opportunities/pipeline",
+   "framed": false,
+   "ok": 0,
+   "unseen": 3
+  },
+  {
+   "p": "/payments/v2/orders",
+   "framed": false,
+   "ok": 0,
+   "unseen": 1
+  },
+  {
+   "p": "/settings/custom_values",
+   "framed": false,
+   "ok": 0,
+   "unseen": 2
+  },
+  {
+   "p": "/payments/v2/transactions",
+   "framed": false,
+   "ok": 0,
+   "unseen": 1
+  }
+ ],
+ "unseenSteps": [
+  {
+   "tour": "more-marketplace-install",
+   "step": "install",
+   "labels": [
+    "Install|button"
+   ],
+   "screen": "/integration"
+  },
+  {
+   "tour": "reputation-ai-reply",
+   "step": "ai-reply",
+   "labels": [
+    "AI Reply"
+   ],
+   "screen": "/reputation/reviews"
+  },
+  {
+   "tour": "reputation-reply-review",
+   "step": "reply",
+   "labels": [
+    "Reply"
+   ],
+   "screen": "/reputation/reviews"
+  },
+  {
+   "tour": "reputation-page-reviews",
+   "step": "reply",
+   "labels": [
+    "Reply"
+   ],
+   "screen": "/reputation/reviews"
+  },
+  {
+   "tour": "reputation-page-reviews",
+   "step": "ai-reply",
+   "labels": [
+    "AI Reply"
+   ],
+   "screen": "/reputation/reviews"
+  },
+  {
+   "tour": "calendars-create-round-robin",
+   "step": "new",
+   "labels": [
+    "New Calendar|button"
+   ],
+   "screen": "/settings/calendars"
+  },
+  {
+   "tour": "calendars-create-round-robin",
+   "step": "type",
+   "labels": [
+    "Round Robin"
+   ],
+   "screen": "/settings/calendars"
+  },
+  {
+   "tour": "calendars-create-round-robin",
+   "step": "confirm",
+   "labels": [
+    "Confirm|button"
+   ],
+   "screen": "/settings/calendars"
+  },
+  {
+   "tour": "calendars-create-service-menu",
+   "step": "tab",
+   "labels": [
+    "Service Menu"
+   ],
+   "screen": "/settings/calendars"
+  },
+  {
+   "tour": "calendars-create-service-menu",
+   "step": "create",
+   "labels": [
+    "Create Service Menu|button"
+   ],
+   "screen": "/settings/calendars"
+  },
+  {
+   "tour": "calendars-create-service-menu",
+   "step": "select",
+   "labels": [
+    "Select Services"
+   ],
+   "screen": "/settings/calendars"
+  },
+  {
+   "tour": "calendars-connect-google-outlook",
+   "step": "add",
+   "labels": [
+    "Add New|button"
+   ],
+   "screen": "/settings/calendars"
+  },
+  {
+   "tour": "calendars-connect-google-outlook",
+   "step": "connect",
+   "labels": [
+    "Connect|button"
+   ],
+   "screen": "/settings/calendars"
+  },
+  {
+   "tour": "calendars-create-class-booking",
+   "step": "new",
+   "labels": [
+    "New Calendar|button"
+   ],
+   "screen": "/settings/calendars"
+  },
+  {
+   "tour": "calendars-create-class-booking",
+   "step": "type",
+   "labels": [
+    "Class Booking"
+   ],
+   "screen": "/settings/calendars"
+  },
+  {
+   "tour": "calendars-create-class-booking",
+   "step": "seats",
+   "labels": [
+    "Seats per Class"
+   ],
+   "screen": "/settings/calendars"
+  },
+  {
+   "tour": "calendars-create-class-booking",
+   "step": "confirm",
+   "labels": [
+    "Confirm|button"
+   ],
+   "screen": "/settings/calendars"
+  },
+  {
+   "tour": "settings-business-hours",
+   "step": "create",
+   "labels": [
+    "Create Schedule|button"
+   ],
+   "screen": "/settings/calendars"
+  },
+  {
+   "tour": "calendars-set-availability",
+   "step": "schedule",
+   "labels": [
+    "Create Schedule|button"
+   ],
+   "screen": "/settings/calendars"
+  },
+  {
+   "tour": "settings-calendars-connect",
+   "step": "add",
+   "labels": [
+    "Add New|button"
+   ],
+   "screen": "/settings/calendars"
+  },
+  {
+   "tour": "calendars-reminders-confirmations",
+   "step": "reminder",
+   "labels": [
+    "Reminder"
+   ],
+   "screen": "/settings/calendars"
+  },
+  {
+   "tour": "calendars-reminders-confirmations",
+   "step": "save",
+   "labels": [
+    "Save|button"
+   ],
+   "screen": "/settings/calendars"
+  },
+  {
+   "tour": "calendars-create-personal-calendar",
+   "step": "new",
+   "labels": [
+    "New Calendar|button"
+   ],
+   "screen": "/settings/calendars"
+  },
+  {
+   "tour": "calendars-create-personal-calendar",
+   "step": "type",
+   "labels": [
+    "Personal Booking"
+   ],
+   "screen": "/settings/calendars"
+  },
+  {
+   "tour": "calendars-create-personal-calendar",
+   "step": "confirm",
+   "labels": [
+    "Confirm|button"
+   ],
+   "screen": "/settings/calendars"
+  },
+  {
+   "tour": "calendars-create-event-calendar",
+   "step": "new",
+   "labels": [
+    "New Calendar|button"
+   ],
+   "screen": "/settings/calendars"
+  },
+  {
+   "tour": "calendars-create-event-calendar",
+   "step": "type",
+   "labels": [
+    "Event Calendar"
+   ],
+   "screen": "/settings/calendars"
+  },
+  {
+   "tour": "calendars-create-event-calendar",
+   "step": "confirm",
+   "labels": [
+    "Confirm|button"
+   ],
+   "screen": "/settings/calendars"
+  },
+  {
+   "tour": "calendars-cancel-reschedule-rules",
+   "step": "cancel",
+   "labels": [
+    "Allow Cancellation of Meeting"
+   ],
+   "screen": "/settings/calendars"
+  },
+  {
+   "tour": "calendars-cancel-reschedule-rules",
+   "step": "reschedule",
+   "labels": [
+    "Allow Rescheduling of Meeting"
+   ],
+   "screen": "/settings/calendars"
+  },
+  {
+   "tour": "calendars-share-booking-link",
+   "step": "share",
+   "labels": [
+    "Share|button"
+   ],
+   "screen": "/settings/calendars"
+  },
+  {
+   "tour": "calendars-share-booking-link",
+   "step": "copy",
+   "labels": [
+    "Copy link"
+   ],
+   "screen": "/settings/calendars"
+  },
+  {
+   "tour": "calendars-share-booking-link",
+   "step": "embed",
+   "labels": [
+    "Embed code"
+   ],
+   "screen": "/settings/calendars"
+  },
+  {
+   "tour": "calendars-share-booking-link",
+   "step": "one-time",
+   "labels": [
+    "One-time link"
+   ],
+   "screen": "/settings/calendars"
+  },
+  {
+   "tour": "calendars-page-calendar-settings",
+   "step": "new-calendar",
+   "labels": [
+    "New Calendar|button"
+   ],
+   "screen": "/settings/calendars"
+  },
+  {
+   "tour": "ai-content-blog-post",
+   "step": "generate",
+   "labels": [
+    "Generate"
+   ],
+   "screen": "/blogs"
+  },
+  {
+   "tour": "sites-page-blogs",
+   "step": "new-post",
+   "labels": [
+    "New Post|button"
+   ],
+   "screen": "/blogs"
+  },
+  {
+   "tour": "sites-blog-write-post",
+   "step": "new-post",
+   "labels": [
+    "New Post|button"
+   ],
+   "screen": "/blogs"
+  },
+  {
+   "tour": "marketing-ads-statistics",
+   "step": "statistics",
+   "labels": [
+    "Statistics"
+   ],
+   "screen": "/marketing/ad-manager/home"
+  },
+  {
+   "tour": "marketing-ads-statistics",
+   "step": "export",
+   "labels": [
+    "Export|button"
+   ],
+   "screen": "/marketing/ad-manager/home"
+  },
+  {
+   "tour": "marketing-ads-google-search",
+   "step": "create",
+   "labels": [
+    "Create Campaign|button"
+   ],
+   "screen": "/marketing/ad-manager/home"
+  },
+  {
+   "tour": "marketing-ads-google-search",
+   "step": "publish",
+   "labels": [
+    "Publish|button"
+   ],
+   "screen": "/marketing/ad-manager/home"
+  },
+  {
+   "tour": "marketing-ads-connect-facebook",
+   "step": "connect",
+   "labels": [
+    "Connect Facebook"
+   ],
+   "screen": "/marketing/ad-manager/home"
+  },
+  {
+   "tour": "marketing-ads-connect-facebook",
+   "step": "page",
+   "labels": [
+    "Get started|button"
+   ],
+   "screen": "/marketing/ad-manager/home"
+  },
+  {
+   "tour": "marketing-ads-facebook-campaign",
+   "step": "create",
+   "labels": [
+    "Create Campaign|button"
+   ],
+   "screen": "/marketing/ad-manager/home"
+  },
+  {
+   "tour": "marketing-ads-facebook-campaign",
+   "step": "publish",
+   "labels": [
+    "Publish Campaign Now|button"
+   ],
+   "screen": "/marketing/ad-manager/home"
+  },
+  {
+   "tour": "marketing-page-ad-manager",
+   "step": "create",
+   "labels": [
+    "Create Campaign|button"
+   ],
+   "screen": "/marketing/ad-manager/home"
+  },
+  {
+   "tour": "marketing-page-ad-manager",
+   "step": "campaigns",
+   "labels": [
+    "Campaigns"
+   ],
+   "screen": "/marketing/ad-manager/home"
+  },
+  {
+   "tour": "marketing-page-ad-manager",
+   "step": "statistics",
+   "labels": [
+    "Statistics"
+   ],
+   "screen": "/marketing/ad-manager/home"
+  },
+  {
+   "tour": "home-dashboard-new-dashboard",
+   "step": "widgets",
+   "labels": [
+    "Add Widget|button"
+   ],
+   "screen": "/dashboard"
+  },
+  {
+   "tour": "home-dashboard-add-widget",
+   "step": "add-widget",
+   "labels": [
+    "Add Widget|button"
+   ],
+   "screen": "/dashboard"
+  },
+  {
+   "tour": "home-dashboard-add-widget",
+   "step": "save",
+   "labels": [
+    "Save|button"
+   ],
+   "screen": "/dashboard"
+  },
+  {
+   "tour": "reporting-call-missed",
+   "step": "incoming",
+   "labels": [
+    "Incoming Calls"
+   ],
+   "screen": "/reporting/call"
+  },
+  {
+   "tour": "reporting-page-call",
+   "step": "tabs",
+   "labels": [
+    "Incoming Calls"
+   ],
+   "screen": "/reporting/call"
+  },
+  {
+   "tour": "memberships-page-client-portal",
+   "step": "user-counts",
+   "labels": [
+    "Joined Users"
+   ],
+   "screen": "/memberships/client-portal/dashboard"
+  },
+  {
+   "tour": "memberships-page-client-portal",
+   "step": "actions",
+   "labels": [
+    "Invite to Client Portal|button"
+   ],
+   "screen": "/memberships/client-portal/dashboard"
+  },
+  {
+   "tour": "memberships-client-portal-invite",
+   "step": "invite",
+   "labels": [
+    "Invite to Client Portal|button"
+   ],
+   "screen": "/memberships/client-portal/dashboard"
+  },
+  {
+   "tour": "memberships-client-portal-invite",
+   "step": "joined",
+   "labels": [
+    "Joined Users"
+   ],
+   "screen": "/memberships/client-portal/dashboard"
+  },
+  {
+   "tour": "memberships-client-portal-setup",
+   "step": "branding",
+   "labels": [
+    "Branding"
+   ],
+   "screen": "/memberships/client-portal/dashboard"
+  },
+  {
+   "tour": "memberships-client-portal-setup",
+   "step": "save-branding",
+   "labels": [
+    "Save Settings|button"
+   ],
+   "screen": "/memberships/client-portal/dashboard"
+  },
+  {
+   "tour": "memberships-client-portal-setup",
+   "step": "domain",
+   "labels": [
+    "Domain Setup"
+   ],
+   "screen": "/memberships/client-portal/dashboard"
+  },
+  {
+   "tour": "memberships-client-portal-setup",
+   "step": "update-domain",
+   "labels": [
+    "Update Domain|button"
+   ],
+   "screen": "/memberships/client-portal/dashboard"
+  },
+  {
+   "tour": "memberships-client-portal-apps",
+   "step": "app-permissions",
+   "labels": [
+    "App Permissions"
+   ],
+   "screen": "/memberships/client-portal/dashboard"
+  },
+  {
+   "tour": "memberships-client-portal-apps",
+   "step": "language",
+   "labels": [
+    "Language Settings"
+   ],
+   "screen": "/memberships/client-portal/dashboard"
+  },
+  {
+   "tour": "settings-phone-call-routing",
+   "step": "edit",
+   "labels": [
+    "Edit Configuration"
+   ],
+   "screen": "/settings/phone_system"
+  },
+  {
+   "tour": "settings-phone-missed-call-text",
+   "step": "customise",
+   "labels": [
+    "Customize|button"
+   ],
+   "screen": "/settings/phone_system"
+  },
+  {
+   "tour": "settings-phone-number-pool",
+   "step": "add-pool",
+   "labels": [
+    "Add Number Pool|button"
+   ],
+   "screen": "/settings/phone_system"
+  },
+  {
+   "tour": "payments-setup-gst",
+   "step": "create",
+   "labels": [
+    "Create Tax|button"
+   ],
+   "screen": "/payments/settings/receipts"
+  },
+  {
+   "tour": "sites-store-shipping",
+   "step": "shipping",
+   "labels": [
+    "Shipping & Delivery|a"
+   ],
+   "screen": "/payments/settings/receipts"
+  },
+  {
+   "tour": "sites-store-shipping",
+   "step": "add-zone",
+   "labels": [
+    "Add Zone|button"
+   ],
+   "screen": "/payments/settings/receipts"
+  },
+  {
+   "tour": "ai-voice-actions-transfer",
+   "step": "new-action",
+   "labels": [
+    "New Action"
+   ],
+   "screen": "/ai-agents/voice-ai"
+  },
+  {
+   "tour": "ai-voice-actions-transfer",
+   "step": "transfer",
+   "labels": [
+    "Call Transfer"
+   ],
+   "screen": "/ai-agents/voice-ai"
+  },
+  {
+   "tour": "ai-voice-actions-transfer",
+   "step": "book",
+   "labels": [
+    "Book Appointment"
+   ],
+   "screen": "/ai-agents/voice-ai"
+  },
+  {
+   "tour": "ai-voice-actions-transfer",
+   "step": "sms",
+   "labels": [
+    "Send SMS"
+   ],
+   "screen": "/ai-agents/voice-ai"
+  },
+  {
+   "tour": "ai-voice-review-calls",
+   "step": "dashboard",
+   "labels": [
+    "Dashboard & Logs"
+   ],
+   "screen": "/ai-agents/voice-ai"
+  },
+  {
+   "tour": "ai-voice-test-agent",
+   "step": "panel",
+   "labels": [
+    "Test Your Agent"
+   ],
+   "screen": "/ai-agents/voice-ai"
+  },
+  {
+   "tour": "ai-voice-test-agent",
+   "step": "web",
+   "labels": [
+    "Web Call"
+   ],
+   "screen": "/ai-agents/voice-ai"
+  },
+  {
+   "tour": "ai-voice-test-agent",
+   "step": "phone",
+   "labels": [
+    "Phone Call"
+   ],
+   "screen": "/ai-agents/voice-ai"
+  },
+  {
+   "tour": "ai-voice-receptionist-setup",
+   "step": "create",
+   "labels": [
+    "Create Agent|button"
+   ],
+   "screen": "/ai-agents/voice-ai"
+  },
+  {
+   "tour": "ai-voice-receptionist-setup",
+   "step": "knowledge",
+   "labels": [
+    "Save"
+   ],
+   "screen": "/ai-agents/voice-ai"
+  },
+  {
+   "tour": "ai-voice-assign-number",
+   "step": "deploy",
+   "labels": [
+    "Deploy"
+   ],
+   "screen": "/ai-agents/voice-ai"
+  },
+  {
+   "tour": "ai-voice-assign-number",
+   "step": "routing",
+   "labels": [
+    "Call Routing"
+   ],
+   "screen": "/ai-agents/voice-ai"
+  },
+  {
+   "tour": "ai-voice-assign-number",
+   "step": "save",
+   "labels": [
+    "Save"
+   ],
+   "screen": "/ai-agents/voice-ai"
+  },
+  {
+   "tour": "ai-voice-business-hours",
+   "step": "deploy",
+   "labels": [
+    "Deploy"
+   ],
+   "screen": "/ai-agents/voice-ai"
+  },
+  {
+   "tour": "ai-voice-business-hours",
+   "step": "hours",
+   "labels": [
+    "Working Hours"
+   ],
+   "screen": "/ai-agents/voice-ai"
+  },
+  {
+   "tour": "ai-voice-business-hours",
+   "step": "save",
+   "labels": [
+    "Save"
+   ],
+   "screen": "/ai-agents/voice-ai"
+  },
+  {
+   "tour": "ai-page-voice-ai",
+   "step": "list",
+   "labels": [
+    "Agent List"
+   ],
+   "screen": "/ai-agents/voice-ai"
+  },
+  {
+   "tour": "ai-page-voice-ai",
+   "step": "create",
+   "labels": [
+    "Create Agent"
+   ],
+   "screen": "/ai-agents/voice-ai"
+  },
+  {
+   "tour": "ai-page-voice-ai",
+   "step": "dashboard",
+   "labels": [
+    "Dashboard & Logs"
+   ],
+   "screen": "/ai-agents/voice-ai"
+  },
+  {
+   "tour": "payments-page-gift-cards",
+   "step": "templates",
+   "labels": [
+    "Templates"
+   ],
+   "screen": "/payments/gift-cards"
+  },
+  {
+   "tour": "payments-send-gift-card",
+   "step": "send",
+   "labels": [
+    "Send|button"
+   ],
+   "screen": "/payments/gift-cards"
+  },
+  {
+   "tour": "payments-sell-gift-card",
+   "step": "sell",
+   "labels": [
+    "Sell|button"
+   ],
+   "screen": "/payments/gift-cards"
+  },
+  {
+   "tour": "marketing-social-create-post",
+   "step": "new-post",
+   "labels": [
+    "New Post|button"
+   ],
+   "screen": "/marketing/social-planner"
+  },
+  {
+   "tour": "marketing-social-create-post",
+   "step": "create-new",
+   "labels": [
+    "Create New Post"
+   ],
+   "screen": "/marketing/social-planner"
+  },
+  {
+   "tour": "marketing-social-create-post",
+   "step": "schedule",
+   "labels": [
+    "Schedule|button"
+   ],
+   "screen": "/marketing/social-planner"
+  },
+  {
+   "tour": "marketing-social-bulk-csv",
+   "step": "new-post",
+   "labels": [
+    "New Post|button"
+   ],
+   "screen": "/marketing/social-planner"
+  },
+  {
+   "tour": "marketing-social-bulk-csv",
+   "step": "upload-csv",
+   "labels": [
+    "Upload from CSV"
+   ],
+   "screen": "/marketing/social-planner"
+  },
+  {
+   "tour": "marketing-social-bulk-csv",
+   "step": "format",
+   "labels": [
+    "Advanced Format"
+   ],
+   "screen": "/marketing/social-planner"
+  },
+  {
+   "tour": "marketing-social-bulk-csv",
+   "step": "upload",
+   "labels": [
+    "Next|button"
+   ],
+   "screen": "/marketing/social-planner"
+  },
+  {
+   "tour": "marketing-social-bulk-csv",
+   "step": "channels",
+   "labels": [
+    "Create|button"
+   ],
+   "screen": "/marketing/social-planner"
+  },
+  {
+   "tour": "marketing-social-bulk-csv",
+   "step": "import",
+   "labels": [
+    "Import|button"
+   ],
+   "screen": "/marketing/social-planner"
+  },
+  {
+   "tour": "marketing-social-reconnect-account",
+   "step": "banner",
+   "labels": [
+    "Re-integrate|button"
+   ],
+   "screen": "/marketing/social-planner"
+  },
+  {
+   "tour": "marketing-page-social-planner",
+   "step": "new-post",
+   "labels": [
+    "New Post|button"
+   ],
+   "screen": "/marketing/social-planner"
+  },
+  {
+   "tour": "marketing-page-social-planner",
+   "step": "content",
+   "labels": [
+    "Content"
+   ],
+   "screen": "/marketing/social-planner"
+  },
+  {
+   "tour": "marketing-social-recurring-post",
+   "step": "new-post",
+   "labels": [
+    "New Post|button"
+   ],
+   "screen": "/marketing/social-planner"
+  },
+  {
+   "tour": "marketing-social-recurring-post",
+   "step": "create-new",
+   "labels": [
+    "Create New Post"
+   ],
+   "screen": "/marketing/social-planner"
+  },
+  {
+   "tour": "marketing-social-recurring-post",
+   "step": "recurring",
+   "labels": [
+    "Schedule Recurring Posts"
+   ],
+   "screen": "/marketing/social-planner"
+  },
+  {
+   "tour": "marketing-social-recurring-post",
+   "step": "manage",
+   "labels": [
+    "Content"
+   ],
+   "screen": "/marketing/social-planner"
+  },
+  {
+   "tour": "ai-content-social-post",
+   "step": "new",
+   "labels": [
+    "New Post"
+   ],
+   "screen": "/marketing/social-planner"
+  },
+  {
+   "tour": "marketing-social-ai-post",
+   "step": "new-post",
+   "labels": [
+    "New Post|button"
+   ],
+   "screen": "/marketing/social-planner"
+  },
+  {
+   "tour": "marketing-social-ai-post",
+   "step": "content-ai",
+   "labels": [
+    "Content AI"
+   ],
+   "screen": "/marketing/social-planner"
+  },
+  {
+   "tour": "marketing-social-ai-post",
+   "step": "generate",
+   "labels": [
+    "Generate|button"
+   ],
+   "screen": "/marketing/social-planner"
+  },
+  {
+   "tour": "marketing-social-ai-post",
+   "step": "refine",
+   "labels": [
+    "Edit with Ask AI"
+   ],
+   "screen": "/marketing/social-planner"
+  },
+  {
+   "tour": "contacts-page-smart-lists",
+   "step": "filters",
+   "labels": [
+    "Advanced Filters|button"
+   ],
+   "screen": "/contacts/smart_list/All"
+  },
+  {
+   "tour": "contacts-page-smart-lists",
+   "step": "add",
+   "labels": [
+    "Add Contact|button",
+    "Import Contacts|button"
+   ],
+   "screen": "/contacts/smart_list/All"
+  },
+  {
+   "tour": "contacts-tag-contacts",
+   "step": "apply",
+   "labels": [
+    "Add Tags|button"
+   ],
+   "screen": "/contacts/smart_list/All"
+  },
+  {
+   "tour": "contacts-add-contact",
+   "step": "add",
+   "labels": [
+    "Add Contact|button"
+   ],
+   "screen": "/contacts/smart_list/All"
+  },
+  {
+   "tour": "contacts-add-contact",
+   "step": "save",
+   "labels": [
+    "Save|button",
+    "Save & Add Another|button"
+   ],
+   "screen": "/contacts/smart_list/All"
+  },
+  {
+   "tour": "contacts-import-spreadsheet",
+   "step": "import",
+   "labels": [
+    "Import Contacts|button"
+   ],
+   "screen": "/contacts/smart_list/All"
+  },
+  {
+   "tour": "contacts-create-smart-list",
+   "step": "filters",
+   "labels": [
+    "Advanced Filters|button"
+   ],
+   "screen": "/contacts/smart_list/All"
+  },
+  {
+   "tour": "calendars-filter-appointment-list",
+   "step": "customize",
+   "labels": [
+    "Customize List|button"
+   ],
+   "screen": "/calendars/appointments"
+  },
+  {
+   "tour": "calendars-reschedule-from-list",
+   "step": "reschedule",
+   "labels": [
+    "Reschedule"
+   ],
+   "screen": "/calendars/appointments"
+  },
+  {
+   "tour": "settings-domains-redirect",
+   "step": "add",
+   "labels": [
+    "Add Redirect|button"
+   ],
+   "screen": "/settings/domain"
+  },
+  {
+   "tour": "settings-domains-connect",
+   "step": "manual",
+   "labels": [
+    "Add record manually|button"
+   ],
+   "screen": "/settings/domain"
+  },
+  {
+   "tour": "marketing-snippets-text",
+   "step": "text",
+   "labels": [
+    "Add Text Snippet"
+   ],
+   "screen": "/marketing/templates"
+  },
+  {
+   "tour": "marketing-snippets-text",
+   "step": "custom-values",
+   "labels": [
+    "Custom Values"
+   ],
+   "screen": "/marketing/templates"
+  },
+  {
+   "tour": "marketing-snippets-text",
+   "step": "save",
+   "labels": [
+    "Save|button"
+   ],
+   "screen": "/marketing/templates"
+  },
+  {
+   "tour": "marketing-snippets-email",
+   "step": "email",
+   "labels": [
+    "Add Email Snippet"
+   ],
+   "screen": "/marketing/templates"
+  },
+  {
+   "tour": "marketing-snippets-email",
+   "step": "save",
+   "labels": [
+    "Save|button"
+   ],
+   "screen": "/marketing/templates"
+  },
+  {
+   "tour": "settings-pipeline-multiple-deals",
+   "step": "save",
+   "labels": [
+    "Save changes|button"
+   ],
+   "screen": "/settings/objects"
+  },
+  {
+   "tour": "settings-objects-create",
+   "step": "create",
+   "labels": [
+    "Create Custom Object|button"
+   ],
+   "screen": "/settings/objects"
+  },
+  {
+   "tour": "sites-quiz-build",
+   "step": "add",
+   "labels": [
+    "Add Quiz|button"
+   ],
+   "screen": "/quiz-builder/main"
+  },
+  {
+   "tour": "sites-page-quizzes",
+   "step": "add",
+   "labels": [
+    "Add Quiz|button"
+   ],
+   "screen": "/quiz-builder/main"
+  },
+  {
+   "tour": "sites-page-wordpress",
+   "step": "create",
+   "labels": [
+    "Create Site|button"
+   ],
+   "screen": "/wordpress"
+  },
+  {
+   "tour": "sites-wordpress-create",
+   "step": "create",
+   "labels": [
+    "Create Site|button"
+   ],
+   "screen": "/wordpress"
+  },
+  {
+   "tour": "ai-templates-manage-installed",
+   "step": "installed",
+   "labels": [
+    "Installed Agents"
+   ],
+   "screen": "/ai-agents/agent-templates"
+  },
+  {
+   "tour": "memberships-course-lessons",
+   "step": "products",
+   "labels": [
+    "Products"
+   ],
+   "screen": "/memberships/courses/dashboard-v2"
+  },
+  {
+   "tour": "memberships-course-lessons",
+   "step": "add-content",
+   "labels": [
+    "Add Content"
+   ],
+   "screen": "/memberships/courses/dashboard-v2"
+  },
+  {
+   "tour": "memberships-course-lessons",
+   "step": "preview",
+   "labels": [
+    "Preview"
+   ],
+   "screen": "/memberships/courses/dashboard-v2"
+  },
+  {
+   "tour": "memberships-page-courses",
+   "step": "products",
+   "labels": [
+    "Products"
+   ],
+   "screen": "/memberships/courses/dashboard-v2"
+  },
+  {
+   "tour": "memberships-page-courses",
+   "step": "offers",
+   "labels": [
+    "Offers"
+   ],
+   "screen": "/memberships/courses/dashboard-v2"
+  },
+  {
+   "tour": "memberships-page-courses",
+   "step": "analytics",
+   "labels": [
+    "Analytics"
+   ],
+   "screen": "/memberships/courses/dashboard-v2"
+  },
+  {
+   "tour": "memberships-course-create",
+   "step": "products",
+   "labels": [
+    "Products"
+   ],
+   "screen": "/memberships/courses/dashboard-v2"
+  },
+  {
+   "tour": "memberships-course-create",
+   "step": "create",
+   "labels": [
+    "Create Product|button",
+    "Create New"
+   ],
+   "screen": "/memberships/courses/dashboard-v2"
+  },
+  {
+   "tour": "memberships-certificate-course",
+   "step": "products",
+   "labels": [
+    "Products"
+   ],
+   "screen": "/memberships/courses/dashboard-v2"
+  },
+  {
+   "tour": "memberships-certificate-course",
+   "step": "certificates-tab",
+   "labels": [
+    "Certificates"
+   ],
+   "screen": "/memberships/courses/dashboard-v2"
+  },
+  {
+   "tour": "memberships-certificate-course",
+   "step": "attach",
+   "labels": [
+    "Attach|button"
+   ],
+   "screen": "/memberships/courses/dashboard-v2"
+  },
+  {
+   "tour": "memberships-course-quiz",
+   "step": "products",
+   "labels": [
+    "Products"
+   ],
+   "screen": "/memberships/courses/dashboard-v2"
+  },
+  {
+   "tour": "memberships-course-quiz",
+   "step": "add-quiz",
+   "labels": [
+    "Add Content"
+   ],
+   "screen": "/memberships/courses/dashboard-v2"
+  },
+  {
+   "tour": "memberships-course-quiz",
+   "step": "questions",
+   "labels": [
+    "Add Question|button"
+   ],
+   "screen": "/memberships/courses/dashboard-v2"
+  },
+  {
+   "tour": "memberships-course-sell",
+   "step": "offers",
+   "labels": [
+    "Offers"
+   ],
+   "screen": "/memberships/courses/dashboard-v2"
+  },
+  {
+   "tour": "memberships-course-sell",
+   "step": "create-offer",
+   "labels": [
+    "Create Offer|button"
+   ],
+   "screen": "/memberships/courses/dashboard-v2"
+  },
+  {
+   "tour": "memberships-course-drip",
+   "step": "products",
+   "labels": [
+    "Products"
+   ],
+   "screen": "/memberships/courses/dashboard-v2"
+  },
+  {
+   "tour": "memberships-course-drip",
+   "step": "drip-settings",
+   "labels": [
+    "Drip Settings"
+   ],
+   "screen": "/memberships/courses/dashboard-v2"
+  },
+  {
+   "tour": "settings-integrations-quickbooks",
+   "step": "card",
+   "labels": [
+    "QB Connect|button"
+   ],
+   "screen": "/settings/lc-integrations"
+  },
+  {
+   "tour": "settings-integrations-google",
+   "step": "card",
+   "labels": [
+    "Google Business Profile"
+   ],
+   "screen": "/settings/lc-integrations"
+  },
+  {
+   "tour": "payments-page-integrations",
+   "step": "manage",
+   "labels": [
+    "Manage|button"
+   ],
+   "screen": "/payments/integrations"
+  },
+  {
+   "tour": "payments-connect-stripe",
+   "step": "manage",
+   "labels": [
+    "Manage|button"
+   ],
+   "screen": "/payments/integrations"
+  },
+  {
+   "tour": "memberships-certificate-send",
+   "step": "send",
+   "labels": [
+    "Send"
+   ],
+   "screen": "/memberships/certificates/create-certificates"
+  },
+  {
+   "tour": "memberships-page-credentials",
+   "step": "send",
+   "labels": [
+    "Send"
+   ],
+   "screen": "/memberships/certificates/create-certificates"
+  },
+  {
+   "tour": "memberships-certificate-create",
+   "step": "create",
+   "labels": [
+    "Create Certificate|button"
+   ],
+   "screen": "/memberships/certificates/create-certificates"
+  },
+  {
+   "tour": "memberships-certificate-create",
+   "step": "preview",
+   "labels": [
+    "Preview"
+   ],
+   "screen": "/memberships/certificates/create-certificates"
+  },
+  {
+   "tour": "sites-chat-widget-install",
+   "step": "get-code",
+   "labels": [
+    "Get Code|button"
+   ],
+   "screen": "/funnels-websites/chat-widget"
+  },
+  {
+   "tour": "payments-record-payment",
+   "step": "tab",
+   "labels": [
+    "All Invoices"
+   ],
+   "screen": "/payments/invoices"
+  },
+  {
+   "tour": "payments-record-payment",
+   "step": "record",
+   "labels": [
+    "Record Payment|button"
+   ],
+   "screen": "/payments/invoices"
+  },
+  {
+   "tour": "payments-send-estimate",
+   "step": "send",
+   "labels": [
+    "Send|button"
+   ],
+   "screen": "/payments/invoices"
+  },
+  {
+   "tour": "payments-page-invoices",
+   "step": "tabs",
+   "labels": [
+    "All Invoices"
+   ],
+   "screen": "/payments/invoices"
+  },
+  {
+   "tour": "payments-invoice-payment-schedule",
+   "step": "schedule",
+   "labels": [
+    "Add Payment Schedule"
+   ],
+   "screen": "/payments/invoices"
+  },
+  {
+   "tour": "payments-invoice-payment-schedule",
+   "step": "send",
+   "labels": [
+    "Send|button"
+   ],
+   "screen": "/payments/invoices"
+  },
+  {
+   "tour": "payments-estimate-to-invoice",
+   "step": "send",
+   "labels": [
+    "Send|button"
+   ],
+   "screen": "/payments/invoices"
+  },
+  {
+   "tour": "payments-send-invoice",
+   "step": "items",
+   "labels": [
+    "Add Product|button"
+   ],
+   "screen": "/payments/invoices"
+  },
+  {
+   "tour": "payments-send-invoice",
+   "step": "gst",
+   "labels": [
+    "Add Tax"
+   ],
+   "screen": "/payments/invoices"
+  },
+  {
+   "tour": "payments-send-invoice",
+   "step": "save",
+   "labels": [
+    "Save|button"
+   ],
+   "screen": "/payments/invoices"
+  },
+  {
+   "tour": "payments-send-invoice",
+   "step": "send",
+   "labels": [
+    "Send|button"
+   ],
+   "screen": "/payments/invoices"
+  },
+  {
+   "tour": "payments-product-gst",
+   "step": "attach",
+   "labels": [
+    "Attach Tax Rates"
+   ],
+   "screen": "/payments/products"
+  },
+  {
+   "tour": "payments-product-gst",
+   "step": "save",
+   "labels": [
+    "Save|button"
+   ],
+   "screen": "/payments/products"
+  },
+  {
+   "tour": "payments-recurring-product",
+   "step": "price",
+   "labels": [
+    "Recurring"
+   ],
+   "screen": "/payments/products"
+  },
+  {
+   "tour": "payments-recurring-product",
+   "step": "save",
+   "labels": [
+    "Save|button"
+   ],
+   "screen": "/payments/products"
+  },
+  {
+   "tour": "payments-create-product",
+   "step": "price",
+   "labels": [
+    "One-Time"
+   ],
+   "screen": "/payments/products"
+  },
+  {
+   "tour": "payments-create-product",
+   "step": "save",
+   "labels": [
+    "Save|button"
+   ],
+   "screen": "/payments/products"
+  },
+  {
+   "tour": "contacts-custom-fields-create",
+   "step": "save",
+   "labels": [
+    "Create custom field|button"
+   ],
+   "screen": "/settings/fields"
+  },
+  {
+   "tour": "settings-fields-create",
+   "step": "save",
+   "labels": [
+    "Create custom field|button"
+   ],
+   "screen": "/settings/fields"
+  },
+  {
+   "tour": "more-page-media-storage",
+   "step": "trash",
+   "labels": [
+    "Trash"
+   ],
+   "screen": "/media-storage"
+  },
+  {
+   "tour": "more-media-organise",
+   "step": "select",
+   "labels": [
+    "Select"
+   ],
+   "screen": "/media-storage"
+  },
+  {
+   "tour": "more-media-organise",
+   "step": "move",
+   "labels": [
+    "Move to Folder"
+   ],
+   "screen": "/media-storage"
+  },
+  {
+   "tour": "more-media-organise",
+   "step": "rename",
+   "labels": [
+    "Rename"
+   ],
+   "screen": "/media-storage"
+  },
+  {
+   "tour": "more-media-restore",
+   "step": "trash",
+   "labels": [
+    "Trash"
+   ],
+   "screen": "/media-storage"
+  },
+  {
+   "tour": "more-media-restore",
+   "step": "restore",
+   "labels": [
+    "Restore"
+   ],
+   "screen": "/media-storage"
+  },
+  {
+   "tour": "more-media-google-drive",
+   "step": "connect",
+   "labels": [
+    "Connect Google Drive|button"
+   ],
+   "screen": "/media-storage"
+  },
+  {
+   "tour": "marketing-countdown-create",
+   "step": "save",
+   "labels": [
+    "Save|button"
+   ],
+   "screen": "/marketing/countdown-timer"
+  },
+  {
+   "tour": "settings-page-tags",
+   "step": "new",
+   "labels": [
+    "New tag|button"
+   ],
+   "screen": "/settings/tags"
+  },
+  {
+   "tour": "settings-tags-create",
+   "step": "new",
+   "labels": [
+    "New tag|button"
+   ],
+   "screen": "/settings/tags"
+  },
+  {
+   "tour": "payments-manage-subscription",
+   "step": "update",
+   "labels": [
+    "Update|button"
+   ],
+   "screen": "/payments/v2/subscriptions"
+  },
+  {
+   "tour": "settings-page-billing",
+   "step": "wallet",
+   "labels": [
+    "Wallet & Transactions"
+   ],
+   "screen": "/settings/company-billing/billing"
+  },
+  {
+   "tour": "settings-billing-wallet-topup",
+   "step": "wallet-tab",
+   "labels": [
+    "Wallet & Transactions"
+   ],
+   "screen": "/settings/company-billing/billing"
+  },
+  {
+   "tour": "settings-billing-wallet-topup",
+   "step": "add-funds",
+   "labels": [
+    "Add Funds|button"
+   ],
+   "screen": "/settings/company-billing/billing"
+  },
+  {
+   "tour": "settings-billing-auto-recharge",
+   "step": "wallet-tab",
+   "labels": [
+    "Wallet & Transactions"
+   ],
+   "screen": "/settings/company-billing/billing"
+  },
+  {
+   "tour": "settings-billing-card",
+   "step": "add-card",
+   "labels": [
+    "Add New Card|button"
+   ],
+   "screen": "/settings/company-billing/billing"
+  },
+  {
+   "tour": "settings-billing-charges",
+   "step": "wallet-tab",
+   "labels": [
+    "Wallet & Transactions"
+   ],
+   "screen": "/settings/company-billing/billing"
+  },
+  {
+   "tour": "ai-kb-upload-files",
+   "step": "add",
+   "labels": [
+    "Add Source"
+   ],
+   "screen": "/ai-agents/knowledge-base"
+  },
+  {
+   "tour": "ai-kb-upload-files",
+   "step": "upload",
+   "labels": [
+    "File Upload"
+   ],
+   "screen": "/ai-agents/knowledge-base"
+  },
+  {
+   "tour": "ai-kb-upload-files",
+   "step": "table",
+   "labels": [
+    "Tables"
+   ],
+   "screen": "/ai-agents/knowledge-base"
+  },
+  {
+   "tour": "ai-kb-upload-files",
+   "step": "rich-text",
+   "labels": [
+    "Rich Text"
+   ],
+   "screen": "/ai-agents/knowledge-base"
+  },
+  {
+   "tour": "ai-kb-web-crawl",
+   "step": "add",
+   "labels": [
+    "Add Source"
+   ],
+   "screen": "/ai-agents/knowledge-base"
+  },
+  {
+   "tour": "ai-kb-web-crawl",
+   "step": "extract",
+   "labels": [
+    "Extract Data"
+   ],
+   "screen": "/ai-agents/knowledge-base"
+  },
+  {
+   "tour": "ai-kb-web-crawl",
+   "step": "pick",
+   "labels": [
+    "View All Pages"
+   ],
+   "screen": "/ai-agents/knowledge-base"
+  },
+  {
+   "tour": "ai-kb-web-crawl",
+   "step": "train",
+   "labels": [
+    "Train Bot"
+   ],
+   "screen": "/ai-agents/knowledge-base"
+  },
+  {
+   "tour": "ai-page-knowledge-base",
+   "step": "add",
+   "labels": [
+    "Add Source"
+   ],
+   "screen": "/ai-agents/knowledge-base"
+  },
+  {
+   "tour": "ai-kb-add-faqs",
+   "step": "faq",
+   "labels": [
+    "FAQ"
+   ],
+   "screen": "/ai-agents/knowledge-base"
+  },
+  {
+   "tour": "marketing-brand-board-create",
+   "step": "add",
+   "labels": [
+    "Add a Design Kit|button"
+   ],
+   "screen": "/marketing/brand-boards"
+  },
+  {
+   "tour": "marketing-brand-board-create",
+   "step": "method",
+   "labels": [
+    "Start from Blank"
+   ],
+   "screen": "/marketing/brand-boards"
+  },
+  {
+   "tour": "marketing-brand-board-create",
+   "step": "logos",
+   "labels": [
+    "Logos"
+   ],
+   "screen": "/marketing/brand-boards"
+  },
+  {
+   "tour": "marketing-brand-board-create",
+   "step": "colours",
+   "labels": [
+    "Colors"
+   ],
+   "screen": "/marketing/brand-boards"
+  },
+  {
+   "tour": "marketing-brand-board-create",
+   "step": "fonts",
+   "labels": [
+    "Typography"
+   ],
+   "screen": "/marketing/brand-boards"
+  },
+  {
+   "tour": "marketing-brand-board-in-emails",
+   "step": "default",
+   "labels": [
+    "Set as Default"
+   ],
+   "screen": "/marketing/brand-boards"
+  },
+  {
+   "tour": "marketing-page-brand-boards",
+   "step": "add",
+   "labels": [
+    "Add a Design Kit|button"
+   ],
+   "screen": "/marketing/brand-boards"
+  },
+  {
+   "tour": "settings-import-opportunities",
+   "step": "upload",
+   "labels": [
+    "Upload File|button"
+   ],
+   "screen": "/settings/import-data"
+  },
+  {
+   "tour": "settings-import-contacts",
+   "step": "upload",
+   "labels": [
+    "Upload File|button"
+   ],
+   "screen": "/settings/import-data"
+  },
+  {
+   "tour": "reputation-video-request",
+   "step": "copy",
+   "labels": [
+    "Copy Link"
+   ],
+   "screen": "/reputation/video-testimonials"
+  },
+  {
+   "tour": "reputation-video-collector",
+   "step": "welcome",
+   "labels": [
+    "Welcome Page"
+   ],
+   "screen": "/reputation/video-testimonials"
+  },
+  {
+   "tour": "reputation-video-collector",
+   "step": "questions",
+   "labels": [
+    "Questionnaire Page"
+   ],
+   "screen": "/reputation/video-testimonials"
+  },
+  {
+   "tour": "reputation-video-collector",
+   "step": "attribution",
+   "labels": [
+    "Attribution Page"
+   ],
+   "screen": "/reputation/video-testimonials"
+  },
+  {
+   "tour": "reputation-video-collector",
+   "step": "brand",
+   "labels": [
+    "Logo & Colors"
+   ],
+   "screen": "/reputation/video-testimonials"
+  },
+  {
+   "tour": "reputation-video-collector",
+   "step": "preview",
+   "labels": [
+    "Preview"
+   ],
+   "screen": "/reputation/video-testimonials"
+  },
+  {
+   "tour": "reporting-custom-report-pdf",
+   "step": "download",
+   "labels": [
+    "Download|button"
+   ],
+   "screen": "/reporting/reports"
+  },
+  {
+   "tour": "reporting-custom-report-template",
+   "step": "new",
+   "labels": [
+    "New Report|button"
+   ],
+   "screen": "/reporting/reports"
+  },
+  {
+   "tour": "reporting-custom-report-template",
+   "step": "library",
+   "labels": [
+    "From Template Library"
+   ],
+   "screen": "/reporting/reports"
+  },
+  {
+   "tour": "reporting-custom-report-template",
+   "step": "save",
+   "labels": [
+    "Save|button"
+   ],
+   "screen": "/reporting/reports"
+  },
+  {
+   "tour": "reporting-custom-report-schedule",
+   "step": "schedule",
+   "labels": [
+    "Schedule"
+   ],
+   "screen": "/reporting/reports"
+  },
+  {
+   "tour": "reporting-custom-report-schedule",
+   "step": "confirm",
+   "labels": [
+    "Save and Schedule|button"
+   ],
+   "screen": "/reporting/reports"
+  },
+  {
+   "tour": "reporting-custom-report-build",
+   "step": "new",
+   "labels": [
+    "New Report|button"
+   ],
+   "screen": "/reporting/reports"
+  },
+  {
+   "tour": "reporting-custom-report-build",
+   "step": "save",
+   "labels": [
+    "Save|button"
+   ],
+   "screen": "/reporting/reports"
+  },
+  {
+   "tour": "reporting-page-custom-reports",
+   "step": "new",
+   "labels": [
+    "New Report|button"
+   ],
+   "screen": "/reporting/reports"
+  },
+  {
+   "tour": "opportunities-bulk-edit",
+   "step": "edit",
+   "labels": [
+    "Edit|button"
+   ],
+   "screen": "/opportunities/list"
+  },
+  {
+   "tour": "settings-users-add",
+   "step": "add",
+   "labels": [
+    "Add Employee|button"
+   ],
+   "screen": "/settings/users"
+  },
+  {
+   "tour": "settings-page-users",
+   "step": "add",
+   "labels": [
+    "Add Employee|button"
+   ],
+   "screen": "/settings/users"
+  },
+  {
+   "tour": "conversations-filter-unread",
+   "step": "bulk",
+   "labels": [
+    "Mark as Read|button",
+    "Add Star|button"
+   ],
+   "screen": "/conversations/conversations"
+  },
+  {
+   "tour": "ai-conversation-bot-create",
+   "step": "create",
+   "labels": [
+    "Create Bot|button"
+   ],
+   "screen": "/ai-agents/conversation-ai"
+  },
+  {
+   "tour": "ai-conversation-bot-create",
+   "step": "settings",
+   "labels": [
+    "Bot Settings"
+   ],
+   "screen": "/ai-agents/conversation-ai"
+  },
+  {
+   "tour": "ai-conversation-bot-create",
+   "step": "voice",
+   "labels": [
+    "Brand Voice"
+   ],
+   "screen": "/ai-agents/conversation-ai"
+  },
+  {
+   "tour": "ai-conversation-bot-create",
+   "step": "training",
+   "labels": [
+    "Bot Training"
+   ],
+   "screen": "/ai-agents/conversation-ai"
+  },
+  {
+   "tour": "ai-conversation-bot-create",
+   "step": "mode",
+   "labels": [
+    "Suggestive"
+   ],
+   "screen": "/ai-agents/conversation-ai"
+  },
+  {
+   "tour": "ai-conversation-bot-instructions",
+   "step": "instructions",
+   "labels": [
+    "Additional Instructions"
+   ],
+   "screen": "/ai-agents/conversation-ai"
+  },
+  {
+   "tour": "ai-conversation-bot-goals",
+   "step": "goals",
+   "labels": [
+    "Bot Goals"
+   ],
+   "screen": "/ai-agents/conversation-ai"
+  },
+  {
+   "tour": "ai-conversation-bot-goals",
+   "step": "collect",
+   "labels": [
+    "Collect Info"
+   ],
+   "screen": "/ai-agents/conversation-ai"
+  },
+  {
+   "tour": "ai-conversation-bot-goals",
+   "step": "book",
+   "labels": [
+    "Book Appointment"
+   ],
+   "screen": "/ai-agents/conversation-ai"
+  },
+  {
+   "tour": "ai-conversation-bot-goals",
+   "step": "workflow",
+   "labels": [
+    "Trigger Workflow"
+   ],
+   "screen": "/ai-agents/conversation-ai"
+  },
+  {
+   "tour": "ai-conversation-bot-channels-modes",
+   "step": "settings",
+   "labels": [
+    "Bot Settings"
+   ],
+   "screen": "/ai-agents/conversation-ai"
+  },
+  {
+   "tour": "ai-conversation-bot-channels-modes",
+   "step": "autopilot",
+   "labels": [
+    "Auto-Pilot"
+   ],
+   "screen": "/ai-agents/conversation-ai"
+  },
+  {
+   "tour": "ai-conversation-bot-channels-modes",
+   "step": "limit",
+   "labels": [
+    "Maximum messages a Bot can send in a Conversation"
+   ],
+   "screen": "/ai-agents/conversation-ai"
+  },
+  {
+   "tour": "ai-page-conversation-ai",
+   "step": "create",
+   "labels": [
+    "Create Bot"
+   ],
+   "screen": "/ai-agents/conversation-ai"
+  },
+  {
+   "tour": "ai-kb-attach-and-test",
+   "step": "training",
+   "labels": [
+    "Bot Training"
+   ],
+   "screen": "/ai-agents/conversation-ai"
+  },
+  {
+   "tour": "memberships-community-invite",
+   "step": "invite",
+   "labels": [
+    "Invite Members|button"
+   ],
+   "screen": "/memberships/communities/community-groups"
+  },
+  {
+   "tour": "memberships-community-channels",
+   "step": "add-channel",
+   "labels": [
+    "Add Channel"
+   ],
+   "screen": "/memberships/communities/community-groups"
+  },
+  {
+   "tour": "memberships-community-learning-events",
+   "step": "learning",
+   "labels": [
+    "Learning"
+   ],
+   "screen": "/memberships/communities/community-groups"
+  },
+  {
+   "tour": "memberships-community-learning-events",
+   "step": "events",
+   "labels": [
+    "Events"
+   ],
+   "screen": "/memberships/communities/community-groups"
+  },
+  {
+   "tour": "memberships-community-create",
+   "step": "create",
+   "labels": [
+    "Create New Community|button",
+    "Create Group"
+   ],
+   "screen": "/memberships/communities/community-groups"
+  },
+  {
+   "tour": "payments-document-payment",
+   "step": "send",
+   "labels": [
+    "Send|button"
+   ],
+   "screen": "/payments/proposals-estimates"
+  },
+  {
+   "tour": "payments-send-contract",
+   "step": "send",
+   "labels": [
+    "Send|button"
+   ],
+   "screen": "/payments/proposals-estimates"
+  },
+  {
+   "tour": "calendars-filter-team-view",
+   "step": "hide",
+   "labels": [
+    "Manage View"
+   ],
+   "screen": "/calendars/view"
+  },
+  {
+   "tour": "conversations-trigger-links-create",
+   "step": "save",
+   "labels": [
+    "Save|button"
+   ],
+   "screen": "/conversations/trigger-links"
+  },
+  {
+   "tour": "conversations-manual-actions-reassign",
+   "step": "bulk",
+   "labels": [
+    "Bulk Actions|button"
+   ],
+   "screen": "/conversations/manual_actions"
+  },
+  {
+   "tour": "conversations-manual-actions-reassign",
+   "step": "assign",
+   "labels": [
+    "Assign User"
+   ],
+   "screen": "/conversations/manual_actions"
+  },
+  {
+   "tour": "sites-page-forms",
+   "step": "add-form",
+   "labels": [
+    "Add Form|button"
+   ],
+   "screen": "/form-builder/main"
+  },
+  {
+   "tour": "sites-form-build",
+   "step": "add-form",
+   "labels": [
+    "Add Form|button"
+   ],
+   "screen": "/form-builder/main"
+  },
+  {
+   "tour": "settings-pipeline-create",
+   "step": "create",
+   "labels": [
+    "Create new pipeline|button"
+   ],
+   "screen": "/crm-settings"
+  },
+  {
+   "tour": "conversations-snippets-create-text",
+   "step": "type",
+   "labels": [
+    "Add Text Snippet"
+   ],
+   "screen": "/conversations/templates"
+  },
+  {
+   "tour": "conversations-snippets-create-email",
+   "step": "type",
+   "labels": [
+    "Add Email Snippet"
+   ],
+   "screen": "/conversations/templates"
+  },
+  {
+   "tour": "ai-page-agent-studio",
+   "step": "create",
+   "labels": [
+    "Create Agent"
+   ],
+   "screen": "/ai-agents/agent-studio"
+  },
+  {
+   "tour": "ai-agent-studio-describe-agent",
+   "step": "create",
+   "labels": [
+    "Create Agent|button"
+   ],
+   "screen": "/ai-agents/agent-studio"
+  },
+  {
+   "tour": "ai-agent-studio-describe-agent",
+   "step": "publish",
+   "labels": [
+    "Published"
+   ],
+   "screen": "/ai-agents/agent-studio"
+  },
+  {
+   "tour": "ai-agent-studio-from-template",
+   "step": "create",
+   "labels": [
+    "Create Agent|button"
+   ],
+   "screen": "/ai-agents/agent-studio"
+  },
+  {
+   "tour": "ai-agent-studio-from-template",
+   "step": "browse",
+   "labels": [
+    "Browse templates"
+   ],
+   "screen": "/ai-agents/agent-studio"
+  },
+  {
+   "tour": "ai-agent-studio-from-template",
+   "step": "preview",
+   "labels": [
+    "Preview"
+   ],
+   "screen": "/ai-agents/agent-studio"
+  },
+  {
+   "tour": "ai-agent-studio-from-template",
+   "step": "choose",
+   "labels": [
+    "Choose Template"
+   ],
+   "screen": "/ai-agents/agent-studio"
+  },
+  {
+   "tour": "reputation-page-overview",
+   "step": "goals",
+   "labels": [
+    "Invite Goals"
+   ],
+   "screen": "/reputation/overview"
+  },
+  {
+   "tour": "reputation-page-overview",
+   "step": "received",
+   "labels": [
+    "Reviews Received"
+   ],
+   "screen": "/reputation/overview"
+  },
+  {
+   "tour": "reputation-page-overview",
+   "step": "trends",
+   "labels": [
+    "Review Trends"
+   ],
+   "screen": "/reputation/overview"
+  },
+  {
+   "tour": "reputation-page-overview",
+   "step": "latest",
+   "labels": [
+    "Latest Review Requests"
+   ],
+   "screen": "/reputation/overview"
+  },
+  {
+   "tour": "marketing-trigger-links-create",
+   "step": "save",
+   "labels": [
+    "Save|button"
+   ],
+   "screen": "/marketing/trigger-links"
+  },
+  {
+   "tour": "settings-whatsapp-template",
+   "step": "templates",
+   "labels": [
+    "Templates"
+   ],
+   "screen": "/settings/whatsapp"
+  },
+  {
+   "tour": "settings-whatsapp-template",
+   "step": "create",
+   "labels": [
+    "Create Template|button"
+   ],
+   "screen": "/settings/whatsapp"
+  },
+  {
+   "tour": "settings-page-whatsapp",
+   "step": "numbers",
+   "labels": [
+    "Numbers"
+   ],
+   "screen": "/settings/whatsapp"
+  },
+  {
+   "tour": "settings-page-whatsapp",
+   "step": "templates",
+   "labels": [
+    "Templates"
+   ],
+   "screen": "/settings/whatsapp"
+  },
+  {
+   "tour": "settings-whatsapp-add-number",
+   "step": "numbers",
+   "labels": [
+    "Numbers"
+   ],
+   "screen": "/settings/whatsapp"
+  },
+  {
+   "tour": "settings-whatsapp-add-number",
+   "step": "add",
+   "labels": [
+    "Add Number|button"
+   ],
+   "screen": "/settings/whatsapp"
+  },
+  {
+   "tour": "opportunities-bulk-actions-check-import",
+   "step": "stats",
+   "labels": [
+    "Show Stats"
+   ],
+   "screen": "/opportunities/bulk-actions"
+  },
+  {
+   "tour": "opportunities-page-bulk-actions",
+   "step": "stats",
+   "labels": [
+    "Show Stats"
+   ],
+   "screen": "/opportunities/bulk-actions"
+  },
+  {
+   "tour": "contacts-bulk-actions-check-import",
+   "step": "stats",
+   "labels": [
+    "Show Stats"
+   ],
+   "screen": "/contacts/bulk/actions"
+  },
+  {
+   "tour": "contacts-page-bulk-actions",
+   "step": "stats",
+   "labels": [
+    "Show Stats"
+   ],
+   "screen": "/contacts/bulk/actions"
+  },
+  {
+   "tour": "settings-import-check",
+   "step": "stats",
+   "labels": [
+    "Show Stats|button"
+   ],
+   "screen": "/contacts/bulk/actions"
+  },
+  {
+   "tour": "opportunities-pipeline-create",
+   "step": "create",
+   "labels": [
+    "Create new pipeline|button"
+   ],
+   "screen": "/opportunities/pipeline"
+  },
+  {
+   "tour": "opportunities-pipeline-create",
+   "step": "stages",
+   "labels": [
+    "Add stage|button"
+   ],
+   "screen": "/opportunities/pipeline"
+  },
+  {
+   "tour": "opportunities-page-pipelines",
+   "step": "create",
+   "labels": [
+    "Create new pipeline|button"
+   ],
+   "screen": "/opportunities/pipeline"
+  },
+  {
+   "tour": "payments-fulfil-order",
+   "step": "slip",
+   "labels": [
+    "Print Shipping Label|button"
+   ],
+   "screen": "/payments/v2/orders"
+  },
+  {
+   "tour": "settings-values-create",
+   "step": "new",
+   "labels": [
+    "New Custom Value|button"
+   ],
+   "screen": "/settings/custom_values"
+  },
+  {
+   "tour": "settings-page-custom-values",
+   "step": "new",
+   "labels": [
+    "New Custom Value|button"
+   ],
+   "screen": "/settings/custom_values"
+  },
+  {
+   "tour": "payments-refund",
+   "step": "refund",
+   "labels": [
+    "Refund"
+   ],
+   "screen": "/payments/v2/transactions"
+  }
+ ]
+}

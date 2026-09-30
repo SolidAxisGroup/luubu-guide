@@ -1,0 +1,131 @@
+{
+  "id": "reporting-page-audit",
+  "kind": "page",
+  "area": "reporting",
+  "screen": "reporting.audit-report",
+  "title": "Tour: Local Marketing Audit",
+  "blurb": "A graded check of your Google profile, website, listings and reviews.",
+  "icon": "chart",
+  "minutes": 2,
+  "keywords": [
+    "marketing audit",
+    "audit",
+    "local seo",
+    "google profile",
+    "report card",
+    "competitors"
+  ],
+  "steps": [
+    {
+      "id": "open-reporting",
+      "title": "Open Reporting",
+      "body": "Click **Reporting** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reporting"
+        },
+        {
+          "text": "Reporting",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/"
+      }
+    },
+    {
+      "id": "open-local-marketing-audit",
+      "title": "Open Local Marketing Audit",
+      "body": "Click **Local Marketing Audit**. Local marketing audits live here.",
+      "route": "^/reporting/",
+      "go": "/reporting/local-marketing-audit",
+      "target": [
+        {
+          "css": "#tb_audit-report"
+        },
+        {
+          "text": "Local Marketing Audit",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/local-marketing-audit"
+      }
+    },
+    {
+      "id": "generate",
+      "title": "Run an audit",
+      "body": "**Generate New Report** runs a fresh audit on your business.",
+      "route": "^/reporting/local-marketing-audit",
+      "go": "/reporting/local-marketing-audit",
+      "target": [
+        {
+          "text": "Generate New Report",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Generate New Report"
+    },
+    {
+      "id": "list",
+      "title": "Past audits",
+      "body": "Past audits are listed so you can see how you have improved over time.",
+      "route": "^/reporting/local-marketing-audit",
+      "go": "/reporting/local-marketing-audit",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "compare",
+      "title": "Compare with competitors",
+      "body": "**Compare Reports** lets you add up to three competitors and see how you stack up.",
+      "route": "^/reporting/local-marketing-audit",
+      "go": "/reporting/local-marketing-audit",
+      "target": [
+        {
+          "text": "Compare Reports"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Compare Reports"
+    },
+    {
+      "id": "share",
+      "title": "Share",
+      "body": "Download any audit as a PDF, or send it by email, SMS or link.",
+      "route": "^/reporting/local-marketing-audit",
+      "go": "/reporting/local-marketing-audit",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What's next",
+      "body": "Next: try **Run a local marketing audit** from the Guide.",
+      "route": "^/reporting/local-marketing-audit",
+      "go": "/reporting/local-marketing-audit",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

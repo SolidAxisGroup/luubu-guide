@@ -1,0 +1,114 @@
+{
+  "id": "settings-phone-forward-existing",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.phone-system",
+  "title": "Forward your existing number to Luubu",
+  "blurb": "Keep the number customers know and send calls through Luubu Phone.",
+  "icon": "phone",
+  "minutes": 3,
+  "keywords": [
+    "forward",
+    "existing number",
+    "keep number",
+    "divert",
+    "landline",
+    "mobile",
+    "port"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-phone-system",
+      "title": "Open Phone System",
+      "body": "Click **Phone System** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/phone_system",
+      "target": [
+        {
+          "css": "[id='sb_phone-system']"
+        },
+        {
+          "text": "Phone System",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/phone_system"
+      }
+    },
+    {
+      "id": "numbers",
+      "title": "Copy your Luubu number",
+      "body": "Click **Phone Numbers** and note your Luubu Phone number.",
+      "route": "^/settings/phone_system",
+      "go": "/settings/phone_system",
+      "target": [
+        {
+          "text": "Phone Numbers"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Phone Numbers",
+      "tip": "See **Your phone system requires configuration**? We need to switch Luubu Phone on for you. Email hello@luubu.com."
+    },
+    {
+      "id": "divert",
+      "title": "Divert your old number",
+      "body": "On a mobile, turn on call forwarding in your phone settings (on iPhone: Settings, Phone, Call Forwarding) and enter your Luubu number. Landlines and business lines vary, so ask your provider how to divert.",
+      "route": "^/settings/phone_system",
+      "go": "/settings/phone_system",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "loop",
+      "title": "Avoid a loop",
+      "body": "Make sure your Luubu number does not ring back to the number you just diverted, or calls go round in circles.",
+      "route": "^/settings/phone_system",
+      "go": "/settings/phone_system",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "test",
+      "title": "Test it",
+      "body": "Ring your old number from another phone and check it comes through Luubu.",
+      "route": "^/settings/phone_system",
+      "go": "/settings/phone_system",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Want to move the number to Luubu for good? Email hello@luubu.com about porting."
+    }
+  ]
+}

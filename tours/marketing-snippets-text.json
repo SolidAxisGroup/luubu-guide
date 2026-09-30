@@ -1,0 +1,149 @@
+{
+  "id": "marketing-snippets-text",
+  "kind": "howto",
+  "area": "marketing",
+  "screen": "marketing.email-templates",
+  "title": "Create a text snippet",
+  "blurb": "Save an SMS reply once and reuse it with the contact’s name filled in.",
+  "icon": "chat",
+  "minutes": 3,
+  "keywords": [
+    "text snippet",
+    "sms template",
+    "saved reply",
+    "canned response",
+    "quick reply",
+    "snippet"
+  ],
+  "steps": [
+    {
+      "id": "open-marketing",
+      "title": "Open Marketing",
+      "body": "Click **Marketing** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_email-marketing"
+        },
+        {
+          "text": "Marketing",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/"
+      }
+    },
+    {
+      "id": "open-email-templates",
+      "title": "Open Snippets",
+      "body": "Click **Snippets** along the top.",
+      "route": "^/marketing/",
+      "go": "/marketing/templates",
+      "target": [
+        {
+          "css": "#tb_email-templates"
+        },
+        {
+          "text": "Snippets",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/templates"
+      }
+    },
+    {
+      "id": "new",
+      "title": "Start a snippet",
+      "body": "Click **+ New Snippet**.",
+      "route": "^/marketing/templates",
+      "go": "/marketing/templates",
+      "target": [
+        {
+          "text": "New Snippet",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New Snippet",
+      "advance": "click"
+    },
+    {
+      "id": "text",
+      "title": "Choose text",
+      "body": "Pick **Add Text Snippet**.",
+      "route": "^/marketing/templates",
+      "go": "/marketing/templates",
+      "target": [
+        {
+          "text": "Add Text Snippet"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add Text Snippet",
+      "advance": "click"
+    },
+    {
+      "id": "write",
+      "title": "Name it and write it",
+      "body": "Give it a name you will spot quickly, like \"Quote follow-up\". Then type the message.",
+      "route": "^/marketing/templates",
+      "go": "/marketing/templates",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "custom-values",
+      "title": "Make it personal",
+      "body": "Use **Custom Values** to drop in details like the contact’s first name, so each text reads as personal.",
+      "route": "^/marketing/templates",
+      "go": "/marketing/templates",
+      "target": [
+        {
+          "text": "Custom Values"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Custom Values",
+      "tip": "Add a **Trigger Link** if you want to track who taps a link."
+    },
+    {
+      "id": "save",
+      "title": "Save it",
+      "body": "Click **Save**. It is ready to use in Conversations and workflows.",
+      "route": "^/marketing/templates",
+      "go": "/marketing/templates",
+      "target": [
+        {
+          "text": "Save",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Save"
+    }
+  ]
+}

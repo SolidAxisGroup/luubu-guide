@@ -1,0 +1,113 @@
+{
+  "id": "settings-billing-charges",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.saas-billing",
+  "title": "Check your charges and usage rates",
+  "blurb": "See what you have been charged for and what each text or call costs.",
+  "icon": "chart",
+  "minutes": 3,
+  "keywords": [
+    "charges",
+    "usage",
+    "pricing",
+    "rates",
+    "transactions",
+    "receipts",
+    "costs"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-billing",
+      "title": "Open Billing",
+      "body": "Click **Billing** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/company-billing/billing",
+      "target": [
+        {
+          "css": "[id='sb_saas-billing']"
+        },
+        {
+          "text": "Billing",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/company-billing/billing"
+      }
+    },
+    {
+      "id": "wallet-tab",
+      "title": "Open your wallet",
+      "body": "Click **Wallet & Transactions**.",
+      "route": "^/settings/company-billing/billing",
+      "go": "/settings/company-billing/billing",
+      "target": [
+        {
+          "text": "Wallet & Transactions"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Wallet & Transactions",
+      "advance": "click"
+    },
+    {
+      "id": "history",
+      "title": "Read the history",
+      "body": "Each row is a charge or top-up with a date and description. Filter by date to match a bank statement.",
+      "route": "^/settings/company-billing/billing",
+      "go": "/settings/company-billing/billing",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "pricing",
+      "title": "See the rates",
+      "body": "Look for the wallet pricing view. It lists the per-use rate for texts, calls, email, AI and WhatsApp, and you can pick New Zealand to see local rates.",
+      "route": "^/settings/company-billing/billing",
+      "go": "/settings/company-billing/billing",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "help",
+      "title": "Something look wrong?",
+      "body": "If a charge looks off, note the date and amount and email hello@luubu.com.",
+      "route": "^/settings/company-billing/billing",
+      "go": "/settings/company-billing/billing",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

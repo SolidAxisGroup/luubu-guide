@@ -1,0 +1,116 @@
+{
+  "id": "sites-page-wordpress",
+  "kind": "page",
+  "area": "sites",
+  "screen": "sites.wordpress-v2",
+  "title": "Tour WordPress hosting",
+  "blurb": "See where a hosted WordPress site is created and managed.",
+  "icon": "globe",
+  "minutes": 2,
+  "keywords": [
+    "wordpress",
+    "wp",
+    "hosting",
+    "website hosting",
+    "wp admin",
+    "tour"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open WordPress",
+      "body": "Click **WordPress**. This hosts a full WordPress site for you, if you prefer WordPress to the built-in site builder.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/wordpress",
+      "target": [
+        {
+          "css": "#tb_wordpress-v2"
+        },
+        {
+          "text": "WordPress",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/wordpress"
+      }
+    },
+    {
+      "id": "enable",
+      "title": "Is it switched on?",
+      "body": "WordPress hosting is an add-on. If you only see a sign-up screen, ask us to switch this on: hello@luubu.com",
+      "route": "^/wordpress",
+      "go": "/wordpress",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "create",
+      "title": "Create a site",
+      "body": "**Activate WordPress** starts a new WordPress install from scratch, from a template or by cloning one you have.",
+      "route": "^/wordpress",
+      "go": "/wordpress",
+      "target": [
+        {
+          "text": "Activate WordPress",
+          "tag": "button"
+        },
+        {
+          "text": "Create Site",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Activate WordPress"
+    },
+    {
+      "id": "manage",
+      "title": "Manage your site",
+      "body": "Once installed, open the site here to log in to WordPress admin, manage users and take backups.",
+      "route": "^/wordpress",
+      "go": "/wordpress",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Next: try **Create a WordPress site** from the Guide.",
+      "route": "^/wordpress",
+      "go": "/wordpress",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

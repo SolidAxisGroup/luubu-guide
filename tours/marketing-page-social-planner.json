@@ -1,0 +1,141 @@
+{
+  "id": "marketing-page-social-planner",
+  "kind": "page",
+  "area": "marketing",
+  "screen": "marketing.social-planner",
+  "title": "Tour: Social Planner",
+  "blurb": "See where to write, schedule and track posts for all your social pages.",
+  "icon": "share",
+  "minutes": 2,
+  "keywords": [
+    "social planner",
+    "social media",
+    "posts",
+    "facebook",
+    "instagram",
+    "overview",
+    "tour"
+  ],
+  "steps": [
+    {
+      "id": "open-marketing",
+      "title": "Open Marketing",
+      "body": "Click **Marketing** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_email-marketing"
+        },
+        {
+          "text": "Marketing",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/"
+      }
+    },
+    {
+      "id": "open-social-planner",
+      "title": "Open Social Planner",
+      "body": "Click **Social Planner**. This is home for every post you send to Facebook, Instagram, LinkedIn, TikTok and Google Business.",
+      "route": "^/marketing/",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "css": "#tb_social-planner"
+        },
+        {
+          "text": "Social Planner",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/social-planner"
+      }
+    },
+    {
+      "id": "new-post",
+      "title": "Start a post here",
+      "body": "**+ New Post** is where every post begins. Its menu also has options to upload a spreadsheet of posts or let AI write one for you.",
+      "route": "^/marketing/social-planner",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "text": "New Post",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New Post"
+    },
+    {
+      "id": "planner",
+      "title": "Your Planner",
+      "body": "The **Planner** shows everything in one place: drafts, scheduled posts, published posts and any that failed. You can see it as a calendar or a list.",
+      "route": "^/marketing/social-planner",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "text": "Planner"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Planner"
+    },
+    {
+      "id": "content",
+      "title": "Reusable content",
+      "body": "**Content** is where recurring posts and saved content live, so you can edit a whole series in one go.",
+      "route": "^/marketing/social-planner",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "text": "Content"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Content"
+    },
+    {
+      "id": "settings",
+      "title": "Accounts and settings",
+      "body": "The **Settings** tab (inside Social Planner, not the main menu) is where you connect a new social account or fix one that has dropped off.",
+      "route": "^/marketing/social-planner",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Settings",
+      "tip": "**Statistics** sits next to it and shows reach and engagement for each account."
+    },
+    {
+      "id": "next",
+      "title": "What to do first",
+      "body": "If your pages are connected, write your first post. Next: try **Create and schedule a social post** from the Guide.",
+      "route": "^/marketing/social-planner",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "id": "contacts-tasks-manage",
+  "kind": "howto",
+  "area": "contacts",
+  "screen": "contacts.tasks",
+  "title": "Clear your overdue tasks",
+  "blurb": "Filter to what's due, then complete or reassign in bulk.",
+  "icon": "calendar",
+  "minutes": 2,
+  "keywords": [
+    "overdue",
+    "due today",
+    "complete task",
+    "tasks",
+    "bulk",
+    "filter",
+    "my tasks"
+  ],
+  "steps": [
+    {
+      "id": "open-contacts",
+      "title": "Open Contacts",
+      "body": "Click **Contacts** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_contacts"
+        },
+        {
+          "text": "Contacts",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/contacts/"
+      }
+    },
+    {
+      "id": "tab-tasks",
+      "title": "Open Tasks",
+      "body": "Click **Tasks** along the top.",
+      "route": "^/(contacts/|tasks|businesses/|settings/fields)",
+      "go": "/tasks",
+      "target": [
+        {
+          "css": "#tb_tasks"
+        },
+        {
+          "text": "Tasks",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/tasks"
+      }
+    },
+    {
+      "id": "filter",
+      "title": "Show your overdue tasks",
+      "body": "Filter by assignee (you) and status **Overdue**.",
+      "route": "^/tasks",
+      "go": "/tasks",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Overdue"
+    },
+    {
+      "id": "work",
+      "title": "Work through them",
+      "body": "Click a task title to open it and see the details. Edit the due date if it needs pushing out.",
+      "route": "^/tasks",
+      "go": "/tasks",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "bulk",
+      "title": "Tick off several at once",
+      "body": "Select the tasks you've finished and mark them complete together.",
+      "route": "^/tasks",
+      "go": "/tasks",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Deleted a task by mistake? Deleted tasks can be restored for up to 2 months."
+    }
+  ]
+}

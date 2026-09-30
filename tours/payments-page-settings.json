@@ -1,0 +1,130 @@
+{
+  "id": "payments-page-settings",
+  "kind": "page",
+  "area": "payments",
+  "screen": "payments.payment-settings",
+  "title": "Tour: Payment settings",
+  "blurb": "Receipts, GST and other payment defaults.",
+  "icon": "cog",
+  "minutes": 2,
+  "keywords": [
+    "payment settings",
+    "receipts",
+    "tax",
+    "gst",
+    "defaults",
+    "settings"
+  ],
+  "steps": [
+    {
+      "id": "open-payments",
+      "title": "Open Payments",
+      "body": "Click **Payments** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_payments"
+        },
+        {
+          "text": "Payments",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/"
+      }
+    },
+    {
+      "id": "tab-payment-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** along the top.",
+      "route": "^/payments/",
+      "go": "/payments/settings/receipts",
+      "target": [
+        {
+          "css": "#tb_payment-settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/settings/receipts"
+      }
+    },
+    {
+      "id": "receipts",
+      "title": "Receipts",
+      "body": "The **Receipts** tab controls the automatic receipt customers get after they pay.",
+      "route": "^/payments/settings",
+      "go": "/payments/settings/receipts",
+      "target": [
+        {
+          "text": "Receipts"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Receipts"
+    },
+    {
+      "id": "taxes",
+      "title": "Taxes",
+      "body": "The **Taxes** tab is where you set up GST at 15% so it can be added to products and invoices.",
+      "route": "^/payments/settings",
+      "go": "/payments/settings/receipts",
+      "target": [
+        {
+          "text": "Taxes"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Taxes"
+    },
+    {
+      "id": "other",
+      "title": "Other tabs",
+      "body": "The other tabs hold defaults for invoices and checkouts. Change them once and they apply everywhere.",
+      "route": "^/payments/settings",
+      "go": "/payments/settings/receipts",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save each tab",
+      "body": "Changes only stick once you click **Save** on that tab.",
+      "route": "^/payments/settings",
+      "go": "/payments/settings/receipts",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "Next step",
+      "body": "Next: try **Set up GST** from the Guide.",
+      "route": "^/payments/settings",
+      "go": "/payments/settings/receipts",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

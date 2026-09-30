@@ -1,0 +1,116 @@
+{
+  "id": "opportunities-pipeline-edit-stages",
+  "kind": "howto",
+  "area": "opportunities",
+  "screen": "opportunities.pipeline",
+  "title": "Rename, reorder or remove stages",
+  "blurb": "Tweak your pipeline stages as your process changes.",
+  "icon": "card",
+  "minutes": 3,
+  "keywords": [
+    "edit pipeline",
+    "stages",
+    "reorder",
+    "rename",
+    "delete stage",
+    "colours"
+  ],
+  "steps": [
+    {
+      "id": "open-opportunities",
+      "title": "Open Opportunities",
+      "body": "Click **Opportunities** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_opportunities"
+        },
+        {
+          "text": "Opportunities",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/opportunities/"
+      }
+    },
+    {
+      "id": "tab-pipeline",
+      "title": "Open Pipelines",
+      "body": "Click **Pipelines** along the top.",
+      "route": "^/opportunities/",
+      "go": "/opportunities/pipeline",
+      "target": [
+        {
+          "css": "#tb_pipeline"
+        },
+        {
+          "text": "Pipelines",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/opportunities/pipeline"
+      }
+    },
+    {
+      "id": "open",
+      "title": "Open the pipeline",
+      "body": "Click the pipeline you want to change.",
+      "route": "^/opportunities/pipeline",
+      "go": "/opportunities/pipeline",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "reorder",
+      "title": "Reorder stages",
+      "body": "Use the arrow icons next to a stage to move it up or down.",
+      "route": "^/opportunities/pipeline",
+      "go": "/opportunities/pipeline",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "rename",
+      "title": "Rename or recolour",
+      "body": "Click a stage name to change it, and pick a colour to make stages easy to tell apart. Stage names must be unique.",
+      "route": "^/opportunities/pipeline",
+      "go": "/opportunities/pipeline",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "delete",
+      "title": "Remove a stage",
+      "body": "Click the bin icon. If deals sit in that stage, you'll be asked where to move them.",
+      "route": "^/opportunities/pipeline",
+      "go": "/opportunities/pipeline",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "reports",
+      "title": "Choose what shows in reports",
+      "body": "Use the funnel and pie chart icons to show or hide a stage in dashboard charts. Save when done.",
+      "route": "^/opportunities/pipeline",
+      "go": "/opportunities/pipeline",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

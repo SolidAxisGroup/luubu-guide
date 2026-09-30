@@ -1,0 +1,116 @@
+{
+  "id": "payments-page-transactions",
+  "kind": "page",
+  "area": "payments",
+  "screen": "payments.payment-transactions-new",
+  "title": "Tour: Transactions",
+  "blurb": "Every payment in and every refund out.",
+  "icon": "chart",
+  "minutes": 2,
+  "keywords": [
+    "transactions",
+    "payments",
+    "refund",
+    "money in",
+    "reconcile",
+    "export"
+  ],
+  "steps": [
+    {
+      "id": "open-payments",
+      "title": "Open Payments",
+      "body": "Click **Payments** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_payments"
+        },
+        {
+          "text": "Payments",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/"
+      }
+    },
+    {
+      "id": "tab-payment-transactions-new",
+      "title": "Open Transactions",
+      "body": "Click **Transactions** along the top.",
+      "route": "^/payments/",
+      "go": "/payments/v2/transactions",
+      "target": [
+        {
+          "css": "#tb_payment-transactions-new"
+        },
+        {
+          "text": "Transactions",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/v2/transactions"
+      }
+    },
+    {
+      "id": "list",
+      "title": "Every payment",
+      "body": "Each row is one payment, with the customer, amount, status and where it came from.",
+      "route": "^/payments/v2/transactions",
+      "go": "/payments/v2/transactions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "filters",
+      "title": "Find a payment",
+      "body": "Use search and filters to find a payment by customer, date or amount.",
+      "route": "^/payments/v2/transactions",
+      "go": "/payments/v2/transactions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "details",
+      "title": "Open a transaction",
+      "body": "Click a row to see the full details, any refunds and internal notes.",
+      "route": "^/payments/v2/transactions",
+      "go": "/payments/v2/transactions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "refund",
+      "title": "Refunds start here",
+      "body": "The three-dot menu on a transaction lets you refund all or part of it.",
+      "route": "^/payments/v2/transactions",
+      "go": "/payments/v2/transactions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "Next step",
+      "body": "Next: try **Refund a payment** from the Guide.",
+      "route": "^/payments/v2/transactions",
+      "go": "/payments/v2/transactions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

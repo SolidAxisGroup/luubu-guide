@@ -1,0 +1,112 @@
+{
+  "id": "reputation-page-requests",
+  "kind": "page",
+  "area": "reputation",
+  "screen": "reputation.reputations-requests",
+  "title": "Tour: Review requests",
+  "blurb": "Send review requests and see where each one is up to.",
+  "icon": "star",
+  "minutes": 2,
+  "keywords": [
+    "review request",
+    "ask for review",
+    "requests",
+    "sms",
+    "email",
+    "reviews"
+  ],
+  "steps": [
+    {
+      "id": "open-reputation",
+      "title": "Open Reputation",
+      "body": "Click **Reputation** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reputation"
+        },
+        {
+          "text": "Reputation",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reputation/"
+      }
+    },
+    {
+      "id": "open-requests",
+      "title": "Open Requests",
+      "body": "Click **Requests**. Every review request you send is tracked here.",
+      "route": "^/reputation/",
+      "go": "/reputation/requests",
+      "target": [
+        {
+          "css": "#tb_reputations-requests"
+        },
+        {
+          "text": "Requests",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reputation/requests"
+      }
+    },
+    {
+      "id": "send",
+      "title": "Send a request",
+      "body": "**Send Review Request** asks a customer for a review by text or email.",
+      "route": "^/reputation/requests",
+      "go": "/reputation/requests",
+      "target": [
+        {
+          "text": "Send Review Request",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Send Review Request"
+    },
+    {
+      "id": "list",
+      "title": "Your sent requests",
+      "body": "Each request shows who it went to, the channel and when.",
+      "route": "^/reputation/requests",
+      "go": "/reputation/requests",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "status",
+      "title": "Check the status",
+      "body": "Statuses run **Queued**, **Sent**, **Delivered** or **Failed**. Failed usually means a missing or wrong phone number or email.",
+      "route": "^/reputation/requests",
+      "go": "/reputation/requests",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What's next",
+      "body": "Next: try **Send a review request** from the Guide.",
+      "route": "^/reputation/requests",
+      "go": "/reputation/requests",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

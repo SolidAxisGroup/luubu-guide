@@ -1,0 +1,124 @@
+{
+  "id": "payments-page-products",
+  "kind": "page",
+  "area": "payments",
+  "screen": "payments.payments-products",
+  "title": "Tour: Products",
+  "blurb": "Your price list, used by invoices, links, forms and your store.",
+  "icon": "grid",
+  "minutes": 2,
+  "keywords": [
+    "products",
+    "services",
+    "price list",
+    "pricing",
+    "catalogue",
+    "items"
+  ],
+  "steps": [
+    {
+      "id": "open-payments",
+      "title": "Open Payments",
+      "body": "Click **Payments** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_payments"
+        },
+        {
+          "text": "Payments",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/"
+      }
+    },
+    {
+      "id": "tab-payments-products",
+      "title": "Open Products",
+      "body": "Click **Products** along the top.",
+      "route": "^/payments/",
+      "go": "/payments/products",
+      "target": [
+        {
+          "css": "#tb_payments-products"
+        },
+        {
+          "text": "Products",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/products"
+      }
+    },
+    {
+      "id": "what",
+      "title": "Your price list",
+      "body": "Everything you sell lives here, whether it is a product or a service. Set it up once and reuse it everywhere.",
+      "route": "^/payments/products",
+      "go": "/payments/products",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "create",
+      "title": "Add a product",
+      "body": "**Create Product** adds a new item with its price.",
+      "route": "^/payments/products",
+      "go": "/payments/products",
+      "target": [
+        {
+          "text": "Create Product",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create Product"
+    },
+    {
+      "id": "list",
+      "title": "The list",
+      "body": "Click any product to change its price, photo, tax or stock level.",
+      "route": "^/payments/products",
+      "go": "/payments/products",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "uses",
+      "title": "Where products show up",
+      "body": "Products feed invoices, estimates, payment links, forms, funnels and your online store.",
+      "route": "^/payments/products",
+      "go": "/payments/products",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "Next step",
+      "body": "Next: try **Add a product or service** from the Guide.",
+      "route": "^/payments/products",
+      "go": "/payments/products",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

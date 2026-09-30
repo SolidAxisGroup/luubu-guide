@@ -1,0 +1,112 @@
+{
+  "id": "contacts-tasks-recurring",
+  "kind": "howto",
+  "area": "contacts",
+  "screen": "contacts.tasks",
+  "title": "Set up a repeating task",
+  "blurb": "Create a task that comes back every week or month.",
+  "icon": "calendar",
+  "minutes": 2,
+  "keywords": [
+    "recurring task",
+    "repeat",
+    "weekly",
+    "monthly",
+    "routine",
+    "reminder"
+  ],
+  "steps": [
+    {
+      "id": "open-contacts",
+      "title": "Open Contacts",
+      "body": "Click **Contacts** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_contacts"
+        },
+        {
+          "text": "Contacts",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/contacts/"
+      }
+    },
+    {
+      "id": "tab-tasks",
+      "title": "Open Tasks",
+      "body": "Click **Tasks** along the top.",
+      "route": "^/(contacts/|tasks|businesses/|settings/fields)",
+      "go": "/tasks",
+      "target": [
+        {
+          "css": "#tb_tasks"
+        },
+        {
+          "text": "Tasks",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/tasks"
+      }
+    },
+    {
+      "id": "add",
+      "title": "Add a task",
+      "body": "Click **Add Task**.",
+      "route": "^/tasks",
+      "go": "/tasks",
+      "target": [
+        {
+          "text": "Add Task",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add Task"
+    },
+    {
+      "id": "details",
+      "title": "Fill in the basics",
+      "body": "Enter the title, due date and who it's assigned to.",
+      "route": "^/tasks",
+      "go": "/tasks",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "recur",
+      "title": "Make it repeat",
+      "body": "Turn on the recurring option and choose how often, like every Monday or the 1st of each month.",
+      "route": "^/tasks",
+      "go": "/tasks",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save",
+      "body": "Save it. A new task appears each time it comes round.",
+      "route": "^/tasks",
+      "go": "/tasks",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

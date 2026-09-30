@@ -1,0 +1,93 @@
+{
+  "id": "conversations-trigger-links-use",
+  "kind": "howto",
+  "area": "conversations",
+  "screen": "conversations.trigger-links",
+  "title": "Use a trigger link and see who clicked",
+  "blurb": "Put a tracked link in a message, then check the click stats.",
+  "icon": "flow",
+  "minutes": 3,
+  "keywords": [
+    "trigger link",
+    "clicks",
+    "analytics",
+    "who clicked",
+    "tracking",
+    "workflow trigger"
+  ],
+  "steps": [
+    {
+      "id": "open-conversations",
+      "title": "Open Conversations",
+      "body": "Click **Conversations** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_conversations"
+        },
+        {
+          "text": "Conversations",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/conversations/"
+      }
+    },
+    {
+      "id": "tab-trigger-links",
+      "title": "Open Trigger Links",
+      "body": "Click **Trigger Links** along the top.",
+      "route": "^/conversations/",
+      "go": "/conversations/trigger-links",
+      "target": [
+        {
+          "css": "#tb_trigger-links"
+        },
+        {
+          "text": "Trigger Links",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/conversations/trigger-links"
+      }
+    },
+    {
+      "id": "insert",
+      "title": "Add it to a message",
+      "body": "When writing a text, email or snippet, use the merge field or custom values option and pick your trigger link. Don't paste the plain web address or clicks won't be tracked.",
+      "route": "^/conversations/trigger-links",
+      "go": "/conversations/trigger-links",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "analytics",
+      "title": "Check the clicks",
+      "body": "Back here, open the three-dot menu on the link and choose **Analytics** to see clicks, unique contacts and where they came from.",
+      "route": "^/conversations/trigger-links",
+      "go": "/conversations/trigger-links",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Analytics"
+    },
+    {
+      "id": "automate",
+      "title": "Automate the follow-up",
+      "body": "In Automation, use the **Trigger Link Clicked** trigger to follow up automatically, for example text anyone who clicked your booking link but didn't book.",
+      "route": "^/conversations/trigger-links",
+      "go": "/conversations/trigger-links",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

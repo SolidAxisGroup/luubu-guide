@@ -1,0 +1,138 @@
+{
+  "id": "sites-domain-connect",
+  "kind": "howto",
+  "area": "sites",
+  "screen": "sites.sites-domain-settings",
+  "title": "Connect your own domain",
+  "blurb": "Point your .co.nz or .nz address at your website or funnel.",
+  "icon": "globe",
+  "minutes": 8,
+  "keywords": [
+    "domain",
+    "dns",
+    "cname",
+    "a record",
+    "co.nz",
+    "connect domain",
+    "registrar"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Have your domain provider login handy (1st Domains, Crazy Domains, Freeparking, Metaname and so on). Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Domain Settings",
+      "body": "Click the gear icon at the end of the Sites menu.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/settings/domain",
+      "target": [
+        {
+          "css": "#tb_sites-domain-settings"
+        },
+        {
+          "coach": true
+        }
+      ],
+      "advance": {
+        "route": "^/settings/domain"
+      }
+    },
+    {
+      "id": "connect",
+      "title": "Start connecting",
+      "body": "Click **Connect a Domain**, choose what it is for (such as Website or Funnel) and type your domain.",
+      "route": "^/settings/domain",
+      "go": "/settings/domain",
+      "target": [
+        {
+          "text": "Connect a Domain",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Connect a Domain",
+      "advance": "click"
+    },
+    {
+      "id": "root-or-sub",
+      "title": "Root or subdomain",
+      "body": "Your main address (yourbusiness.co.nz) needs an **A** record. A subdomain like www or offers needs a **CNAME** record. Luubu shows you which, with the exact values.",
+      "route": "^/settings/domain",
+      "go": "/settings/domain",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "manual",
+      "title": "Add the records",
+      "body": "If your provider is not listed for automatic setup, choose **Add record manually**. Copy each value from this screen into the DNS page at your provider.",
+      "route": "^/settings/domain",
+      "go": "/settings/domain",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "For the main address, the host is @. For a subdomain, the host is just the part before your domain, like www."
+    },
+    {
+      "id": "cloudflare",
+      "title": "Using Cloudflare?",
+      "body": "Set the record to DNS only (grey cloud), not proxied, or it will not verify.",
+      "route": "^/settings/domain",
+      "go": "/settings/domain",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "verify",
+      "title": "Verify",
+      "body": "Come back and verify. It can take from a few minutes up to 24 hours for the change to spread.",
+      "route": "^/settings/domain",
+      "go": "/settings/domain",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "link",
+      "title": "Link it to your site",
+      "body": "Once verified, pick the website or funnel and its default page, then click **Link Domain**.",
+      "route": "^/settings/domain",
+      "go": "/settings/domain",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "id": "marketing-email-statistics",
+  "kind": "howto",
+  "area": "marketing",
+  "screen": "marketing.email-builder",
+  "title": "Read your email results",
+  "blurb": "See who opened, clicked, bounced or unsubscribed from a campaign.",
+  "icon": "chart",
+  "minutes": 3,
+  "keywords": [
+    "email statistics",
+    "open rate",
+    "click rate",
+    "report",
+    "results",
+    "bounced",
+    "unsubscribed"
+  ],
+  "steps": [
+    {
+      "id": "open-marketing",
+      "title": "Open Marketing",
+      "body": "Click **Marketing** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_email-marketing"
+        },
+        {
+          "text": "Marketing",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/"
+      }
+    },
+    {
+      "id": "open-email-builder",
+      "title": "Open Emails",
+      "body": "Click **Emails** along the top.",
+      "route": "^/marketing/",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "css": "#tb_email-builder"
+        },
+        {
+          "text": "Emails",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/emails"
+      }
+    },
+    {
+      "id": "campaigns",
+      "title": "Go to Campaigns",
+      "body": "Click the **Campaigns** tab.",
+      "route": "^/(marketing/)?emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "text": "Campaigns"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Campaigns"
+    },
+    {
+      "id": "stats",
+      "title": "Open a campaign’s results",
+      "body": "On a sent campaign, open the three-dot menu and choose **Statistics**.",
+      "route": "^/(marketing/)?emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "text": "Statistics"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Statistics"
+    },
+    {
+      "id": "summary",
+      "title": "Read the summary",
+      "body": "The **Summary** shows delivered, opened, clicked, bounced, unsubscribed and spam rates, with a chart over time.",
+      "route": "^/(marketing/)?emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Open rates are a rough guide, as some email apps open emails automatically. Clicks are the better signal."
+    },
+    {
+      "id": "details",
+      "title": "See who did what",
+      "body": "Open **Details** to see the actual people who opened, clicked or bounced. Export any list as a CSV.",
+      "route": "^/(marketing/)?emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "text": "Details"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Details"
+    },
+    {
+      "id": "overall",
+      "title": "See the bigger picture",
+      "body": "For trends across all your emails, go back and open the **Statistics** tab at the top of Emails.",
+      "route": "^/(marketing/)?emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

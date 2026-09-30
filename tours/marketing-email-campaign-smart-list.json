@@ -1,0 +1,167 @@
+{
+  "id": "marketing-email-campaign-smart-list",
+  "kind": "howto",
+  "area": "marketing",
+  "screen": "marketing.email-builder",
+  "title": "Email a smart list or tag",
+  "blurb": "Send a campaign to just the right group, like past customers or a tag.",
+  "icon": "megaphone",
+  "minutes": 6,
+  "keywords": [
+    "email campaign",
+    "smart list",
+    "tag",
+    "segment",
+    "send email",
+    "newsletter",
+    "broadcast",
+    "audience"
+  ],
+  "steps": [
+    {
+      "id": "open-marketing",
+      "title": "Open Marketing",
+      "body": "Click **Marketing** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_email-marketing"
+        },
+        {
+          "text": "Marketing",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/"
+      }
+    },
+    {
+      "id": "open-email-builder",
+      "title": "Open Emails",
+      "body": "Click **Emails** along the top.",
+      "route": "^/marketing/",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "css": "#tb_email-builder"
+        },
+        {
+          "text": "Emails",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/emails"
+      }
+    },
+    {
+      "id": "campaigns",
+      "title": "Go to Campaigns",
+      "body": "Click the **Campaigns** tab.",
+      "route": "^/(marketing/)?emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "text": "Campaigns"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Campaigns"
+    },
+    {
+      "id": "new",
+      "title": "Create the campaign",
+      "body": "Click **New**, then pick one of your saved templates or a design from the library.",
+      "route": "^/(marketing/)?emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "text": "New",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New"
+    },
+    {
+      "id": "edit",
+      "title": "Write the email",
+      "body": "Update the words, images and button for this send. Save as you go.",
+      "route": "^/(marketing/)?emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "send-or-schedule",
+      "title": "Move to sending",
+      "body": "Click **Send or Schedule**.",
+      "route": "^/(marketing/)?emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "text": "Send or Schedule"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Send or Schedule"
+    },
+    {
+      "id": "recipients",
+      "title": "Choose who gets it",
+      "body": "In the recipients section, add your **Tags** or **Smart Lists**. For rules like \"opened an email in the last 30 days\", use **Build Segments**.",
+      "route": "^/(marketing/)?emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "text": "Build Segments"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Build Segments",
+      "tip": "Make the smart list first in Contacts, then pick it here."
+    },
+    {
+      "id": "send",
+      "title": "Check and send",
+      "body": "Check the sender name, email and subject line. Send yourself a test, then click **Review and Send**.",
+      "route": "^/(marketing/)?emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "text": "Review and Send"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Review and Send"
+    }
+  ]
+}

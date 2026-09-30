@@ -1,0 +1,116 @@
+{
+  "id": "settings-pipeline-stages",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.Opportunities-Pipelines",
+  "title": "Edit pipeline stages",
+  "blurb": "Rename, reorder, colour or remove stages, and choose what shows in reports.",
+  "icon": "chart",
+  "minutes": 3,
+  "keywords": [
+    "stages",
+    "edit pipeline",
+    "reorder",
+    "rename stage",
+    "delete stage",
+    "funnel chart"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-opportunities-and-pipelines",
+      "title": "Open Opportunities & Pipelines",
+      "body": "Click **Opportunities & Pipelines** in the Settings menu.",
+      "route": "^/(settings/|crm-settings)",
+      "go": "/crm-settings",
+      "target": [
+        {
+          "css": "[id='sb_Opportunities-Pipelines']"
+        },
+        {
+          "text": "Opportunities & Pipelines",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/crm-settings"
+      }
+    },
+    {
+      "id": "open",
+      "title": "Open the pipeline",
+      "body": "Click the pipeline you want to change, then go to its stages.",
+      "route": "^/(crm-settings|opportunities/pipeline)",
+      "go": "/crm-settings",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "reorder",
+      "title": "Reorder",
+      "body": "Use the up and down arrows next to a stage to move it.",
+      "route": "^/(crm-settings|opportunities/pipeline)",
+      "go": "/crm-settings",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "charts",
+      "title": "Charts",
+      "body": "Click the funnel and pie icons on a stage to show or hide it in the dashboard charts.",
+      "route": "^/(crm-settings|opportunities/pipeline)",
+      "go": "/crm-settings",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "delete",
+      "title": "Remove a stage",
+      "body": "Click the bin icon. Luubu asks which stage to move any deals to, so nothing gets lost.",
+      "route": "^/(crm-settings|opportunities/pipeline)",
+      "go": "/crm-settings",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save",
+      "body": "Save your changes.",
+      "route": "^/(crm-settings|opportunities/pipeline)",
+      "go": "/crm-settings",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

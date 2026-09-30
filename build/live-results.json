@@ -1,0 +1,607 @@
+{
+ "/integration": {
+  "fr": false,
+  "b": 11,
+  "f": [
+   "Installed"
+  ]
+ },
+ "/reputation/reviews": {
+  "fr": false,
+  "b": 12,
+  "f": []
+ },
+ "/settings/external-tracking": {
+  "fr": false,
+  "b": 3,
+  "f": [
+   "Copy Script|button"
+  ]
+ },
+ "/settings/calendars": {
+  "fr": false,
+  "b": 5,
+  "f": [
+   "Availability",
+   "Calendars",
+   "Connections",
+   "Notifications",
+   "Preferences"
+  ]
+ },
+ "/blogs": {
+  "fr": false,
+  "b": 21,
+  "f": [
+   "Ask AI",
+   "Create Blog|button"
+  ]
+ },
+ "/marketing/ad-manager/home": {
+  "fr": false,
+  "b": 10,
+  "f": [
+   "Activate Ads Manager|button"
+  ]
+ },
+ "/dashboard": {
+  "fr": false,
+  "b": 14,
+  "f": []
+ },
+ "/tasks": {
+  "fr": false,
+  "b": 9,
+  "f": [
+   "Add Task|button"
+  ]
+ },
+ "/reporting/call": {
+  "fr": false,
+  "b": 17,
+  "f": []
+ },
+ "/memberships/client-portal/dashboard": {
+  "fr": false,
+  "b": 12,
+  "f": [
+   "Client Portal URL",
+   "Login Email",
+   "Magic Link",
+   "Settings"
+  ]
+ },
+ "/settings/phone_system": {
+  "fr": false,
+  "b": 3,
+  "f": [
+   "Phone Numbers",
+   "Phone System Settings|button",
+   "Phone numbers|a"
+  ]
+ },
+ "/payments/settings/receipts": {
+  "fr": false,
+  "b": 39,
+  "f": [
+   "Enable automatic sales receipts for payments",
+   "Receipts",
+   "Save|button",
+   "Taxes"
+  ]
+ },
+ "/ai-agents/voice-ai": {
+  "fr": false,
+  "b": 17,
+  "f": []
+ },
+ "/payments/gift-cards": {
+  "fr": false,
+  "b": 15,
+  "f": [
+   "Create Gift Card|button",
+   "Dashboard"
+  ]
+ },
+ "/vibe": {
+  "fr": true,
+  "b": 1,
+  "f": []
+ },
+ "/marketing/social-planner": {
+  "fr": false,
+  "b": 25,
+  "f": [
+   "##sp-v3-platform-facebook",
+   "##sp-v3-platform-instagram",
+   "##sp-v3-platform-list",
+   "Connect your social accounts",
+   "Facebook|button",
+   "Generate",
+   "Instagram|button",
+   "Planner"
+  ]
+ },
+ "/contacts/smart_list/All": {
+  "fr": false,
+  "b": 19,
+  "f": []
+ },
+ "/calendars/appointments": {
+  "fr": false,
+  "b": 7,
+  "f": [
+   "All",
+   "Smart list",
+   "Upcoming"
+  ]
+ },
+ "/settings/private-integrations": {
+  "fr": false,
+  "b": 2,
+  "f": [
+   "Create new Integration|button"
+  ]
+ },
+ "/settings/domain": {
+  "fr": false,
+  "b": 12,
+  "f": [
+   "Connect a Domain|button",
+   "Connect a domain|button",
+   "Manage|button",
+   "URL Redirects"
+  ]
+ },
+ "/automation/workflows/settings": {
+  "fr": true,
+  "b": 4,
+  "f": []
+ },
+ "/settings/company": {
+  "fr": true,
+  "b": 0,
+  "f": []
+ },
+ "/marketing/templates": {
+  "fr": false,
+  "b": 14,
+  "f": [
+   "New Folder|button",
+   "New Snippet|button"
+  ]
+ },
+ "/settings/objects": {
+  "fr": false,
+  "b": 5,
+  "f": [
+   "Add Custom Object|button"
+  ]
+ },
+ "/reputation/widget": {
+  "fr": true,
+  "b": 14,
+  "f": []
+ },
+ "/quiz-builder/main": {
+  "fr": false,
+  "b": 20,
+  "f": []
+ },
+ "/wordpress": {
+  "fr": false,
+  "b": 22,
+  "f": []
+ },
+ "/ai-agents/agent-templates": {
+  "fr": false,
+  "b": 10,
+  "f": [
+   "Install"
+  ]
+ },
+ "/memberships/courses/dashboard-v2": {
+  "fr": false,
+  "b": 12,
+  "f": [
+   "Create Course|button"
+  ]
+ },
+ "/settings/lc-integrations": {
+  "fr": false,
+  "b": 48,
+  "f": [
+   "Facebook",
+   "Google",
+   "TikTok",
+   "Xero"
+  ]
+ },
+ "/funnels-websites/webinars": {
+  "fr": false,
+  "b": 18,
+  "f": [
+   "##create-new-button",
+   "##positive-empty-state",
+   "New Webinar Funnel|button"
+  ]
+ },
+ "/settings/smtp_service": {
+  "fr": true,
+  "b": 0,
+  "f": []
+ },
+ "/payments/integrations": {
+  "fr": false,
+  "b": 22,
+  "f": [
+   "Connect|button",
+   "Stripe"
+  ]
+ },
+ "/memberships/certificates/create-certificates": {
+  "fr": false,
+  "b": 12,
+  "f": [
+   "Issued Certificates"
+  ]
+ },
+ "/automation/workflows": {
+  "fr": true,
+  "b": 4,
+  "f": [
+   "Settings"
+  ]
+ },
+ "/funnels-websites/chat-widget": {
+  "fr": false,
+  "b": 18,
+  "f": [
+   "New|button"
+  ]
+ },
+ "/reporting/local-marketing-audit": {
+  "fr": true,
+  "b": 9,
+  "f": []
+ },
+ "/payments/invoices": {
+  "fr": false,
+  "b": 18,
+  "f": [
+   "Estimates",
+   "New|button"
+  ]
+ },
+ "/reputation/requests": {
+  "fr": false,
+  "b": 8,
+  "f": [
+   "Send Review Request|button"
+  ]
+ },
+ "/payments/products": {
+  "fr": false,
+  "b": 18,
+  "f": [
+   "Create Product|button"
+  ]
+ },
+ "/settings/fields": {
+  "fr": false,
+  "b": 96,
+  "f": [
+   "Create Folder|button",
+   "Create field|button",
+   "Create folder|button",
+   "Fields",
+   "Folders"
+  ]
+ },
+ "/media-storage": {
+  "fr": false,
+  "b": 11,
+  "f": [
+   "Upload|button"
+  ]
+ },
+ "/reputation/settings": {
+  "fr": false,
+  "b": 11,
+  "f": [
+   "Create Agent|button",
+   "Email Requests",
+   "Review Link",
+   "Reviews AI",
+   "SMS Requests"
+  ]
+ },
+ "/marketing/countdown-timer": {
+  "fr": false,
+  "b": 12,
+  "f": [
+   "New|button"
+  ]
+ },
+ "/ai-agents/agent-logs": {
+  "fr": false,
+  "b": 16,
+  "f": [
+   "Metrics"
+  ]
+ },
+ "/settings/tags": {
+  "fr": false,
+  "b": 11,
+  "f": []
+ },
+ "/payments/coupons": {
+  "fr": false,
+  "b": 18,
+  "f": [
+   "Create Coupon|button"
+  ]
+ },
+ "/payments/v2/subscriptions": {
+  "fr": false,
+  "b": 15,
+  "f": []
+ },
+ "/settings/company-billing/billing": {
+  "fr": false,
+  "b": 1,
+  "f": []
+ },
+ "/ask-ai": {
+  "fr": false,
+  "b": 3,
+  "f": [
+   "New Chat"
+  ]
+ },
+ "/ai-agents/knowledge-base": {
+  "fr": false,
+  "b": 21,
+  "f": []
+ },
+ "/reputation/listing": {
+  "fr": false,
+  "b": 14,
+  "f": [
+   "Activate Listings|button"
+  ]
+ },
+ "/marketing/brand-boards": {
+  "fr": false,
+  "b": 12,
+  "f": []
+ },
+ "/settings/import-data": {
+  "fr": false,
+  "b": 5,
+  "f": [
+   "Import|button"
+  ]
+ },
+ "/reputation/video-testimonials": {
+  "fr": false,
+  "b": 18,
+  "f": [
+   "Create Collector|button",
+   "Responses",
+   "Send Review Request"
+  ]
+ },
+ "/reporting/reports": {
+  "fr": false,
+  "b": 11,
+  "f": []
+ },
+ "/opportunities/list": {
+  "fr": false,
+  "b": 20,
+  "f": [
+   "Add Opportunity|button",
+   "Import|button"
+  ]
+ },
+ "/settings/users": {
+  "fr": false,
+  "b": 3,
+  "f": []
+ },
+ "/marketing/affiliate-manager": {
+  "fr": true,
+  "b": 11,
+  "f": []
+ },
+ "/conversations/conversations": {
+  "fr": false,
+  "b": 27,
+  "f": []
+ },
+ "/businesses/list": {
+  "fr": false,
+  "b": 13,
+  "f": [
+   "Add Company|button"
+  ]
+ },
+ "/marketing/emails/statistics": {
+  "fr": true,
+  "b": 9,
+  "f": []
+ },
+ "/ai-agents/conversation-ai": {
+  "fr": false,
+  "b": 13,
+  "f": []
+ },
+ "/memberships/communities/community-groups": {
+  "fr": false,
+  "b": 8,
+  "f": [
+   "Members"
+  ]
+ },
+ "/payments/proposals-estimates": {
+  "fr": false,
+  "b": 14,
+  "f": [
+   "New|button",
+   "Waiting for others"
+  ]
+ },
+ "/calendars/view": {
+  "fr": false,
+  "b": 10,
+  "f": []
+ },
+ "/funnels-websites/funnels": {
+  "fr": false,
+  "b": 22,
+  "f": [
+   "##create-new-button",
+   "Build with AI|button",
+   "New funnel|button"
+  ]
+ },
+ "/conversations/trigger-links": {
+  "fr": false,
+  "b": 12,
+  "f": [
+   "Add Link|button"
+  ]
+ },
+ "/conversations/manual_actions": {
+  "fr": false,
+  "b": 10,
+  "f": [
+   "Let's Start|button"
+  ]
+ },
+ "/payments/v2/paymentlinks": {
+  "fr": false,
+  "b": 14,
+  "f": [
+   "Create Link|button"
+  ]
+ },
+ "/form-builder/main": {
+  "fr": false,
+  "b": 20,
+  "f": []
+ },
+ "/crm-settings": {
+  "fr": false,
+  "b": 4,
+  "f": []
+ },
+ "/settings/audit/logs": {
+  "fr": false,
+  "b": 7,
+  "f": [
+   "Export|button"
+  ]
+ },
+ "/settings/scoring": {
+  "fr": false,
+  "b": 5,
+  "f": [
+   "Add New Rule|button"
+  ]
+ },
+ "/funnels-websites/stores": {
+  "fr": false,
+  "b": 20,
+  "f": [
+   "##create-new-button",
+   "##positive-empty-state",
+   "New store|button"
+  ]
+ },
+ "/automation/overview": {
+  "fr": true,
+  "b": 4,
+  "f": []
+ },
+ "/funnels-websites/websites": {
+  "fr": false,
+  "b": 19,
+  "f": [
+   "##create-new-button",
+   "##positive-empty-state",
+   "Build with AI|button",
+   "New website|button"
+  ]
+ },
+ "/conversations/templates": {
+  "fr": false,
+  "b": 12,
+  "f": [
+   "New Folder|button",
+   "New Snippet|button"
+  ]
+ },
+ "/qr-codes": {
+  "fr": false,
+  "b": 16,
+  "f": [
+   "Create QR Code|button"
+  ]
+ },
+ "/ai-agents/agent-studio": {
+  "fr": false,
+  "b": 12,
+  "f": [
+   "Managed Agents"
+  ]
+ },
+ "/reputation/overview": {
+  "fr": false,
+  "b": 17,
+  "f": []
+ },
+ "/marketing/trigger-links": {
+  "fr": false,
+  "b": 14,
+  "f": [
+   "Add Link|button"
+  ]
+ },
+ "/settings/whatsapp": {
+  "fr": false,
+  "f": [],
+  "b": -1
+ },
+ "/opportunities/bulk-actions": {
+  "fr": false,
+  "f": [],
+  "b": -1
+ },
+ "/contacts/bulk/actions": {
+  "fr": false,
+  "f": [],
+  "b": -1
+ },
+ "/opportunities/pipeline": {
+  "fr": false,
+  "f": [],
+  "b": -1
+ },
+ "/payments/v2/orders": {
+  "fr": false,
+  "f": [],
+  "b": -1
+ },
+ "/settings/custom_values": {
+  "fr": false,
+  "f": [],
+  "b": -1
+ },
+ "/payments/v2/transactions": {
+  "fr": false,
+  "f": [],
+  "b": -1
+ }
+}

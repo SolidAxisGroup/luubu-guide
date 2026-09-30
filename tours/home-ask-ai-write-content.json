@@ -1,0 +1,74 @@
+{
+  "id": "home-ask-ai-write-content",
+  "kind": "howto",
+  "area": "home",
+  "screen": "home.ask-ai",
+  "title": "Get Ask AI to write an email or post",
+  "blurb": "Draft emails, texts and social posts in seconds, then tweak them.",
+  "icon": "bot",
+  "minutes": 3,
+  "keywords": [
+    "ask ai",
+    "write",
+    "email",
+    "social post",
+    "copy",
+    "draft",
+    "content"
+  ],
+  "steps": [
+    {
+      "id": "open-ask-ai",
+      "title": "Open Ask AI",
+      "body": "Click **Ask AI** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_ask-ai"
+        },
+        {
+          "text": "Ask AI",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/ask-ai"
+      }
+    },
+    {
+      "id": "brief",
+      "title": "Give it a short brief",
+      "body": "Tell it who it's for, what you're offering and the tone. For example: \"Write a Facebook post for our winter heat pump service special. Friendly, short, NZ audience.\"",
+      "route": "^/ask-ai",
+      "go": "/ask-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "refine",
+      "title": "Ask for changes",
+      "body": "Reply with tweaks like \"shorter\", \"less salesy\" or \"add a call to book online\". Keep going until you're happy.",
+      "route": "^/ask-ai",
+      "go": "/ask-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "use-it",
+      "title": "Use the result",
+      "body": "Copy the text into your email, campaign or Social Planner post. You can also ask it to create an image to go with it.",
+      "route": "^/ask-ai",
+      "go": "/ask-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "id": "ai-voice-review-calls",
+  "kind": "howto",
+  "area": "ai",
+  "screen": "ai.ai-agents-voice-ai",
+  "title": "Review AI call results",
+  "blurb": "See how many calls the AI handled, what it booked, and listen back.",
+  "icon": "chart",
+  "minutes": 3,
+  "keywords": [
+    "call logs",
+    "recordings",
+    "dashboard",
+    "voice ai",
+    "results",
+    "calls handled"
+  ],
+  "steps": [
+    {
+      "id": "open-ai-agents",
+      "title": "Open AI Agents",
+      "body": "Click **AI Agents** in the left menu.",
+      "target": [
+        {
+          "css": "[id='sb_AI Agents']"
+        },
+        {
+          "text": "AI Agents",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/"
+      }
+    },
+    {
+      "id": "open-ai-agents-voice-ai",
+      "title": "Open Voice AI",
+      "body": "Click the **Voice AI** tab.",
+      "route": "^/ai-agents/",
+      "go": "/ai-agents/voice-ai",
+      "target": [
+        {
+          "css": "#tb_ai-agents-voice-ai"
+        },
+        {
+          "text": "Voice AI"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/voice-ai"
+      }
+    },
+    {
+      "id": "dashboard",
+      "title": "Open Dashboard & Logs",
+      "body": "Click **Dashboard & Logs**.",
+      "route": "^/ai-agents/voice-ai",
+      "go": "/ai-agents/voice-ai",
+      "target": [
+        {
+          "text": "Dashboard & Logs"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Dashboard & Logs"
+    },
+    {
+      "id": "numbers",
+      "title": "Read the numbers",
+      "body": "See total calls, actions triggered, bookings, transfers and caller sentiment. Test calls are left out of these totals.",
+      "route": "^/ai-agents/voice-ai",
+      "go": "/ai-agents/voice-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "filter",
+      "title": "Filter",
+      "body": "Filter by agent, date range, or live versus test calls. Search by contact name to find one caller.",
+      "route": "^/ai-agents/voice-ai",
+      "go": "/ai-agents/voice-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "listen",
+      "title": "Listen and improve",
+      "body": "Open a call to hear the recording and read the transcript. If it fumbled a question, add the answer to your knowledge base.",
+      "route": "^/ai-agents/voice-ai",
+      "go": "/ai-agents/voice-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

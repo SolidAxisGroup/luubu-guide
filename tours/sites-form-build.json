@@ -1,0 +1,130 @@
+{
+  "id": "sites-form-build",
+  "kind": "howto",
+  "area": "sites",
+  "screen": "sites.form-builder",
+  "title": "Build a contact or quote form",
+  "blurb": "Create a form with the right fields and save leads to Contacts.",
+  "icon": "page",
+  "minutes": 5,
+  "keywords": [
+    "contact form",
+    "quote form",
+    "fields",
+    "form builder",
+    "required",
+    "enquiry"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Forms",
+      "body": "Click **Forms**.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/form-builder/main",
+      "target": [
+        {
+          "css": "#tb_form-builder"
+        },
+        {
+          "text": "Forms",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/form-builder"
+      }
+    },
+    {
+      "id": "add-form",
+      "title": "Create a form",
+      "body": "Click **Create form** and start blank or pick a template.",
+      "route": "^/form-builder",
+      "go": "/form-builder/main",
+      "target": [
+        {
+          "text": "Create form",
+          "tag": "button"
+        },
+        {
+          "text": "Add Form",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create form",
+      "advance": "click"
+    },
+    {
+      "id": "fields",
+      "title": "Add the fields",
+      "body": "Drag in name, phone and email, then anything else you need, like suburb or job type. Add custom fields for details that are specific to you.",
+      "route": "^/",
+      "go": "/form-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Short forms get more replies. Ask only what you need to quote."
+    },
+    {
+      "id": "required",
+      "title": "Mark required fields",
+      "body": "Click a field and switch on required for anything you must have, like phone.",
+      "route": "^/",
+      "go": "/form-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "style",
+      "title": "Match your brand",
+      "body": "Use **Styles** to set colours, fonts and the button text, like **Get my quote**.",
+      "route": "^/",
+      "go": "/form-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save and test",
+      "body": "Click **Save**. Fill it in once yourself and check the entry shows under **Submissions**.",
+      "route": "^/",
+      "go": "/form-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

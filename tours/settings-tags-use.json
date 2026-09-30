@@ -1,0 +1,91 @@
+{
+  "id": "settings-tags-use",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.tags",
+  "title": "Tag contacts and use tags in automations",
+  "blurb": "Put tags to work on contacts and in workflows.",
+  "icon": "flow",
+  "minutes": 3,
+  "keywords": [
+    "tag contacts",
+    "bulk tag",
+    "workflow trigger",
+    "smart list",
+    "segment"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-tags",
+      "title": "Open Tags",
+      "body": "Click **Tags** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/tags",
+      "target": [
+        {
+          "css": "[id='sb_tags']"
+        },
+        {
+          "text": "Tags",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/tags"
+      }
+    },
+    {
+      "id": "one",
+      "title": "Tag one contact",
+      "body": "Open a contact and add a tag in the tags box.",
+      "route": "^/settings/tags",
+      "go": "/settings/tags",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "many",
+      "title": "Tag many at once",
+      "body": "In **Contacts**, tick several contacts and use the tag action to add or remove a tag in bulk.",
+      "route": "^/settings/tags",
+      "go": "/settings/tags",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "auto",
+      "title": "Start a workflow",
+      "body": "In **Automation**, use the Contact Tag trigger so adding a tag starts a follow-up.",
+      "route": "^/settings/tags",
+      "go": "/settings/tags",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

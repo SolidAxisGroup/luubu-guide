@@ -1,0 +1,112 @@
+{
+  "id": "sites-blog-create-blog",
+  "kind": "howto",
+  "area": "sites",
+  "screen": "sites.blogs",
+  "title": "Create your blog",
+  "blurb": "Set up a blog on your domain before writing your first post.",
+  "icon": "book",
+  "minutes": 3,
+  "keywords": [
+    "create blog",
+    "new blog",
+    "blog setup",
+    "blog domain",
+    "news"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Blogs",
+      "body": "Click **Blogs**.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/blogs",
+      "target": [
+        {
+          "css": "#tb_blogs"
+        },
+        {
+          "text": "Blogs",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/blogs"
+      }
+    },
+    {
+      "id": "create-blog",
+      "title": "Create the blog",
+      "body": "Click **Create Blog**.",
+      "route": "^/blogs",
+      "go": "/blogs",
+      "target": [
+        {
+          "text": "Create Blog",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create Blog",
+      "advance": "click"
+    },
+    {
+      "id": "title",
+      "title": "Name it",
+      "body": "Add a blog title, like **Tips from Your Business**. This shows in browser tabs and Google results.",
+      "route": "^/blogs",
+      "go": "/blogs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "domain",
+      "title": "Choose the address",
+      "body": "Select your domain and a short slug, like **blog**. Add a one-line description for search engines.",
+      "route": "^/blogs",
+      "go": "/blogs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save",
+      "body": "Save the blog. Next, add a category and an author, then write your first post.",
+      "route": "^/blogs",
+      "go": "/blogs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

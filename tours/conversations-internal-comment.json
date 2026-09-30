@@ -1,0 +1,88 @@
+{
+  "id": "conversations-internal-comment",
+  "kind": "howto",
+  "area": "conversations",
+  "screen": "conversations.conversations-tab",
+  "title": "Leave a note for your team on a chat",
+  "blurb": "Add a private comment and tag a teammate with @.",
+  "icon": "chat",
+  "minutes": 2,
+  "keywords": [
+    "internal comment",
+    "note",
+    "mention",
+    "tag teammate",
+    "private",
+    "team",
+    "handover"
+  ],
+  "steps": [
+    {
+      "id": "open-conversations",
+      "title": "Open Conversations",
+      "body": "Click **Conversations** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_conversations"
+        },
+        {
+          "text": "Conversations",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/conversations/"
+      }
+    },
+    {
+      "id": "open-chat",
+      "title": "Open the conversation",
+      "body": "Click the chat you want to add a note to.",
+      "route": "^/conversations/conversations",
+      "go": "/conversations/conversations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "channel",
+      "title": "Switch to Internal Comment",
+      "body": "In the channel switcher, pick **Internal Comment**. The customer never sees these.",
+      "route": "^/conversations/conversations",
+      "go": "/conversations/conversations",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Internal Comment"
+    },
+    {
+      "id": "mention",
+      "title": "Tag a teammate",
+      "body": "Type @ and pick a team member's name. They get a notification to look at the chat.",
+      "route": "^/conversations/conversations",
+      "go": "/conversations/conversations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "send",
+      "title": "Post it",
+      "body": "Click send. Comments can't be edited or deleted once posted, so check it first.",
+      "route": "^/conversations/conversations",
+      "go": "/conversations/conversations",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Find chats you've been tagged in using the filter icon and **Filter By Mention**."
+    }
+  ]
+}

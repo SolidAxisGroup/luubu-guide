@@ -1,0 +1,96 @@
+{
+  "id": "create-landing-page",
+  "kind": "howto",
+  "area": "start",
+  "screen": "sites.funnels",
+  "title": "Create a landing page",
+  "blurb": "Build a single-page offer or lead capture page with a funnel.",
+  "icon": "page",
+  "minutes": 4,
+  "keywords": [
+    "landing page",
+    "funnel",
+    "lead capture",
+    "opt in",
+    "sales page",
+    "offer"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Landing pages are built as **Funnels**. Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "funnels-tab",
+      "title": "Choose Funnels",
+      "body": "Click **Funnels**. A funnel is a page, or a short series of pages, with one goal: capture a lead or make a sale.",
+      "route": "^/funnels-websites/",
+      "go": "/funnels-websites/funnels",
+      "target": [
+        {
+          "css": "#tb_funnels"
+        },
+        {
+          "text": "Funnels",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/funnels"
+      }
+    },
+    {
+      "id": "new-funnel",
+      "title": "Create a new funnel",
+      "body": "Click **New funnel**.",
+      "route": "^/funnels-websites/funnels",
+      "go": "/funnels-websites/funnels",
+      "target": [
+        {
+          "css": "#create-new-button"
+        },
+        {
+          "css": "#positive-empty-state"
+        },
+        {
+          "text": "New funnel",
+          "tag": "button"
+        }
+      ],
+      "advance": "click"
+    },
+    {
+      "id": "template",
+      "title": "Pick how to start",
+      "body": "Choose **From templates** for a ready-made offer or lead capture page, **Build with AI** to have it drafted for you, or **From blank**. Name it after your offer, like **Free Quote**, then click **Create**.",
+      "target": null,
+      "tip": "Build with AI is the fastest: describe your business and offer, and it writes the first draft."
+    },
+    {
+      "id": "form",
+      "title": "Add your form",
+      "body": "Make sure the page has a **form** with the fields you need (name, email, phone). Every submission lands in **Contacts** automatically.",
+      "tip": "Pair it with the workflow guide so new leads get an instant reply.",
+      "target": null
+    },
+    {
+      "id": "publish",
+      "title": "Save and share",
+      "body": "Click **Save**, then **Preview** to test it. Copy the page link to use in ads, emails or social posts, or connect your domain under **Domain Settings**.",
+      "target": null
+    }
+  ]
+}

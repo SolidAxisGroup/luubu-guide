@@ -1,0 +1,125 @@
+{
+  "id": "settings-page-phone-system",
+  "kind": "page",
+  "area": "settings",
+  "screen": "settings.phone-system",
+  "title": "Tour: Phone System",
+  "blurb": "Your Luubu Phone numbers, call routing, voicemail and text back.",
+  "icon": "phone",
+  "minutes": 2,
+  "keywords": [
+    "phone system",
+    "luubu phone",
+    "numbers",
+    "calls",
+    "voicemail",
+    "sms"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-phone-system",
+      "title": "Open Phone System",
+      "body": "Click **Phone System** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/phone_system",
+      "target": [
+        {
+          "css": "[id='sb_phone-system']"
+        },
+        {
+          "text": "Phone System",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/phone_system"
+      }
+    },
+    {
+      "id": "config",
+      "title": "First time here?",
+      "body": "Phone numbers come through **Luubu Phone**. If you see **Your phone system requires configuration**, email hello@luubu.com and we will switch it on.",
+      "route": "^/settings/phone_system",
+      "go": "/settings/phone_system",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Phone"
+    },
+    {
+      "id": "numbers",
+      "title": "Your numbers",
+      "body": "**Phone Numbers** lists every number on your account. Use the three-dot menu on a number to change how it handles calls.",
+      "route": "^/settings/phone_system",
+      "go": "/settings/phone_system",
+      "target": [
+        {
+          "text": "Phone Numbers"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Phone Numbers"
+    },
+    {
+      "id": "voice",
+      "title": "Voicemail and text back",
+      "body": "The voice settings hold your voicemail greeting and **Missed Call Text Back**.",
+      "route": "^/settings/phone_system",
+      "go": "/settings/phone_system",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Missed Call Text Back"
+    },
+    {
+      "id": "pools",
+      "title": "Number pools",
+      "body": "Number pools are for call tracking on your website. Most businesses do not need them.",
+      "route": "^/settings/phone_system",
+      "go": "/settings/phone_system",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Next: try **Set up your phone number** from the Guide.",
+      "route": "^/settings/phone_system",
+      "go": "/settings/phone_system",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

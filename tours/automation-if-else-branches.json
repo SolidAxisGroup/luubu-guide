@@ -1,0 +1,137 @@
+{
+  "id": "automation-if-else-branches",
+  "kind": "howto",
+  "area": "automation",
+  "screen": "automation.workflow",
+  "title": "Split a workflow with If/Else",
+  "blurb": "Send people down different paths based on their details or actions.",
+  "icon": "flow",
+  "minutes": 4,
+  "keywords": [
+    "if else",
+    "branch",
+    "condition",
+    "split",
+    "logic",
+    "segment"
+  ],
+  "steps": [
+    {
+      "id": "open-automation",
+      "title": "Open Automation",
+      "body": "Click **Automation** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_automation"
+        },
+        {
+          "text": "Automation",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/automation/"
+      }
+    },
+    {
+      "id": "open-workflow",
+      "title": "Open Workflows",
+      "body": "Click **Workflows** at the top.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "css": "#tb_workflow"
+        },
+        {
+          "text": "Workflows"
+        }
+      ],
+      "advance": {
+        "route": "^/automation/workflows(?!/settings)"
+      }
+    },
+    {
+      "id": "add",
+      "title": "Add an If/Else",
+      "body": "Open your workflow, click **+** where the paths should split and choose **If/Else**.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "If/Else"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "If/Else"
+    },
+    {
+      "id": "condition",
+      "title": "Set the condition",
+      "body": "Name the branch, then choose what to check. For example: contact has tag \"commercial\", or the contact replied.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "segment",
+      "title": "Combine conditions",
+      "body": "Use **Add Segment** with **AND** or **OR** when more than one thing matters, like tag is \"commercial\" AND suburb is Riccarton.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Add Segment"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add Segment"
+    },
+    {
+      "id": "branch",
+      "title": "Add more paths",
+      "body": "Click **Add Branch** for another path. Anyone who matches nothing goes down **None**.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Add Branch"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add Branch",
+      "tip": "Always put something on the None path, even just an internal note, so nobody silently drops out."
+    },
+    {
+      "id": "fill",
+      "title": "Fill each path",
+      "body": "Click **+** under each branch and add the actions for that group.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

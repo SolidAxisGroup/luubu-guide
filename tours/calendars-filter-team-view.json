@@ -1,0 +1,111 @@
+{
+  "id": "calendars-filter-team-view",
+  "kind": "howto",
+  "area": "calendars",
+  "screen": "calendars.calendars-tab",
+  "title": "See one staff member or calendar",
+  "blurb": "Filter the diary to a person or calendar.",
+  "icon": "users",
+  "minutes": 2,
+  "keywords": [
+    "filter",
+    "staff",
+    "team",
+    "user",
+    "view",
+    "whose diary"
+  ],
+  "steps": [
+    {
+      "id": "open-calendars",
+      "title": "Open Calendars",
+      "body": "Click **Calendars** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_calendars"
+        },
+        {
+          "text": "Calendars",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/calendars/"
+      }
+    },
+    {
+      "id": "tab-calendars-tab",
+      "title": "Open Calendar view",
+      "body": "Click **Calendar view** along the top.",
+      "route": "^/calendars/",
+      "go": "/calendars/view",
+      "target": [
+        {
+          "css": "#tb_calendars-tab"
+        },
+        {
+          "text": "Calendar view",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/calendars/view"
+      }
+    },
+    {
+      "id": "panel",
+      "title": "Use the filter panel",
+      "body": "Look at the filter panel on the right of the diary.",
+      "route": "^/calendars/view",
+      "go": "/calendars/view",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "users",
+      "title": "Choose people",
+      "body": "Under **Users**, tick only the staff you want to see.",
+      "route": "^/calendars/view",
+      "go": "/calendars/view",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "calendars",
+      "title": "Or choose calendars",
+      "body": "Under **Calendars**, tick one calendar, e.g. only \"Site visits\".",
+      "route": "^/calendars/view",
+      "go": "/calendars/view",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "hide",
+      "title": "Get more room",
+      "body": "Click **Manage View** to hide the panel and give the diary the whole screen.",
+      "route": "^/calendars/view",
+      "go": "/calendars/view",
+      "target": [
+        {
+          "text": "Manage View"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Manage View"
+    }
+  ]
+}

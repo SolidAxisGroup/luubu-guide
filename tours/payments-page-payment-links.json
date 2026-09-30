@@ -1,0 +1,124 @@
+{
+  "id": "payments-page-payment-links",
+  "kind": "page",
+  "area": "payments",
+  "screen": "payments.payment-links",
+  "title": "Tour: Payment Links",
+  "blurb": "A checkout page you can text or email, no website needed.",
+  "icon": "card",
+  "minutes": 2,
+  "keywords": [
+    "payment link",
+    "pay now",
+    "checkout",
+    "text to pay",
+    "link",
+    "collect payment"
+  ],
+  "steps": [
+    {
+      "id": "open-payments",
+      "title": "Open Payments",
+      "body": "Click **Payments** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_payments"
+        },
+        {
+          "text": "Payments",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/"
+      }
+    },
+    {
+      "id": "tab-payment-links",
+      "title": "Open Payment Links",
+      "body": "Click **Payment Links** along the top.",
+      "route": "^/payments/",
+      "go": "/payments/v2/paymentlinks",
+      "target": [
+        {
+          "css": "#tb_payment-links"
+        },
+        {
+          "text": "Payment Links",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/v2/paymentlinks"
+      }
+    },
+    {
+      "id": "what",
+      "title": "What a payment link is",
+      "body": "A ready-made checkout page for one of your products. Send it by text, email or social and get paid by card.",
+      "route": "^/payments/v2/paymentlinks",
+      "go": "/payments/v2/paymentlinks",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "create",
+      "title": "Make a link",
+      "body": "**Create Link** builds a new one from a product.",
+      "route": "^/payments/v2/paymentlinks",
+      "go": "/payments/v2/paymentlinks",
+      "target": [
+        {
+          "text": "Create Link",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create Link"
+    },
+    {
+      "id": "list",
+      "title": "Your links",
+      "body": "Every link you have made is listed here. Open one to copy the URL again or edit it.",
+      "route": "^/payments/v2/paymentlinks",
+      "go": "/payments/v2/paymentlinks",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "needs",
+      "title": "Before you start",
+      "body": "You need Stripe connected and at least one product set up.",
+      "route": "^/payments/v2/paymentlinks",
+      "go": "/payments/v2/paymentlinks",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "Next step",
+      "body": "Next: try **Create a payment link** from the Guide.",
+      "route": "^/payments/v2/paymentlinks",
+      "go": "/payments/v2/paymentlinks",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

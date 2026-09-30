@@ -1,0 +1,104 @@
+{
+  "id": "conversations-page-settings",
+  "kind": "page",
+  "area": "conversations",
+  "screen": "conversations.settings",
+  "title": "Tour: Conversation settings",
+  "blurb": "Set how your inbox behaves, including reply time targets.",
+  "icon": "cog",
+  "minutes": 2,
+  "keywords": [
+    "conversation settings",
+    "inbox settings",
+    "sla",
+    "reply target",
+    "preferences"
+  ],
+  "steps": [
+    {
+      "id": "open-conversations",
+      "title": "Open Conversations",
+      "body": "Click **Conversations** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_conversations"
+        },
+        {
+          "text": "Conversations",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/conversations/"
+      }
+    },
+    {
+      "id": "tab-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** along the top.",
+      "route": "^/conversations/",
+      "go": "/conversations/settings",
+      "target": [
+        {
+          "css": "#tb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/conversations/settings"
+      }
+    },
+    {
+      "id": "what",
+      "title": "Inbox settings",
+      "body": "This is where you control how the Conversations inbox works for your whole team.",
+      "route": "^/conversations/settings",
+      "go": "/conversations/settings",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "sla",
+      "title": "Reply time targets",
+      "body": "Under **SLA Settings** you can set how quickly messages should be answered. Chats then show a timer that turns orange when due soon and red when overdue.",
+      "route": "^/conversations/settings",
+      "go": "/conversations/settings",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "SLA Settings"
+    },
+    {
+      "id": "other",
+      "title": "Other options",
+      "body": "Look through the other sections on this page. If you're unsure what something does, leave it as is and email hello@luubu.com.",
+      "route": "^/conversations/settings",
+      "go": "/conversations/settings",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Next: try **Set reply time targets** from the Guide.",
+      "route": "^/conversations/settings",
+      "go": "/conversations/settings",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

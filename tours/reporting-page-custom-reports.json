@@ -1,0 +1,116 @@
+{
+  "id": "reporting-page-custom-reports",
+  "kind": "page",
+  "area": "reporting",
+  "screen": "reporting.custom-reports",
+  "title": "Tour: Custom reports",
+  "blurb": "Build branded reports and have them emailed on a schedule.",
+  "icon": "chart",
+  "minutes": 2,
+  "keywords": [
+    "custom report",
+    "reports",
+    "reporting",
+    "schedule",
+    "pdf",
+    "dashboard"
+  ],
+  "steps": [
+    {
+      "id": "open-reporting",
+      "title": "Open Reporting",
+      "body": "Click **Reporting** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reporting"
+        },
+        {
+          "text": "Reporting",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/"
+      }
+    },
+    {
+      "id": "open-custom-reports",
+      "title": "Open Custom Reports",
+      "body": "Click **Custom Reports**. Your custom reports live here.",
+      "route": "^/reporting/",
+      "go": "/reporting/reports",
+      "target": [
+        {
+          "css": "#tb_custom-reports"
+        },
+        {
+          "text": "Custom Reports",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/reports"
+      }
+    },
+    {
+      "id": "list",
+      "title": "Your reports",
+      "body": "Saved reports are listed here. Open one to edit, schedule or download it.",
+      "route": "^/reporting/reports",
+      "go": "/reporting/reports",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "new",
+      "title": "New report",
+      "body": "**Create your first report** starts one from scratch, from a dashboard or from the template library.",
+      "route": "^/reporting/reports",
+      "go": "/reporting/reports",
+      "target": [
+        {
+          "text": "Create your first report",
+          "tag": "button"
+        },
+        {
+          "text": "New Report",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create your first report"
+    },
+    {
+      "id": "schedules",
+      "title": "Scheduled reports",
+      "body": "Scheduled reports email themselves to you or your team. Recipients do not need a Luubu login.",
+      "route": "^/reporting/reports",
+      "go": "/reporting/reports",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What's next",
+      "body": "Next: try **Build a custom report** from the Guide.",
+      "route": "^/reporting/reports",
+      "go": "/reporting/reports",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

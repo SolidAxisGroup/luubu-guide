@@ -1,0 +1,107 @@
+{
+  "id": "opportunities-add",
+  "kind": "howto",
+  "area": "opportunities",
+  "screen": "opportunities.opportunities-tab",
+  "title": "Add an opportunity",
+  "blurb": "Put a new quote or deal on your sales board.",
+  "icon": "card",
+  "minutes": 3,
+  "keywords": [
+    "add opportunity",
+    "new deal",
+    "quote",
+    "lead",
+    "sales",
+    "create opportunity"
+  ],
+  "steps": [
+    {
+      "id": "open-opportunities",
+      "title": "Open Opportunities",
+      "body": "Click **Opportunities** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_opportunities"
+        },
+        {
+          "text": "Opportunities",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/opportunities/"
+      }
+    },
+    {
+      "id": "pipeline",
+      "title": "Choose the pipeline",
+      "body": "Pick the right pipeline from the dropdown at the top.",
+      "route": "^/opportunities/list",
+      "go": "/opportunities/list",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "add",
+      "title": "Add an opportunity",
+      "body": "Click **Add Opportunity**.",
+      "route": "^/opportunities/list",
+      "go": "/opportunities/list",
+      "target": [
+        {
+          "text": "Add Opportunity",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add Opportunity"
+    },
+    {
+      "id": "contact",
+      "title": "Pick the customer",
+      "body": "Choose the primary contact, or create a new one. The opportunity name fills in with their name, but you can change it, like \"Smith bathroom reno\".",
+      "route": "^/opportunities/list",
+      "go": "/opportunities/list",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "details",
+      "title": "Stage and value",
+      "body": "Choose the stage, leave status as **Open**, and enter the value in dollars. Set the owner so everyone knows who's looking after it.",
+      "route": "^/opportunities/list",
+      "go": "/opportunities/list",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Open"
+    },
+    {
+      "id": "save",
+      "title": "Save",
+      "body": "Save it. The card appears in the stage you picked.",
+      "route": "^/opportunities/list",
+      "go": "/opportunities/list",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Set an expected close date too. It feeds your Forecast."
+    }
+  ]
+}

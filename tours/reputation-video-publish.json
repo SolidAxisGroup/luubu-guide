@@ -1,0 +1,124 @@
+{
+  "id": "reputation-video-publish",
+  "kind": "howto",
+  "area": "reputation",
+  "screen": "reputation.reputation-video-testimonials",
+  "title": "Approve and show video testimonials",
+  "blurb": "Check each video, then show the best ones on your website.",
+  "icon": "star",
+  "minutes": 4,
+  "keywords": [
+    "video testimonial",
+    "approve",
+    "publish",
+    "widget",
+    "website",
+    "hide"
+  ],
+  "steps": [
+    {
+      "id": "open-reputation",
+      "title": "Open Reputation",
+      "body": "Click **Reputation** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reputation"
+        },
+        {
+          "text": "Reputation",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reputation/"
+      }
+    },
+    {
+      "id": "open-video-testimonials",
+      "title": "Open Video Testimonials",
+      "body": "Click **Video Testimonials**.",
+      "route": "^/reputation/",
+      "go": "/reputation/video-testimonials",
+      "target": [
+        {
+          "css": "#tb_reputation-video-testimonials"
+        },
+        {
+          "text": "Video Testimonials",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reputation/video-testimonials"
+      }
+    },
+    {
+      "id": "responses",
+      "title": "Open Responses",
+      "body": "Click **Responses**.",
+      "route": "^/reputation/video-testimonials",
+      "go": "/reputation/video-testimonials",
+      "target": [
+        {
+          "text": "Responses"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Responses",
+      "advance": "click"
+    },
+    {
+      "id": "watch",
+      "title": "Watch them",
+      "body": "Watch each video. Download any you want to use on social or in ads.",
+      "route": "^/reputation/video-testimonials",
+      "go": "/reputation/video-testimonials",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "visibility",
+      "title": "Show or hide",
+      "body": "Use the toggle on each video to show or hide it in your review widget.",
+      "route": "^/reputation/video-testimonials",
+      "go": "/reputation/video-testimonials",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "widget",
+      "title": "Put them on your site",
+      "body": "In **Widgets**, create a widget, set **Review Type** to **Video Testimonials** and pick this collector.",
+      "route": "^/reputation/video-testimonials",
+      "go": "/reputation/video-testimonials",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "approval",
+      "title": "Approve first (optional)",
+      "body": "Choose **Require manual approval before publishing** if you want to check every video before it goes live.",
+      "route": "^/reputation/video-testimonials",
+      "go": "/reputation/video-testimonials",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

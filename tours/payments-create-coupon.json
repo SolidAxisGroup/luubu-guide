@@ -1,0 +1,124 @@
+{
+  "id": "payments-create-coupon",
+  "kind": "howto",
+  "area": "payments",
+  "screen": "payments.payments-coupons",
+  "title": "Create a coupon code",
+  "blurb": "Offer money off with a code customers enter at checkout.",
+  "icon": "star",
+  "minutes": 3,
+  "keywords": [
+    "coupon",
+    "discount code",
+    "promo",
+    "sale",
+    "percent off",
+    "voucher code"
+  ],
+  "steps": [
+    {
+      "id": "open-payments",
+      "title": "Open Payments",
+      "body": "Click **Payments** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_payments"
+        },
+        {
+          "text": "Payments",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/"
+      }
+    },
+    {
+      "id": "tab-payments-coupons",
+      "title": "Open Coupons",
+      "body": "Click **Coupons** along the top.",
+      "route": "^/payments/",
+      "go": "/payments/coupons",
+      "target": [
+        {
+          "css": "#tb_payments-coupons"
+        },
+        {
+          "text": "Coupons",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/coupons"
+      }
+    },
+    {
+      "id": "create",
+      "title": "Create a coupon",
+      "body": "Click **Create Coupon**.",
+      "route": "^/payments/coupons",
+      "go": "/payments/coupons",
+      "target": [
+        {
+          "text": "Create Coupon",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create Coupon"
+    },
+    {
+      "id": "name",
+      "title": "Name and code",
+      "body": "Enter a **Coupon Name** for you and a **Coupon Code** customers type, e.g. SPRING20. Letters and numbers only.",
+      "route": "^/payments/coupons",
+      "go": "/payments/coupons",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "discount",
+      "title": "Set the discount",
+      "body": "Pick a percentage or a fixed amount, e.g. 20% or $25 off.",
+      "route": "^/payments/coupons",
+      "go": "/payments/coupons",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "limits",
+      "title": "Set limits",
+      "body": "Add start and end dates, a total use limit, or one use per customer.",
+      "route": "^/payments/coupons",
+      "go": "/payments/coupons",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save",
+      "body": "Save the coupon. It works on funnels, your store, payment links and bookings.",
+      "route": "^/payments/coupons",
+      "go": "/payments/coupons",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

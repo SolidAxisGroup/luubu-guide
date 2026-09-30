@@ -1,0 +1,113 @@
+{
+  "id": "conversations-page-trigger-links",
+  "kind": "page",
+  "area": "conversations",
+  "screen": "conversations.trigger-links",
+  "title": "Tour: Trigger Links",
+  "blurb": "Tracked links that tell you who clicked, and can kick off automations.",
+  "icon": "flow",
+  "minutes": 2,
+  "keywords": [
+    "trigger links",
+    "tracked link",
+    "click tracking",
+    "link",
+    "automation",
+    "clicks"
+  ],
+  "steps": [
+    {
+      "id": "open-conversations",
+      "title": "Open Conversations",
+      "body": "Click **Conversations** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_conversations"
+        },
+        {
+          "text": "Conversations",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/conversations/"
+      }
+    },
+    {
+      "id": "tab-trigger-links",
+      "title": "Open Trigger Links",
+      "body": "Click **Trigger Links** along the top.",
+      "route": "^/conversations/",
+      "go": "/conversations/trigger-links",
+      "target": [
+        {
+          "css": "#tb_trigger-links"
+        },
+        {
+          "text": "Trigger Links",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/conversations/trigger-links"
+      }
+    },
+    {
+      "id": "what",
+      "title": "What trigger links do",
+      "body": "A trigger link is a tracked version of any web link. When a contact clicks it in a text or email, Luubu logs it on their record and can start a workflow.",
+      "route": "^/conversations/trigger-links",
+      "go": "/conversations/trigger-links",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "list",
+      "title": "Your links",
+      "body": "Each link you've made is listed here. The three-dot menu lets you edit, copy or view **Analytics** for clicks.",
+      "route": "^/conversations/trigger-links",
+      "go": "/conversations/trigger-links",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Analytics"
+    },
+    {
+      "id": "add",
+      "title": "Add a link",
+      "body": "Click **Add Link** to create a new one.",
+      "route": "^/conversations/trigger-links",
+      "go": "/conversations/trigger-links",
+      "target": [
+        {
+          "text": "Add Link",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add Link"
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Next: try **Create a trigger link** from the Guide.",
+      "route": "^/conversations/trigger-links",
+      "go": "/conversations/trigger-links",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

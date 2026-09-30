@@ -1,0 +1,104 @@
+{
+  "id": "phone-number",
+  "kind": "howto",
+  "area": "start",
+  "screen": "settings.phone-system",
+  "title": "Set up your phone number",
+  "blurb": "Get a business number for calls and texts, and set call forwarding.",
+  "icon": "phone",
+  "minutes": 4,
+  "keywords": [
+    "phone",
+    "number",
+    "sms",
+    "text",
+    "calls",
+    "forwarding",
+    "voicemail"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "phone-system",
+      "title": "Open Phone System",
+      "body": "Click **Phone System**.",
+      "route": "^/settings/",
+      "go": "/settings/company",
+      "target": [
+        {
+          "css": "#sb_phone-system"
+        },
+        {
+          "text": "Phone System",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/phone_system"
+      }
+    },
+    {
+      "id": "add-number",
+      "title": "Add a number",
+      "body": "Click **Add Number**. Choose **New Zealand**, search by area code (for example **3** for Christchurch or **9** for Auckland), then pick a number you like.",
+      "tip": "See **Your phone system requires configuration**? We need to switch it on for you. Email hello@luubu.com.",
+      "route": "^/settings/phone_system",
+      "go": "/settings/phone_system",
+      "target": [
+        {
+          "text": "Add Number",
+          "tag": "button"
+        },
+        {
+          "text": "Phone System Settings",
+          "tag": "button"
+        },
+        {
+          "text": "Manage Numbers"
+        }
+      ],
+      "lookFor": "Add Number"
+    },
+    {
+      "id": "forwarding",
+      "title": "Forward calls to your mobile",
+      "body": "Click your new number to edit it. Under **Forward calls to**, enter your mobile so calls ring you wherever you are. Turn on **call recording** and **voicemail** if you want them.",
+      "route": "^/settings/phone_system",
+      "go": "/settings/phone_system",
+      "target": [
+        {
+          "text": "Phone numbers",
+          "tag": "a"
+        },
+        {
+          "text": "Manage Numbers"
+        }
+      ]
+    },
+    {
+      "id": "try-it",
+      "title": "Try it out",
+      "body": "Pick a contact and send yourself a text. Replies come back into **Conversations**, so your whole team sees them.",
+      "route": "^/conversations",
+      "go": "/conversations/conversations",
+      "awayText": "Last step: let's try your new number in **Conversations**.",
+      "target": null
+    }
+  ]
+}

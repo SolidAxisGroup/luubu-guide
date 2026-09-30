@@ -1,0 +1,153 @@
+{
+  "id": "marketing-affiliate-campaign",
+  "kind": "howto",
+  "area": "marketing",
+  "screen": "marketing.affiliate-manager",
+  "title": "Set up an affiliate campaign",
+  "blurb": "Choose what partners promote and what commission they earn.",
+  "icon": "users",
+  "minutes": 6,
+  "keywords": [
+    "affiliate campaign",
+    "referral program",
+    "commission",
+    "partner",
+    "referral link",
+    "affiliate"
+  ],
+  "steps": [
+    {
+      "id": "open-marketing",
+      "title": "Open Marketing",
+      "body": "Click **Marketing** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_email-marketing"
+        },
+        {
+          "text": "Marketing",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/"
+      }
+    },
+    {
+      "id": "open-affiliate-manager",
+      "title": "Open Affiliate Manager",
+      "body": "Click **Affiliate Manager** along the top.",
+      "route": "^/marketing/",
+      "go": "/marketing/affiliate-manager",
+      "target": [
+        {
+          "css": "#tb_affiliate-manager"
+        },
+        {
+          "text": "Affiliate Manager",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/affiliate-manager"
+      }
+    },
+    {
+      "id": "campaigns",
+      "title": "Go to Campaigns",
+      "body": "Click **Campaigns**.",
+      "route": "^/marketing/affiliate-manager",
+      "go": "/marketing/affiliate-manager",
+      "target": [
+        {
+          "text": "Campaigns"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Campaigns"
+    },
+    {
+      "id": "add",
+      "title": "Add a campaign",
+      "body": "Click **+ Add**.",
+      "route": "^/marketing/affiliate-manager",
+      "go": "/marketing/affiliate-manager",
+      "target": [
+        {
+          "text": "Add",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add",
+      "advance": "click"
+    },
+    {
+      "id": "source",
+      "title": "Pick where sales happen",
+      "body": "Choose the funnel, website or store you sell through, and the page affiliates will send people to. Each affiliate gets their own version of that link.",
+      "route": "^/marketing/affiliate-manager",
+      "go": "/marketing/affiliate-manager",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Changing this later changes every referral link, so pick carefully."
+    },
+    {
+      "id": "commission",
+      "title": "Set the commission",
+      "body": "Check which products earn commission. Set the default as a flat amount or a percentage, and adjust single products if needed.",
+      "route": "^/marketing/affiliate-manager",
+      "go": "/marketing/affiliate-manager",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "extras",
+      "title": "Extra settings",
+      "body": "Set the cookie length (how long a referral counts), payout terms and welcome emails. You can add affiliates here too.",
+      "route": "^/marketing/affiliate-manager",
+      "go": "/marketing/affiliate-manager",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "publish",
+      "title": "Go live",
+      "body": "Click **Publish** to launch, or save it as a draft to finish later.",
+      "route": "^/marketing/affiliate-manager",
+      "go": "/marketing/affiliate-manager",
+      "target": [
+        {
+          "text": "Publish",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Publish"
+    }
+  ]
+}

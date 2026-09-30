@@ -1,0 +1,139 @@
+{
+  "id": "payments-send-estimate",
+  "kind": "howto",
+  "area": "payments",
+  "screen": "payments.payment-invoices",
+  "title": "Send an estimate or quote",
+  "blurb": "Send a quote the customer can accept online.",
+  "icon": "card",
+  "minutes": 4,
+  "keywords": [
+    "estimate",
+    "quote",
+    "quotation",
+    "accept",
+    "pricing",
+    "proposal"
+  ],
+  "steps": [
+    {
+      "id": "open-payments",
+      "title": "Open Payments",
+      "body": "Click **Payments** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_payments"
+        },
+        {
+          "text": "Payments",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/"
+      }
+    },
+    {
+      "id": "tab-payment-invoices",
+      "title": "Open Invoices & Estimates",
+      "body": "Click **Invoices & Estimates** along the top.",
+      "route": "^/payments/",
+      "go": "/payments/invoices",
+      "target": [
+        {
+          "css": "#tb_payment-invoices"
+        },
+        {
+          "text": "Invoices & Estimates",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/invoices"
+      }
+    },
+    {
+      "id": "tab",
+      "title": "Open Estimates",
+      "body": "Click the **Estimates** tab.",
+      "route": "^/payments/invoices",
+      "go": "/payments/invoices",
+      "target": [
+        {
+          "text": "Estimates"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Estimates"
+    },
+    {
+      "id": "new",
+      "title": "New estimate",
+      "body": "Click **New** to start an estimate.",
+      "route": "^/payments/invoices",
+      "go": "/payments/invoices",
+      "target": [
+        {
+          "text": "New",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New"
+    },
+    {
+      "id": "details",
+      "title": "Customer and expiry",
+      "body": "Choose the customer and set an expiry date, e.g. 30 days, so old prices do not come back to bite you.",
+      "route": "^/payments/invoices",
+      "go": "/payments/invoices",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "items",
+      "title": "Add the work",
+      "body": "Add products or line items and GST, just like an invoice.",
+      "route": "^/payments/invoices",
+      "go": "/payments/invoices",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "send",
+      "title": "Send it",
+      "body": "Click **Send** and choose email, text or both. The customer can accept or decline online.",
+      "route": "^/payments/invoices",
+      "go": "/payments/invoices",
+      "target": [
+        {
+          "text": "Send",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Send"
+    }
+  ]
+}

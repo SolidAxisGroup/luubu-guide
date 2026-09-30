@@ -1,0 +1,88 @@
+{
+  "id": "conversations-reply-sms",
+  "kind": "howto",
+  "area": "conversations",
+  "screen": "conversations.conversations-tab",
+  "title": "Reply to a text message",
+  "blurb": "Answer a customer's SMS from your Luubu Phone number.",
+  "icon": "chat",
+  "minutes": 2,
+  "keywords": [
+    "reply",
+    "sms",
+    "text",
+    "message",
+    "respond",
+    "txt",
+    "conversations"
+  ],
+  "steps": [
+    {
+      "id": "open-conversations",
+      "title": "Open Conversations",
+      "body": "Click **Conversations** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_conversations"
+        },
+        {
+          "text": "Conversations",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/conversations/"
+      }
+    },
+    {
+      "id": "open-chat",
+      "title": "Open the conversation",
+      "body": "Click the conversation in the chat list. Unread chats are shown in bold at the top.",
+      "route": "^/conversations/conversations",
+      "go": "/conversations/conversations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "channel",
+      "title": "Choose SMS",
+      "body": "In the reply box, use the channel switcher to pick **SMS**. It usually picks the channel they last messaged on for you.",
+      "route": "^/conversations/conversations",
+      "go": "/conversations/conversations",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "SMS"
+    },
+    {
+      "id": "type",
+      "title": "Write your reply",
+      "body": "Type your message. Keep it short: one text is 160 characters and longer messages are split into several.",
+      "route": "^/conversations/conversations",
+      "go": "/conversations/conversations",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Add a photo or PDF with the paperclip icon."
+    },
+    {
+      "id": "send",
+      "title": "Send it",
+      "body": "Click the send icon or press Ctrl + Enter (Cmd + Enter on a Mac). Replying also marks the chat as read.",
+      "route": "^/conversations/conversations",
+      "go": "/conversations/conversations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "id": "opportunities-page-opportunities",
+  "kind": "page",
+  "area": "opportunities",
+  "screen": "opportunities.opportunities-tab",
+  "title": "Tour: Opportunities",
+  "blurb": "Your sales board: every quote and deal, stage by stage.",
+  "icon": "card",
+  "minutes": 3,
+  "keywords": [
+    "opportunities",
+    "pipeline",
+    "deals",
+    "sales",
+    "quotes",
+    "board",
+    "kanban"
+  ],
+  "steps": [
+    {
+      "id": "open-opportunities",
+      "title": "Open Opportunities",
+      "body": "Click **Opportunities** in the left menu. This is where you track quotes and deals.",
+      "target": [
+        {
+          "css": "#sb_opportunities"
+        },
+        {
+          "text": "Opportunities",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/opportunities/"
+      }
+    },
+    {
+      "id": "pipeline",
+      "title": "Pick a pipeline",
+      "body": "Use the pipeline dropdown at the top to switch between pipelines, for example Sales and Repeat Work.",
+      "route": "^/opportunities/list",
+      "go": "/opportunities/list",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "board",
+      "title": "The board",
+      "body": "Each column is a stage, like New Lead, Quote Sent or Booked. Each card is one deal, showing the customer and value. The column header shows the total value in that stage.",
+      "route": "^/opportunities/list",
+      "go": "/opportunities/list",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "views",
+      "title": "Board or list",
+      "body": "Switch between the card board and a list view. The list view can show all pipelines at once and is easier to sort and filter.",
+      "route": "^/opportunities/list",
+      "go": "/opportunities/list",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "add",
+      "title": "Add a deal",
+      "body": "Click **Add Opportunity** to add a new deal.",
+      "route": "^/opportunities/list",
+      "go": "/opportunities/list",
+      "target": [
+        {
+          "text": "Add Opportunity",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add Opportunity"
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "No pipeline yet? Start with **Create a pipeline** from the Guide. Otherwise try **Add an opportunity**.",
+      "route": "^/opportunities/list",
+      "go": "/opportunities/list",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

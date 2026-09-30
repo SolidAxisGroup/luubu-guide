@@ -1,0 +1,116 @@
+{
+  "id": "reporting-call-missed",
+  "kind": "howto",
+  "area": "reporting",
+  "screen": "reporting.call-reporting",
+  "title": "Find and follow up missed calls",
+  "blurb": "Spot missed calls fast so no lead slips away.",
+  "icon": "phone",
+  "minutes": 2,
+  "keywords": [
+    "missed calls",
+    "call back",
+    "calls",
+    "leads",
+    "phone",
+    "follow up"
+  ],
+  "steps": [
+    {
+      "id": "open-reporting",
+      "title": "Open Reporting",
+      "body": "Click **Reporting** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reporting"
+        },
+        {
+          "text": "Reporting",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/"
+      }
+    },
+    {
+      "id": "open-call-reporting",
+      "title": "Open Call Reporting",
+      "body": "Click **Call Reporting**.",
+      "route": "^/reporting/",
+      "go": "/reporting/call",
+      "target": [
+        {
+          "css": "#tb_call-reporting"
+        },
+        {
+          "text": "Call Reporting",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/call"
+      }
+    },
+    {
+      "id": "incoming",
+      "title": "Open incoming calls",
+      "body": "Click **Incoming**.",
+      "tip": "Don't see this report? It depends on your plan. Ask us to switch this on: hello@luubu.com",
+      "route": "^/reporting/call",
+      "go": "/reporting/call",
+      "target": [
+        {
+          "text": "Incoming"
+        },
+        {
+          "text": "Incoming Calls"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Incoming",
+      "advance": "click"
+    },
+    {
+      "id": "filter",
+      "title": "Filter",
+      "body": "Pick your number and set the date range to this week.",
+      "route": "^/reporting/call",
+      "go": "/reporting/call",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "missed",
+      "title": "Check missed calls",
+      "body": "Anything missed or busy is a lost lead until you call back.",
+      "route": "^/reporting/call",
+      "go": "/reporting/call",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "callback",
+      "title": "Call them back",
+      "body": "Find the caller in the table and ring them back from their contact record.",
+      "route": "^/reporting/call",
+      "go": "/reporting/call",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "id": "memberships-course-drip",
+  "kind": "howto",
+  "area": "memberships",
+  "screen": "memberships.courses",
+  "title": "Release lessons over time (drip)",
+  "blurb": "Unlock modules or lessons a set number of days after someone joins.",
+  "icon": "book",
+  "minutes": 3,
+  "keywords": [
+    "drip",
+    "schedule",
+    "unlock",
+    "lock lessons",
+    "release",
+    "course",
+    "delay"
+  ],
+  "steps": [
+    {
+      "id": "open-memberships",
+      "title": "Open Memberships",
+      "body": "Click **Memberships** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_memberships"
+        },
+        {
+          "text": "Memberships",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/memberships/"
+      }
+    },
+    {
+      "id": "open-courses",
+      "title": "Open Courses",
+      "body": "Click **Courses**.",
+      "route": "^/memberships/",
+      "go": "/memberships/courses/dashboard-v2",
+      "target": [
+        {
+          "css": "#tb_courses"
+        },
+        {
+          "text": "Courses",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/memberships/courses"
+      }
+    },
+    {
+      "id": "products",
+      "title": "Open Products",
+      "body": "Click **Products**.",
+      "route": "^/memberships/courses",
+      "go": "/memberships/courses/dashboard-v2",
+      "target": [
+        {
+          "text": "Products"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Products",
+      "advance": "click"
+    },
+    {
+      "id": "pick",
+      "title": "Pick what to hold back",
+      "body": "Open the course, then click the category or lesson you want to release later.",
+      "route": "^/memberships/courses",
+      "go": "/memberships/courses/dashboard-v2",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "drip-settings",
+      "title": "Open drip settings",
+      "body": "Open **Drip Settings**.",
+      "route": "^/memberships/courses",
+      "go": "/memberships/courses/dashboard-v2",
+      "target": [
+        {
+          "text": "Drip Settings"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Drip Settings"
+    },
+    {
+      "id": "delay",
+      "title": "Set the delay",
+      "body": "Enter how many days after someone joins it should unlock. It must be 1 or more.",
+      "route": "^/memberships/courses",
+      "go": "/memberships/courses/dashboard-v2",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save it",
+      "body": "Save. Members see it locked until their day comes, and get a notice when it opens.",
+      "route": "^/memberships/courses",
+      "go": "/memberships/courses/dashboard-v2",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

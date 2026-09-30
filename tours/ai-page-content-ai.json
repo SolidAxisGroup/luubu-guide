@@ -1,0 +1,115 @@
+{
+  "id": "ai-page-content-ai",
+  "kind": "page",
+  "area": "ai",
+  "screen": "ai.ai-agents-content-ai",
+  "title": "Tour Content AI",
+  "blurb": "AI that writes your emails, social posts and blogs.",
+  "icon": "image",
+  "minutes": 2,
+  "keywords": [
+    "content ai",
+    "ai writer",
+    "copywriting",
+    "social posts",
+    "emails",
+    "tour"
+  ],
+  "steps": [
+    {
+      "id": "open-ai-agents",
+      "title": "Open AI Agents",
+      "body": "Click **AI Agents** in the left menu.",
+      "target": [
+        {
+          "css": "[id='sb_AI Agents']"
+        },
+        {
+          "text": "AI Agents",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/"
+      }
+    },
+    {
+      "id": "open-ai-agents-content-ai",
+      "title": "Open Content AI",
+      "body": "Click the **Content AI** tab.",
+      "route": "^/ai-agents/",
+      "go": "/ai-agents/content-ai",
+      "target": [
+        {
+          "css": "#tb_ai-agents-content-ai"
+        },
+        {
+          "text": "Content AI"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/content-ai"
+      }
+    },
+    {
+      "id": "what",
+      "title": "What it does",
+      "body": "Content AI writes text and creates images for you. It works inside the tools you already use.",
+      "route": "^/ai-agents/content-ai",
+      "go": "/ai-agents/content-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "where",
+      "title": "Where you will see it",
+      "body": "Look for the **Content AI** button in the email builder and in Social Planner, and the **Ask AI** panel in the blog editor.",
+      "route": "^/ai-agents/content-ai",
+      "go": "/ai-agents/content-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "drafts",
+      "title": "Treat it as a draft",
+      "body": "Everything it writes is a starting point. Read it, add your local touch, then send.",
+      "route": "^/ai-agents/content-ai",
+      "go": "/ai-agents/content-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "cost",
+      "title": "Usage",
+      "body": "Content AI is billed on how much it writes. Ask us about your plan: hello@luubu.com",
+      "route": "^/ai-agents/content-ai",
+      "go": "/ai-agents/content-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What to do first",
+      "body": "Next: try **Write a social post with AI** from the Guide.",
+      "route": "^/ai-agents/content-ai",
+      "go": "/ai-agents/content-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "id": "marketing-trigger-links-create",
+  "kind": "howto",
+  "area": "marketing",
+  "screen": "marketing.trigger-links",
+  "title": "Create a trigger link",
+  "blurb": "Make a tracked link to your booking page, offer or form.",
+  "icon": "flow",
+  "minutes": 2,
+  "keywords": [
+    "trigger link",
+    "create link",
+    "tracked link",
+    "click tracking",
+    "url",
+    "link"
+  ],
+  "steps": [
+    {
+      "id": "open-marketing",
+      "title": "Open Marketing",
+      "body": "Click **Marketing** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_email-marketing"
+        },
+        {
+          "text": "Marketing",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/"
+      }
+    },
+    {
+      "id": "open-trigger-links",
+      "title": "Open Trigger Links",
+      "body": "Click **Trigger Links** along the top.",
+      "route": "^/marketing/",
+      "go": "/marketing/trigger-links",
+      "target": [
+        {
+          "css": "#tb_trigger-links"
+        },
+        {
+          "text": "Trigger Links",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/trigger-links"
+      }
+    },
+    {
+      "id": "add",
+      "title": "Add a link",
+      "body": "Click **+ Add Link**.",
+      "route": "^/marketing/trigger-links",
+      "go": "/marketing/trigger-links",
+      "target": [
+        {
+          "text": "Add Link",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add Link",
+      "advance": "click"
+    },
+    {
+      "id": "name",
+      "title": "Name it",
+      "body": "Give it a name you will recognise later, like \"Winter special\" or \"Book a service\".",
+      "route": "^/marketing/trigger-links",
+      "go": "/marketing/trigger-links",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "url",
+      "title": "Paste the address",
+      "body": "Paste the web address it should open. Use the **{}** button to add custom values if you want a personal link per contact.",
+      "route": "^/marketing/trigger-links",
+      "go": "/marketing/trigger-links",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save it",
+      "body": "Click **Save**.",
+      "route": "^/marketing/trigger-links",
+      "go": "/marketing/trigger-links",
+      "target": [
+        {
+          "text": "Save",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Save"
+    },
+    {
+      "id": "copy",
+      "title": "Copy the code",
+      "body": "Click the copy icon next to your link. Paste that code into a text or email in place of a normal link.",
+      "route": "^/marketing/trigger-links",
+      "go": "/marketing/trigger-links",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

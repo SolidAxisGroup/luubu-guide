@@ -1,0 +1,143 @@
+{
+  "id": "contacts-page-smart-lists",
+  "kind": "page",
+  "area": "contacts",
+  "screen": "contacts.lists",
+  "title": "Tour: Contacts",
+  "blurb": "Your customer list: search, filter, tag and message people from here.",
+  "icon": "users",
+  "minutes": 3,
+  "keywords": [
+    "contacts",
+    "customers",
+    "smart lists",
+    "client list",
+    "database",
+    "people",
+    "leads"
+  ],
+  "steps": [
+    {
+      "id": "open-contacts",
+      "title": "Open Contacts",
+      "body": "Click **Contacts** in the left menu. This is your customer database.",
+      "target": [
+        {
+          "css": "#sb_contacts"
+        },
+        {
+          "text": "Contacts",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/contacts/"
+      }
+    },
+    {
+      "id": "table",
+      "title": "Your contact list",
+      "body": "Every customer and lead is a row. Click a name to open their full record with messages, notes, tasks and deals.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "lists",
+      "title": "Smart lists",
+      "body": "The tabs across the top are smart lists: saved filters like \"Hot leads\" or \"Past customers\" that update themselves as people match.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "filters",
+      "title": "Search and filter",
+      "body": "Use the search box for a name, phone or email. Click **Filters** to filter by tag, date added, source and more.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "text": "Filters"
+        },
+        {
+          "text": "Advanced Filters",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Filters"
+    },
+    {
+      "id": "bulk",
+      "title": "Act on many at once",
+      "body": "Tick the boxes on the left of several contacts. A toolbar appears so you can tag, text, email or add them to a workflow in one go.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "add",
+      "title": "Add people",
+      "body": "Click the **add contact** icon (a person with a plus) for one person, or **Import** to bring in a spreadsheet.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "css": "#add-contact-btn"
+        },
+        {
+          "css": "#import-contact-btn"
+        },
+        {
+          "text": "Add Contact",
+          "tag": "button"
+        },
+        {
+          "text": "Import",
+          "tag": "button"
+        },
+        {
+          "text": "Import Contacts",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "add contact icon"
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Next: try **Import contacts from a spreadsheet** from the Guide.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

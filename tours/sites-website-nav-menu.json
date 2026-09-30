@@ -1,0 +1,118 @@
+{
+  "id": "sites-website-nav-menu",
+  "kind": "howto",
+  "area": "sites",
+  "screen": "sites.websites",
+  "title": "Add a navigation menu",
+  "blurb": "Put a menu at the top of your site so visitors can find every page.",
+  "icon": "grid",
+  "minutes": 4,
+  "keywords": [
+    "menu",
+    "navigation",
+    "nav",
+    "header",
+    "links",
+    "submenu",
+    "dropdown"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Websites",
+      "body": "Click **Websites** and open your site.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/funnels-websites/websites",
+      "target": [
+        {
+          "css": "#tb_websites"
+        },
+        {
+          "text": "Websites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/websites"
+      }
+    },
+    {
+      "id": "open-home",
+      "title": "Edit your home page",
+      "body": "Pick the home page and click **Edit** to open the builder.",
+      "route": "^/funnels-websites/websites",
+      "go": "/funnels-websites/websites",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Put the menu in a header section, then save that section so every page can reuse it."
+    },
+    {
+      "id": "drag-menu",
+      "title": "Drop in the menu",
+      "body": "In the elements list on the left, find **Navigation Menu** and drag it into the top section of the page.",
+      "route": "^/",
+      "go": "/funnels-websites/websites",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "add-items",
+      "title": "Add menu items",
+      "body": "Select the menu. In the right panel, add a new menu item for each page, name it (like **Services**) and link it to that page.",
+      "route": "^/",
+      "go": "/funnels-websites/websites",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "sub-items",
+      "title": "Add a dropdown (optional)",
+      "body": "Add a sub item under a parent, for example individual services under **Services**. One level of dropdown is supported.",
+      "route": "^/",
+      "go": "/funnels-websites/websites",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "mobile",
+      "title": "Check it on mobile",
+      "body": "Switch to mobile view. The menu folds into a tap-to-open icon. Make sure every link works, then click **Save**.",
+      "route": "^/",
+      "go": "/funnels-websites/websites",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

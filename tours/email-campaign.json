@@ -1,0 +1,92 @@
+{
+  "id": "email-campaign",
+  "kind": "howto",
+  "area": "start",
+  "screen": "marketing.email-builder",
+  "title": "Send a marketing campaign",
+  "blurb": "Design an email campaign and send or schedule it to your contacts.",
+  "icon": "megaphone",
+  "minutes": 5,
+  "keywords": [
+    "campaign",
+    "email marketing",
+    "newsletter",
+    "broadcast",
+    "marketing",
+    "promotion"
+  ],
+  "steps": [
+    {
+      "id": "open-marketing",
+      "title": "Open Marketing",
+      "body": "Click **Marketing** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_email-marketing"
+        },
+        {
+          "text": "Marketing",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/"
+      }
+    },
+    {
+      "id": "emails-tab",
+      "title": "Open Emails",
+      "body": "Click **Emails**.",
+      "route": "^/marketing/",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "css": "#tb_email-builder"
+        },
+        {
+          "text": "Emails",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/emails"
+      }
+    },
+    {
+      "id": "campaigns",
+      "title": "Go to Campaigns",
+      "body": "Click the **Campaigns** tab near the top.",
+      "route": "^/marketing/emails",
+      "go": "/marketing/emails/statistics",
+      "target": {
+        "frame": true
+      },
+      "lookFor": "Campaigns",
+      "advance": {
+        "route": "^/marketing/emails/(scheduled|campaigns)"
+      }
+    },
+    {
+      "id": "create",
+      "title": "Create your campaign",
+      "body": "Click **Create campaign** (or **+ New**). Pick a template or start blank, then drag in text, images and buttons.",
+      "tip": "Keep it short: one message, one button.",
+      "route": "^/marketing/emails",
+      "go": "/marketing/emails/scheduled",
+      "target": {
+        "frame": true
+      },
+      "lookFor": "Create campaign"
+    },
+    {
+      "id": "send",
+      "title": "Test, then send",
+      "body": "Click **Send test** to email yourself a copy. Then choose your recipients (by **tag** or **smart list**) and **Send now** or **Schedule** it.",
+      "tip": "Results appear under **Statistics**: opens, clicks and replies.",
+      "target": {
+        "frame": true
+      },
+      "lookFor": "Send"
+    }
+  ]
+}

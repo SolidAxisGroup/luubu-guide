@@ -1,0 +1,88 @@
+{
+  "id": "conversations-reply-facebook-instagram",
+  "kind": "howto",
+  "area": "conversations",
+  "screen": "conversations.conversations-tab",
+  "title": "Reply to Facebook and Instagram messages",
+  "blurb": "Answer Messenger and Instagram DMs without opening the apps.",
+  "icon": "share",
+  "minutes": 3,
+  "keywords": [
+    "facebook",
+    "instagram",
+    "messenger",
+    "dm",
+    "social",
+    "reply",
+    "direct message"
+  ],
+  "steps": [
+    {
+      "id": "open-conversations",
+      "title": "Open Conversations",
+      "body": "Click **Conversations** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_conversations"
+        },
+        {
+          "text": "Conversations",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/conversations/"
+      }
+    },
+    {
+      "id": "filter",
+      "title": "Find social messages",
+      "body": "Click the filter icon above the chat list and filter by last message channel to see only Facebook or Instagram chats.",
+      "route": "^/conversations/conversations",
+      "go": "/conversations/conversations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "open-chat",
+      "title": "Open the chat",
+      "body": "Click the conversation. The DM shows in the timeline with a Facebook or Instagram icon.",
+      "route": "^/conversations/conversations",
+      "go": "/conversations/conversations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "channel",
+      "title": "Pick the right channel",
+      "body": "In the channel switcher, choose **Facebook** or **Instagram** so your reply goes back to the same place.",
+      "route": "^/conversations/conversations",
+      "go": "/conversations/conversations",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Facebook"
+    },
+    {
+      "id": "send",
+      "title": "Reply within 24 hours",
+      "body": "Type and send your reply. Meta only lets businesses reply to a DM within 24 hours of the customer's last message, so answer these first.",
+      "route": "^/conversations/conversations",
+      "go": "/conversations/conversations",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "No social messages coming in? Your Page needs connecting first. See **Connect your social accounts** in the Guide."
+    }
+  ]
+}

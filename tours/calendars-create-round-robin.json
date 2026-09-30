@@ -1,0 +1,153 @@
+{
+  "id": "calendars-create-round-robin",
+  "kind": "howto",
+  "area": "calendars",
+  "screen": "calendars.calendar-settings-top",
+  "title": "Create a round robin team calendar",
+  "blurb": "Share bookings fairly across your team with one link.",
+  "icon": "users",
+  "minutes": 5,
+  "keywords": [
+    "round robin",
+    "team",
+    "staff",
+    "share bookings",
+    "distribution",
+    "multiple staff",
+    "calendar"
+  ],
+  "steps": [
+    {
+      "id": "open-calendars",
+      "title": "Open Calendars",
+      "body": "Click **Calendars** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_calendars"
+        },
+        {
+          "text": "Calendars",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/calendars/"
+      }
+    },
+    {
+      "id": "tab-calendar-settings-top",
+      "title": "Open Calendar Settings",
+      "body": "Click **Calendar Settings** along the top. This is where every booking calendar is built and edited.",
+      "route": "^/calendars/",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "css": "#tb_calendar-settings-top"
+        },
+        {
+          "text": "Calendar settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/calendars"
+      }
+    },
+    {
+      "id": "new",
+      "title": "Start a new calendar",
+      "body": "Click **New Calendar**.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "text": "New Calendar",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New Calendar"
+    },
+    {
+      "id": "type",
+      "title": "Choose Round Robin",
+      "body": "Pick **Round Robin**. Customers see one booking page and Luubu picks who takes each job.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "text": "Round Robin"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Round Robin"
+    },
+    {
+      "id": "team",
+      "title": "Add your team",
+      "body": "Add every team member who can take these bookings. At least one person is required.",
+      "tip": "Each person needs their own hours set, or they will never be picked.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "distribution",
+      "title": "Choose how jobs are shared",
+      "body": "Pick whether to fill the first free person, or spread bookings evenly so nobody gets swamped.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "details",
+      "title": "Name, length and link",
+      "body": "Add the **Calendar Name**, **Meeting Duration** and **Custom URL**, the same as a personal calendar.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "confirm",
+      "title": "Create it",
+      "body": "Click **Confirm** to save the calendar.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "text": "Confirm",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Confirm"
+    }
+  ]
+}

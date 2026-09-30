@@ -1,0 +1,105 @@
+{
+  "id": "sites-blog-categories-authors",
+  "kind": "howto",
+  "area": "sites",
+  "screen": "sites.blogs",
+  "title": "Add blog categories and authors",
+  "blurb": "Group posts by topic and show who wrote them.",
+  "icon": "book",
+  "minutes": 3,
+  "keywords": [
+    "category",
+    "categories",
+    "author",
+    "blog settings",
+    "topics",
+    "organise"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Blogs",
+      "body": "Click **Blogs**.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/blogs",
+      "target": [
+        {
+          "css": "#tb_blogs"
+        },
+        {
+          "text": "Blogs",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/blogs"
+      }
+    },
+    {
+      "id": "gear",
+      "title": "Open blog settings",
+      "body": "Click the gear icon next to the new post button.",
+      "route": "^/blogs",
+      "go": "/blogs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "category",
+      "title": "Add a category",
+      "body": "Open categories and add one for each main topic, like **Maintenance**, **Buying guides** or **Company news**. Keep it to a handful.",
+      "route": "^/blogs",
+      "go": "/blogs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "author",
+      "title": "Add an author",
+      "body": "Open authors and add yourself or your team, with a photo and a line about your experience.",
+      "route": "^/blogs",
+      "go": "/blogs",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "A real name and photo builds trust with readers and search engines."
+    },
+    {
+      "id": "save",
+      "title": "Save",
+      "body": "Save your changes. They now show when you set up each post.",
+      "route": "^/blogs",
+      "go": "/blogs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

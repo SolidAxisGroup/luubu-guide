@@ -1,0 +1,127 @@
+{
+  "id": "memberships-community-create",
+  "kind": "howto",
+  "area": "memberships",
+  "screen": "memberships.communities",
+  "title": "Create a community group",
+  "blurb": "Set up a branded group for your customers or members.",
+  "icon": "users",
+  "minutes": 4,
+  "keywords": [
+    "community",
+    "create group",
+    "new group",
+    "members",
+    "private group",
+    "branding"
+  ],
+  "steps": [
+    {
+      "id": "open-memberships",
+      "title": "Open Memberships",
+      "body": "Click **Memberships** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_memberships"
+        },
+        {
+          "text": "Memberships",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/memberships/"
+      }
+    },
+    {
+      "id": "open-communities",
+      "title": "Open Communities",
+      "body": "Click **Communities**.",
+      "route": "^/memberships/",
+      "go": "/memberships/communities/community-groups",
+      "target": [
+        {
+          "css": "#tb_communities"
+        },
+        {
+          "text": "Communities",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/memberships/communities"
+      }
+    },
+    {
+      "id": "create",
+      "title": "Start a new group",
+      "body": "Click **Create New Community**.",
+      "route": "^/memberships/communities",
+      "go": "/memberships/communities/community-groups",
+      "target": [
+        {
+          "text": "Create New Community",
+          "tag": "button"
+        },
+        {
+          "text": "Create Group"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create New Community"
+    },
+    {
+      "id": "identity",
+      "title": "Name it",
+      "body": "Enter a group name, a web address and a short description, then save.",
+      "route": "^/memberships/communities",
+      "go": "/memberships/communities/community-groups",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "branding",
+      "title": "Brand it",
+      "body": "In the group settings, open **Branding** and upload a logo, cover image and favicon.",
+      "route": "^/memberships/communities",
+      "go": "/memberships/communities/community-groups",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "privacy",
+      "title": "Public or private",
+      "body": "In the group settings, choose public or private. Private groups stay hidden until you let someone in.",
+      "route": "^/memberships/communities",
+      "go": "/memberships/communities/community-groups",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next-steps",
+      "title": "Fill it up",
+      "body": "Now add a few channels and invite your first members. Both have their own guides.",
+      "route": "^/memberships/communities",
+      "go": "/memberships/communities/community-groups",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "id": "automation-execution-logs",
+  "kind": "howto",
+  "area": "automation",
+  "screen": "automation.workflow",
+  "title": "Troubleshoot with execution logs",
+  "blurb": "Find out who went through a workflow, what was sent, and why something failed.",
+  "icon": "chart",
+  "minutes": 4,
+  "keywords": [
+    "logs",
+    "execution logs",
+    "troubleshoot",
+    "error",
+    "not sending",
+    "enrollment history",
+    "debug"
+  ],
+  "steps": [
+    {
+      "id": "open-automation",
+      "title": "Open Automation",
+      "body": "Click **Automation** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_automation"
+        },
+        {
+          "text": "Automation",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/automation/"
+      }
+    },
+    {
+      "id": "open-workflow",
+      "title": "Open Workflows",
+      "body": "Click **Workflows** at the top.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "css": "#tb_workflow"
+        },
+        {
+          "text": "Workflows"
+        }
+      ],
+      "advance": {
+        "route": "^/automation/workflows(?!/settings)"
+      }
+    },
+    {
+      "id": "open",
+      "title": "Open the workflow",
+      "body": "Open the workflow that is not behaving.",
+      "route": "^/automation/workflows(?!/settings)",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "logs",
+      "title": "Check Execution Logs",
+      "body": "Click the **Execution Logs** tab. Each row is one action for one contact, with its status. Errors are highlighted.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Execution Logs"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Execution Logs"
+    },
+    {
+      "id": "details",
+      "title": "See why it failed",
+      "body": "Click **View Details** on a row. Common causes: no phone number or email on the contact, the contact unsubscribed, or outside your time window.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "View Details"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "View Details"
+    },
+    {
+      "id": "enrolment",
+      "title": "Follow one person",
+      "body": "Open **Enrollment History** to see who entered and whether they finished or were removed. **Highlight Contact Path** shows their route through the builder.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Enrollment History"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Enrollment History"
+    },
+    {
+      "id": "fix",
+      "title": "Fix and retest",
+      "body": "Use **Go To Action** to jump to the faulty step, fix it, save, then test again with your own contact.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Still stuck? Email hello@luubu.com with the workflow name and the contact."
+    }
+  ]
+}

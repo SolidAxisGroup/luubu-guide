@@ -1,0 +1,141 @@
+{
+  "id": "memberships-certificate-course",
+  "kind": "howto",
+  "area": "memberships",
+  "screen": "memberships.courses",
+  "title": "Issue certificates when a course is finished",
+  "blurb": "Email a certificate automatically to everyone who completes a course.",
+  "icon": "star",
+  "minutes": 3,
+  "keywords": [
+    "certificate",
+    "course completion",
+    "automatic",
+    "award",
+    "finish course",
+    "credential"
+  ],
+  "steps": [
+    {
+      "id": "open-memberships",
+      "title": "Open Memberships",
+      "body": "Click **Memberships** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_memberships"
+        },
+        {
+          "text": "Memberships",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/memberships/"
+      }
+    },
+    {
+      "id": "open-courses",
+      "title": "Open Courses",
+      "body": "Click **Courses**.",
+      "route": "^/memberships/",
+      "go": "/memberships/courses/dashboard-v2",
+      "target": [
+        {
+          "css": "#tb_courses"
+        },
+        {
+          "text": "Courses",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/memberships/courses"
+      }
+    },
+    {
+      "id": "products",
+      "title": "Open Products",
+      "body": "Click **Products**.",
+      "route": "^/memberships/courses",
+      "go": "/memberships/courses/dashboard-v2",
+      "target": [
+        {
+          "text": "Products"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Products",
+      "advance": "click"
+    },
+    {
+      "id": "open-course",
+      "title": "Open your course",
+      "body": "Click the course that should give a certificate.",
+      "route": "^/memberships/courses",
+      "go": "/memberships/courses/dashboard-v2",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "certificates-tab",
+      "title": "Open the Certificates tab",
+      "body": "Open the **Certificates** tab.",
+      "route": "^/memberships/courses",
+      "go": "/memberships/courses/dashboard-v2",
+      "target": [
+        {
+          "text": "Certificates"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Certificates",
+      "advance": "click"
+    },
+    {
+      "id": "attach",
+      "title": "Attach a template",
+      "body": "Click **Attach** and pick your certificate template. The category is set to **Course Completion**.",
+      "route": "^/memberships/courses",
+      "go": "/memberships/courses/dashboard-v2",
+      "target": [
+        {
+          "text": "Attach",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Attach"
+    },
+    {
+      "id": "save",
+      "title": "Save it",
+      "body": "Click **Save**. Everyone who finishes the course from now on gets the certificate by email.",
+      "tip": "Each course can have one certificate at a time. Edit or remove it to swap.",
+      "route": "^/memberships/courses",
+      "go": "/memberships/courses/dashboard-v2",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

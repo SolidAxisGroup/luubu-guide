@@ -1,0 +1,117 @@
+{
+  "id": "settings-business-details",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.business_info",
+  "title": "Update your business details",
+  "blurb": "Set the business name, email, phone and website customers see.",
+  "icon": "cog",
+  "minutes": 3,
+  "keywords": [
+    "business name",
+    "company details",
+    "email",
+    "phone",
+    "website",
+    "currency",
+    "nzd"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-business-profile",
+      "title": "Open Business Profile",
+      "body": "Click **Business Profile** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/company",
+      "target": [
+        {
+          "css": "[id='sb_business_info']"
+        },
+        {
+          "text": "Business Profile",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/company/?$"
+      }
+    },
+    {
+      "id": "names",
+      "title": "Check your names",
+      "body": "Under **General Information**, fill in **Friendly Business Name** (what customers know you as) and **Legal Business Name** (as registered with the Companies Office).",
+      "route": "^/settings/company/?$",
+      "go": "/settings/company",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Friendly Business Name"
+    },
+    {
+      "id": "contact",
+      "title": "Add contact details",
+      "body": "Enter your **Business Email**, **Business Phone** and **Business Website**. Use an email you check often, as some notices go there.",
+      "route": "^/settings/company/?$",
+      "go": "/settings/company",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Business Email"
+    },
+    {
+      "id": "currency",
+      "title": "Set your currency",
+      "body": "Set **Business Currency** to NZD so invoices, products and reports show New Zealand dollars.",
+      "route": "^/settings/company/?$",
+      "go": "/settings/company",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Business Currency",
+      "tip": "Change currency before you create products or invoices, not after."
+    },
+    {
+      "id": "save",
+      "title": "Save your changes",
+      "body": "Click **Update Information** to save.",
+      "route": "^/settings/company/?$",
+      "go": "/settings/company",
+      "target": [
+        {
+          "text": "Update Information",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Update Information"
+    }
+  ]
+}

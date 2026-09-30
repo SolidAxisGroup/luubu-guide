@@ -1,0 +1,124 @@
+{
+  "id": "reputation-widget-embed",
+  "kind": "howto",
+  "area": "reputation",
+  "screen": "reputation.reputation-widgets",
+  "title": "Add a review widget to your website",
+  "blurb": "Copy the widget code and paste it into your site.",
+  "icon": "globe",
+  "minutes": 3,
+  "keywords": [
+    "embed",
+    "website",
+    "widget",
+    "code",
+    "wordpress",
+    "show reviews",
+    "install"
+  ],
+  "steps": [
+    {
+      "id": "open-reputation",
+      "title": "Open Reputation",
+      "body": "Click **Reputation** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reputation"
+        },
+        {
+          "text": "Reputation",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reputation/"
+      }
+    },
+    {
+      "id": "open-widgets",
+      "title": "Open Widgets",
+      "body": "Click **Widgets**.",
+      "route": "^/reputation/",
+      "go": "/reputation/widget",
+      "target": [
+        {
+          "css": "#tb_reputation-widgets"
+        },
+        {
+          "text": "Widgets",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reputation/widget"
+      }
+    },
+    {
+      "id": "open",
+      "title": "Open the widget",
+      "body": "Open the widget you want to use.",
+      "route": "^/reputation/widget",
+      "go": "/reputation/widget",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "copy",
+      "title": "Copy the code",
+      "body": "Click the code icon, then **Copy Code**.",
+      "route": "^/reputation/widget",
+      "go": "/reputation/widget",
+      "target": [
+        {
+          "text": "Copy Code"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Copy Code"
+    },
+    {
+      "id": "luubu-site",
+      "title": "On a Luubu website",
+      "body": "In a Luubu website or funnel, add a custom code (HTML) element where you want the reviews, paste the code, then save and publish.",
+      "route": "^/reputation/widget",
+      "go": "/reputation/widget",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "other-site",
+      "title": "On another website",
+      "body": "On WordPress, Wix or Squarespace, add an HTML or embed block and paste the code in.",
+      "route": "^/reputation/widget",
+      "go": "/reputation/widget",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "check",
+      "title": "Check it",
+      "body": "Open your live site to check. Using more than one widget? Give each its own code block.",
+      "route": "^/reputation/widget",
+      "go": "/reputation/widget",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

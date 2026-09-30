@@ -1,0 +1,129 @@
+{
+  "id": "ai-content-social-post",
+  "kind": "howto",
+  "area": "ai",
+  "screen": "marketing.social-planner",
+  "title": "Write a social post with AI",
+  "blurb": "Answer a few questions and get a ready-to-post draft.",
+  "icon": "share",
+  "minutes": 4,
+  "keywords": [
+    "social post",
+    "facebook post",
+    "instagram",
+    "content ai",
+    "write post",
+    "social planner"
+  ],
+  "steps": [
+    {
+      "id": "open-marketing",
+      "title": "Open Marketing",
+      "body": "Click **Marketing** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_email-marketing"
+        },
+        {
+          "text": "Marketing",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/"
+      }
+    },
+    {
+      "id": "open-social-planner",
+      "title": "Open Social Planner",
+      "body": "Click **Social Planner**.",
+      "route": "^/marketing/",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "css": "#tb_social-planner"
+        },
+        {
+          "text": "Social Planner"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/social-planner"
+      }
+    },
+    {
+      "id": "new",
+      "title": "Start a post",
+      "body": "Click **New Post** and choose **Content AI**.",
+      "route": "^/marketing/social-planner",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "text": "New Post"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New Post"
+    },
+    {
+      "id": "setup",
+      "title": "Pick platform and type",
+      "body": "Choose the platform and the kind of post, like a tip, an offer or a job showcase.",
+      "route": "^/marketing/social-planner",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "questions",
+      "title": "Answer the questions",
+      "body": "Tell it what the post is about and who it is for. Mention your town. Local detail makes posts feel real.",
+      "route": "^/marketing/social-planner",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "generate",
+      "title": "Generate",
+      "body": "Click **Generate**, then edit the draft so it sounds like you.",
+      "route": "^/marketing/social-planner",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "text": "Generate"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Generate"
+    },
+    {
+      "id": "schedule",
+      "title": "Add a photo and schedule",
+      "body": "Add a real job photo, then post now or schedule it.",
+      "route": "^/marketing/social-planner",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

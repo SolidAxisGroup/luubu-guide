@@ -1,0 +1,104 @@
+{
+  "id": "reporting-page-attribution",
+  "kind": "page",
+  "area": "reporting",
+  "screen": "reporting.attribution-v2",
+  "title": "Tour: Attribution report",
+  "blurb": "Find out where your leads and sales really came from.",
+  "icon": "chart",
+  "minutes": 2,
+  "keywords": [
+    "attribution",
+    "lead source",
+    "where leads come from",
+    "utm",
+    "marketing roi",
+    "sources"
+  ],
+  "steps": [
+    {
+      "id": "open-reporting",
+      "title": "Open Reporting",
+      "body": "Click **Reporting** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reporting"
+        },
+        {
+          "text": "Reporting",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/"
+      }
+    },
+    {
+      "id": "open-attribution-report",
+      "title": "Open Attribution Report",
+      "body": "Click **Attribution Report**. This report shows where your leads come from.",
+      "route": "^/reporting/",
+      "go": "/reporting/attribution",
+      "target": [
+        {
+          "css": "#tb_attribution-v2"
+        },
+        {
+          "text": "Attribution Report",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/attribution"
+      }
+    },
+    {
+      "id": "what",
+      "title": "What it shows",
+      "body": "Leads are grouped by source: paid search, paid social, organic search, social media, referrals, direct and more.",
+      "route": "^/reporting/attribution",
+      "go": "/reporting/attribution",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "model",
+      "title": "First or latest",
+      "body": "Switch between first and latest attribution. First is how they found you; latest is what brought them back most recently.",
+      "route": "^/reporting/attribution",
+      "go": "/reporting/attribution",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "dates",
+      "title": "Date range",
+      "body": "Set the date range at the top.",
+      "route": "^/reporting/attribution",
+      "go": "/reporting/attribution",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What's next",
+      "body": "Next: try **See which marketing brings in customers** from the Guide.",
+      "route": "^/reporting/attribution",
+      "go": "/reporting/attribution",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

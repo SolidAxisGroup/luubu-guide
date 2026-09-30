@@ -1,0 +1,99 @@
+{
+  "id": "settings-import-check",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "contacts.bulk-actions",
+  "title": "Check an import and fix errors",
+  "blurb": "See how many rows came in and download the ones that failed.",
+  "icon": "users",
+  "minutes": 3,
+  "keywords": [
+    "import status",
+    "import errors",
+    "failed rows",
+    "bulk actions",
+    "import results"
+  ],
+  "steps": [
+    {
+      "id": "open-contacts",
+      "title": "Open Contacts",
+      "body": "Click **Contacts** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_contacts"
+        },
+        {
+          "text": "Contacts",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/contacts/"
+      }
+    },
+    {
+      "id": "bulk-actions",
+      "title": "Open Bulk Actions",
+      "body": "Click **Bulk Actions**.",
+      "route": "^/contacts/",
+      "go": "/contacts/bulk/actions",
+      "target": [
+        {
+          "css": "#tb_bulk-actions"
+        },
+        {
+          "text": "Bulk Actions",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/contacts/bulk"
+      }
+    },
+    {
+      "id": "find",
+      "title": "Find your import",
+      "body": "Your import is listed with its date and status.",
+      "route": "^/contacts/bulk",
+      "go": "/contacts/bulk/actions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "stats",
+      "title": "See the results",
+      "body": "Click **Show Stats** to see how many rows worked and how many failed.",
+      "route": "^/contacts/bulk",
+      "go": "/contacts/bulk/actions",
+      "target": [
+        {
+          "text": "Show Stats",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Show Stats"
+    },
+    {
+      "id": "errors",
+      "title": "Fix and re-import",
+      "body": "Download the error file, fix those rows (often a bad email or phone), and import just them again.",
+      "route": "^/contacts/bulk",
+      "go": "/contacts/bulk/actions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

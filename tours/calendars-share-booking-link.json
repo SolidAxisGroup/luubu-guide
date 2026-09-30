@@ -1,0 +1,147 @@
+{
+  "id": "calendars-share-booking-link",
+  "kind": "howto",
+  "area": "calendars",
+  "screen": "calendars.calendar-settings-top",
+  "title": "Share or embed your booking link",
+  "blurb": "Copy your link for emails and socials, or put the calendar on your website.",
+  "icon": "share",
+  "minutes": 3,
+  "keywords": [
+    "booking link",
+    "share",
+    "embed",
+    "website",
+    "widget",
+    "copy link",
+    "one-time link"
+  ],
+  "steps": [
+    {
+      "id": "open-calendars",
+      "title": "Open Calendars",
+      "body": "Click **Calendars** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_calendars"
+        },
+        {
+          "text": "Calendars",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/calendars/"
+      }
+    },
+    {
+      "id": "tab-calendar-settings-top",
+      "title": "Open Calendar Settings",
+      "body": "Click **Calendar Settings** along the top. This is where every booking calendar is built and edited.",
+      "route": "^/calendars/",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "css": "#tb_calendar-settings-top"
+        },
+        {
+          "text": "Calendar settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/calendars"
+      }
+    },
+    {
+      "id": "open",
+      "title": "Open a calendar",
+      "body": "Click the calendar you want to share to open it.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "share",
+      "title": "Click Share",
+      "body": "Click **Share** at the top of the calendar.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "text": "Share",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Share",
+      "advance": "click"
+    },
+    {
+      "id": "copy",
+      "title": "Copy the link",
+      "body": "Choose **Copy link** and paste it into your email signature, Google Business Profile or Facebook button.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "text": "Copy link"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Copy link"
+    },
+    {
+      "id": "embed",
+      "title": "Put it on your website",
+      "body": "Choose **Embed code** and paste the code into your website page. On a Luubu site, drop in a calendar element instead.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "text": "Embed code"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Embed code"
+    },
+    {
+      "id": "one-time",
+      "title": "Send a one-off invite",
+      "body": "A **One-time link** works once only. Handy for a VIP client you do not want sharing your diary.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "text": "One-time link"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "One-time link"
+    }
+  ]
+}

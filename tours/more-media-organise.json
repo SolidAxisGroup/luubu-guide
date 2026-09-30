@@ -1,0 +1,106 @@
+{
+  "id": "more-media-organise",
+  "kind": "howto",
+  "area": "more",
+  "screen": "more.app-media",
+  "title": "Organise files into folders",
+  "blurb": "Create folders, move files and rename them so you can find things fast.",
+  "icon": "image",
+  "minutes": 3,
+  "keywords": [
+    "folders",
+    "organise",
+    "move",
+    "rename",
+    "media",
+    "tidy"
+  ],
+  "steps": [
+    {
+      "id": "open-media-storage",
+      "title": "Open Media Storage",
+      "body": "Click **Media Storage** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_app-media"
+        },
+        {
+          "text": "Media Storage",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/media-storage"
+      }
+    },
+    {
+      "id": "folder",
+      "title": "Create a folder",
+      "body": "Create a folder for each type of file, like 'Before and after' or 'Logos'.",
+      "route": "^/media-storage",
+      "go": "/media-storage",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "select",
+      "title": "Select files",
+      "body": "Tick the files you want with **Select**.",
+      "route": "^/media-storage",
+      "go": "/media-storage",
+      "target": [
+        {
+          "text": "Select"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Select"
+    },
+    {
+      "id": "move",
+      "title": "Move them",
+      "body": "Choose **Move to Folder** and pick the folder.",
+      "route": "^/media-storage",
+      "go": "/media-storage",
+      "target": [
+        {
+          "text": "Move to Folder"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Move to Folder"
+    },
+    {
+      "id": "rename",
+      "title": "Rename (optional)",
+      "body": "Use **Rename** to give files clear names, like smith-deck-after.jpg.",
+      "route": "^/media-storage",
+      "go": "/media-storage",
+      "target": [
+        {
+          "text": "Rename"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Rename"
+    }
+  ]
+}

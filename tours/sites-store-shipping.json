@@ -1,0 +1,106 @@
+{
+  "id": "sites-store-shipping",
+  "kind": "howto",
+  "area": "sites",
+  "screen": "sites.stores",
+  "title": "Set shipping rates for your store",
+  "blurb": "Charge the right delivery fee for North Island, South Island or rural addresses.",
+  "icon": "card",
+  "minutes": 5,
+  "keywords": [
+    "shipping",
+    "delivery",
+    "postage",
+    "courier",
+    "rural",
+    "free shipping",
+    "zones"
+  ],
+  "steps": [
+    {
+      "id": "open-pay-settings",
+      "title": "Open payment settings",
+      "body": "Go to **Payments** and click **Settings**.",
+      "route": "^/payments/",
+      "go": "/payments/settings/receipts",
+      "target": [
+        {
+          "css": "#tb_payment-settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/settings"
+      }
+    },
+    {
+      "id": "shipping",
+      "title": "Open shipping",
+      "body": "Click **Shipping & Delivery**.",
+      "route": "^/payments/settings",
+      "go": "/payments/settings/receipts",
+      "target": [
+        {
+          "text": "Shipping & Delivery",
+          "tag": "a"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Shipping & Delivery",
+      "advance": "click"
+    },
+    {
+      "id": "add-zone",
+      "title": "Add a zone",
+      "body": "Click **Add Zone** and choose where it covers, like New Zealand.",
+      "route": "^/payments/settings",
+      "go": "/payments/settings/receipts",
+      "target": [
+        {
+          "text": "Add Zone",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add Zone"
+    },
+    {
+      "id": "add-rate",
+      "title": "Add rates",
+      "body": "Use **Add Rates** to set prices. You can base a rate on order total (free over $100) or on weight.",
+      "route": "^/payments/settings",
+      "go": "/payments/settings/receipts",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save and test",
+      "body": "Save the zone, then add an item to your cart on the live store to check the fee at checkout.",
+      "route": "^/payments/settings",
+      "go": "/payments/settings/receipts",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Name rates plainly, like Standard courier 2 to 4 days."
+    }
+  ]
+}

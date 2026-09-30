@@ -1,0 +1,137 @@
+{
+  "id": "contacts-custom-fields-create",
+  "kind": "howto",
+  "area": "contacts",
+  "screen": "contacts.contact-custom-fields-settings",
+  "title": "Create a custom field",
+  "blurb": "Track extra details on every contact, like job type or service date.",
+  "icon": "cog",
+  "minutes": 3,
+  "keywords": [
+    "custom field",
+    "new field",
+    "add field",
+    "dropdown",
+    "date field",
+    "contact info"
+  ],
+  "steps": [
+    {
+      "id": "open-contacts",
+      "title": "Open Contacts",
+      "body": "Click **Contacts** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_contacts"
+        },
+        {
+          "text": "Contacts",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/contacts/"
+      }
+    },
+    {
+      "id": "tab-contact-custom-fields-settings",
+      "title": "Open Custom Fields",
+      "body": "Click **Custom Fields** along the top.",
+      "route": "^/(contacts/|tasks|businesses/|settings/fields)",
+      "go": "/settings/fields",
+      "target": [
+        {
+          "css": "#tb_contact-custom-fields-settings"
+        },
+        {
+          "text": "Custom Fields",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/fields"
+      }
+    },
+    {
+      "id": "object",
+      "title": "Choose Contact",
+      "body": "Make sure the object selector at the top is set to Contact.",
+      "route": "^/settings/fields",
+      "go": "/settings/fields",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "create",
+      "title": "Create a field",
+      "body": "Click **Create field** at the top right.",
+      "route": "^/settings/fields",
+      "go": "/settings/fields",
+      "target": [
+        {
+          "text": "Create field",
+          "tag": "button"
+        },
+        {
+          "text": "Add Field",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create field"
+    },
+    {
+      "id": "type",
+      "title": "Pick a field type",
+      "body": "Choose the right type: single line text, number, date, dropdown, checkbox or file upload. A dropdown keeps answers consistent.",
+      "route": "^/settings/fields",
+      "go": "/settings/fields",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "details",
+      "title": "Name it and pick a folder",
+      "body": "Give it a clear name, choose which folder it sits in, and add placeholder text if it helps.",
+      "route": "^/settings/fields",
+      "go": "/settings/fields",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save it",
+      "body": "Click **Create custom field**. It now shows on every contact record, and you can use it in forms, filters and workflows.",
+      "route": "^/settings/fields",
+      "go": "/settings/fields",
+      "target": [
+        {
+          "text": "Create custom field",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create custom field",
+      "tip": "You can't move a field between contacts and opportunities later, so check the object first."
+    }
+  ]
+}

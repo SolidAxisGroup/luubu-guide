@@ -1,0 +1,117 @@
+{
+  "id": "sites-survey-build",
+  "kind": "howto",
+  "area": "sites",
+  "screen": "sites.survey-builder",
+  "title": "Build a multi-step survey",
+  "blurb": "Ask questions over several slides to qualify leads or gather feedback.",
+  "icon": "page",
+  "minutes": 6,
+  "keywords": [
+    "survey",
+    "slides",
+    "questions",
+    "qualify",
+    "feedback",
+    "multi step"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Surveys",
+      "body": "Click **Surveys**.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/survey-builder/main",
+      "target": [
+        {
+          "css": "#tb_survey-builder"
+        },
+        {
+          "text": "Surveys",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/survey-builder"
+      }
+    },
+    {
+      "id": "create",
+      "title": "Create a survey",
+      "body": "Click the add button and start from blank or a template.",
+      "route": "^/survey-builder",
+      "go": "/survey-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "slides",
+      "title": "Plan your slides",
+      "body": "Put one or two questions on each slide. Ask the easy ones first and contact details last.",
+      "route": "^/",
+      "go": "/survey-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Four to six slides is plenty for most surveys."
+    },
+    {
+      "id": "questions",
+      "title": "Add questions",
+      "body": "Drag in multiple choice, dropdown or text questions. Use your own custom fields to save answers against the contact.",
+      "route": "^/",
+      "go": "/survey-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "title": "Collect contact details",
+      "body": "On the last slide add name, email and phone so every response creates a contact.",
+      "route": "^/",
+      "go": "/survey-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save and try it",
+      "body": "Click **Save**, then preview and go through every slide.",
+      "route": "^/",
+      "go": "/survey-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

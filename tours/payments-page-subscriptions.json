@@ -1,0 +1,116 @@
+{
+  "id": "payments-page-subscriptions",
+  "kind": "page",
+  "area": "payments",
+  "screen": "payments.payment-subscriptions",
+  "title": "Tour: Subscriptions",
+  "blurb": "All your repeat-billing customers in one place.",
+  "icon": "card",
+  "minutes": 2,
+  "keywords": [
+    "subscriptions",
+    "recurring",
+    "membership",
+    "monthly",
+    "cancel",
+    "failed payment"
+  ],
+  "steps": [
+    {
+      "id": "open-payments",
+      "title": "Open Payments",
+      "body": "Click **Payments** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_payments"
+        },
+        {
+          "text": "Payments",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/"
+      }
+    },
+    {
+      "id": "tab-payment-subscriptions",
+      "title": "Open Subscriptions",
+      "body": "Click **Subscriptions** along the top.",
+      "route": "^/payments/",
+      "go": "/payments/v2/subscriptions",
+      "target": [
+        {
+          "css": "#tb_payment-subscriptions"
+        },
+        {
+          "text": "Subscriptions",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/v2/subscriptions"
+      }
+    },
+    {
+      "id": "list",
+      "title": "Your subscriptions",
+      "body": "Each row is a customer paying on repeat, with amount, start date and where it was sold.",
+      "route": "^/payments/v2/subscriptions",
+      "go": "/payments/v2/subscriptions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "status",
+      "title": "Watch the status",
+      "body": "Look out for failed or unpaid ones. Those customers need a nudge to update their card.",
+      "route": "^/payments/v2/subscriptions",
+      "go": "/payments/v2/subscriptions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "details",
+      "title": "Open one",
+      "body": "Click a subscription to see the customer, the plan and past payments.",
+      "route": "^/payments/v2/subscriptions",
+      "go": "/payments/v2/subscriptions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "actions",
+      "title": "Change or stop",
+      "body": "From a subscription you can update products and quantities, or cancel it.",
+      "route": "^/payments/v2/subscriptions",
+      "go": "/payments/v2/subscriptions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "Next step",
+      "body": "Next: try **Change or cancel a subscription** from the Guide.",
+      "route": "^/payments/v2/subscriptions",
+      "go": "/payments/v2/subscriptions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+name: Luubu Guide watcher
+
+on:
+  schedule:
+    - cron: "7 13 * * *"   # 2:07am NZDT every night
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - name: Install
+        working-directory: watcher
+        run: npm install && npx playwright install --with-deps chromium
+      - name: Build index
+        run: node build/make-index.js
+      - name: Replay every tour against the demo account
+        working-directory: watcher
+        env:
+          LUUBU_URL: https://app.luubu.software
+          LUUBU_LOCATION: ${{ vars.LUUBU_LOCATION || 'zRK0moceMCOayumGoB8R' }}
+          LUUBU_EMAIL: ${{ secrets.LUUBU_EMAIL }}
+          LUUBU_PASSWORD: ${{ secrets.LUUBU_PASSWORD }}
+          LUUBU_STORAGE_STATE: ${{ secrets.LUUBU_STORAGE_STATE }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PLATFORM_CHANGELOG_URL: ${{ secrets.PLATFORM_CHANGELOG_URL }}
+        run: node watch.mjs
+
+      - name: Ship anchor fixes (auto)
+        if: always()
+        run: |
+          git config user.name "luubu-guide-watcher"
+          git config user.email "hello@luubu.com"
+          git add tours watcher/fingerprint.json watcher/confirmed.json
+          if ! git diff --cached --quiet; then
+            git commit -m "watcher: repoint tour anchors after Luubu UI changes"
+            git push
+          fi
+
+      - name: Raise copy proposals and failures for approval
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          R=watcher/out/report.json
+          [ -f "$R" ] || exit 0
+          NEEDS=$(node -e "const r=require('./$R');const n=(r.proposals||[]).length+(r.broken||[]).length+((r.releases&&r.releases.items)||[]).length+(r.fatal?1:0);console.log(n)")
+          if [ "$NEEDS" != "0" ]; then
+            gh issue create --title "Luubu Guide: $(date +%Y-%m-%d) needs your approval" --body-file watcher/out/summary.md --label guide-watcher || \
+            gh issue create --title "Luubu Guide: $(date +%Y-%m-%d) needs your approval" --body-file watcher/out/summary.md
+          fi
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: watcher-report
+          path: watcher/out/report.json

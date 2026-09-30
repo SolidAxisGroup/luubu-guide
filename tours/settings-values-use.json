@@ -1,0 +1,104 @@
+{
+  "id": "settings-values-use",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.custom-values",
+  "title": "Use custom values in templates",
+  "blurb": "Drop your saved details into emails, texts and pages.",
+  "icon": "mail",
+  "minutes": 3,
+  "keywords": [
+    "custom values",
+    "templates",
+    "merge field",
+    "email",
+    "sms",
+    "variables"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-custom-values",
+      "title": "Open Custom Values",
+      "body": "Click **Custom Values** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/custom_values",
+      "target": [
+        {
+          "css": "[id='sb_custom-values']"
+        },
+        {
+          "text": "Custom Values",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/custom_values"
+      }
+    },
+    {
+      "id": "copy",
+      "title": "Copy the key",
+      "body": "Find the value and copy its key. It looks like {{custom_values.google_review_link}}.",
+      "route": "^/settings/custom_values",
+      "go": "/settings/custom_values",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "paste",
+      "title": "Paste into a template",
+      "body": "Open an email, text template or workflow message and paste the key where the detail should go.",
+      "route": "^/settings/custom_values",
+      "go": "/settings/custom_values",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "picker",
+      "title": "Or pick it from a menu",
+      "body": "Most editors have a merge field or custom value button. In workflows you can also type / to search.",
+      "route": "^/settings/custom_values",
+      "go": "/settings/custom_values",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "update",
+      "title": "Update once",
+      "body": "If the detail changes, edit the value here and every template picks up the new one.",
+      "route": "^/settings/custom_values",
+      "go": "/settings/custom_values",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

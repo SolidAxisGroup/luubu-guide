@@ -1,0 +1,119 @@
+{
+  "id": "settings-whatsapp-add-number",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.whatsapp",
+  "title": "Add a WhatsApp number",
+  "blurb": "Add another number to your WhatsApp Business account.",
+  "icon": "chat",
+  "minutes": 3,
+  "keywords": [
+    "whatsapp number",
+    "add number",
+    "second number",
+    "display name",
+    "whatsapp"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-whatsapp",
+      "title": "Open WhatsApp",
+      "body": "Click **WhatsApp** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/whatsapp",
+      "target": [
+        {
+          "css": "[id='sb_whatsapp']"
+        },
+        {
+          "text": "WhatsApp",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/whatsapp"
+      }
+    },
+    {
+      "id": "numbers",
+      "title": "Open Numbers",
+      "body": "Click **Numbers**.",
+      "route": "^/settings/whatsapp",
+      "go": "/settings/whatsapp",
+      "target": [
+        {
+          "text": "Numbers"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Numbers",
+      "advance": "click"
+    },
+    {
+      "id": "add",
+      "title": "Add a number",
+      "body": "Click **Add Number**.",
+      "route": "^/settings/whatsapp",
+      "go": "/settings/whatsapp",
+      "target": [
+        {
+          "text": "Add Number",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add Number"
+    },
+    {
+      "id": "details",
+      "title": "Enter the details",
+      "body": "Enter the display name customers will see and the phone number, then follow the prompts to verify it.",
+      "route": "^/settings/whatsapp",
+      "go": "/settings/whatsapp",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Wait for approval",
+      "body": "Meta checks new display names. It is usually quick, but can take a day.",
+      "route": "^/settings/whatsapp",
+      "go": "/settings/whatsapp",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

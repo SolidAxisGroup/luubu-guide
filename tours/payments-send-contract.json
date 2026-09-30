@@ -1,0 +1,152 @@
+{
+  "id": "payments-send-contract",
+  "kind": "howto",
+  "area": "payments",
+  "screen": "payments.proposals-estimates",
+  "title": "Send a contract for e-signature",
+  "blurb": "Get a quote or agreement signed online.",
+  "icon": "page",
+  "minutes": 6,
+  "keywords": [
+    "contract",
+    "e-signature",
+    "sign",
+    "agreement",
+    "proposal",
+    "terms",
+    "document"
+  ],
+  "steps": [
+    {
+      "id": "open-payments",
+      "title": "Open Payments",
+      "body": "Click **Payments** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_payments"
+        },
+        {
+          "text": "Payments",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/"
+      }
+    },
+    {
+      "id": "tab-proposals-estimates",
+      "title": "Open Documents & Contracts",
+      "body": "Click **Documents & Contracts** along the top.",
+      "route": "^/payments/",
+      "go": "/payments/proposals-estimates",
+      "target": [
+        {
+          "css": "#tb_proposals-estimates"
+        },
+        {
+          "text": "Documents & Contracts",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/proposals-estimates"
+      }
+    },
+    {
+      "id": "new",
+      "title": "Start a document",
+      "body": "Click **+ New** and pick a template, or upload your own PDF.",
+      "route": "^/payments/proposals-estimates",
+      "go": "/payments/proposals-estimates",
+      "target": [
+        {
+          "text": "New",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New"
+    },
+    {
+      "id": "content",
+      "title": "Check the wording",
+      "body": "Edit the text, add your logo and a product list with prices if needed.",
+      "route": "^/payments/proposals-estimates",
+      "go": "/payments/proposals-estimates",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "recipient",
+      "title": "Add who signs",
+      "body": "Add the client as a signer. Add yourself too if you countersign.",
+      "route": "^/payments/proposals-estimates",
+      "go": "/payments/proposals-estimates",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "fields",
+      "title": "Place the fields",
+      "body": "Drag a **Signature** field and a **Date** field onto the page for each signer. Add **Initials** where needed.",
+      "route": "^/payments/proposals-estimates",
+      "go": "/payments/proposals-estimates",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "send",
+      "title": "Send it",
+      "body": "Click **Send**, check the email wording and send it. Or copy the link to text it.",
+      "route": "^/payments/proposals-estimates",
+      "go": "/payments/proposals-estimates",
+      "target": [
+        {
+          "text": "Send",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Send"
+    },
+    {
+      "id": "track",
+      "title": "Track it",
+      "body": "It sits in **Waiting for others** until everyone signs, then moves to **Completed**.",
+      "route": "^/payments/proposals-estimates",
+      "go": "/payments/proposals-estimates",
+      "target": [
+        {
+          "text": "Waiting for others"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Waiting for others"
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "id": "settings-billing-wallet-topup",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.saas-billing",
+  "title": "Top up your wallet",
+  "blurb": "Add credit so your texts, calls and emails keep sending.",
+  "icon": "card",
+  "minutes": 2,
+  "keywords": [
+    "wallet",
+    "top up",
+    "add funds",
+    "credit",
+    "balance",
+    "sms credit",
+    "recharge"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-billing",
+      "title": "Open Billing",
+      "body": "Click **Billing** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/company-billing/billing",
+      "target": [
+        {
+          "css": "[id='sb_saas-billing']"
+        },
+        {
+          "text": "Billing",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/company-billing/billing"
+      }
+    },
+    {
+      "id": "wallet-tab",
+      "title": "Open your wallet",
+      "body": "Click **Wallet & Transactions**.",
+      "route": "^/settings/company-billing/billing",
+      "go": "/settings/company-billing/billing",
+      "target": [
+        {
+          "text": "Wallet & Transactions"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Wallet & Transactions",
+      "advance": "click"
+    },
+    {
+      "id": "add-funds",
+      "title": "Add funds",
+      "body": "Click **Add Funds**.",
+      "route": "^/settings/company-billing/billing",
+      "go": "/settings/company-billing/billing",
+      "target": [
+        {
+          "text": "Add Funds",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add Funds",
+      "advance": "click"
+    },
+    {
+      "id": "amount",
+      "title": "Choose an amount",
+      "body": "Enter or pick how much to add, check the card it will charge, then confirm.",
+      "route": "^/settings/company-billing/billing",
+      "go": "/settings/company-billing/billing",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Low balance stops texts and calls. Topping up a bit extra saves you checking often."
+    },
+    {
+      "id": "done",
+      "title": "Check the balance",
+      "body": "Your new balance shows at the top of the wallet within a moment.",
+      "route": "^/settings/company-billing/billing",
+      "go": "/settings/company-billing/billing",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

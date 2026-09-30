@@ -1,0 +1,146 @@
+{
+  "id": "memberships-course-sell",
+  "kind": "howto",
+  "area": "memberships",
+  "screen": "memberships.courses",
+  "title": "Sell a course with an offer",
+  "blurb": "Put a price on your course and share a link people can buy from.",
+  "icon": "card",
+  "minutes": 5,
+  "keywords": [
+    "sell course",
+    "offer",
+    "price",
+    "payment",
+    "checkout",
+    "membership",
+    "enrol"
+  ],
+  "steps": [
+    {
+      "id": "open-memberships",
+      "title": "Open Memberships",
+      "body": "Click **Memberships** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_memberships"
+        },
+        {
+          "text": "Memberships",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/memberships/"
+      }
+    },
+    {
+      "id": "open-courses",
+      "title": "Open Courses",
+      "body": "Click **Courses**.",
+      "route": "^/memberships/",
+      "go": "/memberships/courses/dashboard-v2",
+      "target": [
+        {
+          "css": "#tb_courses"
+        },
+        {
+          "text": "Courses",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/memberships/courses"
+      }
+    },
+    {
+      "id": "offers",
+      "title": "Open Offers",
+      "body": "Click **Offers**.",
+      "tip": "Selling a paid course needs a payment provider connected. Check **Payments** > **Integrations** first.",
+      "route": "^/memberships/courses",
+      "go": "/memberships/courses/dashboard-v2",
+      "target": [
+        {
+          "text": "Offers"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Offers",
+      "advance": "click"
+    },
+    {
+      "id": "create-offer",
+      "title": "Create an offer",
+      "body": "Click **Create Offer**.",
+      "route": "^/memberships/courses",
+      "go": "/memberships/courses/dashboard-v2",
+      "target": [
+        {
+          "text": "Create Offer",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create Offer"
+    },
+    {
+      "id": "details",
+      "title": "Set it up",
+      "body": "Name the offer, pick the course (or courses) it includes, and set the price.",
+      "route": "^/memberships/courses",
+      "go": "/memberships/courses/dashboard-v2",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "publish",
+      "title": "Publish it",
+      "body": "Switch the status from **Draft** to **Published** and save. Only published offers can be sold.",
+      "route": "^/memberships/courses",
+      "go": "/memberships/courses/dashboard-v2",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "product",
+      "title": "Sell it on a funnel (optional)",
+      "body": "To sell through an order form, create a product in **Payments** > **Products**, turn on **Membership Offer** and pick this offer. Buyers get access automatically.",
+      "route": "^/memberships/courses",
+      "go": "/memberships/courses/dashboard-v2",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "share",
+      "title": "Share the link",
+      "body": "Copy the offer link from the **Offers** list and share it by email, on your website or on social.",
+      "route": "^/memberships/courses",
+      "go": "/memberships/courses/dashboard-v2",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

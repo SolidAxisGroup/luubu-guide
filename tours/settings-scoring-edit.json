@@ -1,0 +1,91 @@
+{
+  "id": "settings-scoring-edit",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.manage-scoring",
+  "title": "Edit or remove a scoring rule",
+  "blurb": "Tweak points as you learn what makes a good lead.",
+  "icon": "star",
+  "minutes": 2,
+  "keywords": [
+    "edit rule",
+    "delete rule",
+    "scoring",
+    "points",
+    "change score"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-manage-scoring",
+      "title": "Open Manage Scoring",
+      "body": "Click **Manage Scoring** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/scoring",
+      "target": [
+        {
+          "css": "[id='sb_manage-scoring']"
+        },
+        {
+          "text": "Manage Scoring",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/scoring"
+      }
+    },
+    {
+      "id": "menu",
+      "title": "Open the menu",
+      "body": "Click the three dots on the rule's row.",
+      "route": "^/settings/scoring",
+      "go": "/settings/scoring",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "edit",
+      "title": "Edit or delete",
+      "body": "Choose edit to change the points or action, or delete to remove it. Each rule is changed one at a time.",
+      "route": "^/settings/scoring",
+      "go": "/settings/scoring",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "publish",
+      "title": "Publish",
+      "body": "Publish your changes so they take effect.",
+      "route": "^/settings/scoring",
+      "go": "/settings/scoring",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

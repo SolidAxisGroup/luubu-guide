@@ -1,0 +1,121 @@
+{
+  "id": "settings-calendars-connect",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.calendars",
+  "title": "Connect your Google or Outlook calendar",
+  "blurb": "Stop double bookings by syncing your own calendar.",
+  "icon": "calendar",
+  "minutes": 3,
+  "keywords": [
+    "google calendar",
+    "outlook",
+    "sync",
+    "connect calendar",
+    "double booking",
+    "icloud"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-calendars",
+      "title": "Open Calendars",
+      "body": "Click **Calendars** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "css": "[id='sb_calendars']"
+        },
+        {
+          "text": "Calendars",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/calendars"
+      }
+    },
+    {
+      "id": "connections",
+      "title": "Open Connections",
+      "body": "Click **Connections**.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "text": "Connections"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Connections",
+      "advance": "click"
+    },
+    {
+      "id": "add",
+      "title": "Add a calendar",
+      "body": "Click **Add New** and pick Google, Outlook or iCloud.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "text": "Add New",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add New"
+    },
+    {
+      "id": "sign-in",
+      "title": "Sign in",
+      "body": "Sign in and allow access. Tick the option to let Luubu add events if you want bookings to appear in your own calendar.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "linked",
+      "title": "Choose what to sync",
+      "body": "Pick which calendar Luubu writes new bookings to, and which ones it checks for busy times.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Anything marked Busy in a checked calendar blocks that time for bookings."
+    }
+  ]
+}

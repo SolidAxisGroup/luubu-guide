@@ -1,0 +1,140 @@
+{
+  "id": "payments-connect-stripe",
+  "kind": "howto",
+  "area": "payments",
+  "screen": "payments.payment-integrations",
+  "title": "Connect Stripe",
+  "blurb": "Link your Stripe account so customers can pay by card.",
+  "icon": "card",
+  "minutes": 5,
+  "keywords": [
+    "stripe",
+    "connect",
+    "card payments",
+    "payment gateway",
+    "credit card",
+    "setup payments"
+  ],
+  "steps": [
+    {
+      "id": "open-payments",
+      "title": "Open Payments",
+      "body": "Click **Payments** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_payments"
+        },
+        {
+          "text": "Payments",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/"
+      }
+    },
+    {
+      "id": "tab-payment-integrations",
+      "title": "Open Integrations",
+      "body": "Click **Integrations** along the top.",
+      "route": "^/payments/",
+      "go": "/payments/integrations",
+      "target": [
+        {
+          "css": "#tb_payment-integrations"
+        },
+        {
+          "text": "Integrations",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/integrations"
+      }
+    },
+    {
+      "id": "find",
+      "title": "Find Stripe",
+      "body": "Find the **Stripe** tile on this page.",
+      "route": "^/payments/integrations",
+      "go": "/payments/integrations",
+      "target": [
+        {
+          "text": "Stripe"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Stripe"
+    },
+    {
+      "id": "connect",
+      "title": "Click Connect",
+      "body": "Click **Connect**. A Stripe window opens.",
+      "route": "^/payments/integrations",
+      "go": "/payments/integrations",
+      "target": [
+        {
+          "text": "Connect",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Connect"
+    },
+    {
+      "id": "login",
+      "title": "Sign in to Stripe",
+      "body": "Log in to your Stripe account, or create one with your NZBN and bank details. Approve the connection.",
+      "tip": "No Stripe account yet? Setting one up takes about 10 minutes.",
+      "route": "^/payments/integrations",
+      "go": "/payments/integrations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "back",
+      "title": "Check it worked",
+      "body": "You come back here. Stripe should now show as connected.",
+      "route": "^/payments/integrations",
+      "go": "/payments/integrations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "manage",
+      "title": "Choose payment methods",
+      "body": "Click **Manage** to pick which methods show at checkout, such as cards, Apple Pay and Google Pay.",
+      "route": "^/payments/integrations",
+      "go": "/payments/integrations",
+      "target": [
+        {
+          "text": "Manage",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Manage"
+    }
+  ]
+}

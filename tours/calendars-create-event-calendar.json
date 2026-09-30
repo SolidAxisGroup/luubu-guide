@@ -1,0 +1,139 @@
+{
+  "id": "calendars-create-event-calendar",
+  "kind": "howto",
+  "area": "calendars",
+  "screen": "calendars.calendar-settings-top",
+  "title": "Create an event calendar",
+  "blurb": "Take registrations for an event without assigning a staff member.",
+  "icon": "calendar",
+  "minutes": 4,
+  "keywords": [
+    "event",
+    "registration",
+    "seminar",
+    "open day",
+    "rsvp",
+    "webinar"
+  ],
+  "steps": [
+    {
+      "id": "open-calendars",
+      "title": "Open Calendars",
+      "body": "Click **Calendars** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_calendars"
+        },
+        {
+          "text": "Calendars",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/calendars/"
+      }
+    },
+    {
+      "id": "tab-calendar-settings-top",
+      "title": "Open Calendar Settings",
+      "body": "Click **Calendar Settings** along the top. This is where every booking calendar is built and edited.",
+      "route": "^/calendars/",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "css": "#tb_calendar-settings-top"
+        },
+        {
+          "text": "Calendar settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/calendars"
+      }
+    },
+    {
+      "id": "new",
+      "title": "Start a new calendar",
+      "body": "Click **New Calendar**.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "text": "New Calendar",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New Calendar"
+    },
+    {
+      "id": "type",
+      "title": "Choose Event Calendar",
+      "body": "Pick **Event Calendar**. Unlike a class, it is not tied to any staff member.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "text": "Event Calendar"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Event Calendar"
+    },
+    {
+      "id": "details",
+      "title": "Fill in the details",
+      "body": "Add the **Calendar Name**, description, **Meeting Duration** and the dates and times it runs.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "location",
+      "title": "Add the location",
+      "body": "Enter a street address, or paste a fixed video link. Event calendars cannot create a new Zoom link for each booking.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "confirm",
+      "title": "Create it",
+      "body": "Click **Confirm**.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "text": "Confirm",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Confirm"
+    }
+  ]
+}

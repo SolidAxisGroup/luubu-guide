@@ -1,0 +1,117 @@
+{
+  "id": "sites-funnel-steps",
+  "kind": "howto",
+  "area": "sites",
+  "screen": "sites.funnels",
+  "title": "Add and reorder funnel steps",
+  "blurb": "Build a multi-step funnel, like opt-in page then thank you page.",
+  "icon": "flow",
+  "minutes": 3,
+  "keywords": [
+    "funnel steps",
+    "add step",
+    "thank you page",
+    "reorder",
+    "multi step",
+    "path"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Funnels",
+      "body": "Click **Funnels**.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/funnels-websites/funnels",
+      "target": [
+        {
+          "css": "#tb_funnels"
+        },
+        {
+          "text": "Funnels",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/funnels"
+      }
+    },
+    {
+      "id": "open-funnel",
+      "title": "Open your funnel",
+      "body": "Click the funnel you want to build out. The **Steps** tab lists each page in the order visitors see them.",
+      "route": "^/funnels-websites/funnels",
+      "go": "/funnels-websites/funnels",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "add-step",
+      "title": "Add a step",
+      "body": "Click **Add New Step**. Give it a name, like **Thank You**, and a short path, like **thank-you**. Then click to create it.",
+      "route": "^/funnels-websites/funnels",
+      "go": "/funnels-websites/funnels",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "reorder",
+      "title": "Change the order",
+      "body": "Drag steps up or down in the list. When someone submits a form or clicks a button set to go to the next step, they land on the step below.",
+      "route": "^/funnels-websites/funnels",
+      "go": "/funnels-websites/funnels",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "build-step",
+      "title": "Build the new step",
+      "body": "Select the new step and click **Edit** to design it, or choose a template for it.",
+      "route": "^/funnels-websites/funnels",
+      "go": "/funnels-websites/funnels",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "test-flow",
+      "title": "Test the whole path",
+      "body": "Open the first step in **Preview** and go through it like a customer to check each page leads to the next.",
+      "route": "^/funnels-websites/funnels",
+      "go": "/funnels-websites/funnels",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Use a real email so you also see any follow-up messages."
+    }
+  ]
+}

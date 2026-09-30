@@ -1,0 +1,111 @@
+{
+  "id": "payments-coupon-specific-products",
+  "kind": "howto",
+  "area": "payments",
+  "screen": "payments.payments-coupons",
+  "title": "Limit a coupon to certain products",
+  "blurb": "Make a code that only works on selected items.",
+  "icon": "star",
+  "minutes": 3,
+  "keywords": [
+    "coupon",
+    "specific products",
+    "restrict",
+    "discount",
+    "subscription coupon"
+  ],
+  "steps": [
+    {
+      "id": "open-payments",
+      "title": "Open Payments",
+      "body": "Click **Payments** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_payments"
+        },
+        {
+          "text": "Payments",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/"
+      }
+    },
+    {
+      "id": "tab-payments-coupons",
+      "title": "Open Coupons",
+      "body": "Click **Coupons** along the top.",
+      "route": "^/payments/",
+      "go": "/payments/coupons",
+      "target": [
+        {
+          "css": "#tb_payments-coupons"
+        },
+        {
+          "text": "Coupons",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/coupons"
+      }
+    },
+    {
+      "id": "open",
+      "title": "Open or create a coupon",
+      "body": "Click **Create Coupon**, or open an existing one.",
+      "route": "^/payments/coupons",
+      "go": "/payments/coupons",
+      "target": [
+        {
+          "text": "Create Coupon",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create Coupon"
+    },
+    {
+      "id": "products",
+      "title": "Pick the products",
+      "body": "In the usage limits, choose the products (or prices) the code applies to.",
+      "route": "^/payments/coupons",
+      "go": "/payments/coupons",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "recurring",
+      "title": "Subscriptions",
+      "body": "For recurring products, choose how long the discount lasts, e.g. first 3 months only.",
+      "route": "^/payments/coupons",
+      "go": "/payments/coupons",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save",
+      "body": "Save, then test the code on a checkout.",
+      "route": "^/payments/coupons",
+      "go": "/payments/coupons",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

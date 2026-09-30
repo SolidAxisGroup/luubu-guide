@@ -1,0 +1,112 @@
+{
+  "id": "settings-integrations-google",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.common.sidebar.lcIntegrations",
+  "title": "Connect Google Business Profile",
+  "blurb": "Bring your Google reviews and messages into Luubu.",
+  "icon": "star",
+  "minutes": 3,
+  "keywords": [
+    "google",
+    "google business profile",
+    "gbp",
+    "reviews",
+    "google maps",
+    "connect google"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-integrations",
+      "title": "Open Integrations",
+      "body": "Click **Integrations** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/lc-integrations",
+      "target": [
+        {
+          "css": "[id='sb_common.sidebar.lcIntegrations']"
+        },
+        {
+          "text": "Integrations",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/lc-integrations"
+      }
+    },
+    {
+      "id": "card",
+      "title": "Find the Google card",
+      "body": "Find **Google Business Profile** and click **Connect**.",
+      "route": "^/settings/lc-integrations",
+      "go": "/settings/lc-integrations",
+      "target": [
+        {
+          "text": "Google Business Profile"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Google Business Profile"
+    },
+    {
+      "id": "sign-in",
+      "title": "Sign in",
+      "body": "Sign in with the Google account that owns or manages your business listing, and allow access.",
+      "route": "^/settings/lc-integrations",
+      "go": "/settings/lc-integrations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "location",
+      "title": "Pick your listing",
+      "body": "Choose your business location. Turn on call tracking if offered and you want it.",
+      "route": "^/settings/lc-integrations",
+      "go": "/settings/lc-integrations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "done",
+      "title": "Done",
+      "body": "New Google reviews now show in **Conversations** and **Reputation**.",
+      "route": "^/settings/lc-integrations",
+      "go": "/settings/lc-integrations",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "For Gmail, see **Connect your email**. For Google Calendar, see **Connect your Google or Outlook calendar**."
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "id": "reporting-attribution-setup",
+  "kind": "howto",
+  "area": "reporting",
+  "screen": "reporting.attribution-v2",
+  "title": "Make sure leads are tracked properly",
+  "blurb": "Set things up so every lead gets a source recorded.",
+  "icon": "chart",
+  "minutes": 3,
+  "keywords": [
+    "attribution",
+    "tracking",
+    "utm",
+    "forms",
+    "lead source",
+    "setup"
+  ],
+  "steps": [
+    {
+      "id": "open-reporting",
+      "title": "Open Reporting",
+      "body": "Click **Reporting** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reporting"
+        },
+        {
+          "text": "Reporting",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/"
+      }
+    },
+    {
+      "id": "open-attribution-report",
+      "title": "Open Attribution Report",
+      "body": "Click **Attribution Report**.",
+      "route": "^/reporting/",
+      "go": "/reporting/attribution",
+      "target": [
+        {
+          "css": "#tb_attribution-v2"
+        },
+        {
+          "text": "Attribution Report",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/attribution"
+      }
+    },
+    {
+      "id": "capture",
+      "title": "Where sources are captured",
+      "body": "A source is recorded when someone fills a form or survey, books on a calendar, uses your chat widget or places an order. Use Luubu forms and calendars on your site.",
+      "route": "^/reporting/attribution",
+      "go": "/reporting/attribution",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "utm",
+      "title": "Tag your links",
+      "body": "Add UTM tags to every ad and email link so the source is clear.",
+      "route": "^/reporting/attribution",
+      "go": "/reporting/attribution",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "crm",
+      "title": "'CRM UI' is normal",
+      "body": "Contacts you add by hand show the source 'CRM UI'. That is expected.",
+      "route": "^/reporting/attribution",
+      "go": "/reporting/attribution",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "title": "Check a contact",
+      "body": "On any contact record, the attribution details sit at the bottom of the activity panel.",
+      "route": "^/reporting/attribution",
+      "go": "/reporting/attribution",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "id": "automation-goal-event",
+  "kind": "howto",
+  "area": "automation",
+  "screen": "automation.workflow",
+  "title": "Stop follow-ups once they act",
+  "blurb": "Use a goal so people who book or pay skip the rest of the chasers.",
+  "icon": "flow",
+  "minutes": 4,
+  "keywords": [
+    "goal",
+    "goal event",
+    "stop follow up",
+    "booked",
+    "paid",
+    "skip"
+  ],
+  "steps": [
+    {
+      "id": "open-automation",
+      "title": "Open Automation",
+      "body": "Click **Automation** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_automation"
+        },
+        {
+          "text": "Automation",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/automation/"
+      }
+    },
+    {
+      "id": "open-workflow",
+      "title": "Open Workflows",
+      "body": "Click **Workflows** at the top.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "css": "#tb_workflow"
+        },
+        {
+          "text": "Workflows"
+        }
+      ],
+      "advance": {
+        "route": "^/automation/workflows(?!/settings)"
+      }
+    },
+    {
+      "id": "why",
+      "title": "Why use a goal",
+      "body": "Nothing annoys a customer more than a \"still keen?\" text after they have already booked. A goal jumps them past the chasers.",
+      "route": "^/automation/workflows(?!/settings)",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "add",
+      "title": "Add a Goal Event",
+      "body": "Open your follow-up workflow. Click **+** near the end and choose **Goal Event**.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Goal Event"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Goal Event"
+    },
+    {
+      "id": "type",
+      "title": "Pick the goal",
+      "body": "Choose what counts as success, like an appointment booked, an invoice paid, a form submitted or the contact replied.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "behaviour",
+      "title": "Decide what happens",
+      "body": "Choose **Continue anyway**, **Wait until the goal is met** or **End this workflow** for people who reach this step without hitting the goal.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Wait until the goal is met"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Wait until the goal is met",
+      "tip": "Each workflow can have one Goal Event, but it can hold several goals."
+    },
+    {
+      "id": "publish",
+      "title": "Save, test and publish",
+      "body": "Click **Save**. Run **Test Workflow** on your own contact, then switch **Draft** to **Publish** and save again.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Publish"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Publish",
+      "tip": "Nothing is sent until the workflow is published."
+    }
+  ]
+}

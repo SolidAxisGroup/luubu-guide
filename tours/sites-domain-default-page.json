@@ -1,0 +1,112 @@
+{
+  "id": "sites-domain-default-page",
+  "kind": "howto",
+  "area": "sites",
+  "screen": "sites.sites-domain-settings",
+  "title": "Set the default and not-found pages",
+  "blurb": "Choose which page opens on your bare domain and which shows for broken links.",
+  "icon": "cog",
+  "minutes": 3,
+  "keywords": [
+    "default page",
+    "home page",
+    "404",
+    "not found",
+    "domain",
+    "error page"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Domain Settings",
+      "body": "Click the gear icon at the end of the Sites menu.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/settings/domain",
+      "target": [
+        {
+          "css": "#tb_sites-domain-settings"
+        },
+        {
+          "coach": true
+        }
+      ],
+      "advance": {
+        "route": "^/settings/domain"
+      }
+    },
+    {
+      "id": "manage",
+      "title": "Manage the domain",
+      "body": "Find your domain and click **Manage**.",
+      "route": "^/settings/domain",
+      "go": "/settings/domain",
+      "target": [
+        {
+          "text": "Manage",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Manage",
+      "advance": "click"
+    },
+    {
+      "id": "default",
+      "title": "Pick the default page",
+      "body": "Use **Default Page** to choose what opens when someone types just your domain. Usually your website home page.",
+      "route": "^/settings/domain",
+      "go": "/settings/domain",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "error",
+      "title": "Pick the not-found page",
+      "body": "Choose a 404 page for broken or old links. A friendly page with your phone number and a link home keeps people from leaving.",
+      "route": "^/settings/domain",
+      "go": "/settings/domain",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save and check",
+      "body": "Save, then visit your bare domain and a made-up address on it to check both pages.",
+      "route": "^/settings/domain",
+      "go": "/settings/domain",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

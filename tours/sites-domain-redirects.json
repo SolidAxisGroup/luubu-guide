@@ -1,0 +1,104 @@
+{
+  "id": "sites-domain-redirects",
+  "kind": "howto",
+  "area": "sites",
+  "screen": "sites.sites-domain-settings",
+  "title": "Redirect old links to new pages",
+  "blurb": "Send visitors and Google from old website addresses to your new pages.",
+  "icon": "share",
+  "minutes": 4,
+  "keywords": [
+    "redirect",
+    "301",
+    "old website",
+    "url redirect",
+    "moved page",
+    "seo"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Domain Settings",
+      "body": "Click the gear icon at the end of the Sites menu.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/settings/domain",
+      "target": [
+        {
+          "css": "#tb_sites-domain-settings"
+        },
+        {
+          "coach": true
+        }
+      ],
+      "advance": {
+        "route": "^/settings/domain"
+      }
+    },
+    {
+      "id": "redirects",
+      "title": "Open URL redirects",
+      "body": "Open the URL redirects section.",
+      "route": "^/settings/domain",
+      "go": "/settings/domain",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "add",
+      "title": "Add a redirect",
+      "body": "Add a new redirect. Choose the domain, type the old path (like /our-services.html) and pick the new page or address.",
+      "route": "^/settings/domain",
+      "go": "/settings/domain",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "type",
+      "title": "Choose a permanent redirect",
+      "body": "Use a permanent (301) redirect when a page has moved for good. It keeps the Google ranking of the old page.",
+      "route": "^/settings/domain",
+      "go": "/settings/domain",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "test",
+      "title": "Save and test",
+      "body": "Save, then type the old address into your browser to check it lands on the new page.",
+      "route": "^/settings/domain",
+      "go": "/settings/domain",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "List your old site pages before switching over so you can redirect each one."
+    }
+  ]
+}

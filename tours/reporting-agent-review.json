@@ -1,0 +1,104 @@
+{
+  "id": "reporting-agent-review",
+  "kind": "howto",
+  "area": "reporting",
+  "screen": "reporting.agent-reporting",
+  "title": "Check how your team is performing",
+  "blurb": "A quick weekly check on who is following up and who is winning work.",
+  "icon": "users",
+  "minutes": 3,
+  "keywords": [
+    "team",
+    "performance",
+    "agent report",
+    "staff",
+    "leaderboard",
+    "weekly check"
+  ],
+  "steps": [
+    {
+      "id": "open-reporting",
+      "title": "Open Reporting",
+      "body": "Click **Reporting** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reporting"
+        },
+        {
+          "text": "Reporting",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/"
+      }
+    },
+    {
+      "id": "open-agent-reporting",
+      "title": "Open Agent Reporting",
+      "body": "Click **Agent Reporting**.",
+      "route": "^/reporting/",
+      "go": "/reporting/agent",
+      "target": [
+        {
+          "css": "#tb_agent-reporting"
+        },
+        {
+          "text": "Agent Reporting",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/agent"
+      }
+    },
+    {
+      "id": "dates",
+      "title": "Pick a period",
+      "body": "Set the date range to last week.",
+      "route": "^/reporting/agent",
+      "go": "/reporting/agent",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "leaderboard",
+      "title": "Check the leaderboard",
+      "body": "See who has the most opportunities and the most wins.",
+      "route": "^/reporting/agent",
+      "go": "/reporting/agent",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "activity",
+      "title": "Check the effort",
+      "body": "Look at calls, texts and emails per person. Low activity with lots of open leads means follow-ups are slipping.",
+      "route": "^/reporting/agent",
+      "go": "/reporting/agent",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "compare",
+      "title": "Compare with before",
+      "body": "Compare with the previous period to spot trends.",
+      "route": "^/reporting/agent",
+      "go": "/reporting/agent",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

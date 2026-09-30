@@ -1,0 +1,120 @@
+{
+  "id": "conversations-settings-sla",
+  "kind": "howto",
+  "area": "conversations",
+  "screen": "conversations.settings",
+  "title": "Set reply time targets",
+  "blurb": "Get a warning timer on chats so no customer waits too long.",
+  "icon": "cog",
+  "minutes": 3,
+  "keywords": [
+    "sla",
+    "response time",
+    "reply target",
+    "timer",
+    "overdue",
+    "due soon",
+    "settings"
+  ],
+  "steps": [
+    {
+      "id": "open-conversations",
+      "title": "Open Conversations",
+      "body": "Click **Conversations** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_conversations"
+        },
+        {
+          "text": "Conversations",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/conversations/"
+      }
+    },
+    {
+      "id": "tab-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** along the top.",
+      "route": "^/conversations/",
+      "go": "/conversations/settings",
+      "target": [
+        {
+          "css": "#tb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/conversations/settings"
+      }
+    },
+    {
+      "id": "toggle",
+      "title": "Switch on SLAs",
+      "body": "Find **SLA Settings** and turn the switch on.",
+      "route": "^/conversations/settings",
+      "go": "/conversations/settings",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "SLA Settings"
+    },
+    {
+      "id": "scope",
+      "title": "One target or one per channel",
+      "body": "Choose **Common SLA** to use the same target everywhere, or **Channel-Specific SLA** to set, say, 15 minutes for SMS and 4 hours for email.",
+      "route": "^/conversations/settings",
+      "go": "/conversations/settings",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Common SLA"
+    },
+    {
+      "id": "timings",
+      "title": "Set the timings",
+      "body": "Set the **Due Soon** warning time and the **Overdue** time.",
+      "route": "^/conversations/settings",
+      "go": "/conversations/settings",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Due Soon"
+    },
+    {
+      "id": "automations",
+      "title": "Decide what counts as a reply",
+      "body": "Choose whether automated workflow messages and AI replies stop the timer, or only a real person replying does.",
+      "route": "^/conversations/settings",
+      "go": "/conversations/settings",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save",
+      "body": "Save your settings. Timers show in the inbox for new messages from now on, and results appear in **Analytics**.",
+      "route": "^/conversations/settings",
+      "go": "/conversations/settings",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

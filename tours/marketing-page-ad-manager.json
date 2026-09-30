@@ -1,0 +1,140 @@
+{
+  "id": "marketing-page-ad-manager",
+  "kind": "page",
+  "area": "marketing",
+  "screen": "marketing.ad-manager-home",
+  "title": "Tour: Ad Manager",
+  "blurb": "Create and track Facebook, Instagram and Google ads from inside Luubu.",
+  "icon": "megaphone",
+  "minutes": 2,
+  "keywords": [
+    "ad manager",
+    "ads",
+    "facebook ads",
+    "google ads",
+    "advertising",
+    "overview",
+    "tour"
+  ],
+  "steps": [
+    {
+      "id": "open-marketing",
+      "title": "Open Marketing",
+      "body": "Click **Marketing** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_email-marketing"
+        },
+        {
+          "text": "Marketing",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/"
+      }
+    },
+    {
+      "id": "open-ad-manager-home",
+      "title": "Open Ad Manager",
+      "body": "Click **Ad Manager**. Here you build ads for Facebook, Instagram and Google and see how they perform, without leaving Luubu.",
+      "route": "^/marketing/",
+      "go": "/marketing/ad-manager/home",
+      "target": [
+        {
+          "css": "#tb_ad-manager-home"
+        },
+        {
+          "text": "Ad Manager",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/ad-manager"
+      },
+      "tip": "Your ad spend is billed by Meta or Google to the card on your own ad account."
+    },
+    {
+      "id": "create",
+      "title": "Make an ad",
+      "body": "**Create Campaign** starts a new ad, from scratch or from a template.",
+      "route": "^/marketing/ad-manager",
+      "go": "/marketing/ad-manager/home",
+      "target": [
+        {
+          "text": "Create Campaign",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create Campaign"
+    },
+    {
+      "id": "campaigns",
+      "title": "Your campaigns",
+      "body": "**Campaigns** lists every ad campaign and whether it is live, paused or a draft.",
+      "route": "^/marketing/ad-manager",
+      "go": "/marketing/ad-manager/home",
+      "target": [
+        {
+          "text": "Campaigns"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Campaigns"
+    },
+    {
+      "id": "statistics",
+      "title": "Results",
+      "body": "**Statistics** shows spend, clicks, leads and cost per lead.",
+      "route": "^/marketing/ad-manager",
+      "go": "/marketing/ad-manager/home",
+      "target": [
+        {
+          "text": "Statistics"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Statistics"
+    },
+    {
+      "id": "settings",
+      "title": "Settings",
+      "body": "The gear icon opens settings: **Integrations** for your ad accounts, **Pages**, **Conversions** and **Audiences**.",
+      "route": "^/marketing/ad-manager",
+      "go": "/marketing/ad-manager/home",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What to do first",
+      "body": "Next: try **Connect Facebook to Ad Manager** from the Guide.",
+      "route": "^/marketing/ad-manager",
+      "go": "/marketing/ad-manager/home",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

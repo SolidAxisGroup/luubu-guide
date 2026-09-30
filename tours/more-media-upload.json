@@ -1,0 +1,83 @@
+{
+  "id": "more-media-upload",
+  "kind": "howto",
+  "area": "more",
+  "screen": "more.app-media",
+  "title": "Upload files to Media Storage",
+  "blurb": "Add photos, videos and documents so you can use them anywhere in Luubu.",
+  "icon": "image",
+  "minutes": 2,
+  "keywords": [
+    "upload",
+    "media",
+    "images",
+    "photos",
+    "files",
+    "video",
+    "pdf"
+  ],
+  "steps": [
+    {
+      "id": "open-media-storage",
+      "title": "Open Media Storage",
+      "body": "Click **Media Storage** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_app-media"
+        },
+        {
+          "text": "Media Storage",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/media-storage"
+      }
+    },
+    {
+      "id": "upload",
+      "title": "Click Upload",
+      "body": "Click **Upload**.",
+      "route": "^/media-storage",
+      "go": "/media-storage",
+      "target": [
+        {
+          "text": "Upload",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Upload",
+      "advance": "click"
+    },
+    {
+      "id": "pick",
+      "title": "Pick your files",
+      "body": "Choose files from your computer, or drag them onto the page. Use **Upload Folder** for a whole folder, or **Upload URL** for a direct file link.",
+      "route": "^/media-storage",
+      "go": "/media-storage",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "use",
+      "title": "Use them anywhere",
+      "body": "Uploaded files are ready to use in emails, websites, forms and courses.",
+      "route": "^/media-storage",
+      "go": "/media-storage",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

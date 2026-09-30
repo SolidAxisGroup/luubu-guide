@@ -1,0 +1,168 @@
+{
+  "id": "ai-conversation-bot-create",
+  "kind": "howto",
+  "area": "ai",
+  "screen": "ai.ai-agents-conversation-ai",
+  "title": "Create a website chat and SMS bot",
+  "blurb": "Set up an AI assistant that answers enquiries on your website and by text.",
+  "icon": "chat",
+  "minutes": 8,
+  "keywords": [
+    "chatbot",
+    "create bot",
+    "website chat",
+    "sms bot",
+    "conversation ai",
+    "setup"
+  ],
+  "steps": [
+    {
+      "id": "open-ai-agents",
+      "title": "Open AI Agents",
+      "body": "Click **AI Agents** in the left menu.",
+      "target": [
+        {
+          "css": "[id='sb_AI Agents']"
+        },
+        {
+          "text": "AI Agents",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/"
+      }
+    },
+    {
+      "id": "open-ai-agents-conversation-ai",
+      "title": "Open Conversation AI",
+      "body": "Click the **Conversation AI** tab.",
+      "route": "^/ai-agents/",
+      "go": "/ai-agents/conversation-ai",
+      "target": [
+        {
+          "css": "#tb_ai-agents-conversation-ai"
+        },
+        {
+          "text": "Conversation AI"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/conversation-ai"
+      }
+    },
+    {
+      "id": "create",
+      "title": "Create a bot",
+      "body": "Click **Create Agent**.",
+      "route": "^/ai-agents/conversation-ai",
+      "go": "/ai-agents/conversation-ai",
+      "target": [
+        {
+          "text": "Create Agent",
+          "tag": "button"
+        },
+        {
+          "text": "Create Bot",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create Agent"
+    },
+    {
+      "id": "method",
+      "title": "Pick the setup style",
+      "body": "Choose the guided setup for a quick start with no prompt writing. **Prompt Based Bot** gives you more control later.",
+      "route": "^/ai-agents/conversation-ai",
+      "go": "/ai-agents/conversation-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "settings",
+      "title": "Name it and pick channels",
+      "body": "In **Bot Settings**, give it a name and tick the channels: **Chat Widget** and **SMS** to start.",
+      "route": "^/ai-agents/conversation-ai",
+      "go": "/ai-agents/conversation-ai",
+      "target": [
+        {
+          "text": "Bot Settings"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Bot Settings",
+      "tip": "Your website needs the Luubu chat widget installed. See Sites > Chat Widget."
+    },
+    {
+      "id": "voice",
+      "title": "Set the tone",
+      "body": "Under **Brand Voice**, describe how you talk: friendly, plain, Kiwi. No jargon.",
+      "route": "^/ai-agents/conversation-ai",
+      "go": "/ai-agents/conversation-ai",
+      "target": [
+        {
+          "text": "Brand Voice"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Brand Voice"
+    },
+    {
+      "id": "training",
+      "title": "Teach it",
+      "body": "Open **Bot Training** and attach your knowledge base.",
+      "route": "^/ai-agents/conversation-ai",
+      "go": "/ai-agents/conversation-ai",
+      "target": [
+        {
+          "text": "Bot Training"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Bot Training"
+    },
+    {
+      "id": "mode",
+      "title": "Start in Suggestive",
+      "body": "Set the bot to **Suggestive** for now so you approve each reply. Save.",
+      "route": "^/ai-agents/conversation-ai",
+      "go": "/ai-agents/conversation-ai",
+      "target": [
+        {
+          "text": "Suggestive"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Suggestive"
+    }
+  ]
+}

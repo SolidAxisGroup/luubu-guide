@@ -1,0 +1,100 @@
+{
+  "id": "settings-audit-export",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.audit-logs-location",
+  "title": "Export your audit logs",
+  "blurb": "Save a copy of changes before they drop off after 60 days.",
+  "icon": "book",
+  "minutes": 2,
+  "keywords": [
+    "export",
+    "audit logs",
+    "csv",
+    "download",
+    "records",
+    "compliance"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-audit-logs",
+      "title": "Open Audit Logs",
+      "body": "Click **Audit Logs** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/audit/logs",
+      "target": [
+        {
+          "css": "[id='sb_audit-logs-location']"
+        },
+        {
+          "text": "Audit Logs",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/audit/logs"
+      }
+    },
+    {
+      "id": "filter",
+      "title": "Filter first",
+      "body": "Set your filters so the export only includes what you need.",
+      "route": "^/settings/audit/logs",
+      "go": "/settings/audit/logs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "export",
+      "title": "Export",
+      "body": "Click **Export** to create a CSV file.",
+      "route": "^/settings/audit/logs",
+      "go": "/settings/audit/logs",
+      "target": [
+        {
+          "text": "Export",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Export"
+    },
+    {
+      "id": "download",
+      "title": "Download it",
+      "body": "The export runs in the background. Download it from the exports list when it is ready.",
+      "route": "^/settings/audit/logs",
+      "go": "/settings/audit/logs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

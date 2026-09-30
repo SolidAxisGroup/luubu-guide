@@ -1,0 +1,139 @@
+{
+  "id": "payments-invoice-payment-schedule",
+  "kind": "howto",
+  "area": "payments",
+  "screen": "payments.payment-invoices",
+  "title": "Split an invoice into instalments",
+  "blurb": "Take a deposit now and the rest later on one invoice.",
+  "icon": "card",
+  "minutes": 3,
+  "keywords": [
+    "payment plan",
+    "instalments",
+    "deposit",
+    "split payment",
+    "schedule",
+    "progress payment"
+  ],
+  "steps": [
+    {
+      "id": "open-payments",
+      "title": "Open Payments",
+      "body": "Click **Payments** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_payments"
+        },
+        {
+          "text": "Payments",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/"
+      }
+    },
+    {
+      "id": "tab-payment-invoices",
+      "title": "Open Invoices & Estimates",
+      "body": "Click **Invoices & Estimates** along the top.",
+      "route": "^/payments/",
+      "go": "/payments/invoices",
+      "target": [
+        {
+          "css": "#tb_payment-invoices"
+        },
+        {
+          "text": "Invoices & Estimates",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/invoices"
+      }
+    },
+    {
+      "id": "new",
+      "title": "Start or open an invoice",
+      "body": "Click **New**, then **New Invoice**, or open a draft.",
+      "route": "^/payments/invoices",
+      "go": "/payments/invoices",
+      "target": [
+        {
+          "text": "New",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New"
+    },
+    {
+      "id": "items",
+      "title": "Add the full job",
+      "body": "Add all the line items and GST so the total is right, e.g. $6,900 incl GST.",
+      "route": "^/payments/invoices",
+      "go": "/payments/invoices",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "schedule",
+      "title": "Add a schedule",
+      "body": "Click **Add Payment Schedule**.",
+      "route": "^/payments/invoices",
+      "go": "/payments/invoices",
+      "target": [
+        {
+          "text": "Add Payment Schedule"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add Payment Schedule"
+    },
+    {
+      "id": "split",
+      "title": "Set the parts",
+      "body": "Split by amount or percentage with a due date for each, e.g. 30% deposit now and 70% on completion.",
+      "route": "^/payments/invoices",
+      "go": "/payments/invoices",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "send",
+      "title": "Save and send",
+      "body": "Click **Save**, then **Send**.",
+      "route": "^/payments/invoices",
+      "go": "/payments/invoices",
+      "target": [
+        {
+          "text": "Send",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Send"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "id": "marketing-snippets-use",
+  "kind": "howto",
+  "area": "marketing",
+  "screen": "conversations.conversations-tab",
+  "title": "Use a snippet in a message",
+  "blurb": "Drop a saved reply into a text or email in two clicks.",
+  "icon": "chat",
+  "minutes": 2,
+  "keywords": [
+    "use snippet",
+    "insert template",
+    "quick reply",
+    "conversations",
+    "saved message",
+    "reply"
+  ],
+  "steps": [
+    {
+      "id": "open-conversations",
+      "title": "Open Conversations",
+      "body": "Click **Conversations** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_conversations"
+        },
+        {
+          "text": "Conversations",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/conversations/"
+      }
+    },
+    {
+      "id": "pick-contact",
+      "title": "Open a conversation",
+      "body": "Click the conversation you want to reply to.",
+      "route": "^/conversations/",
+      "go": "/conversations/conversations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "snippet-icon",
+      "title": "Open your snippets",
+      "body": "In the message box, click the **Snippets** icon.",
+      "route": "^/conversations/",
+      "go": "/conversations/conversations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "choose",
+      "title": "Pick one",
+      "body": "Search or browse your folders and click the snippet. It fills the message box.",
+      "route": "^/conversations/",
+      "go": "/conversations/conversations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "send",
+      "title": "Check and send",
+      "body": "Make sure names and details filled in properly, tweak anything that needs it, then send.",
+      "route": "^/conversations/",
+      "go": "/conversations/conversations",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Snippets also appear in workflow text and email actions under **Templates**."
+    }
+  ]
+}

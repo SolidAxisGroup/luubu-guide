@@ -1,0 +1,125 @@
+{
+  "id": "settings-page-users",
+  "kind": "page",
+  "area": "settings",
+  "screen": "settings.my-staff",
+  "title": "Tour: Users",
+  "blurb": "Add your team, set what they can see and when they are available.",
+  "icon": "users",
+  "minutes": 2,
+  "keywords": [
+    "users",
+    "team",
+    "staff",
+    "employees",
+    "permissions",
+    "roles",
+    "add user"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-users",
+      "title": "Open Users",
+      "body": "Click **Users** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/users",
+      "target": [
+        {
+          "css": "[id='sb_my-staff']"
+        },
+        {
+          "text": "Users",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/users"
+      }
+    },
+    {
+      "id": "list",
+      "title": "Your team list",
+      "body": "Everyone who can log in to Luubu is listed here, with their email and role.",
+      "route": "^/settings/users",
+      "go": "/settings/users",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "add",
+      "title": "Add people",
+      "body": "**Add Employee** creates a login for a new team member.",
+      "route": "^/settings/users",
+      "go": "/settings/users",
+      "target": [
+        {
+          "text": "Add Employee",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add Employee"
+    },
+    {
+      "id": "edit",
+      "title": "Edit a user",
+      "body": "Click the pencil next to a person to change their details, permissions, availability or call settings.",
+      "route": "^/settings/users",
+      "go": "/settings/users",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "roles",
+      "title": "Admins and users",
+      "body": "Admins can see and change everything. Users only get the parts you switch on for them.",
+      "route": "^/settings/users",
+      "go": "/settings/users",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Next: try **Add a team member** from the Guide.",
+      "route": "^/settings/users",
+      "go": "/settings/users",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

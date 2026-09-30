@@ -1,0 +1,104 @@
+{
+  "id": "reporting-attribution-read",
+  "kind": "howto",
+  "area": "reporting",
+  "screen": "reporting.attribution-v2",
+  "title": "See which marketing brings in customers",
+  "blurb": "Compare leads and sales by source to decide where to spend.",
+  "icon": "chart",
+  "minutes": 3,
+  "keywords": [
+    "attribution",
+    "lead source",
+    "roi",
+    "marketing",
+    "sources",
+    "revenue"
+  ],
+  "steps": [
+    {
+      "id": "open-reporting",
+      "title": "Open Reporting",
+      "body": "Click **Reporting** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reporting"
+        },
+        {
+          "text": "Reporting",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/"
+      }
+    },
+    {
+      "id": "open-attribution-report",
+      "title": "Open Attribution Report",
+      "body": "Click **Attribution Report**.",
+      "route": "^/reporting/",
+      "go": "/reporting/attribution",
+      "target": [
+        {
+          "css": "#tb_attribution-v2"
+        },
+        {
+          "text": "Attribution Report",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/attribution"
+      }
+    },
+    {
+      "id": "dates",
+      "title": "Pick a period",
+      "body": "Set the date range to the last month or quarter.",
+      "route": "^/reporting/attribution",
+      "go": "/reporting/attribution",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "model",
+      "title": "Pick first or latest",
+      "body": "Use first attribution to see what finds you new customers. Use latest to see what gets them over the line.",
+      "route": "^/reporting/attribution",
+      "go": "/reporting/attribution",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "sources",
+      "title": "Read the sources",
+      "body": "Look at each source: how many leads, how many won, and how much revenue.",
+      "route": "^/reporting/attribution",
+      "go": "/reporting/attribution",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "decide",
+      "title": "Decide",
+      "body": "Put more money where people buy, not just where they click.",
+      "route": "^/reporting/attribution",
+      "go": "/reporting/attribution",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

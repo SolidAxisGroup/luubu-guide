@@ -1,0 +1,118 @@
+{
+  "id": "sites-page-webinars",
+  "kind": "page",
+  "area": "sites",
+  "screen": "sites.webinars",
+  "title": "Tour the Webinars page",
+  "blurb": "See where webinar funnels are built and how to start one.",
+  "icon": "megaphone",
+  "minutes": 2,
+  "keywords": [
+    "webinar",
+    "online event",
+    "workshop",
+    "live",
+    "on demand",
+    "tour"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Webinars",
+      "body": "Click **Webinars**. A webinar funnel bundles registration, confirmation, watch and replay pages together.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/funnels-websites/webinars",
+      "target": [
+        {
+          "css": "#tb_webinars"
+        },
+        {
+          "text": "Webinars",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/webinars"
+      }
+    },
+    {
+      "id": "new-webinar",
+      "title": "Start a webinar",
+      "body": "**New Webinar Funnel** walks you through the setup in a few short steps.",
+      "route": "^/funnels-websites/webinars",
+      "go": "/funnels-websites/webinars",
+      "target": [
+        {
+          "css": "#create-new-button"
+        },
+        {
+          "css": "#positive-empty-state"
+        },
+        {
+          "text": "New Webinar Funnel",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New Webinar Funnel"
+    },
+    {
+      "id": "types",
+      "title": "Live or on demand",
+      "body": "Choose **Live Webinar** for a set date and time using Zoom or YouTube Live, or **On Demand Webinar** for a recorded video people can watch any time.",
+      "route": "^/funnels-websites/webinars",
+      "go": "/funnels-websites/webinars",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "list",
+      "title": "Your webinars",
+      "body": "Every webinar funnel shows here. Open one to edit pages, change the date or see registrations.",
+      "route": "^/funnels-websites/webinars",
+      "go": "/funnels-websites/webinars",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Next: try **Run a live webinar** from the Guide.",
+      "route": "^/funnels-websites/webinars",
+      "go": "/funnels-websites/webinars",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

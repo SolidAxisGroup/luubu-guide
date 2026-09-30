@@ -1,0 +1,112 @@
+{
+  "id": "reputation-page-widgets",
+  "kind": "page",
+  "area": "reputation",
+  "screen": "reputation.reputation-widgets",
+  "title": "Tour: Review widgets",
+  "blurb": "Blocks of your best reviews, ready to drop onto your website.",
+  "icon": "star",
+  "minutes": 2,
+  "keywords": [
+    "widget",
+    "review widget",
+    "website",
+    "embed",
+    "show reviews",
+    "testimonials"
+  ],
+  "steps": [
+    {
+      "id": "open-reputation",
+      "title": "Open Reputation",
+      "body": "Click **Reputation** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reputation"
+        },
+        {
+          "text": "Reputation",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reputation/"
+      }
+    },
+    {
+      "id": "open-widgets",
+      "title": "Open Widgets",
+      "body": "Click **Widgets**. Review widgets live here.",
+      "route": "^/reputation/",
+      "go": "/reputation/widget",
+      "target": [
+        {
+          "css": "#tb_reputation-widgets"
+        },
+        {
+          "text": "Widgets",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reputation/widget"
+      }
+    },
+    {
+      "id": "list",
+      "title": "Your widgets",
+      "body": "Each widget is a block of reviews you can put on your website. New reviews appear in it automatically.",
+      "route": "^/reputation/widget",
+      "go": "/reputation/widget",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "create",
+      "title": "Create a widget",
+      "body": "**Create Widget** starts a new one.",
+      "route": "^/reputation/widget",
+      "go": "/reputation/widget",
+      "target": [
+        {
+          "text": "Create Widget",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create Widget"
+    },
+    {
+      "id": "tabs",
+      "title": "Inside a widget",
+      "body": "**Layout**, **Content**, **Appearance** and **Settings** control which reviews show and how they look.",
+      "route": "^/reputation/widget",
+      "go": "/reputation/widget",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What's next",
+      "body": "Next: try **Create a review widget** from the Guide.",
+      "route": "^/reputation/widget",
+      "go": "/reputation/widget",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "id": "calendars-reminders-confirmations",
+  "kind": "howto",
+  "area": "calendars",
+  "screen": "calendars.calendar-settings-top",
+  "title": "Set up confirmations and reminders",
+  "blurb": "Cut no-shows with automatic email and text reminders.",
+  "icon": "mail",
+  "minutes": 5,
+  "keywords": [
+    "reminder",
+    "confirmation",
+    "no show",
+    "sms",
+    "text",
+    "email",
+    "notification"
+  ],
+  "steps": [
+    {
+      "id": "open-calendars",
+      "title": "Open Calendars",
+      "body": "Click **Calendars** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_calendars"
+        },
+        {
+          "text": "Calendars",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/calendars/"
+      }
+    },
+    {
+      "id": "tab-calendar-settings-top",
+      "title": "Open Calendar Settings",
+      "body": "Click **Calendar Settings** along the top. This is where every booking calendar is built and edited.",
+      "route": "^/calendars/",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "css": "#tb_calendar-settings-top"
+        },
+        {
+          "text": "Calendar settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/calendars"
+      }
+    },
+    {
+      "id": "open",
+      "title": "Open a calendar",
+      "body": "Click the calendar you want reminders for.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "tab",
+      "title": "Open Notifications",
+      "body": "Click the **Notifications** tab.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "text": "Notifications"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Notifications"
+    },
+    {
+      "id": "confirm",
+      "title": "Booking confirmation",
+      "body": "Open the booked notification and turn on email and SMS to the contact. Edit the wording to sound like you.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "reminder",
+      "title": "Add a reminder",
+      "body": "Open **Reminder** and set when it goes, e.g. 24 hours before. Add a second at 2 hours if you like.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "text": "Reminder"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Reminder"
+    },
+    {
+      "id": "staff",
+      "title": "Tell your team",
+      "body": "Tick assigned users too, so staff hear about new bookings and cancellations.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save",
+      "body": "Click **Save** when you are done.",
+      "tip": "Texts come from your Luubu Phone number, so set that up first.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "text": "Save",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Save"
+    }
+  ]
+}

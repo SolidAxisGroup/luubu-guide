@@ -1,0 +1,138 @@
+{
+  "id": "sites-page-websites",
+  "kind": "page",
+  "area": "sites",
+  "screen": "sites.websites",
+  "title": "Tour the Websites page",
+  "blurb": "See where your multi-page websites live and how to start one.",
+  "icon": "globe",
+  "minutes": 2,
+  "keywords": [
+    "website",
+    "site",
+    "pages",
+    "homepage",
+    "tour",
+    "overview"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Websites",
+      "body": "Click **Websites**. A website has several pages and a menu, like Home, Services, About and Contact.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/funnels-websites/websites",
+      "target": [
+        {
+          "css": "#tb_websites"
+        },
+        {
+          "text": "Websites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/websites"
+      }
+    },
+    {
+      "id": "new-button",
+      "title": "Start a website",
+      "body": "**New website** opens the create dialog. Pick **From templates**, **Build with AI** or **From blank**, name it and click **Create**.",
+      "route": "^/funnels-websites/websites",
+      "go": "/funnels-websites/websites",
+      "target": [
+        {
+          "css": "#create-new-button"
+        },
+        {
+          "css": "#positive-empty-state"
+        },
+        {
+          "text": "New website",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New website"
+    },
+    {
+      "id": "ai-button",
+      "title": "Draft it with AI",
+      "body": "**Build with AI** drafts pages, headings and copy from a short description of your business. You then edit it like any other site.",
+      "route": "^/funnels-websites/websites",
+      "go": "/funnels-websites/websites",
+      "target": [
+        {
+          "text": "Build with AI",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Build with AI"
+    },
+    {
+      "id": "list",
+      "title": "Your websites",
+      "body": "Click a website to see its pages, stats and settings. Each page is edited in the same drag-and-drop builder as funnels.",
+      "route": "^/funnels-websites/websites",
+      "go": "/funnels-websites/websites",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "domain-hint",
+      "title": "Going live",
+      "body": "When it looks right, connect your domain with the gear icon at the end of the Sites menu, then publish.",
+      "route": "^/funnels-websites/websites",
+      "go": "/funnels-websites/websites",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Next: try **Add a navigation menu** or **Publish your website on your domain** from the Guide.",
+      "route": "^/funnels-websites/websites",
+      "go": "/funnels-websites/websites",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

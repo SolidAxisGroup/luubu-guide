@@ -1,0 +1,116 @@
+{
+  "id": "sites-form-conditional-logic",
+  "kind": "howto",
+  "area": "sites",
+  "screen": "sites.form-builder",
+  "title": "Show or hide questions with conditional logic",
+  "blurb": "Ask follow-up questions only when they apply.",
+  "icon": "flow",
+  "minutes": 5,
+  "keywords": [
+    "conditional logic",
+    "show hide",
+    "rules",
+    "branching",
+    "smart form",
+    "disqualify"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Forms",
+      "body": "Click **Forms** and open the form.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/form-builder/main",
+      "target": [
+        {
+          "css": "#tb_form-builder"
+        },
+        {
+          "text": "Forms",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/form-builder"
+      }
+    },
+    {
+      "id": "open-logic",
+      "title": "Open the rules",
+      "body": "In the top bar of the form builder, click **Conditional Logic**.",
+      "route": "^/",
+      "go": "/form-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "add",
+      "title": "Add a rule",
+      "body": "Click **Add New Condition**.",
+      "route": "^/",
+      "go": "/form-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "when",
+      "title": "Set the condition",
+      "body": "Pick the field, the state (such as is) and the value. Example: Job type is Commercial.",
+      "route": "^/",
+      "go": "/form-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "then",
+      "title": "Choose what happens",
+      "body": "Pick the action: **Show/Hide Fields**, **Redirect to URL**, **Display Custom Message** or **Disqualify Lead**. Example: show Business name.",
+      "route": "^/",
+      "go": "/form-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save and test",
+      "body": "Click **Save**, then preview the form and try each answer to check the right fields appear.",
+      "route": "^/",
+      "go": "/form-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

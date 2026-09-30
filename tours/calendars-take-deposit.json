@@ -1,0 +1,105 @@
+{
+  "id": "calendars-take-deposit",
+  "kind": "howto",
+  "area": "calendars",
+  "screen": "calendars.calendar-settings-top",
+  "title": "Take payment when people book",
+  "blurb": "Charge a deposit or full fee at booking to stop no-shows.",
+  "icon": "card",
+  "minutes": 4,
+  "keywords": [
+    "deposit",
+    "payment",
+    "prepay",
+    "booking fee",
+    "stripe",
+    "charge"
+  ],
+  "steps": [
+    {
+      "id": "open-calendars",
+      "title": "Open Calendars",
+      "body": "Click **Calendars** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_calendars"
+        },
+        {
+          "text": "Calendars",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/calendars/"
+      }
+    },
+    {
+      "id": "tab-calendar-settings-top",
+      "title": "Open Calendar Settings",
+      "body": "Click **Calendar Settings** along the top. This is where every booking calendar is built and edited.",
+      "route": "^/calendars/",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "css": "#tb_calendar-settings-top"
+        },
+        {
+          "text": "Calendar settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/calendars"
+      }
+    },
+    {
+      "id": "stripe",
+      "title": "Connect Stripe first",
+      "body": "Payments need Stripe linked in **Payments** then **Integrations**. See **Connect Stripe** in the Guide.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "open",
+      "title": "Open a calendar",
+      "body": "Click the calendar you want to charge for.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "forms",
+      "title": "Find the payment settings",
+      "body": "Open the forms and payment section of the calendar.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "toggle",
+      "title": "Switch on payments",
+      "body": "Turn on accepting payments and enter the amount in NZD, e.g. $50 deposit. Save.",
+      "tip": "Prices here should include GST if you are GST-registered.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

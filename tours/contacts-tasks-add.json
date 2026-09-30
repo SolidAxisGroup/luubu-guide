@@ -1,0 +1,124 @@
+{
+  "id": "contacts-tasks-add",
+  "kind": "howto",
+  "area": "contacts",
+  "screen": "contacts.tasks",
+  "title": "Add a task",
+  "blurb": "Set a reminder for you or a teammate, linked to a customer.",
+  "icon": "calendar",
+  "minutes": 2,
+  "keywords": [
+    "add task",
+    "new task",
+    "reminder",
+    "to do",
+    "follow up",
+    "assign"
+  ],
+  "steps": [
+    {
+      "id": "open-contacts",
+      "title": "Open Contacts",
+      "body": "Click **Contacts** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_contacts"
+        },
+        {
+          "text": "Contacts",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/contacts/"
+      }
+    },
+    {
+      "id": "tab-tasks",
+      "title": "Open Tasks",
+      "body": "Click **Tasks** along the top.",
+      "route": "^/(contacts/|tasks|businesses/|settings/fields)",
+      "go": "/tasks",
+      "target": [
+        {
+          "css": "#tb_tasks"
+        },
+        {
+          "text": "Tasks",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/tasks"
+      }
+    },
+    {
+      "id": "add",
+      "title": "Add a task",
+      "body": "Click **Add Task** at the top right.",
+      "route": "^/tasks",
+      "go": "/tasks",
+      "target": [
+        {
+          "text": "Add Task",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add Task"
+    },
+    {
+      "id": "title",
+      "title": "Say what needs doing",
+      "body": "Enter a short title like \"Call Jo about the kitchen quote\". Add a description if there's more to it.",
+      "route": "^/tasks",
+      "go": "/tasks",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "when",
+      "title": "Set the due date",
+      "body": "Pick the due date and time.",
+      "route": "^/tasks",
+      "go": "/tasks",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "who",
+      "title": "Link and assign",
+      "body": "Link it to a contact so it shows on their record, and assign it to the person who'll do it.",
+      "route": "^/tasks",
+      "go": "/tasks",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save",
+      "body": "Save the task. The assignee sees it in their list.",
+      "route": "^/tasks",
+      "go": "/tasks",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

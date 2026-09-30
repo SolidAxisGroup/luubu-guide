@@ -1,0 +1,103 @@
+{
+  "id": "ai-page-industry-agents",
+  "kind": "page",
+  "area": "ai",
+  "screen": "ai.ai-agents-industry-agents",
+  "title": "Tour Industry Agents",
+  "blurb": "AI agents pre-built for specific types of business.",
+  "icon": "bot",
+  "minutes": 2,
+  "keywords": [
+    "industry agents",
+    "trades",
+    "clinic",
+    "salon",
+    "prebuilt",
+    "tour"
+  ],
+  "steps": [
+    {
+      "id": "open-ai-agents",
+      "title": "Open AI Agents",
+      "body": "Click **AI Agents** in the left menu.",
+      "target": [
+        {
+          "css": "[id='sb_AI Agents']"
+        },
+        {
+          "text": "AI Agents",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/"
+      }
+    },
+    {
+      "id": "open-ai-agents-industry-agents",
+      "title": "Open Industry Agents",
+      "body": "Click the **Industry Agents** tab.",
+      "route": "^/ai-agents/",
+      "go": "/ai-agents/industry-agents",
+      "target": [
+        {
+          "css": "#tb_ai-agents-industry-agents"
+        },
+        {
+          "text": "Industry Agents"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/industry-agents"
+      }
+    },
+    {
+      "id": "what",
+      "title": "Built for your industry",
+      "body": "These agents come set up for a type of business, with the questions, goals and wording that suit it.",
+      "route": "^/ai-agents/industry-agents",
+      "go": "/ai-agents/industry-agents",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "browse",
+      "title": "Browse by industry",
+      "body": "Look for your field, such as trades, health, beauty or real estate, and read what each agent does.",
+      "route": "^/ai-agents/industry-agents",
+      "go": "/ai-agents/industry-agents",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "pick",
+      "title": "Pick one to start",
+      "body": "Choose the agent closest to your business. You can change anything after it is added.",
+      "route": "^/ai-agents/industry-agents",
+      "go": "/ai-agents/industry-agents",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "Next step",
+      "body": "Next: try **Set up an industry agent** from the Guide.",
+      "route": "^/ai-agents/industry-agents",
+      "go": "/ai-agents/industry-agents",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

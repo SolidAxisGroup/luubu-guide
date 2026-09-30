@@ -1,0 +1,104 @@
+{
+  "id": "payments-failed-subscriptions",
+  "kind": "howto",
+  "area": "payments",
+  "screen": "payments.payment-subscriptions",
+  "title": "Chase failed subscription payments",
+  "blurb": "Find customers whose card was declined.",
+  "icon": "card",
+  "minutes": 2,
+  "keywords": [
+    "failed payment",
+    "declined card",
+    "unpaid",
+    "overdue",
+    "subscription",
+    "export"
+  ],
+  "steps": [
+    {
+      "id": "open-payments",
+      "title": "Open Payments",
+      "body": "Click **Payments** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_payments"
+        },
+        {
+          "text": "Payments",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/"
+      }
+    },
+    {
+      "id": "tab-payment-subscriptions",
+      "title": "Open Subscriptions",
+      "body": "Click **Subscriptions** along the top.",
+      "route": "^/payments/",
+      "go": "/payments/v2/subscriptions",
+      "target": [
+        {
+          "css": "#tb_payment-subscriptions"
+        },
+        {
+          "text": "Subscriptions",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/v2/subscriptions"
+      }
+    },
+    {
+      "id": "filter",
+      "title": "Filter by status",
+      "body": "Filter the list to failed or unpaid subscriptions.",
+      "route": "^/payments/v2/subscriptions",
+      "go": "/payments/v2/subscriptions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "open",
+      "title": "Open each one",
+      "body": "Open a subscription to see the customer and the last payment attempt.",
+      "route": "^/payments/v2/subscriptions",
+      "go": "/payments/v2/subscriptions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "title": "Reach out",
+      "body": "Text or email the customer to update their card. Keep it friendly, cards expire all the time.",
+      "route": "^/payments/v2/subscriptions",
+      "go": "/payments/v2/subscriptions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "export",
+      "title": "Export if needed",
+      "body": "Download the list as a CSV to share with your bookkeeper.",
+      "route": "^/payments/v2/subscriptions",
+      "go": "/payments/v2/subscriptions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

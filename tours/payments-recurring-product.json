@@ -1,0 +1,127 @@
+{
+  "id": "payments-recurring-product",
+  "kind": "howto",
+  "area": "payments",
+  "screen": "payments.payments-products",
+  "title": "Create a subscription product",
+  "blurb": "A plan customers pay for every week, month or year.",
+  "icon": "grid",
+  "minutes": 3,
+  "keywords": [
+    "recurring",
+    "subscription",
+    "membership",
+    "monthly plan",
+    "retainer",
+    "maintenance plan"
+  ],
+  "steps": [
+    {
+      "id": "open-payments",
+      "title": "Open Payments",
+      "body": "Click **Payments** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_payments"
+        },
+        {
+          "text": "Payments",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/"
+      }
+    },
+    {
+      "id": "tab-payments-products",
+      "title": "Open Products",
+      "body": "Click **Products** along the top.",
+      "route": "^/payments/",
+      "go": "/payments/products",
+      "target": [
+        {
+          "css": "#tb_payments-products"
+        },
+        {
+          "text": "Products",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/products"
+      }
+    },
+    {
+      "id": "create",
+      "title": "Create a product",
+      "body": "Click **Create Product**.",
+      "route": "^/payments/products",
+      "go": "/payments/products",
+      "target": [
+        {
+          "text": "Create Product",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create Product"
+    },
+    {
+      "id": "name",
+      "title": "Name it",
+      "body": "Name the plan, e.g. \"Gold maintenance plan\".",
+      "route": "^/payments/products",
+      "go": "/payments/products",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "price",
+      "title": "Pick recurring",
+      "body": "Choose **Recurring**, enter the amount, e.g. $49 a month, and pick the billing period.",
+      "route": "^/payments/products",
+      "go": "/payments/products",
+      "target": [
+        {
+          "text": "Recurring"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Recurring"
+    },
+    {
+      "id": "save",
+      "title": "Save",
+      "body": "Click **Save**. Sell it with a payment link or form and it shows under **Subscriptions**.",
+      "route": "^/payments/products",
+      "go": "/payments/products",
+      "target": [
+        {
+          "text": "Save",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Save"
+    }
+  ]
+}

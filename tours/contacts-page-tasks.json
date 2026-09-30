@@ -1,0 +1,125 @@
+{
+  "id": "contacts-page-tasks",
+  "kind": "page",
+  "area": "contacts",
+  "screen": "contacts.tasks",
+  "title": "Tour: Tasks",
+  "blurb": "Your team to-do list: call-backs, quotes to send, jobs to chase.",
+  "icon": "calendar",
+  "minutes": 2,
+  "keywords": [
+    "tasks",
+    "to do",
+    "reminders",
+    "follow up",
+    "call back",
+    "overdue"
+  ],
+  "steps": [
+    {
+      "id": "open-contacts",
+      "title": "Open Contacts",
+      "body": "Click **Contacts** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_contacts"
+        },
+        {
+          "text": "Contacts",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/contacts/"
+      }
+    },
+    {
+      "id": "tab-tasks",
+      "title": "Open Tasks",
+      "body": "Click **Tasks** along the top.",
+      "route": "^/(contacts/|tasks|businesses/|settings/fields)",
+      "go": "/tasks",
+      "target": [
+        {
+          "css": "#tb_tasks"
+        },
+        {
+          "text": "Tasks",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/tasks"
+      }
+    },
+    {
+      "id": "list",
+      "title": "All your tasks",
+      "body": "Every task for your team shows here, whether it's linked to a contact or not. Tasks from workflows land here too.",
+      "route": "^/tasks",
+      "go": "/tasks",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "filters",
+      "title": "Focus on what's due",
+      "body": "Filter by assignee and by status like **Due Today**, **Overdue** or **Upcoming**. Sort by due date to see what's next.",
+      "route": "^/tasks",
+      "go": "/tasks",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Overdue"
+    },
+    {
+      "id": "add",
+      "title": "Add a task",
+      "body": "Click **Add Task** to create one.",
+      "route": "^/tasks",
+      "go": "/tasks",
+      "target": [
+        {
+          "text": "Add Task",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add Task"
+    },
+    {
+      "id": "done",
+      "title": "Tick them off",
+      "body": "Mark tasks complete as you go. Select several to complete or delete them in one go.",
+      "route": "^/tasks",
+      "go": "/tasks",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Next: try **Add a task** from the Guide.",
+      "route": "^/tasks",
+      "go": "/tasks",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

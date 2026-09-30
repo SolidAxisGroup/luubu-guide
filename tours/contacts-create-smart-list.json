@@ -1,0 +1,111 @@
+{
+  "id": "contacts-create-smart-list",
+  "kind": "howto",
+  "area": "contacts",
+  "screen": "contacts.lists",
+  "title": "Create a smart list",
+  "blurb": "Save a filtered group, like \"Hot leads\" or \"Customers in Tauranga\".",
+  "icon": "users",
+  "minutes": 3,
+  "keywords": [
+    "smart list",
+    "segment",
+    "filter",
+    "saved list",
+    "group",
+    "audience",
+    "list"
+  ],
+  "steps": [
+    {
+      "id": "open-contacts",
+      "title": "Open Contacts",
+      "body": "Click **Contacts** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_contacts"
+        },
+        {
+          "text": "Contacts",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/contacts/"
+      }
+    },
+    {
+      "id": "filters",
+      "title": "Open filters",
+      "body": "Click **Filters**.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "text": "Filters"
+        },
+        {
+          "text": "Advanced Filters",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Filters"
+    },
+    {
+      "id": "rule",
+      "title": "Add your first rule",
+      "body": "Pick a field, a condition and a value. For example: Tags, includes, hot-lead.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "more",
+      "title": "Add more rules",
+      "body": "Use **Add Nested Filter** when people must match both rules, or **Add Filter** when either rule is fine. Then click **Apply**.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Apply"
+    },
+    {
+      "id": "save",
+      "title": "Save it as a list",
+      "body": "Save the filtered view as a new smart list and give it a clear name. It appears as a tab along the top.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "auto",
+      "title": "It keeps itself up to date",
+      "body": "You can't add people to a smart list by hand. Anyone who matches the rules shows up automatically, and drops off when they stop matching.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Share a list with your team from the three-dot menu next to **Add Contact**."
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "id": "marketing-page-affiliate-manager",
+  "kind": "page",
+  "area": "marketing",
+  "screen": "marketing.affiliate-manager",
+  "title": "Tour: Affiliate Manager",
+  "blurb": "Run a referral program that pays people for the sales they send you.",
+  "icon": "users",
+  "minutes": 2,
+  "keywords": [
+    "affiliate",
+    "referral",
+    "commission",
+    "partners",
+    "payouts",
+    "overview",
+    "tour"
+  ],
+  "steps": [
+    {
+      "id": "open-marketing",
+      "title": "Open Marketing",
+      "body": "Click **Marketing** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_email-marketing"
+        },
+        {
+          "text": "Marketing",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/"
+      }
+    },
+    {
+      "id": "open-affiliate-manager",
+      "title": "Open Affiliate Manager",
+      "body": "Click **Affiliate Manager**. This runs a referral program: partners share a link, and you pay them for the sales or leads it brings.",
+      "route": "^/marketing/",
+      "go": "/marketing/affiliate-manager",
+      "target": [
+        {
+          "css": "#tb_affiliate-manager"
+        },
+        {
+          "text": "Affiliate Manager",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/affiliate-manager"
+      },
+      "tip": "You need a Stripe connection and products sold through a funnel, website or store first."
+    },
+    {
+      "id": "dashboard",
+      "title": "Your dashboard",
+      "body": "The dashboard shows revenue, customers and conversion rate from affiliates, plus a leaderboard of your top partners and anything waiting for approval.",
+      "route": "^/marketing/affiliate-manager",
+      "go": "/marketing/affiliate-manager",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "campaigns",
+      "title": "Campaigns",
+      "body": "**Campaigns** sets what affiliates promote and how much they earn.",
+      "route": "^/marketing/affiliate-manager",
+      "go": "/marketing/affiliate-manager",
+      "target": [
+        {
+          "text": "Campaigns"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Campaigns"
+    },
+    {
+      "id": "affiliates",
+      "title": "Affiliates",
+      "body": "**Affiliates** lists your partners. Add them one by one, by spreadsheet, or from your contacts.",
+      "route": "^/marketing/affiliate-manager",
+      "go": "/marketing/affiliate-manager",
+      "target": [
+        {
+          "text": "Affiliates"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Affiliates"
+    },
+    {
+      "id": "payouts",
+      "title": "Payouts",
+      "body": "**Payouts** is where you review and pay the commissions you owe.",
+      "route": "^/marketing/affiliate-manager",
+      "go": "/marketing/affiliate-manager",
+      "target": [
+        {
+          "text": "Payouts"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Payouts"
+    },
+    {
+      "id": "next",
+      "title": "What to do first",
+      "body": "Next: try **Set up an affiliate campaign** from the Guide.",
+      "route": "^/marketing/affiliate-manager",
+      "go": "/marketing/affiliate-manager",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

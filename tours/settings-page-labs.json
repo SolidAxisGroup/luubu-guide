@@ -1,0 +1,103 @@
+{
+  "id": "settings-page-labs",
+  "kind": "page",
+  "area": "settings",
+  "screen": "settings.labs",
+  "title": "Tour: Labs",
+  "blurb": "Try new features before they are released to everyone.",
+  "icon": "bot",
+  "minutes": 2,
+  "keywords": [
+    "labs",
+    "beta",
+    "new features",
+    "preview",
+    "experimental"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-labs",
+      "title": "Open Labs",
+      "body": "Click **Labs** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/labs",
+      "target": [
+        {
+          "css": "[id='sb_labs']"
+        },
+        {
+          "text": "Labs",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/labs"
+      }
+    },
+    {
+      "id": "what",
+      "title": "What Labs is",
+      "body": "Labs lists new features you can try early. They work, but may still change.",
+      "route": "^/settings/labs",
+      "go": "/settings/labs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "toggle",
+      "title": "Switch them on",
+      "body": "Each feature has a switch. Turning one on only affects your account.",
+      "route": "^/settings/labs",
+      "go": "/settings/labs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "careful",
+      "title": "Try, then decide",
+      "body": "Try new features with a test contact first before rolling them out to your team.",
+      "route": "^/settings/labs",
+      "go": "/settings/labs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Next: try **Turn on a Labs feature** from the Guide.",
+      "route": "^/settings/labs",
+      "go": "/settings/labs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

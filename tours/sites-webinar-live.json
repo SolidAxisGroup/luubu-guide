@@ -1,0 +1,144 @@
+{
+  "id": "sites-webinar-live",
+  "kind": "howto",
+  "area": "sites",
+  "screen": "sites.webinars",
+  "title": "Run a live webinar",
+  "blurb": "Set up registration, reminders and a watch page for a live online event.",
+  "icon": "megaphone",
+  "minutes": 7,
+  "keywords": [
+    "live webinar",
+    "zoom",
+    "youtube live",
+    "registration",
+    "event",
+    "workshop"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Build a short sign-up form in **Forms** first. Then click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Webinars",
+      "body": "Click **Webinars**.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/funnels-websites/webinars",
+      "target": [
+        {
+          "css": "#tb_webinars"
+        },
+        {
+          "text": "Webinars",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/webinars"
+      }
+    },
+    {
+      "id": "new-webinar",
+      "title": "Create the webinar",
+      "body": "Click **New Webinar Funnel** and choose **Live Webinar**.",
+      "route": "^/funnels-websites/webinars",
+      "go": "/funnels-websites/webinars",
+      "target": [
+        {
+          "css": "#create-new-button"
+        },
+        {
+          "css": "#positive-empty-state"
+        },
+        {
+          "text": "New Webinar Funnel",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New Webinar Funnel",
+      "advance": "click"
+    },
+    {
+      "id": "details",
+      "title": "Name, date and time",
+      "body": "Enter the webinar name, pick the time zone (Pacific/Auckland) and set the date and start time.",
+      "route": "^/",
+      "go": "/funnels-websites/webinars",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "form",
+      "title": "Pick the sign-up form",
+      "body": "Choose the form people fill in to register. Name and email is enough.",
+      "route": "^/",
+      "go": "/funnels-websites/webinars",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "link",
+      "title": "Add the live link",
+      "body": "Paste your Zoom or YouTube Live link. Test that it opens before the day.",
+      "route": "^/",
+      "go": "/funnels-websites/webinars",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "template",
+      "title": "Choose a template",
+      "body": "Pick a template. Your registration, confirmation, watch and replay pages are created for you to edit.",
+      "route": "^/",
+      "go": "/funnels-websites/webinars",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "reminders",
+      "title": "Check the reminders",
+      "body": "Each webinar comes with a reminder automation. Open it from the three-dot menu and adjust the wording and timing.",
+      "route": "^/funnels-websites/webinars",
+      "go": "/funnels-websites/webinars",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Reminders a day before, an hour before and 10 minutes before work well."
+    }
+  ]
+}

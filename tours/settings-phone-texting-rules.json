@@ -1,0 +1,119 @@
+{
+  "id": "settings-phone-texting-rules",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.phone-system",
+  "title": "Texting rules for NZ numbers",
+  "blurb": "What registration you need, and how to stay within NZ anti-spam law.",
+  "icon": "chat",
+  "minutes": 3,
+  "keywords": [
+    "a2p",
+    "10dlc",
+    "registration",
+    "compliance",
+    "spam",
+    "opt out",
+    "uema",
+    "trust center"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-phone-system",
+      "title": "Open Phone System",
+      "body": "Click **Phone System** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/phone_system",
+      "target": [
+        {
+          "css": "[id='sb_phone-system']"
+        },
+        {
+          "text": "Phone System",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/phone_system"
+      }
+    },
+    {
+      "id": "a2p",
+      "title": "US registration",
+      "body": "A2P 10DLC registration is a United States rule for US numbers. NZ Luubu Phone numbers do not need it.",
+      "route": "^/settings/phone_system",
+      "go": "/settings/phone_system",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Asked to register, or need a US or Australian number? Email hello@luubu.com."
+    },
+    {
+      "id": "consent",
+      "title": "Get permission",
+      "body": "NZ law says you can only send marketing texts to people who have agreed to hear from you. Existing customers usually count.",
+      "route": "^/settings/phone_system",
+      "go": "/settings/phone_system",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "identify",
+      "title": "Say who you are",
+      "body": "Put your business name in every marketing text.",
+      "route": "^/settings/phone_system",
+      "go": "/settings/phone_system",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "optout",
+      "title": "Let them opt out",
+      "body": "Include a way to stop, like \"Reply STOP to opt out\". Luubu stops texting anyone who replies STOP.",
+      "route": "^/settings/phone_system",
+      "go": "/settings/phone_system",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "setting",
+      "title": "Switch on the opt-out wording",
+      "body": "Turn on the SMS opt-out setting in **Business Profile**. See **Turn on opt-out and unsubscribe settings**.",
+      "route": "^/settings/phone_system",
+      "go": "/settings/phone_system",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

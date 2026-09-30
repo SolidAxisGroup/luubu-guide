@@ -1,0 +1,112 @@
+{
+  "id": "sites-page-chat-widget",
+  "kind": "page",
+  "area": "sites",
+  "screen": "sites.chat-widget",
+  "title": "Tour the Chat Widget page",
+  "blurb": "See where website chat bubbles are created and styled.",
+  "icon": "chat",
+  "minutes": 2,
+  "keywords": [
+    "chat widget",
+    "website chat",
+    "live chat",
+    "chat bubble",
+    "messenger",
+    "tour"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Chat Widget",
+      "body": "Click **Chat Widget**. This is the chat bubble that sits on your website so visitors can message you.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/funnels-websites/chat-widget",
+      "target": [
+        {
+          "css": "#tb_chat-widget"
+        },
+        {
+          "text": "Chat Widget",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/chat-widget"
+      }
+    },
+    {
+      "id": "new",
+      "title": "Create a widget",
+      "body": "**New** creates a widget. Pick a type, like **Live Chat** or an all-in-one widget that also offers SMS, WhatsApp and Facebook.",
+      "route": "^/funnels-websites/chat-widget",
+      "go": "/funnels-websites/chat-widget",
+      "target": [
+        {
+          "text": "New",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New"
+    },
+    {
+      "id": "list",
+      "title": "Your widgets",
+      "body": "Each widget you make is listed here. Open one to change its look and messages or to get its install code.",
+      "route": "^/funnels-websites/chat-widget",
+      "go": "/funnels-websites/chat-widget",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "where",
+      "title": "Where chats go",
+      "body": "Every chat lands in **Conversations**, next to your texts and emails, so you reply from one place.",
+      "route": "^/funnels-websites/chat-widget",
+      "go": "/funnels-websites/chat-widget",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Next: try **Create your chat widget** from the Guide.",
+      "route": "^/funnels-websites/chat-widget",
+      "go": "/funnels-websites/chat-widget",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

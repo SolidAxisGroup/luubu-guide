@@ -1,0 +1,136 @@
+{
+  "id": "automation-stop-on-reply",
+  "kind": "howto",
+  "area": "automation",
+  "screen": "automation.workflow",
+  "title": "Stop a workflow when they reply",
+  "blurb": "Stop chasers once a real conversation starts, and control re-entry.",
+  "icon": "chat",
+  "minutes": 3,
+  "keywords": [
+    "stop on response",
+    "reply",
+    "re-entry",
+    "duplicate",
+    "stop messages",
+    "unsubscribe"
+  ],
+  "steps": [
+    {
+      "id": "open-automation",
+      "title": "Open Automation",
+      "body": "Click **Automation** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_automation"
+        },
+        {
+          "text": "Automation",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/automation/"
+      }
+    },
+    {
+      "id": "open-workflow",
+      "title": "Open Workflows",
+      "body": "Click **Workflows** at the top.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "css": "#tb_workflow"
+        },
+        {
+          "text": "Workflows"
+        }
+      ],
+      "advance": {
+        "route": "^/automation/workflows(?!/settings)"
+      }
+    },
+    {
+      "id": "open",
+      "title": "Open the workflow",
+      "body": "Open the follow-up workflow you want to change.",
+      "route": "^/automation/workflows(?!/settings)",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "settings",
+      "title": "Open its settings",
+      "body": "Click the **Settings** tab.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Settings"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Settings"
+    },
+    {
+      "id": "stop",
+      "title": "Stop on response",
+      "body": "Turn on **Stop on Response**. As soon as the contact replies, they leave the workflow and you take over.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Stop on Response"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Stop on Response"
+    },
+    {
+      "id": "reentry",
+      "title": "Decide on re-entry",
+      "body": "Turn on **Allow Re-entry** only if people should go through again, like a monthly check-in. Leave it off for one-off welcome messages.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Allow Re-entry"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Allow Re-entry"
+    },
+    {
+      "id": "save",
+      "title": "Save",
+      "body": "Click **Save** at the top.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

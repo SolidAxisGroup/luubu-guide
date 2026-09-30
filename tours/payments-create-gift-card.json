@@ -1,0 +1,124 @@
+{
+  "id": "payments-create-gift-card",
+  "kind": "howto",
+  "area": "payments",
+  "screen": "payments.gift-cards",
+  "title": "Create a gift card",
+  "blurb": "Design a gift card with the dollar values you want to sell.",
+  "icon": "star",
+  "minutes": 4,
+  "keywords": [
+    "gift card",
+    "gift voucher",
+    "create",
+    "design",
+    "christmas",
+    "present"
+  ],
+  "steps": [
+    {
+      "id": "open-payments",
+      "title": "Open Payments",
+      "body": "Click **Payments** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_payments"
+        },
+        {
+          "text": "Payments",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/"
+      }
+    },
+    {
+      "id": "tab-gift-cards",
+      "title": "Open Gift Cards",
+      "body": "Click **Gift Cards** along the top.",
+      "route": "^/payments/",
+      "go": "/payments/gift-cards",
+      "target": [
+        {
+          "css": "#tb_gift-cards"
+        },
+        {
+          "text": "Gift Cards",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/gift-cards"
+      }
+    },
+    {
+      "id": "create",
+      "title": "Create a gift card",
+      "body": "Click **Create Gift Card**.",
+      "route": "^/payments/gift-cards",
+      "go": "/payments/gift-cards",
+      "target": [
+        {
+          "text": "Create Gift Card",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create Gift Card"
+    },
+    {
+      "id": "info",
+      "title": "Basic details",
+      "body": "Add a name, a description, your terms and an expiry, e.g. 3 years from purchase (the NZ minimum).",
+      "route": "^/payments/gift-cards",
+      "go": "/payments/gift-cards",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "design",
+      "title": "Design it",
+      "body": "Pick colours or upload your own artwork.",
+      "route": "^/payments/gift-cards",
+      "go": "/payments/gift-cards",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "values",
+      "title": "Set the values",
+      "body": "Add the amounts you sell, e.g. $50, $100 and $200.",
+      "route": "^/payments/gift-cards",
+      "go": "/payments/gift-cards",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save",
+      "body": "Review and save. It now appears under **Templates**.",
+      "route": "^/payments/gift-cards",
+      "go": "/payments/gift-cards",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

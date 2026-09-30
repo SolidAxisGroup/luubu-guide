@@ -1,0 +1,131 @@
+{
+  "id": "settings-users-availability",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.my-staff",
+  "title": "Set a team member's availability",
+  "blurb": "Choose the hours each person can be booked, and their time zone.",
+  "icon": "calendar",
+  "minutes": 4,
+  "keywords": [
+    "availability",
+    "working hours",
+    "schedule",
+    "calendar",
+    "bookings",
+    "staff hours",
+    "time off"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-users",
+      "title": "Open Users",
+      "body": "Click **Users** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/users",
+      "target": [
+        {
+          "css": "[id='sb_my-staff']"
+        },
+        {
+          "text": "Users",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/users"
+      }
+    },
+    {
+      "id": "edit",
+      "title": "Edit the person",
+      "body": "Click the pencil next to the team member.",
+      "route": "^/settings/users",
+      "go": "/settings/users",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "availability",
+      "title": "Open availability",
+      "body": "Open **User Availability**.",
+      "route": "^/settings/users",
+      "go": "/settings/users",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "User Availability"
+    },
+    {
+      "id": "hours",
+      "title": "Set weekly hours",
+      "body": "Tick the days they work and set start and finish times. Add a second block if they take a long lunch.",
+      "route": "^/settings/users",
+      "go": "/settings/users",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "timezone",
+      "title": "Check their time zone",
+      "body": "Set the time zone to **Pacific/Auckland** unless they work from overseas.",
+      "route": "^/settings/users",
+      "go": "/settings/users",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "dates",
+      "title": "Block days off",
+      "body": "Use date-specific hours to mark holidays or days off, so nobody can book them.",
+      "route": "^/settings/users",
+      "go": "/settings/users",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save",
+      "body": "Save. Calendars that use this person now follow these hours.",
+      "route": "^/settings/users",
+      "go": "/settings/users",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "To sync their Google or Outlook calendar, see **Connect your Google or Outlook calendar**."
+    }
+  ]
+}

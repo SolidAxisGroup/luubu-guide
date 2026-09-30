@@ -1,0 +1,133 @@
+{
+  "id": "marketing-ads-google-search",
+  "kind": "howto",
+  "area": "marketing",
+  "screen": "marketing.ad-manager-home",
+  "title": "Create a Google search ad",
+  "blurb": "Show up on Google when locals search for what you do.",
+  "icon": "globe",
+  "minutes": 8,
+  "keywords": [
+    "google ads",
+    "search ad",
+    "keywords",
+    "google",
+    "advertise",
+    "ppc"
+  ],
+  "steps": [
+    {
+      "id": "open-marketing",
+      "title": "Open Marketing",
+      "body": "Click **Marketing** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_email-marketing"
+        },
+        {
+          "text": "Marketing",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/"
+      }
+    },
+    {
+      "id": "open-ad-manager-home",
+      "title": "Open Ad Manager",
+      "body": "Click **Ad Manager** along the top.",
+      "route": "^/marketing/",
+      "go": "/marketing/ad-manager/home",
+      "target": [
+        {
+          "css": "#tb_ad-manager-home"
+        },
+        {
+          "text": "Ad Manager",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/ad-manager"
+      }
+    },
+    {
+      "id": "create",
+      "title": "Start a campaign",
+      "body": "Click **Create Campaign**, choose Google, and start from scratch or a template.",
+      "route": "^/marketing/ad-manager",
+      "go": "/marketing/ad-manager/home",
+      "target": [
+        {
+          "text": "Create Campaign",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create Campaign",
+      "tip": "Connect your Google Ads account first, from the gear icon in Ad Manager."
+    },
+    {
+      "id": "campaign",
+      "title": "Campaign settings",
+      "body": "Name it, pick a bid strategy such as Maximise Clicks, and set a daily budget. Choose the locations you serve.",
+      "route": "^/marketing/ad-manager",
+      "go": "/marketing/ad-manager/home",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "keywords",
+      "title": "Ad group and keywords",
+      "body": "Add your website address and the searches you want to show for, like \"plumber hamilton\". Add negative keywords like \"jobs\" or \"free\" to avoid wasted clicks.",
+      "route": "^/marketing/ad-manager",
+      "go": "/marketing/ad-manager/home",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "ad",
+      "title": "Write the ad",
+      "body": "Add up to 15 headlines (30 characters each) and up to 4 descriptions (90 characters each). Set the page people land on.",
+      "route": "^/marketing/ad-manager",
+      "go": "/marketing/ad-manager/home",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "publish",
+      "title": "Review and publish",
+      "body": "Check the summary, then publish. Billing starts once it is live.",
+      "route": "^/marketing/ad-manager",
+      "go": "/marketing/ad-manager/home",
+      "target": [
+        {
+          "text": "Publish",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Publish"
+    }
+  ]
+}

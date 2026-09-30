@@ -1,0 +1,119 @@
+{
+  "id": "home-dashboard-add-widget",
+  "kind": "howto",
+  "area": "home",
+  "screen": "home.dashboard",
+  "title": "Add a widget to your dashboard",
+  "blurb": "Track the numbers you care about, like leads by source or deals won.",
+  "icon": "chart",
+  "minutes": 4,
+  "keywords": [
+    "dashboard",
+    "widget",
+    "add widget",
+    "chart",
+    "report",
+    "customise",
+    "kpi"
+  ],
+  "steps": [
+    {
+      "id": "open-dashboard",
+      "title": "Open Dashboard",
+      "body": "Click **Dashboard** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_dashboard"
+        },
+        {
+          "text": "Dashboard",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/dashboard"
+      }
+    },
+    {
+      "id": "edit-mode",
+      "title": "Switch to edit mode",
+      "body": "Click the pencil icon at the top right of the dashboard.",
+      "route": "^/dashboard",
+      "go": "/dashboard",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "add-widget",
+      "title": "Add a widget",
+      "body": "Click **Add Widget**.",
+      "route": "^/dashboard",
+      "go": "/dashboard",
+      "target": [
+        {
+          "text": "Add Widget",
+          "tag": "button"
+        },
+        {
+          "text": "Edit dashboard",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add Widget",
+      "tip": "Don't see **Add Widget**? Click **Edit dashboard** first."
+    },
+    {
+      "id": "type",
+      "title": "Pick a chart type",
+      "body": "Choose how to show it: **Numeric** for a single number, or **Bar**, **Line**, **Donut** or **Table** for a breakdown. Then pick what it measures, such as contacts, opportunities or conversations.",
+      "route": "^/dashboard",
+      "go": "/dashboard",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "filters",
+      "title": "Narrow it down",
+      "body": "Give it a clear title. If you only want some records, add conditions, for example pipeline is Sales or tag is new-lead.",
+      "route": "^/dashboard",
+      "go": "/dashboard",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save the widget",
+      "body": "Click **Save**. Then drag it into place, resize it from the corner, and save your changes to the dashboard.",
+      "route": "^/dashboard",
+      "go": "/dashboard",
+      "target": [
+        {
+          "text": "Save",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Save"
+    }
+  ]
+}

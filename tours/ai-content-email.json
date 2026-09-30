@@ -1,0 +1,129 @@
+{
+  "id": "ai-content-email",
+  "kind": "howto",
+  "area": "ai",
+  "screen": "marketing.email-builder",
+  "title": "Write an email with AI",
+  "blurb": "Let Content AI draft your email copy and subject line.",
+  "icon": "mail",
+  "minutes": 4,
+  "keywords": [
+    "email",
+    "content ai",
+    "write email",
+    "newsletter",
+    "subject line",
+    "copy"
+  ],
+  "steps": [
+    {
+      "id": "open-marketing",
+      "title": "Open Marketing",
+      "body": "Click **Marketing** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_email-marketing"
+        },
+        {
+          "text": "Marketing",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/"
+      }
+    },
+    {
+      "id": "open-email-builder",
+      "title": "Open Emails",
+      "body": "Click **Emails**.",
+      "route": "^/marketing/",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "css": "#tb_email-builder"
+        },
+        {
+          "text": "Emails"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/emails/statistics"
+      }
+    },
+    {
+      "id": "open",
+      "title": "Open the email builder",
+      "body": "Create a new email or open a draft, then click a text block.",
+      "route": "^/marketing/emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "content-ai",
+      "title": "Open Content AI",
+      "body": "Click **Content AI** above the text editor.",
+      "route": "^/marketing/emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "text": "Content AI"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Content AI"
+    },
+    {
+      "id": "brief",
+      "title": "Give it a brief",
+      "body": "Pick the kind of email, like a promotion or newsletter, add a title and a short description, and choose a tone.",
+      "route": "^/marketing/emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "generate",
+      "title": "Generate and choose",
+      "body": "Click **Generate**. Copy the version you like best and click **Continue**.",
+      "route": "^/marketing/emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "text": "Generate"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Generate"
+    },
+    {
+      "id": "subject",
+      "title": "Subject line too",
+      "body": "On the send screen, Content AI can suggest subject lines the same way.",
+      "route": "^/marketing/emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

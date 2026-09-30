@@ -1,0 +1,144 @@
+{
+  "id": "reputation-page-settings",
+  "kind": "page",
+  "area": "reputation",
+  "screen": "reputation.reputation-settings",
+  "title": "Tour: Reputation settings",
+  "blurb": "Your review link, request messages and AI reply settings.",
+  "icon": "cog",
+  "minutes": 2,
+  "keywords": [
+    "reputation settings",
+    "review link",
+    "sms",
+    "email",
+    "reviews ai",
+    "templates"
+  ],
+  "steps": [
+    {
+      "id": "open-reputation",
+      "title": "Open Reputation",
+      "body": "Click **Reputation** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reputation"
+        },
+        {
+          "text": "Reputation",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reputation/"
+      }
+    },
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings**. Review settings live here.",
+      "route": "^/reputation/",
+      "go": "/reputation/settings",
+      "target": [
+        {
+          "css": "#tb_reputation-settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reputation/settings"
+      }
+    },
+    {
+      "id": "link",
+      "title": "Review link",
+      "body": "**Review Link** decides where customers land when they tap your review link.",
+      "route": "^/reputation/settings",
+      "go": "/reputation/settings",
+      "target": [
+        {
+          "text": "Review Link"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Review Link"
+    },
+    {
+      "id": "sms",
+      "title": "SMS requests",
+      "body": "**SMS Requests** holds the text message wording, timing and retries.",
+      "route": "^/reputation/settings",
+      "go": "/reputation/settings",
+      "target": [
+        {
+          "text": "SMS Requests"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "SMS Requests"
+    },
+    {
+      "id": "email",
+      "title": "Email requests",
+      "body": "**Email Requests** does the same for email, with a drag-and-drop editor.",
+      "route": "^/reputation/settings",
+      "go": "/reputation/settings",
+      "target": [
+        {
+          "text": "Email Requests"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Email Requests"
+    },
+    {
+      "id": "ai",
+      "title": "Reviews AI",
+      "body": "**Reviews AI** is where you set up AI replies to reviews.",
+      "route": "^/reputation/settings",
+      "go": "/reputation/settings",
+      "target": [
+        {
+          "text": "Reviews AI"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Reviews AI"
+    },
+    {
+      "id": "next",
+      "title": "What's next",
+      "body": "Next: try **Customise review request messages** from the Guide.",
+      "route": "^/reputation/settings",
+      "go": "/reputation/settings",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

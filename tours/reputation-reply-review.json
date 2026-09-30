@@ -1,0 +1,112 @@
+{
+  "id": "reputation-reply-review",
+  "kind": "howto",
+  "area": "reputation",
+  "screen": "reputation.reputations-reviews",
+  "title": "Reply to a Google or Facebook review",
+  "blurb": "Answer reviews from Luubu without logging in to Google or Facebook.",
+  "icon": "star",
+  "minutes": 2,
+  "keywords": [
+    "reply",
+    "review",
+    "respond",
+    "google review",
+    "facebook review",
+    "bad review"
+  ],
+  "steps": [
+    {
+      "id": "open-reputation",
+      "title": "Open Reputation",
+      "body": "Click **Reputation** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reputation"
+        },
+        {
+          "text": "Reputation",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reputation/"
+      }
+    },
+    {
+      "id": "open-reviews",
+      "title": "Open Reviews",
+      "body": "Click **Reviews**.",
+      "route": "^/reputation/",
+      "go": "/reputation/reviews",
+      "target": [
+        {
+          "css": "#tb_reputations-reviews"
+        },
+        {
+          "text": "Reviews",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reputation/reviews"
+      }
+    },
+    {
+      "id": "find",
+      "title": "Find the review",
+      "body": "Find the review to answer. Filter to low ratings first.",
+      "route": "^/reputation/reviews",
+      "go": "/reputation/reviews",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "reply",
+      "title": "Click Reply",
+      "body": "Click **Reply** under the review.",
+      "route": "^/reputation/reviews",
+      "go": "/reputation/reviews",
+      "target": [
+        {
+          "text": "Reply"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Reply",
+      "advance": "click"
+    },
+    {
+      "id": "write",
+      "title": "Write your reply",
+      "body": "Thank them by name and mention the job. For a bad review, apologise, stay calm, and offer to sort it out by phone.",
+      "route": "^/reputation/reviews",
+      "go": "/reputation/reviews",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "post",
+      "title": "Post it",
+      "body": "Post your reply. It shows on Google or Facebook within a few minutes.",
+      "route": "^/reputation/reviews",
+      "go": "/reputation/reviews",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

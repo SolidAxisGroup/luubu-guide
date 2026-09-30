@@ -1,0 +1,110 @@
+{
+  "id": "contacts-bulk-sms",
+  "kind": "howto",
+  "area": "contacts",
+  "screen": "contacts.lists",
+  "title": "Send a text to a group of contacts",
+  "blurb": "Text a whole list at once, now, later, or in batches.",
+  "icon": "phone",
+  "minutes": 4,
+  "keywords": [
+    "bulk sms",
+    "mass text",
+    "group text",
+    "broadcast",
+    "text blast",
+    "sms"
+  ],
+  "steps": [
+    {
+      "id": "open-contacts",
+      "title": "Open Contacts",
+      "body": "Click **Contacts** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_contacts"
+        },
+        {
+          "text": "Contacts",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/contacts/"
+      }
+    },
+    {
+      "id": "pick",
+      "title": "Pick your group",
+      "body": "Open a smart list or use **Advanced Filters** to show just the people you want to text.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Advanced Filters"
+    },
+    {
+      "id": "select",
+      "title": "Select them",
+      "body": "Tick the box at the top of the list to select everyone shown, or tick people one by one.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "sms",
+      "title": "Choose Send SMS",
+      "body": "Click the SMS icon in the toolbar that appears.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "title": "Write the text",
+      "body": "Name the job, then type your message or pick a snippet. Add the first name with custom values so it feels personal. Include how to opt out.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "when",
+      "title": "Choose when it goes",
+      "body": "Send it all at once, schedule it for a set time, or use drip mode to send in batches. Drip mode is kinder for big lists.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "send",
+      "title": "Send",
+      "body": "Confirm to send. People marked Do Not Disturb are skipped. Check results under **Bulk Actions**.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

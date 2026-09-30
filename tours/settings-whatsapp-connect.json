@@ -1,0 +1,117 @@
+{
+  "id": "settings-whatsapp-connect",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.whatsapp",
+  "title": "Connect WhatsApp",
+  "blurb": "Link your WhatsApp Business account so chats land in Conversations.",
+  "icon": "chat",
+  "minutes": 5,
+  "keywords": [
+    "whatsapp",
+    "connect",
+    "setup",
+    "meta",
+    "facebook business",
+    "whatsapp business"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-whatsapp",
+      "title": "Open WhatsApp",
+      "body": "Click **WhatsApp** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/whatsapp",
+      "target": [
+        {
+          "css": "[id='sb_whatsapp']"
+        },
+        {
+          "text": "WhatsApp",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/whatsapp"
+      }
+    },
+    {
+      "id": "before",
+      "title": "Before you start",
+      "body": "You need admin access to your business's Facebook (Meta) Business account, and a phone number that can receive a code by text or call.",
+      "route": "^/settings/whatsapp",
+      "go": "/settings/whatsapp",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "start",
+      "title": "Start setup",
+      "body": "Click the button to get started. If asked to subscribe, that monthly fee goes on your Luubu bill.",
+      "route": "^/settings/whatsapp",
+      "go": "/settings/whatsapp",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Not sure about the cost? Email hello@luubu.com before you subscribe."
+    },
+    {
+      "id": "meta",
+      "title": "Log in to Meta",
+      "body": "A Meta window opens. Log in, pick or create your business, and enter your WhatsApp display name (usually your business name).",
+      "route": "^/settings/whatsapp",
+      "go": "/settings/whatsapp",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "verify",
+      "title": "Verify the number",
+      "body": "Enter your number and the code Meta sends you.",
+      "route": "^/settings/whatsapp",
+      "go": "/settings/whatsapp",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "done",
+      "title": "Check the status",
+      "body": "Back in Luubu, the top card shows your account status. WhatsApp messages now arrive in **Conversations**.",
+      "route": "^/settings/whatsapp",
+      "go": "/settings/whatsapp",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

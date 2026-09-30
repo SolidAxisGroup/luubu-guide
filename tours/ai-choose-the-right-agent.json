@@ -1,0 +1,103 @@
+{
+  "id": "ai-choose-the-right-agent",
+  "kind": "howto",
+  "area": "ai",
+  "screen": "ai.ai-agents-getting-started",
+  "title": "Choose the right AI agent",
+  "blurb": "A plain guide to which AI tool fits which job.",
+  "icon": "bot",
+  "minutes": 3,
+  "keywords": [
+    "which ai",
+    "choose",
+    "conversation ai",
+    "voice ai",
+    "agent studio",
+    "compare"
+  ],
+  "steps": [
+    {
+      "id": "open-ai-agents",
+      "title": "Open AI Agents",
+      "body": "Click **AI Agents** in the left menu.",
+      "target": [
+        {
+          "css": "[id='sb_AI Agents']"
+        },
+        {
+          "text": "AI Agents",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/"
+      }
+    },
+    {
+      "id": "open-ai-agents-getting-started",
+      "title": "Open Getting Started",
+      "body": "Click the **Getting Started** tab.",
+      "route": "^/ai-agents/",
+      "go": "/ai-agents/getting-started",
+      "target": [
+        {
+          "css": "#tb_ai-agents-getting-started"
+        },
+        {
+          "text": "Getting Started"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/getting-started"
+      }
+    },
+    {
+      "id": "chat",
+      "title": "Missing messages?",
+      "body": "Use **Conversation AI**. It answers website chat, SMS, Facebook, Instagram and WhatsApp, and can book appointments.",
+      "route": "^/ai-agents/getting-started",
+      "go": "/ai-agents/getting-started",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "phone",
+      "title": "Missing calls?",
+      "body": "Use **Voice AI**. It answers the phone, takes details, books jobs and can put callers through to you.",
+      "route": "^/ai-agents/getting-started",
+      "go": "/ai-agents/getting-started",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "content",
+      "title": "Short on time to write?",
+      "body": "Use **Content AI** for emails, social posts and blogs.",
+      "route": "^/ai-agents/getting-started",
+      "go": "/ai-agents/getting-started",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "advanced",
+      "title": "Something more custom?",
+      "body": "**Agent Studio** builds agents that run behind the scenes, like sorting new leads. Start simple and come back to it later.",
+      "route": "^/ai-agents/getting-started",
+      "go": "/ai-agents/getting-started",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

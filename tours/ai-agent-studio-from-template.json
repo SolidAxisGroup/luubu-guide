@@ -1,0 +1,143 @@
+{
+  "id": "ai-agent-studio-from-template",
+  "kind": "howto",
+  "area": "ai",
+  "screen": "ai.ai-agents-agent-studio",
+  "title": "Start an agent from a template",
+  "blurb": "Copy a ready-made agent and adjust it to suit.",
+  "icon": "bot",
+  "minutes": 4,
+  "keywords": [
+    "template",
+    "agent studio",
+    "ready made",
+    "library",
+    "copy agent"
+  ],
+  "steps": [
+    {
+      "id": "open-ai-agents",
+      "title": "Open AI Agents",
+      "body": "Click **AI Agents** in the left menu.",
+      "target": [
+        {
+          "css": "[id='sb_AI Agents']"
+        },
+        {
+          "text": "AI Agents",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/"
+      }
+    },
+    {
+      "id": "open-ai-agents-agent-studio",
+      "title": "Open Agent Studio",
+      "body": "Click the **Agent Studio** tab.",
+      "route": "^/ai-agents/",
+      "go": "/ai-agents/agent-studio",
+      "target": [
+        {
+          "css": "#tb_ai-agents-agent-studio"
+        },
+        {
+          "text": "Agent Studio"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/agent-studio"
+      }
+    },
+    {
+      "id": "create",
+      "title": "Create Agent",
+      "body": "Click **Create Agent**.",
+      "route": "^/ai-agents/agent-studio",
+      "go": "/ai-agents/agent-studio",
+      "target": [
+        {
+          "text": "Create Agent",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create Agent"
+    },
+    {
+      "id": "browse",
+      "title": "Browse templates",
+      "body": "Choose **Browse templates**. Filter by category or search for your need.",
+      "route": "^/ai-agents/agent-studio",
+      "go": "/ai-agents/agent-studio",
+      "target": [
+        {
+          "text": "Browse templates"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Browse templates"
+    },
+    {
+      "id": "preview",
+      "title": "Preview first",
+      "body": "Hover a template and click **Preview** to read what it does.",
+      "route": "^/ai-agents/agent-studio",
+      "go": "/ai-agents/agent-studio",
+      "target": [
+        {
+          "text": "Preview"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Preview"
+    },
+    {
+      "id": "choose",
+      "title": "Use it",
+      "body": "Click **Choose Template**. A draft copy lands in your Agent Studio. The original stays untouched.",
+      "route": "^/ai-agents/agent-studio",
+      "go": "/ai-agents/agent-studio",
+      "target": [
+        {
+          "text": "Choose Template"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Choose Template"
+    },
+    {
+      "id": "adjust",
+      "title": "Make it yours",
+      "body": "Open the copy and update the prompts with your business name, services and tone. Test, then publish.",
+      "route": "^/ai-agents/agent-studio",
+      "go": "/ai-agents/agent-studio",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

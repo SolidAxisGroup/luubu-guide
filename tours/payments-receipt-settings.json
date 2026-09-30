@@ -1,0 +1,126 @@
+{
+  "id": "payments-receipt-settings",
+  "kind": "howto",
+  "area": "payments",
+  "screen": "payments.payment-settings",
+  "title": "Set up payment receipts",
+  "blurb": "Send customers a receipt automatically when they pay.",
+  "icon": "cog",
+  "minutes": 3,
+  "keywords": [
+    "receipt",
+    "tax receipt",
+    "payment confirmation",
+    "email receipt",
+    "numbering"
+  ],
+  "steps": [
+    {
+      "id": "open-payments",
+      "title": "Open Payments",
+      "body": "Click **Payments** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_payments"
+        },
+        {
+          "text": "Payments",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/"
+      }
+    },
+    {
+      "id": "tab-payment-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** along the top.",
+      "route": "^/payments/",
+      "go": "/payments/settings/receipts",
+      "target": [
+        {
+          "css": "#tb_payment-settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/settings/receipts"
+      }
+    },
+    {
+      "id": "tab",
+      "title": "Open Receipts",
+      "body": "Click the **Receipts** tab.",
+      "route": "^/payments/settings",
+      "go": "/payments/settings/receipts",
+      "target": [
+        {
+          "text": "Receipts"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Receipts"
+    },
+    {
+      "id": "toggle",
+      "title": "Turn receipts on",
+      "body": "Switch on **Enable automatic sales receipts for payments**.",
+      "route": "^/payments/settings",
+      "go": "/payments/settings/receipts",
+      "target": [
+        {
+          "text": "Enable automatic sales receipts for payments"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Enable automatic sales receipts for payments"
+    },
+    {
+      "id": "custom",
+      "title": "Make it yours",
+      "body": "Set a title such as \"Tax Receipt\", a number prefix, and the email that goes with it.",
+      "tip": "If you are GST-registered, make sure your GST number shows so it counts as a tax invoice.",
+      "route": "^/payments/settings",
+      "go": "/payments/settings/receipts",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save",
+      "body": "Click **Save**.",
+      "route": "^/payments/settings",
+      "go": "/payments/settings/receipts",
+      "target": [
+        {
+          "text": "Save",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Save"
+    }
+  ]
+}

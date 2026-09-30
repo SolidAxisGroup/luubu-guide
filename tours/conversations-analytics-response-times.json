@@ -1,0 +1,107 @@
+{
+  "id": "conversations-analytics-response-times",
+  "kind": "howto",
+  "area": "conversations",
+  "screen": "conversations.conversations-analytics",
+  "title": "Check your team's reply times",
+  "blurb": "Find out who's answering fast and which channels are slipping.",
+  "icon": "chart",
+  "minutes": 2,
+  "keywords": [
+    "response time",
+    "sla",
+    "reply speed",
+    "team",
+    "performance",
+    "overdue",
+    "analytics"
+  ],
+  "steps": [
+    {
+      "id": "open-conversations",
+      "title": "Open Conversations",
+      "body": "Click **Conversations** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_conversations"
+        },
+        {
+          "text": "Conversations",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/conversations/"
+      }
+    },
+    {
+      "id": "tab-conversations-analytics",
+      "title": "Open Analytics",
+      "body": "Click **Analytics** along the top.",
+      "route": "^/conversations/",
+      "go": "/conversations/analytics",
+      "target": [
+        {
+          "css": "#tb_conversations-analytics"
+        },
+        {
+          "text": "Analytics",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/conversations/analytics"
+      }
+    },
+    {
+      "id": "open",
+      "title": "Open SLA Performance",
+      "body": "Open the **SLA Performance** report.",
+      "route": "^/conversations/analytics",
+      "go": "/conversations/analytics",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "SLA Performance"
+    },
+    {
+      "id": "period",
+      "title": "Pick the period",
+      "body": "Set the date range, for example last week.",
+      "route": "^/conversations/analytics",
+      "go": "/conversations/analytics",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "headline",
+      "title": "Read the headline numbers",
+      "body": "Check **SLA Met %** and **Average Response Time**. A rising breached number means customers are waiting too long.",
+      "route": "^/conversations/analytics",
+      "go": "/conversations/analytics",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "SLA Met %"
+    },
+    {
+      "id": "drill",
+      "title": "Spot the gaps",
+      "body": "Look at the user and channel breakdowns. If one channel is slow, check that it's being watched, or set up an auto-reply.",
+      "route": "^/conversations/analytics",
+      "go": "/conversations/analytics",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

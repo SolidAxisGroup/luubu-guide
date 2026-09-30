@@ -1,0 +1,132 @@
+{
+  "id": "payments-page-integrations",
+  "kind": "page",
+  "area": "payments",
+  "screen": "payments.payment-integrations",
+  "title": "Tour: Payment integrations",
+  "blurb": "Connect Stripe so you can take card payments.",
+  "icon": "card",
+  "minutes": 2,
+  "keywords": [
+    "stripe",
+    "payment gateway",
+    "integrations",
+    "card payments",
+    "connect",
+    "merchant"
+  ],
+  "steps": [
+    {
+      "id": "open-payments",
+      "title": "Open Payments",
+      "body": "Click **Payments** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_payments"
+        },
+        {
+          "text": "Payments",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/"
+      }
+    },
+    {
+      "id": "tab-payment-integrations",
+      "title": "Open Integrations",
+      "body": "Click **Integrations** along the top.",
+      "route": "^/payments/",
+      "go": "/payments/integrations",
+      "target": [
+        {
+          "css": "#tb_payment-integrations"
+        },
+        {
+          "text": "Integrations",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/integrations"
+      }
+    },
+    {
+      "id": "what",
+      "title": "Your payment providers",
+      "body": "This page links Luubu to the company that actually moves the money. For most NZ businesses that is Stripe.",
+      "route": "^/payments/integrations",
+      "go": "/payments/integrations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "stripe",
+      "title": "Stripe",
+      "body": "Find **Stripe** and use **Connect** to link your account.",
+      "route": "^/payments/integrations",
+      "go": "/payments/integrations",
+      "target": [
+        {
+          "text": "Connect",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Connect"
+    },
+    {
+      "id": "manage",
+      "title": "Once connected",
+      "body": "Click **Manage** to choose which payment methods customers see at checkout.",
+      "route": "^/payments/integrations",
+      "go": "/payments/integrations",
+      "target": [
+        {
+          "text": "Manage",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Manage"
+    },
+    {
+      "id": "why",
+      "title": "Do this first",
+      "body": "Invoices, payment links, bookings with deposits and your store all need a connected provider before anyone can pay online.",
+      "route": "^/payments/integrations",
+      "go": "/payments/integrations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "Next step",
+      "body": "Next: try **Connect Stripe** from the Guide.",
+      "route": "^/payments/integrations",
+      "go": "/payments/integrations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

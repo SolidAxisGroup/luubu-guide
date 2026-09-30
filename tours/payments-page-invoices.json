@@ -1,0 +1,132 @@
+{
+  "id": "payments-page-invoices",
+  "kind": "page",
+  "area": "payments",
+  "screen": "payments.payment-invoices",
+  "title": "Tour: Invoices & Estimates",
+  "blurb": "Send invoices and quotes, and see who has paid.",
+  "icon": "card",
+  "minutes": 3,
+  "keywords": [
+    "invoices",
+    "estimates",
+    "quotes",
+    "billing",
+    "unpaid",
+    "overdue",
+    "recurring"
+  ],
+  "steps": [
+    {
+      "id": "open-payments",
+      "title": "Open Payments",
+      "body": "Click **Payments** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_payments"
+        },
+        {
+          "text": "Payments",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/"
+      }
+    },
+    {
+      "id": "tab-payment-invoices",
+      "title": "Open Invoices & Estimates",
+      "body": "Click **Invoices & Estimates** along the top.",
+      "route": "^/payments/",
+      "go": "/payments/invoices",
+      "target": [
+        {
+          "css": "#tb_payment-invoices"
+        },
+        {
+          "text": "Invoices & Estimates",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/invoices"
+      }
+    },
+    {
+      "id": "tabs",
+      "title": "The four tabs",
+      "body": "**All Invoices** is every invoice you have sent. **Recurring Templates** holds repeating invoices. **Estimates** holds your quotes. **Templates** saves invoices you send often.",
+      "route": "^/payments/invoices",
+      "go": "/payments/invoices",
+      "target": [
+        {
+          "text": "All Invoices"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "All Invoices"
+    },
+    {
+      "id": "new",
+      "title": "Create something new",
+      "body": "The **New** button starts a one-off invoice, a recurring invoice or an estimate.",
+      "route": "^/payments/invoices",
+      "go": "/payments/invoices",
+      "target": [
+        {
+          "text": "New",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New"
+    },
+    {
+      "id": "list",
+      "title": "Read the list",
+      "body": "Each row shows the customer, amount, due date and status, so you can spot overdue invoices fast. Click a row to open it.",
+      "route": "^/payments/invoices",
+      "go": "/payments/invoices",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "row-actions",
+      "title": "After it is sent",
+      "body": "Open an invoice to resend it, record a cash or bank payment, or void it.",
+      "route": "^/payments/invoices",
+      "go": "/payments/invoices",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "Next step",
+      "body": "Next: try **Create and send an invoice** from the Guide.",
+      "route": "^/payments/invoices",
+      "go": "/payments/invoices",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

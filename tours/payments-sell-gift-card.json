@@ -1,0 +1,112 @@
+{
+  "id": "payments-sell-gift-card",
+  "kind": "howto",
+  "area": "payments",
+  "screen": "payments.gift-cards",
+  "title": "Sell gift cards online",
+  "blurb": "Share a gift card link, embed it or print a QR code.",
+  "icon": "star",
+  "minutes": 2,
+  "keywords": [
+    "sell gift card",
+    "gift card link",
+    "qr code",
+    "embed",
+    "website",
+    "online"
+  ],
+  "steps": [
+    {
+      "id": "open-payments",
+      "title": "Open Payments",
+      "body": "Click **Payments** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_payments"
+        },
+        {
+          "text": "Payments",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/"
+      }
+    },
+    {
+      "id": "tab-gift-cards",
+      "title": "Open Gift Cards",
+      "body": "Click **Gift Cards** along the top.",
+      "route": "^/payments/",
+      "go": "/payments/gift-cards",
+      "target": [
+        {
+          "css": "#tb_gift-cards"
+        },
+        {
+          "text": "Gift Cards",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/gift-cards"
+      }
+    },
+    {
+      "id": "sell",
+      "title": "Click Sell",
+      "body": "On your gift card, click **Sell**.",
+      "route": "^/payments/gift-cards",
+      "go": "/payments/gift-cards",
+      "target": [
+        {
+          "text": "Sell",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Sell"
+    },
+    {
+      "id": "link",
+      "title": "Copy the link",
+      "body": "Copy the checkout link for your socials, emails or Google Business Profile.",
+      "route": "^/payments/gift-cards",
+      "go": "/payments/gift-cards",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "embed",
+      "title": "Or embed it",
+      "body": "Copy the embed code to put the gift card on your website.",
+      "route": "^/payments/gift-cards",
+      "go": "/payments/gift-cards",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "qr",
+      "title": "Or print a QR code",
+      "body": "Download the QR code for your counter, menu or window.",
+      "route": "^/payments/gift-cards",
+      "go": "/payments/gift-cards",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

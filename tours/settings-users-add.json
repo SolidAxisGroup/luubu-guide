@@ -1,0 +1,128 @@
+{
+  "id": "settings-users-add",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.my-staff",
+  "title": "Add a team member",
+  "blurb": "Give a staff member their own Luubu login.",
+  "icon": "users",
+  "minutes": 3,
+  "keywords": [
+    "add user",
+    "team member",
+    "staff",
+    "employee",
+    "invite",
+    "login",
+    "new user"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-users",
+      "title": "Open Users",
+      "body": "Click **Users** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/users",
+      "target": [
+        {
+          "css": "[id='sb_my-staff']"
+        },
+        {
+          "text": "Users",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/users"
+      }
+    },
+    {
+      "id": "add",
+      "title": "Add a person",
+      "body": "Click **Add Employee**.",
+      "route": "^/settings/users",
+      "go": "/settings/users",
+      "target": [
+        {
+          "text": "Add Employee",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add Employee",
+      "tip": "On some screens the button reads Add User.",
+      "advance": "click"
+    },
+    {
+      "id": "details",
+      "title": "Enter their details",
+      "body": "Fill in first name, last name, email and mobile. Use their own email, as that becomes their login.",
+      "route": "^/settings/users",
+      "go": "/settings/users",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "password",
+      "title": "Set a password",
+      "body": "Set a starting password, or let them set their own from the invite email if offered.",
+      "route": "^/settings/users",
+      "go": "/settings/users",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "role",
+      "title": "Pick a role",
+      "body": "Choose **User** for most staff and only switch on what they need. Choose **Admin** only for people who manage the business.",
+      "route": "^/settings/users",
+      "go": "/settings/users",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Admin"
+    },
+    {
+      "id": "save",
+      "title": "Save",
+      "body": "Save the user. They get an email with their login details.",
+      "route": "^/settings/users",
+      "go": "/settings/users",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

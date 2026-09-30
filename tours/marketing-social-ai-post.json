@@ -1,0 +1,162 @@
+{
+  "id": "marketing-social-ai-post",
+  "kind": "howto",
+  "area": "marketing",
+  "screen": "marketing.social-planner",
+  "title": "Write a social post with AI",
+  "blurb": "Answer a few questions and let AI draft the post for you.",
+  "icon": "bot",
+  "minutes": 3,
+  "keywords": [
+    "ai",
+    "content ai",
+    "write post",
+    "caption",
+    "generate",
+    "social media",
+    "ideas"
+  ],
+  "steps": [
+    {
+      "id": "open-marketing",
+      "title": "Open Marketing",
+      "body": "Click **Marketing** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_email-marketing"
+        },
+        {
+          "text": "Marketing",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/"
+      }
+    },
+    {
+      "id": "open-social-planner",
+      "title": "Open Social Planner",
+      "body": "Click **Social Planner** along the top.",
+      "route": "^/marketing/",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "css": "#tb_social-planner"
+        },
+        {
+          "text": "Social Planner",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/social-planner"
+      }
+    },
+    {
+      "id": "new-post",
+      "title": "Open the New Post menu",
+      "body": "Click **+ New Post**.",
+      "route": "^/marketing/social-planner",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "text": "New Post",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New Post",
+      "advance": "click"
+    },
+    {
+      "id": "content-ai",
+      "title": "Pick the AI option",
+      "body": "Choose **Content AI**.",
+      "route": "^/marketing/social-planner",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "text": "Content AI"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Content AI",
+      "advance": "click"
+    },
+    {
+      "id": "platform",
+      "title": "Pick where it will go",
+      "body": "Choose the network and the kind of post, for example a promotion, a tip or a customer story.",
+      "route": "^/marketing/social-planner",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "questions",
+      "title": "Tell it about the post",
+      "body": "Fill in the short questions: what you are offering, who it is for and what you want people to do. Pick your **Brand Voice** if you have set one up.",
+      "route": "^/marketing/social-planner",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "generate",
+      "title": "Generate the draft",
+      "body": "Click **Generate**.",
+      "route": "^/marketing/social-planner",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "text": "Generate",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Generate"
+    },
+    {
+      "id": "refine",
+      "title": "Tidy it up and post",
+      "body": "Edit the draft yourself, or use **Edit with Ask AI** and ask for changes like \"shorter\" or \"more local\". Add a photo, then post or schedule it.",
+      "route": "^/marketing/social-planner",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "text": "Edit with Ask AI"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Edit with Ask AI",
+      "tip": "Always read AI copy before it goes out. Check prices and dates."
+    }
+  ]
+}

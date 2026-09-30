@@ -1,0 +1,91 @@
+{
+  "id": "sites-survey-share",
+  "kind": "howto",
+  "area": "sites",
+  "screen": "sites.survey-builder",
+  "title": "Share or embed a survey",
+  "blurb": "Send a survey link or place it on a page.",
+  "icon": "share",
+  "minutes": 3,
+  "keywords": [
+    "share survey",
+    "survey link",
+    "embed survey",
+    "send survey",
+    "feedback"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Surveys",
+      "body": "Click **Surveys** and open the survey.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/survey-builder/main",
+      "target": [
+        {
+          "css": "#tb_survey-builder"
+        },
+        {
+          "text": "Surveys",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/survey-builder"
+      }
+    },
+    {
+      "id": "integrate",
+      "title": "Open Integrate",
+      "body": "Click **Integrate** in the survey builder.",
+      "route": "^/",
+      "go": "/survey-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "link",
+      "title": "Copy the link or code",
+      "body": "Copy the share link to send by email or text, or copy the embed code for another website.",
+      "route": "^/",
+      "go": "/survey-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "page",
+      "title": "Or add it to a Luubu page",
+      "body": "In the funnel or website builder, add the survey element and choose this survey.",
+      "route": "^/",
+      "go": "/survey-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "id": "ai-page-agent-templates",
+  "kind": "page",
+  "area": "ai",
+  "screen": "ai.ai-agents-agent-templates",
+  "title": "Tour Agent Templates",
+  "blurb": "Ready-made chat and voice agents you can install and adjust.",
+  "icon": "bot",
+  "minutes": 2,
+  "keywords": [
+    "agent templates",
+    "ready made",
+    "install agent",
+    "marketplace",
+    "tour"
+  ],
+  "steps": [
+    {
+      "id": "open-ai-agents",
+      "title": "Open AI Agents",
+      "body": "Click **AI Agents** in the left menu.",
+      "target": [
+        {
+          "css": "[id='sb_AI Agents']"
+        },
+        {
+          "text": "AI Agents",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/"
+      }
+    },
+    {
+      "id": "open-ai-agents-agent-templates",
+      "title": "Open Agent Templates",
+      "body": "Click the **Agent Templates** tab.",
+      "route": "^/ai-agents/",
+      "go": "/ai-agents/agent-templates",
+      "target": [
+        {
+          "css": "#tb_ai-agents-agent-templates"
+        },
+        {
+          "text": "Agent Templates"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/agent-templates"
+      }
+    },
+    {
+      "id": "what",
+      "title": "Ready-made agents",
+      "body": "Each template is a pre-built chat or voice agent for a common job, like booking appointments or answering FAQs.",
+      "route": "^/ai-agents/agent-templates",
+      "go": "/ai-agents/agent-templates",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "cards",
+      "title": "Read the cards",
+      "body": "Each card shows what the agent does, how many businesses use it, and its rating.",
+      "route": "^/ai-agents/agent-templates",
+      "go": "/ai-agents/agent-templates",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "preview",
+      "title": "Try before you install",
+      "body": "Chat templates often have a preview you can talk to first.",
+      "route": "^/ai-agents/agent-templates",
+      "go": "/ai-agents/agent-templates",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "install",
+      "title": "Install",
+      "body": "**Install** adds a copy to your account for you to adjust.",
+      "route": "^/ai-agents/agent-templates",
+      "go": "/ai-agents/agent-templates",
+      "target": [
+        {
+          "text": "Install"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Install"
+    },
+    {
+      "id": "next",
+      "title": "Next step",
+      "body": "Next: try **Install an agent template** from the Guide.",
+      "route": "^/ai-agents/agent-templates",
+      "go": "/ai-agents/agent-templates",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

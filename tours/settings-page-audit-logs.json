@@ -1,0 +1,116 @@
+{
+  "id": "settings-page-audit-logs",
+  "kind": "page",
+  "area": "settings",
+  "screen": "settings.audit-logs-location",
+  "title": "Tour: Audit Logs",
+  "blurb": "See who changed what in your account, and when.",
+  "icon": "book",
+  "minutes": 2,
+  "keywords": [
+    "audit logs",
+    "history",
+    "who changed",
+    "activity",
+    "deleted",
+    "changes"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-audit-logs",
+      "title": "Open Audit Logs",
+      "body": "Click **Audit Logs** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/audit/logs",
+      "target": [
+        {
+          "css": "[id='sb_audit-logs-location']"
+        },
+        {
+          "text": "Audit Logs",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/audit/logs"
+      }
+    },
+    {
+      "id": "what",
+      "title": "What it records",
+      "body": "Every create, update and delete is logged with the person, the area and the time.",
+      "route": "^/settings/audit/logs",
+      "go": "/settings/audit/logs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "filters",
+      "title": "Filters",
+      "body": "Filter by user, module, action or time range to narrow it down.",
+      "route": "^/settings/audit/logs",
+      "go": "/settings/audit/logs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "details",
+      "title": "Details",
+      "body": "Click a row to open the details and see exactly what changed.",
+      "route": "^/settings/audit/logs",
+      "go": "/settings/audit/logs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "retention",
+      "title": "How long it keeps",
+      "body": "Logs are kept for 60 days. Export anything you need to keep longer.",
+      "route": "^/settings/audit/logs",
+      "go": "/settings/audit/logs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Next: try **Find out who changed something** from the Guide.",
+      "route": "^/settings/audit/logs",
+      "go": "/settings/audit/logs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

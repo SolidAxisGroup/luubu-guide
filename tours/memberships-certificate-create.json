@@ -1,0 +1,131 @@
+{
+  "id": "memberships-certificate-create",
+  "kind": "howto",
+  "area": "memberships",
+  "screen": "memberships.certificates",
+  "title": "Design a certificate",
+  "blurb": "Make a branded certificate that fills in names and dates for you.",
+  "icon": "star",
+  "minutes": 5,
+  "keywords": [
+    "certificate",
+    "design",
+    "template",
+    "badge",
+    "credential",
+    "award"
+  ],
+  "steps": [
+    {
+      "id": "open-memberships",
+      "title": "Open Memberships",
+      "body": "Click **Memberships** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_memberships"
+        },
+        {
+          "text": "Memberships",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/memberships/"
+      }
+    },
+    {
+      "id": "open-credentials",
+      "title": "Open Credentials",
+      "body": "Click **Credentials**.",
+      "route": "^/memberships/",
+      "go": "/memberships/certificates/create-certificates",
+      "target": [
+        {
+          "css": "#tb_certificates"
+        },
+        {
+          "text": "Credentials",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/memberships/certificates"
+      }
+    },
+    {
+      "id": "create",
+      "title": "Start a certificate",
+      "body": "Click **Create Certificate**. Pick a ready-made design or start blank.",
+      "route": "^/memberships/certificates",
+      "go": "/memberships/certificates/create-certificates",
+      "target": [
+        {
+          "text": "Create Certificate",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create Certificate"
+    },
+    {
+      "id": "design",
+      "title": "Make it yours",
+      "body": "Add your logo and colours. Place fields like the learner name, course name and date. These fill in automatically.",
+      "route": "^/memberships/certificates",
+      "go": "/memberships/certificates/create-certificates",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "expiry",
+      "title": "Set an expiry (optional)",
+      "body": "For things that need renewing, like a safety refresher, set an expiry date.",
+      "route": "^/memberships/certificates",
+      "go": "/memberships/certificates/create-certificates",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "preview",
+      "title": "Preview it",
+      "body": "Click **Preview** to check how it looks on desktop and mobile.",
+      "route": "^/memberships/certificates",
+      "go": "/memberships/certificates/create-certificates",
+      "target": [
+        {
+          "text": "Preview"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Preview"
+    },
+    {
+      "id": "save",
+      "title": "Save it",
+      "body": "Save the template. It is ready to attach to a course or send by hand.",
+      "route": "^/memberships/certificates",
+      "go": "/memberships/certificates/create-certificates",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

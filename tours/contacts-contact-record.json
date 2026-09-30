@@ -1,0 +1,100 @@
+{
+  "id": "contacts-contact-record",
+  "kind": "howto",
+  "area": "contacts",
+  "screen": "contacts.lists",
+  "title": "Update a contact's details, notes and custom fields",
+  "blurb": "Open a customer's record to edit info, fill custom fields and add notes.",
+  "icon": "users",
+  "minutes": 3,
+  "keywords": [
+    "contact record",
+    "edit contact",
+    "notes",
+    "custom fields",
+    "details",
+    "profile",
+    "dnd"
+  ],
+  "steps": [
+    {
+      "id": "open-contacts",
+      "title": "Open Contacts",
+      "body": "Click **Contacts** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_contacts"
+        },
+        {
+          "text": "Contacts",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/contacts/"
+      }
+    },
+    {
+      "id": "open",
+      "title": "Open the contact",
+      "body": "Search for the person and click their name.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "left",
+      "title": "Edit their details",
+      "body": "The left panel holds their contact info, **Tags**, **DND** settings and your custom field folders. Click a field to edit. It saves as soon as you click away.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "DND"
+    },
+    {
+      "id": "custom",
+      "title": "Fill in custom fields",
+      "body": "Open a custom field folder, like Job Details, and fill in the fields. Need a new field? See **Create a custom field** in the Guide.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "notes",
+      "title": "Add a note",
+      "body": "In the right panel, open **Notes** and add a note, such as what you discussed on the phone.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Notes"
+    },
+    {
+      "id": "timeline",
+      "title": "See the full history",
+      "body": "The middle shows every message, call, appointment and change for this person, newest at the bottom.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "id": "settings-domains-link-site",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.domains-urlRedirects",
+  "title": "Link a domain to your website",
+  "blurb": "Choose which website or funnel shows on your domain.",
+  "icon": "globe",
+  "minutes": 3,
+  "keywords": [
+    "link domain",
+    "website",
+    "funnel",
+    "home page",
+    "404 page",
+    "ssl"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-domains-and-url-redirects",
+      "title": "Open Domains & URL Redirects",
+      "body": "Click **Domains & URL Redirects** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/domain",
+      "target": [
+        {
+          "css": "[id='sb_domains-urlRedirects']"
+        },
+        {
+          "text": "Domains & URL Redirects",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/domain"
+      }
+    },
+    {
+      "id": "pick",
+      "title": "Open the domain",
+      "body": "Find your verified domain in the list and open its settings.",
+      "route": "^/settings/domain",
+      "go": "/settings/domain",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "product",
+      "title": "Pick the site",
+      "body": "Choose Website or Funnel, then pick which one.",
+      "route": "^/settings/domain",
+      "go": "/settings/domain",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "title": "Home page",
+      "body": "Pick the page that shows when someone types just your domain.",
+      "route": "^/settings/domain",
+      "go": "/settings/domain",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "404",
+      "title": "Error page",
+      "body": "Set a 404 page for broken links, ideally one with a link back home.",
+      "route": "^/settings/domain",
+      "go": "/settings/domain",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "ssl",
+      "title": "Wait for the padlock",
+      "body": "Save. The secure padlock (SSL) is usually ready within a few minutes.",
+      "route": "^/settings/domain",
+      "go": "/settings/domain",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

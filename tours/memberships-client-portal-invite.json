@@ -1,0 +1,147 @@
+{
+  "id": "memberships-client-portal-invite",
+  "kind": "howto",
+  "area": "memberships",
+  "screen": "memberships.clientportalCommunities",
+  "title": "Invite clients to your portal",
+  "blurb": "Send invites, one-off login links and login reminders.",
+  "icon": "users",
+  "minutes": 3,
+  "keywords": [
+    "invite",
+    "client portal",
+    "login",
+    "magic link",
+    "access",
+    "members",
+    "password"
+  ],
+  "steps": [
+    {
+      "id": "open-memberships",
+      "title": "Open Memberships",
+      "body": "Click **Memberships** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_memberships"
+        },
+        {
+          "text": "Memberships",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/memberships/"
+      }
+    },
+    {
+      "id": "open-client-portal",
+      "title": "Open Client Portal",
+      "body": "Click **Client Portal**.",
+      "route": "^/memberships/",
+      "go": "/memberships/client-portal/dashboard",
+      "target": [
+        {
+          "css": "#tb_clientportalCommunities"
+        },
+        {
+          "text": "Client Portal",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/memberships/client-portal"
+      }
+    },
+    {
+      "id": "invite",
+      "title": "Start an invite",
+      "body": "Click **Invite to Client Portal**.",
+      "route": "^/memberships/client-portal",
+      "go": "/memberships/client-portal/dashboard",
+      "target": [
+        {
+          "text": "Invite to Client Portal",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Invite to Client Portal",
+      "advance": "click"
+    },
+    {
+      "id": "who",
+      "title": "Pick who to invite",
+      "body": "Choose existing contacts or type in new email addresses, then send. The invite goes out from your default sending domain.",
+      "route": "^/memberships/client-portal",
+      "go": "/memberships/client-portal/dashboard",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "magic-link",
+      "title": "Help someone who is stuck",
+      "body": "Client can't log in? Use **Magic Link** to make a login link that works for 15 minutes, and send it to them straight away.",
+      "route": "^/memberships/client-portal",
+      "go": "/memberships/client-portal/dashboard",
+      "target": [
+        {
+          "text": "Magic Link"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Magic Link"
+    },
+    {
+      "id": "login-email",
+      "title": "Nudge a group",
+      "body": "Use **Login Email** to select several contacts and send them all a one-click login email at once.",
+      "route": "^/memberships/client-portal",
+      "go": "/memberships/client-portal/dashboard",
+      "target": [
+        {
+          "text": "Login Email"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Login Email"
+    },
+    {
+      "id": "joined",
+      "title": "Track sign-ups",
+      "body": "Watch **Joined Users** go up as people log in.",
+      "route": "^/memberships/client-portal",
+      "go": "/memberships/client-portal/dashboard",
+      "target": [
+        {
+          "text": "Joined Users"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Joined Users"
+    }
+  ]
+}

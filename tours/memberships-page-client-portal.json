@@ -1,0 +1,145 @@
+{
+  "id": "memberships-page-client-portal",
+  "kind": "page",
+  "area": "memberships",
+  "screen": "memberships.clientportalCommunities",
+  "title": "Tour: Client Portal",
+  "blurb": "One login where your clients reach their courses and communities.",
+  "icon": "users",
+  "minutes": 2,
+  "keywords": [
+    "client portal",
+    "portal",
+    "members",
+    "login",
+    "invite",
+    "clients"
+  ],
+  "steps": [
+    {
+      "id": "open-memberships",
+      "title": "Open Memberships",
+      "body": "Click **Memberships** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_memberships"
+        },
+        {
+          "text": "Memberships",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/memberships/"
+      }
+    },
+    {
+      "id": "open-client-portal",
+      "title": "Open Client Portal",
+      "body": "Click **Client Portal**. This is the home of your client portal.",
+      "route": "^/memberships/",
+      "go": "/memberships/client-portal/dashboard",
+      "target": [
+        {
+          "css": "#tb_clientportalCommunities"
+        },
+        {
+          "text": "Client Portal",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/memberships/client-portal"
+      }
+    },
+    {
+      "id": "portal-url",
+      "title": "Your portal link",
+      "body": "The **Client Portal URL** is the address clients use to log in. Copy it and share it, or pop it on your website.",
+      "route": "^/memberships/client-portal",
+      "go": "/memberships/client-portal/dashboard",
+      "target": [
+        {
+          "text": "Client Portal URL"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Client Portal URL"
+    },
+    {
+      "id": "user-counts",
+      "title": "Who's joined",
+      "body": "**Invited Users** counts everyone you have invited. **Joined Users** counts people who have actually logged in. A big gap means it is time for a reminder.",
+      "route": "^/memberships/client-portal",
+      "go": "/memberships/client-portal/dashboard",
+      "target": [
+        {
+          "text": "Joined Users"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Joined Users"
+    },
+    {
+      "id": "actions",
+      "title": "Invite and login buttons",
+      "body": "**Invite to Client Portal** sends an invite. **Magic Link** makes a one-off login link that lasts 15 minutes. **Login Email** sends a one-click login email.",
+      "route": "^/memberships/client-portal",
+      "go": "/memberships/client-portal/dashboard",
+      "target": [
+        {
+          "text": "Invite to Client Portal",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Invite to Client Portal"
+    },
+    {
+      "id": "settings",
+      "title": "Portal settings",
+      "body": "**Settings** holds your branding, portal address and which apps clients can see.",
+      "route": "^/memberships/client-portal",
+      "go": "/memberships/client-portal/dashboard",
+      "target": [
+        {
+          "text": "Settings"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Settings"
+    },
+    {
+      "id": "next",
+      "title": "What's next",
+      "body": "Next: try **Set up your client portal** from the Guide.",
+      "route": "^/memberships/client-portal",
+      "go": "/memberships/client-portal/dashboard",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

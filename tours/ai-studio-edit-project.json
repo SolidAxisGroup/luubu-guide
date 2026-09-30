@@ -1,0 +1,106 @@
+{
+  "id": "ai-studio-edit-project",
+  "kind": "howto",
+  "area": "ai",
+  "screen": "ai.vibe",
+  "title": "Edit an AI Studio project",
+  "blurb": "Change words, images and colours by chatting, clicking or editing code.",
+  "icon": "bot",
+  "minutes": 3,
+  "keywords": [
+    "edit",
+    "change text",
+    "images",
+    "colours",
+    "visual edit",
+    "ai studio"
+  ],
+  "steps": [
+    {
+      "id": "open-ai-studio",
+      "title": "Open AI Studio",
+      "body": "Click **AI Studio** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_vibe"
+        },
+        {
+          "text": "AI Studio",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/vibe"
+      }
+    },
+    {
+      "id": "open",
+      "title": "Open your project",
+      "body": "Go to **My Projects** and open the one you want to change.",
+      "route": "^/vibe",
+      "go": "/vibe",
+      "target": [
+        {
+          "text": "My Projects"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "My Projects"
+    },
+    {
+      "id": "chat",
+      "title": "Ask in plain words",
+      "body": "The quickest way is the chat: \"swap the hero photo for this one\", \"change the phone number to 0800 123 456\".",
+      "route": "^/vibe",
+      "go": "/vibe",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "visual",
+      "title": "Click to edit",
+      "body": "Use **Visual Edits** to click any text, image or button and change it directly.",
+      "route": "^/vibe",
+      "go": "/vibe",
+      "target": [
+        {
+          "text": "Visual Edits"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Visual Edits"
+    },
+    {
+      "id": "code",
+      "title": "Fine-tune the code",
+      "body": "Comfortable with code? **Code Editor** lets you make exact changes. Most people never need it.",
+      "route": "^/vibe",
+      "go": "/vibe",
+      "target": [
+        {
+          "text": "Code Editor"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Code Editor"
+    }
+  ]
+}

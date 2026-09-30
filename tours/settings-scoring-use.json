@@ -1,0 +1,92 @@
+{
+  "id": "settings-scoring-use",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.manage-scoring",
+  "title": "Use lead scores to follow up",
+  "blurb": "Find your hottest leads and act on them.",
+  "icon": "star",
+  "minutes": 3,
+  "keywords": [
+    "lead score",
+    "smart list",
+    "workflow",
+    "follow up",
+    "hot leads",
+    "filter"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-manage-scoring",
+      "title": "Open Manage Scoring",
+      "body": "Click **Manage Scoring** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/scoring",
+      "target": [
+        {
+          "css": "[id='sb_manage-scoring']"
+        },
+        {
+          "text": "Manage Scoring",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/scoring"
+      }
+    },
+    {
+      "id": "where",
+      "title": "Where scores show",
+      "body": "Each contact's score is saved on their record, so you can filter and sort by it.",
+      "route": "^/settings/scoring",
+      "go": "/settings/scoring",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "list",
+      "title": "Make a hot list",
+      "body": "In **Contacts**, filter by score (for example above 50) and save it as a smart list to call first.",
+      "route": "^/settings/scoring",
+      "go": "/settings/scoring",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "workflow",
+      "title": "Automate it",
+      "body": "In a workflow, use the score to alert you or assign the lead to a salesperson once it passes a number.",
+      "route": "^/settings/scoring",
+      "go": "/settings/scoring",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

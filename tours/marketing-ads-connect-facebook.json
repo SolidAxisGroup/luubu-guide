@@ -1,0 +1,140 @@
+{
+  "id": "marketing-ads-connect-facebook",
+  "kind": "howto",
+  "area": "marketing",
+  "screen": "marketing.ad-manager-home",
+  "title": "Connect Facebook to Ad Manager",
+  "blurb": "Link your Meta ad account and Facebook Page so you can run ads.",
+  "icon": "megaphone",
+  "minutes": 4,
+  "keywords": [
+    "connect facebook",
+    "meta ads",
+    "ad account",
+    "ad manager",
+    "setup",
+    "activate"
+  ],
+  "steps": [
+    {
+      "id": "open-marketing",
+      "title": "Open Marketing",
+      "body": "Click **Marketing** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_email-marketing"
+        },
+        {
+          "text": "Marketing",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/"
+      }
+    },
+    {
+      "id": "open-ad-manager-home",
+      "title": "Open Ad Manager",
+      "body": "Click **Ad Manager** along the top.",
+      "route": "^/marketing/",
+      "go": "/marketing/ad-manager/home",
+      "target": [
+        {
+          "css": "#tb_ad-manager-home"
+        },
+        {
+          "text": "Ad Manager",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/ad-manager"
+      }
+    },
+    {
+      "id": "activate",
+      "title": "Switch it on",
+      "body": "On the welcome screen, click **Activate Ads Manager**.",
+      "route": "^/marketing/ad-manager",
+      "go": "/marketing/ad-manager/home",
+      "target": [
+        {
+          "text": "Activate Ads Manager",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Activate Ads Manager",
+      "tip": "Not seeing this? Ask us to switch this on: hello@luubu.com"
+    },
+    {
+      "id": "connect",
+      "title": "Connect Facebook",
+      "body": "Under **Manage accounts**, click **Connect Facebook**.",
+      "route": "^/marketing/ad-manager",
+      "go": "/marketing/ad-manager/home",
+      "target": [
+        {
+          "text": "Connect Facebook"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Connect Facebook"
+    },
+    {
+      "id": "login",
+      "title": "Log in and allow",
+      "body": "Sign in with the Facebook profile that runs your business Page and ad account, and allow the permissions asked for.",
+      "route": "^/marketing/ad-manager",
+      "go": "/marketing/ad-manager/home",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "ad-account",
+      "title": "Pick the ad account",
+      "body": "Choose your Meta ads account from the list. It needs a payment method set up in Meta.",
+      "route": "^/marketing/ad-manager",
+      "go": "/marketing/ad-manager/home",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "page",
+      "title": "Pick your Page and finish",
+      "body": "Search for your Facebook Page, click **Connect**, then **Get started**.",
+      "route": "^/marketing/ad-manager",
+      "go": "/marketing/ad-manager/home",
+      "target": [
+        {
+          "text": "Get started",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Get started"
+    }
+  ]
+}

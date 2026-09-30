@@ -1,0 +1,149 @@
+{
+  "id": "reporting-custom-report-build",
+  "kind": "howto",
+  "area": "reporting",
+  "screen": "reporting.custom-reports",
+  "title": "Build a custom report",
+  "blurb": "Put the numbers you care about into one branded report.",
+  "icon": "chart",
+  "minutes": 6,
+  "keywords": [
+    "custom report",
+    "build report",
+    "widgets",
+    "reporting",
+    "kpi",
+    "monthly report"
+  ],
+  "steps": [
+    {
+      "id": "open-reporting",
+      "title": "Open Reporting",
+      "body": "Click **Reporting** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reporting"
+        },
+        {
+          "text": "Reporting",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/"
+      }
+    },
+    {
+      "id": "open-custom-reports",
+      "title": "Open Custom Reports",
+      "body": "Click **Custom Reports**.",
+      "route": "^/reporting/",
+      "go": "/reporting/reports",
+      "target": [
+        {
+          "css": "#tb_custom-reports"
+        },
+        {
+          "text": "Custom Reports",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/reports"
+      }
+    },
+    {
+      "id": "new",
+      "title": "Start a report",
+      "body": "Click **Create your first report**.",
+      "route": "^/reporting/reports",
+      "go": "/reporting/reports",
+      "target": [
+        {
+          "text": "Create your first report",
+          "tag": "button"
+        },
+        {
+          "text": "New Report",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create your first report",
+      "advance": "click"
+    },
+    {
+      "id": "start",
+      "title": "Choose a starting point",
+      "body": "Start from scratch, or convert one of your dashboards into a report.",
+      "route": "^/reporting/reports",
+      "go": "/reporting/reports",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "name",
+      "title": "Name and cover page",
+      "body": "Rename the report at the top. Set up the cover page with your logo, heading and colours.",
+      "route": "^/reporting/reports",
+      "go": "/reporting/reports",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "widgets",
+      "title": "Add widgets",
+      "body": "Use the left panel to add widgets and sections: leads, appointments, revenue, ad results, whatever matters to you.",
+      "route": "^/reporting/reports",
+      "go": "/reporting/reports",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "pages",
+      "title": "Add pages",
+      "body": "Click the **+** icon to add more pages. Drag pages to reorder them.",
+      "route": "^/reporting/reports",
+      "go": "/reporting/reports",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save it",
+      "body": "Click **Save**.",
+      "route": "^/reporting/reports",
+      "go": "/reporting/reports",
+      "target": [
+        {
+          "text": "Save",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Save"
+    }
+  ]
+}

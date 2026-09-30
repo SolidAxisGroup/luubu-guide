@@ -1,0 +1,133 @@
+{
+  "id": "settings-whatsapp-template",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.whatsapp",
+  "title": "Create a WhatsApp message template",
+  "blurb": "Write an approved message you can send any time, like reminders or follow-ups.",
+  "icon": "chat",
+  "minutes": 5,
+  "keywords": [
+    "whatsapp template",
+    "template",
+    "approval",
+    "24 hour",
+    "reminder",
+    "broadcast"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-whatsapp",
+      "title": "Open WhatsApp",
+      "body": "Click **WhatsApp** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/whatsapp",
+      "target": [
+        {
+          "css": "[id='sb_whatsapp']"
+        },
+        {
+          "text": "WhatsApp",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/whatsapp"
+      }
+    },
+    {
+      "id": "templates",
+      "title": "Open Templates",
+      "body": "Click **Templates**.",
+      "route": "^/settings/whatsapp",
+      "go": "/settings/whatsapp",
+      "target": [
+        {
+          "text": "Templates"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Templates",
+      "advance": "click"
+    },
+    {
+      "id": "create",
+      "title": "Create a template",
+      "body": "Click **Create Template**.",
+      "route": "^/settings/whatsapp",
+      "go": "/settings/whatsapp",
+      "target": [
+        {
+          "text": "Create Template",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create Template"
+    },
+    {
+      "id": "body",
+      "title": "Write the message",
+      "body": "Add the body text. Use variables for things like first name or appointment time. A header, footer and buttons are optional.",
+      "route": "^/settings/whatsapp",
+      "go": "/settings/whatsapp",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "buttons",
+      "title": "Add buttons (optional)",
+      "body": "Quick reply buttons (like \"Yes, see you then\") make it easy for customers to answer.",
+      "route": "^/settings/whatsapp",
+      "go": "/settings/whatsapp",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "submit",
+      "title": "Submit for approval",
+      "body": "Submit it. Meta approves most templates within 24 hours.",
+      "route": "^/settings/whatsapp",
+      "go": "/settings/whatsapp",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Why templates? WhatsApp only lets you send free-form messages within 24 hours of the customer last messaging you."
+    }
+  ]
+}

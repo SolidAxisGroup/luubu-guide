@@ -1,0 +1,105 @@
+{
+  "id": "sites-client-portal-setup",
+  "kind": "howto",
+  "area": "sites",
+  "screen": "sites.clientportal",
+  "title": "Set up your client portal",
+  "blurb": "Give the portal your domain, logo and colours.",
+  "icon": "users",
+  "minutes": 6,
+  "keywords": [
+    "client portal",
+    "portal domain",
+    "branding",
+    "logo",
+    "setup",
+    "customer login"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Client Portal",
+      "body": "Click **Client Portal**.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/funnels-websites/client-portal/dashboard",
+      "target": [
+        {
+          "css": "#tb_clientportal"
+        },
+        {
+          "text": "Client Portal",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/client-portal"
+      }
+    },
+    {
+      "id": "domain",
+      "title": "Set the domain",
+      "body": "Open **Domain Setup**, choose a custom domain and enter a subdomain like **portal.yourbusiness.co.nz**.",
+      "route": "^/funnels-websites/client-portal",
+      "go": "/funnels-websites/client-portal/dashboard",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "dns",
+      "title": "Add the DNS record",
+      "body": "At your domain provider (1st Domains, Crazy Domains, Freeparking and so on), add the CNAME record shown on screen for that subdomain. Then come back and update the domain.",
+      "route": "^/funnels-websites/client-portal",
+      "go": "/funnels-websites/client-portal/dashboard",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Changes can take up to 24 to 48 hours to spread."
+    },
+    {
+      "id": "branding",
+      "title": "Add your branding",
+      "body": "Open **Branding**. Add the portal name, your two brand colours, a square logo and favicon, and a support email.",
+      "route": "^/funnels-websites/client-portal",
+      "go": "/funnels-websites/client-portal/dashboard",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save",
+      "body": "Save your settings, then open the portal address in a new tab to check it looks right.",
+      "route": "^/funnels-websites/client-portal",
+      "go": "/funnels-websites/client-portal/dashboard",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

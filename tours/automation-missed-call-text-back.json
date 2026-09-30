@@ -1,0 +1,163 @@
+{
+  "id": "automation-missed-call-text-back",
+  "kind": "howto",
+  "area": "automation",
+  "screen": "automation.workflow",
+  "title": "Text back missed calls",
+  "blurb": "Automatically text anyone whose call you could not answer.",
+  "icon": "phone",
+  "minutes": 5,
+  "keywords": [
+    "missed call",
+    "text back",
+    "call",
+    "voicemail",
+    "sms",
+    "phone"
+  ],
+  "steps": [
+    {
+      "id": "open-automation",
+      "title": "Open Automation",
+      "body": "Click **Automation** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_automation"
+        },
+        {
+          "text": "Automation",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/automation/"
+      }
+    },
+    {
+      "id": "open-workflow",
+      "title": "Open Workflows",
+      "body": "Click **Workflows** at the top.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "css": "#tb_workflow"
+        },
+        {
+          "text": "Workflows"
+        }
+      ],
+      "advance": {
+        "route": "^/automation/workflows(?!/settings)"
+      }
+    },
+    {
+      "id": "quick-option",
+      "title": "The quick option",
+      "body": "A simple text back can be switched on in **Settings** under **Phone System**. Build a workflow instead when you want to follow up, tag the caller, or alert your team.",
+      "route": "^/automation/workflows(?!/settings)",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "new-workflow",
+      "title": "Start a new workflow",
+      "body": "Click **Create Workflow** and start from scratch. At the top, rename it to something you will recognise later, like \"Missed call text back\".",
+      "route": "^/automation/workflows(?!/settings)",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Create Workflow"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create Workflow"
+    },
+    {
+      "id": "trigger",
+      "title": "Trigger on a missed call",
+      "body": "Click **Add New Trigger** and choose **Call Details**. Filter it to incoming calls with a status of not answered, busy or voicemail.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Call Details"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Call Details"
+    },
+    {
+      "id": "sms",
+      "title": "Send the text",
+      "body": "Add **Send SMS**: \"Sorry we missed you. We are on a job right now. How can we help?\"",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Send SMS"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Send SMS"
+    },
+    {
+      "id": "notify",
+      "title": "Let your team know",
+      "body": "Add **Send Internal Notification** or **Add Task** so someone calls them back.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Add Task"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add Task"
+    },
+    {
+      "id": "publish",
+      "title": "Save, test and publish",
+      "body": "Click **Save**. Run **Test Workflow** on your own contact, then switch **Draft** to **Publish** and save again.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Publish"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Publish",
+      "tip": "If the quick text back is also on in Phone System, turn one off so callers do not get two texts."
+    }
+  ]
+}

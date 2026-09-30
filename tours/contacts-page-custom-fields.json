@@ -1,0 +1,129 @@
+{
+  "id": "contacts-page-custom-fields",
+  "kind": "page",
+  "area": "contacts",
+  "screen": "contacts.contact-custom-fields-settings",
+  "title": "Tour: Custom fields",
+  "blurb": "Add your own fields to contacts, like job type, vehicle or policy number.",
+  "icon": "cog",
+  "minutes": 2,
+  "keywords": [
+    "custom fields",
+    "fields",
+    "contact fields",
+    "extra info",
+    "folders",
+    "data"
+  ],
+  "steps": [
+    {
+      "id": "open-contacts",
+      "title": "Open Contacts",
+      "body": "Click **Contacts** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_contacts"
+        },
+        {
+          "text": "Contacts",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/contacts/"
+      }
+    },
+    {
+      "id": "tab-contact-custom-fields-settings",
+      "title": "Open Custom Fields",
+      "body": "Click **Custom Fields** along the top.",
+      "route": "^/(contacts/|tasks|businesses/|settings/fields)",
+      "go": "/settings/fields",
+      "target": [
+        {
+          "css": "#tb_contact-custom-fields-settings"
+        },
+        {
+          "text": "Custom Fields",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/fields"
+      }
+    },
+    {
+      "id": "what",
+      "title": "What custom fields are",
+      "body": "Luubu comes with the basics like name and phone. Custom fields let you store the extra things you track, like property type, pet's name or next service date.",
+      "route": "^/settings/fields",
+      "go": "/settings/fields",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "object",
+      "title": "Contact or opportunity",
+      "body": "Use the selector at the top to choose whether you're looking at fields for contacts or for opportunities.",
+      "route": "^/settings/fields",
+      "go": "/settings/fields",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "tabs",
+      "title": "Fields and folders",
+      "body": "The **Fields** tab lists your fields. The **Folders** tab groups them, and each folder shows as its own section on the contact record.",
+      "route": "^/settings/fields",
+      "go": "/settings/fields",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Folders"
+    },
+    {
+      "id": "create",
+      "title": "Add a field",
+      "body": "Click **Create field** to add one.",
+      "route": "^/settings/fields",
+      "go": "/settings/fields",
+      "target": [
+        {
+          "text": "Create field",
+          "tag": "button"
+        },
+        {
+          "text": "Add Field",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create field"
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Next: try **Create a custom field** from the Guide.",
+      "route": "^/settings/fields",
+      "go": "/settings/fields",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

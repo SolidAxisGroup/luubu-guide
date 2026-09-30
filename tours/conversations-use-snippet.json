@@ -1,0 +1,87 @@
+{
+  "id": "conversations-use-snippet",
+  "kind": "howto",
+  "area": "conversations",
+  "screen": "conversations.conversations-tab",
+  "title": "Use a snippet in a reply",
+  "blurb": "Drop in a saved answer instead of typing the same thing again.",
+  "icon": "chat",
+  "minutes": 2,
+  "keywords": [
+    "snippet",
+    "template",
+    "canned response",
+    "saved reply",
+    "quick reply",
+    "faq"
+  ],
+  "steps": [
+    {
+      "id": "open-conversations",
+      "title": "Open Conversations",
+      "body": "Click **Conversations** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_conversations"
+        },
+        {
+          "text": "Conversations",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/conversations/"
+      }
+    },
+    {
+      "id": "open-chat",
+      "title": "Open the conversation",
+      "body": "Click the chat you want to reply to, and pick SMS or Email in the channel switcher.",
+      "route": "^/conversations/conversations",
+      "go": "/conversations/conversations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "snippet-icon",
+      "title": "Open your snippets",
+      "body": "Click the **Snippets** icon in the reply box toolbar. Your saved text or email snippets appear.",
+      "route": "^/conversations/conversations",
+      "go": "/conversations/conversations",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Snippets"
+    },
+    {
+      "id": "pick",
+      "title": "Pick one",
+      "body": "Search or scroll, then click the snippet. It drops into the reply box with the customer's name and other details already filled in.",
+      "route": "^/conversations/conversations",
+      "go": "/conversations/conversations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "send",
+      "title": "Tweak and send",
+      "body": "Adjust anything that needs a personal touch, then click send.",
+      "route": "^/conversations/conversations",
+      "go": "/conversations/conversations",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "No snippets yet? See **Create a text snippet** in the Guide."
+    }
+  ]
+}

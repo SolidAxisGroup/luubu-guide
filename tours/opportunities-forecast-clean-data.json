@@ -1,0 +1,85 @@
+{
+  "id": "opportunities-forecast-clean-data",
+  "kind": "howto",
+  "area": "opportunities",
+  "screen": "opportunities.opportunities-tab",
+  "title": "Get your forecast right",
+  "blurb": "Fill in values and close dates so your forecast means something.",
+  "icon": "chart",
+  "minutes": 3,
+  "keywords": [
+    "forecast",
+    "close date",
+    "value",
+    "clean up",
+    "accurate",
+    "deals"
+  ],
+  "steps": [
+    {
+      "id": "open-opportunities",
+      "title": "Open Opportunities",
+      "body": "Click **Opportunities** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_opportunities"
+        },
+        {
+          "text": "Opportunities",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/opportunities/"
+      }
+    },
+    {
+      "id": "list",
+      "title": "Use the list view",
+      "body": "Switch to list view so you can see value and close date for every deal.",
+      "route": "^/opportunities/list",
+      "go": "/opportunities/list",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "gaps",
+      "title": "Find the gaps",
+      "body": "Sort by value or expected close date to find deals with blanks.",
+      "route": "^/opportunities/list",
+      "go": "/opportunities/list",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "fill",
+      "title": "Fill them in",
+      "body": "Open each one and add the value and expected close date.",
+      "route": "^/opportunities/list",
+      "go": "/opportunities/list",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "close-old",
+      "title": "Close old deals",
+      "body": "Mark any dead deals as lost or abandoned so they stop inflating the forecast.",
+      "route": "^/opportunities/list",
+      "go": "/opportunities/list",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

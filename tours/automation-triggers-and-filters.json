@@ -1,0 +1,130 @@
+{
+  "id": "automation-triggers-and-filters",
+  "kind": "howto",
+  "area": "automation",
+  "screen": "automation.workflow",
+  "title": "Set triggers and filters",
+  "blurb": "Control exactly who enters a workflow and when.",
+  "icon": "flow",
+  "minutes": 4,
+  "keywords": [
+    "trigger",
+    "filter",
+    "start workflow",
+    "form submitted",
+    "tag",
+    "conditions"
+  ],
+  "steps": [
+    {
+      "id": "open-automation",
+      "title": "Open Automation",
+      "body": "Click **Automation** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_automation"
+        },
+        {
+          "text": "Automation",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/automation/"
+      }
+    },
+    {
+      "id": "open-workflow",
+      "title": "Open Workflows",
+      "body": "Click **Workflows** at the top.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "css": "#tb_workflow"
+        },
+        {
+          "text": "Workflows"
+        }
+      ],
+      "advance": {
+        "route": "^/automation/workflows(?!/settings)"
+      }
+    },
+    {
+      "id": "open",
+      "title": "Open a workflow",
+      "body": "Click the workflow you want to change, or create a new one.",
+      "route": "^/automation/workflows(?!/settings)",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "add-trigger",
+      "title": "Add a trigger",
+      "body": "Click **Add New Trigger**. Use the search box to find one fast, for example **Form Submitted**, **Contact Tag** or **Appointment Status**.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Add New Trigger"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add New Trigger"
+    },
+    {
+      "id": "filters",
+      "title": "Narrow it with filters",
+      "body": "In the trigger panel, add filters so only the right people get in. For example, only one form, only one calendar, or only when a certain tag is added.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "No filter means every matching event starts the workflow. Double-check before publishing."
+    },
+    {
+      "id": "more",
+      "title": "Use more than one trigger",
+      "body": "Add extra triggers if several things should start the same workflow, like a website form and a Facebook lead form. Any one of them will start it.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save the trigger",
+      "body": "Click **Save Trigger**, then **Save** at the top of the workflow.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Save Trigger"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Save Trigger"
+    }
+  ]
+}

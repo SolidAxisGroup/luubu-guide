@@ -1,0 +1,127 @@
+{
+  "id": "ai-page-knowledge-base",
+  "kind": "page",
+  "area": "ai",
+  "screen": "ai.ai-agents-knowledge-base",
+  "title": "Tour Knowledge Base",
+  "blurb": "Where your AI agents learn about your business.",
+  "icon": "book",
+  "minutes": 2,
+  "keywords": [
+    "knowledge base",
+    "train ai",
+    "faqs",
+    "website",
+    "documents",
+    "tour"
+  ],
+  "steps": [
+    {
+      "id": "open-ai-agents",
+      "title": "Open AI Agents",
+      "body": "Your bots answer from what is stored here. Click **AI Agents** in the left menu.",
+      "target": [
+        {
+          "css": "[id='sb_AI Agents']"
+        },
+        {
+          "text": "AI Agents",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/"
+      }
+    },
+    {
+      "id": "open-ai-agents-knowledge-base",
+      "title": "Open Knowledge Base",
+      "body": "Click the **Knowledge Base** tab.",
+      "route": "^/ai-agents/",
+      "go": "/ai-agents/knowledge-base",
+      "target": [
+        {
+          "css": "#tb_ai-agents-knowledge-base"
+        },
+        {
+          "text": "Knowledge Base"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/knowledge-base"
+      }
+    },
+    {
+      "id": "list",
+      "title": "Your knowledge bases",
+      "body": "Each knowledge base is a set of info your agents can use. One is enough for most businesses.",
+      "route": "^/ai-agents/knowledge-base",
+      "go": "/ai-agents/knowledge-base",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "add",
+      "title": "Add sources",
+      "body": "Inside a knowledge base, **Add Source** brings in content.",
+      "route": "^/ai-agents/knowledge-base",
+      "go": "/ai-agents/knowledge-base",
+      "target": [
+        {
+          "text": "Add Source"
+        },
+        {
+          "text": "Create knowledge base",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add Source",
+      "tip": "Don't see **Add Source**? Click **Create knowledge base** first."
+    },
+    {
+      "id": "types",
+      "title": "Source types",
+      "body": "Tabs split sources by type: **Web Crawler** (your website), **FAQ**, **File Upload**, **Rich Text**, **Tables** and **Web Search**.",
+      "route": "^/ai-agents/knowledge-base",
+      "go": "/ai-agents/knowledge-base",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "updates",
+      "title": "Updates are quick",
+      "body": "Change a source and your agents use the new info once it finishes processing. No retraining needed.",
+      "route": "^/ai-agents/knowledge-base",
+      "go": "/ai-agents/knowledge-base",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What to do first",
+      "body": "Next: try **Build your knowledge base from your website** from the Guide.",
+      "route": "^/ai-agents/knowledge-base",
+      "go": "/ai-agents/knowledge-base",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

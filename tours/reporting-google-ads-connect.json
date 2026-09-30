@@ -1,0 +1,99 @@
+{
+  "id": "reporting-google-ads-connect",
+  "kind": "howto",
+  "area": "reporting",
+  "screen": "settings.common.sidebar.lcIntegrations",
+  "title": "Connect Google Ads for reporting",
+  "blurb": "Link your Google Ads account so your ad results show in Luubu.",
+  "icon": "chart",
+  "minutes": 3,
+  "keywords": [
+    "google ads",
+    "connect",
+    "adwords",
+    "integration",
+    "ads account",
+    "mcc"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-integrations",
+      "title": "Open Integrations",
+      "body": "Click **Integrations** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/lc-integrations",
+      "target": [
+        {
+          "css": "[id='sb_common.sidebar.lcIntegrations']"
+        },
+        {
+          "text": "Integrations",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/lc-integrations"
+      }
+    },
+    {
+      "id": "google",
+      "title": "Connect Google",
+      "body": "Find **Google** and click **Connect**. Sign in with an account that has admin or manager access to your Google Ads.",
+      "route": "^/settings/lc-integrations",
+      "go": "/settings/lc-integrations",
+      "target": [
+        {
+          "text": "Google"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Google"
+    },
+    {
+      "id": "account",
+      "title": "Pick the ads account",
+      "body": "Choose the Google Ads account to report on. Using a manager (MCC) account? Pick the client account for this business.",
+      "route": "^/settings/lc-integrations",
+      "go": "/settings/lc-integrations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "check",
+      "title": "Check the report",
+      "body": "Open **Reporting** and **Google Ads**. Data can take a little while to appear.",
+      "route": "^/settings/lc-integrations",
+      "go": "/settings/lc-integrations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

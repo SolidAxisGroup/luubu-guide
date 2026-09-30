@@ -1,0 +1,149 @@
+{
+  "id": "ai-kb-upload-files",
+  "kind": "howto",
+  "area": "ai",
+  "screen": "ai.ai-agents-knowledge-base",
+  "title": "Upload price lists and documents",
+  "blurb": "Add PDFs, Word files and spreadsheets for your AI to learn from.",
+  "icon": "book",
+  "minutes": 4,
+  "keywords": [
+    "upload",
+    "pdf",
+    "price list",
+    "documents",
+    "file",
+    "knowledge base",
+    "csv"
+  ],
+  "steps": [
+    {
+      "id": "open-ai-agents",
+      "title": "Open AI Agents",
+      "body": "Click **AI Agents** in the left menu.",
+      "target": [
+        {
+          "css": "[id='sb_AI Agents']"
+        },
+        {
+          "text": "AI Agents",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/"
+      }
+    },
+    {
+      "id": "open-ai-agents-knowledge-base",
+      "title": "Open Knowledge Base",
+      "body": "Click the **Knowledge Base** tab.",
+      "route": "^/ai-agents/",
+      "go": "/ai-agents/knowledge-base",
+      "target": [
+        {
+          "css": "#tb_ai-agents-knowledge-base"
+        },
+        {
+          "text": "Knowledge Base"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/knowledge-base"
+      }
+    },
+    {
+      "id": "open",
+      "title": "Open your knowledge base",
+      "body": "Click the knowledge base your bots use.",
+      "route": "^/ai-agents/knowledge-base",
+      "go": "/ai-agents/knowledge-base",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "add",
+      "title": "Add a source",
+      "body": "Click **Add Source**.",
+      "route": "^/ai-agents/knowledge-base",
+      "go": "/ai-agents/knowledge-base",
+      "target": [
+        {
+          "text": "Add Source"
+        },
+        {
+          "text": "Create knowledge base",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add Source",
+      "tip": "Don't see **Add Source**? Click **Create knowledge base** first."
+    },
+    {
+      "id": "upload",
+      "title": "Upload a file",
+      "body": "Choose **File Upload** and pick your file. PDF, Word, PowerPoint and text files work.",
+      "route": "^/ai-agents/knowledge-base",
+      "go": "/ai-agents/knowledge-base",
+      "target": [
+        {
+          "text": "File Upload"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "File Upload"
+    },
+    {
+      "id": "table",
+      "title": "Price lists as tables",
+      "body": "For a spreadsheet price list, use **Tables** and upload a CSV.",
+      "route": "^/ai-agents/knowledge-base",
+      "go": "/ai-agents/knowledge-base",
+      "target": [
+        {
+          "text": "Tables"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Tables"
+    },
+    {
+      "id": "rich-text",
+      "title": "Type it in",
+      "body": "No file? **Rich Text** lets you type or paste policies and service details directly.",
+      "route": "^/ai-agents/knowledge-base",
+      "go": "/ai-agents/knowledge-base",
+      "target": [
+        {
+          "text": "Rich Text"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Rich Text"
+    }
+  ]
+}

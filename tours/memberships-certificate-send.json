@@ -1,0 +1,131 @@
+{
+  "id": "memberships-certificate-send",
+  "kind": "howto",
+  "area": "memberships",
+  "screen": "memberships.certificates",
+  "title": "Send a certificate by hand",
+  "blurb": "Issue a certificate for a workshop or training done outside Luubu.",
+  "icon": "star",
+  "minutes": 3,
+  "keywords": [
+    "certificate",
+    "send",
+    "issue",
+    "workshop",
+    "manual",
+    "credential"
+  ],
+  "steps": [
+    {
+      "id": "open-memberships",
+      "title": "Open Memberships",
+      "body": "Click **Memberships** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_memberships"
+        },
+        {
+          "text": "Memberships",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/memberships/"
+      }
+    },
+    {
+      "id": "open-credentials",
+      "title": "Open Credentials",
+      "body": "Click **Credentials**.",
+      "route": "^/memberships/",
+      "go": "/memberships/certificates/create-certificates",
+      "target": [
+        {
+          "css": "#tb_certificates"
+        },
+        {
+          "text": "Credentials",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/memberships/certificates"
+      }
+    },
+    {
+      "id": "pick",
+      "title": "Find the template",
+      "body": "Find the certificate you want to send.",
+      "route": "^/memberships/certificates",
+      "go": "/memberships/certificates/create-certificates",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "send",
+      "title": "Send it",
+      "body": "Click **Send**.",
+      "route": "^/memberships/certificates",
+      "go": "/memberships/certificates/create-certificates",
+      "target": [
+        {
+          "text": "Send"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Send",
+      "advance": "click"
+    },
+    {
+      "id": "details",
+      "title": "Fill in the details",
+      "body": "Enter the instructor's name and choose the recipient. You can add a new contact if they are not in Luubu yet.",
+      "route": "^/memberships/certificates",
+      "go": "/memberships/certificates/create-certificates",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "deliver",
+      "title": "Deliver",
+      "body": "Send it. They get an email with a link to download and share their certificate.",
+      "route": "^/memberships/certificates",
+      "go": "/memberships/certificates/create-certificates",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "issued",
+      "title": "Check it went",
+      "body": "You will see it listed under **Issued Certificates**.",
+      "route": "^/memberships/certificates",
+      "go": "/memberships/certificates/create-certificates",
+      "target": [
+        {
+          "text": "Issued Certificates"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Issued Certificates"
+    }
+  ]
+}

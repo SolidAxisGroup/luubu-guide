@@ -1,0 +1,134 @@
+{
+  "id": "settings-objects-create",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.objects",
+  "title": "Create a custom object",
+  "blurb": "Track things like vehicles, properties or pets alongside your contacts.",
+  "icon": "grid",
+  "minutes": 4,
+  "keywords": [
+    "custom object",
+    "create object",
+    "records",
+    "vehicles",
+    "properties",
+    "pets",
+    "assets"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-objects",
+      "title": "Open Objects",
+      "body": "Click **Objects** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/objects",
+      "target": [
+        {
+          "css": "[id='sb_objects']"
+        },
+        {
+          "text": "Objects",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/objects"
+      }
+    },
+    {
+      "id": "add",
+      "title": "Add an object",
+      "body": "Click **Add Custom Object**.",
+      "route": "^/settings/objects",
+      "go": "/settings/objects",
+      "target": [
+        {
+          "text": "Add Custom Object",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add Custom Object",
+      "advance": "click"
+    },
+    {
+      "id": "names",
+      "title": "Name it",
+      "body": "Enter the singular name (Vehicle) and the plural (Vehicles).",
+      "route": "^/settings/objects",
+      "go": "/settings/objects",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "primary",
+      "title": "Main display field",
+      "body": "Choose the field that names each record, like Rego Plate. This cannot be changed later, so pick carefully.",
+      "route": "^/settings/objects",
+      "go": "/settings/objects",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "extra",
+      "title": "Icon and description",
+      "body": "Pick an icon and add a short description so your team knows what it is for.",
+      "route": "^/settings/objects",
+      "go": "/settings/objects",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "create",
+      "title": "Create it",
+      "body": "Click **Create Custom Object**.",
+      "route": "^/settings/objects",
+      "go": "/settings/objects",
+      "target": [
+        {
+          "text": "Create Custom Object",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create Custom Object"
+    }
+  ]
+}

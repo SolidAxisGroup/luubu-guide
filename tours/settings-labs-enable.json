@@ -1,0 +1,91 @@
+{
+  "id": "settings-labs-enable",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.labs",
+  "title": "Turn on a Labs feature",
+  "blurb": "Switch on an early-access feature for your account.",
+  "icon": "bot",
+  "minutes": 2,
+  "keywords": [
+    "labs",
+    "beta",
+    "enable feature",
+    "turn on",
+    "new feature"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-labs",
+      "title": "Open Labs",
+      "body": "Click **Labs** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/labs",
+      "target": [
+        {
+          "css": "[id='sb_labs']"
+        },
+        {
+          "text": "Labs",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/labs"
+      }
+    },
+    {
+      "id": "read",
+      "title": "Read about it",
+      "body": "Find the feature and read its short description so you know where it will show up.",
+      "route": "^/settings/labs",
+      "go": "/settings/labs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "switch",
+      "title": "Switch it on",
+      "body": "Turn on its switch. Only admins can do this.",
+      "route": "^/settings/labs",
+      "go": "/settings/labs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "refresh",
+      "title": "Refresh",
+      "body": "Refresh the page. The feature appears in the part of Luubu it belongs to.",
+      "route": "^/settings/labs",
+      "go": "/settings/labs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

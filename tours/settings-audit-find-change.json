@@ -1,0 +1,104 @@
+{
+  "id": "settings-audit-find-change",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.audit-logs-location",
+  "title": "Find out who changed something",
+  "blurb": "Track down a deleted contact or an edited workflow.",
+  "icon": "book",
+  "minutes": 3,
+  "keywords": [
+    "audit",
+    "who deleted",
+    "changes",
+    "history",
+    "user activity",
+    "track changes"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-audit-logs",
+      "title": "Open Audit Logs",
+      "body": "Click **Audit Logs** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/audit/logs",
+      "target": [
+        {
+          "css": "[id='sb_audit-logs-location']"
+        },
+        {
+          "text": "Audit Logs",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/audit/logs"
+      }
+    },
+    {
+      "id": "module",
+      "title": "Pick the area",
+      "body": "Filter by module, like Contacts or Workflows.",
+      "route": "^/settings/audit/logs",
+      "go": "/settings/audit/logs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "action",
+      "title": "Pick the action",
+      "body": "Filter by action: Create, Update or Delete. Deleted records are usually the first thing people look for.",
+      "route": "^/settings/audit/logs",
+      "go": "/settings/audit/logs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "time",
+      "title": "Narrow the time",
+      "body": "Set the time range to when you think it happened.",
+      "route": "^/settings/audit/logs",
+      "go": "/settings/audit/logs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "open",
+      "title": "Read the detail",
+      "body": "Click a row to see who did it and what changed. Use the arrow keys to step through rows.",
+      "route": "^/settings/audit/logs",
+      "go": "/settings/audit/logs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

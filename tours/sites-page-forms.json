@@ -1,0 +1,116 @@
+{
+  "id": "sites-page-forms",
+  "kind": "page",
+  "area": "sites",
+  "screen": "sites.form-builder",
+  "title": "Tour the Forms page",
+  "blurb": "See where your forms live, their submissions and how to build one.",
+  "icon": "page",
+  "minutes": 2,
+  "keywords": [
+    "forms",
+    "form builder",
+    "contact form",
+    "submissions",
+    "lead form",
+    "tour"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Forms",
+      "body": "Click **Forms**. Forms capture enquiries and put each person straight into **Contacts**.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/form-builder/main",
+      "target": [
+        {
+          "css": "#tb_form-builder"
+        },
+        {
+          "text": "Forms",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/form-builder"
+      }
+    },
+    {
+      "id": "add-form",
+      "title": "Build a form",
+      "body": "**Create form** lets you start blank or from a template.",
+      "route": "^/form-builder",
+      "go": "/form-builder/main",
+      "target": [
+        {
+          "text": "Create form",
+          "tag": "button"
+        },
+        {
+          "text": "Add Form",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create form"
+    },
+    {
+      "id": "list",
+      "title": "Your forms",
+      "body": "Every form is listed here. Click one to edit it in the builder.",
+      "route": "^/form-builder",
+      "go": "/form-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "submissions",
+      "title": "See submissions",
+      "body": "Each form keeps its own submissions, so you can see exactly what people entered and when.",
+      "route": "^/form-builder",
+      "go": "/form-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Next: try **Build a contact or quote form** from the Guide.",
+      "route": "^/form-builder",
+      "go": "/form-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

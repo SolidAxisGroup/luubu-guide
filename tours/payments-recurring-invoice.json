@@ -1,0 +1,137 @@
+{
+  "id": "payments-recurring-invoice",
+  "kind": "howto",
+  "area": "payments",
+  "screen": "payments.payment-invoices",
+  "title": "Set up a recurring invoice",
+  "blurb": "Bill the same customer every week, month or year automatically.",
+  "icon": "card",
+  "minutes": 5,
+  "keywords": [
+    "recurring invoice",
+    "repeat",
+    "monthly invoice",
+    "retainer",
+    "automatic billing",
+    "schedule"
+  ],
+  "steps": [
+    {
+      "id": "open-payments",
+      "title": "Open Payments",
+      "body": "Click **Payments** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_payments"
+        },
+        {
+          "text": "Payments",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/"
+      }
+    },
+    {
+      "id": "tab-payment-invoices",
+      "title": "Open Invoices & Estimates",
+      "body": "Click **Invoices & Estimates** along the top.",
+      "route": "^/payments/",
+      "go": "/payments/invoices",
+      "target": [
+        {
+          "css": "#tb_payment-invoices"
+        },
+        {
+          "text": "Invoices & Estimates",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/invoices"
+      }
+    },
+    {
+      "id": "new",
+      "title": "Start a recurring invoice",
+      "body": "Click **New**, then **New Recurring Invoice**.",
+      "route": "^/payments/invoices",
+      "go": "/payments/invoices",
+      "target": [
+        {
+          "text": "New",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New"
+    },
+    {
+      "id": "customer",
+      "title": "Customer and items",
+      "body": "Choose the customer and add the products, e.g. \"Monthly lawn mowing $120 + GST\".",
+      "route": "^/payments/invoices",
+      "go": "/payments/invoices",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "frequency",
+      "title": "How often",
+      "body": "Pick the frequency: weekly, monthly, yearly or custom.",
+      "route": "^/payments/invoices",
+      "go": "/payments/invoices",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "dates",
+      "title": "Start and finish",
+      "body": "Set the start date and when it should stop: a date, a number of invoices, or never.",
+      "route": "^/payments/invoices",
+      "go": "/payments/invoices",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "autopay",
+      "title": "Optional: charge the card",
+      "body": "If the customer has a saved card, you can have each invoice paid automatically.",
+      "route": "^/payments/invoices",
+      "go": "/payments/invoices",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "check",
+      "title": "Check, then schedule",
+      "body": "Double-check price, GST and frequency now. Once it is active or scheduled you cannot edit those. Then save and schedule it.",
+      "tip": "Find it later under **Recurring Templates**.",
+      "route": "^/payments/invoices",
+      "go": "/payments/invoices",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

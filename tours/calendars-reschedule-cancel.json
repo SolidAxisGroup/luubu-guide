@@ -1,0 +1,103 @@
+{
+  "id": "calendars-reschedule-cancel",
+  "kind": "howto",
+  "area": "calendars",
+  "screen": "calendars.calendars-tab",
+  "title": "Reschedule or cancel an appointment",
+  "blurb": "Move a booking to a new time or cancel it.",
+  "icon": "calendar",
+  "minutes": 2,
+  "keywords": [
+    "reschedule",
+    "cancel",
+    "move booking",
+    "change time",
+    "appointment"
+  ],
+  "steps": [
+    {
+      "id": "open-calendars",
+      "title": "Open Calendars",
+      "body": "Click **Calendars** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_calendars"
+        },
+        {
+          "text": "Calendars",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/calendars/"
+      }
+    },
+    {
+      "id": "tab-calendars-tab",
+      "title": "Open Calendar view",
+      "body": "Click **Calendar view** along the top.",
+      "route": "^/calendars/",
+      "go": "/calendars/view",
+      "target": [
+        {
+          "css": "#tb_calendars-tab"
+        },
+        {
+          "text": "Calendar view",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/calendars/view"
+      }
+    },
+    {
+      "id": "find",
+      "title": "Find the booking",
+      "body": "Go to the right day and click the appointment to open it.",
+      "route": "^/calendars/view",
+      "go": "/calendars/view",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "move",
+      "title": "Move it",
+      "body": "Change the date and time, then save. The customer gets the reschedule message if it is switched on.",
+      "route": "^/calendars/view",
+      "go": "/calendars/view",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "cancel",
+      "title": "Or cancel it",
+      "body": "To cancel, change the status to **Cancelled** and save. The slot opens up again straight away.",
+      "route": "^/calendars/view",
+      "go": "/calendars/view",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "note",
+      "title": "Leave a note",
+      "body": "Add a short note on why, so the rest of the team knows the story.",
+      "route": "^/calendars/view",
+      "go": "/calendars/view",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

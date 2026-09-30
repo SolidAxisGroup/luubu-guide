@@ -1,0 +1,124 @@
+{
+  "id": "automation-workflow-folders",
+  "kind": "howto",
+  "area": "automation",
+  "screen": "automation.workflow",
+  "title": "Organise workflows into folders",
+  "blurb": "Group workflows by job so you can find them fast.",
+  "icon": "grid",
+  "minutes": 2,
+  "keywords": [
+    "folder",
+    "organise",
+    "tidy",
+    "move workflow",
+    "rename folder"
+  ],
+  "steps": [
+    {
+      "id": "open-automation",
+      "title": "Open Automation",
+      "body": "Click **Automation** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_automation"
+        },
+        {
+          "text": "Automation",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/automation/"
+      }
+    },
+    {
+      "id": "open-workflow",
+      "title": "Open Workflows",
+      "body": "Click **Workflows** at the top.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "css": "#tb_workflow"
+        },
+        {
+          "text": "Workflows"
+        }
+      ],
+      "advance": {
+        "route": "^/automation/workflows(?!/settings)"
+      }
+    },
+    {
+      "id": "create",
+      "title": "Create a folder",
+      "body": "Click **Create Folder**, give it a name like \"Bookings\" and save.",
+      "route": "^/automation/workflows(?!/settings)",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Create Folder"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create Folder",
+      "tip": "Open a folder and create another to nest it. Two or three levels is plenty."
+    },
+    {
+      "id": "move",
+      "title": "Move a workflow in",
+      "body": "Click the three dots next to a workflow and choose **Move To Folder**.",
+      "route": "^/automation/workflows(?!/settings)",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Move To Folder"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Move To Folder"
+    },
+    {
+      "id": "move-here",
+      "title": "Drop it in place",
+      "body": "Open the folder you want and click **Move Here**.",
+      "route": "^/automation/workflows(?!/settings)",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Move Here"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Move Here"
+    },
+    {
+      "id": "rename",
+      "title": "Rename or remove",
+      "body": "Use the three dots on a folder to **Rename Folder** or **Delete Folder**. Deleting a folder keeps its workflows. They move up a level.",
+      "route": "^/automation/workflows(?!/settings)",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

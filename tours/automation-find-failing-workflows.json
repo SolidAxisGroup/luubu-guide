@@ -1,0 +1,99 @@
+{
+  "id": "automation-find-failing-workflows",
+  "kind": "howto",
+  "area": "automation",
+  "screen": "automation.workflow-overview",
+  "title": "Find and fix failing workflows",
+  "blurb": "Spot workflows with errors before customers notice.",
+  "icon": "chart",
+  "minutes": 3,
+  "keywords": [
+    "errors",
+    "failing",
+    "needs review",
+    "broken workflow",
+    "check",
+    "health"
+  ],
+  "steps": [
+    {
+      "id": "open-automation",
+      "title": "Open Automation",
+      "body": "Click **Automation** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_automation"
+        },
+        {
+          "text": "Automation",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/automation/"
+      }
+    },
+    {
+      "id": "open-workflow-overview",
+      "title": "Open Overview",
+      "body": "Click **Overview** at the top.",
+      "route": "^/automation/",
+      "go": "/automation/overview",
+      "target": [
+        {
+          "css": "#tb_workflow-overview"
+        },
+        {
+          "text": "Overview"
+        }
+      ],
+      "advance": {
+        "route": "^/automation/overview"
+      }
+    },
+    {
+      "id": "review",
+      "title": "Open Needs Review",
+      "body": "Click **Needs Review**. You will see each workflow with errors and what went wrong.",
+      "route": "^/automation/overview",
+      "go": "/automation/overview",
+      "target": [
+        {
+          "text": "Needs Review"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Needs Review"
+    },
+    {
+      "id": "read",
+      "title": "Read the error",
+      "body": "Most errors are missing details: a contact with no mobile, a deleted email template, or a step that was never finished.",
+      "route": "^/automation/overview",
+      "go": "/automation/overview",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "fix",
+      "title": "Fix it in the workflow",
+      "body": "Open the workflow from the list, fix the step, save, then check its **Execution Logs** to confirm the next run works.",
+      "route": "^/automation/overview",
+      "go": "/automation/overview",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Check this screen once a week. It takes a minute."
+    }
+  ]
+}

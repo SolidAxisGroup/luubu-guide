@@ -1,0 +1,100 @@
+{
+  "id": "contacts-add-to-workflow",
+  "kind": "howto",
+  "area": "contacts",
+  "screen": "contacts.lists",
+  "title": "Add a group of contacts to a workflow",
+  "blurb": "Drop a list of people into an automated follow-up sequence.",
+  "icon": "flow",
+  "minutes": 3,
+  "keywords": [
+    "workflow",
+    "automation",
+    "add to workflow",
+    "bulk",
+    "enrol",
+    "sequence",
+    "nurture"
+  ],
+  "steps": [
+    {
+      "id": "open-contacts",
+      "title": "Open Contacts",
+      "body": "Click **Contacts** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_contacts"
+        },
+        {
+          "text": "Contacts",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/contacts/"
+      }
+    },
+    {
+      "id": "pick",
+      "title": "Filter to the right people",
+      "body": "Use a smart list or **Advanced Filters** to show only the people who should go into the workflow.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Advanced Filters"
+    },
+    {
+      "id": "select",
+      "title": "Select them",
+      "body": "Tick the contacts, or the top box for everyone shown.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "automation",
+      "title": "Choose the automation option",
+      "body": "In the toolbar, click the automation icon to add them to a workflow.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "setup",
+      "title": "Pick the workflow",
+      "body": "Give the job a name, choose **Workflow** as the type, then pick your workflow. It must be published to show up.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "mode",
+      "title": "Choose the timing",
+      "body": "Enrol them all at once, at a scheduled time, or in drip mode a batch at a time. Confirm to start.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Track the job under the **Bulk Actions** tab."
+    }
+  ]
+}

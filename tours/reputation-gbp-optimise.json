@@ -1,0 +1,129 @@
+{
+  "id": "reputation-gbp-optimise",
+  "kind": "howto",
+  "area": "reputation",
+  "screen": "reputation.gbp-optimization",
+  "title": "Optimise your Google Business Profile",
+  "blurb": "Fill every gap in your Google profile so you show up in more local searches.",
+  "icon": "star",
+  "minutes": 8,
+  "keywords": [
+    "google business profile",
+    "gbp",
+    "optimise",
+    "google maps",
+    "photos",
+    "hours",
+    "local seo"
+  ],
+  "steps": [
+    {
+      "id": "open-reputation",
+      "title": "Open Reputation",
+      "body": "Click **Reputation** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reputation"
+        },
+        {
+          "text": "Reputation",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reputation/"
+      }
+    },
+    {
+      "id": "open-gbp-optimization",
+      "title": "Open GBP Optimization",
+      "body": "Click **GBP Optimization**. If asked, connect your Google Business Profile first.",
+      "route": "^/reputation/",
+      "go": "/reputation/gbp",
+      "target": [
+        {
+          "css": "#tb_gbp-optimization"
+        },
+        {
+          "text": "GBP Optimization",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reputation/gbp"
+      }
+    },
+    {
+      "id": "description",
+      "title": "Write your description",
+      "body": "Say what you do, where, and for whom, in plain words. Mention the suburbs or towns you cover.",
+      "route": "^/reputation/gbp",
+      "go": "/reputation/gbp",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "categories",
+      "title": "Categories and services",
+      "body": "Set your main category (like 'Plumber' or 'Physiotherapist') and add the services you actually offer.",
+      "route": "^/reputation/gbp",
+      "go": "/reputation/gbp",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "photos",
+      "title": "Add photos",
+      "body": "Add a profile photo, a cover photo and real photos of your work. Fresh photos help.",
+      "route": "^/reputation/gbp",
+      "go": "/reputation/gbp",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "hours",
+      "title": "Hours and contact",
+      "body": "Check hours, phone and address. Add a text message or WhatsApp option if you use them.",
+      "route": "^/reputation/gbp",
+      "go": "/reputation/gbp",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "social",
+      "title": "Social links",
+      "body": "Add links to your Facebook, Instagram and other profiles.",
+      "route": "^/reputation/gbp",
+      "go": "/reputation/gbp",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save and wait",
+      "body": "Save. Most changes sync within minutes, but Google can take up to 24 hours to approve them.",
+      "route": "^/reputation/gbp",
+      "go": "/reputation/gbp",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

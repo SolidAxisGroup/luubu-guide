@@ -1,0 +1,111 @@
+{
+  "id": "opportunities-bulk-actions-check-import",
+  "kind": "howto",
+  "area": "opportunities",
+  "screen": "opportunities.bulk-actions",
+  "title": "Check an opportunity import",
+  "blurb": "Confirm your deals came in and fix any rows that failed.",
+  "icon": "card",
+  "minutes": 3,
+  "keywords": [
+    "import",
+    "errors",
+    "failed rows",
+    "bulk actions",
+    "opportunities",
+    "csv"
+  ],
+  "steps": [
+    {
+      "id": "open-opportunities",
+      "title": "Open Opportunities",
+      "body": "Click **Opportunities** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_opportunities"
+        },
+        {
+          "text": "Opportunities",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/opportunities/"
+      }
+    },
+    {
+      "id": "tab-bulk-actions",
+      "title": "Open Bulk Actions",
+      "body": "Click **Bulk Actions** along the top.",
+      "route": "^/opportunities/",
+      "go": "/opportunities/bulk-actions",
+      "target": [
+        {
+          "css": "#tb_bulk-actions"
+        },
+        {
+          "text": "Bulk Actions",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/opportunities/bulk-actions"
+      }
+    },
+    {
+      "id": "find",
+      "title": "Find your import",
+      "body": "Your latest import is at the top of the list.",
+      "route": "^/opportunities/bulk-actions",
+      "go": "/opportunities/bulk-actions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "stats",
+      "title": "Open the stats",
+      "body": "Click **Show Stats**.",
+      "route": "^/opportunities/bulk-actions",
+      "go": "/opportunities/bulk-actions",
+      "target": [
+        {
+          "text": "Show Stats"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Show Stats"
+    },
+    {
+      "id": "errors",
+      "title": "Download the error log",
+      "body": "Go to the errors and download the log. Common causes are a missing contact, or a pipeline or stage name that doesn't match exactly.",
+      "route": "^/opportunities/bulk-actions",
+      "go": "/opportunities/bulk-actions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "fix",
+      "title": "Fix and re-import",
+      "body": "Fix those rows, save them as a new CSV, and import again from the Opportunities board.",
+      "route": "^/opportunities/bulk-actions",
+      "go": "/opportunities/bulk-actions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

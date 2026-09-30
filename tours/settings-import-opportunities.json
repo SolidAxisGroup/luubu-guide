@@ -1,0 +1,133 @@
+{
+  "id": "settings-import-opportunities",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.import-data",
+  "title": "Import opportunities",
+  "blurb": "Load open deals or jobs into a pipeline in one go.",
+  "icon": "chart",
+  "minutes": 5,
+  "keywords": [
+    "import opportunities",
+    "deals",
+    "pipeline",
+    "csv",
+    "jobs",
+    "upload"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-import-data",
+      "title": "Open Import Data",
+      "body": "Click **Import Data** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/import-data",
+      "target": [
+        {
+          "css": "[id='sb_import-data']"
+        },
+        {
+          "text": "Import Data",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/import-data"
+      }
+    },
+    {
+      "id": "prep",
+      "title": "Prepare the file",
+      "body": "Include the contact's name, email or phone, plus opportunity name, pipeline, stage, status and value.",
+      "route": "^/settings/import-data",
+      "go": "/settings/import-data",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Create the pipeline and stages first. Names in the file must match exactly."
+    },
+    {
+      "id": "start",
+      "title": "Start the import",
+      "body": "Click **Import** and choose Opportunities (or both contacts and opportunities).",
+      "route": "^/settings/import-data",
+      "go": "/settings/import-data",
+      "target": [
+        {
+          "text": "Import",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Import"
+    },
+    {
+      "id": "upload",
+      "title": "Upload the file",
+      "body": "Click **Upload File** and pick your CSV.",
+      "route": "^/settings/import-data",
+      "go": "/settings/import-data",
+      "target": [
+        {
+          "text": "Upload File",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Upload File"
+    },
+    {
+      "id": "map",
+      "title": "Match the columns",
+      "body": "Map each column, making sure pipeline and stage are mapped correctly.",
+      "route": "^/settings/import-data",
+      "go": "/settings/import-data",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "finish",
+      "title": "Finish",
+      "body": "Review and start the import. Deals appear in your pipeline once it finishes.",
+      "route": "^/settings/import-data",
+      "go": "/settings/import-data",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

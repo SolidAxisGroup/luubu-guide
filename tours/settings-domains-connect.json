@@ -1,0 +1,135 @@
+{
+  "id": "settings-domains-connect",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.domains-urlRedirects",
+  "title": "Connect your domain",
+  "blurb": "Put your Luubu website on your own web address.",
+  "icon": "globe",
+  "minutes": 6,
+  "keywords": [
+    "domain",
+    "connect domain",
+    "dns",
+    "website address",
+    "co.nz",
+    "cname",
+    "a record"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-domains-and-url-redirects",
+      "title": "Open Domains & URL Redirects",
+      "body": "Click **Domains & URL Redirects** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/domain",
+      "target": [
+        {
+          "css": "[id='sb_domains-urlRedirects']"
+        },
+        {
+          "text": "Domains & URL Redirects",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/domain"
+      }
+    },
+    {
+      "id": "connect",
+      "title": "Start",
+      "body": "Click **Connect a domain** and type your domain, like yourbusiness.co.nz or www.yourbusiness.co.nz.",
+      "route": "^/settings/domain",
+      "go": "/settings/domain",
+      "target": [
+        {
+          "text": "Connect a domain",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Connect a domain"
+    },
+    {
+      "id": "auto",
+      "title": "Easy way",
+      "body": "If your domain provider is supported, click **Continue** and log in to your provider. The records are added for you.",
+      "route": "^/settings/domain",
+      "go": "/settings/domain",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Continue"
+    },
+    {
+      "id": "manual",
+      "title": "Manual way",
+      "body": "Otherwise click **Add record manually** and copy the records shown into your provider's DNS settings.",
+      "route": "^/settings/domain",
+      "go": "/settings/domain",
+      "target": [
+        {
+          "text": "Add record manually",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add record manually",
+      "tip": "Using Cloudflare? Set the records to DNS only, not proxied."
+    },
+    {
+      "id": "verify",
+      "title": "Verify",
+      "body": "Back in Luubu, verify the domain. DNS changes can take up to 24 hours, but usually far less.",
+      "route": "^/settings/domain",
+      "go": "/settings/domain",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "Link your site",
+      "body": "Once verified, choose which website or funnel it shows. See **Link a domain to your website**.",
+      "route": "^/settings/domain",
+      "go": "/settings/domain",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

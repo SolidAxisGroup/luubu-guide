@@ -1,0 +1,98 @@
+{
+  "id": "sites-store-add-product",
+  "kind": "howto",
+  "area": "sites",
+  "screen": "sites.stores",
+  "title": "Add a product to your store",
+  "blurb": "Create a product with photos and price, and show it in your online store.",
+  "icon": "card",
+  "minutes": 4,
+  "keywords": [
+    "product",
+    "add product",
+    "price",
+    "store",
+    "photos",
+    "variants",
+    "stock"
+  ],
+  "steps": [
+    {
+      "id": "open-products",
+      "title": "Open Products",
+      "body": "Go to **Payments** and click **Products**. Your store reads products from here.",
+      "route": "^/payments/",
+      "go": "/payments/products",
+      "target": [
+        {
+          "css": "#tb_payments-products"
+        },
+        {
+          "text": "Products",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/products"
+      }
+    },
+    {
+      "id": "create-product",
+      "title": "Create the product",
+      "body": "Click **Create Product**.",
+      "route": "^/payments/products",
+      "go": "/payments/products",
+      "target": [
+        {
+          "text": "Create Product",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create Product",
+      "advance": "click"
+    },
+    {
+      "id": "details",
+      "title": "Add the details",
+      "body": "Give it a clear title and description, and upload square photos (1024 by 1024 works well).",
+      "route": "^/payments/products",
+      "go": "/payments/products",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "price",
+      "title": "Set the price",
+      "body": "Add a price. Choose one-time for a normal sale or recurring for a subscription. Prices are in NZD unless your account is set otherwise.",
+      "route": "^/payments/products",
+      "go": "/payments/products",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "in-store",
+      "title": "Show it in the store",
+      "body": "Switch on **Include in Online Store**, pick a collection if you use them, then save.",
+      "route": "^/payments/products",
+      "go": "/payments/products",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Add variants like size or colour if customers need to choose."
+    }
+  ]
+}

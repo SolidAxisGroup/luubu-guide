@@ -1,0 +1,83 @@
+{
+  "id": "build-workflow",
+  "kind": "howto",
+  "area": "start",
+  "screen": "automation.workflow",
+  "title": "Set up a workflow",
+  "blurb": "Automate follow-ups, reminders and lead nurturing, or let AI build it.",
+  "icon": "flow",
+  "minutes": 5,
+  "keywords": [
+    "workflow",
+    "automation",
+    "automate",
+    "trigger",
+    "follow up",
+    "nurture",
+    "reminder"
+  ],
+  "steps": [
+    {
+      "id": "open-automation",
+      "title": "Open Automation",
+      "body": "Workflows do your follow-up for you. Click **Automation** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_automation"
+        },
+        {
+          "text": "Automation",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/automation/"
+      }
+    },
+    {
+      "id": "ai-builder",
+      "title": "Just describe it",
+      "body": "The fastest way: type what you want in **What do you want to automate?** and press the arrow. For example:\n**When someone fills in my contact form, email them a welcome message and text me their details.**\nAI builds the workflow for you to check.",
+      "route": "^/automation/workflows",
+      "go": "/automation/workflows",
+      "target": {
+        "frame": true
+      },
+      "lookFor": "What do you want to automate?"
+    },
+    {
+      "id": "templates",
+      "title": "Or start from a template",
+      "body": "Scroll down to **Start with a Template**. Good first picks: **Appointment Confirmation**, **Email Drip Sequence** and **FAQ Auto Reply**.",
+      "route": "^/automation/workflows",
+      "go": "/automation/workflows",
+      "target": {
+        "frame": true
+      },
+      "lookFor": "Start with a Template"
+    },
+    {
+      "id": "scratch",
+      "title": "Or build from scratch",
+      "body": "Click **Create workflow**, then **Start from scratch**. Add a **Trigger** (what starts it, like a form submitted), then press **+** to add actions like Send Email, Send SMS or Wait.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": {
+        "frame": true
+      },
+      "lookFor": "Create workflow"
+    },
+    {
+      "id": "publish",
+      "title": "Test, then publish",
+      "body": "Inside your workflow, use **Test Workflow** with your own contact first. When it looks right, switch **Draft** to **Publish** at the top right and click **Save**.",
+      "tip": "Nothing runs until it's published. That makes it safe to experiment.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": {
+        "frame": true
+      },
+      "lookFor": "Publish"
+    }
+  ]
+}

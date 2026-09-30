@@ -1,0 +1,128 @@
+{
+  "id": "contacts-import-spreadsheet",
+  "kind": "howto",
+  "area": "contacts",
+  "screen": "contacts.lists",
+  "title": "Import contacts from a spreadsheet",
+  "blurb": "Bring your existing customers in from Excel or a CSV file.",
+  "icon": "users",
+  "minutes": 5,
+  "keywords": [
+    "import",
+    "csv",
+    "excel",
+    "upload",
+    "spreadsheet",
+    "customers",
+    "bulk upload",
+    "migrate"
+  ],
+  "steps": [
+    {
+      "id": "open-contacts",
+      "title": "Open Contacts",
+      "body": "Click **Contacts** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_contacts"
+        },
+        {
+          "text": "Contacts",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/contacts/"
+      }
+    },
+    {
+      "id": "prep",
+      "title": "Get your file ready",
+      "body": "Save your spreadsheet as a CSV file. Keep a header row with column names like First Name, Phone and Email. Each person needs at least a name, email or phone.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Files can be up to 30 MB. Try a small test file of 5 rows first."
+    },
+    {
+      "id": "import",
+      "title": "Start the import",
+      "body": "Click **Import**.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "css": "#import-contact-btn"
+        },
+        {
+          "text": "Import",
+          "tag": "button"
+        },
+        {
+          "text": "Import Contacts",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Import"
+    },
+    {
+      "id": "upload",
+      "title": "Upload your file",
+      "body": "Choose to import contacts, then drag your CSV in. Pick whether to create new contacts, update existing ones, or both.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "map",
+      "title": "Match the columns",
+      "body": "Check each column in your file is matched to the right Luubu field. Fix any that aren't, and make sure the required fields are mapped.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "options",
+      "title": "Tag them",
+      "body": "Add a tag like \"imported-2026\" so you can find this group later. You can also create a smart list for them.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "finish",
+      "title": "Confirm and import",
+      "body": "Confirm you have permission to contact these people, then start the import. Check progress under the **Bulk Actions** tab.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Bulk Actions"
+    }
+  ]
+}

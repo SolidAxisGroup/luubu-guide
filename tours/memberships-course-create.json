@@ -1,0 +1,143 @@
+{
+  "id": "memberships-course-create",
+  "kind": "howto",
+  "area": "memberships",
+  "screen": "memberships.courses",
+  "title": "Create a course",
+  "blurb": "Start a new course with a title, description, image and price.",
+  "icon": "book",
+  "minutes": 4,
+  "keywords": [
+    "course",
+    "create course",
+    "new course",
+    "training",
+    "online course",
+    "product"
+  ],
+  "steps": [
+    {
+      "id": "open-memberships",
+      "title": "Open Memberships",
+      "body": "Click **Memberships** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_memberships"
+        },
+        {
+          "text": "Memberships",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/memberships/"
+      }
+    },
+    {
+      "id": "open-courses",
+      "title": "Open Courses",
+      "body": "Click **Courses**.",
+      "route": "^/memberships/",
+      "go": "/memberships/courses/dashboard-v2",
+      "target": [
+        {
+          "css": "#tb_courses"
+        },
+        {
+          "text": "Courses",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/memberships/courses"
+      }
+    },
+    {
+      "id": "products",
+      "title": "Open Products",
+      "body": "Click **Products**.",
+      "route": "^/memberships/courses",
+      "go": "/memberships/courses/dashboard-v2",
+      "target": [
+        {
+          "text": "Products"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Products",
+      "advance": "click"
+    },
+    {
+      "id": "create",
+      "title": "Create a product",
+      "body": "Click **Create Product** (some accounts show **Create New**), then choose **Start from Scratch**.",
+      "route": "^/memberships/courses",
+      "go": "/memberships/courses/dashboard-v2",
+      "target": [
+        {
+          "text": "Create Product",
+          "tag": "button"
+        },
+        {
+          "text": "Create New"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create Product"
+    },
+    {
+      "id": "details",
+      "title": "Add the details",
+      "body": "Give it a clear title, like 'Puppy training basics', a short description and a thumbnail image.",
+      "route": "^/memberships/courses",
+      "go": "/memberships/courses/dashboard-v2",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "pricing",
+      "title": "Choose the pricing",
+      "body": "Pick **Free**, **One Time** or **Recurring**. You can change this later.",
+      "route": "^/memberships/courses",
+      "go": "/memberships/courses/dashboard-v2",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "create-course",
+      "title": "Create it",
+      "body": "Click **Create Course**. You'll land in the course editor, ready for lessons.",
+      "route": "^/memberships/courses",
+      "go": "/memberships/courses/dashboard-v2",
+      "target": [
+        {
+          "text": "Create Course",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create Course"
+    }
+  ]
+}

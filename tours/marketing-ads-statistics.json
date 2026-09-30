@@ -1,0 +1,132 @@
+{
+  "id": "marketing-ads-statistics",
+  "kind": "howto",
+  "area": "marketing",
+  "screen": "marketing.ad-manager-home",
+  "title": "Check how your ads are doing",
+  "blurb": "See spend, clicks, leads and cost per lead for every campaign.",
+  "icon": "chart",
+  "minutes": 3,
+  "keywords": [
+    "ad results",
+    "ad statistics",
+    "cost per lead",
+    "spend",
+    "roi",
+    "ad report"
+  ],
+  "steps": [
+    {
+      "id": "open-marketing",
+      "title": "Open Marketing",
+      "body": "Click **Marketing** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_email-marketing"
+        },
+        {
+          "text": "Marketing",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/"
+      }
+    },
+    {
+      "id": "open-ad-manager-home",
+      "title": "Open Ad Manager",
+      "body": "Click **Ad Manager** along the top.",
+      "route": "^/marketing/",
+      "go": "/marketing/ad-manager/home",
+      "target": [
+        {
+          "css": "#tb_ad-manager-home"
+        },
+        {
+          "text": "Ad Manager",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/ad-manager"
+      }
+    },
+    {
+      "id": "statistics",
+      "title": "Open Statistics",
+      "body": "Click the **Statistics** tab.",
+      "route": "^/marketing/ad-manager",
+      "go": "/marketing/ad-manager/home",
+      "target": [
+        {
+          "text": "Statistics"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Statistics"
+    },
+    {
+      "id": "dates",
+      "title": "Pick the dates",
+      "body": "Set the date range, for example the last 30 days.",
+      "route": "^/marketing/ad-manager",
+      "go": "/marketing/ad-manager/home",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "metrics",
+      "title": "Read the key numbers",
+      "body": "Watch spend, leads and cost per lead (CPL) first. Clicks, reach and click-through rate tell you if the ad itself is working.",
+      "route": "^/marketing/ad-manager",
+      "go": "/marketing/ad-manager/home",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Choose which columns show so you only see what matters to you."
+    },
+    {
+      "id": "drill",
+      "title": "Dig deeper",
+      "body": "For Facebook campaigns, open a campaign to see results by ad set and by ad. Pause the weak ones.",
+      "route": "^/marketing/ad-manager",
+      "go": "/marketing/ad-manager/home",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "export",
+      "title": "Export",
+      "body": "Click **Export** to download the numbers as a CSV.",
+      "route": "^/marketing/ad-manager",
+      "go": "/marketing/ad-manager/home",
+      "target": [
+        {
+          "text": "Export",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Export"
+    }
+  ]
+}

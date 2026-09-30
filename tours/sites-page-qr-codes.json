@@ -1,0 +1,112 @@
+{
+  "id": "sites-page-qr-codes",
+  "kind": "page",
+  "area": "sites",
+  "screen": "sites.qr-codes",
+  "title": "Tour the QR Codes page",
+  "blurb": "See where you make and track QR codes for flyers, vans and counters.",
+  "icon": "grid",
+  "minutes": 2,
+  "keywords": [
+    "qr code",
+    "qr",
+    "flyer",
+    "print",
+    "scan",
+    "tour"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open QR Codes",
+      "body": "Click **QR Codes**. Make scannable codes for flyers, business cards, vans and shop counters.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/qr-codes",
+      "target": [
+        {
+          "css": "#tb_qr-codes"
+        },
+        {
+          "text": "QR Codes",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/qr-codes"
+      }
+    },
+    {
+      "id": "create",
+      "title": "Make a QR code",
+      "body": "**Create QR Code** walks you through it. Point it at a website, funnel, form, review link, phone number and more.",
+      "route": "^/qr-codes",
+      "go": "/qr-codes",
+      "target": [
+        {
+          "text": "Create QR Code",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create QR Code"
+    },
+    {
+      "id": "list",
+      "title": "Your codes",
+      "body": "Saved codes show here. Hover over one to edit it or use the three-dot menu to download, move or delete it.",
+      "route": "^/qr-codes",
+      "go": "/qr-codes",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "dynamic",
+      "title": "Change the link any time",
+      "body": "Codes are dynamic: you can change where one points later without reprinting it.",
+      "route": "^/qr-codes",
+      "go": "/qr-codes",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Next: try **Make a QR code for Google reviews** from the Guide.",
+      "route": "^/qr-codes",
+      "go": "/qr-codes",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "id": "calendars-create-service-menu",
+  "kind": "howto",
+  "area": "calendars",
+  "screen": "calendars.calendar-settings-top",
+  "title": "Create a service menu",
+  "blurb": "One booking page listing all your services, like a salon or clinic menu.",
+  "icon": "grid",
+  "minutes": 6,
+  "keywords": [
+    "service menu",
+    "services",
+    "salon",
+    "clinic",
+    "treatments",
+    "menu",
+    "booking page"
+  ],
+  "steps": [
+    {
+      "id": "open-calendars",
+      "title": "Open Calendars",
+      "body": "Click **Calendars** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_calendars"
+        },
+        {
+          "text": "Calendars",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/calendars/"
+      }
+    },
+    {
+      "id": "tab-calendar-settings-top",
+      "title": "Open Calendar Settings",
+      "body": "Click **Calendar Settings** along the top. This is where every booking calendar is built and edited.",
+      "route": "^/calendars/",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "css": "#tb_calendar-settings-top"
+        },
+        {
+          "text": "Calendar settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/calendars"
+      }
+    },
+    {
+      "id": "check",
+      "title": "Is it switched on?",
+      "body": "You need a **Service Menu** tab here. No tab? Ask us to switch this on: hello@luubu.com",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "services-first",
+      "title": "Build each service first",
+      "body": "Each service is its own calendar, and it must sit in a calendar group. Set these up before building the menu.",
+      "tip": "Example: \"Haircut 45 min, $65 incl GST\" and \"Colour 2 hr, $180 incl GST\".",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "tab",
+      "title": "Open Service Menu",
+      "body": "Click the **Service Menu** tab.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "text": "Service Menu"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Service Menu"
+    },
+    {
+      "id": "create",
+      "title": "Create the menu",
+      "body": "Click **Create Service Menu**.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "text": "Create Service Menu",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create Service Menu"
+    },
+    {
+      "id": "details",
+      "title": "Name and link",
+      "body": "Enter a name customers will see, a short description and a tidy slug for the link.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "select",
+      "title": "Pick your services",
+      "body": "Go to **Select Services**, tick the calendars to include and drag them into order. Then click **Save**.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "text": "Select Services"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Select Services"
+    }
+  ]
+}

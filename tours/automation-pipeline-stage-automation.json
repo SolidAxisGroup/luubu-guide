@@ -1,0 +1,144 @@
+{
+  "id": "automation-pipeline-stage-automation",
+  "kind": "howto",
+  "area": "automation",
+  "screen": "automation.workflow",
+  "title": "Move deals through your pipeline automatically",
+  "blurb": "Create or move an opportunity when something happens, so your board stays up to date.",
+  "icon": "flow",
+  "minutes": 5,
+  "keywords": [
+    "pipeline",
+    "opportunity",
+    "stage",
+    "deal",
+    "move stage",
+    "sales board"
+  ],
+  "steps": [
+    {
+      "id": "open-automation",
+      "title": "Open Automation",
+      "body": "Click **Automation** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_automation"
+        },
+        {
+          "text": "Automation",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/automation/"
+      }
+    },
+    {
+      "id": "open-workflow",
+      "title": "Open Workflows",
+      "body": "Click **Workflows** at the top.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "css": "#tb_workflow"
+        },
+        {
+          "text": "Workflows"
+        }
+      ],
+      "advance": {
+        "route": "^/automation/workflows(?!/settings)"
+      }
+    },
+    {
+      "id": "new-workflow",
+      "title": "Start a new workflow",
+      "body": "Click **Create Workflow** and start from scratch. At the top, rename it to something you will recognise later, like \"Booked moves to Booked stage\".",
+      "route": "^/automation/workflows(?!/settings)",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Create Workflow"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create Workflow"
+    },
+    {
+      "id": "trigger",
+      "title": "Choose the event",
+      "body": "Click **Add New Trigger** and pick the moment that should move the deal, like **Customer Booked Appointment** or **Form Submitted**.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Add New Trigger"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add New Trigger"
+    },
+    {
+      "id": "opportunity",
+      "title": "Move the opportunity",
+      "body": "Add **Create/Update Opportunity**. Choose the pipeline and the stage it should land in. If the contact has no opportunity yet, one is created.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Create/Update Opportunity"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create/Update Opportunity"
+    },
+    {
+      "id": "other-way",
+      "title": "Or react to a stage change",
+      "body": "You can also go the other way: use the **Pipeline Stage Changed** trigger to send a quote follow-up or a thank you when you drag a deal into a stage.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "publish",
+      "title": "Save, test and publish",
+      "body": "Click **Save**. Run **Test Workflow** on your own contact, then switch **Draft** to **Publish** and save again.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Publish"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Publish",
+      "tip": "Nothing is sent until the workflow is published."
+    }
+  ]
+}

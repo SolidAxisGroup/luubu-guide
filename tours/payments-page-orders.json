@@ -1,0 +1,116 @@
+{
+  "id": "payments-page-orders",
+  "kind": "page",
+  "area": "payments",
+  "screen": "payments.payment-orders-new",
+  "title": "Tour: Orders",
+  "blurb": "Every purchase from your forms, funnels, store and payment links.",
+  "icon": "card",
+  "minutes": 2,
+  "keywords": [
+    "orders",
+    "sales",
+    "purchases",
+    "online store",
+    "fulfilment",
+    "shipping"
+  ],
+  "steps": [
+    {
+      "id": "open-payments",
+      "title": "Open Payments",
+      "body": "Click **Payments** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_payments"
+        },
+        {
+          "text": "Payments",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/"
+      }
+    },
+    {
+      "id": "tab-payment-orders-new",
+      "title": "Open Orders",
+      "body": "Click **Orders** along the top.",
+      "route": "^/payments/",
+      "go": "/payments/v2/orders",
+      "target": [
+        {
+          "css": "#tb_payment-orders-new"
+        },
+        {
+          "text": "Orders",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/v2/orders"
+      }
+    },
+    {
+      "id": "list",
+      "title": "Your orders",
+      "body": "Each row is one purchase: who bought, what, how much and where it came from.",
+      "route": "^/payments/v2/orders",
+      "go": "/payments/v2/orders",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "filters",
+      "title": "Narrow it down",
+      "body": "Use the filters and search to find an order by customer, date or status.",
+      "route": "^/payments/v2/orders",
+      "go": "/payments/v2/orders",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "details",
+      "title": "Open an order",
+      "body": "Click an order to see the items, payments, customer details and any shipping info.",
+      "route": "^/payments/v2/orders",
+      "go": "/payments/v2/orders",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "ship",
+      "title": "Posting goods?",
+      "body": "For store orders you can add tracking details and print a packing slip from the order page.",
+      "route": "^/payments/v2/orders",
+      "go": "/payments/v2/orders",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "Next step",
+      "body": "Next: try **Fulfil a store order** from the Guide.",
+      "route": "^/payments/v2/orders",
+      "go": "/payments/v2/orders",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "id": "reporting-custom-report-pdf",
+  "kind": "howto",
+  "area": "reporting",
+  "screen": "reporting.custom-reports",
+  "title": "Download a report as a PDF",
+  "blurb": "Save a report to print or attach to an email.",
+  "icon": "chart",
+  "minutes": 1,
+  "keywords": [
+    "pdf",
+    "download",
+    "export",
+    "print",
+    "report"
+  ],
+  "steps": [
+    {
+      "id": "open-reporting",
+      "title": "Open Reporting",
+      "body": "Click **Reporting** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reporting"
+        },
+        {
+          "text": "Reporting",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/"
+      }
+    },
+    {
+      "id": "open-custom-reports",
+      "title": "Open Custom Reports",
+      "body": "Click **Custom Reports**.",
+      "route": "^/reporting/",
+      "go": "/reporting/reports",
+      "target": [
+        {
+          "css": "#tb_custom-reports"
+        },
+        {
+          "text": "Custom Reports",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/reports"
+      }
+    },
+    {
+      "id": "open",
+      "title": "Open your report",
+      "body": "Open the report you want.",
+      "route": "^/reporting/reports",
+      "go": "/reporting/reports",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "download",
+      "title": "Download it",
+      "body": "Click **Download** at the top.",
+      "route": "^/reporting/reports",
+      "go": "/reporting/reports",
+      "target": [
+        {
+          "text": "Download",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Download"
+    },
+    {
+      "id": "note",
+      "title": "Good to know",
+      "body": "In a PDF, tables show the first 100 rows, and images or embedded web pages are left out.",
+      "route": "^/reporting/reports",
+      "go": "/reporting/reports",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

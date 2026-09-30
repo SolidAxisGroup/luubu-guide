@@ -1,0 +1,104 @@
+{
+  "id": "reporting-google-ads-read",
+  "kind": "howto",
+  "area": "reporting",
+  "screen": "reporting.google-ads",
+  "title": "Read your Google Ads report",
+  "blurb": "Work out which campaigns are worth the money.",
+  "icon": "chart",
+  "minutes": 3,
+  "keywords": [
+    "google ads",
+    "report",
+    "cost per lead",
+    "campaigns",
+    "roi",
+    "clicks"
+  ],
+  "steps": [
+    {
+      "id": "open-reporting",
+      "title": "Open Reporting",
+      "body": "Click **Reporting** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reporting"
+        },
+        {
+          "text": "Reporting",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/"
+      }
+    },
+    {
+      "id": "open-google-ads",
+      "title": "Open Google Ads",
+      "body": "Click **Google Ads**.",
+      "route": "^/reporting/",
+      "go": "/reporting/google-ads",
+      "target": [
+        {
+          "css": "#tb_google-ads"
+        },
+        {
+          "text": "Google Ads",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/google-ads"
+      }
+    },
+    {
+      "id": "dates",
+      "title": "Pick a period",
+      "body": "Set the date range. A full month gives a fairer picture than a few days.",
+      "route": "^/reporting/google-ads",
+      "go": "/reporting/google-ads",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "cost",
+      "title": "Cost vs leads",
+      "body": "Compare cost with leads. Cost per lead is the number to watch.",
+      "route": "^/reporting/google-ads",
+      "go": "/reporting/google-ads",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "campaigns",
+      "title": "By campaign",
+      "body": "Scroll to the campaign table. Look for campaigns with spend but no leads, those are the first to fix or pause.",
+      "route": "^/reporting/google-ads",
+      "go": "/reporting/google-ads",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "action",
+      "title": "Make a change",
+      "body": "Move budget toward the campaigns that bring leads, then check back in a couple of weeks.",
+      "route": "^/reporting/google-ads",
+      "go": "/reporting/google-ads",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

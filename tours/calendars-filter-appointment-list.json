@@ -1,0 +1,138 @@
+{
+  "id": "calendars-filter-appointment-list",
+  "kind": "howto",
+  "area": "calendars",
+  "screen": "calendars.apppontment-tab",
+  "title": "Filter your appointment list",
+  "blurb": "Find bookings by date, status, calendar or staff, and save the view.",
+  "icon": "calendar",
+  "minutes": 3,
+  "keywords": [
+    "filter",
+    "appointments",
+    "smart list",
+    "search",
+    "no shows",
+    "report"
+  ],
+  "steps": [
+    {
+      "id": "open-calendars",
+      "title": "Open Calendars",
+      "body": "Click **Calendars** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_calendars"
+        },
+        {
+          "text": "Calendars",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/calendars/"
+      }
+    },
+    {
+      "id": "tab-apppontment-tab",
+      "title": "Open Appointment list view",
+      "body": "Click **Appointment list view** along the top.",
+      "route": "^/calendars/",
+      "go": "/calendars/appointments",
+      "target": [
+        {
+          "css": "#tb_apppontment-tab"
+        },
+        {
+          "text": "Appointment list view",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/calendars/appointments"
+      }
+    },
+    {
+      "id": "tab",
+      "title": "Start with a quick view",
+      "body": "Click **All** so nothing is hidden.",
+      "route": "^/calendars/appointments",
+      "go": "/calendars/appointments",
+      "target": [
+        {
+          "text": "All"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "All"
+    },
+    {
+      "id": "customize",
+      "title": "Open the filters",
+      "body": "Open **Customize List** to add filters and choose columns.",
+      "route": "^/calendars/appointments",
+      "go": "/calendars/appointments",
+      "target": [
+        {
+          "text": "Customize List",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Customize List"
+    },
+    {
+      "id": "filter",
+      "title": "Add conditions",
+      "body": "Add a filter, e.g. status is **No Show** and appointment time is last month. Every condition must match.",
+      "route": "^/calendars/appointments",
+      "go": "/calendars/appointments",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "sort",
+      "title": "Sort it",
+      "body": "Sort by appointment time, newest or oldest first.",
+      "route": "^/calendars/appointments",
+      "go": "/calendars/appointments",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save as a smart list",
+      "body": "Click **+ Smart list** and name it, e.g. \"No shows last month\".",
+      "route": "^/calendars/appointments",
+      "go": "/calendars/appointments",
+      "target": [
+        {
+          "text": "Smart list"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Smart list"
+    }
+  ]
+}

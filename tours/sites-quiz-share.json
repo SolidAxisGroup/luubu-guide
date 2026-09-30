@@ -1,0 +1,91 @@
+{
+  "id": "sites-quiz-share",
+  "kind": "howto",
+  "area": "sites",
+  "screen": "sites.quiz-builder",
+  "title": "Share or embed a quiz",
+  "blurb": "Send your quiz link or put it on your website.",
+  "icon": "share",
+  "minutes": 3,
+  "keywords": [
+    "share quiz",
+    "embed quiz",
+    "quiz link",
+    "website",
+    "social"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Quizzes",
+      "body": "Click **Quizzes** and open the quiz.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/quiz-builder/main",
+      "target": [
+        {
+          "css": "#tb_quiz-builder"
+        },
+        {
+          "text": "Quizzes",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/quiz-builder"
+      }
+    },
+    {
+      "id": "integrate",
+      "title": "Open Integrate",
+      "body": "After saving, click **Integrate**.",
+      "route": "^/",
+      "go": "/quiz-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "link",
+      "title": "Copy the link or code",
+      "body": "Copy the direct link for socials and emails, or the embed code for a web page.",
+      "route": "^/",
+      "go": "/quiz-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "promote",
+      "title": "Promote it",
+      "body": "Post it on Facebook with a hook like Take the 60-second test. Make a QR code for flyers too.",
+      "route": "^/",
+      "go": "/quiz-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

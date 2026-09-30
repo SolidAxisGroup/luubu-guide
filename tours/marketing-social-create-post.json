@@ -1,0 +1,144 @@
+{
+  "id": "marketing-social-create-post",
+  "kind": "howto",
+  "area": "marketing",
+  "screen": "marketing.social-planner",
+  "title": "Create and schedule a social post",
+  "blurb": "Write one post and send it to several social pages at a set time.",
+  "icon": "share",
+  "minutes": 4,
+  "keywords": [
+    "social post",
+    "schedule post",
+    "facebook post",
+    "instagram post",
+    "linkedin",
+    "publish",
+    "social media"
+  ],
+  "steps": [
+    {
+      "id": "open-marketing",
+      "title": "Open Marketing",
+      "body": "Click **Marketing** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_email-marketing"
+        },
+        {
+          "text": "Marketing",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/"
+      }
+    },
+    {
+      "id": "open-social-planner",
+      "title": "Open Social Planner",
+      "body": "Click **Social Planner** along the top.",
+      "route": "^/marketing/",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "css": "#tb_social-planner"
+        },
+        {
+          "text": "Social Planner",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/social-planner"
+      }
+    },
+    {
+      "id": "new-post",
+      "title": "Start a new post",
+      "body": "Click **+ New Post**.",
+      "route": "^/marketing/social-planner",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "text": "New Post",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New Post",
+      "advance": "click"
+    },
+    {
+      "id": "create-new",
+      "title": "Choose a custom post",
+      "body": "Pick **Create New Post** from the menu.",
+      "route": "^/marketing/social-planner",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "text": "Create New Post"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create New Post",
+      "advance": "click"
+    },
+    {
+      "id": "accounts",
+      "title": "Pick your accounts",
+      "body": "At the top of the post window, choose which pages to post to. Pick as many as you like.",
+      "route": "^/marketing/social-planner",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "title": "Write it and add media",
+      "body": "Type your post and add photos or a video. To word it differently for each network, turn on **Customize for Each Post**.",
+      "route": "^/marketing/social-planner",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Instagram needs at least one photo or video."
+    },
+    {
+      "id": "schedule",
+      "title": "Set the time",
+      "body": "Choose **Schedule**, pick the date and time, and confirm. It will go out on its own.",
+      "route": "^/marketing/social-planner",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "text": "Schedule",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Schedule",
+      "tip": "Not ready yet? **Save as Draft** keeps it in the Planner for later."
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "id": "settings-phone-missed-call-text",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.phone-system",
+  "title": "Turn on missed call text back",
+  "blurb": "Automatically text people when you miss their call.",
+  "icon": "chat",
+  "minutes": 3,
+  "keywords": [
+    "missed call",
+    "text back",
+    "auto reply",
+    "sms",
+    "missed call text back",
+    "leads"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-phone-system",
+      "title": "Open Phone System",
+      "body": "Click **Phone System** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/phone_system",
+      "target": [
+        {
+          "css": "[id='sb_phone-system']"
+        },
+        {
+          "text": "Phone System",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/phone_system"
+      }
+    },
+    {
+      "id": "find",
+      "title": "Find the setting",
+      "body": "Open the voice settings and find **Voicemail & Missed Call Text Back**.",
+      "route": "^/settings/phone_system",
+      "go": "/settings/phone_system",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Missed Call Text Back",
+      "tip": "See **Your phone system requires configuration**? We need to switch Luubu Phone on for you. Email hello@luubu.com."
+    },
+    {
+      "id": "enable",
+      "title": "Switch it on",
+      "body": "Tick **Enable Missed Call Text Back**.",
+      "route": "^/settings/phone_system",
+      "go": "/settings/phone_system",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Enable Missed Call Text Back"
+    },
+    {
+      "id": "customise",
+      "title": "Write the message",
+      "body": "Click **Customize** and write your text, for example: \"Sorry we missed you, it's Kiwi Plumbing. How can we help?\"",
+      "route": "^/settings/phone_system",
+      "go": "/settings/phone_system",
+      "target": [
+        {
+          "text": "Customize",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Customize"
+    },
+    {
+      "id": "personalise",
+      "title": "Add their name",
+      "body": "Use the custom value tag icon to add the caller's first name if you have it.",
+      "route": "^/settings/phone_system",
+      "go": "/settings/phone_system",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Test and save",
+      "body": "Send a test to your own mobile, then click **Save**.",
+      "route": "^/settings/phone_system",
+      "go": "/settings/phone_system",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "It sends on every missed call and uses wallet credit, like any text."
+    }
+  ]
+}

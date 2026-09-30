@@ -1,0 +1,128 @@
+{
+  "id": "ai-page-agent-studio",
+  "kind": "page",
+  "area": "ai",
+  "screen": "ai.ai-agents-agent-studio",
+  "title": "Tour Agent Studio",
+  "blurb": "Build AI agents that take actions in your CRM for you.",
+  "icon": "bot",
+  "minutes": 2,
+  "keywords": [
+    "agent studio",
+    "managed agent",
+    "ai agent",
+    "automation",
+    "tour"
+  ],
+  "steps": [
+    {
+      "id": "open-ai-agents",
+      "title": "Open AI Agents",
+      "body": "Click **AI Agents** in the left menu.",
+      "target": [
+        {
+          "css": "[id='sb_AI Agents']"
+        },
+        {
+          "text": "AI Agents",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/"
+      }
+    },
+    {
+      "id": "open-ai-agents-agent-studio",
+      "title": "Open Agent Studio",
+      "body": "Click the **Agent Studio** tab.",
+      "route": "^/ai-agents/",
+      "go": "/ai-agents/agent-studio",
+      "target": [
+        {
+          "css": "#tb_ai-agents-agent-studio"
+        },
+        {
+          "text": "Agent Studio"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/agent-studio"
+      }
+    },
+    {
+      "id": "what",
+      "title": "What it is for",
+      "body": "Agent Studio builds AI agents that do work behind the scenes, like reading new enquiries, tagging them and drafting a reply.",
+      "route": "^/ai-agents/agent-studio",
+      "go": "/ai-agents/agent-studio",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "managed",
+      "title": "Managed Agents",
+      "body": "The **Managed Agents** tab lets you describe an agent in plain words and have it built for you. This is the easiest place to start.",
+      "route": "^/ai-agents/agent-studio",
+      "go": "/ai-agents/agent-studio",
+      "target": [
+        {
+          "text": "Managed Agents"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Managed Agents"
+    },
+    {
+      "id": "create",
+      "title": "Create an agent",
+      "body": "**Create Agent** starts a new one. You can describe it, start from a template, or build on a blank canvas.",
+      "route": "^/ai-agents/agent-studio",
+      "go": "/ai-agents/agent-studio",
+      "target": [
+        {
+          "text": "Create Agent"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create Agent"
+    },
+    {
+      "id": "status",
+      "title": "Draft and published",
+      "body": "New agents start as drafts. Nothing runs until you publish, so it is safe to experiment and test.",
+      "route": "^/ai-agents/agent-studio",
+      "go": "/ai-agents/agent-studio",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "Next step",
+      "body": "Next: try **Build an agent by describing it** from the Guide.",
+      "route": "^/ai-agents/agent-studio",
+      "go": "/ai-agents/agent-studio",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

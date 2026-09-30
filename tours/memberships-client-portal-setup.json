@@ -1,0 +1,156 @@
+{
+  "id": "memberships-client-portal-setup",
+  "kind": "howto",
+  "area": "memberships",
+  "screen": "memberships.clientportalCommunities",
+  "title": "Set up your client portal",
+  "blurb": "Add your logo and colours, and give the portal its own web address.",
+  "icon": "users",
+  "minutes": 5,
+  "keywords": [
+    "client portal",
+    "branding",
+    "logo",
+    "domain",
+    "portal setup",
+    "colours",
+    "custom domain"
+  ],
+  "steps": [
+    {
+      "id": "open-memberships",
+      "title": "Open Memberships",
+      "body": "Click **Memberships** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_memberships"
+        },
+        {
+          "text": "Memberships",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/memberships/"
+      }
+    },
+    {
+      "id": "open-client-portal",
+      "title": "Open Client Portal",
+      "body": "Click **Client Portal**.",
+      "route": "^/memberships/",
+      "go": "/memberships/client-portal/dashboard",
+      "target": [
+        {
+          "css": "#tb_clientportalCommunities"
+        },
+        {
+          "text": "Client Portal",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/memberships/client-portal"
+      }
+    },
+    {
+      "id": "settings",
+      "title": "Open portal settings",
+      "body": "Click **Settings**.",
+      "route": "^/memberships/client-portal",
+      "go": "/memberships/client-portal/dashboard",
+      "target": [
+        {
+          "text": "Settings"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Settings",
+      "advance": "click"
+    },
+    {
+      "id": "branding",
+      "title": "Add your branding",
+      "body": "Open **Branding**. Add the portal name, a short description, your logo, favicon and two brand colours.",
+      "route": "^/memberships/client-portal",
+      "go": "/memberships/client-portal/dashboard",
+      "target": [
+        {
+          "text": "Branding"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Branding"
+    },
+    {
+      "id": "save-branding",
+      "title": "Save it",
+      "body": "Click **Save Settings**.",
+      "route": "^/memberships/client-portal",
+      "go": "/memberships/client-portal/dashboard",
+      "target": [
+        {
+          "text": "Save Settings",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Save Settings"
+    },
+    {
+      "id": "domain",
+      "title": "Choose the address",
+      "body": "Open **Domain Setup**. Keep the default address, or choose **Custom domain** and type something like portal.yourbusiness.co.nz.",
+      "tip": "A custom domain needs a DNS record added where your domain is hosted. Stuck? Email hello@luubu.com and we'll help.",
+      "route": "^/memberships/client-portal",
+      "go": "/memberships/client-portal/dashboard",
+      "target": [
+        {
+          "text": "Domain Setup"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Domain Setup"
+    },
+    {
+      "id": "update-domain",
+      "title": "Finish the domain",
+      "body": "Once the DNS change has spread (it can take up to 48 hours), come back and click **Update Domain**.",
+      "route": "^/memberships/client-portal",
+      "go": "/memberships/client-portal/dashboard",
+      "target": [
+        {
+          "text": "Update Domain",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Update Domain"
+    }
+  ]
+}

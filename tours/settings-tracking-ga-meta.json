@@ -1,0 +1,124 @@
+{
+  "id": "settings-tracking-ga-meta",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.external-tracking",
+  "title": "Add Google Analytics or a Meta Pixel",
+  "blurb": "Track your Luubu website visitors in Google Analytics or for Facebook ads.",
+  "icon": "chart",
+  "minutes": 5,
+  "keywords": [
+    "google analytics",
+    "ga4",
+    "meta pixel",
+    "facebook pixel",
+    "tag manager",
+    "tracking code"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-external-tracking",
+      "title": "Open External Tracking",
+      "body": "Click **External Tracking** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/external-tracking",
+      "target": [
+        {
+          "css": "[id='sb_external-tracking']"
+        },
+        {
+          "text": "External Tracking",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/external-tracking"
+      }
+    },
+    {
+      "id": "which",
+      "title": "Which tool where",
+      "body": "External Tracking is for sites outside Luubu. For your Luubu website or funnel, GA4 and Meta Pixel code goes in the site's own settings.",
+      "route": "^/settings/external-tracking",
+      "go": "/settings/external-tracking",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "get-code",
+      "title": "Get your code",
+      "body": "Copy your GA4 tag from Google Analytics (Admin, Data streams) or your pixel code from Meta Events Manager.",
+      "route": "^/settings/external-tracking",
+      "go": "/settings/external-tracking",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu, then open your website or funnel.",
+      "route": "^/",
+      "go": "/funnels-websites/websites",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "settings",
+      "title": "Open its settings",
+      "body": "Open the site's **Settings** and find the head tracking code box.",
+      "route": "^/funnels-websites/",
+      "go": "/funnels-websites/websites",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "paste",
+      "title": "Paste and save",
+      "body": "Paste the code into the head tracking box, save, and republish the site.",
+      "route": "^/funnels-websites/",
+      "go": "/funnels-websites/websites",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Check it works with Google Tag Assistant or Meta Pixel Helper."
+    }
+  ]
+}

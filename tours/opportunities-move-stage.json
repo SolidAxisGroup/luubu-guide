@@ -1,0 +1,74 @@
+{
+  "id": "opportunities-move-stage",
+  "kind": "howto",
+  "area": "opportunities",
+  "screen": "opportunities.opportunities-tab",
+  "title": "Move a deal to the next stage",
+  "blurb": "Drag cards along the board as jobs progress.",
+  "icon": "card",
+  "minutes": 1,
+  "keywords": [
+    "move",
+    "stage",
+    "drag",
+    "update deal",
+    "progress",
+    "pipeline stage"
+  ],
+  "steps": [
+    {
+      "id": "open-opportunities",
+      "title": "Open Opportunities",
+      "body": "Click **Opportunities** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_opportunities"
+        },
+        {
+          "text": "Opportunities",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/opportunities/"
+      }
+    },
+    {
+      "id": "find",
+      "title": "Find the card",
+      "body": "Pick the pipeline, then find the deal. Use search if the board is busy.",
+      "route": "^/opportunities/list",
+      "go": "/opportunities/list",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "drag",
+      "title": "Drag it",
+      "body": "Click and hold the card, then drop it in the next stage column.",
+      "route": "^/opportunities/list",
+      "go": "/opportunities/list",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "or-edit",
+      "title": "Or change it inside",
+      "body": "You can also open the card and change the stage from the dropdown.",
+      "route": "^/opportunities/list",
+      "go": "/opportunities/list",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Stage changes can start workflows, like sending a thank-you when a job moves to Booked."
+    }
+  ]
+}

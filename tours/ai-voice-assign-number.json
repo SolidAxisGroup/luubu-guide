@@ -1,0 +1,137 @@
+{
+  "id": "ai-voice-assign-number",
+  "kind": "howto",
+  "area": "ai",
+  "screen": "ai.ai-agents-voice-ai",
+  "title": "Put your AI receptionist on your number",
+  "blurb": "Connect the agent to your Luubu Phone number and choose how calls route.",
+  "icon": "phone",
+  "minutes": 3,
+  "keywords": [
+    "phone number",
+    "go live",
+    "deploy",
+    "call routing",
+    "voice ai",
+    "answer"
+  ],
+  "steps": [
+    {
+      "id": "open-ai-agents",
+      "title": "Open AI Agents",
+      "body": "Click **AI Agents** in the left menu.",
+      "target": [
+        {
+          "css": "[id='sb_AI Agents']"
+        },
+        {
+          "text": "AI Agents",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/"
+      }
+    },
+    {
+      "id": "open-ai-agents-voice-ai",
+      "title": "Open Voice AI",
+      "body": "Click the **Voice AI** tab.",
+      "route": "^/ai-agents/",
+      "go": "/ai-agents/voice-ai",
+      "target": [
+        {
+          "css": "#tb_ai-agents-voice-ai"
+        },
+        {
+          "text": "Voice AI"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/voice-ai"
+      }
+    },
+    {
+      "id": "open",
+      "title": "Open your agent",
+      "body": "Click the voice agent you want to go live.",
+      "route": "^/ai-agents/voice-ai",
+      "go": "/ai-agents/voice-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "deploy",
+      "title": "Open Deploy",
+      "body": "Click the **Deploy** tab.",
+      "route": "^/ai-agents/voice-ai",
+      "go": "/ai-agents/voice-ai",
+      "target": [
+        {
+          "text": "Deploy"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Deploy"
+    },
+    {
+      "id": "number",
+      "title": "Pick the number",
+      "body": "Choose which Luubu Phone number the agent answers.",
+      "route": "^/ai-agents/voice-ai",
+      "go": "/ai-agents/voice-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "No number listed? Email hello@luubu.com and we will set one up."
+    },
+    {
+      "id": "routing",
+      "title": "Choose the routing",
+      "body": "Under **Call Routing**, pick **Answer Directly** for the AI to answer every call, or **Backup** to answer only when you do not pick up.",
+      "route": "^/ai-agents/voice-ai",
+      "go": "/ai-agents/voice-ai",
+      "target": [
+        {
+          "text": "Call Routing"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Call Routing"
+    },
+    {
+      "id": "save",
+      "title": "Save",
+      "body": "Click **Save**, then ring the number from your mobile to check.",
+      "route": "^/ai-agents/voice-ai",
+      "go": "/ai-agents/voice-ai",
+      "target": [
+        {
+          "text": "Save"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Save"
+    }
+  ]
+}

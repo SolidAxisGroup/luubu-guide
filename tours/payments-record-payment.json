@@ -1,0 +1,119 @@
+{
+  "id": "payments-record-payment",
+  "kind": "howto",
+  "area": "payments",
+  "screen": "payments.payment-invoices",
+  "title": "Record a cash or bank payment",
+  "blurb": "Mark an invoice paid when the money came in outside Luubu.",
+  "icon": "card",
+  "minutes": 2,
+  "keywords": [
+    "record payment",
+    "mark paid",
+    "cash",
+    "bank transfer",
+    "eftpos",
+    "paid"
+  ],
+  "steps": [
+    {
+      "id": "open-payments",
+      "title": "Open Payments",
+      "body": "Click **Payments** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_payments"
+        },
+        {
+          "text": "Payments",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/"
+      }
+    },
+    {
+      "id": "tab-payment-invoices",
+      "title": "Open Invoices & Estimates",
+      "body": "Click **Invoices & Estimates** along the top.",
+      "route": "^/payments/",
+      "go": "/payments/invoices",
+      "target": [
+        {
+          "css": "#tb_payment-invoices"
+        },
+        {
+          "text": "Invoices & Estimates",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/invoices"
+      }
+    },
+    {
+      "id": "tab",
+      "title": "Open All Invoices",
+      "body": "Click **All Invoices**.",
+      "route": "^/payments/invoices",
+      "go": "/payments/invoices",
+      "target": [
+        {
+          "text": "All Invoices"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "All Invoices"
+    },
+    {
+      "id": "open",
+      "title": "Open the invoice",
+      "body": "Click the invoice the customer has paid.",
+      "route": "^/payments/invoices",
+      "go": "/payments/invoices",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "record",
+      "title": "Record it",
+      "body": "Click **Record Payment**.",
+      "route": "^/payments/invoices",
+      "go": "/payments/invoices",
+      "target": [
+        {
+          "text": "Record Payment",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Record Payment"
+    },
+    {
+      "id": "details",
+      "title": "Add the details",
+      "body": "Pick the method (cash, bank transfer and so on), the amount and the date. Save. The invoice shows as paid.",
+      "route": "^/payments/invoices",
+      "go": "/payments/invoices",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

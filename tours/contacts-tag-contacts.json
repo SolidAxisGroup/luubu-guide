@@ -1,0 +1,109 @@
+{
+  "id": "contacts-tag-contacts",
+  "kind": "howto",
+  "area": "contacts",
+  "screen": "contacts.lists",
+  "title": "Tag contacts",
+  "blurb": "Label people so you can filter, message and automate by group.",
+  "icon": "users",
+  "minutes": 3,
+  "keywords": [
+    "tag",
+    "tags",
+    "label",
+    "add tag",
+    "remove tag",
+    "group",
+    "segment"
+  ],
+  "steps": [
+    {
+      "id": "open-contacts",
+      "title": "Open Contacts",
+      "body": "Click **Contacts** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_contacts"
+        },
+        {
+          "text": "Contacts",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/contacts/"
+      }
+    },
+    {
+      "id": "one",
+      "title": "Tag one person",
+      "body": "Open a contact by clicking their name. In the **Tags** section on the left, pick or type a tag and click **Apply**.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Tags"
+    },
+    {
+      "id": "many",
+      "title": "Tag lots of people",
+      "body": "Back on the list, tick the boxes next to everyone you want to tag.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "icon",
+      "title": "Click Add Tag",
+      "body": "In the toolbar that appears, click the **Add Tag** icon.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add Tag"
+    },
+    {
+      "id": "apply",
+      "title": "Pick the tags",
+      "body": "Give the job a name, choose one or more tags, and click **Add Tags**. Existing tags stay on.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "text": "Add Tags",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add Tags"
+    },
+    {
+      "id": "check",
+      "title": "Check progress",
+      "body": "Big jobs run in the background. Track them under the **Bulk Actions** tab.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Tags can start workflows, for example tagging someone \"booked\" can send a confirmation text."
+    }
+  ]
+}

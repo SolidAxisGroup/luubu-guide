@@ -1,0 +1,97 @@
+{
+  "id": "ai-templates-manage-installed",
+  "kind": "howto",
+  "area": "ai",
+  "screen": "ai.ai-agents-agent-templates",
+  "title": "Update or remove an installed template",
+  "blurb": "Keep installed agents current, copy them, or uninstall them.",
+  "icon": "bot",
+  "minutes": 2,
+  "keywords": [
+    "installed agents",
+    "update template",
+    "uninstall",
+    "duplicate",
+    "manage"
+  ],
+  "steps": [
+    {
+      "id": "open-ai-agents",
+      "title": "Open AI Agents",
+      "body": "Click **AI Agents** in the left menu.",
+      "target": [
+        {
+          "css": "[id='sb_AI Agents']"
+        },
+        {
+          "text": "AI Agents",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/"
+      }
+    },
+    {
+      "id": "open-ai-agents-agent-templates",
+      "title": "Open Agent Templates",
+      "body": "Click the **Agent Templates** tab.",
+      "route": "^/ai-agents/",
+      "go": "/ai-agents/agent-templates",
+      "target": [
+        {
+          "css": "#tb_ai-agents-agent-templates"
+        },
+        {
+          "text": "Agent Templates"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/agent-templates"
+      }
+    },
+    {
+      "id": "installed",
+      "title": "See what you installed",
+      "body": "Open **Installed Agents**.",
+      "route": "^/ai-agents/agent-templates",
+      "go": "/ai-agents/agent-templates",
+      "target": [
+        {
+          "text": "Installed Agents"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Installed Agents"
+    },
+    {
+      "id": "update",
+      "title": "Update when prompted",
+      "body": "If a card shows **Update available**, the template has a newer version. Check what changed before updating.",
+      "route": "^/ai-agents/agent-templates",
+      "go": "/ai-agents/agent-templates",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "manage",
+      "title": "Copy or uninstall",
+      "body": "Use the options on a card to duplicate an agent for another use, or uninstall one you no longer need.",
+      "route": "^/ai-agents/agent-templates",
+      "go": "/ai-agents/agent-templates",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

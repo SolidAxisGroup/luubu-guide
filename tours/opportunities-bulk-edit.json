@@ -1,0 +1,95 @@
+{
+  "id": "opportunities-bulk-edit",
+  "kind": "howto",
+  "area": "opportunities",
+  "screen": "opportunities.opportunities-tab",
+  "title": "Update lots of deals at once",
+  "blurb": "Move, reassign or close several opportunities in one go.",
+  "icon": "card",
+  "minutes": 2,
+  "keywords": [
+    "bulk",
+    "bulk edit",
+    "reassign",
+    "move many",
+    "select all",
+    "update deals",
+    "owner"
+  ],
+  "steps": [
+    {
+      "id": "open-opportunities",
+      "title": "Open Opportunities",
+      "body": "Click **Opportunities** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_opportunities"
+        },
+        {
+          "text": "Opportunities",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/opportunities/"
+      }
+    },
+    {
+      "id": "select",
+      "title": "Select the cards",
+      "body": "Hover over a card and tick its checkbox. Tick as many as you need, or use select all for the whole page.",
+      "route": "^/opportunities/list",
+      "go": "/opportunities/list",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "edit",
+      "title": "Click Edit",
+      "body": "Click **Edit** in the bar that appears.",
+      "route": "^/opportunities/list",
+      "go": "/opportunities/list",
+      "target": [
+        {
+          "text": "Edit",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Edit"
+    },
+    {
+      "id": "field",
+      "title": "Choose what to change",
+      "body": "Pick what to update: owner, pipeline and stage, or status. Set the new value.",
+      "route": "^/opportunities/list",
+      "go": "/opportunities/list",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "apply",
+      "title": "Apply",
+      "body": "Confirm to update all the selected deals.",
+      "route": "^/opportunities/list",
+      "go": "/opportunities/list",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Select all only covers the page you're on. Use the list view to see more per page."
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "id": "home-page-ask-ai",
+  "kind": "page",
+  "area": "home",
+  "screen": "home.ask-ai",
+  "title": "Tour: Ask AI",
+  "blurb": "Your built-in assistant. Ask it questions or get it to do CRM jobs for you.",
+  "icon": "bot",
+  "minutes": 2,
+  "keywords": [
+    "ask ai",
+    "assistant",
+    "ai",
+    "copilot",
+    "chatgpt",
+    "help",
+    "prompt"
+  ],
+  "steps": [
+    {
+      "id": "open-ask-ai",
+      "title": "Open Ask AI",
+      "body": "Click **Ask AI** in the left menu. This opens the assistant full screen.",
+      "target": [
+        {
+          "css": "#sb_ask-ai"
+        },
+        {
+          "text": "Ask AI",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/ask-ai"
+      }
+    },
+    {
+      "id": "what-it-is",
+      "title": "Your Luubu assistant",
+      "body": "Ask AI is a chat assistant that knows your Luubu account. Type what you want in plain English, like you would text a staff member. It can look things up, write copy, and make changes for you.",
+      "route": "^/ask-ai",
+      "go": "/ask-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "prompt-box",
+      "title": "Type your request here",
+      "body": "Use the message box at the bottom. Be specific: who, what and when. For example: \"Show me contacts tagged roofing who haven't been contacted in 30 days.\"",
+      "route": "^/ask-ai",
+      "go": "/ask-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Prefer talking? Click the microphone icon to speak your request."
+    },
+    {
+      "id": "approvals",
+      "title": "You stay in control",
+      "body": "Before Ask AI creates, changes or deletes anything, it shows you what it plans to do and waits for you to confirm. Read it, then approve or cancel.",
+      "route": "^/ask-ai",
+      "go": "/ask-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "new-chat",
+      "title": "Start fresh",
+      "body": "Click **New Chat** when you switch to a different job. Your past chats are kept in the history list so you can pick up where you left off.",
+      "route": "^/ask-ai",
+      "go": "/ask-ai",
+      "target": [
+        {
+          "text": "New Chat"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New Chat"
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Next: try **See what Ask AI can do** from the Guide for a list of handy things to ask.",
+      "route": "^/ask-ai",
+      "go": "/ask-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

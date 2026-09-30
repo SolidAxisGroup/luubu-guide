@@ -1,0 +1,100 @@
+{
+  "id": "reporting-meta-ads-connect",
+  "kind": "howto",
+  "area": "reporting",
+  "screen": "settings.common.sidebar.lcIntegrations",
+  "title": "Connect Facebook Ads for reporting",
+  "blurb": "Link your Facebook ad account so results show in Luubu.",
+  "icon": "chart",
+  "minutes": 3,
+  "keywords": [
+    "facebook ads",
+    "meta",
+    "connect",
+    "ad account",
+    "integration",
+    "instagram"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-integrations",
+      "title": "Open Integrations",
+      "body": "Click **Integrations** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/lc-integrations",
+      "target": [
+        {
+          "css": "[id='sb_common.sidebar.lcIntegrations']"
+        },
+        {
+          "text": "Integrations",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/lc-integrations"
+      }
+    },
+    {
+      "id": "facebook",
+      "title": "Connect Facebook",
+      "body": "Find **Facebook** and click **Connect**. Log in with the Facebook profile that runs your ads.",
+      "route": "^/settings/lc-integrations",
+      "go": "/settings/lc-integrations",
+      "target": [
+        {
+          "text": "Facebook"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Facebook"
+    },
+    {
+      "id": "account",
+      "title": "Pick the ad account",
+      "body": "Choose your business Page and the ad account to report on.",
+      "tip": "Ad account missing? You need admin access to it in Meta Business. Email hello@luubu.com if you're stuck.",
+      "route": "^/settings/lc-integrations",
+      "go": "/settings/lc-integrations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "check",
+      "title": "Check the report",
+      "body": "Open **Reporting** and **Facebook Ads**. Data can take a little while to appear.",
+      "route": "^/settings/lc-integrations",
+      "go": "/settings/lc-integrations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "id": "settings-users-calls",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.my-staff",
+  "title": "Set a team member's call and voicemail settings",
+  "blurb": "Ring their mobile and give them their own voicemail greeting.",
+  "icon": "phone",
+  "minutes": 3,
+  "keywords": [
+    "voicemail",
+    "call forwarding",
+    "mobile",
+    "user calls",
+    "greeting",
+    "extension"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-users",
+      "title": "Open Users",
+      "body": "Click **Users** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/users",
+      "target": [
+        {
+          "css": "[id='sb_my-staff']"
+        },
+        {
+          "text": "Users",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/users"
+      }
+    },
+    {
+      "id": "edit",
+      "title": "Edit the person",
+      "body": "Click the pencil next to the team member.",
+      "route": "^/settings/users",
+      "go": "/settings/users",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "calls",
+      "title": "Open call settings",
+      "body": "Open **Call & Voicemail Settings**.",
+      "route": "^/settings/users",
+      "go": "/settings/users",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Call & Voicemail Settings"
+    },
+    {
+      "id": "forward",
+      "title": "Where calls ring",
+      "body": "Add their mobile number so calls for their contacts ring them. Set the ring time to about 20 seconds so missed calls land in Luubu voicemail.",
+      "route": "^/settings/users",
+      "go": "/settings/users",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "voicemail",
+      "title": "Their voicemail",
+      "body": "Upload an MP3 or WAV greeting, for example \"You have reached Sam at Kiwi Plumbing\".",
+      "route": "^/settings/users",
+      "go": "/settings/users",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save",
+      "body": "Save the user.",
+      "route": "^/settings/users",
+      "go": "/settings/users",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

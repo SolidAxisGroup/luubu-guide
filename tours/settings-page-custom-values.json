@@ -1,0 +1,116 @@
+{
+  "id": "settings-page-custom-values",
+  "kind": "page",
+  "area": "settings",
+  "screen": "settings.custom-values",
+  "title": "Tour: Custom Values",
+  "blurb": "Business details you reuse everywhere, updated in one place.",
+  "icon": "book",
+  "minutes": 2,
+  "keywords": [
+    "custom values",
+    "variables",
+    "merge",
+    "templates",
+    "reuse",
+    "placeholders"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-custom-values",
+      "title": "Open Custom Values",
+      "body": "Click **Custom Values** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/custom_values",
+      "target": [
+        {
+          "css": "[id='sb_custom-values']"
+        },
+        {
+          "text": "Custom Values",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/custom_values"
+      }
+    },
+    {
+      "id": "what",
+      "title": "What they are",
+      "body": "Custom values hold details you use in lots of places, like your booking link or review link. Change it here and it updates everywhere.",
+      "route": "^/settings/custom_values",
+      "go": "/settings/custom_values",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "list",
+      "title": "The list",
+      "body": "Each value has a name, the value itself, and a key you paste into messages and pages.",
+      "route": "^/settings/custom_values",
+      "go": "/settings/custom_values",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "new",
+      "title": "Add one",
+      "body": "**Add custom value** adds a value.",
+      "route": "^/settings/custom_values",
+      "go": "/settings/custom_values",
+      "target": [
+        {
+          "text": "Add custom value",
+          "tag": "button"
+        },
+        {
+          "text": "New Custom Value",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add custom value"
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Next: try **Use custom values in templates** from the Guide.",
+      "route": "^/settings/custom_values",
+      "go": "/settings/custom_values",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

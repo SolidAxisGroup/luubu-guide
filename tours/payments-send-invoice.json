@@ -1,0 +1,169 @@
+{
+  "id": "payments-send-invoice",
+  "kind": "howto",
+  "area": "payments",
+  "screen": "payments.payment-invoices",
+  "title": "Create and send an invoice",
+  "blurb": "Bill a customer in NZD with GST and a pay-now button.",
+  "icon": "card",
+  "minutes": 4,
+  "keywords": [
+    "invoice",
+    "send invoice",
+    "bill",
+    "charge",
+    "gst",
+    "pay online",
+    "new invoice"
+  ],
+  "steps": [
+    {
+      "id": "open-payments",
+      "title": "Open Payments",
+      "body": "Click **Payments** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_payments"
+        },
+        {
+          "text": "Payments",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/"
+      }
+    },
+    {
+      "id": "tab-payment-invoices",
+      "title": "Open Invoices & Estimates",
+      "body": "Click **Invoices & Estimates** along the top.",
+      "route": "^/payments/",
+      "go": "/payments/invoices",
+      "target": [
+        {
+          "css": "#tb_payment-invoices"
+        },
+        {
+          "text": "Invoices & Estimates",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/invoices"
+      }
+    },
+    {
+      "id": "new",
+      "title": "Start an invoice",
+      "body": "Click **New**, then **New Invoice**.",
+      "tip": "Set up GST in Payments settings first so you can tick it on each line.",
+      "route": "^/payments/invoices",
+      "go": "/payments/invoices",
+      "target": [
+        {
+          "text": "New",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New"
+    },
+    {
+      "id": "customer",
+      "title": "Choose the customer",
+      "body": "Pick the contact who gets the invoice. Check the issue and due dates, e.g. due in 7 days.",
+      "route": "^/payments/invoices",
+      "go": "/payments/invoices",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "items",
+      "title": "Add what you did",
+      "body": "Click **Add Product** and choose an item, or create a new one. Set the quantity and price.",
+      "route": "^/payments/invoices",
+      "go": "/payments/invoices",
+      "target": [
+        {
+          "text": "Add Product",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add Product"
+    },
+    {
+      "id": "gst",
+      "title": "Add GST",
+      "body": "Click **Add Tax** on each line and tick GST 15%. The totals update straight away.",
+      "route": "^/payments/invoices",
+      "go": "/payments/invoices",
+      "target": [
+        {
+          "text": "Add Tax"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add Tax"
+    },
+    {
+      "id": "save",
+      "title": "Save and preview",
+      "body": "Click **Save**, then use **Preview** in the three-dot menu to see what the customer sees.",
+      "route": "^/payments/invoices",
+      "go": "/payments/invoices",
+      "target": [
+        {
+          "text": "Save",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Save"
+    },
+    {
+      "id": "send",
+      "title": "Send it",
+      "body": "Click **Send** and choose **Email & Text**, email or text. The customer gets a link to pay by card.",
+      "route": "^/payments/invoices",
+      "go": "/payments/invoices",
+      "target": [
+        {
+          "text": "Send",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Send"
+    }
+  ]
+}

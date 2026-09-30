@@ -1,0 +1,107 @@
+{
+  "id": "contacts-custom-fields-folder",
+  "kind": "howto",
+  "area": "contacts",
+  "screen": "contacts.contact-custom-fields-settings",
+  "title": "Group custom fields into folders",
+  "blurb": "Keep contact records tidy by grouping related fields.",
+  "icon": "cog",
+  "minutes": 2,
+  "keywords": [
+    "custom fields",
+    "folder",
+    "group",
+    "organise",
+    "sections",
+    "contact record"
+  ],
+  "steps": [
+    {
+      "id": "open-contacts",
+      "title": "Open Contacts",
+      "body": "Click **Contacts** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_contacts"
+        },
+        {
+          "text": "Contacts",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/contacts/"
+      }
+    },
+    {
+      "id": "tab-contact-custom-fields-settings",
+      "title": "Open Custom Fields",
+      "body": "Click **Custom Fields** along the top.",
+      "route": "^/(contacts/|tasks|businesses/|settings/fields)",
+      "go": "/settings/fields",
+      "target": [
+        {
+          "css": "#tb_contact-custom-fields-settings"
+        },
+        {
+          "text": "Custom Fields",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/fields"
+      }
+    },
+    {
+      "id": "folders-tab",
+      "title": "Open Folders",
+      "body": "Click the **Folders** tab.",
+      "route": "^/settings/fields",
+      "go": "/settings/fields",
+      "target": [
+        {
+          "text": "Folders"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Folders"
+    },
+    {
+      "id": "create",
+      "title": "Create a folder",
+      "body": "Click **Create Folder** and name it, like \"Vehicle details\" or \"Property\".",
+      "route": "^/settings/fields",
+      "go": "/settings/fields",
+      "target": [
+        {
+          "text": "Create Folder",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create Folder"
+    },
+    {
+      "id": "assign",
+      "title": "Put fields in it",
+      "body": "Edit each field and choose the new folder. On the contact record the folder becomes its own section you can open and close.",
+      "route": "^/settings/fields",
+      "go": "/settings/fields",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

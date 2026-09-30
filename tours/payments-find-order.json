@@ -1,0 +1,91 @@
+{
+  "id": "payments-find-order",
+  "kind": "howto",
+  "area": "payments",
+  "screen": "payments.payment-orders-new",
+  "title": "Find and check an order",
+  "blurb": "See what a customer bought and whether it was paid.",
+  "icon": "card",
+  "minutes": 2,
+  "keywords": [
+    "order",
+    "find order",
+    "purchase",
+    "customer order",
+    "check payment"
+  ],
+  "steps": [
+    {
+      "id": "open-payments",
+      "title": "Open Payments",
+      "body": "Click **Payments** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_payments"
+        },
+        {
+          "text": "Payments",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/"
+      }
+    },
+    {
+      "id": "tab-payment-orders-new",
+      "title": "Open Orders",
+      "body": "Click **Orders** along the top.",
+      "route": "^/payments/",
+      "go": "/payments/v2/orders",
+      "target": [
+        {
+          "css": "#tb_payment-orders-new"
+        },
+        {
+          "text": "Orders",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/v2/orders"
+      }
+    },
+    {
+      "id": "search",
+      "title": "Search",
+      "body": "Search by the customer name or email, or filter by date.",
+      "route": "^/payments/v2/orders",
+      "go": "/payments/v2/orders",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "open",
+      "title": "Open the order",
+      "body": "Click the order.",
+      "route": "^/payments/v2/orders",
+      "go": "/payments/v2/orders",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "read",
+      "title": "Check the details",
+      "body": "You can see the items, amounts, payment status and customer contact details.",
+      "route": "^/payments/v2/orders",
+      "go": "/payments/v2/orders",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

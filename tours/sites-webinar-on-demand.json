@@ -1,0 +1,131 @@
+{
+  "id": "sites-webinar-on-demand",
+  "kind": "howto",
+  "area": "sites",
+  "screen": "sites.webinars",
+  "title": "Set up an on-demand webinar",
+  "blurb": "Share a recorded training that people can register for and watch any time.",
+  "icon": "megaphone",
+  "minutes": 5,
+  "keywords": [
+    "on demand",
+    "evergreen",
+    "recorded webinar",
+    "video",
+    "training",
+    "replay"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Webinars",
+      "body": "Click **Webinars**.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/funnels-websites/webinars",
+      "target": [
+        {
+          "css": "#tb_webinars"
+        },
+        {
+          "text": "Webinars",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/webinars"
+      }
+    },
+    {
+      "id": "new-webinar",
+      "title": "Create the webinar",
+      "body": "Click **New Webinar Funnel** and choose **On Demand Webinar**.",
+      "route": "^/funnels-websites/webinars",
+      "go": "/funnels-websites/webinars",
+      "target": [
+        {
+          "css": "#create-new-button"
+        },
+        {
+          "css": "#positive-empty-state"
+        },
+        {
+          "text": "New Webinar Funnel",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New Webinar Funnel",
+      "advance": "click"
+    },
+    {
+      "id": "details",
+      "title": "Name and form",
+      "body": "Give it a title and pick the form people use to register.",
+      "route": "^/",
+      "go": "/funnels-websites/webinars",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "video",
+      "title": "Add your video",
+      "body": "Upload your recording (MP4 or MOV) or choose one from your media.",
+      "route": "^/",
+      "go": "/funnels-websites/webinars",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "template",
+      "title": "Pick a template",
+      "body": "Choose a template, then edit the pages so they match your brand and offer.",
+      "route": "^/",
+      "go": "/funnels-websites/webinars",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "share",
+      "title": "Share the sign-up page",
+      "body": "Publish the pages and copy the registration link for your emails, socials and ads.",
+      "route": "^/",
+      "go": "/funnels-websites/webinars",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

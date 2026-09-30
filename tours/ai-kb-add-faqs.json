@@ -1,0 +1,123 @@
+{
+  "id": "ai-kb-add-faqs",
+  "kind": "howto",
+  "area": "ai",
+  "screen": "ai.ai-agents-knowledge-base",
+  "title": "Add FAQs for your AI",
+  "blurb": "Give exact answers to the questions customers ask most.",
+  "icon": "book",
+  "minutes": 4,
+  "keywords": [
+    "faq",
+    "questions",
+    "answers",
+    "knowledge base",
+    "train bot",
+    "custom answers"
+  ],
+  "steps": [
+    {
+      "id": "open-ai-agents",
+      "title": "Open AI Agents",
+      "body": "Click **AI Agents** in the left menu.",
+      "target": [
+        {
+          "css": "[id='sb_AI Agents']"
+        },
+        {
+          "text": "AI Agents",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/"
+      }
+    },
+    {
+      "id": "open-ai-agents-knowledge-base",
+      "title": "Open Knowledge Base",
+      "body": "Click the **Knowledge Base** tab.",
+      "route": "^/ai-agents/",
+      "go": "/ai-agents/knowledge-base",
+      "target": [
+        {
+          "css": "#tb_ai-agents-knowledge-base"
+        },
+        {
+          "text": "Knowledge Base"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/knowledge-base"
+      }
+    },
+    {
+      "id": "open",
+      "title": "Open your knowledge base",
+      "body": "Click the knowledge base your bots use.",
+      "route": "^/ai-agents/knowledge-base",
+      "go": "/ai-agents/knowledge-base",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "title": "Open the FAQ tab",
+      "body": "Click **FAQ**.",
+      "route": "^/ai-agents/knowledge-base",
+      "go": "/ai-agents/knowledge-base",
+      "target": [
+        {
+          "text": "FAQ"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "FAQ"
+    },
+    {
+      "id": "add",
+      "title": "Add a question and answer",
+      "body": "Add a question as a customer would ask it, like \"Do you do weekends?\", and a short clear answer.",
+      "route": "^/ai-agents/knowledge-base",
+      "go": "/ai-agents/knowledge-base",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Start with your top 10: prices, areas, hours, how to book, payment, guarantees."
+    },
+    {
+      "id": "more",
+      "title": "Keep adding",
+      "body": "Add one FAQ per question. Short, specific answers work better than long paragraphs.",
+      "route": "^/ai-agents/knowledge-base",
+      "go": "/ai-agents/knowledge-base",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save",
+      "body": "Save each one. Your agents can use them once processing is done.",
+      "route": "^/ai-agents/knowledge-base",
+      "go": "/ai-agents/knowledge-base",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

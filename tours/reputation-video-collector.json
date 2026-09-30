@@ -1,0 +1,172 @@
+{
+  "id": "reputation-video-collector",
+  "kind": "howto",
+  "area": "reputation",
+  "screen": "reputation.reputation-video-testimonials",
+  "title": "Create a video testimonial collector",
+  "blurb": "Build a branded page where customers record a video review.",
+  "icon": "star",
+  "minutes": 5,
+  "keywords": [
+    "video testimonial",
+    "collector",
+    "create",
+    "questions",
+    "video review",
+    "branding"
+  ],
+  "steps": [
+    {
+      "id": "open-reputation",
+      "title": "Open Reputation",
+      "body": "Click **Reputation** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reputation"
+        },
+        {
+          "text": "Reputation",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reputation/"
+      }
+    },
+    {
+      "id": "open-video-testimonials",
+      "title": "Open Video Testimonials",
+      "body": "Click **Video Testimonials**.",
+      "route": "^/reputation/",
+      "go": "/reputation/video-testimonials",
+      "target": [
+        {
+          "css": "#tb_reputation-video-testimonials"
+        },
+        {
+          "text": "Video Testimonials",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reputation/video-testimonials"
+      }
+    },
+    {
+      "id": "create",
+      "title": "Start a collector",
+      "body": "Click **Create Collector**.",
+      "route": "^/reputation/video-testimonials",
+      "go": "/reputation/video-testimonials",
+      "target": [
+        {
+          "text": "Create Collector",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create Collector",
+      "advance": "click"
+    },
+    {
+      "id": "welcome",
+      "title": "Welcome page",
+      "body": "On **Welcome Page**, add a title, a friendly intro and a photo of whoever is asking (you or your team).",
+      "route": "^/reputation/video-testimonials",
+      "go": "/reputation/video-testimonials",
+      "target": [
+        {
+          "text": "Welcome Page"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Welcome Page"
+    },
+    {
+      "id": "questions",
+      "title": "Questions",
+      "body": "On **Questionnaire Page**, add up to three prompts, like 'What did we fix for you?'",
+      "route": "^/reputation/video-testimonials",
+      "go": "/reputation/video-testimonials",
+      "target": [
+        {
+          "text": "Questionnaire Page"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Questionnaire Page"
+    },
+    {
+      "id": "attribution",
+      "title": "Who sent it",
+      "body": "**Attribution Page** collects their name and details so you know who it came from.",
+      "route": "^/reputation/video-testimonials",
+      "go": "/reputation/video-testimonials",
+      "target": [
+        {
+          "text": "Attribution Page"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Attribution Page"
+    },
+    {
+      "id": "brand",
+      "title": "Brand it",
+      "body": "Add your logo and colours under **Logo & Colors**, then check the **Thank You Page** message.",
+      "route": "^/reputation/video-testimonials",
+      "go": "/reputation/video-testimonials",
+      "target": [
+        {
+          "text": "Logo & Colors"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Logo & Colors"
+    },
+    {
+      "id": "preview",
+      "title": "Test and save",
+      "body": "Click **Preview** to try it as a customer, then save.",
+      "route": "^/reputation/video-testimonials",
+      "go": "/reputation/video-testimonials",
+      "target": [
+        {
+          "text": "Preview"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Preview"
+    }
+  ]
+}

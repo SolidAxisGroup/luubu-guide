@@ -1,0 +1,122 @@
+{
+  "id": "automation-page-overview",
+  "kind": "page",
+  "area": "automation",
+  "screen": "automation.workflow-overview",
+  "title": "Tour the Automation overview",
+  "blurb": "See at a glance what your workflows are doing and which ones need attention.",
+  "icon": "chart",
+  "minutes": 2,
+  "keywords": [
+    "overview",
+    "automation",
+    "dashboard",
+    "stats",
+    "enrolments",
+    "errors"
+  ],
+  "steps": [
+    {
+      "id": "open-automation",
+      "title": "Open Automation",
+      "body": "Click **Automation** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_automation"
+        },
+        {
+          "text": "Automation",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/automation/"
+      }
+    },
+    {
+      "id": "open-workflow-overview",
+      "title": "Open Overview",
+      "body": "Click **Overview** at the top.",
+      "route": "^/automation/",
+      "go": "/automation/overview",
+      "target": [
+        {
+          "css": "#tb_workflow-overview"
+        },
+        {
+          "text": "Overview"
+        }
+      ],
+      "advance": {
+        "route": "^/automation/overview"
+      }
+    },
+    {
+      "id": "summary",
+      "title": "The headline numbers",
+      "body": "The top row shows how many workflows you have, how many are published, and how many contacts have gone through them.",
+      "route": "^/automation/overview",
+      "go": "/automation/overview",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "trend",
+      "title": "Enrolments over time",
+      "body": "The chart shows how many people entered your workflows each week. A sudden drop often means a form or trigger has stopped firing.",
+      "route": "^/automation/overview",
+      "go": "/automation/overview",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "filter",
+      "title": "Filter by trigger",
+      "body": "Narrow the numbers to one trigger type, form or survey to see how a single workflow is performing. Trigger data goes back 30 days.",
+      "route": "^/automation/overview",
+      "go": "/automation/overview",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Fix what needs review",
+      "body": "Click **Needs Review** to see workflows with errors and what went wrong in each.",
+      "route": "^/automation/overview",
+      "go": "/automation/overview",
+      "target": [
+        {
+          "text": "Needs Review"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Needs Review"
+    },
+    {
+      "id": "next",
+      "title": "Next step",
+      "body": "Next: try **Find and fix failing workflows** from the Guide.",
+      "route": "^/automation/overview",
+      "go": "/automation/overview",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

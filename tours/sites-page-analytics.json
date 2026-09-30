@@ -1,0 +1,105 @@
+{
+  "id": "sites-page-analytics",
+  "kind": "page",
+  "area": "sites",
+  "screen": "sites.analytics",
+  "title": "Tour Site Analytics",
+  "blurb": "See visits, sign-ups and sales for your funnels, websites and more.",
+  "icon": "chart",
+  "minutes": 2,
+  "keywords": [
+    "analytics",
+    "stats",
+    "visitors",
+    "page views",
+    "conversion",
+    "traffic",
+    "tour"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Analytics",
+      "body": "Click **Analytics** in the Sites menu.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/analytics",
+      "target": [
+        {
+          "css": "#tb_analytics"
+        },
+        {
+          "text": "Analytics",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/analytics"
+      }
+    },
+    {
+      "id": "asset",
+      "title": "Choose what to look at",
+      "body": "Pick one type at a time: **Funnels**, **Websites**, **Blogs**, **Webinars**, **Forms**, **Surveys** or **QR Codes**. You can then narrow it to one item.",
+      "route": "^/analytics",
+      "go": "/analytics",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "dates",
+      "title": "Set the date range",
+      "body": "Change the date range at the top. Numbers are compared with the period just before, so you can see if things are up or down.",
+      "route": "^/analytics",
+      "go": "/analytics",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "cards",
+      "title": "Read the headline numbers",
+      "body": "The cards along the top show page views, opt-in rate, time on page and sales. Click a card to see its chart and breakdown below.",
+      "route": "^/analytics",
+      "go": "/analytics",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Next: try **Check how your funnel is performing** from the Guide.",
+      "route": "^/analytics",
+      "go": "/analytics",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "id": "payments-document-template",
+  "kind": "howto",
+  "area": "payments",
+  "screen": "payments.proposals-estimates",
+  "title": "Make a reusable contract template",
+  "blurb": "Build your standard terms once and send them in seconds.",
+  "icon": "page",
+  "minutes": 6,
+  "keywords": [
+    "template",
+    "contract template",
+    "terms and conditions",
+    "reuse",
+    "standard agreement"
+  ],
+  "steps": [
+    {
+      "id": "open-payments",
+      "title": "Open Payments",
+      "body": "Click **Payments** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_payments"
+        },
+        {
+          "text": "Payments",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/"
+      }
+    },
+    {
+      "id": "tab-proposals-estimates",
+      "title": "Open Documents & Contracts",
+      "body": "Click **Documents & Contracts** along the top.",
+      "route": "^/payments/",
+      "go": "/payments/proposals-estimates",
+      "target": [
+        {
+          "css": "#tb_proposals-estimates"
+        },
+        {
+          "text": "Documents & Contracts",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/proposals-estimates"
+      }
+    },
+    {
+      "id": "new",
+      "title": "Start from blank",
+      "body": "Click **+ New** and choose to start from scratch, or upload your existing terms as a PDF.",
+      "route": "^/payments/proposals-estimates",
+      "go": "/payments/proposals-estimates",
+      "target": [
+        {
+          "text": "New",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New"
+    },
+    {
+      "id": "build",
+      "title": "Build the layout",
+      "body": "Add text, images and a product table. Use variables so the client name and date fill in by themselves.",
+      "route": "^/payments/proposals-estimates",
+      "go": "/payments/proposals-estimates",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "fields",
+      "title": "Add signing fields",
+      "body": "Place **Signature** and **Date** fields where the client signs.",
+      "route": "^/payments/proposals-estimates",
+      "go": "/payments/proposals-estimates",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save as a template",
+      "body": "Save it as a template and give it a clear name, e.g. \"Standard building contract\".",
+      "route": "^/payments/proposals-estimates",
+      "go": "/payments/proposals-estimates",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "reuse",
+      "title": "Reuse it",
+      "body": "Next time, start from this template, pick the client and send. Workflows can send it for you too.",
+      "route": "^/payments/proposals-estimates",
+      "go": "/payments/proposals-estimates",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

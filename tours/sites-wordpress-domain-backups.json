@@ -1,0 +1,104 @@
+{
+  "id": "sites-wordpress-domain-backups",
+  "kind": "howto",
+  "area": "sites",
+  "screen": "sites.wordpress-v2",
+  "title": "Put your WordPress site live and back it up",
+  "blurb": "Connect your domain and use backups before making big changes.",
+  "icon": "globe",
+  "minutes": 5,
+  "keywords": [
+    "wordpress domain",
+    "backup",
+    "restore",
+    "go live",
+    "dns",
+    "wordpress"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open WordPress",
+      "body": "Click **WordPress** and open your site.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/wordpress",
+      "target": [
+        {
+          "css": "#tb_wordpress-v2"
+        },
+        {
+          "text": "WordPress",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/wordpress"
+      }
+    },
+    {
+      "id": "domain",
+      "title": "Connect your domain",
+      "body": "Use the gear icon (Domain Settings) to connect your domain and choose WordPress as what it is for. Add the records it shows at your domain provider.",
+      "route": "^/wordpress",
+      "go": "/wordpress",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "backup",
+      "title": "Take a backup",
+      "body": "In **Backup & Restore**, take a manual backup before updating plugins or themes. Daily backups also run automatically.",
+      "route": "^/wordpress",
+      "go": "/wordpress",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "restore",
+      "title": "Restore if something breaks",
+      "body": "If an update breaks the site, restore the last good backup from the same place.",
+      "route": "^/wordpress",
+      "go": "/wordpress",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "users",
+      "title": "Manage who has access",
+      "body": "Use **User Management** to add or remove people who can log in to WordPress.",
+      "route": "^/wordpress",
+      "go": "/wordpress",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "id": "opportunities-forecast-read",
+  "kind": "howto",
+  "area": "opportunities",
+  "screen": "opportunities.forecast-tab",
+  "title": "Check this month's expected sales",
+  "blurb": "Read your forecast by month and spot deals at risk.",
+  "icon": "chart",
+  "minutes": 2,
+  "keywords": [
+    "forecast",
+    "this month",
+    "expected revenue",
+    "at risk",
+    "sales target",
+    "quarter"
+  ],
+  "steps": [
+    {
+      "id": "open-opportunities",
+      "title": "Open Opportunities",
+      "body": "Click **Opportunities** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_opportunities"
+        },
+        {
+          "text": "Opportunities",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/opportunities/"
+      }
+    },
+    {
+      "id": "tab-forecast-tab",
+      "title": "Open Forecast",
+      "body": "Click **Forecast** along the top.",
+      "route": "^/opportunities/",
+      "go": "/opportunities/forecast",
+      "target": [
+        {
+          "css": "#tb_forecast-tab"
+        },
+        {
+          "text": "Forecast",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/opportunities/forecast"
+      }
+    },
+    {
+      "id": "period",
+      "title": "Group by month",
+      "body": "Set the forecast to show by month.",
+      "route": "^/opportunities/forecast",
+      "go": "/opportunities/forecast",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "filter",
+      "title": "Pick the pipeline",
+      "body": "Filter to the pipeline you want, or to one salesperson.",
+      "route": "^/opportunities/forecast",
+      "go": "/opportunities/forecast",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "read",
+      "title": "Compare the numbers",
+      "body": "Compare expected revenue with what you've won so far. The gap is what you still need to close.",
+      "route": "^/opportunities/forecast",
+      "go": "/opportunities/forecast",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "risk",
+      "title": "Chase deals at risk",
+      "body": "Deals flagged as high risk are slipping or overdue. Open them and follow up, or update the close date if it has moved.",
+      "route": "^/opportunities/forecast",
+      "go": "/opportunities/forecast",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

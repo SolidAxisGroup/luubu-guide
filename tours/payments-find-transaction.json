@@ -1,0 +1,105 @@
+{
+  "id": "payments-find-transaction",
+  "kind": "howto",
+  "area": "payments",
+  "screen": "payments.payment-transactions-new",
+  "title": "Find and export transactions",
+  "blurb": "Look up a payment or pull a list for your accountant.",
+  "icon": "chart",
+  "minutes": 2,
+  "keywords": [
+    "transactions",
+    "export",
+    "reconcile",
+    "accountant",
+    "xero",
+    "report",
+    "search"
+  ],
+  "steps": [
+    {
+      "id": "open-payments",
+      "title": "Open Payments",
+      "body": "Click **Payments** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_payments"
+        },
+        {
+          "text": "Payments",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/"
+      }
+    },
+    {
+      "id": "tab-payment-transactions-new",
+      "title": "Open Transactions",
+      "body": "Click **Transactions** along the top.",
+      "route": "^/payments/",
+      "go": "/payments/v2/transactions",
+      "target": [
+        {
+          "css": "#tb_payment-transactions-new"
+        },
+        {
+          "text": "Transactions",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/v2/transactions"
+      }
+    },
+    {
+      "id": "search",
+      "title": "Search",
+      "body": "Search by customer name, email or amount.",
+      "route": "^/payments/v2/transactions",
+      "go": "/payments/v2/transactions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "filter",
+      "title": "Filter by date",
+      "body": "Filter to a date range, e.g. last month, for reconciling.",
+      "route": "^/payments/v2/transactions",
+      "go": "/payments/v2/transactions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "open",
+      "title": "Open a row",
+      "body": "Click a transaction to see the full details and any refunds.",
+      "route": "^/payments/v2/transactions",
+      "go": "/payments/v2/transactions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "export",
+      "title": "Export",
+      "body": "Export the filtered list to hand to your bookkeeper or match against your bank feed.",
+      "route": "^/payments/v2/transactions",
+      "go": "/payments/v2/transactions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

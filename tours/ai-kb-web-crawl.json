@@ -1,0 +1,161 @@
+{
+  "id": "ai-kb-web-crawl",
+  "kind": "howto",
+  "area": "ai",
+  "screen": "ai.ai-agents-knowledge-base",
+  "title": "Build your knowledge base from your website",
+  "blurb": "Let Luubu read your website so your AI knows your services.",
+  "icon": "book",
+  "minutes": 5,
+  "keywords": [
+    "web crawler",
+    "website",
+    "train",
+    "knowledge base",
+    "crawl",
+    "import site"
+  ],
+  "steps": [
+    {
+      "id": "open-ai-agents",
+      "title": "Open AI Agents",
+      "body": "Click **AI Agents** in the left menu.",
+      "target": [
+        {
+          "css": "[id='sb_AI Agents']"
+        },
+        {
+          "text": "AI Agents",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/"
+      }
+    },
+    {
+      "id": "open-ai-agents-knowledge-base",
+      "title": "Open Knowledge Base",
+      "body": "Click the **Knowledge Base** tab.",
+      "route": "^/ai-agents/",
+      "go": "/ai-agents/knowledge-base",
+      "target": [
+        {
+          "css": "#tb_ai-agents-knowledge-base"
+        },
+        {
+          "text": "Knowledge Base"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/knowledge-base"
+      }
+    },
+    {
+      "id": "open",
+      "title": "Open a knowledge base",
+      "body": "Open your knowledge base, or create one and give it your business name.",
+      "route": "^/ai-agents/knowledge-base",
+      "go": "/ai-agents/knowledge-base",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "add",
+      "title": "Add a source",
+      "body": "Click **Add Source** and choose **Web Crawler**.",
+      "route": "^/ai-agents/knowledge-base",
+      "go": "/ai-agents/knowledge-base",
+      "target": [
+        {
+          "text": "Add Source"
+        },
+        {
+          "text": "Create knowledge base",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add Source",
+      "tip": "Don't see **Add Source**? Click **Create knowledge base** first."
+    },
+    {
+      "id": "scope",
+      "title": "Choose how much to read",
+      "body": "Pick **All URLs in this Domain** for your whole site, **All URLs with the Path** for one section, or **Exact URL** for a single page.",
+      "route": "^/ai-agents/knowledge-base",
+      "go": "/ai-agents/knowledge-base",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "extract",
+      "title": "Read the site",
+      "body": "Enter your web address and click **Extract Data**.",
+      "route": "^/ai-agents/knowledge-base",
+      "go": "/ai-agents/knowledge-base",
+      "target": [
+        {
+          "text": "Extract Data"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Extract Data"
+    },
+    {
+      "id": "pick",
+      "title": "Pick the pages",
+      "body": "Click **View All Pages**. Untick pages that are not useful, like privacy or old blog posts.",
+      "route": "^/ai-agents/knowledge-base",
+      "go": "/ai-agents/knowledge-base",
+      "target": [
+        {
+          "text": "View All Pages"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "View All Pages"
+    },
+    {
+      "id": "train",
+      "title": "Train",
+      "body": "Click **Train Bot**.",
+      "route": "^/ai-agents/knowledge-base",
+      "go": "/ai-agents/knowledge-base",
+      "target": [
+        {
+          "text": "Train Bot"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Train Bot",
+      "tip": "Updated your website? Crawl again so the AI stays current."
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "id": "opportunities-page-forecast",
+  "kind": "page",
+  "area": "opportunities",
+  "screen": "opportunities.forecast-tab",
+  "title": "Tour: Forecast",
+  "blurb": "See what revenue is likely to land this month and this quarter.",
+  "icon": "chart",
+  "minutes": 2,
+  "keywords": [
+    "forecast",
+    "revenue",
+    "expected revenue",
+    "sales forecast",
+    "pipeline value",
+    "projection"
+  ],
+  "steps": [
+    {
+      "id": "open-opportunities",
+      "title": "Open Opportunities",
+      "body": "Click **Opportunities** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_opportunities"
+        },
+        {
+          "text": "Opportunities",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/opportunities/"
+      }
+    },
+    {
+      "id": "tab-forecast-tab",
+      "title": "Open Forecast",
+      "body": "Click **Forecast** along the top.",
+      "route": "^/opportunities/",
+      "go": "/opportunities/forecast",
+      "target": [
+        {
+          "css": "#tb_forecast-tab"
+        },
+        {
+          "text": "Forecast",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/opportunities/forecast"
+      }
+    },
+    {
+      "id": "what",
+      "title": "What the forecast shows",
+      "body": "The forecast uses the value and expected close date on your open deals to show what money is likely to come in, and when.",
+      "route": "^/opportunities/forecast",
+      "go": "/opportunities/forecast",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "numbers",
+      "title": "The key numbers",
+      "body": "You'll see the maximum potential revenue if everything lands, the expected revenue, and what you've already won.",
+      "route": "^/opportunities/forecast",
+      "go": "/opportunities/forecast",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "views",
+      "title": "Summary or timeline",
+      "body": "Switch between the summary and the timeline view, and group by week, month or quarter.",
+      "route": "^/opportunities/forecast",
+      "go": "/opportunities/forecast",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "filters",
+      "title": "Filter it",
+      "body": "Filter by pipeline, owner or date to see one person's or one pipeline's forecast.",
+      "route": "^/opportunities/forecast",
+      "go": "/opportunities/forecast",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Numbers look off? Next: try **Get your forecast right** from the Guide.",
+      "route": "^/opportunities/forecast",
+      "go": "/opportunities/forecast",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

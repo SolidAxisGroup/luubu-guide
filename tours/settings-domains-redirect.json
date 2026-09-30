@@ -1,0 +1,133 @@
+{
+  "id": "settings-domains-redirect",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.domains-urlRedirects",
+  "title": "Set up a URL redirect",
+  "blurb": "Send visitors from an old or short link to the right page.",
+  "icon": "globe",
+  "minutes": 3,
+  "keywords": [
+    "redirect",
+    "301",
+    "url redirect",
+    "old link",
+    "broken link",
+    "short link"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-domains-and-url-redirects",
+      "title": "Open Domains & URL Redirects",
+      "body": "Click **Domains & URL Redirects** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/domain",
+      "target": [
+        {
+          "css": "[id='sb_domains-urlRedirects']"
+        },
+        {
+          "text": "Domains & URL Redirects",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/domain"
+      }
+    },
+    {
+      "id": "redirects",
+      "title": "Open redirects",
+      "body": "Click **URL Redirects**.",
+      "route": "^/settings/domain",
+      "go": "/settings/domain",
+      "target": [
+        {
+          "text": "URL Redirects"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "URL Redirects",
+      "advance": "click"
+    },
+    {
+      "id": "add",
+      "title": "Add a redirect",
+      "body": "Click **Add Redirect**.",
+      "route": "^/settings/domain",
+      "go": "/settings/domain",
+      "target": [
+        {
+          "text": "Add Redirect",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add Redirect",
+      "advance": "click"
+    },
+    {
+      "id": "source",
+      "title": "From where",
+      "body": "Pick the domain and type the old path, like /specials. Stick to lowercase letters, numbers, hyphens and slashes.",
+      "route": "^/settings/domain",
+      "go": "/settings/domain",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "target",
+      "title": "To where",
+      "body": "Choose a custom URL, a funnel step or a website page as the destination.",
+      "route": "^/settings/domain",
+      "go": "/settings/domain",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save and test",
+      "body": "Save, then visit the old link to check it lands in the right place.",
+      "route": "^/settings/domain",
+      "go": "/settings/domain",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

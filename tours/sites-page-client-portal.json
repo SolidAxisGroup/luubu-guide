@@ -1,0 +1,103 @@
+{
+  "id": "sites-page-client-portal",
+  "kind": "page",
+  "area": "sites",
+  "screen": "sites.clientportal",
+  "title": "Tour the Client Portal",
+  "blurb": "See the branded login area where your customers access courses, invoices and more.",
+  "icon": "users",
+  "minutes": 2,
+  "keywords": [
+    "client portal",
+    "customer login",
+    "portal",
+    "members area",
+    "tour"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Client Portal",
+      "body": "Click **Client Portal**. This is one login where your customers can see their courses, community, invoices and documents.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/funnels-websites/client-portal/dashboard",
+      "target": [
+        {
+          "css": "#tb_clientportal"
+        },
+        {
+          "text": "Client Portal",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/client-portal"
+      }
+    },
+    {
+      "id": "dashboard",
+      "title": "The dashboard",
+      "body": "The dashboard shows whether your portal is set up, which domain it uses and which apps are switched on.",
+      "route": "^/funnels-websites/client-portal",
+      "go": "/funnels-websites/client-portal/dashboard",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "domain",
+      "title": "Your portal address",
+      "body": "**Domain Setup** is where you give the portal your own address, like portal.yourbusiness.co.nz.",
+      "route": "^/funnels-websites/client-portal",
+      "go": "/funnels-websites/client-portal/dashboard",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "branding",
+      "title": "Your branding",
+      "body": "**Branding** sets the portal name, colours, logo and support email so it looks like yours.",
+      "route": "^/funnels-websites/client-portal",
+      "go": "/funnels-websites/client-portal/dashboard",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Next: try **Set up your client portal** from the Guide.",
+      "route": "^/funnels-websites/client-portal",
+      "go": "/funnels-websites/client-portal/dashboard",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

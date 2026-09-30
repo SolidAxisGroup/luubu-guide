@@ -1,0 +1,104 @@
+{
+  "id": "calendars-book-appointment",
+  "kind": "howto",
+  "area": "calendars",
+  "screen": "calendars.calendars-tab",
+  "title": "Book an appointment by hand",
+  "blurb": "Book someone in when they ring, text or walk in.",
+  "icon": "calendar",
+  "minutes": 2,
+  "keywords": [
+    "book",
+    "new appointment",
+    "phone booking",
+    "walk in",
+    "add booking",
+    "manual"
+  ],
+  "steps": [
+    {
+      "id": "open-calendars",
+      "title": "Open Calendars",
+      "body": "Click **Calendars** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_calendars"
+        },
+        {
+          "text": "Calendars",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/calendars/"
+      }
+    },
+    {
+      "id": "tab-calendars-tab",
+      "title": "Open Calendar view",
+      "body": "Click **Calendar view** along the top.",
+      "route": "^/calendars/",
+      "go": "/calendars/view",
+      "target": [
+        {
+          "css": "#tb_calendars-tab"
+        },
+        {
+          "text": "Calendar view",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/calendars/view"
+      }
+    },
+    {
+      "id": "slot",
+      "title": "Pick a time",
+      "body": "Find the day in **Week** view and click an empty time slot.",
+      "route": "^/calendars/view",
+      "go": "/calendars/view",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "calendar",
+      "title": "Choose the calendar",
+      "body": "Pick which calendar the booking belongs to, and the staff member if asked.",
+      "route": "^/calendars/view",
+      "go": "/calendars/view",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "title": "Add the customer",
+      "body": "Search for the contact. If they are new, add their name, mobile and email.",
+      "route": "^/calendars/view",
+      "go": "/calendars/view",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Book it",
+      "body": "Check the time and click to book. Your confirmation and reminders go out as normal.",
+      "route": "^/calendars/view",
+      "go": "/calendars/view",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

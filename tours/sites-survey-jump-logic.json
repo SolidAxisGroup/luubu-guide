@@ -1,0 +1,105 @@
+{
+  "id": "sites-survey-jump-logic",
+  "kind": "howto",
+  "area": "sites",
+  "screen": "sites.survey-builder",
+  "title": "Skip slides based on answers",
+  "blurb": "Send people to different slides, or disqualify them, depending on their answers.",
+  "icon": "flow",
+  "minutes": 5,
+  "keywords": [
+    "jump to",
+    "skip logic",
+    "branching",
+    "conditional logic",
+    "disqualify",
+    "survey"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Surveys",
+      "body": "Click **Surveys** and open the survey.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/survey-builder/main",
+      "target": [
+        {
+          "css": "#tb_survey-builder"
+        },
+        {
+          "text": "Surveys",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/survey-builder"
+      }
+    },
+    {
+      "id": "open-logic",
+      "title": "Open the rules",
+      "body": "In the survey builder, click **Conditional Logic**, then **Add New Condition**.",
+      "route": "^/",
+      "go": "/survey-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "when",
+      "title": "Set the condition",
+      "body": "Pick the question and answer that should trigger it, like Property type is Rental.",
+      "route": "^/",
+      "go": "/survey-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "jump",
+      "title": "Choose the action",
+      "body": "Choose **Jump To** and the slide to go to. Or choose **Disqualify Lead** to politely end the survey for people you cannot help.",
+      "route": "^/",
+      "go": "/survey-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "test",
+      "title": "Save and test every path",
+      "body": "Click **Save** and preview the survey, trying each answer so no one gets stuck.",
+      "route": "^/",
+      "go": "/survey-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Each question needs its own unique field for rules to work."
+    }
+  ]
+}

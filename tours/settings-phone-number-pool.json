@@ -1,0 +1,137 @@
+{
+  "id": "settings-phone-number-pool",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.phone-system",
+  "title": "Track calls from your website with a number pool",
+  "blurb": "Show different numbers to visitors so you know which ad made the phone ring.",
+  "icon": "chart",
+  "minutes": 5,
+  "keywords": [
+    "number pool",
+    "call tracking",
+    "attribution",
+    "ads",
+    "website",
+    "dynamic number"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-phone-system",
+      "title": "Open Phone System",
+      "body": "Click **Phone System** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/phone_system",
+      "target": [
+        {
+          "css": "[id='sb_phone-system']"
+        },
+        {
+          "text": "Phone System",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/phone_system"
+      }
+    },
+    {
+      "id": "add-pool",
+      "title": "Create a pool",
+      "body": "Click **Add Number Pool**.",
+      "route": "^/settings/phone_system",
+      "go": "/settings/phone_system",
+      "target": [
+        {
+          "text": "Add Number Pool",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add Number Pool",
+      "tip": "See **Your phone system requires configuration**? We need to switch Luubu Phone on for you. Email hello@luubu.com."
+    },
+    {
+      "id": "setup",
+      "title": "Set it up",
+      "body": "Name the pool and choose how many numbers (at least 4). Each number has its own monthly cost.",
+      "route": "^/settings/phone_system",
+      "go": "/settings/phone_system",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "forward",
+      "title": "Where calls go",
+      "body": "Enter your forwarding number: your mobile or office line, not a Luubu Phone number, or calls will loop.",
+      "route": "^/settings/phone_system",
+      "go": "/settings/phone_system",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "swap",
+      "title": "Number to swap",
+      "body": "Enter the number shown on your website now. Luubu swaps it for a pool number for each visitor.",
+      "route": "^/settings/phone_system",
+      "go": "/settings/phone_system",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "code",
+      "title": "Add the code to your site",
+      "body": "Copy the tracking code from the pool info and paste it into your website's body tracking code.",
+      "route": "^/settings/phone_system",
+      "go": "/settings/phone_system",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "test",
+      "title": "Test it",
+      "body": "Visit your site in a private browser window from an ad or link and check the number changes.",
+      "route": "^/settings/phone_system",
+      "go": "/settings/phone_system",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

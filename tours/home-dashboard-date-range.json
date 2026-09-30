@@ -1,0 +1,74 @@
+{
+  "id": "home-dashboard-date-range",
+  "kind": "howto",
+  "area": "home",
+  "screen": "home.dashboard",
+  "title": "Change the dashboard date range",
+  "blurb": "See this week, last month or any custom period.",
+  "icon": "chart",
+  "minutes": 1,
+  "keywords": [
+    "dashboard",
+    "date",
+    "date range",
+    "filter",
+    "this month",
+    "last week",
+    "period"
+  ],
+  "steps": [
+    {
+      "id": "open-dashboard",
+      "title": "Open Dashboard",
+      "body": "Click **Dashboard** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_dashboard"
+        },
+        {
+          "text": "Dashboard",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/dashboard"
+      }
+    },
+    {
+      "id": "picker",
+      "title": "Open the date picker",
+      "body": "Click the date range at the top of the dashboard.",
+      "route": "^/dashboard",
+      "go": "/dashboard",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "choose",
+      "title": "Choose your period",
+      "body": "Pick a preset like this week or last month, or click a start and end date on the calendar for a custom range.",
+      "route": "^/dashboard",
+      "go": "/dashboard",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "refresh",
+      "title": "Read the results",
+      "body": "Every widget updates to the new dates. Your choice is saved for you only, so teammates keep their own view.",
+      "route": "^/dashboard",
+      "go": "/dashboard",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

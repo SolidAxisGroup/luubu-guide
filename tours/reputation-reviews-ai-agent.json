@@ -1,0 +1,133 @@
+{
+  "id": "reputation-reviews-ai-agent",
+  "kind": "howto",
+  "area": "reputation",
+  "screen": "reputation.reputation-settings",
+  "title": "Let AI reply to reviews for you",
+  "blurb": "Set up an AI agent that answers reviews in your tone.",
+  "icon": "bot",
+  "minutes": 5,
+  "keywords": [
+    "reviews ai",
+    "auto reply",
+    "ai agent",
+    "autopilot",
+    "reviews",
+    "automatic reply"
+  ],
+  "steps": [
+    {
+      "id": "open-reputation",
+      "title": "Open Reputation",
+      "body": "Click **Reputation** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reputation"
+        },
+        {
+          "text": "Reputation",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reputation/"
+      }
+    },
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings**.",
+      "route": "^/reputation/",
+      "go": "/reputation/settings",
+      "target": [
+        {
+          "css": "#tb_reputation-settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reputation/settings"
+      }
+    },
+    {
+      "id": "reviews-ai",
+      "title": "Open Reviews AI",
+      "body": "Open the **Reviews AI** tab.",
+      "tip": "Not there? Ask us to switch this on: hello@luubu.com",
+      "route": "^/reputation/settings",
+      "go": "/reputation/settings",
+      "target": [
+        {
+          "text": "Reviews AI"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Reviews AI",
+      "advance": "click"
+    },
+    {
+      "id": "create-agent",
+      "title": "Create an agent",
+      "body": "Click **Create Agent**, or **Create Starter Agents** for a few ready-made ones.",
+      "route": "^/reputation/settings",
+      "go": "/reputation/settings",
+      "target": [
+        {
+          "text": "Create Agent",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create Agent"
+    },
+    {
+      "id": "setup",
+      "title": "Give it a personality",
+      "body": "Name it, choose a tone like **Friendly** or **Professional**, and write a short instruction, such as 'Thank them, mention the team, sign off as Sam'.",
+      "route": "^/reputation/settings",
+      "go": "/reputation/settings",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "assign",
+      "title": "Choose which reviews",
+      "body": "Assign it by sentiment: **Positive**, **Neutral** or **Negative**. Many owners let AI handle positive reviews and answer negative ones personally.",
+      "route": "^/reputation/settings",
+      "go": "/reputation/settings",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "test",
+      "title": "Test before it goes live",
+      "body": "Preview a few replies before switching it on. You can see which agent wrote each reply.",
+      "route": "^/reputation/settings",
+      "go": "/reputation/settings",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

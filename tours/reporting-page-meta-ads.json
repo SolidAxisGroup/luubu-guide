@@ -1,0 +1,104 @@
+{
+  "id": "reporting-page-meta-ads",
+  "kind": "page",
+  "area": "reporting",
+  "screen": "reporting.facebook-ads",
+  "title": "Tour: Facebook Ads report",
+  "blurb": "See your Facebook and Instagram ad spend next to the leads it brings.",
+  "icon": "chart",
+  "minutes": 2,
+  "keywords": [
+    "facebook ads",
+    "meta ads",
+    "instagram ads",
+    "ads report",
+    "cost per lead",
+    "campaigns"
+  ],
+  "steps": [
+    {
+      "id": "open-reporting",
+      "title": "Open Reporting",
+      "body": "Click **Reporting** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reporting"
+        },
+        {
+          "text": "Reporting",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/"
+      }
+    },
+    {
+      "id": "open-facebook-ads",
+      "title": "Open Facebook Ads",
+      "body": "Click **Facebook Ads**. Your Facebook and Instagram ad results show here. On some screens this tab is called **Meta Ads**.",
+      "route": "^/reporting/",
+      "go": "/reporting/facebook-ads",
+      "target": [
+        {
+          "css": "#tb_facebook-ads"
+        },
+        {
+          "text": "Facebook Ads",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/facebook-ads"
+      }
+    },
+    {
+      "id": "connect",
+      "title": "Nothing showing?",
+      "body": "Your Facebook ad account needs to be connected first. See **Connect Facebook Ads for reporting** in the Guide.",
+      "route": "^/reporting/facebook-ads",
+      "go": "/reporting/facebook-ads",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "dates",
+      "title": "Date range",
+      "body": "Set the date range at the top to match the period you want to check.",
+      "route": "^/reporting/facebook-ads",
+      "go": "/reporting/facebook-ads",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "metrics",
+      "title": "Headline numbers",
+      "body": "The top cards show spend, reach, clicks and leads. Campaign, ad set and ad results sit below.",
+      "route": "^/reporting/facebook-ads",
+      "go": "/reporting/facebook-ads",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What's next",
+      "body": "Next: try **Read your Facebook Ads report** from the Guide.",
+      "route": "^/reporting/facebook-ads",
+      "go": "/reporting/facebook-ads",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

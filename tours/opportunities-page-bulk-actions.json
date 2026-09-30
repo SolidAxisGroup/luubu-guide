@@ -1,0 +1,111 @@
+{
+  "id": "opportunities-page-bulk-actions",
+  "kind": "page",
+  "area": "opportunities",
+  "screen": "opportunities.bulk-actions",
+  "title": "Tour: Opportunity bulk actions",
+  "blurb": "Check on opportunity imports and other bulk jobs.",
+  "icon": "card",
+  "minutes": 2,
+  "keywords": [
+    "bulk actions",
+    "import status",
+    "opportunities import",
+    "errors",
+    "jobs",
+    "logs"
+  ],
+  "steps": [
+    {
+      "id": "open-opportunities",
+      "title": "Open Opportunities",
+      "body": "Click **Opportunities** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_opportunities"
+        },
+        {
+          "text": "Opportunities",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/opportunities/"
+      }
+    },
+    {
+      "id": "tab-bulk-actions",
+      "title": "Open Bulk Actions",
+      "body": "Click **Bulk Actions** along the top.",
+      "route": "^/opportunities/",
+      "go": "/opportunities/bulk-actions",
+      "target": [
+        {
+          "css": "#tb_bulk-actions"
+        },
+        {
+          "text": "Bulk Actions",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/opportunities/bulk-actions"
+      }
+    },
+    {
+      "id": "what",
+      "title": "Your job history",
+      "body": "Opportunity imports and other bulk jobs show here, with when they ran and who ran them.",
+      "route": "^/opportunities/bulk-actions",
+      "go": "/opportunities/bulk-actions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "stats",
+      "title": "See how it went",
+      "body": "Click **Show Stats** on a job to see how many rows worked and how many failed.",
+      "route": "^/opportunities/bulk-actions",
+      "go": "/opportunities/bulk-actions",
+      "target": [
+        {
+          "text": "Show Stats"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Show Stats"
+    },
+    {
+      "id": "errors",
+      "title": "Fix failures",
+      "body": "Open the errors and download the log. It tells you what was wrong with each failed row.",
+      "route": "^/opportunities/bulk-actions",
+      "go": "/opportunities/bulk-actions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Next: try **Check an opportunity import** from the Guide.",
+      "route": "^/opportunities/bulk-actions",
+      "go": "/opportunities/bulk-actions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

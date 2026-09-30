@@ -1,0 +1,118 @@
+{
+  "id": "payments-product-gst",
+  "kind": "howto",
+  "area": "payments",
+  "screen": "payments.payments-products",
+  "title": "Add GST to a product",
+  "blurb": "Attach GST so it is added automatically at checkout.",
+  "icon": "grid",
+  "minutes": 2,
+  "keywords": [
+    "gst",
+    "tax",
+    "product tax",
+    "15%",
+    "tax rate"
+  ],
+  "steps": [
+    {
+      "id": "open-payments",
+      "title": "Open Payments",
+      "body": "Click **Payments** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_payments"
+        },
+        {
+          "text": "Payments",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/"
+      }
+    },
+    {
+      "id": "tab-payments-products",
+      "title": "Open Products",
+      "body": "Click **Products** along the top.",
+      "route": "^/payments/",
+      "go": "/payments/products",
+      "target": [
+        {
+          "css": "#tb_payments-products"
+        },
+        {
+          "text": "Products",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/products"
+      }
+    },
+    {
+      "id": "first",
+      "title": "Make the GST rate first",
+      "body": "You need a GST 15% rate under Payments settings, **Taxes**. See **Set up GST** in the Guide.",
+      "route": "^/payments/products",
+      "go": "/payments/products",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "open",
+      "title": "Open a product",
+      "body": "Click the product you want to update.",
+      "route": "^/payments/products",
+      "go": "/payments/products",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "attach",
+      "title": "Attach the tax",
+      "body": "Find the tax section, turn on **Attach Tax Rates** and pick GST.",
+      "route": "^/payments/products",
+      "go": "/payments/products",
+      "target": [
+        {
+          "text": "Attach Tax Rates"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Attach Tax Rates"
+    },
+    {
+      "id": "save",
+      "title": "Save",
+      "body": "Click **Save**.",
+      "route": "^/payments/products",
+      "go": "/payments/products",
+      "target": [
+        {
+          "text": "Save",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Save"
+    }
+  ]
+}

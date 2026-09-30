@@ -1,0 +1,125 @@
+{
+  "id": "settings-email-reply-forward",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.location-email-services",
+  "title": "Choose where email replies go",
+  "blurb": "Get a copy of customer replies in your normal inbox.",
+  "icon": "mail",
+  "minutes": 3,
+  "keywords": [
+    "reply",
+    "forward",
+    "email replies",
+    "inbox",
+    "copy",
+    "reply to address"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-email-services",
+      "title": "Open Email Services",
+      "body": "Click **Email Services** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/smtp_service",
+      "target": [
+        {
+          "css": "[id='sb_location-email-services']"
+        },
+        {
+          "text": "Email Services",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/smtp_service"
+      }
+    },
+    {
+      "id": "open",
+      "title": "Open reply settings",
+      "body": "Click **Reply & Forward Settings**.",
+      "route": "^/settings/smtp_service",
+      "go": "/settings/smtp_service",
+      "target": [
+        {
+          "text": "Reply & Forward Settings"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Reply & Forward Settings",
+      "advance": "click"
+    },
+    {
+      "id": "forward",
+      "title": "Forward replies",
+      "body": "Add one or more addresses to receive a copy of each customer reply. Separate addresses with commas.",
+      "route": "^/settings/smtp_service",
+      "go": "/settings/smtp_service",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "reply-to",
+      "title": "Reply address (use with care)",
+      "body": "A reply address sends replies straight to another inbox instead of Luubu. Replies sent from there will not show in **Conversations**, so most teams leave this blank.",
+      "route": "^/settings/smtp_service",
+      "go": "/settings/smtp_service",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "assigned",
+      "title": "Send to the assigned person",
+      "body": "Turn on forwarding to the assigned user if each staff member should get replies from their own contacts.",
+      "route": "^/settings/smtp_service",
+      "go": "/settings/smtp_service",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save",
+      "body": "Save your changes.",
+      "route": "^/settings/smtp_service",
+      "go": "/settings/smtp_service",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Forwarded copies can use wallet credit, like any other email."
+    }
+  ]
+}

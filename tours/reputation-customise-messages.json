@@ -1,0 +1,144 @@
+{
+  "id": "reputation-customise-messages",
+  "kind": "howto",
+  "area": "reputation",
+  "screen": "reputation.reputation-settings",
+  "title": "Customise review request messages",
+  "blurb": "Change the wording, timing and follow-ups of your review requests.",
+  "icon": "mail",
+  "minutes": 5,
+  "keywords": [
+    "review request",
+    "message",
+    "sms template",
+    "email template",
+    "wording",
+    "retry",
+    "customise"
+  ],
+  "steps": [
+    {
+      "id": "open-reputation",
+      "title": "Open Reputation",
+      "body": "Click **Reputation** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reputation"
+        },
+        {
+          "text": "Reputation",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reputation/"
+      }
+    },
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings**.",
+      "route": "^/reputation/",
+      "go": "/reputation/settings",
+      "target": [
+        {
+          "css": "#tb_reputation-settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reputation/settings"
+      }
+    },
+    {
+      "id": "sms",
+      "title": "Open SMS Requests",
+      "body": "Open **SMS Requests**.",
+      "route": "^/reputation/settings",
+      "go": "/reputation/settings",
+      "target": [
+        {
+          "text": "SMS Requests"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "SMS Requests",
+      "advance": "click"
+    },
+    {
+      "id": "timing",
+      "title": "Set the timing",
+      "body": "Make sure it is switched on. Choose when it sends: **Immediately** or after a delay.",
+      "route": "^/reputation/settings",
+      "go": "/reputation/settings",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "retries",
+      "title": "Set follow-ups",
+      "body": "Set how long to wait and how many times to retry if they do not leave a review. Two tries is plenty.",
+      "route": "^/reputation/settings",
+      "go": "/reputation/settings",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "wording",
+      "title": "Edit the message",
+      "body": "Edit the text in your own words. Keep the {{reputation.review_link}} tag in it, that is the link they tap.",
+      "route": "^/reputation/settings",
+      "go": "/reputation/settings",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "sender",
+      "title": "Pick the sender",
+      "body": "Choose the number it sends from, then save.",
+      "route": "^/reputation/settings",
+      "go": "/reputation/settings",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "email",
+      "title": "Do the email too",
+      "body": "Open **Email Requests** and change the email the same way, using the editor or a ready-made template.",
+      "route": "^/reputation/settings",
+      "go": "/reputation/settings",
+      "target": [
+        {
+          "text": "Email Requests"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Email Requests"
+    }
+  ]
+}

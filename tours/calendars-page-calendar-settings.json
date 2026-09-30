@@ -1,0 +1,158 @@
+{
+  "id": "calendars-page-calendar-settings",
+  "kind": "page",
+  "area": "calendars",
+  "screen": "calendars.calendar-settings-top",
+  "title": "Tour: Calendar settings",
+  "blurb": "Where you build booking calendars, set hours and connect Google or Outlook.",
+  "icon": "calendar",
+  "minutes": 3,
+  "keywords": [
+    "calendar settings",
+    "booking calendar",
+    "availability",
+    "connections",
+    "google calendar",
+    "outlook",
+    "setup"
+  ],
+  "steps": [
+    {
+      "id": "open-calendars",
+      "title": "Open Calendars",
+      "body": "Click **Calendars** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_calendars"
+        },
+        {
+          "text": "Calendars",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/calendars/"
+      }
+    },
+    {
+      "id": "tab-calendar-settings-top",
+      "title": "Open Calendar Settings",
+      "body": "Click **Calendar Settings** along the top. This is where every booking calendar is built and edited.",
+      "route": "^/calendars/",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "css": "#tb_calendar-settings-top"
+        },
+        {
+          "text": "Calendar settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/calendars"
+      }
+    },
+    {
+      "id": "calendars-list",
+      "title": "Your calendars",
+      "body": "Each row is one booking calendar with its own link, hours and rules. Click a calendar name to edit it.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "new-calendar",
+      "title": "Make a new one",
+      "body": "**New Calendar** starts a fresh booking calendar. You pick a type such as **Personal Booking** or **Round Robin**.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "text": "New Calendar",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New Calendar"
+    },
+    {
+      "id": "availability",
+      "title": "Working hours",
+      "body": "The **Availability** tab holds your weekly hours and one-off changes like public holidays.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "text": "Availability"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Availability"
+    },
+    {
+      "id": "connections",
+      "title": "Google and Outlook",
+      "body": "The **Connections** tab links your own Google or Outlook calendar so you never get double-booked.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "text": "Connections"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Connections"
+    },
+    {
+      "id": "preferences",
+      "title": "Preferences",
+      "body": "**Preferences** holds account-wide calendar options, like which scheduling types are switched on.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "text": "Preferences"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Preferences"
+    },
+    {
+      "id": "next",
+      "title": "Next step",
+      "body": "Next: try **Create a personal booking calendar** from the Guide.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

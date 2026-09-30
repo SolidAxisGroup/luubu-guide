@@ -1,0 +1,104 @@
+{
+  "id": "contacts-companies-add",
+  "kind": "howto",
+  "area": "contacts",
+  "screen": "contacts.business",
+  "title": "Add a company",
+  "blurb": "Create a business record with its phone, website and address.",
+  "icon": "users",
+  "minutes": 2,
+  "keywords": [
+    "add company",
+    "new company",
+    "business",
+    "create company",
+    "b2b",
+    "client"
+  ],
+  "steps": [
+    {
+      "id": "open-contacts",
+      "title": "Open Contacts",
+      "body": "Click **Contacts** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_contacts"
+        },
+        {
+          "text": "Contacts",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/contacts/"
+      }
+    },
+    {
+      "id": "tab-business",
+      "title": "Open Companies",
+      "body": "Click **Companies** along the top.",
+      "route": "^/(contacts/|tasks|businesses/|settings/fields)",
+      "go": "/businesses/list",
+      "target": [
+        {
+          "css": "#tb_business"
+        },
+        {
+          "text": "Companies",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/businesses/"
+      }
+    },
+    {
+      "id": "add",
+      "title": "Start a new company",
+      "body": "Click **New Company**.",
+      "route": "^/businesses/",
+      "go": "/businesses/list",
+      "target": [
+        {
+          "text": "New Company",
+          "tag": "button"
+        },
+        {
+          "text": "Add Company",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New Company"
+    },
+    {
+      "id": "details",
+      "title": "Fill in the details",
+      "body": "Only the name is required. Add the phone, email, website and address if you have them.",
+      "route": "^/businesses/",
+      "go": "/businesses/list",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save",
+      "body": "Save the company. It now shows in the list, ready to link contacts to.",
+      "route": "^/businesses/",
+      "go": "/businesses/list",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "id": "marketing-countdown-create",
+  "kind": "howto",
+  "area": "marketing",
+  "screen": "marketing.countdown-timer",
+  "title": "Create a countdown timer",
+  "blurb": "Set a deadline, pick a look, and choose where late clickers go.",
+  "icon": "calendar",
+  "minutes": 4,
+  "keywords": [
+    "countdown",
+    "timer",
+    "deadline",
+    "sale ends",
+    "urgency",
+    "create timer"
+  ],
+  "steps": [
+    {
+      "id": "open-marketing",
+      "title": "Open Marketing",
+      "body": "Click **Marketing** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_email-marketing"
+        },
+        {
+          "text": "Marketing",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/"
+      }
+    },
+    {
+      "id": "open-countdown-timer",
+      "title": "Open Countdown Timers",
+      "body": "Click **Countdown Timers** along the top.",
+      "route": "^/marketing/",
+      "go": "/marketing/countdown-timer",
+      "target": [
+        {
+          "css": "#tb_countdown-timer"
+        },
+        {
+          "text": "Countdown Timers",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/countdown-timer"
+      }
+    },
+    {
+      "id": "new",
+      "title": "Start a timer",
+      "body": "Click **New**.",
+      "route": "^/marketing/countdown-timer",
+      "go": "/marketing/countdown-timer",
+      "target": [
+        {
+          "text": "New",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New",
+      "advance": "click"
+    },
+    {
+      "id": "design",
+      "title": "Pick a design",
+      "body": "Choose a design template to start from. You can change the look later.",
+      "route": "^/marketing/countdown-timer",
+      "go": "/marketing/countdown-timer",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "type",
+      "title": "Pick the type",
+      "body": "Choose **Fixed Timer** for a set end date, **Recurring Timer** for a repeating deadline, or **Dynamic Timer** for a per-person countdown.",
+      "route": "^/marketing/countdown-timer",
+      "go": "/marketing/countdown-timer",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "details",
+      "title": "Set the details",
+      "body": "Name it, then set the end date, time and time zone. Add an active link (where people go while it runs) and an expired link (where they go once it ends).",
+      "route": "^/marketing/countdown-timer",
+      "go": "/marketing/countdown-timer",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Point the expired link at your next offer, not a dead page."
+    },
+    {
+      "id": "style",
+      "title": "Style it",
+      "body": "Change the colours, fonts and labels to match your brand, and choose what shows once it hits zero.",
+      "route": "^/marketing/countdown-timer",
+      "go": "/marketing/countdown-timer",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save it",
+      "body": "Click **Save**.",
+      "route": "^/marketing/countdown-timer",
+      "go": "/marketing/countdown-timer",
+      "target": [
+        {
+          "text": "Save",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Save"
+    }
+  ]
+}

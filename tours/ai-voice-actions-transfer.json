@@ -1,0 +1,156 @@
+{
+  "id": "ai-voice-actions-transfer",
+  "kind": "howto",
+  "area": "ai",
+  "screen": "ai.ai-agents-voice-ai",
+  "title": "Let the AI book jobs and transfer calls",
+  "blurb": "Add actions so the receptionist can book, text, and put urgent callers through.",
+  "icon": "phone",
+  "minutes": 5,
+  "keywords": [
+    "call transfer",
+    "book appointment",
+    "actions",
+    "voice ai",
+    "send sms",
+    "urgent"
+  ],
+  "steps": [
+    {
+      "id": "open-ai-agents",
+      "title": "Open AI Agents",
+      "body": "Click **AI Agents** in the left menu.",
+      "target": [
+        {
+          "css": "[id='sb_AI Agents']"
+        },
+        {
+          "text": "AI Agents",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/"
+      }
+    },
+    {
+      "id": "open-ai-agents-voice-ai",
+      "title": "Open Voice AI",
+      "body": "Click the **Voice AI** tab.",
+      "route": "^/ai-agents/",
+      "go": "/ai-agents/voice-ai",
+      "target": [
+        {
+          "css": "#tb_ai-agents-voice-ai"
+        },
+        {
+          "text": "Voice AI"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/voice-ai"
+      }
+    },
+    {
+      "id": "open",
+      "title": "Open your agent",
+      "body": "Click the voice agent you want to set up.",
+      "route": "^/ai-agents/voice-ai",
+      "go": "/ai-agents/voice-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "new-action",
+      "title": "Add an action",
+      "body": "Click **New Action**.",
+      "route": "^/ai-agents/voice-ai",
+      "go": "/ai-agents/voice-ai",
+      "target": [
+        {
+          "text": "New Action"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New Action"
+    },
+    {
+      "id": "transfer",
+      "title": "Transfer urgent calls",
+      "body": "Choose **Call Transfer**. Enter your mobile and describe when to use it, like \"the caller has a burst pipe or asks for Dave\".",
+      "route": "^/ai-agents/voice-ai",
+      "go": "/ai-agents/voice-ai",
+      "target": [
+        {
+          "text": "Call Transfer"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Call Transfer",
+      "tip": "Transfers only work on a real phone call test, not a web call."
+    },
+    {
+      "id": "book",
+      "title": "Book appointments",
+      "body": "Add **Book Appointment** and pick your calendar so it can offer real times.",
+      "route": "^/ai-agents/voice-ai",
+      "go": "/ai-agents/voice-ai",
+      "target": [
+        {
+          "text": "Book Appointment"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Book Appointment"
+    },
+    {
+      "id": "sms",
+      "title": "Text a follow-up",
+      "body": "Add **Send SMS** to text callers a booking link or confirmation.",
+      "route": "^/ai-agents/voice-ai",
+      "go": "/ai-agents/voice-ai",
+      "target": [
+        {
+          "text": "Send SMS"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Send SMS"
+    },
+    {
+      "id": "fields",
+      "title": "Save what they say",
+      "body": "**Update Contact Field** stores details like address or job type on the contact. Click **Save** when done.",
+      "route": "^/ai-agents/voice-ai",
+      "go": "/ai-agents/voice-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

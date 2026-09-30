@@ -1,0 +1,114 @@
+{
+  "id": "settings-business-logo",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.business_info",
+  "title": "Add your business logo",
+  "blurb": "Upload your logo so it shows on invoices, emails and booking pages.",
+  "icon": "image",
+  "minutes": 2,
+  "keywords": [
+    "logo",
+    "brand",
+    "upload",
+    "image",
+    "invoice logo",
+    "branding"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-business-profile",
+      "title": "Open Business Profile",
+      "body": "Click **Business Profile** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/company",
+      "target": [
+        {
+          "css": "[id='sb_business_info']"
+        },
+        {
+          "text": "Business Profile",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/company/?$"
+      }
+    },
+    {
+      "id": "find-logo",
+      "title": "Find the logo box",
+      "body": "At the top of **General Information** you will see **Business Logo**. Click the image box to upload.",
+      "route": "^/settings/company/?$",
+      "go": "/settings/company",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Business Logo"
+    },
+    {
+      "id": "upload",
+      "title": "Choose your file",
+      "body": "Pick a PNG or JPG of your logo. A square version or one with a clear background looks best at small sizes.",
+      "route": "^/settings/company/?$",
+      "go": "/settings/company",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Wide logos can look tiny. If you have a square or icon version, use that."
+    },
+    {
+      "id": "save",
+      "title": "Save",
+      "body": "Click **Update Information** so the new logo sticks.",
+      "route": "^/settings/company/?$",
+      "go": "/settings/company",
+      "target": [
+        {
+          "text": "Update Information",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Update Information"
+    },
+    {
+      "id": "check",
+      "title": "Check it",
+      "body": "Open a test invoice or booking page later to see the logo in place.",
+      "route": "^/settings/company/?$",
+      "go": "/settings/company",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

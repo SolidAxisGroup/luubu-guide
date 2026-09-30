@@ -1,0 +1,105 @@
+{
+  "id": "reporting-google-ads-tracking",
+  "kind": "howto",
+  "area": "reporting",
+  "screen": "reporting.google-ads",
+  "title": "Track which Google ads bring leads",
+  "blurb": "Add tracking to your ads so every lead is matched to its campaign.",
+  "icon": "chart",
+  "minutes": 5,
+  "keywords": [
+    "utm",
+    "tracking template",
+    "google ads",
+    "attribution",
+    "lpurl",
+    "tracking"
+  ],
+  "steps": [
+    {
+      "id": "open-reporting",
+      "title": "Open Reporting",
+      "body": "Click **Reporting** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reporting"
+        },
+        {
+          "text": "Reporting",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/"
+      }
+    },
+    {
+      "id": "open-google-ads",
+      "title": "Open Google Ads",
+      "body": "Click **Google Ads**.",
+      "route": "^/reporting/",
+      "go": "/reporting/google-ads",
+      "target": [
+        {
+          "css": "#tb_google-ads"
+        },
+        {
+          "text": "Google Ads",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/google-ads"
+      }
+    },
+    {
+      "id": "open-ads",
+      "title": "Open Google Ads",
+      "body": "In another tab, open your Google Ads account settings and find the tracking template.",
+      "route": "^/reporting/google-ads",
+      "go": "/reporting/google-ads",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "template",
+      "title": "Add the template",
+      "body": "Add a tracking template that starts with {lpurl} and adds UTM tags for source, medium and campaign. Never leave out {lpurl}, or your ad links break.",
+      "tip": "Want the exact template to paste? Email hello@luubu.com.",
+      "route": "^/reporting/google-ads",
+      "go": "/reporting/google-ads",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "names",
+      "title": "Don't rename live ads",
+      "body": "Do not rename campaigns or ads once they are running. Reports keep the old name, so your numbers get split.",
+      "route": "^/reporting/google-ads",
+      "go": "/reporting/google-ads",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "check",
+      "title": "Check it worked",
+      "body": "New leads from your ads now show against the right campaign in this report.",
+      "route": "^/reporting/google-ads",
+      "go": "/reporting/google-ads",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "id": "marketing-trigger-links-in-messages",
+  "kind": "howto",
+  "area": "marketing",
+  "screen": "marketing.trigger-links",
+  "title": "Put a trigger link in a text or email",
+  "blurb": "Send a tracked link so you can see exactly who clicked.",
+  "icon": "chat",
+  "minutes": 3,
+  "keywords": [
+    "trigger link",
+    "sms link",
+    "email link",
+    "track clicks",
+    "message",
+    "snippet"
+  ],
+  "steps": [
+    {
+      "id": "open-marketing",
+      "title": "Open Marketing",
+      "body": "Click **Marketing** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_email-marketing"
+        },
+        {
+          "text": "Marketing",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/"
+      }
+    },
+    {
+      "id": "open-trigger-links",
+      "title": "Open Trigger Links",
+      "body": "Click **Trigger Links** along the top.",
+      "route": "^/marketing/",
+      "go": "/marketing/trigger-links",
+      "target": [
+        {
+          "css": "#tb_trigger-links"
+        },
+        {
+          "text": "Trigger Links",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/trigger-links"
+      }
+    },
+    {
+      "id": "copy",
+      "title": "Copy the link code",
+      "body": "Find your link and click the copy icon beside it.",
+      "route": "^/marketing/trigger-links",
+      "go": "/marketing/trigger-links",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "No link yet? Run **Create a trigger link** first."
+    },
+    {
+      "id": "open-conversations",
+      "title": "Open Conversations",
+      "body": "Click **Conversations** in the left menu.",
+      "route": "^/",
+      "go": "/conversations/conversations",
+      "target": [
+        {
+          "css": "#sb_conversations"
+        },
+        {
+          "text": "Conversations",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/conversations/"
+      }
+    },
+    {
+      "id": "paste",
+      "title": "Paste it into a message",
+      "body": "Open a conversation and paste the code into your text or email. It turns into a normal-looking link for the contact.",
+      "route": "^/conversations/",
+      "go": "/conversations/conversations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "email",
+      "title": "In email campaigns",
+      "body": "In the email builder, paste the same code as the link address on your text or button.",
+      "route": "^/conversations/",
+      "go": "/conversations/conversations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "check",
+      "title": "See who clicked",
+      "body": "Clicks show in each contact’s activity, so you know who is interested.",
+      "route": "^/conversations/",
+      "go": "/conversations/conversations",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Put the link inside a snippet so the whole team sends the tracked version."
+    }
+  ]
+}

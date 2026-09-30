@@ -1,0 +1,173 @@
+{
+  "id": "automation-new-lead-instant-reply",
+  "kind": "howto",
+  "area": "automation",
+  "screen": "automation.workflow",
+  "title": "Reply to new leads instantly",
+  "blurb": "Text and email every new enquiry within seconds, and ping your team.",
+  "icon": "flow",
+  "minutes": 6,
+  "keywords": [
+    "new lead",
+    "instant reply",
+    "form",
+    "enquiry",
+    "auto reply",
+    "sms",
+    "email",
+    "speed to lead"
+  ],
+  "steps": [
+    {
+      "id": "open-automation",
+      "title": "Open Automation",
+      "body": "The first business to reply usually wins the job. Click **Automation** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_automation"
+        },
+        {
+          "text": "Automation",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/automation/"
+      }
+    },
+    {
+      "id": "open-workflow",
+      "title": "Open Workflows",
+      "body": "Click **Workflows** at the top.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "css": "#tb_workflow"
+        },
+        {
+          "text": "Workflows"
+        }
+      ],
+      "advance": {
+        "route": "^/automation/workflows(?!/settings)"
+      }
+    },
+    {
+      "id": "new-workflow",
+      "title": "Start a new workflow",
+      "body": "Click **Create Workflow** and start from scratch. At the top, rename it to something you will recognise later, like \"New lead reply\".",
+      "route": "^/automation/workflows(?!/settings)",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Create Workflow"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create Workflow"
+    },
+    {
+      "id": "trigger",
+      "title": "Choose what starts it",
+      "body": "Click **Add New Trigger** and pick **Form Submitted**. Add a filter so it only fires for your enquiry form.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Add New Trigger"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add New Trigger",
+      "tip": "Leads from Facebook? Add a second trigger for your Facebook lead form."
+    },
+    {
+      "id": "sms",
+      "title": "Send a text",
+      "body": "Click **+** under the trigger and choose **Send SMS**. Keep it short and personal, and use the first name field so it reads like you wrote it.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Send SMS"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Send SMS"
+    },
+    {
+      "id": "email",
+      "title": "Send an email",
+      "body": "Click **+** again and add **Send Email** with a bit more detail: what happens next and how to book.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Send Email"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Send Email"
+    },
+    {
+      "id": "notify",
+      "title": "Tell your team",
+      "body": "Add **Send Internal Notification** so you get a text or email with the lead's details straight away.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Send Internal Notification"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Send Internal Notification"
+    },
+    {
+      "id": "publish",
+      "title": "Save, test and publish",
+      "body": "Click **Save**. Run **Test Workflow** on your own contact, then switch **Draft** to **Publish** and save again.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Publish"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Publish",
+      "tip": "Nothing is sent until the workflow is published."
+    }
+  ]
+}

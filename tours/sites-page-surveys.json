@@ -1,0 +1,91 @@
+{
+  "id": "sites-page-surveys",
+  "kind": "page",
+  "area": "sites",
+  "screen": "sites.survey-builder",
+  "title": "Tour the Surveys page",
+  "blurb": "See where multi-step surveys are built and their responses kept.",
+  "icon": "page",
+  "minutes": 2,
+  "keywords": [
+    "survey",
+    "questionnaire",
+    "feedback",
+    "multi step form",
+    "tour"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Surveys",
+      "body": "Click **Surveys**. A survey asks questions over several slides, one screen at a time. Great for qualifying leads or collecting feedback.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/survey-builder/main",
+      "target": [
+        {
+          "css": "#tb_survey-builder"
+        },
+        {
+          "text": "Surveys",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/survey-builder"
+      }
+    },
+    {
+      "id": "add",
+      "title": "Start a survey",
+      "body": "Use the add button to create a survey from blank or a template.",
+      "route": "^/survey-builder",
+      "go": "/survey-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "list",
+      "title": "Your surveys",
+      "body": "Click any survey to edit its slides, logic and styling, or to see its submissions.",
+      "route": "^/survey-builder",
+      "go": "/survey-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Next: try **Build a multi-step survey** from the Guide.",
+      "route": "^/survey-builder",
+      "go": "/survey-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

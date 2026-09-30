@@ -1,0 +1,100 @@
+{
+  "id": "conversations-reply-email",
+  "kind": "howto",
+  "area": "conversations",
+  "screen": "conversations.conversations-tab",
+  "title": "Reply to an email",
+  "blurb": "Answer emails from the inbox, with CC, BCC and attachments.",
+  "icon": "mail",
+  "minutes": 3,
+  "keywords": [
+    "email",
+    "reply",
+    "cc",
+    "bcc",
+    "attachment",
+    "inbox",
+    "conversations"
+  ],
+  "steps": [
+    {
+      "id": "open-conversations",
+      "title": "Open Conversations",
+      "body": "Click **Conversations** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_conversations"
+        },
+        {
+          "text": "Conversations",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/conversations/"
+      }
+    },
+    {
+      "id": "open-chat",
+      "title": "Open the email",
+      "body": "Click the conversation in the chat list. The email shows in the timeline in the middle.",
+      "route": "^/conversations/conversations",
+      "go": "/conversations/conversations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "channel",
+      "title": "Switch to Email",
+      "body": "In the reply box, pick **Email** in the channel switcher. Check the From address and the subject line.",
+      "route": "^/conversations/conversations",
+      "go": "/conversations/conversations",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Email"
+    },
+    {
+      "id": "cc",
+      "title": "Add CC or BCC if needed",
+      "body": "Use the CC and BCC options above the message to copy in someone else, like a business partner or your accountant.",
+      "route": "^/conversations/conversations",
+      "go": "/conversations/conversations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "write",
+      "title": "Write your reply",
+      "body": "Type your email. For long replies, open full-screen mode with Ctrl + Shift + E. Attach files with the paperclip.",
+      "route": "^/conversations/conversations",
+      "go": "/conversations/conversations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "send",
+      "title": "Send",
+      "body": "Click the send icon. The email appears in the thread straight away.",
+      "route": "^/conversations/conversations",
+      "go": "/conversations/conversations",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Emails not showing up here? Connect your Gmail or Outlook in the Guide under **Connect your email**."
+    }
+  ]
+}

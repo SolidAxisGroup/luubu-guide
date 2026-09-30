@@ -1,0 +1,130 @@
+{
+  "id": "calendars-cancel-reschedule-rules",
+  "kind": "howto",
+  "area": "calendars",
+  "screen": "calendars.calendar-settings-top",
+  "title": "Let clients reschedule or cancel",
+  "blurb": "Add self-serve reschedule and cancel links, with a cut-off time.",
+  "icon": "calendar",
+  "minutes": 3,
+  "keywords": [
+    "reschedule",
+    "cancel",
+    "cancellation policy",
+    "self serve",
+    "cut off",
+    "late cancel"
+  ],
+  "steps": [
+    {
+      "id": "open-calendars",
+      "title": "Open Calendars",
+      "body": "Click **Calendars** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_calendars"
+        },
+        {
+          "text": "Calendars",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/calendars/"
+      }
+    },
+    {
+      "id": "tab-calendar-settings-top",
+      "title": "Open Calendar Settings",
+      "body": "Click **Calendar Settings** along the top. This is where every booking calendar is built and edited.",
+      "route": "^/calendars/",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "css": "#tb_calendar-settings-top"
+        },
+        {
+          "text": "Calendar settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/calendars"
+      }
+    },
+    {
+      "id": "open",
+      "title": "Open a calendar",
+      "body": "Click the calendar you want to change.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "section",
+      "title": "Find the extra options",
+      "body": "Open the notifications and additional options section of the calendar.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "cancel",
+      "title": "Allow cancelling",
+      "body": "Turn on **Allow Cancellation of Meeting**.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "text": "Allow Cancellation of Meeting"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Allow Cancellation of Meeting"
+    },
+    {
+      "id": "reschedule",
+      "title": "Allow rescheduling",
+      "body": "Turn on **Allow Rescheduling of Meeting**.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "text": "Allow Rescheduling of Meeting"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Allow Rescheduling of Meeting"
+    },
+    {
+      "id": "cutoff",
+      "title": "Set a cut-off",
+      "body": "Enter how long before the booking the links stop working, e.g. 24 hours. After that, clients have to ring you. Save.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

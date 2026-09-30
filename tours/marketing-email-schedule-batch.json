@@ -1,0 +1,158 @@
+{
+  "id": "marketing-email-schedule-batch",
+  "kind": "howto",
+  "area": "marketing",
+  "screen": "marketing.email-builder",
+  "title": "Schedule or batch-send a campaign",
+  "blurb": "Send later, or drip a big list out in batches over time.",
+  "icon": "calendar",
+  "minutes": 4,
+  "keywords": [
+    "schedule email",
+    "batch",
+    "send later",
+    "drip",
+    "batch schedule",
+    "timing",
+    "large list"
+  ],
+  "steps": [
+    {
+      "id": "open-marketing",
+      "title": "Open Marketing",
+      "body": "Click **Marketing** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_email-marketing"
+        },
+        {
+          "text": "Marketing",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/"
+      }
+    },
+    {
+      "id": "open-email-builder",
+      "title": "Open Emails",
+      "body": "Click **Emails** along the top.",
+      "route": "^/marketing/",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "css": "#tb_email-builder"
+        },
+        {
+          "text": "Emails",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/emails"
+      }
+    },
+    {
+      "id": "campaigns",
+      "title": "Go to Campaigns",
+      "body": "Click the **Campaigns** tab and open the campaign you want to send.",
+      "route": "^/(marketing/)?emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "text": "Campaigns"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Campaigns"
+    },
+    {
+      "id": "send-or-schedule",
+      "title": "Move to sending",
+      "body": "In the editor, click **Send or Schedule**.",
+      "route": "^/(marketing/)?emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "text": "Send or Schedule"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Send or Schedule"
+    },
+    {
+      "id": "schedule",
+      "title": "Send later",
+      "body": "To send once at a set time, choose **Schedule** and pick the date and time. It uses your account time zone.",
+      "route": "^/(marketing/)?emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "text": "Schedule"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Schedule",
+      "tip": "You can reschedule up to an hour before it goes."
+    },
+    {
+      "id": "batch",
+      "title": "Or send in batches",
+      "body": "For a big list, choose **Batch Schedule** instead. This spreads the send out, which is kinder to your sending reputation.",
+      "route": "^/(marketing/)?emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "text": "Batch Schedule"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Batch Schedule"
+    },
+    {
+      "id": "batch-settings",
+      "title": "Set the batches",
+      "body": "Pick a start date and time. Set **Batch Quantity** (emails per batch) and **Repeat after** (the gap between batches). Untick any days you do not want to send, and set a sending window.",
+      "route": "^/(marketing/)?emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "confirm",
+      "title": "Confirm",
+      "body": "Check your recipients and sender details, then confirm. The campaign shows as scheduled in your Campaigns list.",
+      "route": "^/(marketing/)?emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

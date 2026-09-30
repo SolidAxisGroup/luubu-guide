@@ -1,0 +1,116 @@
+{
+  "id": "reporting-page-google-ads",
+  "kind": "page",
+  "area": "reporting",
+  "screen": "reporting.google-ads",
+  "title": "Tour: Google Ads report",
+  "blurb": "See what your Google ads cost and which ones bring real leads.",
+  "icon": "chart",
+  "minutes": 2,
+  "keywords": [
+    "google ads",
+    "adwords",
+    "ads report",
+    "ppc",
+    "cost per lead",
+    "campaigns"
+  ],
+  "steps": [
+    {
+      "id": "open-reporting",
+      "title": "Open Reporting",
+      "body": "Click **Reporting** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reporting"
+        },
+        {
+          "text": "Reporting",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/"
+      }
+    },
+    {
+      "id": "open-google-ads",
+      "title": "Open Google Ads",
+      "body": "Click **Google Ads**. Your Google Ads results show here.",
+      "route": "^/reporting/",
+      "go": "/reporting/google-ads",
+      "target": [
+        {
+          "css": "#tb_google-ads"
+        },
+        {
+          "text": "Google Ads",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/google-ads"
+      }
+    },
+    {
+      "id": "connect",
+      "title": "Nothing showing?",
+      "body": "Your Google Ads account needs to be connected first. See **Connect Google Ads for reporting** in the Guide.",
+      "route": "^/reporting/google-ads",
+      "go": "/reporting/google-ads",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "dates",
+      "title": "Date range",
+      "body": "Set the date range at the top, for example this month against last month.",
+      "route": "^/reporting/google-ads",
+      "go": "/reporting/google-ads",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "metrics",
+      "title": "Headline numbers",
+      "body": "The top cards show impressions, clicks, cost and conversions. Results by campaign sit below.",
+      "route": "^/reporting/google-ads",
+      "go": "/reporting/google-ads",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "leads",
+      "title": "Real leads",
+      "body": "Leads here are real contacts in Luubu, so you can see which campaigns bring customers, not just clicks.",
+      "route": "^/reporting/google-ads",
+      "go": "/reporting/google-ads",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What's next",
+      "body": "Next: try **Read your Google Ads report** from the Guide.",
+      "route": "^/reporting/google-ads",
+      "go": "/reporting/google-ads",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "id": "reporting-page-call",
+  "kind": "page",
+  "area": "reporting",
+  "screen": "reporting.call-reporting",
+  "title": "Tour: Call report",
+  "blurb": "See every call in and out, what got answered, and where callers came from.",
+  "icon": "phone",
+  "minutes": 2,
+  "keywords": [
+    "call report",
+    "calls",
+    "missed calls",
+    "phone",
+    "call tracking",
+    "recordings"
+  ],
+  "steps": [
+    {
+      "id": "open-reporting",
+      "title": "Open Reporting",
+      "body": "Click **Reporting** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reporting"
+        },
+        {
+          "text": "Reporting",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/"
+      }
+    },
+    {
+      "id": "open-call-reporting",
+      "title": "Open Call Reporting",
+      "body": "Click **Call Reporting**. Your phone activity shows here.",
+      "route": "^/reporting/",
+      "go": "/reporting/call",
+      "target": [
+        {
+          "css": "#tb_call-reporting"
+        },
+        {
+          "text": "Call Reporting",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/call"
+      }
+    },
+    {
+      "id": "tabs",
+      "title": "Incoming and outgoing",
+      "body": "Switch between **Incoming** and **Outgoing Calls**.",
+      "tip": "Don't see this report? It depends on your plan. Ask us to switch this on: hello@luubu.com",
+      "route": "^/reporting/call",
+      "go": "/reporting/call",
+      "target": [
+        {
+          "text": "Incoming"
+        },
+        {
+          "text": "Incoming Calls"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Incoming"
+    },
+    {
+      "id": "status",
+      "title": "Call status",
+      "body": "The donut chart splits calls into answered, missed and busy. First-time callers get their own card.",
+      "route": "^/reporting/call",
+      "go": "/reporting/call",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "sources",
+      "title": "Where calls come from",
+      "body": "Top call sources shows which channels made the phone ring, like Google search or ads.",
+      "route": "^/reporting/call",
+      "go": "/reporting/call",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "table",
+      "title": "Call list",
+      "body": "The table at the bottom lists each call, with recordings where you have them.",
+      "route": "^/reporting/call",
+      "go": "/reporting/call",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What's next",
+      "body": "Next: try **Find and follow up missed calls** from the Guide.",
+      "route": "^/reporting/call",
+      "go": "/reporting/call",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

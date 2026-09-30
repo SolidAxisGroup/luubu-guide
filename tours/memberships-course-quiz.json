@@ -1,0 +1,151 @@
+{
+  "id": "memberships-course-quiz",
+  "kind": "howto",
+  "area": "memberships",
+  "screen": "memberships.courses",
+  "title": "Add a quiz or assignment to a course",
+  "blurb": "Test what members have learned and see their results.",
+  "icon": "book",
+  "minutes": 5,
+  "keywords": [
+    "quiz",
+    "assignment",
+    "test",
+    "assessment",
+    "questions",
+    "course"
+  ],
+  "steps": [
+    {
+      "id": "open-memberships",
+      "title": "Open Memberships",
+      "body": "Click **Memberships** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_memberships"
+        },
+        {
+          "text": "Memberships",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/memberships/"
+      }
+    },
+    {
+      "id": "open-courses",
+      "title": "Open Courses",
+      "body": "Click **Courses**.",
+      "route": "^/memberships/",
+      "go": "/memberships/courses/dashboard-v2",
+      "target": [
+        {
+          "css": "#tb_courses"
+        },
+        {
+          "text": "Courses",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/memberships/courses"
+      }
+    },
+    {
+      "id": "products",
+      "title": "Open Products",
+      "body": "Click **Products**.",
+      "route": "^/memberships/courses",
+      "go": "/memberships/courses/dashboard-v2",
+      "target": [
+        {
+          "text": "Products"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Products",
+      "advance": "click"
+    },
+    {
+      "id": "open-course",
+      "title": "Open your course",
+      "body": "Click the course you want to add a quiz to.",
+      "route": "^/memberships/courses",
+      "go": "/memberships/courses/dashboard-v2",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "add-quiz",
+      "title": "Add a quiz",
+      "body": "Click **Add Content** and choose **Add Quiz**. Use **Add Assignment** instead for written work.",
+      "route": "^/memberships/courses",
+      "go": "/memberships/courses/dashboard-v2",
+      "target": [
+        {
+          "text": "Add Content"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add Content"
+    },
+    {
+      "id": "setup",
+      "title": "Name it",
+      "body": "Pick the category it belongs to and give it a title. Leave it as **Draft** while you build it.",
+      "route": "^/memberships/courses",
+      "go": "/memberships/courses/dashboard-v2",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "questions",
+      "title": "Add questions",
+      "body": "Click **Add Question**, type the question and answers, and mark the correct one.",
+      "route": "^/memberships/courses",
+      "go": "/memberships/courses/dashboard-v2",
+      "target": [
+        {
+          "text": "Add Question",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add Question"
+    },
+    {
+      "id": "save",
+      "title": "Save and review",
+      "body": "Click **Save**. See how members did later under **Analytics**.",
+      "route": "^/memberships/courses",
+      "go": "/memberships/courses/dashboard-v2",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

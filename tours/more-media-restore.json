@@ -1,0 +1,88 @@
+{
+  "id": "more-media-restore",
+  "kind": "howto",
+  "area": "more",
+  "screen": "more.app-media",
+  "title": "Get back a deleted file",
+  "blurb": "Restore files from Trash within 30 days.",
+  "icon": "image",
+  "minutes": 1,
+  "keywords": [
+    "restore",
+    "deleted",
+    "trash",
+    "recover",
+    "undo",
+    "media"
+  ],
+  "steps": [
+    {
+      "id": "open-media-storage",
+      "title": "Open Media Storage",
+      "body": "Click **Media Storage** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_app-media"
+        },
+        {
+          "text": "Media Storage",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/media-storage"
+      }
+    },
+    {
+      "id": "trash",
+      "title": "Open Trash",
+      "body": "Click **Trash**.",
+      "route": "^/media-storage",
+      "go": "/media-storage",
+      "target": [
+        {
+          "text": "Trash"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Trash",
+      "advance": "click"
+    },
+    {
+      "id": "restore",
+      "title": "Restore it",
+      "body": "Find the file and click **Restore**.",
+      "route": "^/media-storage",
+      "go": "/media-storage",
+      "target": [
+        {
+          "text": "Restore"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Restore"
+    },
+    {
+      "id": "note",
+      "title": "Good to know",
+      "body": "Files stay in Trash for 30 days, then they are gone for good.",
+      "route": "^/media-storage",
+      "go": "/media-storage",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

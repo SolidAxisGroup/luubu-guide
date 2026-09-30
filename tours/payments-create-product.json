@@ -1,0 +1,140 @@
+{
+  "id": "payments-create-product",
+  "kind": "howto",
+  "area": "payments",
+  "screen": "payments.payments-products",
+  "title": "Add a product or service",
+  "blurb": "Add an item to your price list, in NZD.",
+  "icon": "grid",
+  "minutes": 3,
+  "keywords": [
+    "product",
+    "service",
+    "add product",
+    "price",
+    "item",
+    "catalogue"
+  ],
+  "steps": [
+    {
+      "id": "open-payments",
+      "title": "Open Payments",
+      "body": "Click **Payments** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_payments"
+        },
+        {
+          "text": "Payments",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/"
+      }
+    },
+    {
+      "id": "tab-payments-products",
+      "title": "Open Products",
+      "body": "Click **Products** along the top.",
+      "route": "^/payments/",
+      "go": "/payments/products",
+      "target": [
+        {
+          "css": "#tb_payments-products"
+        },
+        {
+          "text": "Products",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/products"
+      }
+    },
+    {
+      "id": "create",
+      "title": "Create a product",
+      "body": "Click **Create Product**.",
+      "route": "^/payments/products",
+      "go": "/payments/products",
+      "target": [
+        {
+          "text": "Create Product",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create Product"
+    },
+    {
+      "id": "name",
+      "title": "Name and describe it",
+      "body": "Enter a clear name, e.g. \"Standard house wash\", and a short description.",
+      "route": "^/payments/products",
+      "go": "/payments/products",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "image",
+      "title": "Add a photo",
+      "body": "Upload a square photo. It shows on payment links and your store.",
+      "route": "^/payments/products",
+      "go": "/payments/products",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "price",
+      "title": "Set the price",
+      "body": "Choose **One-Time** and enter the amount in NZD, e.g. $345.",
+      "tip": "Decide if your prices include GST and stick to it everywhere.",
+      "route": "^/payments/products",
+      "go": "/payments/products",
+      "target": [
+        {
+          "text": "One-Time"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "One-Time"
+    },
+    {
+      "id": "save",
+      "title": "Save",
+      "body": "Click **Save**. It is now ready for invoices, links and forms.",
+      "route": "^/payments/products",
+      "go": "/payments/products",
+      "target": [
+        {
+          "text": "Save",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Save"
+    }
+  ]
+}

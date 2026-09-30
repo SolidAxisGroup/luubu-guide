@@ -1,0 +1,92 @@
+{
+  "id": "reporting-audit-share",
+  "kind": "howto",
+  "area": "reporting",
+  "screen": "reporting.audit-report",
+  "title": "Download or share an audit",
+  "blurb": "Save an audit as a PDF or send it to your team or adviser.",
+  "icon": "chart",
+  "minutes": 2,
+  "keywords": [
+    "share",
+    "pdf",
+    "download",
+    "audit",
+    "email",
+    "send report"
+  ],
+  "steps": [
+    {
+      "id": "open-reporting",
+      "title": "Open Reporting",
+      "body": "Click **Reporting** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reporting"
+        },
+        {
+          "text": "Reporting",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/"
+      }
+    },
+    {
+      "id": "open-local-marketing-audit",
+      "title": "Open Local Marketing Audit",
+      "body": "Click **Local Marketing Audit**.",
+      "route": "^/reporting/",
+      "go": "/reporting/local-marketing-audit",
+      "target": [
+        {
+          "css": "#tb_audit-report"
+        },
+        {
+          "text": "Local Marketing Audit",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/local-marketing-audit"
+      }
+    },
+    {
+      "id": "open",
+      "title": "Open an audit",
+      "body": "Open the audit you want to share.",
+      "route": "^/reporting/local-marketing-audit",
+      "go": "/reporting/local-marketing-audit",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "pdf",
+      "title": "Download a PDF",
+      "body": "Download it as a PDF. You can choose the language.",
+      "route": "^/reporting/local-marketing-audit",
+      "go": "/reporting/local-marketing-audit",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "send",
+      "title": "Or send it",
+      "body": "Or send it by email, SMS or a secure link.",
+      "route": "^/reporting/local-marketing-audit",
+      "go": "/reporting/local-marketing-audit",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

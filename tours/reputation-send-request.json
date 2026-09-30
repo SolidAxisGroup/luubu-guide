@@ -1,0 +1,115 @@
+{
+  "id": "reputation-send-request",
+  "kind": "howto",
+  "area": "reputation",
+  "screen": "reputation.reputations-requests",
+  "title": "Send a review request",
+  "blurb": "Ask a happy customer for a Google or Facebook review by text or email.",
+  "icon": "star",
+  "minutes": 2,
+  "keywords": [
+    "review request",
+    "ask for review",
+    "google review",
+    "sms",
+    "text",
+    "email",
+    "reviews"
+  ],
+  "steps": [
+    {
+      "id": "open-reputation",
+      "title": "Open Reputation",
+      "body": "Click **Reputation** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reputation"
+        },
+        {
+          "text": "Reputation",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reputation/"
+      }
+    },
+    {
+      "id": "open-requests",
+      "title": "Open Requests",
+      "body": "Click **Requests**.",
+      "route": "^/reputation/",
+      "go": "/reputation/requests",
+      "target": [
+        {
+          "css": "#tb_reputations-requests"
+        },
+        {
+          "text": "Requests",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reputation/requests"
+      }
+    },
+    {
+      "id": "send",
+      "title": "Start a request",
+      "body": "Click **Send Review Request**.",
+      "route": "^/reputation/requests",
+      "go": "/reputation/requests",
+      "target": [
+        {
+          "text": "Send Review Request",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Send Review Request",
+      "advance": "click"
+    },
+    {
+      "id": "contact",
+      "title": "Pick the customer",
+      "body": "Search for the customer and choose them. Check they have a mobile number or email on file.",
+      "route": "^/reputation/requests",
+      "go": "/reputation/requests",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "channel",
+      "title": "Choose how to send",
+      "body": "Choose **SMS**, **Email** or both. WhatsApp shows too if you have it connected.",
+      "route": "^/reputation/requests",
+      "go": "/reputation/requests",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "send-it",
+      "title": "Send it",
+      "body": "Send it. It appears in the list straight away.",
+      "tip": "Want to change the wording first? Try **Customise review request messages** in the Guide.",
+      "route": "^/reputation/requests",
+      "go": "/reputation/requests",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

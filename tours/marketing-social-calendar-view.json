@@ -1,0 +1,125 @@
+{
+  "id": "marketing-social-calendar-view",
+  "kind": "howto",
+  "area": "marketing",
+  "screen": "marketing.social-planner",
+  "title": "Plan with the social calendar",
+  "blurb": "See every post by week or month and drag them to new days.",
+  "icon": "calendar",
+  "minutes": 3,
+  "keywords": [
+    "calendar",
+    "content calendar",
+    "planner",
+    "reschedule",
+    "drag",
+    "month view",
+    "social"
+  ],
+  "steps": [
+    {
+      "id": "open-marketing",
+      "title": "Open Marketing",
+      "body": "Click **Marketing** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_email-marketing"
+        },
+        {
+          "text": "Marketing",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/"
+      }
+    },
+    {
+      "id": "open-social-planner",
+      "title": "Open Social Planner",
+      "body": "Click **Social Planner** along the top.",
+      "route": "^/marketing/",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "css": "#tb_social-planner"
+        },
+        {
+          "text": "Social Planner",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/social-planner"
+      }
+    },
+    {
+      "id": "planner",
+      "title": "Open the Planner",
+      "body": "Click **Planner**.",
+      "route": "^/marketing/social-planner",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "text": "Planner"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Planner"
+    },
+    {
+      "id": "calendar",
+      "title": "Switch to the calendar",
+      "body": "Use the view switcher to change from list to calendar, then pick month or week. Each post shows as a block, coloured by network.",
+      "route": "^/marketing/social-planner",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Recurring posts show on the calendar too, so you can see the whole month ahead."
+    },
+    {
+      "id": "drag",
+      "title": "Move a post",
+      "body": "Drag a scheduled post to another day to reschedule it.",
+      "route": "^/marketing/social-planner",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "edit",
+      "title": "Open a post",
+      "body": "Click any post to edit the words, swap the photo or delete it.",
+      "route": "^/marketing/social-planner",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "list",
+      "title": "Check for problems",
+      "body": "Switch back to the list view to filter by drafts, scheduled and failed posts. Fix any failed ones first.",
+      "route": "^/marketing/social-planner",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "id": "opportunities-page-pipelines",
+  "kind": "page",
+  "area": "opportunities",
+  "screen": "opportunities.pipeline",
+  "title": "Tour: Pipelines",
+  "blurb": "Set up the stages your jobs move through, from enquiry to paid.",
+  "icon": "card",
+  "minutes": 2,
+  "keywords": [
+    "pipelines",
+    "stages",
+    "sales process",
+    "setup",
+    "pipeline settings"
+  ],
+  "steps": [
+    {
+      "id": "open-opportunities",
+      "title": "Open Opportunities",
+      "body": "Click **Opportunities** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_opportunities"
+        },
+        {
+          "text": "Opportunities",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/opportunities/"
+      }
+    },
+    {
+      "id": "tab-pipeline",
+      "title": "Open Pipelines",
+      "body": "Click **Pipelines** along the top.",
+      "route": "^/opportunities/",
+      "go": "/opportunities/pipeline",
+      "target": [
+        {
+          "css": "#tb_pipeline"
+        },
+        {
+          "text": "Pipelines",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/opportunities/pipeline"
+      }
+    },
+    {
+      "id": "what",
+      "title": "What a pipeline is",
+      "body": "A pipeline is the set of steps a job goes through, like New Enquiry, Site Visit, Quote Sent, Booked. Each step is a stage.",
+      "route": "^/opportunities/pipeline",
+      "go": "/opportunities/pipeline",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "list",
+      "title": "Your pipelines",
+      "body": "All your pipelines are listed here. Click one to edit its name and stages.",
+      "route": "^/opportunities/pipeline",
+      "go": "/opportunities/pipeline",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "create",
+      "title": "Add a pipeline",
+      "body": "Click **Create pipeline** to set one up.",
+      "route": "^/opportunities/pipeline",
+      "go": "/opportunities/pipeline",
+      "target": [
+        {
+          "text": "Create pipeline",
+          "tag": "button"
+        },
+        {
+          "text": "Create new pipeline",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create pipeline"
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Next: try **Create a pipeline** from the Guide.",
+      "route": "^/opportunities/pipeline",
+      "go": "/opportunities/pipeline",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "id": "reputation-ai-reply",
+  "kind": "howto",
+  "area": "reputation",
+  "screen": "reputation.reputations-reviews",
+  "title": "Reply to reviews with AI",
+  "blurb": "Get a ready-to-edit reply drafted for any review.",
+  "icon": "bot",
+  "minutes": 2,
+  "keywords": [
+    "ai reply",
+    "ai",
+    "review reply",
+    "respond",
+    "reviews ai",
+    "suggest"
+  ],
+  "steps": [
+    {
+      "id": "open-reputation",
+      "title": "Open Reputation",
+      "body": "Click **Reputation** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reputation"
+        },
+        {
+          "text": "Reputation",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reputation/"
+      }
+    },
+    {
+      "id": "open-reviews",
+      "title": "Open Reviews",
+      "body": "Click **Reviews**.",
+      "route": "^/reputation/",
+      "go": "/reputation/reviews",
+      "target": [
+        {
+          "css": "#tb_reputations-reviews"
+        },
+        {
+          "text": "Reviews",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reputation/reviews"
+      }
+    },
+    {
+      "id": "find",
+      "title": "Find the review",
+      "body": "Find the review you want to answer.",
+      "route": "^/reputation/reviews",
+      "go": "/reputation/reviews",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "ai-reply",
+      "title": "Draft with AI",
+      "body": "Click **AI Reply**.",
+      "tip": "Don't see **AI Reply**? Reviews AI needs switching on. Ask us to switch this on: hello@luubu.com",
+      "route": "^/reputation/reviews",
+      "go": "/reputation/reviews",
+      "target": [
+        {
+          "text": "AI Reply"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "AI Reply",
+      "advance": "click"
+    },
+    {
+      "id": "check",
+      "title": "Check the draft",
+      "body": "Read it. Add a personal detail or fix anything that's off. Ask for a new version if it doesn't sound like you.",
+      "route": "^/reputation/reviews",
+      "go": "/reputation/reviews",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "post",
+      "title": "Post it",
+      "body": "Post the reply. AI replies can carry a small charge per reply sent. Replies you write yourself are free.",
+      "route": "^/reputation/reviews",
+      "go": "/reputation/reviews",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

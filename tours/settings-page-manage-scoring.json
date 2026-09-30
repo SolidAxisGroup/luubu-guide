@@ -1,0 +1,124 @@
+{
+  "id": "settings-page-manage-scoring",
+  "kind": "page",
+  "area": "settings",
+  "screen": "settings.manage-scoring",
+  "title": "Tour: Manage Scoring",
+  "blurb": "Give contacts points for actions so you can spot hot leads.",
+  "icon": "star",
+  "minutes": 2,
+  "keywords": [
+    "lead scoring",
+    "score",
+    "points",
+    "hot leads",
+    "rules",
+    "engagement"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-manage-scoring",
+      "title": "Open Manage Scoring",
+      "body": "Click **Manage Scoring** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/scoring",
+      "target": [
+        {
+          "css": "[id='sb_manage-scoring']"
+        },
+        {
+          "text": "Manage Scoring",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/scoring"
+      }
+    },
+    {
+      "id": "what",
+      "title": "What scoring does",
+      "body": "Scoring adds or takes away points when a contact does something, like opening an email or booking a call. Higher scores mean warmer leads.",
+      "route": "^/settings/scoring",
+      "go": "/settings/scoring",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "rules",
+      "title": "Your rules",
+      "body": "The table lists each rule and its points. Green adds points, red takes them away.",
+      "route": "^/settings/scoring",
+      "go": "/settings/scoring",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "add",
+      "title": "Add a rule",
+      "body": "**Add New Rule** creates a new scoring rule.",
+      "route": "^/settings/scoring",
+      "go": "/settings/scoring",
+      "target": [
+        {
+          "text": "Add New Rule",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add New Rule"
+    },
+    {
+      "id": "draft",
+      "title": "Draft and publish",
+      "body": "Changes start as a draft. Use the draft and publish switch in the top right to make them live.",
+      "route": "^/settings/scoring",
+      "go": "/settings/scoring",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Next: try **Set up lead scoring rules** from the Guide.",
+      "route": "^/settings/scoring",
+      "go": "/settings/scoring",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

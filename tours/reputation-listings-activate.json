@@ -1,0 +1,125 @@
+{
+  "id": "reputation-listings-activate",
+  "kind": "howto",
+  "area": "reputation",
+  "screen": "reputation.online-listings",
+  "title": "Get your business listed in online directories",
+  "blurb": "Push consistent business details to directories for better local search.",
+  "icon": "globe",
+  "minutes": 5,
+  "keywords": [
+    "listings",
+    "directories",
+    "local seo",
+    "activate",
+    "citations",
+    "business details"
+  ],
+  "steps": [
+    {
+      "id": "open-reputation",
+      "title": "Open Reputation",
+      "body": "Click **Reputation** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reputation"
+        },
+        {
+          "text": "Reputation",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reputation/"
+      }
+    },
+    {
+      "id": "open-listings",
+      "title": "Open Listings",
+      "body": "Click **Listings**.",
+      "route": "^/reputation/",
+      "go": "/reputation/listing",
+      "target": [
+        {
+          "css": "#tb_online-listings"
+        },
+        {
+          "text": "Listings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reputation/listing"
+      }
+    },
+    {
+      "id": "prep",
+      "title": "Get your details straight",
+      "body": "Decide exactly how your name, address and phone should appear, and use that same format everywhere.",
+      "route": "^/reputation/listing",
+      "go": "/reputation/listing",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "activate",
+      "title": "Activate",
+      "body": "Click **Activate Listings**.",
+      "tip": "Directory coverage varies by country. Check with us before you buy: hello@luubu.com",
+      "route": "^/reputation/listing",
+      "go": "/reputation/listing",
+      "target": [
+        {
+          "text": "Activate Listings",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Activate Listings"
+    },
+    {
+      "id": "plan",
+      "title": "Choose a plan",
+      "body": "Pick a plan and complete payment.",
+      "route": "^/reputation/listing",
+      "go": "/reputation/listing",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "form",
+      "title": "Fill in the form",
+      "body": "Enter your business details carefully. Most hold-ups come from a mistyped address, name, phone or email.",
+      "route": "^/reputation/listing",
+      "go": "/reputation/listing",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "wait",
+      "title": "Let it sync",
+      "body": "Syncing usually takes 24 to 48 hours; a few directories take up to a week. Listings may replace profiles you created by hand.",
+      "route": "^/reputation/listing",
+      "go": "/reputation/listing",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

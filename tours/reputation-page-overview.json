@@ -1,0 +1,144 @@
+{
+  "id": "reputation-page-overview",
+  "kind": "page",
+  "area": "reputation",
+  "screen": "reputation.reputation-overview",
+  "title": "Tour: Reputation overview",
+  "blurb": "Your review requests, ratings and sentiment at a glance.",
+  "icon": "star",
+  "minutes": 2,
+  "keywords": [
+    "reputation",
+    "reviews",
+    "rating",
+    "overview",
+    "google reviews",
+    "sentiment"
+  ],
+  "steps": [
+    {
+      "id": "open-reputation",
+      "title": "Open Reputation",
+      "body": "Click **Reputation** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reputation"
+        },
+        {
+          "text": "Reputation",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reputation/"
+      }
+    },
+    {
+      "id": "open-overview",
+      "title": "Open Overview",
+      "body": "Click **Overview**. This is your reviews scoreboard.",
+      "route": "^/reputation/",
+      "go": "/reputation/overview",
+      "target": [
+        {
+          "css": "#tb_reputation-overview"
+        },
+        {
+          "text": "Overview",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reputation/overview"
+      }
+    },
+    {
+      "id": "goals",
+      "title": "Invite goals",
+      "body": "**Invite Goals** tracks how many review requests you have sent against your next milestone.",
+      "route": "^/reputation/overview",
+      "go": "/reputation/overview",
+      "target": [
+        {
+          "text": "Invite Goals"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Invite Goals"
+    },
+    {
+      "id": "received",
+      "title": "How you are tracking",
+      "body": "**Reviews Received**, **Avg Rating** and **Sentiment** show the big picture. Sentiment sorts reviews into positive, neutral and negative.",
+      "route": "^/reputation/overview",
+      "go": "/reputation/overview",
+      "target": [
+        {
+          "text": "Reviews Received"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Reviews Received"
+    },
+    {
+      "id": "trends",
+      "title": "Trends",
+      "body": "**Invite Trends** and **Review Trends** chart requests sent and reviews received, month by month.",
+      "route": "^/reputation/overview",
+      "go": "/reputation/overview",
+      "target": [
+        {
+          "text": "Review Trends"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Review Trends"
+    },
+    {
+      "id": "latest",
+      "title": "Latest activity",
+      "body": "Recent requests and reviews sit at the bottom. Use the three dots on any card to change its date range.",
+      "route": "^/reputation/overview",
+      "go": "/reputation/overview",
+      "target": [
+        {
+          "text": "Latest Review Requests"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Latest Review Requests"
+    },
+    {
+      "id": "next",
+      "title": "What's next",
+      "body": "Next: try **Send a review request** from the Guide.",
+      "route": "^/reputation/overview",
+      "go": "/reputation/overview",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "id": "ai-studio-build-page",
+  "kind": "howto",
+  "area": "ai",
+  "screen": "ai.vibe",
+  "title": "Build a landing page with AI Studio",
+  "blurb": "Describe your business and get a working page in minutes.",
+  "icon": "bot",
+  "minutes": 5,
+  "keywords": [
+    "landing page",
+    "ai website",
+    "build page",
+    "ai studio",
+    "website",
+    "booking page"
+  ],
+  "steps": [
+    {
+      "id": "open-ai-studio",
+      "title": "Open AI Studio",
+      "body": "Click **AI Studio** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_vibe"
+        },
+        {
+          "text": "AI Studio",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/vibe"
+      }
+    },
+    {
+      "id": "prompt",
+      "title": "Describe the page",
+      "body": "In the box, write something like: \"A landing page for a Hamilton electrician. Big call button, list of services, quote form, navy and yellow.\" Then send it.",
+      "route": "^/vibe",
+      "go": "/vibe",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Attach your logo and a couple of job photos for a more on-brand result."
+    },
+    {
+      "id": "wait",
+      "title": "Let it build",
+      "body": "AI plans and builds the page. Watch the preview fill in on the right.",
+      "route": "^/vibe",
+      "go": "/vibe",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "devices",
+      "title": "Check it on a phone",
+      "body": "Switch the preview between desktop, tablet and mobile. Most of your visitors will be on a phone.",
+      "route": "^/vibe",
+      "go": "/vibe",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "refine",
+      "title": "Ask for changes",
+      "body": "Type changes in plain words: \"make the heading shorter\", \"add a reviews section\". Keep asking until it looks right.",
+      "route": "^/vibe",
+      "go": "/vibe",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "Next",
+      "body": "Happy with it? Try **Publish your AI Studio site** from the Guide.",
+      "route": "^/vibe",
+      "go": "/vibe",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

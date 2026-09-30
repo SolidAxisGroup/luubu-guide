@@ -1,0 +1,123 @@
+{
+  "id": "contacts-page-bulk-actions",
+  "kind": "page",
+  "area": "contacts",
+  "screen": "contacts.bulk-actions",
+  "title": "Tour: Contact bulk actions",
+  "blurb": "Track imports, bulk texts, emails and tag jobs, and fix any errors.",
+  "icon": "users",
+  "minutes": 2,
+  "keywords": [
+    "bulk actions",
+    "import status",
+    "progress",
+    "bulk jobs",
+    "errors",
+    "logs"
+  ],
+  "steps": [
+    {
+      "id": "open-contacts",
+      "title": "Open Contacts",
+      "body": "Click **Contacts** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_contacts"
+        },
+        {
+          "text": "Contacts",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/contacts/"
+      }
+    },
+    {
+      "id": "tab-bulk-actions",
+      "title": "Open Bulk Actions",
+      "body": "Click **Bulk Actions** along the top.",
+      "route": "^/(contacts/|tasks|businesses/|settings/fields)",
+      "go": "/contacts/bulk/actions",
+      "target": [
+        {
+          "css": "#tb_bulk-actions"
+        },
+        {
+          "text": "Bulk Actions",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/contacts/bulk"
+      }
+    },
+    {
+      "id": "what",
+      "title": "Your job history",
+      "body": "Every big job you start from Contacts lands here: imports, bulk tags, bulk texts and emails, deletions and workflow enrolments.",
+      "route": "^/contacts/bulk",
+      "go": "/contacts/bulk/actions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "filters",
+      "title": "Find a job",
+      "body": "Filter by status, action type, the user who ran it, or date.",
+      "route": "^/contacts/bulk",
+      "go": "/contacts/bulk/actions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "stats",
+      "title": "See the results",
+      "body": "Click **Show Stats** on a job to see how many worked and how many failed. Download the error log to fix failed rows.",
+      "route": "^/contacts/bulk",
+      "go": "/contacts/bulk/actions",
+      "target": [
+        {
+          "text": "Show Stats"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Show Stats"
+    },
+    {
+      "id": "manage",
+      "title": "Pause or cancel",
+      "body": "For jobs still running, use the row menu to pause, edit or cancel. Deleted contacts can be restored from here for about 60 days.",
+      "route": "^/contacts/bulk",
+      "go": "/contacts/bulk/actions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Next: try **Check an import and fix errors** from the Guide.",
+      "route": "^/contacts/bulk",
+      "go": "/contacts/bulk/actions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

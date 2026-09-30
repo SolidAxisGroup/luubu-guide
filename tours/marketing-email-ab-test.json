@@ -1,0 +1,158 @@
+{
+  "id": "marketing-email-ab-test",
+  "kind": "howto",
+  "area": "marketing",
+  "screen": "marketing.email-builder",
+  "title": "A/B test an email campaign",
+  "blurb": "Try two subject lines or designs and send the winner to everyone else.",
+  "icon": "chart",
+  "minutes": 5,
+  "keywords": [
+    "a/b test",
+    "ab test",
+    "split test",
+    "subject line",
+    "test email",
+    "open rate",
+    "winner"
+  ],
+  "steps": [
+    {
+      "id": "open-marketing",
+      "title": "Open Marketing",
+      "body": "Click **Marketing** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_email-marketing"
+        },
+        {
+          "text": "Marketing",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/"
+      }
+    },
+    {
+      "id": "open-email-builder",
+      "title": "Open Emails",
+      "body": "Click **Emails** along the top.",
+      "route": "^/marketing/",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "css": "#tb_email-builder"
+        },
+        {
+          "text": "Emails",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/emails"
+      }
+    },
+    {
+      "id": "campaigns",
+      "title": "Go to Campaigns",
+      "body": "Click the **Campaigns** tab.",
+      "route": "^/(marketing/)?emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "text": "Campaigns"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Campaigns"
+    },
+    {
+      "id": "open",
+      "title": "Open your campaign",
+      "body": "Open the campaign you want to test, or create a new one. It opens in the email editor.",
+      "route": "^/(marketing/)?emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "enable",
+      "title": "Turn on testing",
+      "body": "In the left panel, switch on **Enable A/B Testing**.",
+      "route": "^/(marketing/)?emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "text": "Enable A/B Testing"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Enable A/B Testing"
+    },
+    {
+      "id": "type",
+      "title": "Choose what to test",
+      "body": "Pick **Email Subject** to test subject lines, or **Email Content** to test the design and words. One or the other per campaign.",
+      "route": "^/(marketing/)?emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "text": "Email Subject"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Email Subject"
+    },
+    {
+      "id": "settings",
+      "title": "Set the rules",
+      "body": "Add your versions (up to 6). Use the slider to set how many people get the test, pick how long it runs, and choose the winner by **Unique Open Rate** or **Unique Click Rate**.",
+      "route": "^/(marketing/)?emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Testing subjects? Judge on opens. Testing content? Judge on clicks."
+    },
+    {
+      "id": "send",
+      "title": "Send the test",
+      "body": "Click **Send or Schedule**. The winning version goes to everyone else automatically.",
+      "route": "^/(marketing/)?emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "text": "Send or Schedule"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Send or Schedule"
+    }
+  ]
+}

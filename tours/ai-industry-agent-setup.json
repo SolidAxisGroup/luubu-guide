@@ -1,0 +1,116 @@
+{
+  "id": "ai-industry-agent-setup",
+  "kind": "howto",
+  "area": "ai",
+  "screen": "ai.ai-agents-industry-agents",
+  "title": "Set up an industry agent",
+  "blurb": "Add a pre-built agent for your industry and tailor it to your business.",
+  "icon": "bot",
+  "minutes": 5,
+  "keywords": [
+    "industry agent",
+    "setup",
+    "prebuilt",
+    "trades",
+    "clinic",
+    "install"
+  ],
+  "steps": [
+    {
+      "id": "open-ai-agents",
+      "title": "Open AI Agents",
+      "body": "Click **AI Agents** in the left menu.",
+      "target": [
+        {
+          "css": "[id='sb_AI Agents']"
+        },
+        {
+          "text": "AI Agents",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/"
+      }
+    },
+    {
+      "id": "open-ai-agents-industry-agents",
+      "title": "Open Industry Agents",
+      "body": "Click the **Industry Agents** tab.",
+      "route": "^/ai-agents/",
+      "go": "/ai-agents/industry-agents",
+      "target": [
+        {
+          "css": "#tb_ai-agents-industry-agents"
+        },
+        {
+          "text": "Industry Agents"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/industry-agents"
+      }
+    },
+    {
+      "id": "find",
+      "title": "Find your industry",
+      "body": "Browse the list and open the agent that matches your business.",
+      "route": "^/ai-agents/industry-agents",
+      "go": "/ai-agents/industry-agents",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "read",
+      "title": "Read what it does",
+      "body": "Check which channels it covers and what it will try to achieve, like booking a quote visit.",
+      "route": "^/ai-agents/industry-agents",
+      "go": "/ai-agents/industry-agents",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "add",
+      "title": "Add it",
+      "body": "Use the button on the agent to add it to your account.",
+      "route": "^/ai-agents/industry-agents",
+      "go": "/ai-agents/industry-agents",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "tailor",
+      "title": "Tailor it",
+      "body": "Open the new agent and update your business name, services, service area and calendar. Attach your knowledge base.",
+      "route": "^/ai-agents/industry-agents",
+      "go": "/ai-agents/industry-agents",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "test",
+      "title": "Test, then switch on",
+      "body": "Try it yourself first. Go live once the answers look right.",
+      "route": "^/ai-agents/industry-agents",
+      "go": "/ai-agents/industry-agents",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Not sure which one fits? Email hello@luubu.com."
+    }
+  ]
+}

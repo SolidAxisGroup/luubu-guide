@@ -1,0 +1,105 @@
+{
+  "id": "marketing-affiliate-results",
+  "kind": "howto",
+  "area": "marketing",
+  "screen": "marketing.affiliate-manager",
+  "title": "Track affiliate results",
+  "blurb": "See which partners bring in sales and what you owe them.",
+  "icon": "chart",
+  "minutes": 2,
+  "keywords": [
+    "affiliate report",
+    "commissions",
+    "leaderboard",
+    "referral sales",
+    "payouts",
+    "affiliate"
+  ],
+  "steps": [
+    {
+      "id": "open-marketing",
+      "title": "Open Marketing",
+      "body": "Click **Marketing** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_email-marketing"
+        },
+        {
+          "text": "Marketing",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/"
+      }
+    },
+    {
+      "id": "open-affiliate-manager",
+      "title": "Open Affiliate Manager",
+      "body": "Click **Affiliate Manager** along the top.",
+      "route": "^/marketing/",
+      "go": "/marketing/affiliate-manager",
+      "target": [
+        {
+          "css": "#tb_affiliate-manager"
+        },
+        {
+          "text": "Affiliate Manager",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/affiliate-manager"
+      }
+    },
+    {
+      "id": "picker",
+      "title": "Pick a campaign",
+      "body": "Use the campaign picker to see all campaigns or just one.",
+      "route": "^/marketing/affiliate-manager",
+      "go": "/marketing/affiliate-manager",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "metrics",
+      "title": "Read the numbers",
+      "body": "The top cards show total revenue, customers and conversion rate from affiliates. The trend graph shows how it is tracking.",
+      "route": "^/marketing/affiliate-manager",
+      "go": "/marketing/affiliate-manager",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "leaderboard",
+      "title": "Top partners",
+      "body": "The **Affiliate Leaderboard** ranks your top 10 affiliates. Thank them.",
+      "route": "^/marketing/affiliate-manager",
+      "go": "/marketing/affiliate-manager",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "pending",
+      "title": "Clear pending items",
+      "body": "Check **Pending Actions** for commissions and payouts waiting on you, then head to **Payouts** to pay them.",
+      "route": "^/marketing/affiliate-manager",
+      "go": "/marketing/affiliate-manager",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Need the raw figures? Use **Export Sales CSV**."
+    }
+  ]
+}

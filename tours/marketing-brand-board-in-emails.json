@@ -1,0 +1,137 @@
+{
+  "id": "marketing-brand-board-in-emails",
+  "kind": "howto",
+  "area": "marketing",
+  "screen": "marketing.email-builder",
+  "title": "Use your brand board in emails",
+  "blurb": "Apply your brand colours, fonts and logo in the email builder.",
+  "icon": "image",
+  "minutes": 3,
+  "keywords": [
+    "brand colours",
+    "brand fonts",
+    "logo",
+    "email design",
+    "brand board",
+    "on brand"
+  ],
+  "steps": [
+    {
+      "id": "open-marketing",
+      "title": "Open Marketing",
+      "body": "Click **Marketing** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_email-marketing"
+        },
+        {
+          "text": "Marketing",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/"
+      }
+    },
+    {
+      "id": "open-brand-boards",
+      "title": "Open Brand Boards",
+      "body": "Click **Brand Boards** along the top.",
+      "route": "^/marketing/",
+      "go": "/marketing/brand-boards",
+      "target": [
+        {
+          "css": "#tb_brand-boards"
+        },
+        {
+          "text": "Brand Boards",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/brand-boards"
+      }
+    },
+    {
+      "id": "default",
+      "title": "Check your default",
+      "body": "Make sure the board you want has been set with **Set as Default** from its three-dot menu. Only the default shows in the builders.",
+      "route": "^/marketing/brand-boards",
+      "go": "/marketing/brand-boards",
+      "target": [
+        {
+          "text": "Set as Default"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Set as Default"
+    },
+    {
+      "id": "open-emails",
+      "title": "Open Emails",
+      "body": "Click **Emails** along the top.",
+      "route": "^/marketing/",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "css": "#tb_email-builder"
+        },
+        {
+          "text": "Emails",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/emails"
+      }
+    },
+    {
+      "id": "templates",
+      "title": "Open an email",
+      "body": "Click **Templates** and open the email you want to style.",
+      "route": "^/(marketing/)?emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "text": "Templates"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Templates"
+    },
+    {
+      "id": "colours",
+      "title": "Use brand colours",
+      "body": "Click any text, button or background colour. Your named brand colours sit at the top of the picker.",
+      "route": "^/(marketing/)?emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "fonts-logo",
+      "title": "Fonts and logo",
+      "body": "Your brand fonts are at the top of the font list. Your logos are in the media library when you add an image. Save when you are done.",
+      "route": "^/(marketing/)?emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

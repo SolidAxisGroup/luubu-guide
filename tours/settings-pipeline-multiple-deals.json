@@ -1,0 +1,102 @@
+{
+  "id": "settings-pipeline-multiple-deals",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.objects",
+  "title": "Allow more than one deal per contact",
+  "blurb": "Track repeat jobs or upsells for the same customer in one pipeline.",
+  "icon": "chart",
+  "minutes": 2,
+  "keywords": [
+    "duplicate opportunities",
+    "multiple deals",
+    "repeat customer",
+    "opportunity settings",
+    "pipeline"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-objects",
+      "title": "Open Objects",
+      "body": "Click **Objects** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/objects",
+      "target": [
+        {
+          "css": "[id='sb_objects']"
+        },
+        {
+          "text": "Objects",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/objects"
+      }
+    },
+    {
+      "id": "opps",
+      "title": "Open Opportunities",
+      "body": "Click the **Opportunities** object in the list.",
+      "route": "^/settings/objects",
+      "go": "/settings/objects",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Opportunities"
+    },
+    {
+      "id": "toggle",
+      "title": "Turn it on",
+      "body": "Switch on **Allow Multiple Opportunities per Contact**.",
+      "route": "^/settings/objects",
+      "go": "/settings/objects",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Allow Multiple Opportunities per Contact"
+    },
+    {
+      "id": "save",
+      "title": "Save",
+      "body": "Click **Save changes**.",
+      "route": "^/settings/objects",
+      "go": "/settings/objects",
+      "target": [
+        {
+          "text": "Save changes",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Save changes",
+      "tip": "Useful for repeat customers, like a client who books a new job every season."
+    }
+  ]
+}

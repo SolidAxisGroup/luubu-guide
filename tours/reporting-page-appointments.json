@@ -1,0 +1,116 @@
+{
+  "id": "reporting-page-appointments",
+  "kind": "page",
+  "area": "reporting",
+  "screen": "reporting.appointment-report",
+  "title": "Tour: Appointment report",
+  "blurb": "Bookings, cancellations and your busiest calendars and days.",
+  "icon": "calendar",
+  "minutes": 2,
+  "keywords": [
+    "appointments",
+    "bookings",
+    "appointment report",
+    "cancellations",
+    "no shows",
+    "calendar"
+  ],
+  "steps": [
+    {
+      "id": "open-reporting",
+      "title": "Open Reporting",
+      "body": "Click **Reporting** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reporting"
+        },
+        {
+          "text": "Reporting",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/"
+      }
+    },
+    {
+      "id": "open-appointment-report",
+      "title": "Open Appointment Report",
+      "body": "Click **Appointment Report**. Your booking numbers show here.",
+      "route": "^/reporting/",
+      "go": "/reporting/appointment",
+      "target": [
+        {
+          "css": "#tb_appointment-report"
+        },
+        {
+          "text": "Appointment Report",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/appointment"
+      }
+    },
+    {
+      "id": "status",
+      "title": "Status counts",
+      "body": "The top numbers count booked, confirmed, cancelled and new appointments.",
+      "route": "^/reporting/appointment",
+      "go": "/reporting/appointment",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "sources",
+      "title": "Where bookings come from",
+      "body": "See which channels and funnels bring bookings, and which staff take the most.",
+      "route": "^/reporting/appointment",
+      "go": "/reporting/appointment",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "top",
+      "title": "Top calendars and days",
+      "body": "Your top calendars and the most popular booking days help you plan your week.",
+      "route": "^/reporting/appointment",
+      "go": "/reporting/appointment",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "cancels",
+      "title": "Cancellations",
+      "body": "The calendars with the most cancellations and reschedules are flagged too.",
+      "route": "^/reporting/appointment",
+      "go": "/reporting/appointment",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What's next",
+      "body": "Next: try **See how bookings are going** from the Guide.",
+      "route": "^/reporting/appointment",
+      "go": "/reporting/appointment",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

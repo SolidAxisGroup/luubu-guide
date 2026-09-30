@@ -1,0 +1,93 @@
+{
+  "id": "contacts-bulk-actions-restore",
+  "kind": "howto",
+  "area": "contacts",
+  "screen": "contacts.bulk-actions",
+  "title": "Pause a bulk job or restore deleted contacts",
+  "blurb": "Stop a bulk send in its tracks, or undo an accidental delete.",
+  "icon": "users",
+  "minutes": 2,
+  "keywords": [
+    "cancel",
+    "pause",
+    "restore",
+    "undo delete",
+    "deleted contacts",
+    "bulk actions"
+  ],
+  "steps": [
+    {
+      "id": "open-contacts",
+      "title": "Open Contacts",
+      "body": "Click **Contacts** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_contacts"
+        },
+        {
+          "text": "Contacts",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/contacts/"
+      }
+    },
+    {
+      "id": "tab-bulk-actions",
+      "title": "Open Bulk Actions",
+      "body": "Click **Bulk Actions** along the top.",
+      "route": "^/(contacts/|tasks|businesses/|settings/fields)",
+      "go": "/contacts/bulk/actions",
+      "target": [
+        {
+          "css": "#tb_bulk-actions"
+        },
+        {
+          "text": "Bulk Actions",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/contacts/bulk"
+      }
+    },
+    {
+      "id": "find",
+      "title": "Find the job",
+      "body": "Filter by action type to find the bulk send or delete you want to act on.",
+      "route": "^/contacts/bulk",
+      "go": "/contacts/bulk/actions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "menu",
+      "title": "Open the row menu",
+      "body": "Click the three-dot menu at the end of the row.",
+      "route": "^/contacts/bulk",
+      "go": "/contacts/bulk/actions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "act",
+      "title": "Pause, cancel or restore",
+      "body": "For a running send, pause or cancel it. For a delete job, choose restore to bring the contacts back.",
+      "route": "^/contacts/bulk",
+      "go": "/contacts/bulk/actions",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Bulk texts, bulk emails and bulk tag jobs can't be undone once sent."
+    }
+  ]
+}

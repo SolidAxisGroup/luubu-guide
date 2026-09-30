@@ -1,0 +1,112 @@
+{
+  "id": "payments-send-gift-card",
+  "kind": "howto",
+  "area": "payments",
+  "screen": "payments.gift-cards",
+  "title": "Give a gift card away",
+  "blurb": "Send a free gift card to say sorry or thank you.",
+  "icon": "star",
+  "minutes": 2,
+  "keywords": [
+    "send gift card",
+    "free",
+    "thank you",
+    "apology",
+    "loyalty",
+    "reward"
+  ],
+  "steps": [
+    {
+      "id": "open-payments",
+      "title": "Open Payments",
+      "body": "Click **Payments** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_payments"
+        },
+        {
+          "text": "Payments",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/"
+      }
+    },
+    {
+      "id": "tab-gift-cards",
+      "title": "Open Gift Cards",
+      "body": "Click **Gift Cards** along the top.",
+      "route": "^/payments/",
+      "go": "/payments/gift-cards",
+      "target": [
+        {
+          "css": "#tb_gift-cards"
+        },
+        {
+          "text": "Gift Cards",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/gift-cards"
+      }
+    },
+    {
+      "id": "send",
+      "title": "Click Send",
+      "body": "On your gift card, click **Send**.",
+      "route": "^/payments/gift-cards",
+      "go": "/payments/gift-cards",
+      "target": [
+        {
+          "text": "Send",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Send"
+    },
+    {
+      "id": "who",
+      "title": "Choose who and how much",
+      "body": "Pick the customer and the value.",
+      "route": "^/payments/gift-cards",
+      "go": "/payments/gift-cards",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "how",
+      "title": "Choose delivery",
+      "body": "Send by email or text, or download it as a PDF or QR code to hand over.",
+      "route": "^/payments/gift-cards",
+      "go": "/payments/gift-cards",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "redeem",
+      "title": "How they use it",
+      "body": "They enter the code at checkout on your store, payment links, invoices or bookings.",
+      "route": "^/payments/gift-cards",
+      "go": "/payments/gift-cards",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

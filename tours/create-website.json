@@ -1,0 +1,106 @@
+{
+  "id": "create-website",
+  "kind": "howto",
+  "area": "start",
+  "screen": "sites.websites",
+  "title": "Build a website",
+  "blurb": "Create a multi-page website from a template or from scratch.",
+  "icon": "globe",
+  "minutes": 5,
+  "keywords": [
+    "website",
+    "site",
+    "web",
+    "pages",
+    "domain",
+    "homepage"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "websites-tab",
+      "title": "Choose Websites",
+      "body": "Click **Websites**. A website has multiple pages and a menu, like Home, About, Services and Contact.",
+      "route": "^/funnels-websites/",
+      "go": "/funnels-websites/websites",
+      "target": [
+        {
+          "css": "#tb_websites"
+        },
+        {
+          "text": "Websites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/websites"
+      }
+    },
+    {
+      "id": "new-website",
+      "title": "Create a new website",
+      "body": "Click **New website**.",
+      "route": "^/funnels-websites/websites",
+      "go": "/funnels-websites/websites",
+      "target": [
+        {
+          "css": "#create-new-button"
+        },
+        {
+          "css": "#positive-empty-state"
+        },
+        {
+          "text": "New website",
+          "tag": "button"
+        }
+      ],
+      "advance": "click"
+    },
+    {
+      "id": "template",
+      "title": "Pick how to start",
+      "body": "Choose **From templates** for a ready-made site, **Build with AI** to have it drafted for you, or **From blank**. Name it, like **Your Business Website**, then click **Create**.",
+      "tip": "Templates save hours. You can change every word, image and colour.",
+      "target": null
+    },
+    {
+      "id": "edit-publish",
+      "title": "Edit and publish",
+      "body": "Open a page to edit it. Click any text or image to change it, and drag in new sections from the left. Click **Save**, then **Preview** to check it on mobile.",
+      "target": null
+    },
+    {
+      "id": "domain",
+      "title": "Connect your domain",
+      "body": "To make it live on your own address, open **Domain Settings** and add your domain. We'll show you the record to add at your domain provider.",
+      "route": "^/funnels-websites/",
+      "go": "/funnels-websites/websites",
+      "target": [
+        {
+          "css": "#tb_sites-domain-settings"
+        },
+        {
+          "text": "Domain Settings",
+          "tag": "a"
+        }
+      ],
+      "lookFor": "Domain Settings"
+    }
+  ]
+}

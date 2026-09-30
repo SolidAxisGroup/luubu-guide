@@ -1,0 +1,160 @@
+{
+  "id": "calendars-create-class-booking",
+  "kind": "howto",
+  "area": "calendars",
+  "screen": "calendars.calendar-settings-top",
+  "title": "Create a class booking calendar",
+  "blurb": "Let several people book the same session, like a gym class or workshop.",
+  "icon": "users",
+  "minutes": 5,
+  "keywords": [
+    "class",
+    "group",
+    "seats",
+    "workshop",
+    "fitness class",
+    "capacity",
+    "recurring class"
+  ],
+  "steps": [
+    {
+      "id": "open-calendars",
+      "title": "Open Calendars",
+      "body": "Click **Calendars** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_calendars"
+        },
+        {
+          "text": "Calendars",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/calendars/"
+      }
+    },
+    {
+      "id": "tab-calendar-settings-top",
+      "title": "Open Calendar Settings",
+      "body": "Click **Calendar Settings** along the top. This is where every booking calendar is built and edited.",
+      "route": "^/calendars/",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "css": "#tb_calendar-settings-top"
+        },
+        {
+          "text": "Calendar settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/calendars"
+      }
+    },
+    {
+      "id": "new",
+      "title": "Start a new calendar",
+      "body": "Click **New Calendar**.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "text": "New Calendar",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New Calendar"
+    },
+    {
+      "id": "type",
+      "title": "Choose Class Booking",
+      "body": "Pick **Class Booking**. One instructor, many attendees per session.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "text": "Class Booking"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Class Booking"
+    },
+    {
+      "id": "basics",
+      "title": "Name and instructor",
+      "body": "Enter the **Calendar Name**, a short description, and choose the team member who runs the class.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "seats",
+      "title": "Set the class size",
+      "body": "Enter **Seats per Class**, for example 12. Each booking takes one seat until the class is full.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "text": "Seats per Class"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Seats per Class"
+    },
+    {
+      "id": "confirm",
+      "title": "Create it",
+      "body": "Set the **Meeting Duration** and location, then click **Confirm**.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "text": "Confirm",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Confirm"
+    },
+    {
+      "id": "schedule",
+      "title": "Set class times",
+      "body": "Open the **Availability** tab of the new calendar and add the days and times the class runs, like Tue and Thu 6 to 7pm. Use **Add Date Override** for one-off sessions.",
+      "tip": "Want to charge per seat? Turn on payments in the calendar settings once Stripe is connected.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

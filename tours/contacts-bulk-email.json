@@ -1,0 +1,111 @@
+{
+  "id": "contacts-bulk-email",
+  "kind": "howto",
+  "area": "contacts",
+  "screen": "contacts.lists",
+  "title": "Email a group of contacts",
+  "blurb": "Send a quick email to a filtered list straight from Contacts.",
+  "icon": "mail",
+  "minutes": 4,
+  "keywords": [
+    "bulk email",
+    "mass email",
+    "group email",
+    "email blast",
+    "newsletter",
+    "email list"
+  ],
+  "steps": [
+    {
+      "id": "open-contacts",
+      "title": "Open Contacts",
+      "body": "Click **Contacts** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_contacts"
+        },
+        {
+          "text": "Contacts",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/contacts/"
+      }
+    },
+    {
+      "id": "pick",
+      "title": "Pick your group",
+      "body": "Open a smart list or filter the list to the people you want to email.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "select",
+      "title": "Select them",
+      "body": "Tick the contacts, or tick the top box to select everyone shown.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "email",
+      "title": "Choose Send Email",
+      "body": "Click the email icon in the toolbar.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "build",
+      "title": "Write your email",
+      "body": "Choose **Quick Compose** for a simple email, **Smart Builder** for a designed one, or pick an existing template.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Quick Compose"
+    },
+    {
+      "id": "test",
+      "title": "Test it",
+      "body": "Send yourself a test email and check it on your phone.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "send",
+      "title": "Send or schedule",
+      "body": "Choose to send now, schedule it, or use drip mode, then review and send. Unsubscribed and Do Not Disturb contacts are skipped for you.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "For a proper newsletter with stats, see **Send a marketing campaign** in the Guide."
+    }
+  ]
+}

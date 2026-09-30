@@ -1,0 +1,126 @@
+{
+  "id": "settings-pipeline-create",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.Opportunities-Pipelines",
+  "title": "Create a sales pipeline",
+  "blurb": "Map out the steps your jobs or sales move through.",
+  "icon": "chart",
+  "minutes": 4,
+  "keywords": [
+    "pipeline",
+    "create pipeline",
+    "stages",
+    "sales process",
+    "deals",
+    "jobs"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-opportunities-and-pipelines",
+      "title": "Open Opportunities & Pipelines",
+      "body": "Click **Opportunities & Pipelines** in the Settings menu.",
+      "route": "^/(settings/|crm-settings)",
+      "go": "/crm-settings",
+      "target": [
+        {
+          "css": "[id='sb_Opportunities-Pipelines']"
+        },
+        {
+          "text": "Opportunities & Pipelines",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/crm-settings"
+      }
+    },
+    {
+      "id": "create",
+      "title": "Start a pipeline",
+      "body": "Click **Create new pipeline**.",
+      "route": "^/(crm-settings|opportunities/pipeline)",
+      "go": "/crm-settings",
+      "target": [
+        {
+          "text": "Create new pipeline",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create new pipeline",
+      "advance": "click"
+    },
+    {
+      "id": "name",
+      "title": "Name it",
+      "body": "Give it a clear name like \"New Jobs\" or \"Sales\", then click **Save**.",
+      "route": "^/(crm-settings|opportunities/pipeline)",
+      "go": "/crm-settings",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "stages",
+      "title": "Add your stages",
+      "body": "Type a stage name and click **Add stage**. A tradie might use: New Enquiry, Site Visit, Quote Sent, Booked In, Invoiced.",
+      "route": "^/(crm-settings|opportunities/pipeline)",
+      "go": "/crm-settings",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add stage"
+    },
+    {
+      "id": "won-lost",
+      "title": "Won and Lost",
+      "body": "You do not need Won or Lost stages. Every deal can be marked won or lost at any time.",
+      "route": "^/(crm-settings|opportunities/pipeline)",
+      "go": "/crm-settings",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "done",
+      "title": "Use it",
+      "body": "Your new pipeline now shows under **Opportunities** in the left menu.",
+      "route": "^/(crm-settings|opportunities/pipeline)",
+      "go": "/crm-settings",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "id": "opportunities-won-lost",
+  "kind": "howto",
+  "area": "opportunities",
+  "screen": "opportunities.opportunities-tab",
+  "title": "Mark a deal as won or lost",
+  "blurb": "Close out deals so your reports and forecast stay accurate.",
+  "icon": "card",
+  "minutes": 2,
+  "keywords": [
+    "won",
+    "lost",
+    "abandoned",
+    "close deal",
+    "status",
+    "win",
+    "opportunity status"
+  ],
+  "steps": [
+    {
+      "id": "open-opportunities",
+      "title": "Open Opportunities",
+      "body": "Click **Opportunities** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_opportunities"
+        },
+        {
+          "text": "Opportunities",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/opportunities/"
+      }
+    },
+    {
+      "id": "open",
+      "title": "Open the deal",
+      "body": "Click the opportunity card to open it.",
+      "route": "^/opportunities/list",
+      "go": "/opportunities/list",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "status",
+      "title": "Change the status",
+      "body": "Set **Status** to **Won** when they say yes, **Lost** when they go elsewhere, or **Abandoned** if it went quiet.",
+      "route": "^/opportunities/list",
+      "go": "/opportunities/list",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Status"
+    },
+    {
+      "id": "value",
+      "title": "Check the value",
+      "body": "Update the value to the final amount so your won revenue is right.",
+      "route": "^/opportunities/list",
+      "go": "/opportunities/list",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save",
+      "body": "Save the card. Won and lost deals drop off the open board but stay in your reports.",
+      "route": "^/opportunities/list",
+      "go": "/opportunities/list",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

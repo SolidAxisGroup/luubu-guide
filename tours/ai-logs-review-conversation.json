@@ -1,0 +1,103 @@
+{
+  "id": "ai-logs-review-conversation",
+  "kind": "howto",
+  "area": "ai",
+  "screen": "ai.agent-logs",
+  "title": "Check what your AI told a customer",
+  "blurb": "Find a conversation and see every reply and action.",
+  "icon": "chart",
+  "minutes": 3,
+  "keywords": [
+    "check",
+    "conversation",
+    "what did bot say",
+    "logs",
+    "customer",
+    "complaint"
+  ],
+  "steps": [
+    {
+      "id": "open-ai-agents",
+      "title": "Open AI Agents",
+      "body": "Click **AI Agents** in the left menu.",
+      "target": [
+        {
+          "css": "[id='sb_AI Agents']"
+        },
+        {
+          "text": "AI Agents",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/"
+      }
+    },
+    {
+      "id": "open-agent-logs",
+      "title": "Open Agent Logs",
+      "body": "Click the **Agent Logs** tab.",
+      "route": "^/ai-agents/",
+      "go": "/ai-agents/agent-logs",
+      "target": [
+        {
+          "css": "#tb_agent-logs"
+        },
+        {
+          "text": "Agent Logs"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/agent-logs"
+      }
+    },
+    {
+      "id": "search",
+      "title": "Find the contact",
+      "body": "Search by the customer's name, phone or email, or filter by date.",
+      "route": "^/ai-agents/agent-logs",
+      "go": "/ai-agents/agent-logs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "open",
+      "title": "Open the conversation",
+      "body": "Click the row. You see each message the customer sent and the AI's reply.",
+      "route": "^/ai-agents/agent-logs",
+      "go": "/ai-agents/agent-logs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "steps",
+      "title": "See the steps",
+      "body": "Click a reply to see what happened behind it: which knowledge it used and any action, like booking or tagging.",
+      "route": "^/ai-agents/agent-logs",
+      "go": "/ai-agents/agent-logs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "act",
+      "title": "Follow up",
+      "body": "If the AI got something wrong, contact the customer from **Conversations** and fix the source of the mistake.",
+      "route": "^/ai-agents/agent-logs",
+      "go": "/ai-agents/agent-logs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

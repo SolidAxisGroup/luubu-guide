@@ -1,0 +1,98 @@
+{
+  "id": "ai-logs-metrics",
+  "kind": "howto",
+  "area": "ai",
+  "screen": "ai.agent-logs",
+  "title": "See how busy your AI agents are",
+  "blurb": "Track conversation volume, response time and top channels.",
+  "icon": "chart",
+  "minutes": 2,
+  "keywords": [
+    "metrics",
+    "volume",
+    "response time",
+    "ai stats",
+    "dashboard",
+    "channels"
+  ],
+  "steps": [
+    {
+      "id": "open-ai-agents",
+      "title": "Open AI Agents",
+      "body": "Click **AI Agents** in the left menu.",
+      "target": [
+        {
+          "css": "[id='sb_AI Agents']"
+        },
+        {
+          "text": "AI Agents",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/"
+      }
+    },
+    {
+      "id": "open-agent-logs",
+      "title": "Open Agent Logs",
+      "body": "Click the **Agent Logs** tab.",
+      "route": "^/ai-agents/",
+      "go": "/ai-agents/agent-logs",
+      "target": [
+        {
+          "css": "#tb_agent-logs"
+        },
+        {
+          "text": "Agent Logs"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/agent-logs"
+      }
+    },
+    {
+      "id": "metrics",
+      "title": "Open Metrics",
+      "body": "Click **Metrics**.",
+      "route": "^/ai-agents/agent-logs",
+      "go": "/ai-agents/agent-logs",
+      "target": [
+        {
+          "text": "Metrics"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Metrics"
+    },
+    {
+      "id": "read",
+      "title": "Read the widgets",
+      "body": "See how many conversations your agents handled, how fast they replied, and which channels are busiest.",
+      "route": "^/ai-agents/agent-logs",
+      "go": "/ai-agents/agent-logs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "layout",
+      "title": "Arrange it",
+      "body": "Add, remove or move widgets so the numbers you care about are on top.",
+      "route": "^/ai-agents/agent-logs",
+      "go": "/ai-agents/agent-logs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

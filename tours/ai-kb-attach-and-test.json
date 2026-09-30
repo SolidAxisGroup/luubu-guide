@@ -1,0 +1,110 @@
+{
+  "id": "ai-kb-attach-and-test",
+  "kind": "howto",
+  "area": "ai",
+  "screen": "ai.ai-agents-conversation-ai",
+  "title": "Connect a knowledge base to your bot",
+  "blurb": "Link your knowledge base so the bot answers from it, then check it.",
+  "icon": "book",
+  "minutes": 3,
+  "keywords": [
+    "attach",
+    "connect",
+    "knowledge base",
+    "bot training",
+    "test answers"
+  ],
+  "steps": [
+    {
+      "id": "open-ai-agents",
+      "title": "Open AI Agents",
+      "body": "Click **AI Agents** in the left menu.",
+      "target": [
+        {
+          "css": "[id='sb_AI Agents']"
+        },
+        {
+          "text": "AI Agents",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/"
+      }
+    },
+    {
+      "id": "open-ai-agents-conversation-ai",
+      "title": "Open Conversation AI",
+      "body": "Click the **Conversation AI** tab.",
+      "route": "^/ai-agents/",
+      "go": "/ai-agents/conversation-ai",
+      "target": [
+        {
+          "css": "#tb_ai-agents-conversation-ai"
+        },
+        {
+          "text": "Conversation AI"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/conversation-ai"
+      }
+    },
+    {
+      "id": "open",
+      "title": "Open the bot",
+      "body": "Click the bot you want to connect.",
+      "route": "^/ai-agents/conversation-ai",
+      "go": "/ai-agents/conversation-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "training",
+      "title": "Open Bot Training",
+      "body": "Click **Bot Training**.",
+      "route": "^/ai-agents/conversation-ai",
+      "go": "/ai-agents/conversation-ai",
+      "target": [
+        {
+          "text": "Bot Training"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Bot Training"
+    },
+    {
+      "id": "attach",
+      "title": "Attach the knowledge base",
+      "body": "Choose your knowledge base and save.",
+      "route": "^/ai-agents/conversation-ai",
+      "go": "/ai-agents/conversation-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "test",
+      "title": "Ask it a question",
+      "body": "Send a test message from your phone or the chat widget, like \"What areas do you cover?\" and check the answer.",
+      "route": "^/ai-agents/conversation-ai",
+      "go": "/ai-agents/conversation-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "In Conversations, the AI response info on a reply shows which part of the knowledge base it used."
+    }
+  ]
+}

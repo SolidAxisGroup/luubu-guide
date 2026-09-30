@@ -1,0 +1,171 @@
+{
+  "id": "marketing-brand-board-create",
+  "kind": "howto",
+  "area": "marketing",
+  "screen": "marketing.brand-boards",
+  "title": "Create a brand board",
+  "blurb": "Add your logos, brand colours and fonts once, and use them everywhere.",
+  "icon": "image",
+  "minutes": 5,
+  "keywords": [
+    "brand board",
+    "brand kit",
+    "logo",
+    "colours",
+    "fonts",
+    "design kit",
+    "branding"
+  ],
+  "steps": [
+    {
+      "id": "open-marketing",
+      "title": "Open Marketing",
+      "body": "Click **Marketing** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_email-marketing"
+        },
+        {
+          "text": "Marketing",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/"
+      }
+    },
+    {
+      "id": "open-brand-boards",
+      "title": "Open Brand Boards",
+      "body": "Click **Brand Boards** along the top.",
+      "route": "^/marketing/",
+      "go": "/marketing/brand-boards",
+      "target": [
+        {
+          "css": "#tb_brand-boards"
+        },
+        {
+          "text": "Brand Boards",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/brand-boards"
+      }
+    },
+    {
+      "id": "add",
+      "title": "Start a board",
+      "body": "Click **+ Add a Design Kit**.",
+      "route": "^/marketing/brand-boards",
+      "go": "/marketing/brand-boards",
+      "target": [
+        {
+          "text": "Add Design Kit",
+          "tag": "button"
+        },
+        {
+          "text": "Add a Design Kit",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add Design Kit",
+      "advance": "click"
+    },
+    {
+      "id": "method",
+      "title": "Choose how to start",
+      "body": "Pick **Start from Blank**, choose a template, or paste your website address and click **Import Brand Kit** to pull your colours and logo in automatically.",
+      "route": "^/marketing/brand-boards",
+      "go": "/marketing/brand-boards",
+      "target": [
+        {
+          "text": "Start from Blank"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Start from Blank"
+    },
+    {
+      "id": "logos",
+      "title": "Add your logos",
+      "body": "In **Logos**, upload your main logo and a second version, such as a white one for dark backgrounds.",
+      "route": "^/marketing/brand-boards",
+      "go": "/marketing/brand-boards",
+      "target": [
+        {
+          "text": "Logos"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Logos"
+    },
+    {
+      "id": "colours",
+      "title": "Add your colours",
+      "body": "In **Colors**, add 2 to 10 colours by HEX code. Name them, like \"Brand navy\", so they are easy to find.",
+      "route": "^/marketing/brand-boards",
+      "go": "/marketing/brand-boards",
+      "target": [
+        {
+          "text": "Colors"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Colors"
+    },
+    {
+      "id": "fonts",
+      "title": "Pick your fonts",
+      "body": "In **Typography**, choose 1 to 5 fonts. One for headings and one for body text is plenty.",
+      "route": "^/marketing/brand-boards",
+      "go": "/marketing/brand-boards",
+      "target": [
+        {
+          "text": "Typography"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Typography"
+    },
+    {
+      "id": "default",
+      "title": "Save and make it default",
+      "body": "Save the board. Then use its three-dot menu and **Set as Default** so the builders use it.",
+      "route": "^/marketing/brand-boards",
+      "go": "/marketing/brand-boards",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Changing a board later does not update emails or pages you have already built."
+    }
+  ]
+}

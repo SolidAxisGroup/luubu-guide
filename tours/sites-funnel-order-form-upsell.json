@@ -1,0 +1,130 @@
+{
+  "id": "sites-funnel-order-form-upsell",
+  "kind": "howto",
+  "area": "sites",
+  "screen": "sites.funnels",
+  "title": "Sell with an order form and one-click upsell",
+  "blurb": "Take payments on a funnel page, then offer an extra with one click.",
+  "icon": "card",
+  "minutes": 7,
+  "keywords": [
+    "order form",
+    "checkout",
+    "upsell",
+    "order bump",
+    "sell",
+    "payment",
+    "product",
+    "one click"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "You will need a payment provider such as Stripe connected in **Payments** first. Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Funnels",
+      "body": "Click **Funnels** and open the funnel you want to sell from.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/funnels-websites/funnels",
+      "target": [
+        {
+          "css": "#tb_funnels"
+        },
+        {
+          "text": "Funnels",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/funnels"
+      }
+    },
+    {
+      "id": "products-tab",
+      "title": "Attach your product",
+      "body": "Pick the checkout step and open its **Products** tab. Click **Add Product** and choose what you are selling and its price.",
+      "route": "^/funnels-websites/funnels",
+      "go": "/funnels-websites/funnels",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "order-element",
+      "title": "Add the order form",
+      "body": "Click **Edit** on that step. From the order elements, drag **One Step Order** (or the two-step version) onto the page. It collects contact, address and card details.",
+      "route": "^/",
+      "go": "/funnels-websites/funnels",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "bump",
+      "title": "Add an order bump (optional)",
+      "body": "In the order form settings, switch on the order bump to offer a small add-on with a tick box, like an extra year of warranty.",
+      "route": "^/",
+      "go": "/funnels-websites/funnels",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "upsell-step",
+      "title": "Add an upsell step",
+      "body": "Back in the funnel, click **Add New Step** to add a page after checkout. Open its **Products** tab and attach the upsell product.",
+      "route": "^/funnels-websites/funnels",
+      "go": "/funnels-websites/funnels",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "upsell-button",
+      "title": "Set the one-click button",
+      "body": "Edit the upsell page, click its main button and set the action to the one-click upsell option with your upsell product. The customer does not need to re-enter their card.",
+      "route": "^/",
+      "go": "/funnels-websites/funnels",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "test-mode",
+      "title": "Test before going live",
+      "body": "Put your payment provider in test mode and run through the whole funnel. Check the order appears in **Payments** > **Orders**.",
+      "route": "^/",
+      "go": "/funnels-websites/funnels",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

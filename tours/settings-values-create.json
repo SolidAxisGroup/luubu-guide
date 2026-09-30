@@ -1,0 +1,117 @@
+{
+  "id": "settings-values-create",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.custom-values",
+  "title": "Create a custom value",
+  "blurb": "Save a detail like your booking link once and reuse it.",
+  "icon": "book",
+  "minutes": 2,
+  "keywords": [
+    "custom value",
+    "create",
+    "booking link",
+    "review link",
+    "variable",
+    "placeholder"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-custom-values",
+      "title": "Open Custom Values",
+      "body": "Click **Custom Values** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/custom_values",
+      "target": [
+        {
+          "css": "[id='sb_custom-values']"
+        },
+        {
+          "text": "Custom Values",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/custom_values"
+      }
+    },
+    {
+      "id": "new",
+      "title": "Add a value",
+      "body": "Click **Add custom value**.",
+      "route": "^/settings/custom_values",
+      "go": "/settings/custom_values",
+      "target": [
+        {
+          "text": "Add custom value",
+          "tag": "button"
+        },
+        {
+          "text": "New Custom Value",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add custom value",
+      "advance": "click"
+    },
+    {
+      "id": "name",
+      "title": "Name it",
+      "body": "Give it a clear name, like \"Google Review Link\". The key is made for you from the name.",
+      "route": "^/settings/custom_values",
+      "go": "/settings/custom_values",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "value",
+      "title": "Enter the value",
+      "body": "Paste or type the value, then pick a folder if you use them.",
+      "route": "^/settings/custom_values",
+      "go": "/settings/custom_values",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save",
+      "body": "Save it. It is now ready to use in emails, texts, workflows and pages.",
+      "route": "^/settings/custom_values",
+      "go": "/settings/custom_values",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

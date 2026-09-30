@@ -1,0 +1,51 @@
+import { chromium } from 'playwright';
+const b = await chromium.launch({executablePath:'/opt/pw-browsers/chromium-1194/chrome-linux/chrome'}); const p = await b.newPage({ viewport:{width:1400,height:800} });
+const errs=[]; p.on('pageerror',e=>errs.push(e.message)); p.on('console',m=>{if(m.type()==='error')errs.push(m.text())});
+const L='zRK0moceMCOayumGoB8R';
+await p.addInitScript(()=>{window.LUUBU_GUIDE_CONFIG={locations:['zRK0moceMCOayumGoB8R'],base:'http://localhost:8765/'}});
+await p.goto(`http://localhost:8765/v2/location/${L}/dashboard`);
+await p.addScriptTag({url:'http://localhost:8765/src/guide.js'});
+await p.waitForTimeout(1500);
+const shot=async n=>p.screenshot({path:`shot-${n}.png`});
+const sh = s => p.locator('#luubu-guide-root').locator(s);
+await sh('.fab').click(); await p.waitForTimeout(600); await shot('1-panel');
+await sh('input').fill('landing'); await p.waitForTimeout(300);
+console.log('search results:', await sh('.item b').allInnerTexts());
+await sh('input').fill('');
+await sh('.item[data-id=build-workflow]').click(); await p.waitForTimeout(1200); await shot('2-wf-step1');
+console.log('card1:', (await sh('.card h4').innerText()));
+await p.click('#sb_automation'); await p.waitForTimeout(1500); await shot('3-wf-step2-frame');
+console.log('card2:', (await sh('.card h4').innerText()), '| frame outline:', await sh('.frame').count());
+await sh('.card [data-a=next]').click(); await p.waitForTimeout(500);
+await sh('.card [data-a=next]').click(); await p.waitForTimeout(500);
+await sh('.card [data-a=next]').click(); await p.waitForTimeout(800);
+console.log('after finish, card count:', await sh('.card h4').count());
+// website tour with away + take me there + click advance
+await sh('.fab').click(); await p.waitForTimeout(400);
+await sh('.item[data-id=create-website]').click(); await p.waitForTimeout(1200);
+await p.click('#sb_sites'); await p.waitForTimeout(1500);
+console.log('web step:', await sh('.card h4').innerText());
+await p.click('#tb_websites'); await p.waitForTimeout(1500);
+console.log('web step:', await sh('.card h4').innerText()); await shot('4-web-newbutton');
+await p.click('#create-new-button'); await p.waitForTimeout(1200);
+console.log('web step after click:', await sh('.card h4').innerText(), '| leftover spot:', await sh('.spot').count());
+await sh('.card [data-a=next]').click(); await p.waitForTimeout(400);
+await sh('.card [data-a=next]').click(); await p.waitForTimeout(1200);
+console.log('domain step:', await sh('.card h4').innerText(), 'spot:', await sh('.spot').count()); await shot('5-web-domain');
+// persistence across reload
+await p.reload(); await p.addScriptTag({url:'http://localhost:8765/src/guide.js'}); await p.waitForTimeout(2500);
+console.log('after reload resumed:', await sh('.card h4').count() ? await sh('.card h4').innerText() : 'none');
+await sh('.card .x').click();
+// phone tour: from dashboard, take me there flow
+await p.goto(`http://localhost:8765/v2/location/${L}/dashboard`); await p.addScriptTag({url:'http://localhost:8765/src/guide.js'}); await p.waitForTimeout(1200);
+await p.evaluate(()=>window.__luubuGuide.start('phone-number',2)); await p.waitForTimeout(1200);
+console.log('phone away card:', await sh('.card h4').innerText(), '| go btn:', await sh('[data-a=go]').count()); await shot('6-phone-away');
+await Promise.all([p.waitForNavigation(), sh('[data-a=go]').click()]); await p.addScriptTag({url:'http://localhost:8765/src/guide.js'}); await p.waitForTimeout(2000);
+console.log('phone after go:', p.url().replace(/.*location\/[^/]+/,''), '|', await sh('.card h4').innerText(), '| spot', await sh('.spot').count()); await shot('7-phone-target');
+// hide + gate
+await sh('.card .x').click(); await sh('.fab').click(); await p.waitForTimeout(300); await sh('[data-hide]').click(); await p.waitForTimeout(300);
+console.log('hidden class:', await sh('.fab').getAttribute('class'));
+await p.goto(`http://localhost:8765/v2/location/OTHERLOCATION/dashboard`); await p.addScriptTag({url:'http://localhost:8765/src/guide.js'}); await p.waitForTimeout(1500);
+console.log('other location mounted:', await p.locator('#luubu-guide-root').count());
+console.log('errors:', errs);
+await b.close();

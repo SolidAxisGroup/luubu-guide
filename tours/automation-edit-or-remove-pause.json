@@ -1,0 +1,98 @@
+{
+  "id": "automation-edit-or-remove-pause",
+  "kind": "howto",
+  "area": "automation",
+  "screen": "automation.workflow-settings-top",
+  "title": "Change or remove a workflow pause",
+  "blurb": "Copy a pause for another date, or delete one you no longer need.",
+  "icon": "cog",
+  "minutes": 2,
+  "keywords": [
+    "pause",
+    "resume",
+    "unpause",
+    "edit pause",
+    "delete pause",
+    "clone"
+  ],
+  "steps": [
+    {
+      "id": "open-automation",
+      "title": "Open Automation",
+      "body": "Click **Automation** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_automation"
+        },
+        {
+          "text": "Automation",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/automation/"
+      }
+    },
+    {
+      "id": "open-workflow-settings-top",
+      "title": "Open Global Workflow Settings",
+      "body": "Click **Global Workflow Settings** at the top.",
+      "route": "^/automation/",
+      "go": "/automation/workflows/settings",
+      "target": [
+        {
+          "css": "#tb_workflow-settings-top"
+        },
+        {
+          "text": "Global Workflow Settings"
+        }
+      ],
+      "advance": {
+        "route": "^/automation/workflows/settings"
+      }
+    },
+    {
+      "id": "pause",
+      "title": "Find your pauses",
+      "body": "Go to **Pause Workflow**. Each row is one date range.",
+      "route": "^/automation/workflows/settings",
+      "go": "/automation/workflows/settings",
+      "target": [
+        {
+          "text": "Pause Workflow"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Pause Workflow"
+    },
+    {
+      "id": "clone",
+      "title": "Copy a row",
+      "body": "Use clone on a row to reuse the same workflows for another date, like Easter.",
+      "route": "^/automation/workflows/settings",
+      "go": "/automation/workflows/settings",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "delete",
+      "title": "Remove a row",
+      "body": "Delete a row to let those workflows send again straight away. Save when done.",
+      "route": "^/automation/workflows/settings",
+      "go": "/automation/workflows/settings",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

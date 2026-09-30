@@ -1,0 +1,134 @@
+{
+  "id": "memberships-community-invite",
+  "kind": "howto",
+  "area": "memberships",
+  "screen": "memberships.communities",
+  "title": "Invite members to a community",
+  "blurb": "Send invites, share a join link and approve requests.",
+  "icon": "users",
+  "minutes": 3,
+  "keywords": [
+    "invite",
+    "members",
+    "community",
+    "join",
+    "approve",
+    "requests",
+    "admin"
+  ],
+  "steps": [
+    {
+      "id": "open-memberships",
+      "title": "Open Memberships",
+      "body": "Click **Memberships** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_memberships"
+        },
+        {
+          "text": "Memberships",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/memberships/"
+      }
+    },
+    {
+      "id": "open-communities",
+      "title": "Open Communities",
+      "body": "Click **Communities**.",
+      "route": "^/memberships/",
+      "go": "/memberships/communities/community-groups",
+      "target": [
+        {
+          "css": "#tb_communities"
+        },
+        {
+          "text": "Communities",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/memberships/communities"
+      }
+    },
+    {
+      "id": "open-group",
+      "title": "Open your group",
+      "body": "Click the group you want to invite people to.",
+      "route": "^/memberships/communities",
+      "go": "/memberships/communities/community-groups",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "members",
+      "title": "Open Members",
+      "body": "Click the **Members** tab.",
+      "route": "^/memberships/communities",
+      "go": "/memberships/communities/community-groups",
+      "target": [
+        {
+          "text": "Members"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Members",
+      "advance": "click"
+    },
+    {
+      "id": "invite",
+      "title": "Invite people",
+      "body": "Click **Invite Members**.",
+      "route": "^/memberships/communities",
+      "go": "/memberships/communities/community-groups",
+      "target": [
+        {
+          "text": "Invite Members",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Invite Members",
+      "advance": "click"
+    },
+    {
+      "id": "send",
+      "title": "Send the invites",
+      "body": "Type email addresses and click **Send Invite**, or copy the invite link to share. Only turn on **Give Administrative Privileges** for helpers you trust.",
+      "route": "^/memberships/communities",
+      "go": "/memberships/communities/community-groups",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "requests",
+      "title": "Approve join requests",
+      "body": "Private group? Go to **Members**, then **Requested**, click the three dots and choose **Approve** or **Decline**.",
+      "route": "^/memberships/communities",
+      "go": "/memberships/communities/community-groups",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

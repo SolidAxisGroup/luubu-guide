@@ -1,0 +1,80 @@
+{
+  "id": "more-marketplace-manage",
+  "kind": "howto",
+  "area": "more",
+  "screen": "more.app-marketplace",
+  "title": "See and remove installed apps",
+  "blurb": "Check which apps are connected and remove ones you no longer use.",
+  "icon": "grid",
+  "minutes": 2,
+  "keywords": [
+    "installed apps",
+    "uninstall",
+    "remove app",
+    "marketplace",
+    "manage"
+  ],
+  "steps": [
+    {
+      "id": "open-app-marketplace",
+      "title": "Open App Marketplace",
+      "body": "Click **App Marketplace** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_app-marketplace"
+        },
+        {
+          "text": "App Marketplace",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/integration"
+      }
+    },
+    {
+      "id": "installed",
+      "title": "Open Installed",
+      "body": "Click the **Installed** tab.",
+      "route": "^/integration",
+      "go": "/integration",
+      "target": [
+        {
+          "text": "Installed"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Installed",
+      "advance": "click"
+    },
+    {
+      "id": "review",
+      "title": "Review your apps",
+      "body": "Check each app is still in use. Old connections can still access your data.",
+      "route": "^/integration",
+      "go": "/integration",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "remove",
+      "title": "Remove one",
+      "body": "Open the app and uninstall it. Some apps can only be removed by us: hello@luubu.com",
+      "route": "^/integration",
+      "go": "/integration",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

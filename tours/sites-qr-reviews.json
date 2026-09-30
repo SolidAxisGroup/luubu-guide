@@ -1,0 +1,114 @@
+{
+  "id": "sites-qr-reviews",
+  "kind": "howto",
+  "area": "sites",
+  "screen": "sites.qr-codes",
+  "title": "Make a QR code for Google reviews",
+  "blurb": "Print a code that takes happy customers straight to your review page.",
+  "icon": "star",
+  "minutes": 4,
+  "keywords": [
+    "review qr",
+    "google reviews",
+    "reviews",
+    "qr code",
+    "counter card",
+    "feedback"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open QR Codes",
+      "body": "Click **QR Codes**.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/qr-codes",
+      "target": [
+        {
+          "css": "#tb_qr-codes"
+        },
+        {
+          "text": "QR Codes",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/qr-codes"
+      }
+    },
+    {
+      "id": "create",
+      "title": "Start a code",
+      "body": "Click **Create QR Code**.",
+      "route": "^/qr-codes",
+      "go": "/qr-codes",
+      "target": [
+        {
+          "text": "Create QR Code",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create QR Code",
+      "advance": "click"
+    },
+    {
+      "id": "type",
+      "title": "Choose Review Link",
+      "body": "Name it, choose **Review Link** as the type and click **Next**.",
+      "route": "^/qr-codes",
+      "go": "/qr-codes",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Your review link comes from **Reputation**. Connect your Google Business Profile there first."
+    },
+    {
+      "id": "template",
+      "title": "Design the card",
+      "body": "Pick the review template, then change the heading, like Loved our work? Leave us a review, and add your logo.",
+      "route": "^/qr-codes",
+      "go": "/qr-codes",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save and print",
+      "body": "Click **Save** and download it. Print it for your counter, invoices or the back of business cards.",
+      "route": "^/qr-codes",
+      "go": "/qr-codes",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

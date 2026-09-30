@@ -1,0 +1,124 @@
+{
+  "id": "marketing-social-reconnect-account",
+  "kind": "howto",
+  "area": "marketing",
+  "screen": "marketing.social-planner",
+  "title": "Reconnect an expired social account",
+  "blurb": "Fix a Facebook, Instagram or LinkedIn page that has stopped posting.",
+  "icon": "share",
+  "minutes": 3,
+  "keywords": [
+    "reconnect",
+    "expired",
+    "disconnected",
+    "failed post",
+    "social account",
+    "facebook",
+    "linkedin",
+    "re-integrate"
+  ],
+  "steps": [
+    {
+      "id": "open-marketing",
+      "title": "Open Marketing",
+      "body": "Click **Marketing** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_email-marketing"
+        },
+        {
+          "text": "Marketing",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/"
+      }
+    },
+    {
+      "id": "open-social-planner",
+      "title": "Open Social Planner",
+      "body": "Click **Social Planner** along the top.",
+      "route": "^/marketing/",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "css": "#tb_social-planner"
+        },
+        {
+          "text": "Social Planner",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/social-planner"
+      }
+    },
+    {
+      "id": "banner",
+      "title": "Use the warning banner",
+      "body": "When a connection expires, a banner at the top names the account. Click **Re-integrate**.",
+      "route": "^/marketing/social-planner",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "text": "Re-integrate",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Re-integrate",
+      "tip": "This is normal. Networks log apps out from time to time, and posts pause until you reconnect."
+    },
+    {
+      "id": "login",
+      "title": "Log in again",
+      "body": "Sign in to that network in the pop-up and allow access. Use the same profile you used the first time, with full control of the page.",
+      "route": "^/marketing/social-planner",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "settings",
+      "title": "No banner?",
+      "body": "Open the **Settings** tab inside Social Planner and find the account in your connected list. Reconnect it from there.",
+      "route": "^/marketing/social-planner",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Settings"
+    },
+    {
+      "id": "failed",
+      "title": "Catch up on missed posts",
+      "body": "Open **Planner** and look for failed posts. Reschedule anything that missed its time while the account was down.",
+      "route": "^/marketing/social-planner",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "text": "Planner"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Planner",
+      "tip": "Still stuck? Email hello@luubu.com and we will sort it with you."
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "id": "sites-form-embed",
+  "kind": "howto",
+  "area": "sites",
+  "screen": "sites.form-builder",
+  "title": "Put a form on another website",
+  "blurb": "Embed your form on WordPress, Wix, Squarespace or any site, or share its link.",
+  "icon": "share",
+  "minutes": 4,
+  "keywords": [
+    "embed form",
+    "wordpress",
+    "wix",
+    "squarespace",
+    "iframe",
+    "share link",
+    "popup"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Forms",
+      "body": "Click **Forms** and open the form.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/form-builder/main",
+      "target": [
+        {
+          "css": "#tb_form-builder"
+        },
+        {
+          "text": "Forms",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/form-builder"
+      }
+    },
+    {
+      "id": "integrate",
+      "title": "Open Integrate",
+      "body": "Click **Integrate** at the top right of the builder.",
+      "route": "^/",
+      "go": "/form-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "type",
+      "title": "Pick the layout",
+      "body": "Choose inline to sit in the page, or a popup or slide-in if you want it to appear over the page.",
+      "route": "^/",
+      "go": "/form-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "copy",
+      "title": "Copy the code",
+      "body": "Click to copy the embed code. For email or socials, copy the share link instead.",
+      "route": "^/",
+      "go": "/form-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "paste",
+      "title": "Paste it on your site",
+      "body": "In WordPress add a Custom HTML block, in Wix use Embed code, then paste and publish.",
+      "route": "^/",
+      "go": "/form-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Submissions still land in Contacts, wherever the form sits."
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+node_modules/
+watcher/out/
+test/*.png
+build/test-bundle*.js
+package-lock.json

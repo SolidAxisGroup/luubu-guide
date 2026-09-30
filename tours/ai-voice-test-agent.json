@@ -1,0 +1,136 @@
+{
+  "id": "ai-voice-test-agent",
+  "kind": "howto",
+  "area": "ai",
+  "screen": "ai.ai-agents-voice-ai",
+  "title": "Test your AI receptionist",
+  "blurb": "Talk to your agent before customers do, then check the recording.",
+  "icon": "phone",
+  "minutes": 4,
+  "keywords": [
+    "test",
+    "web call",
+    "voice ai",
+    "try",
+    "check",
+    "recording"
+  ],
+  "steps": [
+    {
+      "id": "open-ai-agents",
+      "title": "Open AI Agents",
+      "body": "Click **AI Agents** in the left menu.",
+      "target": [
+        {
+          "css": "[id='sb_AI Agents']"
+        },
+        {
+          "text": "AI Agents",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/"
+      }
+    },
+    {
+      "id": "open-ai-agents-voice-ai",
+      "title": "Open Voice AI",
+      "body": "Click the **Voice AI** tab.",
+      "route": "^/ai-agents/",
+      "go": "/ai-agents/voice-ai",
+      "target": [
+        {
+          "css": "#tb_ai-agents-voice-ai"
+        },
+        {
+          "text": "Voice AI"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/voice-ai"
+      }
+    },
+    {
+      "id": "open",
+      "title": "Open your agent",
+      "body": "Click the voice agent you want to test.",
+      "route": "^/ai-agents/voice-ai",
+      "go": "/ai-agents/voice-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "panel",
+      "title": "Find the test panel",
+      "body": "Look for **Test Your Agent**.",
+      "route": "^/ai-agents/voice-ai",
+      "go": "/ai-agents/voice-ai",
+      "target": [
+        {
+          "text": "Test Your Agent"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Test Your Agent"
+    },
+    {
+      "id": "web",
+      "title": "Try a web call",
+      "body": "Click **Web Call** and talk through your computer. Ask what real customers ask: prices, areas, \"can someone come tomorrow?\"",
+      "route": "^/ai-agents/voice-ai",
+      "go": "/ai-agents/voice-ai",
+      "target": [
+        {
+          "text": "Web Call"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Web Call"
+    },
+    {
+      "id": "phone",
+      "title": "Try a real call",
+      "body": "Use **Phone Call** to test transfers and caller ID on a real phone.",
+      "route": "^/ai-agents/voice-ai",
+      "go": "/ai-agents/voice-ai",
+      "target": [
+        {
+          "text": "Phone Call"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Phone Call"
+    },
+    {
+      "id": "review",
+      "title": "Check the log",
+      "body": "Open **Dashboard & Logs** and switch to test calls to replay the recording and see which actions fired.",
+      "route": "^/ai-agents/voice-ai",
+      "go": "/ai-agents/voice-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "id": "settings-private-integration-create",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.common.sidebar.privateIntegrations",
+  "title": "Create a private integration token",
+  "blurb": "Give a developer secure, limited access to your account.",
+  "icon": "cog",
+  "minutes": 3,
+  "keywords": [
+    "api token",
+    "private integration",
+    "developer",
+    "scopes",
+    "api key"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-private-integrations",
+      "title": "Open Private Integrations",
+      "body": "Click **Private Integrations** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/private-integrations",
+      "target": [
+        {
+          "css": "[id='sb_common.sidebar.privateIntegrations']"
+        },
+        {
+          "text": "Private Integrations",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/private-integrations"
+      }
+    },
+    {
+      "id": "create",
+      "title": "Create",
+      "body": "Click **Create new Integration**.",
+      "route": "^/settings/private-integrations",
+      "go": "/settings/private-integrations",
+      "target": [
+        {
+          "text": "Create new Integration",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create new Integration",
+      "advance": "click"
+    },
+    {
+      "id": "name",
+      "title": "Name it",
+      "body": "Name it after the tool or developer it is for, and add a short description.",
+      "route": "^/settings/private-integrations",
+      "go": "/settings/private-integrations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "scopes",
+      "title": "Pick only what is needed",
+      "body": "Tick only the access the developer asked for.",
+      "route": "^/settings/private-integrations",
+      "go": "/settings/private-integrations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "copy",
+      "title": "Copy the token",
+      "body": "Copy the token straight away. It is only shown once. Send it securely, never by open email or text.",
+      "route": "^/settings/private-integrations",
+      "go": "/settings/private-integrations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

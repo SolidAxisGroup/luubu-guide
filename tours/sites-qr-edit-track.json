@@ -1,0 +1,91 @@
+{
+  "id": "sites-qr-edit-track",
+  "kind": "howto",
+  "area": "sites",
+  "screen": "sites.qr-codes",
+  "title": "Change a QR code and track scans",
+  "blurb": "Point a printed code somewhere new and see how often it is scanned.",
+  "icon": "chart",
+  "minutes": 3,
+  "keywords": [
+    "edit qr",
+    "change qr link",
+    "qr scans",
+    "qr analytics",
+    "tracking"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open QR Codes",
+      "body": "Click **QR Codes**.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/qr-codes",
+      "target": [
+        {
+          "css": "#tb_qr-codes"
+        },
+        {
+          "text": "QR Codes",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/qr-codes"
+      }
+    },
+    {
+      "id": "edit",
+      "title": "Edit the code",
+      "body": "Hover over the code and click edit. Change where it points, then save. The printed code keeps working and goes to the new place.",
+      "route": "^/qr-codes",
+      "go": "/qr-codes",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "analytics",
+      "title": "See the scans",
+      "body": "Open **Analytics** in the Sites menu and choose **QR Codes** to see total and unique scans for each code.",
+      "route": "^/qr-codes",
+      "go": "/qr-codes",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "compare",
+      "title": "Compare placements",
+      "body": "Compare codes by where they were printed to see which flyer, sign or card works best.",
+      "route": "^/qr-codes",
+      "go": "/qr-codes",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

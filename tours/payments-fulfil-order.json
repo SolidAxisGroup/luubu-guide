@@ -1,0 +1,125 @@
+{
+  "id": "payments-fulfil-order",
+  "kind": "howto",
+  "area": "payments",
+  "screen": "payments.payment-orders-new",
+  "title": "Fulfil a store order",
+  "blurb": "Mark goods as sent, add tracking and print a packing slip.",
+  "icon": "card",
+  "minutes": 3,
+  "keywords": [
+    "fulfil",
+    "fulfill",
+    "ship",
+    "tracking",
+    "courier",
+    "packing slip",
+    "nz post"
+  ],
+  "steps": [
+    {
+      "id": "open-payments",
+      "title": "Open Payments",
+      "body": "Click **Payments** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_payments"
+        },
+        {
+          "text": "Payments",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/"
+      }
+    },
+    {
+      "id": "tab-payment-orders-new",
+      "title": "Open Orders",
+      "body": "Click **Orders** along the top.",
+      "route": "^/payments/",
+      "go": "/payments/v2/orders",
+      "target": [
+        {
+          "css": "#tb_payment-orders-new"
+        },
+        {
+          "text": "Orders",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/v2/orders"
+      }
+    },
+    {
+      "id": "open",
+      "title": "Open the order",
+      "body": "Click an unfulfilled store order.",
+      "route": "^/payments/v2/orders",
+      "go": "/payments/v2/orders",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "slip",
+      "title": "Print a packing slip",
+      "body": "Click **Print Shipping Label** to get a PDF to pop in the box.",
+      "route": "^/payments/v2/orders",
+      "go": "/payments/v2/orders",
+      "target": [
+        {
+          "text": "Print Shipping Label",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Print Shipping Label"
+    },
+    {
+      "id": "fulfil",
+      "title": "Fulfil the items",
+      "body": "Start fulfilment and pick the items and quantities you are sending.",
+      "route": "^/payments/v2/orders",
+      "go": "/payments/v2/orders",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "tracking",
+      "title": "Add tracking",
+      "body": "Enter the courier, tracking number and tracking link, e.g. from NZ Post or Aramex, then confirm.",
+      "route": "^/payments/v2/orders",
+      "go": "/payments/v2/orders",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "auto",
+      "title": "Automate the email",
+      "body": "An order fulfilled workflow can text the customer their tracking link for you.",
+      "route": "^/payments/v2/orders",
+      "go": "/payments/v2/orders",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

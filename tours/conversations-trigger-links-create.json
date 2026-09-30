@@ -1,0 +1,122 @@
+{
+  "id": "conversations-trigger-links-create",
+  "kind": "howto",
+  "area": "conversations",
+  "screen": "conversations.trigger-links",
+  "title": "Create a trigger link",
+  "blurb": "Make a tracked link to your booking page, review page or offer.",
+  "icon": "flow",
+  "minutes": 2,
+  "keywords": [
+    "trigger link",
+    "create link",
+    "tracked link",
+    "booking link",
+    "review link",
+    "url"
+  ],
+  "steps": [
+    {
+      "id": "open-conversations",
+      "title": "Open Conversations",
+      "body": "Click **Conversations** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_conversations"
+        },
+        {
+          "text": "Conversations",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/conversations/"
+      }
+    },
+    {
+      "id": "tab-trigger-links",
+      "title": "Open Trigger Links",
+      "body": "Click **Trigger Links** along the top.",
+      "route": "^/conversations/",
+      "go": "/conversations/trigger-links",
+      "target": [
+        {
+          "css": "#tb_trigger-links"
+        },
+        {
+          "text": "Trigger Links",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/conversations/trigger-links"
+      }
+    },
+    {
+      "id": "add",
+      "title": "Add a link",
+      "body": "Click **Add Link** at the top right.",
+      "route": "^/conversations/trigger-links",
+      "go": "/conversations/trigger-links",
+      "target": [
+        {
+          "text": "Add Link",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add Link"
+    },
+    {
+      "id": "name",
+      "title": "Name it",
+      "body": "Enter a **Name** you'll recognise, like \"Book online\" or \"Leave a Google review\".",
+      "route": "^/conversations/trigger-links",
+      "go": "/conversations/trigger-links",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Name"
+    },
+    {
+      "id": "url",
+      "title": "Paste the web address",
+      "body": "Paste the full address into **Link URL**, starting with https://.",
+      "route": "^/conversations/trigger-links",
+      "go": "/conversations/trigger-links",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Link URL"
+    },
+    {
+      "id": "save",
+      "title": "Save",
+      "body": "Click **Save**. Your link is ready to use in texts, emails and snippets.",
+      "route": "^/conversations/trigger-links",
+      "go": "/conversations/trigger-links",
+      "target": [
+        {
+          "text": "Save",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Save"
+    }
+  ]
+}

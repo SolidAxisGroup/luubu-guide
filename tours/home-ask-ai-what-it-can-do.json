@@ -1,0 +1,98 @@
+{
+  "id": "home-ask-ai-what-it-can-do",
+  "kind": "howto",
+  "area": "home",
+  "screen": "home.ask-ai",
+  "title": "See what Ask AI can do",
+  "blurb": "The kinds of jobs you can hand to the assistant, with example prompts.",
+  "icon": "bot",
+  "minutes": 3,
+  "keywords": [
+    "ask ai",
+    "what can ai do",
+    "assistant",
+    "examples",
+    "prompts",
+    "ai help"
+  ],
+  "steps": [
+    {
+      "id": "open-ask-ai",
+      "title": "Open Ask AI",
+      "body": "Click **Ask AI** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_ask-ai"
+        },
+        {
+          "text": "Ask AI",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/ask-ai"
+      }
+    },
+    {
+      "id": "find-things",
+      "title": "Find and summarise",
+      "body": "Ask for info from your account. Try: \"How many new leads did we get this week?\" or \"Summarise my last conversation with Jane Smith.\"",
+      "route": "^/ask-ai",
+      "go": "/ask-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "crm-changes",
+      "title": "Update your CRM",
+      "body": "It can create and update contacts, opportunities and pipelines. Try: \"Add a contact called Mike Brown, 021 555 123, tag him as quote-sent.\"",
+      "route": "^/ask-ai",
+      "go": "/ask-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "write-content",
+      "title": "Write for you",
+      "body": "It drafts emails, social posts, blog posts and ads. Try: \"Write a friendly follow-up email for people who got a quote but haven't replied.\"",
+      "route": "^/ask-ai",
+      "go": "/ask-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "bulk",
+      "title": "Bigger jobs",
+      "body": "It can run bulk jobs too, like tagging a group of contacts or sending a text to a list. It always asks you to confirm first.",
+      "route": "^/ask-ai",
+      "go": "/ask-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "It can read your workflows and campaigns, but it can't edit them yet. Build those yourself or ask us at hello@luubu.com."
+    },
+    {
+      "id": "try-it",
+      "title": "Give it a go",
+      "body": "Type one of the examples into the message box and press Enter. If the answer isn't quite right, just reply and tell it what to change.",
+      "route": "^/ask-ai",
+      "go": "/ask-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

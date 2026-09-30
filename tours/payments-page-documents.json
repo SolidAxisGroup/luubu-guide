@@ -1,0 +1,132 @@
+{
+  "id": "payments-page-documents",
+  "kind": "page",
+  "area": "payments",
+  "screen": "payments.proposals-estimates",
+  "title": "Tour: Documents & Contracts",
+  "blurb": "Quotes, agreements and proposals your clients sign online.",
+  "icon": "page",
+  "minutes": 3,
+  "keywords": [
+    "documents",
+    "contracts",
+    "proposals",
+    "e-signature",
+    "sign",
+    "agreement",
+    "templates"
+  ],
+  "steps": [
+    {
+      "id": "open-payments",
+      "title": "Open Payments",
+      "body": "Click **Payments** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_payments"
+        },
+        {
+          "text": "Payments",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/"
+      }
+    },
+    {
+      "id": "tab-proposals-estimates",
+      "title": "Open Documents & Contracts",
+      "body": "Click **Documents & Contracts** along the top.",
+      "route": "^/payments/",
+      "go": "/payments/proposals-estimates",
+      "target": [
+        {
+          "css": "#tb_proposals-estimates"
+        },
+        {
+          "text": "Documents & Contracts",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/proposals-estimates"
+      }
+    },
+    {
+      "id": "what",
+      "title": "What this is for",
+      "body": "Build a document once, send it by email or link, and the client signs on their phone. No printing or scanning.",
+      "route": "^/payments/proposals-estimates",
+      "go": "/payments/proposals-estimates",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "new",
+      "title": "Start a document",
+      "body": "**+ New** starts from blank, from a PDF you upload, or from a template.",
+      "route": "^/payments/proposals-estimates",
+      "go": "/payments/proposals-estimates",
+      "target": [
+        {
+          "text": "New",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New"
+    },
+    {
+      "id": "status-tabs",
+      "title": "Track where each one is",
+      "body": "**Draft** is not sent yet. **Waiting for others** means someone still needs to sign. **Completed** is fully signed.",
+      "route": "^/payments/proposals-estimates",
+      "go": "/payments/proposals-estimates",
+      "target": [
+        {
+          "text": "Waiting for others"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Waiting for others"
+    },
+    {
+      "id": "row",
+      "title": "Each row",
+      "body": "Rows show the title, customer, value and last change. The three-dot menu lets you **Clone** a document to reuse it.",
+      "route": "^/payments/proposals-estimates",
+      "go": "/payments/proposals-estimates",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "Next step",
+      "body": "Next: try **Send a contract for e-signature** from the Guide.",
+      "route": "^/payments/proposals-estimates",
+      "go": "/payments/proposals-estimates",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

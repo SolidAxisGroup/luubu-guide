@@ -1,0 +1,104 @@
+{
+  "id": "reporting-meta-ads-read",
+  "kind": "howto",
+  "area": "reporting",
+  "screen": "reporting.facebook-ads",
+  "title": "Read your Facebook Ads report",
+  "blurb": "See which Facebook and Instagram ads bring leads, and which just burn budget.",
+  "icon": "chart",
+  "minutes": 3,
+  "keywords": [
+    "facebook ads",
+    "meta ads",
+    "report",
+    "cost per lead",
+    "ad sets",
+    "roi"
+  ],
+  "steps": [
+    {
+      "id": "open-reporting",
+      "title": "Open Reporting",
+      "body": "Click **Reporting** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reporting"
+        },
+        {
+          "text": "Reporting",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/"
+      }
+    },
+    {
+      "id": "open-facebook-ads",
+      "title": "Open Facebook Ads",
+      "body": "Click **Facebook Ads**.",
+      "route": "^/reporting/",
+      "go": "/reporting/facebook-ads",
+      "target": [
+        {
+          "css": "#tb_facebook-ads"
+        },
+        {
+          "text": "Facebook Ads",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/facebook-ads"
+      }
+    },
+    {
+      "id": "dates",
+      "title": "Pick a period",
+      "body": "Set the date range. Give new ads at least a week before judging them.",
+      "route": "^/reporting/facebook-ads",
+      "go": "/reporting/facebook-ads",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "spend",
+      "title": "Spend vs leads",
+      "body": "Compare spend with leads. Cost per lead tells you what each enquiry is costing.",
+      "route": "^/reporting/facebook-ads",
+      "go": "/reporting/facebook-ads",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "drill",
+      "title": "Dig deeper",
+      "body": "Look at results by campaign, then ad set, then ad. Often one ad does most of the work.",
+      "route": "^/reporting/facebook-ads",
+      "go": "/reporting/facebook-ads",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "action",
+      "title": "Act on it",
+      "body": "Turn off ads with spend but no leads, and give more budget to the winners.",
+      "route": "^/reporting/facebook-ads",
+      "go": "/reporting/facebook-ads",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

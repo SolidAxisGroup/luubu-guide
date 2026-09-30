@@ -1,0 +1,91 @@
+{
+  "id": "settings-values-folders",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.custom-values",
+  "title": "Organise custom values into folders",
+  "blurb": "Keep a long list of values tidy.",
+  "icon": "book",
+  "minutes": 2,
+  "keywords": [
+    "folders",
+    "custom values",
+    "organise",
+    "move",
+    "tidy"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-custom-values",
+      "title": "Open Custom Values",
+      "body": "Click **Custom Values** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/custom_values",
+      "target": [
+        {
+          "css": "[id='sb_custom-values']"
+        },
+        {
+          "text": "Custom Values",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/custom_values"
+      }
+    },
+    {
+      "id": "folder",
+      "title": "Make a folder",
+      "body": "Create a folder, like \"Links\" or \"Pricing\". Folders cannot go inside other folders.",
+      "route": "^/settings/custom_values",
+      "go": "/settings/custom_values",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "move",
+      "title": "Move values",
+      "body": "Tick the values you want and use the bulk action to move them into the folder.",
+      "route": "^/settings/custom_values",
+      "go": "/settings/custom_values",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "search",
+      "title": "Find values fast",
+      "body": "Use search at the top to filter the list.",
+      "route": "^/settings/custom_values",
+      "go": "/settings/custom_values",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

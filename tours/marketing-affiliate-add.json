@@ -1,0 +1,140 @@
+{
+  "id": "marketing-affiliate-add",
+  "kind": "howto",
+  "area": "marketing",
+  "screen": "marketing.affiliate-manager",
+  "title": "Add affiliates",
+  "blurb": "Sign up partners one at a time, by spreadsheet, or from your contacts.",
+  "icon": "users",
+  "minutes": 3,
+  "keywords": [
+    "add affiliate",
+    "partner",
+    "referral",
+    "import affiliates",
+    "invite",
+    "affiliate"
+  ],
+  "steps": [
+    {
+      "id": "open-marketing",
+      "title": "Open Marketing",
+      "body": "Click **Marketing** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_email-marketing"
+        },
+        {
+          "text": "Marketing",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/"
+      }
+    },
+    {
+      "id": "open-affiliate-manager",
+      "title": "Open Affiliate Manager",
+      "body": "Click **Affiliate Manager** along the top.",
+      "route": "^/marketing/",
+      "go": "/marketing/affiliate-manager",
+      "target": [
+        {
+          "css": "#tb_affiliate-manager"
+        },
+        {
+          "text": "Affiliate Manager",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/affiliate-manager"
+      }
+    },
+    {
+      "id": "affiliates",
+      "title": "Go to Affiliates",
+      "body": "Click **Affiliates**.",
+      "route": "^/marketing/affiliate-manager",
+      "go": "/marketing/affiliate-manager",
+      "target": [
+        {
+          "text": "Affiliates"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Affiliates"
+    },
+    {
+      "id": "add",
+      "title": "Add someone",
+      "body": "Click **Add**.",
+      "route": "^/marketing/affiliate-manager",
+      "go": "/marketing/affiliate-manager",
+      "target": [
+        {
+          "text": "Add",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add",
+      "advance": "click"
+    },
+    {
+      "id": "new",
+      "title": "One at a time",
+      "body": "Choose **New Affiliate**. Enter their name and email, pick their campaign, and save.",
+      "route": "^/marketing/affiliate-manager",
+      "go": "/marketing/affiliate-manager",
+      "target": [
+        {
+          "text": "New Affiliate"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New Affiliate"
+    },
+    {
+      "id": "bulk",
+      "title": "Or add lots at once",
+      "body": "Pick **Upload Affiliate** to load a spreadsheet (download the sample first), or **Import from Contacts** to turn existing contacts into affiliates.",
+      "route": "^/marketing/affiliate-manager",
+      "go": "/marketing/affiliate-manager",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "share",
+      "title": "Let them know",
+      "body": "Each affiliate gets their own referral link and a portal where they can see clicks, leads and commissions.",
+      "route": "^/marketing/affiliate-manager",
+      "go": "/marketing/affiliate-manager",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Workflows can add people as affiliates automatically, for example after a customer leaves a 5-star review."
+    }
+  ]
+}

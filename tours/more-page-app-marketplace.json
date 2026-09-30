@@ -1,0 +1,105 @@
+{
+  "id": "more-page-app-marketplace",
+  "kind": "page",
+  "area": "more",
+  "screen": "more.app-marketplace",
+  "title": "Tour: App Marketplace",
+  "blurb": "Add extra apps and connections to your Luubu account.",
+  "icon": "grid",
+  "minutes": 2,
+  "keywords": [
+    "apps",
+    "marketplace",
+    "integrations",
+    "install",
+    "add ons",
+    "connect"
+  ],
+  "steps": [
+    {
+      "id": "open-app-marketplace",
+      "title": "Open App Marketplace",
+      "body": "Click **App Marketplace** in the left menu. Extra apps and connections live here.",
+      "target": [
+        {
+          "css": "#sb_app-marketplace"
+        },
+        {
+          "text": "App Marketplace",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/integration"
+      }
+    },
+    {
+      "id": "browse",
+      "title": "Browse",
+      "body": "Scroll through apps or browse by category.",
+      "route": "^/integration",
+      "go": "/integration",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "search",
+      "title": "Search",
+      "body": "Know what you want? Search by name, like Xero or Zapier.",
+      "route": "^/integration",
+      "go": "/integration",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "app",
+      "title": "App details",
+      "body": "Click an app to see what it does, what it costs and what it can access.",
+      "tip": "Can't find or install an app? Some need us to add them for you. Ask us to switch this on: hello@luubu.com",
+      "route": "^/integration",
+      "go": "/integration",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "installed",
+      "title": "Installed apps",
+      "body": "The **Installed** tab lists apps already added to your account.",
+      "route": "^/integration",
+      "go": "/integration",
+      "target": [
+        {
+          "text": "Installed"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Installed"
+    },
+    {
+      "id": "next",
+      "title": "What's next",
+      "body": "Next: try **Find and install an app** from the Guide.",
+      "route": "^/integration",
+      "go": "/integration",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

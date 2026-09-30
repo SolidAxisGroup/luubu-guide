@@ -1,0 +1,130 @@
+{
+  "id": "settings-page-whatsapp",
+  "kind": "page",
+  "area": "settings",
+  "screen": "settings.whatsapp",
+  "title": "Tour: WhatsApp",
+  "blurb": "Connect WhatsApp Business and manage numbers and message templates.",
+  "icon": "chat",
+  "minutes": 2,
+  "keywords": [
+    "whatsapp",
+    "messaging",
+    "templates",
+    "meta",
+    "business",
+    "chat"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-whatsapp",
+      "title": "Open WhatsApp",
+      "body": "Click **WhatsApp** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/whatsapp",
+      "target": [
+        {
+          "css": "[id='sb_whatsapp']"
+        },
+        {
+          "text": "WhatsApp",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/whatsapp"
+      }
+    },
+    {
+      "id": "status",
+      "title": "Status at a glance",
+      "body": "Once connected, the top card shows your account status, Meta business verification and messages sent in the last 7 days.",
+      "route": "^/settings/whatsapp",
+      "go": "/settings/whatsapp",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "numbers",
+      "title": "Numbers",
+      "body": "**Numbers** lists the phone numbers you use for WhatsApp.",
+      "route": "^/settings/whatsapp",
+      "go": "/settings/whatsapp",
+      "target": [
+        {
+          "text": "Numbers"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Numbers"
+    },
+    {
+      "id": "templates",
+      "title": "Templates",
+      "body": "**Templates** holds pre-approved messages. You need one to message someone who has not written to you in the last 24 hours.",
+      "route": "^/settings/whatsapp",
+      "go": "/settings/whatsapp",
+      "target": [
+        {
+          "text": "Templates"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Templates"
+    },
+    {
+      "id": "cost",
+      "title": "Costs",
+      "body": "WhatsApp has a monthly fee plus Meta's per-message charges, billed through your Luubu account. Check wallet pricing under **Billing**.",
+      "route": "^/settings/whatsapp",
+      "go": "/settings/whatsapp",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Next: try **Connect WhatsApp** from the Guide.",
+      "route": "^/settings/whatsapp",
+      "go": "/settings/whatsapp",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1190 @@
+[
+ {
+  "area": "home",
+  "key": "home.ask-ai",
+  "label": "Ask AI",
+  "path": "/ask-ai",
+  "anchor": {
+   "css": "#sb_ask-ai"
+  },
+  "sidebar": "#sb_ask-ai",
+  "framed": null
+ },
+ {
+  "area": "home",
+  "key": "home.dashboard",
+  "label": "Dashboard",
+  "path": "/dashboard",
+  "anchor": {
+   "css": "#sb_dashboard"
+  },
+  "sidebar": "#sb_dashboard",
+  "framed": null
+ },
+ {
+  "area": "ai",
+  "key": "ai.vibe",
+  "label": "AI Studio",
+  "path": "/vibe",
+  "anchor": {
+   "css": "#sb_vibe"
+  },
+  "sidebar": "#sb_vibe",
+  "framed": null
+ },
+ {
+  "area": "more",
+  "key": "more.app-media",
+  "label": "Media Storage",
+  "path": "/media-storage",
+  "anchor": {
+   "css": "#sb_app-media"
+  },
+  "sidebar": "#sb_app-media",
+  "framed": null
+ },
+ {
+  "area": "more",
+  "key": "more.app-marketplace",
+  "label": "App Marketplace",
+  "path": "/integration",
+  "anchor": {
+   "css": "#sb_app-marketplace"
+  },
+  "sidebar": "#sb_app-marketplace",
+  "framed": null
+ },
+ {
+  "area": "conversations",
+  "key": "conversations.conversations-tab",
+  "label": "Conversations",
+  "path": "/conversations/conversations",
+  "anchor": {
+   "css": "#tb_conversations-tab"
+  },
+  "sidebar": "#sb_conversations",
+  "framed": null
+ },
+ {
+  "area": "conversations",
+  "key": "conversations.manial-actions",
+  "label": "Manual Actions",
+  "path": "/conversations/manual_actions",
+  "anchor": {
+   "css": "#tb_manial-actions"
+  },
+  "sidebar": "#sb_conversations",
+  "framed": null
+ },
+ {
+  "area": "conversations",
+  "key": "conversations.conversations-templates",
+  "label": "Snippets",
+  "path": "/conversations/templates",
+  "anchor": {
+   "css": "#tb_conversations-templates"
+  },
+  "sidebar": "#sb_conversations",
+  "framed": null
+ },
+ {
+  "area": "conversations",
+  "key": "conversations.trigger-links",
+  "label": "Trigger Links",
+  "path": "/conversations/trigger-links",
+  "anchor": {
+   "css": "#tb_trigger-links"
+  },
+  "sidebar": "#sb_conversations",
+  "framed": null
+ },
+ {
+  "area": "conversations",
+  "key": "conversations.conversations-analytics",
+  "label": "Analytics",
+  "path": "/conversations/analytics",
+  "anchor": {
+   "css": "#tb_conversations-analytics"
+  },
+  "sidebar": "#sb_conversations",
+  "framed": null
+ },
+ {
+  "area": "conversations",
+  "key": "conversations.settings",
+  "label": "Settings",
+  "path": "/conversations/settings",
+  "anchor": {
+   "css": "#tb_settings"
+  },
+  "sidebar": "#sb_conversations",
+  "framed": null
+ },
+ {
+  "area": "calendars",
+  "key": "calendars.calendars-tab",
+  "label": "Calendar view",
+  "path": "/calendars/view",
+  "anchor": {
+   "css": "#tb_calendars-tab"
+  },
+  "sidebar": "#sb_calendars",
+  "framed": null
+ },
+ {
+  "area": "calendars",
+  "key": "calendars.apppontment-tab",
+  "label": "Appointment list view",
+  "path": "/calendars/appointments",
+  "anchor": {
+   "css": "#tb_apppontment-tab"
+  },
+  "sidebar": "#sb_calendars",
+  "framed": null
+ },
+ {
+  "area": "calendars",
+  "key": "calendars.calendar-settings-top",
+  "label": "Calendar settings",
+  "path": "/settings/calendars",
+  "anchor": {
+   "css": "#tb_calendar-settings-top"
+  },
+  "sidebar": "#sb_calendars",
+  "framed": null
+ },
+ {
+  "area": "contacts",
+  "key": "contacts.lists",
+  "label": "Smart Lists",
+  "path": "/contacts/smart_list/All",
+  "anchor": {
+   "css": "#tb_lists"
+  },
+  "sidebar": "#sb_contacts",
+  "framed": null
+ },
+ {
+  "area": "contacts",
+  "key": "contacts.bulk-actions",
+  "label": "Bulk Actions",
+  "path": "/contacts/bulk/actions",
+  "anchor": {
+   "css": "#tb_bulk-actions"
+  },
+  "sidebar": "#sb_contacts",
+  "framed": null
+ },
+ {
+  "area": "contacts",
+  "key": "contacts.contact-custom-fields-settings",
+  "label": "Custom Fields",
+  "path": "/settings/fields",
+  "anchor": {
+   "css": "#tb_contact-custom-fields-settings"
+  },
+  "sidebar": "#sb_contacts",
+  "framed": null
+ },
+ {
+  "area": "contacts",
+  "key": "contacts.tasks",
+  "label": "Tasks",
+  "path": "/tasks",
+  "anchor": {
+   "css": "#tb_tasks"
+  },
+  "sidebar": "#sb_contacts",
+  "framed": null
+ },
+ {
+  "area": "contacts",
+  "key": "contacts.business",
+  "label": "Companies",
+  "path": "/businesses/list",
+  "anchor": {
+   "css": "#tb_business"
+  },
+  "sidebar": "#sb_contacts",
+  "framed": null
+ },
+ {
+  "area": "opportunities",
+  "key": "opportunities.opportunities-tab",
+  "label": "Opportunities",
+  "path": "/opportunities/list",
+  "anchor": {
+   "css": "#tb_opportunities-tab"
+  },
+  "sidebar": "#sb_opportunities",
+  "framed": null
+ },
+ {
+  "area": "opportunities",
+  "key": "opportunities.forecast-tab",
+  "label": "Forecast",
+  "path": "/opportunities/forecast",
+  "anchor": {
+   "css": "#tb_forecast-tab"
+  },
+  "sidebar": "#sb_opportunities",
+  "framed": null
+ },
+ {
+  "area": "opportunities",
+  "key": "opportunities.pipeline",
+  "label": "Pipelines",
+  "path": "/opportunities/pipeline",
+  "anchor": {
+   "css": "#tb_pipeline"
+  },
+  "sidebar": "#sb_opportunities",
+  "framed": null
+ },
+ {
+  "area": "opportunities",
+  "key": "opportunities.bulk-actions",
+  "label": "Bulk Actions",
+  "path": "/opportunities/bulk-actions",
+  "anchor": {
+   "css": "#tb_bulk-actions"
+  },
+  "sidebar": "#sb_opportunities",
+  "framed": null
+ },
+ {
+  "area": "payments",
+  "key": "payments.payment-invoices",
+  "label": "Invoices & Estimates",
+  "path": "/payments/invoices",
+  "anchor": {
+   "css": "#tb_payment-invoices"
+  },
+  "sidebar": "#sb_payments",
+  "framed": null
+ },
+ {
+  "area": "payments",
+  "key": "payments.proposals-estimates",
+  "label": "Documents & Contracts",
+  "path": "/payments/proposals-estimates",
+  "anchor": {
+   "css": "#tb_proposals-estimates"
+  },
+  "sidebar": "#sb_payments",
+  "framed": null
+ },
+ {
+  "area": "payments",
+  "key": "payments.payment-orders-new",
+  "label": "Orders",
+  "path": "/payments/v2/orders",
+  "anchor": {
+   "css": "#tb_payment-orders-new"
+  },
+  "sidebar": "#sb_payments",
+  "framed": null
+ },
+ {
+  "area": "payments",
+  "key": "payments.payment-subscriptions",
+  "label": "Subscriptions",
+  "path": "/payments/v2/subscriptions",
+  "anchor": {
+   "css": "#tb_payment-subscriptions"
+  },
+  "sidebar": "#sb_payments",
+  "framed": null
+ },
+ {
+  "area": "payments",
+  "key": "payments.payment-links",
+  "label": "Payment Links",
+  "path": "/payments/v2/paymentlinks",
+  "anchor": {
+   "css": "#tb_payment-links"
+  },
+  "sidebar": "#sb_payments",
+  "framed": null
+ },
+ {
+  "area": "payments",
+  "key": "payments.payment-transactions-new",
+  "label": "Transactions",
+  "path": "/payments/v2/transactions",
+  "anchor": {
+   "css": "#tb_payment-transactions-new"
+  },
+  "sidebar": "#sb_payments",
+  "framed": null
+ },
+ {
+  "area": "payments",
+  "key": "payments.payments-products",
+  "label": "Products",
+  "path": "/payments/products",
+  "anchor": {
+   "css": "#tb_payments-products"
+  },
+  "sidebar": "#sb_payments",
+  "framed": null
+ },
+ {
+  "area": "payments",
+  "key": "payments.payments-coupons",
+  "label": "Coupons",
+  "path": "/payments/coupons",
+  "anchor": {
+   "css": "#tb_payments-coupons"
+  },
+  "sidebar": "#sb_payments",
+  "framed": null
+ },
+ {
+  "area": "payments",
+  "key": "payments.gift-cards",
+  "label": "Gift Cards",
+  "path": "/payments/gift-cards",
+  "anchor": {
+   "css": "#tb_gift-cards"
+  },
+  "sidebar": "#sb_payments",
+  "framed": null
+ },
+ {
+  "area": "payments",
+  "key": "payments.payment-settings",
+  "label": "Settings",
+  "path": "/payments/settings/receipts",
+  "anchor": {
+   "css": "#tb_payment-settings"
+  },
+  "sidebar": "#sb_payments",
+  "framed": null
+ },
+ {
+  "area": "payments",
+  "key": "payments.payment-integrations",
+  "label": "Integrations",
+  "path": "/payments/integrations",
+  "anchor": {
+   "css": "#tb_payment-integrations"
+  },
+  "sidebar": "#sb_payments",
+  "framed": null
+ },
+ {
+  "area": "ai",
+  "key": "ai.ai-agents-getting-started",
+  "label": "Getting Started",
+  "path": "/ai-agents/getting-started",
+  "anchor": {
+   "css": "#tb_ai-agents-getting-started"
+  },
+  "sidebar": "[id='sb_AI Agents']",
+  "framed": null
+ },
+ {
+  "area": "ai",
+  "key": "ai.ai-agents-agent-studio",
+  "label": "Agent Studio",
+  "path": "/ai-agents/agent-studio",
+  "anchor": {
+   "css": "#tb_ai-agents-agent-studio"
+  },
+  "sidebar": "[id='sb_AI Agents']",
+  "framed": null
+ },
+ {
+  "area": "ai",
+  "key": "ai.ai-agents-voice-ai",
+  "label": "Voice AI",
+  "path": "/ai-agents/voice-ai",
+  "anchor": {
+   "css": "#tb_ai-agents-voice-ai"
+  },
+  "sidebar": "[id='sb_AI Agents']",
+  "framed": null
+ },
+ {
+  "area": "ai",
+  "key": "ai.ai-agents-conversation-ai",
+  "label": "Conversation AI",
+  "path": "/ai-agents/conversation-ai",
+  "anchor": {
+   "css": "#tb_ai-agents-conversation-ai"
+  },
+  "sidebar": "[id='sb_AI Agents']",
+  "framed": null
+ },
+ {
+  "area": "ai",
+  "key": "ai.ai-agents-knowledge-base",
+  "label": "Knowledge Base",
+  "path": "/ai-agents/knowledge-base",
+  "anchor": {
+   "css": "#tb_ai-agents-knowledge-base"
+  },
+  "sidebar": "[id='sb_AI Agents']",
+  "framed": null
+ },
+ {
+  "area": "ai",
+  "key": "ai.ai-agents-agent-templates",
+  "label": "Agent Templates",
+  "path": "/ai-agents/agent-templates",
+  "anchor": {
+   "css": "#tb_ai-agents-agent-templates"
+  },
+  "sidebar": "[id='sb_AI Agents']",
+  "framed": null
+ },
+ {
+  "area": "ai",
+  "key": "ai.ai-agents-content-ai",
+  "label": "Content AI",
+  "path": "/ai-agents/content-ai",
+  "anchor": {
+   "css": "#tb_ai-agents-content-ai"
+  },
+  "sidebar": "[id='sb_AI Agents']",
+  "framed": null
+ },
+ {
+  "area": "ai",
+  "key": "ai.agent-logs",
+  "label": "Agent Logs",
+  "path": "/ai-agents/agent-logs",
+  "anchor": {
+   "css": "#tb_agent-logs"
+  },
+  "sidebar": "[id='sb_AI Agents']",
+  "framed": null
+ },
+ {
+  "area": "ai",
+  "key": "ai.ai-agents-industry-agents",
+  "label": "Industry Agents",
+  "path": "/ai-agents/industry-agents",
+  "anchor": {
+   "css": "#tb_ai-agents-industry-agents"
+  },
+  "sidebar": "[id='sb_AI Agents']",
+  "framed": null
+ },
+ {
+  "area": "marketing",
+  "key": "marketing.social-planner",
+  "label": "Social Planner",
+  "path": "/marketing/social-planner",
+  "anchor": {
+   "css": "#tb_social-planner"
+  },
+  "sidebar": "#sb_email-marketing",
+  "framed": null
+ },
+ {
+  "area": "marketing",
+  "key": "marketing.email-builder",
+  "label": "Emails",
+  "path": "/marketing/emails/statistics",
+  "anchor": {
+   "css": "#tb_email-builder"
+  },
+  "sidebar": "#sb_email-marketing",
+  "framed": true
+ },
+ {
+  "area": "marketing",
+  "key": "marketing.email-templates",
+  "label": "Snippets",
+  "path": "/marketing/templates",
+  "anchor": {
+   "css": "#tb_email-templates"
+  },
+  "sidebar": "#sb_email-marketing",
+  "framed": null
+ },
+ {
+  "area": "marketing",
+  "key": "marketing.countdown-timer",
+  "label": "Countdown Timers",
+  "path": "/marketing/countdown-timer",
+  "anchor": {
+   "css": "#tb_countdown-timer"
+  },
+  "sidebar": "#sb_email-marketing",
+  "framed": null
+ },
+ {
+  "area": "marketing",
+  "key": "marketing.trigger-links",
+  "label": "Trigger Links",
+  "path": "/marketing/trigger-links",
+  "anchor": {
+   "css": "#tb_trigger-links"
+  },
+  "sidebar": "#sb_email-marketing",
+  "framed": null
+ },
+ {
+  "area": "marketing",
+  "key": "marketing.affiliate-manager",
+  "label": "Affiliate Manager",
+  "path": "/marketing/affiliate-manager",
+  "anchor": {
+   "css": "#tb_affiliate-manager"
+  },
+  "sidebar": "#sb_email-marketing",
+  "framed": null
+ },
+ {
+  "area": "marketing",
+  "key": "marketing.brand-boards",
+  "label": "Brand Boards",
+  "path": "/marketing/brand-boards",
+  "anchor": {
+   "css": "#tb_brand-boards"
+  },
+  "sidebar": "#sb_email-marketing",
+  "framed": null
+ },
+ {
+  "area": "marketing",
+  "key": "marketing.ad-manager-home",
+  "label": "Ad Manager",
+  "path": "/marketing/ad-manager/home",
+  "anchor": {
+   "css": "#tb_ad-manager-home"
+  },
+  "sidebar": "#sb_email-marketing",
+  "framed": null
+ },
+ {
+  "area": "automation",
+  "key": "automation.workflow",
+  "label": "Workflows",
+  "path": "/automation/workflows",
+  "anchor": {
+   "css": "#tb_workflow"
+  },
+  "sidebar": "#sb_automation",
+  "framed": true
+ },
+ {
+  "area": "automation",
+  "key": "automation.workflow-overview",
+  "label": "Overview",
+  "path": "/automation/overview",
+  "anchor": {
+   "css": "#tb_workflow-overview"
+  },
+  "sidebar": "#sb_automation",
+  "framed": null
+ },
+ {
+  "area": "automation",
+  "key": "automation.workflow-settings-top",
+  "label": "Global Workflow Settings",
+  "path": "/automation/workflows/settings",
+  "anchor": {
+   "css": "#tb_workflow-settings-top"
+  },
+  "sidebar": "#sb_automation",
+  "framed": null
+ },
+ {
+  "area": "sites",
+  "key": "sites.funnels",
+  "label": "Funnels",
+  "path": "/funnels-websites/funnels",
+  "anchor": {
+   "css": "#tb_funnels"
+  },
+  "sidebar": "#sb_sites",
+  "framed": null
+ },
+ {
+  "area": "sites",
+  "key": "sites.websites",
+  "label": "Websites",
+  "path": "/funnels-websites/websites",
+  "anchor": {
+   "css": "#tb_websites"
+  },
+  "sidebar": "#sb_sites",
+  "framed": null
+ },
+ {
+  "area": "sites",
+  "key": "sites.stores",
+  "label": "Stores",
+  "path": "/funnels-websites/stores",
+  "anchor": {
+   "css": "#tb_stores"
+  },
+  "sidebar": "#sb_sites",
+  "framed": null
+ },
+ {
+  "area": "sites",
+  "key": "sites.webinars",
+  "label": "Webinars",
+  "path": "/funnels-websites/webinars",
+  "anchor": {
+   "css": "#tb_webinars"
+  },
+  "sidebar": "#sb_sites",
+  "framed": null
+ },
+ {
+  "area": "sites",
+  "key": "sites.analytics",
+  "label": "Analytics",
+  "path": "/analytics",
+  "anchor": {
+   "css": "#tb_analytics"
+  },
+  "sidebar": "#sb_sites",
+  "framed": null
+ },
+ {
+  "area": "sites",
+  "key": "sites.blogs",
+  "label": "Blogs",
+  "path": "/blogs",
+  "anchor": {
+   "css": "#tb_blogs"
+  },
+  "sidebar": "#sb_sites",
+  "framed": null
+ },
+ {
+  "area": "sites",
+  "key": "sites.wordpress-v2",
+  "label": "WordPress",
+  "path": "/wordpress",
+  "anchor": {
+   "css": "#tb_wordpress-v2"
+  },
+  "sidebar": "#sb_sites",
+  "framed": null
+ },
+ {
+  "area": "sites",
+  "key": "sites.clientportal",
+  "label": "Client Portal",
+  "path": "/funnels-websites/client-portal/dashboard",
+  "anchor": {
+   "css": "#tb_clientportal"
+  },
+  "sidebar": "#sb_sites",
+  "framed": null
+ },
+ {
+  "area": "sites",
+  "key": "sites.form-builder",
+  "label": "Forms",
+  "path": "/form-builder/main",
+  "anchor": {
+   "css": "#tb_form-builder"
+  },
+  "sidebar": "#sb_sites",
+  "framed": null
+ },
+ {
+  "area": "sites",
+  "key": "sites.survey-builder",
+  "label": "Surveys",
+  "path": "/survey-builder/main",
+  "anchor": {
+   "css": "#tb_survey-builder"
+  },
+  "sidebar": "#sb_sites",
+  "framed": null
+ },
+ {
+  "area": "sites",
+  "key": "sites.quiz-builder",
+  "label": "Quizzes",
+  "path": "/quiz-builder/main",
+  "anchor": {
+   "css": "#tb_quiz-builder"
+  },
+  "sidebar": "#sb_sites",
+  "framed": null
+ },
+ {
+  "area": "sites",
+  "key": "sites.chat-widget",
+  "label": "Chat Widget",
+  "path": "/funnels-websites/chat-widget",
+  "anchor": {
+   "css": "#tb_chat-widget"
+  },
+  "sidebar": "#sb_sites",
+  "framed": null
+ },
+ {
+  "area": "sites",
+  "key": "sites.qr-codes",
+  "label": "QR Codes",
+  "path": "/qr-codes",
+  "anchor": {
+   "css": "#tb_qr-codes"
+  },
+  "sidebar": "#sb_sites",
+  "framed": null
+ },
+ {
+  "area": "sites",
+  "key": "sites.sites-domain-settings",
+  "label": "Domain Settings (gear icon)",
+  "path": "/settings/domain",
+  "anchor": {
+   "css": "#tb_sites-domain-settings"
+  },
+  "sidebar": "#sb_sites",
+  "framed": null
+ },
+ {
+  "area": "memberships",
+  "key": "memberships.clientportalCommunities",
+  "label": "Client Portal",
+  "path": "/memberships/client-portal/dashboard",
+  "anchor": {
+   "css": "#tb_clientportalCommunities"
+  },
+  "sidebar": "#sb_memberships",
+  "framed": null
+ },
+ {
+  "area": "memberships",
+  "key": "memberships.courses",
+  "label": "Courses",
+  "path": "/memberships/courses/dashboard-v2",
+  "anchor": {
+   "css": "#tb_courses"
+  },
+  "sidebar": "#sb_memberships",
+  "framed": null
+ },
+ {
+  "area": "memberships",
+  "key": "memberships.communities",
+  "label": "Communities",
+  "path": "/memberships/communities/community-groups",
+  "anchor": {
+   "css": "#tb_communities"
+  },
+  "sidebar": "#sb_memberships",
+  "framed": null
+ },
+ {
+  "area": "memberships",
+  "key": "memberships.certificates",
+  "label": "Credentials",
+  "path": "/memberships/certificates/create-certificates",
+  "anchor": {
+   "css": "#tb_certificates"
+  },
+  "sidebar": "#sb_memberships",
+  "framed": null
+ },
+ {
+  "area": "reputation",
+  "key": "reputation.reputation-overview",
+  "label": "Overview",
+  "path": "/reputation/overview",
+  "anchor": {
+   "css": "#tb_reputation-overview"
+  },
+  "sidebar": "#sb_reputation",
+  "framed": null
+ },
+ {
+  "area": "reputation",
+  "key": "reputation.reputations-requests",
+  "label": "Requests",
+  "path": "/reputation/requests",
+  "anchor": {
+   "css": "#tb_reputations-requests"
+  },
+  "sidebar": "#sb_reputation",
+  "framed": null
+ },
+ {
+  "area": "reputation",
+  "key": "reputation.reputations-reviews",
+  "label": "Reviews",
+  "path": "/reputation/reviews",
+  "anchor": {
+   "css": "#tb_reputations-reviews"
+  },
+  "sidebar": "#sb_reputation",
+  "framed": null
+ },
+ {
+  "area": "reputation",
+  "key": "reputation.reputation-video-testimonials",
+  "label": "Video Testimonials",
+  "path": "/reputation/video-testimonials",
+  "anchor": {
+   "css": "#tb_reputation-video-testimonials"
+  },
+  "sidebar": "#sb_reputation",
+  "framed": null
+ },
+ {
+  "area": "reputation",
+  "key": "reputation.reputation-widgets",
+  "label": "Widgets",
+  "path": "/reputation/widget",
+  "anchor": {
+   "css": "#tb_reputation-widgets"
+  },
+  "sidebar": "#sb_reputation",
+  "framed": null
+ },
+ {
+  "area": "reputation",
+  "key": "reputation.online-listings",
+  "label": "Listings",
+  "path": "/reputation/listing",
+  "anchor": {
+   "css": "#tb_online-listings"
+  },
+  "sidebar": "#sb_reputation",
+  "framed": null
+ },
+ {
+  "area": "reputation",
+  "key": "reputation.gbp-optimization",
+  "label": "GBP Optimization",
+  "path": "/reputation/gbp",
+  "anchor": {
+   "css": "#tb_gbp-optimization"
+  },
+  "sidebar": "#sb_reputation",
+  "framed": null
+ },
+ {
+  "area": "reputation",
+  "key": "reputation.reputation-settings",
+  "label": "Settings",
+  "path": "/reputation/settings",
+  "anchor": {
+   "css": "#tb_reputation-settings"
+  },
+  "sidebar": "#sb_reputation",
+  "framed": null
+ },
+ {
+  "area": "reporting",
+  "key": "reporting.custom-reports",
+  "label": "Custom reports",
+  "path": "/reporting/reports",
+  "anchor": {
+   "css": "#tb_custom-reports"
+  },
+  "sidebar": "#sb_reporting",
+  "framed": null
+ },
+ {
+  "area": "reporting",
+  "key": "reporting.google-ads",
+  "label": "Google Ads",
+  "path": "/reporting/google-ads",
+  "anchor": {
+   "css": "#tb_google-ads"
+  },
+  "sidebar": "#sb_reporting",
+  "framed": null
+ },
+ {
+  "area": "reporting",
+  "key": "reporting.facebook-ads",
+  "label": "Meta Ads (Facebook Ads) report",
+  "path": "/reporting/facebook-ads",
+  "anchor": {
+   "css": "#tb_facebook-ads"
+  },
+  "sidebar": "#sb_reporting",
+  "framed": null
+ },
+ {
+  "area": "reporting",
+  "key": "reporting.attribution-v2",
+  "label": "Attribution report",
+  "path": "/reporting/attribution",
+  "anchor": {
+   "css": "#tb_attribution-v2"
+  },
+  "sidebar": "#sb_reporting",
+  "framed": null
+ },
+ {
+  "area": "reporting",
+  "key": "reporting.call-reporting",
+  "label": "Call report",
+  "path": "/reporting/call",
+  "anchor": {
+   "css": "#tb_call-reporting"
+  },
+  "sidebar": "#sb_reporting",
+  "framed": null
+ },
+ {
+  "area": "reporting",
+  "key": "reporting.agent-reporting",
+  "label": "Agent report",
+  "path": "/reporting/agent",
+  "anchor": {
+   "css": "#tb_agent-reporting"
+  },
+  "sidebar": "#sb_reporting",
+  "framed": null
+ },
+ {
+  "area": "reporting",
+  "key": "reporting.appointment-report",
+  "label": "Appointment report",
+  "path": "/reporting/appointment",
+  "anchor": {
+   "css": "#tb_appointment-report"
+  },
+  "sidebar": "#sb_reporting",
+  "framed": null
+ },
+ {
+  "area": "reporting",
+  "key": "reporting.audit-report",
+  "label": "Local Marketing Audit",
+  "path": "/reporting/local-marketing-audit",
+  "anchor": {
+   "css": "#tb_audit-report"
+  },
+  "sidebar": "#sb_reporting",
+  "framed": null
+ },
+ {
+  "area": "settings",
+  "key": "settings.business_info",
+  "label": "Business Profile",
+  "path": "/settings/company",
+  "anchor": {
+   "css": "[id='sb_business_info']"
+  },
+  "sidebar": "#sb_settings (then the Settings menu)",
+  "framed": true
+ },
+ {
+  "area": "settings",
+  "key": "settings.saas-billing",
+  "label": "Billing",
+  "path": "/settings/company-billing/billing",
+  "anchor": {
+   "css": "[id='sb_saas-billing']"
+  },
+  "sidebar": "#sb_settings (then the Settings menu)",
+  "framed": null
+ },
+ {
+  "area": "settings",
+  "key": "settings.my-staff",
+  "label": "Users",
+  "path": "/settings/users",
+  "anchor": {
+   "css": "[id='sb_my-staff']"
+  },
+  "sidebar": "#sb_settings (then the Settings menu)",
+  "framed": null
+ },
+ {
+  "area": "settings",
+  "key": "settings.Opportunities-Pipelines",
+  "label": "Opportunities & Pipelines",
+  "path": "/crm-settings",
+  "anchor": {
+   "css": "[id='sb_Opportunities-Pipelines']"
+  },
+  "sidebar": "#sb_settings (then the Settings menu)",
+  "framed": null
+ },
+ {
+  "area": "settings",
+  "key": "settings.calendars",
+  "label": "Calendars",
+  "path": "/settings/calendars",
+  "anchor": {
+   "css": "[id='sb_calendars']"
+  },
+  "sidebar": "#sb_settings (then the Settings menu)",
+  "framed": null
+ },
+ {
+  "area": "settings",
+  "key": "settings.location-email-services",
+  "label": "Email Services",
+  "path": "/settings/smtp_service",
+  "anchor": {
+   "css": "[id='sb_location-email-services']"
+  },
+  "sidebar": "#sb_settings (then the Settings menu)",
+  "framed": true
+ },
+ {
+  "area": "settings",
+  "key": "settings.phone-system",
+  "label": "Phone System",
+  "path": "/settings/phone_system",
+  "anchor": {
+   "css": "[id='sb_phone-system']"
+  },
+  "sidebar": "#sb_settings (then the Settings menu)",
+  "framed": null
+ },
+ {
+  "area": "settings",
+  "key": "settings.whatsapp",
+  "label": "WhatsApp",
+  "path": "/settings/whatsapp",
+  "anchor": {
+   "css": "[id='sb_whatsapp']"
+  },
+  "sidebar": "#sb_settings (then the Settings menu)",
+  "framed": null
+ },
+ {
+  "area": "settings",
+  "key": "settings.objects",
+  "label": "Objects",
+  "path": "/settings/objects",
+  "anchor": {
+   "css": "[id='sb_objects']"
+  },
+  "sidebar": "#sb_settings (then the Settings menu)",
+  "framed": null
+ },
+ {
+  "area": "settings",
+  "key": "settings.custom-fields-settings",
+  "label": "Custom Fields",
+  "path": "/settings/fields",
+  "anchor": {
+   "css": "[id='sb_custom-fields-settings']"
+  },
+  "sidebar": "#sb_settings (then the Settings menu)",
+  "framed": null
+ },
+ {
+  "area": "settings",
+  "key": "settings.custom-values",
+  "label": "Custom Values",
+  "path": "/settings/custom_values",
+  "anchor": {
+   "css": "[id='sb_custom-values']"
+  },
+  "sidebar": "#sb_settings (then the Settings menu)",
+  "framed": null
+ },
+ {
+  "area": "settings",
+  "key": "settings.import-data",
+  "label": "Import Data",
+  "path": "/settings/import-data",
+  "anchor": {
+   "css": "[id='sb_import-data']"
+  },
+  "sidebar": "#sb_settings (then the Settings menu)",
+  "framed": null
+ },
+ {
+  "area": "settings",
+  "key": "settings.manage-scoring",
+  "label": "Manage Scoring",
+  "path": "/settings/scoring",
+  "anchor": {
+   "css": "[id='sb_manage-scoring']"
+  },
+  "sidebar": "#sb_settings (then the Settings menu)",
+  "framed": null
+ },
+ {
+  "area": "settings",
+  "key": "settings.domains-urlRedirects",
+  "label": "Domains & URL Redirects",
+  "path": "/settings/domain",
+  "anchor": {
+   "css": "[id='sb_domains-urlRedirects']"
+  },
+  "sidebar": "#sb_settings (then the Settings menu)",
+  "framed": null
+ },
+ {
+  "area": "settings",
+  "key": "settings.external-tracking",
+  "label": "External Tracking",
+  "path": "/settings/external-tracking",
+  "anchor": {
+   "css": "[id='sb_external-tracking']"
+  },
+  "sidebar": "#sb_settings (then the Settings menu)",
+  "framed": null
+ },
+ {
+  "area": "settings",
+  "key": "settings.common.sidebar.lcIntegrations",
+  "label": "Integrations",
+  "path": "/settings/lc-integrations",
+  "anchor": {
+   "css": "[id='sb_common.sidebar.lcIntegrations']"
+  },
+  "sidebar": "#sb_settings (then the Settings menu)",
+  "framed": true
+ },
+ {
+  "area": "settings",
+  "key": "settings.common.sidebar.privateIntegrations",
+  "label": "Private Integrations",
+  "path": "/settings/private-integrations",
+  "anchor": {
+   "css": "[id='sb_common.sidebar.privateIntegrations']"
+  },
+  "sidebar": "#sb_settings (then the Settings menu)",
+  "framed": null
+ },
+ {
+  "area": "settings",
+  "key": "settings.tags",
+  "label": "Tags",
+  "path": "/settings/tags",
+  "anchor": {
+   "css": "[id='sb_tags']"
+  },
+  "sidebar": "#sb_settings (then the Settings menu)",
+  "framed": null
+ },
+ {
+  "area": "settings",
+  "key": "settings.labs",
+  "label": "Labs",
+  "path": "/settings/labs",
+  "anchor": {
+   "css": "[id='sb_labs']"
+  },
+  "sidebar": "#sb_settings (then the Settings menu)",
+  "framed": null
+ },
+ {
+  "area": "settings",
+  "key": "settings.audit-logs-location",
+  "label": "Audit Logs",
+  "path": "/settings/audit/logs",
+  "anchor": {
+   "css": "[id='sb_audit-logs-location']"
+  },
+  "sidebar": "#sb_settings (then the Settings menu)",
+  "framed": null
+ }
+]

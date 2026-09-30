@@ -1,0 +1,103 @@
+{
+  "id": "sites-blog-show-on-website",
+  "kind": "howto",
+  "area": "sites",
+  "screen": "sites.blogs",
+  "title": "Show your blog on your website",
+  "blurb": "Add a list of your latest posts to a website page.",
+  "icon": "book",
+  "minutes": 4,
+  "keywords": [
+    "blog page",
+    "blog list",
+    "latest posts",
+    "website blog",
+    "news page"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Websites",
+      "body": "Click **Websites** and open your site.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/funnels-websites/websites",
+      "target": [
+        {
+          "css": "#tb_websites"
+        },
+        {
+          "text": "Websites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/websites"
+      }
+    },
+    {
+      "id": "page",
+      "title": "Pick a page",
+      "body": "Add a page called **Blog** or **News**, or open an existing one, and click **Edit**.",
+      "route": "^/funnels-websites/websites",
+      "go": "/funnels-websites/websites",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "element",
+      "title": "Add the post list",
+      "body": "From the elements list, drag in **Blog Post List**. Choose which blog it shows.",
+      "route": "^/",
+      "go": "/funnels-websites/websites",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "style",
+      "title": "Style it",
+      "body": "Choose the layout, how many posts to show and whether to show images and dates.",
+      "route": "^/",
+      "go": "/funnels-websites/websites",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "publish",
+      "title": "Link and publish",
+      "body": "Add the page to your menu, then **Save** and **Publish**.",
+      "route": "^/",
+      "go": "/funnels-websites/websites",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

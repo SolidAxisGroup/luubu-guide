@@ -1,0 +1,138 @@
+{
+  "id": "payments-page-gift-cards",
+  "kind": "page",
+  "area": "payments",
+  "screen": "payments.gift-cards",
+  "title": "Tour: Gift Cards",
+  "blurb": "Sell digital gift cards and track what has been redeemed.",
+  "icon": "star",
+  "minutes": 2,
+  "keywords": [
+    "gift cards",
+    "vouchers",
+    "gift voucher",
+    "christmas",
+    "present",
+    "redeem"
+  ],
+  "steps": [
+    {
+      "id": "open-payments",
+      "title": "Open Payments",
+      "body": "Click **Payments** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_payments"
+        },
+        {
+          "text": "Payments",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/"
+      }
+    },
+    {
+      "id": "tab-gift-cards",
+      "title": "Open Gift Cards",
+      "body": "Click **Gift Cards** along the top.",
+      "route": "^/payments/",
+      "go": "/payments/gift-cards",
+      "target": [
+        {
+          "css": "#tb_gift-cards"
+        },
+        {
+          "text": "Gift Cards",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/gift-cards"
+      }
+    },
+    {
+      "id": "templates",
+      "title": "Templates",
+      "body": "**Templates** are the gift card designs you sell, with their dollar values.",
+      "route": "^/payments/gift-cards",
+      "go": "/payments/gift-cards",
+      "target": [
+        {
+          "text": "Templates"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Templates"
+    },
+    {
+      "id": "create",
+      "title": "Make a gift card",
+      "body": "**Create Gift Card** designs a new one.",
+      "route": "^/payments/gift-cards",
+      "go": "/payments/gift-cards",
+      "target": [
+        {
+          "text": "Create Gift Card",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create Gift Card"
+    },
+    {
+      "id": "sell-send",
+      "title": "Sell or send",
+      "body": "On each card, **Sell** gives you a link, embed code and QR code. **Send** gives a card away free.",
+      "route": "^/payments/gift-cards",
+      "go": "/payments/gift-cards",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "dashboard",
+      "title": "Track them",
+      "body": "The **Dashboard** shows how many cards are out there, their value and what has been used.",
+      "route": "^/payments/gift-cards",
+      "go": "/payments/gift-cards",
+      "target": [
+        {
+          "text": "Dashboard"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Dashboard"
+    },
+    {
+      "id": "next",
+      "title": "Next step",
+      "body": "Next: try **Create a gift card** from the Guide.",
+      "route": "^/payments/gift-cards",
+      "go": "/payments/gift-cards",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

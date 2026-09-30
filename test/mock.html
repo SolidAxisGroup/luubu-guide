@@ -1,0 +1,25 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Mock Luubu</title>
+<style>body{margin:0;font-family:sans-serif;display:flex;height:100vh}#side{width:220px;background:#002C69;color:#fff;padding:10px}#side a{display:block;color:#fff;padding:8px;text-decoration:none}main{flex:1;display:flex;flex-direction:column}#tabs{height:44px;border-bottom:1px solid #ddd;display:flex;gap:14px;align-items:center;padding:0 16px}#tabs a{color:#002C69}#content{flex:1;position:relative}iframe{border:0;width:100%;height:100%}button{padding:8px 12px}</style></head>
+<body><div id="side"></div><main><div id="tabs"></div><div id="content"></div></main>
+<script>
+const L='zRK0moceMCOayumGoB8R', base='/v2/location/'+L;
+const mainNav=[['sb_dashboard','Dashboard','/dashboard'],['sb_conversations','Conversations','/conversations/conversations'],['sb_email-marketing','Marketing','/marketing/social-planner'],['sb_automation','Automation','/automation/workflows'],['sb_sites','Sites','/funnels-websites/funnels'],['sb_settings','Settings','/settings/company']];
+const setNav=[['sb_business_info','Business Profile','/settings/company'],['sb_location-email-services','Email Services','/settings/smtp_service'],['sb_phone-system','Phone System','/settings/phone_system'],['sb_common.sidebar.lcIntegrations','Integrations','/settings/lc-integrations']];
+function go(p){history.pushState({},'',base+p);render();}
+window.addEventListener('popstate',render);
+function render(){const p=location.pathname.replace(base,'');const s=document.getElementById('side'),t=document.getElementById('tabs'),c=document.getElementById('content');
+ const nav=p.startsWith('/settings')?setNav:mainNav;
+ s.innerHTML=nav.map(([id,l,h])=>`<a id="${id}" href="${base+h}">${l}</a>`).join('');
+ s.querySelectorAll('a').forEach(a=>a.onclick=e=>{e.preventDefault();go(a.getAttribute('href').replace(base,''))});
+ t.innerHTML='';c.innerHTML='';
+ if(p.startsWith('/funnels-websites')){t.innerHTML='<a id="tb_funnels" href="#">Funnels</a><a id="tb_websites" href="#">Websites</a><a id="tb_sites-domain-settings" href="#">Domain Settings</a>';
+   t.querySelector('#tb_funnels').onclick=e=>{e.preventDefault();go('/funnels-websites/funnels')};t.querySelector('#tb_websites').onclick=e=>{e.preventDefault();go('/funnels-websites/websites')};
+   c.innerHTML='<div style="padding:20px"><button id="create-new-button">'+(p.includes('websites')?'New website':'New funnel')+'</button></div>';}
+ if(p.startsWith('/automation')||p.startsWith('/settings/smtp')||p.startsWith('/settings/lc-')||p.startsWith('/marketing/emails')){c.innerHTML='<iframe srcdoc="<h2 style=font-family:sans-serif;padding:20px>Framed app: '+p+'</h2>"></iframe>'}
+ if(p.startsWith('/marketing/social')){t.innerHTML='<a id="tb_social-planner">Social Planner</a><a id="tb_email-builder" href="#">Emails</a>';t.querySelector('#tb_email-builder').onclick=e=>{e.preventDefault();go('/marketing/emails/statistics')};
+   c.innerHTML='<div id="sp-v3-platform-list" style="padding:20px"><h3>Connect your social accounts</h3><button id="sp-v3-platform-facebook">Facebook</button> <button id="sp-v3-platform-instagram">Instagram</button></div>'}
+ if(p.startsWith('/settings/phone')){c.innerHTML='<div style="padding:20px"><h3>Manage Numbers</h3><button>Phone System Settings</button></div>'}
+ window.dispatchEvent(new CustomEvent('routeChangeEvent',{detail:{to:{name:p,path:location.pathname}}}));
+}
+render();
+</script></body></html>

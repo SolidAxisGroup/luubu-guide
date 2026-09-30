@@ -1,0 +1,113 @@
+{
+  "id": "payments-manage-subscription",
+  "kind": "howto",
+  "area": "payments",
+  "screen": "payments.payment-subscriptions",
+  "title": "Change or cancel a subscription",
+  "blurb": "Update products, quantities or end dates, or stop billing.",
+  "icon": "card",
+  "minutes": 3,
+  "keywords": [
+    "subscription",
+    "cancel",
+    "change plan",
+    "update",
+    "quantity",
+    "stop billing"
+  ],
+  "steps": [
+    {
+      "id": "open-payments",
+      "title": "Open Payments",
+      "body": "Click **Payments** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_payments"
+        },
+        {
+          "text": "Payments",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/"
+      }
+    },
+    {
+      "id": "tab-payment-subscriptions",
+      "title": "Open Subscriptions",
+      "body": "Click **Subscriptions** along the top.",
+      "route": "^/payments/",
+      "go": "/payments/v2/subscriptions",
+      "target": [
+        {
+          "css": "#tb_payment-subscriptions"
+        },
+        {
+          "text": "Subscriptions",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/v2/subscriptions"
+      }
+    },
+    {
+      "id": "find",
+      "title": "Find the subscription",
+      "body": "Search for the customer and open their subscription.",
+      "route": "^/payments/v2/subscriptions",
+      "go": "/payments/v2/subscriptions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "update",
+      "title": "Update it",
+      "body": "Click **Update** to add or remove products, change quantities or change the end date.",
+      "route": "^/payments/v2/subscriptions",
+      "go": "/payments/v2/subscriptions",
+      "target": [
+        {
+          "text": "Update",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Update"
+    },
+    {
+      "id": "preview",
+      "title": "Check the preview",
+      "body": "Review the new total. Changes start from the next billing date.",
+      "route": "^/payments/v2/subscriptions",
+      "go": "/payments/v2/subscriptions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "cancel",
+      "title": "Or cancel",
+      "body": "To stop billing, use the cancel option on the subscription and confirm.",
+      "tip": "Past payments are not refunded when you cancel. Do refunds from **Transactions**.",
+      "route": "^/payments/v2/subscriptions",
+      "go": "/payments/v2/subscriptions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

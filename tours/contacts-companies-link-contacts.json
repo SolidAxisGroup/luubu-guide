@@ -1,0 +1,105 @@
+{
+  "id": "contacts-companies-link-contacts",
+  "kind": "howto",
+  "area": "contacts",
+  "screen": "contacts.business",
+  "title": "Link contacts to a company",
+  "blurb": "Connect the people you deal with to the business they work for.",
+  "icon": "users",
+  "minutes": 2,
+  "keywords": [
+    "link contact",
+    "associate",
+    "company",
+    "business",
+    "employees",
+    "contacts"
+  ],
+  "steps": [
+    {
+      "id": "open-contacts",
+      "title": "Open Contacts",
+      "body": "Click **Contacts** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_contacts"
+        },
+        {
+          "text": "Contacts",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/contacts/"
+      }
+    },
+    {
+      "id": "tab-business",
+      "title": "Open Companies",
+      "body": "Click **Companies** along the top.",
+      "route": "^/(contacts/|tasks|businesses/|settings/fields)",
+      "go": "/businesses/list",
+      "target": [
+        {
+          "css": "#tb_business"
+        },
+        {
+          "text": "Companies",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/businesses/"
+      }
+    },
+    {
+      "id": "open",
+      "title": "Open the company",
+      "body": "Click the company name in the list.",
+      "route": "^/businesses/",
+      "go": "/businesses/list",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "contacts-tab",
+      "title": "Go to its contacts",
+      "body": "Open the **Contacts** section on the company record.",
+      "route": "^/businesses/",
+      "go": "/businesses/list",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "add",
+      "title": "Add people",
+      "body": "Search for and add the contacts who work there. Each contact can belong to one company at a time.",
+      "route": "^/businesses/",
+      "go": "/businesses/list",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "other-way",
+      "title": "Or from the contact",
+      "body": "You can also open a contact and set their company from their record.",
+      "route": "^/businesses/",
+      "go": "/businesses/list",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Want Luubu to link companies for you using each contact's business name? Ask us to switch this on: hello@luubu.com."
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "id": "reporting-page-agent",
+  "kind": "page",
+  "area": "reporting",
+  "screen": "reporting.agent-reporting",
+  "title": "Tour: Agent report",
+  "blurb": "See how each team member is going on calls, messages and deals.",
+  "icon": "users",
+  "minutes": 2,
+  "keywords": [
+    "agent report",
+    "team",
+    "staff performance",
+    "leaderboard",
+    "sales team",
+    "users"
+  ],
+  "steps": [
+    {
+      "id": "open-reporting",
+      "title": "Open Reporting",
+      "body": "Click **Reporting** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reporting"
+        },
+        {
+          "text": "Reporting",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/"
+      }
+    },
+    {
+      "id": "open-agent-reporting",
+      "title": "Open Agent Reporting",
+      "body": "Click **Agent Reporting**. Team performance shows here.",
+      "route": "^/reporting/",
+      "go": "/reporting/agent",
+      "target": [
+        {
+          "css": "#tb_agent-reporting"
+        },
+        {
+          "text": "Agent Reporting",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/agent"
+      }
+    },
+    {
+      "id": "overview",
+      "title": "Team overview",
+      "body": "The top section shows how the whole team is tracking at a glance.",
+      "tip": "Don't see this report? It depends on your plan. Ask us to switch this on: hello@luubu.com",
+      "route": "^/reporting/agent",
+      "go": "/reporting/agent",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "opps",
+      "title": "Opportunities and activity",
+      "body": "See each person's opportunities and win rate, plus calls, texts and emails sent.",
+      "route": "^/reporting/agent",
+      "go": "/reporting/agent",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "leaderboard",
+      "title": "Leaderboard",
+      "body": "The leaderboard ranks staff by most opportunities and most won.",
+      "route": "^/reporting/agent",
+      "go": "/reporting/agent",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "compare",
+      "title": "Compare periods",
+      "body": "Compare date ranges to see who is improving.",
+      "route": "^/reporting/agent",
+      "go": "/reporting/agent",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What's next",
+      "body": "Next: try **Check how your team is performing** from the Guide.",
+      "route": "^/reporting/agent",
+      "go": "/reporting/agent",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

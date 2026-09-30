@@ -1,0 +1,130 @@
+{
+  "id": "conversations-snippets-create-email",
+  "kind": "howto",
+  "area": "conversations",
+  "screen": "conversations.conversations-templates",
+  "title": "Create an email snippet",
+  "blurb": "Save a full email reply, like a quote follow-up, to reuse in one click.",
+  "icon": "mail",
+  "minutes": 3,
+  "keywords": [
+    "snippet",
+    "email template",
+    "saved email",
+    "reply template",
+    "create snippet"
+  ],
+  "steps": [
+    {
+      "id": "open-conversations",
+      "title": "Open Conversations",
+      "body": "Click **Conversations** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_conversations"
+        },
+        {
+          "text": "Conversations",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/conversations/"
+      }
+    },
+    {
+      "id": "tab-conversations-templates",
+      "title": "Open Snippets",
+      "body": "Click **Snippets** along the top.",
+      "route": "^/conversations/",
+      "go": "/conversations/templates",
+      "target": [
+        {
+          "css": "#tb_conversations-templates"
+        },
+        {
+          "text": "Snippets",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/conversations/templates"
+      }
+    },
+    {
+      "id": "new",
+      "title": "Start a snippet",
+      "body": "Click **New Snippet**.",
+      "route": "^/conversations/templates",
+      "go": "/conversations/templates",
+      "target": [
+        {
+          "text": "New Snippet",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New Snippet"
+    },
+    {
+      "id": "type",
+      "title": "Choose email",
+      "body": "Pick **Add Email Snippet**.",
+      "route": "^/conversations/templates",
+      "go": "/conversations/templates",
+      "target": [
+        {
+          "text": "Add Email Snippet"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add Email Snippet"
+    },
+    {
+      "id": "content",
+      "title": "Name and write it",
+      "body": "Add a name, a subject line and the email body. Drop in custom values like the contact's first name so it reads personally.",
+      "route": "^/conversations/templates",
+      "go": "/conversations/templates",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "link",
+      "title": "Add a tracked link if you like",
+      "body": "You can include a trigger link, such as your booking page, so you can see who clicks it.",
+      "route": "^/conversations/templates",
+      "go": "/conversations/templates",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save",
+      "body": "Save the snippet. Use it from the Snippets icon when replying by email.",
+      "route": "^/conversations/templates",
+      "go": "/conversations/templates",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

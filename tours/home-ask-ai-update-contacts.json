@@ -1,0 +1,94 @@
+{
+  "id": "home-ask-ai-update-contacts",
+  "kind": "howto",
+  "area": "home",
+  "screen": "home.ask-ai",
+  "title": "Use Ask AI to update contacts and deals",
+  "blurb": "Add contacts, tag people and create opportunities by just asking.",
+  "icon": "bot",
+  "minutes": 3,
+  "keywords": [
+    "ask ai",
+    "add contact",
+    "tag",
+    "opportunity",
+    "update",
+    "ai assistant",
+    "crm"
+  ],
+  "steps": [
+    {
+      "id": "open-ask-ai",
+      "title": "Open Ask AI",
+      "body": "Click **Ask AI** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_ask-ai"
+        },
+        {
+          "text": "Ask AI",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/ask-ai"
+      }
+    },
+    {
+      "id": "new-chat",
+      "title": "Start a new chat",
+      "body": "Click **New Chat** so the assistant starts with a clean slate.",
+      "route": "^/ask-ai",
+      "go": "/ask-ai",
+      "target": [
+        {
+          "text": "New Chat"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New Chat"
+    },
+    {
+      "id": "ask",
+      "title": "Say what you need",
+      "body": "Type the job with the details. For example: \"Create an opportunity for Sarah Lee in my Sales pipeline, stage Quote Sent, value $4,500.\"",
+      "route": "^/ask-ai",
+      "go": "/ask-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "check-plan",
+      "title": "Check the plan",
+      "body": "Ask AI shows a summary of the change before it makes it. Check the names, stage and amounts are right.",
+      "route": "^/ask-ai",
+      "go": "/ask-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "confirm",
+      "title": "Confirm it",
+      "body": "Approve the change. For multi-step jobs you'll see a progress list as each step finishes.",
+      "route": "^/ask-ai",
+      "go": "/ask-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Open Contacts or Opportunities afterwards to see the change."
+    }
+  ]
+}

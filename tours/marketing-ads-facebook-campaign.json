@@ -1,0 +1,134 @@
+{
+  "id": "marketing-ads-facebook-campaign",
+  "kind": "howto",
+  "area": "marketing",
+  "screen": "marketing.ad-manager-home",
+  "title": "Create a Facebook or Instagram ad",
+  "blurb": "Set a goal, audience, budget and creative, then publish.",
+  "icon": "megaphone",
+  "minutes": 8,
+  "keywords": [
+    "facebook ad",
+    "instagram ad",
+    "meta ad",
+    "lead ad",
+    "advertise",
+    "boost",
+    "campaign"
+  ],
+  "steps": [
+    {
+      "id": "open-marketing",
+      "title": "Open Marketing",
+      "body": "Click **Marketing** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_email-marketing"
+        },
+        {
+          "text": "Marketing",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/"
+      }
+    },
+    {
+      "id": "open-ad-manager-home",
+      "title": "Open Ad Manager",
+      "body": "Click **Ad Manager** along the top.",
+      "route": "^/marketing/",
+      "go": "/marketing/ad-manager/home",
+      "target": [
+        {
+          "css": "#tb_ad-manager-home"
+        },
+        {
+          "text": "Ad Manager",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/ad-manager"
+      }
+    },
+    {
+      "id": "create",
+      "title": "Start a campaign",
+      "body": "Click **Create Campaign** and choose Facebook.",
+      "route": "^/marketing/ad-manager",
+      "go": "/marketing/ad-manager/home",
+      "target": [
+        {
+          "text": "Create Campaign",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create Campaign"
+    },
+    {
+      "id": "objective",
+      "title": "Pick your goal",
+      "body": "Choose what you want: leads, website traffic, engagement or sales. For **Special Ad Category**, choose **NOT APPLICABLE** unless you advertise housing, jobs or credit.",
+      "route": "^/marketing/ad-manager",
+      "go": "/marketing/ad-manager/home",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "ad-set",
+      "title": "Audience and budget",
+      "body": "Name the ad set and pick your Page and Instagram account. Set a daily or lifetime budget and dates, then target your area, for example your town plus 30 km.",
+      "route": "^/marketing/ad-manager",
+      "go": "/marketing/ad-manager/home",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "creative",
+      "title": "Build the ad",
+      "body": "Choose where clicks go (your website or a lead form). Add primary text, a headline (required), an image or video, and a button like **Learn More**.",
+      "route": "^/marketing/ad-manager",
+      "go": "/marketing/ad-manager/home",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Real photos of your team or work beat stock images."
+    },
+    {
+      "id": "publish",
+      "title": "Review and publish",
+      "body": "Check everything, then click **Publish Campaign Now** and confirm.",
+      "route": "^/marketing/ad-manager",
+      "go": "/marketing/ad-manager/home",
+      "target": [
+        {
+          "text": "Publish Campaign Now",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Publish Campaign Now"
+    }
+  ]
+}

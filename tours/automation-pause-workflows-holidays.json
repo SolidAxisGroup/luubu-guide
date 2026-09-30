@@ -1,0 +1,111 @@
+{
+  "id": "automation-pause-workflows-holidays",
+  "kind": "howto",
+  "area": "automation",
+  "screen": "automation.workflow-settings-top",
+  "title": "Pause workflows over the holidays",
+  "blurb": "Stop selected workflows sending during a shutdown, then carry on automatically.",
+  "icon": "calendar",
+  "minutes": 3,
+  "keywords": [
+    "pause",
+    "holiday",
+    "christmas",
+    "shutdown",
+    "closed",
+    "public holiday"
+  ],
+  "steps": [
+    {
+      "id": "open-automation",
+      "title": "Open Automation",
+      "body": "Click **Automation** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_automation"
+        },
+        {
+          "text": "Automation",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/automation/"
+      }
+    },
+    {
+      "id": "open-workflow-settings-top",
+      "title": "Open Global Workflow Settings",
+      "body": "Click **Global Workflow Settings** at the top.",
+      "route": "^/automation/",
+      "go": "/automation/workflows/settings",
+      "target": [
+        {
+          "css": "#tb_workflow-settings-top"
+        },
+        {
+          "text": "Global Workflow Settings"
+        }
+      ],
+      "advance": {
+        "route": "^/automation/workflows/settings"
+      }
+    },
+    {
+      "id": "pause",
+      "title": "Find Pause Workflow",
+      "body": "Go to the **Pause Workflow** section.",
+      "route": "^/automation/workflows/settings",
+      "go": "/automation/workflows/settings",
+      "target": [
+        {
+          "text": "Pause Workflow"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Pause Workflow"
+    },
+    {
+      "id": "dates",
+      "title": "Set the dates",
+      "body": "Add a row and choose the start and end date and time. Each range can be up to 15 days, so split a long Christmas break into two.",
+      "route": "^/automation/workflows/settings",
+      "go": "/automation/workflows/settings",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "workflows",
+      "title": "Choose the workflows",
+      "body": "Select which published workflows to pause. A workflow cannot sit in two overlapping ranges.",
+      "route": "^/automation/workflows/settings",
+      "go": "/automation/workflows/settings",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Keep missed call and booking confirmations running. Pause promos and chasers."
+    },
+    {
+      "id": "repeat",
+      "title": "Repeat every year",
+      "body": "Turn on the yearly repeat for holidays like Christmas or Waitangi Day, then save.",
+      "route": "^/automation/workflows/settings",
+      "go": "/automation/workflows/settings",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

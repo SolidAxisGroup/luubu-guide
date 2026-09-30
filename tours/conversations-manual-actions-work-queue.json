@@ -1,0 +1,125 @@
+{
+  "id": "conversations-manual-actions-work-queue",
+  "kind": "howto",
+  "area": "conversations",
+  "screen": "conversations.manial-actions",
+  "title": "Work through your call and text queue",
+  "blurb": "Make your queued follow-up calls and texts, one after the other.",
+  "icon": "phone",
+  "minutes": 3,
+  "keywords": [
+    "manual actions",
+    "call queue",
+    "manual call",
+    "manual sms",
+    "follow up",
+    "power dial"
+  ],
+  "steps": [
+    {
+      "id": "open-conversations",
+      "title": "Open Conversations",
+      "body": "Click **Conversations** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_conversations"
+        },
+        {
+          "text": "Conversations",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/conversations/"
+      }
+    },
+    {
+      "id": "tab-manial-actions",
+      "title": "Open Manual Actions",
+      "body": "Click **Manual Actions** along the top.",
+      "route": "^/conversations/",
+      "go": "/conversations/manual_actions",
+      "target": [
+        {
+          "css": "#tb_manial-actions"
+        },
+        {
+          "text": "Manual Actions",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/conversations/manual_actions"
+      }
+    },
+    {
+      "id": "filter",
+      "title": "Pick calls or texts",
+      "body": "Use the filters to show just Call tasks or just SMS tasks, and only the ones assigned to you.",
+      "route": "^/conversations/manual_actions",
+      "go": "/conversations/manual_actions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "start",
+      "title": "Start the queue",
+      "body": "Click **Let's Start**. The first task opens with the person's name, number and why they're in the queue.",
+      "route": "^/conversations/manual_actions",
+      "go": "/conversations/manual_actions",
+      "target": [
+        {
+          "text": "Let's Start",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Let's Start"
+    },
+    {
+      "id": "do-it",
+      "title": "Call or text them",
+      "body": "Make the call or send the text from the panel. Jot down the outcome while it's fresh.",
+      "route": "^/conversations/manual_actions",
+      "go": "/conversations/manual_actions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "outcome",
+      "title": "Mark the result",
+      "body": "Click **Complete** when done. Use **Skip** if you can't get to it now. The next task opens automatically.",
+      "route": "^/conversations/manual_actions",
+      "go": "/conversations/manual_actions",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Complete"
+    },
+    {
+      "id": "keep-going",
+      "title": "Keep going",
+      "body": "Press Enter to jump to the next task. Completing tasks lets the workflow carry on with its next step for that person.",
+      "route": "^/conversations/manual_actions",
+      "go": "/conversations/manual_actions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

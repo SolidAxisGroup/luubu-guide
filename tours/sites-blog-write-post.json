@@ -1,0 +1,127 @@
+{
+  "id": "sites-blog-write-post",
+  "kind": "howto",
+  "area": "sites",
+  "screen": "sites.blogs",
+  "title": "Write and publish a blog post",
+  "blurb": "Write a post, add a cover image and SEO details, then publish or schedule it.",
+  "icon": "book",
+  "minutes": 8,
+  "keywords": [
+    "blog post",
+    "write",
+    "article",
+    "publish",
+    "schedule",
+    "seo",
+    "draft"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Blogs",
+      "body": "Click **Blogs** and open your blog.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/blogs",
+      "target": [
+        {
+          "css": "#tb_blogs"
+        },
+        {
+          "text": "Blogs",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/blogs"
+      }
+    },
+    {
+      "id": "new-post",
+      "title": "Start a post",
+      "body": "Click **New Post**.",
+      "route": "^/blogs",
+      "go": "/blogs",
+      "target": [
+        {
+          "text": "New Post",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New Post",
+      "advance": "click"
+    },
+    {
+      "id": "write",
+      "title": "Write it",
+      "body": "Add a title and your content. Use headings, short paragraphs and photos of real jobs. Stuck? **Content AI** can draft an outline.",
+      "route": "^/",
+      "go": "/blogs",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Answer one question a customer actually asks you, like How often should I service my heat pump?"
+    },
+    {
+      "id": "continue",
+      "title": "Move to settings",
+      "body": "When the writing is done, click **Continue**.",
+      "route": "^/",
+      "go": "/blogs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "seo",
+      "title": "Fill in the details",
+      "body": "Add the URL slug, pick a category and author, write a short description and upload a cover image with alt text. These are required.",
+      "route": "^/",
+      "go": "/blogs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "publish",
+      "title": "Publish or schedule",
+      "body": "Choose publish now, schedule a date, or keep it as a draft, then confirm.",
+      "route": "^/",
+      "go": "/blogs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

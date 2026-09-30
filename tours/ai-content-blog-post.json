@@ -1,0 +1,129 @@
+{
+  "id": "ai-content-blog-post",
+  "kind": "howto",
+  "area": "ai",
+  "screen": "sites.blogs",
+  "title": "Write a blog post with AI",
+  "blurb": "Draft a helpful, search-friendly blog post from a topic.",
+  "icon": "page",
+  "minutes": 5,
+  "keywords": [
+    "blog",
+    "article",
+    "seo",
+    "ask ai",
+    "content ai",
+    "write blog"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/(funnels-websites|blogs|analytics|wordpress|form-builder|survey-builder|quiz-builder|qr-codes)"
+      }
+    },
+    {
+      "id": "open-blogs",
+      "title": "Open Blogs",
+      "body": "Click **Blogs**.",
+      "route": "^/(funnels-websites|blogs|analytics|wordpress|form-builder|survey-builder|quiz-builder|qr-codes)",
+      "go": "/blogs",
+      "target": [
+        {
+          "css": "#tb_blogs"
+        },
+        {
+          "text": "Blogs"
+        }
+      ],
+      "advance": {
+        "route": "^/blogs"
+      }
+    },
+    {
+      "id": "new",
+      "title": "Start a post",
+      "body": "Open your blog and create a new post.",
+      "route": "^/blogs",
+      "go": "/blogs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "ask-ai",
+      "title": "Open Ask AI",
+      "body": "Open the **Ask AI** panel in the editor.",
+      "route": "^/blogs",
+      "go": "/blogs",
+      "target": [
+        {
+          "text": "Ask AI"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Ask AI"
+    },
+    {
+      "id": "mode",
+      "title": "Pick a mode",
+      "body": "**Assist** writes from a topic, like \"How to prepare your home for a heat pump install\". **Build** follows your own detailed instructions.",
+      "route": "^/blogs",
+      "go": "/blogs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "generate",
+      "title": "Generate",
+      "body": "Click **Generate**. Tidy it up, then click **Continue**.",
+      "route": "^/blogs",
+      "go": "/blogs",
+      "target": [
+        {
+          "text": "Generate"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Generate"
+    },
+    {
+      "id": "publish",
+      "title": "Check SEO and publish",
+      "body": "Review the suggested title, description and keywords, then **Publish** or **Schedule**.",
+      "route": "^/blogs",
+      "go": "/blogs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

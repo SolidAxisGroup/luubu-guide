@@ -1,0 +1,152 @@
+{
+  "id": "calendars-create-personal-calendar",
+  "kind": "howto",
+  "area": "calendars",
+  "screen": "calendars.calendar-settings-top",
+  "title": "Create a personal booking calendar",
+  "blurb": "One-on-one bookings with you, e.g. quotes, consults or site visits.",
+  "icon": "calendar",
+  "minutes": 5,
+  "keywords": [
+    "booking calendar",
+    "personal",
+    "one on one",
+    "appointment",
+    "new calendar",
+    "consult",
+    "booking page"
+  ],
+  "steps": [
+    {
+      "id": "open-calendars",
+      "title": "Open Calendars",
+      "body": "Click **Calendars** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_calendars"
+        },
+        {
+          "text": "Calendars",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/calendars/"
+      }
+    },
+    {
+      "id": "tab-calendar-settings-top",
+      "title": "Open Calendar Settings",
+      "body": "Click **Calendar Settings** along the top. This is where every booking calendar is built and edited.",
+      "route": "^/calendars/",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "css": "#tb_calendar-settings-top"
+        },
+        {
+          "text": "Calendar settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/calendars"
+      }
+    },
+    {
+      "id": "new",
+      "title": "Start a new calendar",
+      "body": "Click **New Calendar**.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "text": "New Calendar",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New Calendar"
+    },
+    {
+      "id": "type",
+      "title": "Pick the type",
+      "body": "Choose **Personal Booking**. It books time with one person, which suits most sole traders and small clinics.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "text": "Personal Booking"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Personal Booking"
+    },
+    {
+      "id": "details",
+      "title": "Name it",
+      "body": "Give it a **Calendar Name** customers will understand, like \"Free 30 min quote visit\". Add a short description.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "duration",
+      "title": "Set the length",
+      "body": "Set the **Meeting Duration**, then add where it happens: your address, a phone call, or a video link.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "url",
+      "title": "Tidy the link",
+      "body": "Edit the **Custom URL** so the booking link is short and readable, like /quote-visit.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "confirm",
+      "title": "Create it",
+      "body": "Click **Confirm**. You can fine-tune hours, reminders and forms afterwards.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "text": "Confirm",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Confirm"
+    }
+  ]
+}

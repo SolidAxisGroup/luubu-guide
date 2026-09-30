@@ -1,0 +1,118 @@
+{
+  "id": "calendars-page-calendar-view",
+  "kind": "page",
+  "area": "calendars",
+  "screen": "calendars.calendars-tab",
+  "title": "Tour: Calendar view",
+  "blurb": "See every booking for you and your team by day, week or month.",
+  "icon": "calendar",
+  "minutes": 2,
+  "keywords": [
+    "calendar",
+    "bookings",
+    "appointments",
+    "schedule",
+    "diary",
+    "week view",
+    "today"
+  ],
+  "steps": [
+    {
+      "id": "open-calendars",
+      "title": "Open Calendars",
+      "body": "Click **Calendars** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_calendars"
+        },
+        {
+          "text": "Calendars",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/calendars/"
+      }
+    },
+    {
+      "id": "tab-calendars-tab",
+      "title": "Open Calendar view",
+      "body": "Click **Calendar view** along the top. This is your team diary.",
+      "route": "^/calendars/",
+      "go": "/calendars/view",
+      "target": [
+        {
+          "css": "#tb_calendars-tab"
+        },
+        {
+          "text": "Calendar view",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/calendars/view"
+      }
+    },
+    {
+      "id": "date-controls",
+      "title": "Move around the diary",
+      "body": "Switch between **Day**, **Week** and **Month**, and click **Today** to jump back to now. The small month picker lets you leap to any date.",
+      "route": "^/calendars/view",
+      "go": "/calendars/view",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "filters",
+      "title": "Choose whose diary you see",
+      "body": "The filter panel on the right lets you tick which **Users** and **Calendars** show. Untick people to declutter a busy week.",
+      "tip": "Short on screen space? Use **Manage View** to hide the panel.",
+      "route": "^/calendars/view",
+      "go": "/calendars/view",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "open-booking",
+      "title": "Open any booking",
+      "body": "Click an appointment to see the customer, change its status, or move it to another time.",
+      "route": "^/calendars/view",
+      "go": "/calendars/view",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "empty-slot",
+      "title": "Add a booking by hand",
+      "body": "Click an empty time slot to book someone in yourself, for example when a customer rings up.",
+      "route": "^/calendars/view",
+      "go": "/calendars/view",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "Next step",
+      "body": "Next: try **Book an appointment by hand** from the Guide.",
+      "route": "^/calendars/view",
+      "go": "/calendars/view",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

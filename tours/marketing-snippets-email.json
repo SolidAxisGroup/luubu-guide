@@ -1,0 +1,141 @@
+{
+  "id": "marketing-snippets-email",
+  "kind": "howto",
+  "area": "marketing",
+  "screen": "marketing.email-templates",
+  "title": "Create an email snippet",
+  "blurb": "Save a standard email, with subject line, for one-click replies.",
+  "icon": "mail",
+  "minutes": 3,
+  "keywords": [
+    "email snippet",
+    "email template",
+    "saved email",
+    "canned reply",
+    "standard email",
+    "snippet"
+  ],
+  "steps": [
+    {
+      "id": "open-marketing",
+      "title": "Open Marketing",
+      "body": "Click **Marketing** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_email-marketing"
+        },
+        {
+          "text": "Marketing",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/"
+      }
+    },
+    {
+      "id": "open-email-templates",
+      "title": "Open Snippets",
+      "body": "Click **Snippets** along the top.",
+      "route": "^/marketing/",
+      "go": "/marketing/templates",
+      "target": [
+        {
+          "css": "#tb_email-templates"
+        },
+        {
+          "text": "Snippets",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/templates"
+      }
+    },
+    {
+      "id": "new",
+      "title": "Start a snippet",
+      "body": "Click **+ New Snippet**.",
+      "route": "^/marketing/templates",
+      "go": "/marketing/templates",
+      "target": [
+        {
+          "text": "New Snippet",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New Snippet",
+      "advance": "click"
+    },
+    {
+      "id": "email",
+      "title": "Choose email",
+      "body": "Pick **Add Email Snippet**.",
+      "route": "^/marketing/templates",
+      "go": "/marketing/templates",
+      "target": [
+        {
+          "text": "Add Email Snippet"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add Email Snippet",
+      "advance": "click"
+    },
+    {
+      "id": "write",
+      "title": "Fill it in",
+      "body": "Name the snippet, add a subject line and write the email body. Use **Custom Values** for names and other details.",
+      "route": "^/marketing/templates",
+      "go": "/marketing/templates",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "folder",
+      "title": "File it",
+      "body": "Pop it in a folder so the team can find it, for example Quotes or After-job.",
+      "route": "^/marketing/templates",
+      "go": "/marketing/templates",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save it",
+      "body": "Click **Save**.",
+      "route": "^/marketing/templates",
+      "go": "/marketing/templates",
+      "target": [
+        {
+          "text": "Save",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Save"
+    }
+  ]
+}

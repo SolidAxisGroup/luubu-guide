@@ -1,0 +1,124 @@
+{
+  "id": "memberships-community-channels",
+  "kind": "howto",
+  "area": "memberships",
+  "screen": "memberships.communities",
+  "title": "Add channels to a community group",
+  "blurb": "Split your group into topics, including private members-only channels.",
+  "icon": "chat",
+  "minutes": 3,
+  "keywords": [
+    "channels",
+    "community",
+    "private channel",
+    "topics",
+    "announcements",
+    "group"
+  ],
+  "steps": [
+    {
+      "id": "open-memberships",
+      "title": "Open Memberships",
+      "body": "Click **Memberships** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_memberships"
+        },
+        {
+          "text": "Memberships",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/memberships/"
+      }
+    },
+    {
+      "id": "open-communities",
+      "title": "Open Communities",
+      "body": "Click **Communities**.",
+      "route": "^/memberships/",
+      "go": "/memberships/communities/community-groups",
+      "target": [
+        {
+          "css": "#tb_communities"
+        },
+        {
+          "text": "Communities",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/memberships/communities"
+      }
+    },
+    {
+      "id": "open-group",
+      "title": "Open your group",
+      "body": "Click the group you want to add a channel to.",
+      "route": "^/memberships/communities",
+      "go": "/memberships/communities/community-groups",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "add-channel",
+      "title": "Add a channel",
+      "body": "Click **+ Add Channel** in the left panel.",
+      "route": "^/memberships/communities",
+      "go": "/memberships/communities/community-groups",
+      "target": [
+        {
+          "text": "Add Channel"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add Channel",
+      "advance": "click"
+    },
+    {
+      "id": "name",
+      "title": "Name it",
+      "body": "Name it for what goes in it, like Announcements, Wins or Questions.",
+      "route": "^/memberships/communities",
+      "go": "/memberships/communities/community-groups",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "private",
+      "title": "Make it private (optional)",
+      "body": "For members-only content, turn on **Make this Channel Private** before you create it. Add people later from the channel **Members** tab.",
+      "route": "^/memberships/communities",
+      "go": "/memberships/communities/community-groups",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "icon",
+      "title": "Add an icon (optional)",
+      "body": "Open the channel **Settings**, click **Edit** next to its name and choose **Channel Icon**.",
+      "route": "^/memberships/communities",
+      "go": "/memberships/communities/community-groups",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "id": "reporting-appointments-cancellations",
+  "kind": "howto",
+  "area": "reporting",
+  "screen": "reporting.appointment-report",
+  "title": "Spot cancellations and reschedules",
+  "blurb": "Find which calendars lose the most bookings and fix it.",
+  "icon": "calendar",
+  "minutes": 2,
+  "keywords": [
+    "cancellations",
+    "reschedules",
+    "no shows",
+    "reminders",
+    "appointments"
+  ],
+  "steps": [
+    {
+      "id": "open-reporting",
+      "title": "Open Reporting",
+      "body": "Click **Reporting** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reporting"
+        },
+        {
+          "text": "Reporting",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/"
+      }
+    },
+    {
+      "id": "open-appointment-report",
+      "title": "Open Appointment Report",
+      "body": "Click **Appointment Report**.",
+      "route": "^/reporting/",
+      "go": "/reporting/appointment",
+      "target": [
+        {
+          "css": "#tb_appointment-report"
+        },
+        {
+          "text": "Appointment Report",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/appointment"
+      }
+    },
+    {
+      "id": "top-cancels",
+      "title": "Find the problem calendars",
+      "body": "Look at the top calendars for cancellations and reschedules.",
+      "route": "^/reporting/appointment",
+      "go": "/reporting/appointment",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "why",
+      "title": "Ask why",
+      "body": "Is it a certain service, time or staff member? Check a few of those bookings.",
+      "route": "^/reporting/appointment",
+      "go": "/reporting/appointment",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "fix",
+      "title": "Cut cancellations",
+      "body": "Add a text reminder the day before and a confirm link. Your calendar settings have the options.",
+      "route": "^/reporting/appointment",
+      "go": "/reporting/appointment",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

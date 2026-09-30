@@ -1,0 +1,118 @@
+{
+  "id": "reputation-page-video-testimonials",
+  "kind": "page",
+  "area": "reputation",
+  "screen": "reputation.reputation-video-testimonials",
+  "title": "Tour: Video testimonials",
+  "blurb": "Collect short video reviews from customers and show them off.",
+  "icon": "star",
+  "minutes": 2,
+  "keywords": [
+    "video testimonial",
+    "video review",
+    "testimonial",
+    "collector",
+    "customer video"
+  ],
+  "steps": [
+    {
+      "id": "open-reputation",
+      "title": "Open Reputation",
+      "body": "Click **Reputation** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reputation"
+        },
+        {
+          "text": "Reputation",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reputation/"
+      }
+    },
+    {
+      "id": "open-video-testimonials",
+      "title": "Open Video Testimonials",
+      "body": "Click **Video Testimonials**. Collect video reviews here.",
+      "route": "^/reputation/",
+      "go": "/reputation/video-testimonials",
+      "target": [
+        {
+          "css": "#tb_reputation-video-testimonials"
+        },
+        {
+          "text": "Video Testimonials",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reputation/video-testimonials"
+      }
+    },
+    {
+      "id": "collectors",
+      "title": "Collectors",
+      "body": "A collector is a branded page where customers record or upload a short video review. No app needed.",
+      "route": "^/reputation/video-testimonials",
+      "go": "/reputation/video-testimonials",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "create",
+      "title": "Create a collector",
+      "body": "**Create Collector** starts a new one.",
+      "route": "^/reputation/video-testimonials",
+      "go": "/reputation/video-testimonials",
+      "target": [
+        {
+          "text": "Create Collector",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create Collector"
+    },
+    {
+      "id": "responses",
+      "title": "Responses",
+      "body": "**Responses** holds every video you receive. Watch, download or hide them here.",
+      "route": "^/reputation/video-testimonials",
+      "go": "/reputation/video-testimonials",
+      "target": [
+        {
+          "text": "Responses"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Responses"
+    },
+    {
+      "id": "next",
+      "title": "What's next",
+      "body": "Next: try **Create a video testimonial collector** from the Guide.",
+      "route": "^/reputation/video-testimonials",
+      "go": "/reputation/video-testimonials",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

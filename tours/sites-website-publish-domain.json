@@ -1,0 +1,104 @@
+{
+  "id": "sites-website-publish-domain",
+  "kind": "howto",
+  "area": "sites",
+  "screen": "sites.websites",
+  "title": "Publish your website on your domain",
+  "blurb": "Point your .co.nz or .nz address at your website and make it live.",
+  "icon": "globe",
+  "minutes": 5,
+  "keywords": [
+    "publish",
+    "go live",
+    "domain",
+    "co.nz",
+    "website address",
+    "launch"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "First connect your domain: see **Connect your own domain** in the Guide. Then click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Websites",
+      "body": "Click **Websites**.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/funnels-websites/websites",
+      "target": [
+        {
+          "css": "#tb_websites"
+        },
+        {
+          "text": "Websites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/websites"
+      }
+    },
+    {
+      "id": "open-site",
+      "title": "Open the site settings",
+      "body": "Open your website and go to its **Settings**.",
+      "route": "^/funnels-websites/websites",
+      "go": "/funnels-websites/websites",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "pick-domain",
+      "title": "Choose your domain",
+      "body": "Select your connected domain and save. Your home page will show when people visit the bare address.",
+      "route": "^/funnels-websites/websites",
+      "go": "/funnels-websites/websites",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "publish",
+      "title": "Publish the pages",
+      "body": "Open each page in the builder and click **Publish**. Pages only go live once published.",
+      "route": "^/",
+      "go": "/funnels-websites/websites",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "check",
+      "title": "Check it is live",
+      "body": "Visit your address in a new browser tab. A padlock shows once the security certificate is ready, which can take a little while after connecting.",
+      "route": "^/funnels-websites/websites",
+      "go": "/funnels-websites/websites",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

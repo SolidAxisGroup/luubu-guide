@@ -1,0 +1,132 @@
+{
+  "id": "sites-store-setup",
+  "kind": "howto",
+  "area": "sites",
+  "screen": "sites.stores",
+  "title": "Set up your online store",
+  "blurb": "Create a shop with product, cart and checkout pages.",
+  "icon": "card",
+  "minutes": 8,
+  "keywords": [
+    "store",
+    "shop",
+    "ecommerce",
+    "checkout",
+    "cart",
+    "online store",
+    "sell products"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Stores",
+      "body": "Click **Stores**.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/funnels-websites/stores",
+      "target": [
+        {
+          "css": "#tb_stores"
+        },
+        {
+          "text": "Stores",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/stores"
+      }
+    },
+    {
+      "id": "new-store",
+      "title": "Create a store",
+      "body": "Start a new store and choose a template. It creates the product list, product, cart, checkout and thank you pages for you.",
+      "route": "^/funnels-websites/stores",
+      "go": "/funnels-websites/stores",
+      "target": [
+        {
+          "css": "#create-new-button"
+        },
+        {
+          "css": "#positive-empty-state"
+        },
+        {
+          "text": "New store",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New store"
+    },
+    {
+      "id": "brand",
+      "title": "Add your branding",
+      "body": "Edit the pages in the builder. Put your logo, colours and contact details in the header and footer.",
+      "route": "^/",
+      "go": "/funnels-websites/stores",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "products",
+      "title": "Check your products show",
+      "body": "Products with **Include in Online Store** switched on appear automatically. Add them in **Payments** > **Products**.",
+      "route": "^/",
+      "go": "/funnels-websites/stores",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "payments",
+      "title": "Connect payments",
+      "body": "Make sure Stripe or another provider is connected under **Payments** > **Integrations**, or checkout will not work.",
+      "route": "^/",
+      "go": "/funnels-websites/stores",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "domain",
+      "title": "Connect a domain and publish",
+      "body": "Link the store to your domain under the gear icon (Domain Settings), then **Publish** the pages.",
+      "route": "^/",
+      "go": "/funnels-websites/stores",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Place a test order in test mode before telling customers."
+    }
+  ]
+}

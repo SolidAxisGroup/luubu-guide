@@ -1,0 +1,130 @@
+{
+  "id": "automation-test-and-publish",
+  "kind": "howto",
+  "area": "automation",
+  "screen": "automation.workflow",
+  "title": "Test and publish a workflow",
+  "blurb": "Try it on yourself first, then switch it on safely.",
+  "icon": "flow",
+  "minutes": 3,
+  "keywords": [
+    "test",
+    "publish",
+    "go live",
+    "draft",
+    "turn on",
+    "activate"
+  ],
+  "steps": [
+    {
+      "id": "open-automation",
+      "title": "Open Automation",
+      "body": "Click **Automation** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_automation"
+        },
+        {
+          "text": "Automation",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/automation/"
+      }
+    },
+    {
+      "id": "open-workflow",
+      "title": "Open Workflows",
+      "body": "Click **Workflows** at the top.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "css": "#tb_workflow"
+        },
+        {
+          "text": "Workflows"
+        }
+      ],
+      "advance": {
+        "route": "^/automation/workflows(?!/settings)"
+      }
+    },
+    {
+      "id": "open",
+      "title": "Open the workflow",
+      "body": "Open the workflow you have built. It stays in **Draft** until you publish, so nothing sends yet.",
+      "route": "^/automation/workflows(?!/settings)",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "test",
+      "title": "Run a test",
+      "body": "Click **Test Workflow** and pick your own contact. Check your phone and inbox for each message.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Test Workflow"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Test Workflow",
+      "tip": "Wait steps are skipped quickly in tests so you do not have to sit around."
+    },
+    {
+      "id": "check",
+      "title": "Look for warnings",
+      "body": "Any step with a red warning still needs setting up. Click it and fill in the missing details.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "publish",
+      "title": "Publish",
+      "body": "Switch **Draft** to **Publish** at the top right, then click **Save**.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Publish"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Publish"
+    },
+    {
+      "id": "history",
+      "title": "Changed your mind?",
+      "body": "Use the **History** icon to see earlier versions. Switch back to **Draft** to pause it at any time.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

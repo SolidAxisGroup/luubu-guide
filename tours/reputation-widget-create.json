@@ -1,0 +1,154 @@
+{
+  "id": "reputation-widget-create",
+  "kind": "howto",
+  "area": "reputation",
+  "screen": "reputation.reputation-widgets",
+  "title": "Create a review widget",
+  "blurb": "Design a block of your best reviews to match your website.",
+  "icon": "star",
+  "minutes": 4,
+  "keywords": [
+    "widget",
+    "review widget",
+    "create",
+    "carousel",
+    "reviews",
+    "design"
+  ],
+  "steps": [
+    {
+      "id": "open-reputation",
+      "title": "Open Reputation",
+      "body": "Click **Reputation** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reputation"
+        },
+        {
+          "text": "Reputation",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reputation/"
+      }
+    },
+    {
+      "id": "open-widgets",
+      "title": "Open Widgets",
+      "body": "Click **Widgets**.",
+      "route": "^/reputation/",
+      "go": "/reputation/widget",
+      "target": [
+        {
+          "css": "#tb_reputation-widgets"
+        },
+        {
+          "text": "Widgets",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reputation/widget"
+      }
+    },
+    {
+      "id": "create",
+      "title": "Start a widget",
+      "body": "Click **Create Widget**.",
+      "route": "^/reputation/widget",
+      "go": "/reputation/widget",
+      "target": [
+        {
+          "text": "Create Widget",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create Widget",
+      "advance": "click"
+    },
+    {
+      "id": "layout",
+      "title": "Pick a layout",
+      "body": "In **Layout**, choose a type such as **Carousel**, **Grid** or **List**, then pick sources and filters. Showing 4 and 5 star reviews is common.",
+      "route": "^/reputation/widget",
+      "go": "/reputation/widget",
+      "target": [
+        {
+          "text": "Layout"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Layout"
+    },
+    {
+      "id": "content",
+      "title": "Add a heading",
+      "body": "In **Content**, set a heading, like 'What our customers say'.",
+      "route": "^/reputation/widget",
+      "go": "/reputation/widget",
+      "target": [
+        {
+          "text": "Content"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Content"
+    },
+    {
+      "id": "appearance",
+      "title": "Match your site",
+      "body": "In **Appearance**, set fonts and colours to match your website.",
+      "route": "^/reputation/widget",
+      "go": "/reputation/widget",
+      "target": [
+        {
+          "text": "Appearance"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Appearance"
+    },
+    {
+      "id": "save",
+      "title": "Save it",
+      "body": "Click **Save**. New reviews that match your filters show up by themselves.",
+      "route": "^/reputation/widget",
+      "go": "/reputation/widget",
+      "target": [
+        {
+          "text": "Save",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Save"
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "id": "memberships-course-lessons",
+  "kind": "howto",
+  "area": "memberships",
+  "screen": "memberships.courses",
+  "title": "Add categories and lessons to a course",
+  "blurb": "Organise your course into modules and fill them with videos and files.",
+  "icon": "book",
+  "minutes": 5,
+  "keywords": [
+    "lessons",
+    "categories",
+    "modules",
+    "video",
+    "course content",
+    "upload",
+    "publish"
+  ],
+  "steps": [
+    {
+      "id": "open-memberships",
+      "title": "Open Memberships",
+      "body": "Click **Memberships** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_memberships"
+        },
+        {
+          "text": "Memberships",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/memberships/"
+      }
+    },
+    {
+      "id": "open-courses",
+      "title": "Open Courses",
+      "body": "Click **Courses**.",
+      "route": "^/memberships/",
+      "go": "/memberships/courses/dashboard-v2",
+      "target": [
+        {
+          "css": "#tb_courses"
+        },
+        {
+          "text": "Courses",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/memberships/courses"
+      }
+    },
+    {
+      "id": "products",
+      "title": "Open Products",
+      "body": "Click **Products**.",
+      "route": "^/memberships/courses",
+      "go": "/memberships/courses/dashboard-v2",
+      "target": [
+        {
+          "text": "Products"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Products",
+      "advance": "click"
+    },
+    {
+      "id": "open-course",
+      "title": "Open your course",
+      "body": "Click the course you want to build. Its outline opens.",
+      "route": "^/memberships/courses",
+      "go": "/memberships/courses/dashboard-v2",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "add-content",
+      "title": "Add a category",
+      "body": "Click **Add Content**. Start with a category, which is a module like 'Week 1' or 'Getting started', then add lessons inside it.",
+      "tip": "Big course? Categories can hold sub-categories too.",
+      "route": "^/memberships/courses",
+      "go": "/memberships/courses/dashboard-v2",
+      "target": [
+        {
+          "text": "Add Content"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add Content"
+    },
+    {
+      "id": "lesson",
+      "title": "Fill in each lesson",
+      "body": "Give the lesson a title, then add a video, text or downloadable files. You can pull videos straight from Media Storage.",
+      "route": "^/memberships/courses",
+      "go": "/memberships/courses/dashboard-v2",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "publish",
+      "title": "Publish it",
+      "body": "New items start as **Draft**. Switch each lesson and category to **Published** when it is ready, then save.",
+      "route": "^/memberships/courses",
+      "go": "/memberships/courses/dashboard-v2",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "preview",
+      "title": "Check it",
+      "body": "Click **Preview** to see the course the way a member will.",
+      "route": "^/memberships/courses",
+      "go": "/memberships/courses/dashboard-v2",
+      "target": [
+        {
+          "text": "Preview"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Preview"
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "id": "marketing-page-trigger-links",
+  "kind": "page",
+  "area": "marketing",
+  "screen": "marketing.trigger-links",
+  "title": "Tour: Trigger Links",
+  "blurb": "Trackable links that tell you who clicked and can start automations.",
+  "icon": "flow",
+  "minutes": 2,
+  "keywords": [
+    "trigger links",
+    "tracked link",
+    "click tracking",
+    "link",
+    "overview",
+    "tour"
+  ],
+  "steps": [
+    {
+      "id": "open-marketing",
+      "title": "Open Marketing",
+      "body": "Click **Marketing** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_email-marketing"
+        },
+        {
+          "text": "Marketing",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/"
+      }
+    },
+    {
+      "id": "open-trigger-links",
+      "title": "Open Trigger Links",
+      "body": "Click **Trigger Links**. A trigger link is a tracked link. Every click is logged on the contact and can kick off a workflow.",
+      "route": "^/marketing/",
+      "go": "/marketing/trigger-links",
+      "target": [
+        {
+          "css": "#tb_trigger-links"
+        },
+        {
+          "text": "Trigger Links",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/trigger-links"
+      }
+    },
+    {
+      "id": "add",
+      "title": "Make a link",
+      "body": "**+ Add Link** creates a new trigger link.",
+      "route": "^/marketing/trigger-links",
+      "go": "/marketing/trigger-links",
+      "target": [
+        {
+          "text": "Add Link",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add Link"
+    },
+    {
+      "id": "list",
+      "title": "Your links",
+      "body": "Each link shows its name and link key. The copy icon grabs the code you paste into a message.",
+      "route": "^/marketing/trigger-links",
+      "go": "/marketing/trigger-links",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "manage",
+      "title": "Edit or remove",
+      "body": "Use search to find a link by name. The three-dot menu lets you edit or delete it.",
+      "route": "^/marketing/trigger-links",
+      "go": "/marketing/trigger-links",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What to do first",
+      "body": "Next: try **Create a trigger link**, then **Follow up when someone clicks a link**.",
+      "route": "^/marketing/trigger-links",
+      "go": "/marketing/trigger-links",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

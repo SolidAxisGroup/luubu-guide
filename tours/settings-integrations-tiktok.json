@@ -1,0 +1,99 @@
+{
+  "id": "settings-integrations-tiktok",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.common.sidebar.lcIntegrations",
+  "title": "Connect TikTok",
+  "blurb": "Link your TikTok business account.",
+  "icon": "share",
+  "minutes": 3,
+  "keywords": [
+    "tiktok",
+    "connect tiktok",
+    "tiktok business",
+    "lead ads",
+    "social"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-integrations",
+      "title": "Open Integrations",
+      "body": "Click **Integrations** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/lc-integrations",
+      "target": [
+        {
+          "css": "[id='sb_common.sidebar.lcIntegrations']"
+        },
+        {
+          "text": "Integrations",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/lc-integrations"
+      }
+    },
+    {
+      "id": "card",
+      "title": "Find the TikTok card",
+      "body": "Find the **TikTok** card and click **Connect**.",
+      "route": "^/settings/lc-integrations",
+      "go": "/settings/lc-integrations",
+      "target": [
+        {
+          "text": "TikTok"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "TikTok"
+    },
+    {
+      "id": "login",
+      "title": "Log in",
+      "body": "Log in with your TikTok business account and allow access. Personal accounts will not work.",
+      "route": "^/settings/lc-integrations",
+      "go": "/settings/lc-integrations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "limits",
+      "title": "What works in NZ",
+      "body": "TikTok currently limits DM and comment automation to US business accounts. Lead ads and posting may still work for you.",
+      "route": "^/settings/lc-integrations",
+      "go": "/settings/lc-integrations",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Not sure what you can use? Email hello@luubu.com."
+    }
+  ]
+}

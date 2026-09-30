@@ -1,0 +1,115 @@
+{
+  "id": "ai-page-getting-started",
+  "kind": "page",
+  "area": "ai",
+  "screen": "ai.ai-agents-getting-started",
+  "title": "Tour AI Agents",
+  "blurb": "What each AI agent does and where to start.",
+  "icon": "bot",
+  "minutes": 2,
+  "keywords": [
+    "ai agents",
+    "getting started",
+    "ai",
+    "bot",
+    "overview",
+    "tour"
+  ],
+  "steps": [
+    {
+      "id": "open-ai-agents",
+      "title": "Open AI Agents",
+      "body": "AI Agents answer messages and calls for you. Click **AI Agents** in the left menu.",
+      "target": [
+        {
+          "css": "[id='sb_AI Agents']"
+        },
+        {
+          "text": "AI Agents",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/"
+      }
+    },
+    {
+      "id": "open-ai-agents-getting-started",
+      "title": "Open Getting Started",
+      "body": "Click the **Getting Started** tab.",
+      "route": "^/ai-agents/",
+      "go": "/ai-agents/getting-started",
+      "target": [
+        {
+          "css": "#tb_ai-agents-getting-started"
+        },
+        {
+          "text": "Getting Started"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/getting-started"
+      }
+    },
+    {
+      "id": "what",
+      "title": "Your AI team",
+      "body": "This page is your starting point. Each tab along the top is a different AI helper.",
+      "route": "^/ai-agents/getting-started",
+      "go": "/ai-agents/getting-started",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "chat-voice",
+      "title": "Messages and calls",
+      "body": "**Conversation AI** replies to texts, website chat and Facebook messages. **Voice AI** answers your phone.",
+      "route": "^/ai-agents/getting-started",
+      "go": "/ai-agents/getting-started",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "knowledge",
+      "title": "Teach it your business",
+      "body": "**Knowledge Base** is where the AI learns your services, prices and FAQs. Set this up first so answers are accurate.",
+      "route": "^/ai-agents/getting-started",
+      "go": "/ai-agents/getting-started",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "more",
+      "title": "Templates, content and logs",
+      "body": "**Agent Templates** and **Industry Agents** give you ready-made agents. **Content AI** writes copy. **Agent Logs** shows what your agents said and did.",
+      "route": "^/ai-agents/getting-started",
+      "go": "/ai-agents/getting-started",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What to do first",
+      "body": "Next: try **Build your knowledge base from your website** from the Guide.",
+      "route": "^/ai-agents/getting-started",
+      "go": "/ai-agents/getting-started",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

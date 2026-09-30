@@ -1,0 +1,118 @@
+{
+  "id": "conversations-page-analytics",
+  "kind": "page",
+  "area": "conversations",
+  "screen": "conversations.conversations-analytics",
+  "title": "Tour: Conversation analytics",
+  "blurb": "See how fast your team replies to customers.",
+  "icon": "chart",
+  "minutes": 2,
+  "keywords": [
+    "analytics",
+    "response time",
+    "sla",
+    "reports",
+    "reply speed",
+    "team performance"
+  ],
+  "steps": [
+    {
+      "id": "open-conversations",
+      "title": "Open Conversations",
+      "body": "Click **Conversations** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_conversations"
+        },
+        {
+          "text": "Conversations",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/conversations/"
+      }
+    },
+    {
+      "id": "tab-conversations-analytics",
+      "title": "Open Analytics",
+      "body": "Click **Analytics** along the top.",
+      "route": "^/conversations/",
+      "go": "/conversations/analytics",
+      "target": [
+        {
+          "css": "#tb_conversations-analytics"
+        },
+        {
+          "text": "Analytics",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/conversations/analytics"
+      }
+    },
+    {
+      "id": "what",
+      "title": "What this shows",
+      "body": "This page reports on how quickly your team answers messages. Fast replies win jobs, so it's worth a look each week.",
+      "route": "^/conversations/analytics",
+      "go": "/conversations/analytics",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "sla",
+      "title": "SLA Performance",
+      "body": "The **SLA Performance** report shows the share of messages answered on time, the average response time, and how many went overdue.",
+      "route": "^/conversations/analytics",
+      "go": "/conversations/analytics",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "SLA Performance"
+    },
+    {
+      "id": "breakdown",
+      "title": "By person and channel",
+      "body": "Scroll down to compare team members and channels, like SMS versus Facebook.",
+      "route": "^/conversations/analytics",
+      "go": "/conversations/analytics",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "dates",
+      "title": "Change the period",
+      "body": "Use the date range at the top to look at this week, last month or a custom range.",
+      "route": "^/conversations/analytics",
+      "go": "/conversations/analytics",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Only admin users can see these reports."
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "No data yet? Next: try **Set reply time targets** from the Guide.",
+      "route": "^/conversations/analytics",
+      "go": "/conversations/analytics",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "id": "memberships-community-learning-events",
+  "kind": "howto",
+  "area": "memberships",
+  "screen": "memberships.communities",
+  "title": "Add a course and events to a community",
+  "blurb": "Put a course inside your group and schedule live sessions.",
+  "icon": "calendar",
+  "minutes": 3,
+  "keywords": [
+    "community",
+    "course",
+    "events",
+    "live",
+    "learning",
+    "workshop",
+    "meeting"
+  ],
+  "steps": [
+    {
+      "id": "open-memberships",
+      "title": "Open Memberships",
+      "body": "Click **Memberships** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_memberships"
+        },
+        {
+          "text": "Memberships",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/memberships/"
+      }
+    },
+    {
+      "id": "open-communities",
+      "title": "Open Communities",
+      "body": "Click **Communities**.",
+      "route": "^/memberships/",
+      "go": "/memberships/communities/community-groups",
+      "target": [
+        {
+          "css": "#tb_communities"
+        },
+        {
+          "text": "Communities",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/memberships/communities"
+      }
+    },
+    {
+      "id": "open-group",
+      "title": "Open your group",
+      "body": "Click the group you want to add to.",
+      "route": "^/memberships/communities",
+      "go": "/memberships/communities/community-groups",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "learning",
+      "title": "Attach a course",
+      "body": "Open the **Learning** tab and attach a course. Members can work through it without leaving the group.",
+      "route": "^/memberships/communities",
+      "go": "/memberships/communities/community-groups",
+      "target": [
+        {
+          "text": "Learning"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Learning"
+    },
+    {
+      "id": "events",
+      "title": "Schedule a live session",
+      "body": "Open the **Events** tab and add an event with a date, time and meeting link.",
+      "route": "^/memberships/communities",
+      "go": "/memberships/communities/community-groups",
+      "target": [
+        {
+          "text": "Events"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Events"
+    },
+    {
+      "id": "reminders",
+      "title": "Set reminders",
+      "body": "Turn on event reminders so members get a nudge before it starts.",
+      "route": "^/memberships/communities",
+      "go": "/memberships/communities/community-groups",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

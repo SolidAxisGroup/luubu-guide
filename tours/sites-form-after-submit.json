@@ -1,0 +1,105 @@
+{
+  "id": "sites-form-after-submit",
+  "kind": "howto",
+  "area": "sites",
+  "screen": "sites.form-builder",
+  "title": "Choose what happens after someone submits",
+  "blurb": "Show a thank-you message or send people to a page, and get notified.",
+  "icon": "mail",
+  "minutes": 4,
+  "keywords": [
+    "thank you page",
+    "redirect",
+    "after submit",
+    "notification",
+    "email alert",
+    "message"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Forms",
+      "body": "Click **Forms** and open the form.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/form-builder/main",
+      "target": [
+        {
+          "css": "#tb_form-builder"
+        },
+        {
+          "text": "Forms",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/form-builder"
+      }
+    },
+    {
+      "id": "options",
+      "title": "Open the form options",
+      "body": "In the form builder, open **Options**.",
+      "route": "^/",
+      "go": "/form-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "on-submit",
+      "title": "Pick the after-submit action",
+      "body": "Choose to show a message, like Thanks, we will call you within 2 hours, or to open a web address such as your thank-you page.",
+      "route": "^/",
+      "go": "/form-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "A thank-you page lets you track conversions in Google and Meta ads."
+    },
+    {
+      "id": "notify",
+      "title": "Get an email alert",
+      "body": "Turn on the email notification and add who should get it, so no enquiry sits unseen.",
+      "route": "^/",
+      "go": "/form-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save",
+      "body": "Click **Save** and send a test entry.",
+      "route": "^/",
+      "go": "/form-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

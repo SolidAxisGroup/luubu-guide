@@ -1,0 +1,114 @@
+{
+  "id": "settings-billing-auto-recharge",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.saas-billing",
+  "title": "Set up wallet auto recharge",
+  "blurb": "Top up automatically when your balance gets low.",
+  "icon": "card",
+  "minutes": 2,
+  "keywords": [
+    "auto recharge",
+    "auto top up",
+    "wallet",
+    "low balance",
+    "automatic",
+    "credit"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-billing",
+      "title": "Open Billing",
+      "body": "Click **Billing** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/company-billing/billing",
+      "target": [
+        {
+          "css": "[id='sb_saas-billing']"
+        },
+        {
+          "text": "Billing",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/company-billing/billing"
+      }
+    },
+    {
+      "id": "wallet-tab",
+      "title": "Open your wallet",
+      "body": "Click **Wallet & Transactions**.",
+      "route": "^/settings/company-billing/billing",
+      "go": "/settings/company-billing/billing",
+      "target": [
+        {
+          "text": "Wallet & Transactions"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Wallet & Transactions",
+      "advance": "click"
+    },
+    {
+      "id": "recharge-amount",
+      "title": "Choose the top-up amount",
+      "body": "Find the auto recharge settings. In **Auto recharge with**, pick how much to add each time.",
+      "route": "^/settings/company-billing/billing",
+      "go": "/settings/company-billing/billing",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Auto recharge with"
+    },
+    {
+      "id": "threshold",
+      "title": "Choose when it tops up",
+      "body": "In **when balance is lower than**, pick the balance that triggers a top-up. Busy accounts should set this higher.",
+      "route": "^/settings/company-billing/billing",
+      "go": "/settings/company-billing/billing",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "when balance is lower than"
+    },
+    {
+      "id": "save",
+      "title": "Save",
+      "body": "Save your choice. Your primary card is charged each time it tops up.",
+      "route": "^/settings/company-billing/billing",
+      "go": "/settings/company-billing/billing",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

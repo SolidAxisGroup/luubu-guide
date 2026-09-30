@@ -1,0 +1,118 @@
+{
+  "id": "marketing-page-brand-boards",
+  "kind": "page",
+  "area": "marketing",
+  "screen": "marketing.brand-boards",
+  "title": "Tour: Brand Boards",
+  "blurb": "Keep your logos, colours and fonts in one place for every design.",
+  "icon": "image",
+  "minutes": 2,
+  "keywords": [
+    "brand board",
+    "brand kit",
+    "logo",
+    "colours",
+    "fonts",
+    "branding",
+    "overview",
+    "tour"
+  ],
+  "steps": [
+    {
+      "id": "open-marketing",
+      "title": "Open Marketing",
+      "body": "Click **Marketing** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_email-marketing"
+        },
+        {
+          "text": "Marketing",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/"
+      }
+    },
+    {
+      "id": "open-brand-boards",
+      "title": "Open Brand Boards",
+      "body": "Click **Brand Boards**. A brand board stores your logos, colours and fonts so every email and page looks like you.",
+      "route": "^/marketing/",
+      "go": "/marketing/brand-boards",
+      "target": [
+        {
+          "css": "#tb_brand-boards"
+        },
+        {
+          "text": "Brand Boards",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/brand-boards"
+      }
+    },
+    {
+      "id": "add",
+      "title": "Make a brand board",
+      "body": "**+ Add a Design Kit** creates a new brand board.",
+      "route": "^/marketing/brand-boards",
+      "go": "/marketing/brand-boards",
+      "target": [
+        {
+          "text": "Add Design Kit",
+          "tag": "button"
+        },
+        {
+          "text": "Add a Design Kit",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add Design Kit"
+    },
+    {
+      "id": "list",
+      "title": "Your boards",
+      "body": "Your boards are listed here. The three-dot menu has **Set as Default**, which makes that board the one the builders use.",
+      "route": "^/marketing/brand-boards",
+      "go": "/marketing/brand-boards",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "where",
+      "title": "Where it shows up",
+      "body": "Your default board\u2019s colours and fonts appear first in the pickers in the email builder, funnels, websites and forms. Logos show in the media library.",
+      "route": "^/marketing/brand-boards",
+      "go": "/marketing/brand-boards",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What to do first",
+      "body": "Next: try **Create a brand board** from the Guide.",
+      "route": "^/marketing/brand-boards",
+      "go": "/marketing/brand-boards",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

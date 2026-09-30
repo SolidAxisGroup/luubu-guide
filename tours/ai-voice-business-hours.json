@@ -1,0 +1,136 @@
+{
+  "id": "ai-voice-business-hours",
+  "kind": "howto",
+  "area": "ai",
+  "screen": "ai.ai-agents-voice-ai",
+  "title": "Set the AI receptionist's hours",
+  "blurb": "Have the AI answer only after hours, or all day.",
+  "icon": "calendar",
+  "minutes": 3,
+  "keywords": [
+    "working hours",
+    "after hours",
+    "business hours",
+    "voice ai",
+    "schedule"
+  ],
+  "steps": [
+    {
+      "id": "open-ai-agents",
+      "title": "Open AI Agents",
+      "body": "Click **AI Agents** in the left menu.",
+      "target": [
+        {
+          "css": "[id='sb_AI Agents']"
+        },
+        {
+          "text": "AI Agents",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/"
+      }
+    },
+    {
+      "id": "open-ai-agents-voice-ai",
+      "title": "Open Voice AI",
+      "body": "Click the **Voice AI** tab.",
+      "route": "^/ai-agents/",
+      "go": "/ai-agents/voice-ai",
+      "target": [
+        {
+          "css": "#tb_ai-agents-voice-ai"
+        },
+        {
+          "text": "Voice AI"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/voice-ai"
+      }
+    },
+    {
+      "id": "open",
+      "title": "Open your agent",
+      "body": "Click the voice agent you want to change.",
+      "route": "^/ai-agents/voice-ai",
+      "go": "/ai-agents/voice-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "deploy",
+      "title": "Open Deploy",
+      "body": "Click the **Deploy** tab.",
+      "route": "^/ai-agents/voice-ai",
+      "go": "/ai-agents/voice-ai",
+      "target": [
+        {
+          "text": "Deploy"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Deploy"
+    },
+    {
+      "id": "hours",
+      "title": "Choose the hours",
+      "body": "Under **Working Hours**, pick **All Hours** to answer 24/7, or **Custom Schedule** to set days and times.",
+      "route": "^/ai-agents/voice-ai",
+      "go": "/ai-agents/voice-ai",
+      "target": [
+        {
+          "text": "Working Hours"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Working Hours",
+      "tip": "Popular setup: the AI covers evenings and weekends, you take calls during the day."
+    },
+    {
+      "id": "copy",
+      "title": "Copy across days",
+      "body": "Set Monday, then copy it to the other weekdays. Schedules can run past midnight.",
+      "route": "^/ai-agents/voice-ai",
+      "go": "/ai-agents/voice-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save",
+      "body": "Click **Save**.",
+      "route": "^/ai-agents/voice-ai",
+      "go": "/ai-agents/voice-ai",
+      "target": [
+        {
+          "text": "Save"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Save"
+    }
+  ]
+}

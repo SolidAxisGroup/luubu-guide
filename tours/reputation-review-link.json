@@ -1,0 +1,100 @@
+{
+  "id": "reputation-review-link",
+  "kind": "howto",
+  "area": "reputation",
+  "screen": "reputation.reputation-settings",
+  "title": "Set your review link",
+  "blurb": "Choose where customers go when they tap your review link.",
+  "icon": "star",
+  "minutes": 2,
+  "keywords": [
+    "review link",
+    "google review link",
+    "reviews",
+    "settings",
+    "link"
+  ],
+  "steps": [
+    {
+      "id": "open-reputation",
+      "title": "Open Reputation",
+      "body": "Click **Reputation** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reputation"
+        },
+        {
+          "text": "Reputation",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reputation/"
+      }
+    },
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings**.",
+      "route": "^/reputation/",
+      "go": "/reputation/settings",
+      "target": [
+        {
+          "css": "#tb_reputation-settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reputation/settings"
+      }
+    },
+    {
+      "id": "link",
+      "title": "Open Review Link",
+      "body": "Open **Review Link**.",
+      "route": "^/reputation/settings",
+      "go": "/reputation/settings",
+      "target": [
+        {
+          "text": "Review Link"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Review Link",
+      "advance": "click"
+    },
+    {
+      "id": "choose",
+      "title": "Choose a destination",
+      "body": "Use review balancing to spread customers across your review sites, or a custom URL to send everyone to one place.",
+      "tip": "Most NZ businesses get the best results sending everyone to Google.",
+      "route": "^/reputation/settings",
+      "go": "/reputation/settings",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save it",
+      "body": "Save. Every review request now uses this link.",
+      "route": "^/reputation/settings",
+      "go": "/reputation/settings",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

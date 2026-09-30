@@ -1,0 +1,125 @@
+{
+  "id": "memberships-page-courses",
+  "kind": "page",
+  "area": "memberships",
+  "screen": "memberships.courses",
+  "title": "Tour: Courses",
+  "blurb": "Build online courses, bundle them into offers and track progress.",
+  "icon": "book",
+  "minutes": 2,
+  "keywords": [
+    "courses",
+    "course",
+    "lessons",
+    "online course",
+    "training",
+    "membership"
+  ],
+  "steps": [
+    {
+      "id": "open-memberships",
+      "title": "Open Memberships",
+      "body": "Click **Memberships** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_memberships"
+        },
+        {
+          "text": "Memberships",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/memberships/"
+      }
+    },
+    {
+      "id": "open-courses",
+      "title": "Open Courses",
+      "body": "Click **Courses**. This is where your online courses live.",
+      "route": "^/memberships/",
+      "go": "/memberships/courses/dashboard-v2",
+      "target": [
+        {
+          "css": "#tb_courses"
+        },
+        {
+          "text": "Courses",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/memberships/courses"
+      }
+    },
+    {
+      "id": "products",
+      "title": "Products",
+      "body": "**Products** holds each course. Open one to add categories (modules) and lessons.",
+      "route": "^/memberships/courses",
+      "go": "/memberships/courses/dashboard-v2",
+      "target": [
+        {
+          "text": "Products"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Products"
+    },
+    {
+      "id": "offers",
+      "title": "Offers",
+      "body": "**Offers** bundle one or more courses with a price. Share an offer link to sell or give away access.",
+      "route": "^/memberships/courses",
+      "go": "/memberships/courses/dashboard-v2",
+      "target": [
+        {
+          "text": "Offers"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Offers"
+    },
+    {
+      "id": "analytics",
+      "title": "Analytics",
+      "body": "**Analytics** shows how members are going: progress, completions and quiz results.",
+      "route": "^/memberships/courses",
+      "go": "/memberships/courses/dashboard-v2",
+      "target": [
+        {
+          "text": "Analytics"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Analytics"
+    },
+    {
+      "id": "next",
+      "title": "What's next",
+      "body": "Next: try **Create a course** from the Guide.",
+      "route": "^/memberships/courses",
+      "go": "/memberships/courses/dashboard-v2",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

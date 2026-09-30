@@ -1,0 +1,106 @@
+{
+  "id": "more-marketplace-install",
+  "kind": "howto",
+  "area": "more",
+  "screen": "more.app-marketplace",
+  "title": "Find and install an app",
+  "blurb": "Add an app from the marketplace and connect it to your account.",
+  "icon": "grid",
+  "minutes": 4,
+  "keywords": [
+    "install app",
+    "marketplace",
+    "integration",
+    "connect",
+    "apps",
+    "add on"
+  ],
+  "steps": [
+    {
+      "id": "open-app-marketplace",
+      "title": "Open App Marketplace",
+      "body": "Click **App Marketplace** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_app-marketplace"
+        },
+        {
+          "text": "App Marketplace",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/integration"
+      }
+    },
+    {
+      "id": "search",
+      "title": "Find the app",
+      "body": "Search for the app by name, or browse the categories.",
+      "route": "^/integration",
+      "go": "/integration",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "open",
+      "title": "Read about it",
+      "body": "Click the app. Check what it does, the price and the reviews.",
+      "route": "^/integration",
+      "go": "/integration",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "install",
+      "title": "Install it",
+      "body": "Click **Install**.",
+      "tip": "Can't find or install an app? Some need us to add them for you. Ask us to switch this on: hello@luubu.com",
+      "route": "^/integration",
+      "go": "/integration",
+      "target": [
+        {
+          "text": "Install",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Install"
+    },
+    {
+      "id": "permissions",
+      "title": "Check permissions",
+      "body": "Read the list of what the app can see and do, like your contacts or conversations, then approve.",
+      "route": "^/integration",
+      "go": "/integration",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "setup",
+      "title": "Finish setup",
+      "body": "Follow the app's own setup steps. Some ask you to log in to the other service.",
+      "route": "^/integration",
+      "go": "/integration",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

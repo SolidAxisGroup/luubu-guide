@@ -1,0 +1,113 @@
+{
+  "id": "reputation-page-listings",
+  "kind": "page",
+  "area": "reputation",
+  "screen": "reputation.online-listings",
+  "title": "Tour: Listings",
+  "blurb": "Keep your business details the same across online directories.",
+  "icon": "globe",
+  "minutes": 2,
+  "keywords": [
+    "listings",
+    "directories",
+    "local seo",
+    "citations",
+    "business listings",
+    "nap"
+  ],
+  "steps": [
+    {
+      "id": "open-reputation",
+      "title": "Open Reputation",
+      "body": "Click **Reputation** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reputation"
+        },
+        {
+          "text": "Reputation",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reputation/"
+      }
+    },
+    {
+      "id": "open-listings",
+      "title": "Open Listings",
+      "body": "Click **Listings**. Online directory listings are managed here.",
+      "route": "^/reputation/",
+      "go": "/reputation/listing",
+      "target": [
+        {
+          "css": "#tb_online-listings"
+        },
+        {
+          "text": "Listings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reputation/listing"
+      }
+    },
+    {
+      "id": "what",
+      "title": "What Listings does",
+      "body": "Listings sends your business name, address, phone and hours to 70+ directories so they match everywhere. That helps local search.",
+      "route": "^/reputation/listing",
+      "go": "/reputation/listing",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "activate",
+      "title": "Activate",
+      "body": "**Activate Listings** starts a paid plan. Your details then sync out to the directories.",
+      "tip": "Directory coverage varies by country. Check with us before you buy: hello@luubu.com",
+      "route": "^/reputation/listing",
+      "go": "/reputation/listing",
+      "target": [
+        {
+          "text": "Activate Listings",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Activate Listings"
+    },
+    {
+      "id": "status",
+      "title": "Status",
+      "body": "Once active, you see each directory and its status. Waiting or in-review items usually clear within a few days.",
+      "route": "^/reputation/listing",
+      "go": "/reputation/listing",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What's next",
+      "body": "Next: try **Get your business listed in online directories** from the Guide.",
+      "route": "^/reputation/listing",
+      "go": "/reputation/listing",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

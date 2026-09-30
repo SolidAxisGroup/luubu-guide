@@ -1,0 +1,112 @@
+{
+  "id": "reporting-audit-compare",
+  "kind": "howto",
+  "area": "reporting",
+  "screen": "reporting.audit-report",
+  "title": "Compare your business with competitors",
+  "blurb": "See how your listings and reviews stack up against up to three rivals.",
+  "icon": "chart",
+  "minutes": 3,
+  "keywords": [
+    "competitors",
+    "compare",
+    "audit",
+    "benchmark",
+    "local seo",
+    "reviews"
+  ],
+  "steps": [
+    {
+      "id": "open-reporting",
+      "title": "Open Reporting",
+      "body": "Click **Reporting** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reporting"
+        },
+        {
+          "text": "Reporting",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/"
+      }
+    },
+    {
+      "id": "open-local-marketing-audit",
+      "title": "Open Local Marketing Audit",
+      "body": "Click **Local Marketing Audit**.",
+      "route": "^/reporting/",
+      "go": "/reporting/local-marketing-audit",
+      "target": [
+        {
+          "css": "#tb_audit-report"
+        },
+        {
+          "text": "Local Marketing Audit",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/local-marketing-audit"
+      }
+    },
+    {
+      "id": "open",
+      "title": "Open an audit",
+      "body": "Open one of your audits.",
+      "route": "^/reporting/local-marketing-audit",
+      "go": "/reporting/local-marketing-audit",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "compare",
+      "title": "Open Compare Reports",
+      "body": "Click **Compare Reports**.",
+      "route": "^/reporting/local-marketing-audit",
+      "go": "/reporting/local-marketing-audit",
+      "target": [
+        {
+          "text": "Compare Reports"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Compare Reports",
+      "advance": "click"
+    },
+    {
+      "id": "add",
+      "title": "Add competitors",
+      "body": "Add up to three competitors, ideally businesses that show up above you on Google Maps.",
+      "route": "^/reporting/local-marketing-audit",
+      "go": "/reporting/local-marketing-audit",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "read",
+      "title": "See the gap",
+      "body": "Compare listings accuracy and reviews side by side. Where they beat you is your to-do list.",
+      "route": "^/reporting/local-marketing-audit",
+      "go": "/reporting/local-marketing-audit",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

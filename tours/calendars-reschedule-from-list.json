@@ -1,0 +1,110 @@
+{
+  "id": "calendars-reschedule-from-list",
+  "kind": "howto",
+  "area": "calendars",
+  "screen": "calendars.apppontment-tab",
+  "title": "Reschedule from the list",
+  "blurb": "Move or delete a booking without hunting through the diary.",
+  "icon": "calendar",
+  "minutes": 2,
+  "keywords": [
+    "reschedule",
+    "edit booking",
+    "delete appointment",
+    "move",
+    "list"
+  ],
+  "steps": [
+    {
+      "id": "open-calendars",
+      "title": "Open Calendars",
+      "body": "Click **Calendars** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_calendars"
+        },
+        {
+          "text": "Calendars",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/calendars/"
+      }
+    },
+    {
+      "id": "tab-apppontment-tab",
+      "title": "Open Appointment list view",
+      "body": "Click **Appointment list view** along the top.",
+      "route": "^/calendars/",
+      "go": "/calendars/appointments",
+      "target": [
+        {
+          "css": "#tb_apppontment-tab"
+        },
+        {
+          "text": "Appointment list view",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/calendars/appointments"
+      }
+    },
+    {
+      "id": "find",
+      "title": "Find the booking",
+      "body": "Filter or scroll to the appointment you need.",
+      "route": "^/calendars/appointments",
+      "go": "/calendars/appointments",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "menu",
+      "title": "Open the menu",
+      "body": "Click the three dots at the end of the row.",
+      "route": "^/calendars/appointments",
+      "go": "/calendars/appointments",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "reschedule",
+      "title": "Reschedule",
+      "body": "Choose **Reschedule**, pick the new time and save.",
+      "route": "^/calendars/appointments",
+      "go": "/calendars/appointments",
+      "target": [
+        {
+          "text": "Reschedule"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Reschedule"
+    },
+    {
+      "id": "delete",
+      "title": "Delete only if it was a mistake",
+      "body": "Use **Delete** for test or duplicate bookings. For real cancellations, set the status to **Cancelled** so your records stay accurate.",
+      "route": "^/calendars/appointments",
+      "go": "/calendars/appointments",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

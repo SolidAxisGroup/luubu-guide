@@ -1,0 +1,119 @@
+{
+  "id": "reputation-connect-sources",
+  "kind": "howto",
+  "area": "reputation",
+  "screen": "settings.common.sidebar.lcIntegrations",
+  "title": "Connect Google and Facebook for reviews",
+  "blurb": "Pull your Google and Facebook reviews into Luubu so you can reply in one place.",
+  "icon": "star",
+  "minutes": 4,
+  "keywords": [
+    "connect google",
+    "facebook",
+    "google business profile",
+    "gbp",
+    "reviews",
+    "integrations"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-integrations",
+      "title": "Open Integrations",
+      "body": "Click **Integrations** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/lc-integrations",
+      "target": [
+        {
+          "css": "[id='sb_common.sidebar.lcIntegrations']"
+        },
+        {
+          "text": "Integrations",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/lc-integrations"
+      }
+    },
+    {
+      "id": "google",
+      "title": "Connect Google",
+      "body": "Find **Google** and click **Connect**. Sign in with the Google account that manages your Business Profile.",
+      "route": "^/settings/lc-integrations",
+      "go": "/settings/lc-integrations",
+      "target": [
+        {
+          "text": "Google"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Google"
+    },
+    {
+      "id": "location",
+      "title": "Pick your location",
+      "body": "Choose your business location when asked. Google reviews then start flowing into **Reputation**.",
+      "route": "^/settings/lc-integrations",
+      "go": "/settings/lc-integrations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "facebook",
+      "title": "Connect Facebook",
+      "body": "Do the same for **Facebook**: connect, then choose your business Page.",
+      "tip": "Page not showing? You need full control of the Page. Email hello@luubu.com and we'll sort it with you.",
+      "route": "^/settings/lc-integrations",
+      "go": "/settings/lc-integrations",
+      "target": [
+        {
+          "text": "Facebook"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Facebook"
+    },
+    {
+      "id": "check",
+      "title": "Check they arrive",
+      "body": "Give it a few minutes, then open **Reputation** and **Reviews** to see them.",
+      "route": "^/settings/lc-integrations",
+      "go": "/settings/lc-integrations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

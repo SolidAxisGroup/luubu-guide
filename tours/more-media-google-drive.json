@@ -1,0 +1,81 @@
+{
+  "id": "more-media-google-drive",
+  "kind": "howto",
+  "area": "more",
+  "screen": "more.app-media",
+  "title": "Connect Google Drive to Media Storage",
+  "blurb": "Use your Google Drive files inside Luubu without re-uploading.",
+  "icon": "image",
+  "minutes": 2,
+  "keywords": [
+    "google drive",
+    "drive",
+    "connect",
+    "media",
+    "files",
+    "sync"
+  ],
+  "steps": [
+    {
+      "id": "open-media-storage",
+      "title": "Open Media Storage",
+      "body": "Click **Media Storage** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_app-media"
+        },
+        {
+          "text": "Media Storage",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/media-storage"
+      }
+    },
+    {
+      "id": "connect",
+      "title": "Connect Drive",
+      "body": "Click **Connect Google Drive** at the top right.",
+      "route": "^/media-storage",
+      "go": "/media-storage",
+      "target": [
+        {
+          "text": "Connect Google Drive",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Connect Google Drive"
+    },
+    {
+      "id": "signin",
+      "title": "Sign in",
+      "body": "Sign in to Google and allow access.",
+      "route": "^/media-storage",
+      "go": "/media-storage",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "browse",
+      "title": "Use your files",
+      "body": "Your Drive now shows inside Media Storage. Files stay in Drive, so rename or delete them in Drive itself.",
+      "route": "^/media-storage",
+      "go": "/media-storage",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

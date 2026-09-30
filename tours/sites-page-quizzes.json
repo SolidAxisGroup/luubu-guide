@@ -1,0 +1,104 @@
+{
+  "id": "sites-page-quizzes",
+  "kind": "page",
+  "area": "sites",
+  "screen": "sites.quiz-builder",
+  "title": "Tour the Quizzes page",
+  "blurb": "See where scored quizzes are built and how results work.",
+  "icon": "star",
+  "minutes": 2,
+  "keywords": [
+    "quiz",
+    "assessment",
+    "score",
+    "lead magnet",
+    "results",
+    "tour"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Quizzes",
+      "body": "Click **Quizzes**. A quiz scores answers and shows a result, which makes a fun way to capture leads.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/quiz-builder/main",
+      "target": [
+        {
+          "css": "#tb_quiz-builder"
+        },
+        {
+          "text": "Quizzes",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/quiz-builder"
+      }
+    },
+    {
+      "id": "add",
+      "title": "Start a quiz",
+      "body": "**Create quiz** starts a new quiz from blank or from a template.",
+      "route": "^/quiz-builder",
+      "go": "/quiz-builder/main",
+      "target": [
+        {
+          "text": "Create quiz",
+          "tag": "button"
+        },
+        {
+          "text": "Add Quiz",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create quiz"
+    },
+    {
+      "id": "tabs",
+      "title": "Inside a quiz",
+      "body": "Each quiz has **Edit** for questions, **Settings** for scoring and results, **Notifications** for alerts and **Submissions** for answers.",
+      "route": "^/quiz-builder",
+      "go": "/quiz-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Next: try **Build a quiz with results** from the Guide.",
+      "route": "^/quiz-builder",
+      "go": "/quiz-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

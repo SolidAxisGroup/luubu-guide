@@ -1,0 +1,133 @@
+{
+  "id": "reporting-audit-run",
+  "kind": "howto",
+  "area": "reporting",
+  "screen": "reporting.audit-report",
+  "title": "Run a local marketing audit",
+  "blurb": "Get a graded report on how easy you are to find locally.",
+  "icon": "chart",
+  "minutes": 4,
+  "keywords": [
+    "marketing audit",
+    "audit",
+    "local seo",
+    "google",
+    "grade",
+    "report"
+  ],
+  "steps": [
+    {
+      "id": "open-reporting",
+      "title": "Open Reporting",
+      "body": "Click **Reporting** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reporting"
+        },
+        {
+          "text": "Reporting",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/"
+      }
+    },
+    {
+      "id": "open-local-marketing-audit",
+      "title": "Open Local Marketing Audit",
+      "body": "Click **Local Marketing Audit**.",
+      "route": "^/reporting/",
+      "go": "/reporting/local-marketing-audit",
+      "target": [
+        {
+          "css": "#tb_audit-report"
+        },
+        {
+          "text": "Local Marketing Audit",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/local-marketing-audit"
+      }
+    },
+    {
+      "id": "generate",
+      "title": "Start an audit",
+      "body": "Click **Generate New Report**.",
+      "route": "^/reporting/local-marketing-audit",
+      "go": "/reporting/local-marketing-audit",
+      "target": [
+        {
+          "text": "Generate New Report",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Generate New Report",
+      "advance": "click"
+    },
+    {
+      "id": "details",
+      "title": "Check your details",
+      "body": "Your business name, address, phone and website fill in for you. Fix anything that is wrong.",
+      "route": "^/reporting/local-marketing-audit",
+      "go": "/reporting/local-marketing-audit",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "gbp",
+      "title": "Pick your Google profile",
+      "body": "Choose your Google Business Profile from the list, or turn on the toggle to search Google Maps instead.",
+      "route": "^/reporting/local-marketing-audit",
+      "go": "/reporting/local-marketing-audit",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "run",
+      "title": "Run it",
+      "body": "Click **Generate Report**.",
+      "route": "^/reporting/local-marketing-audit",
+      "go": "/reporting/local-marketing-audit",
+      "target": [
+        {
+          "text": "Generate Report",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Generate Report"
+    },
+    {
+      "id": "read",
+      "title": "Read the grades",
+      "body": "Grades cover your Google profile, website, local search heat maps, listings and reviews. Start with the lowest grade.",
+      "route": "^/reporting/local-marketing-audit",
+      "go": "/reporting/local-marketing-audit",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

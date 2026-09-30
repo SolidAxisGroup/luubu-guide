@@ -1,0 +1,180 @@
+{
+  "id": "marketing-social-bulk-csv",
+  "kind": "howto",
+  "area": "marketing",
+  "screen": "marketing.social-planner",
+  "title": "Bulk schedule social posts from a spreadsheet",
+  "blurb": "Load up to 90 posts at once from a CSV or Excel file.",
+  "icon": "share",
+  "minutes": 6,
+  "keywords": [
+    "bulk",
+    "csv",
+    "excel",
+    "spreadsheet",
+    "upload posts",
+    "schedule many",
+    "social planner"
+  ],
+  "steps": [
+    {
+      "id": "open-marketing",
+      "title": "Open Marketing",
+      "body": "Click **Marketing** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_email-marketing"
+        },
+        {
+          "text": "Marketing",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/"
+      }
+    },
+    {
+      "id": "open-social-planner",
+      "title": "Open Social Planner",
+      "body": "Click **Social Planner** along the top.",
+      "route": "^/marketing/",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "css": "#tb_social-planner"
+        },
+        {
+          "text": "Social Planner",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/social-planner"
+      }
+    },
+    {
+      "id": "new-post",
+      "title": "Open the New Post menu",
+      "body": "Click **+ New Post**.",
+      "route": "^/marketing/social-planner",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "text": "New Post",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New Post",
+      "advance": "click"
+    },
+    {
+      "id": "upload-csv",
+      "title": "Choose the spreadsheet option",
+      "body": "Pick **Upload from CSV**.",
+      "route": "^/marketing/social-planner",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "text": "Upload from CSV"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Upload from CSV",
+      "advance": "click"
+    },
+    {
+      "id": "format",
+      "title": "Pick a format",
+      "body": "Choose **Advanced Format**. It handles hashtags, several photos and more. Download the sample file here and fill in one row per post.",
+      "route": "^/marketing/social-planner",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "text": "Advanced Format"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Advanced Format",
+      "tip": "Keep dates and times in the exact layout the sample uses, or rows get flagged."
+    },
+    {
+      "id": "upload",
+      "title": "Upload your file",
+      "body": "Upload your finished .csv or .xlsx file, then click **Next**.",
+      "route": "^/marketing/social-planner",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "text": "Next",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Next"
+    },
+    {
+      "id": "channels",
+      "title": "Pick the accounts",
+      "body": "Choose the pages to post to, then click **Create**.",
+      "route": "^/marketing/social-planner",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "text": "Create",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create",
+      "tip": "Tick **Send for approval** if someone else needs to check posts first."
+    },
+    {
+      "id": "import",
+      "title": "Fix, schedule, import",
+      "body": "Fix any rows marked with errors. Click **Schedule**, then **Import**. The posts land in your Planner.",
+      "route": "^/marketing/social-planner",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "text": "Import",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Import",
+      "tip": "One file can hold up to 90 posts across all accounts."
+    }
+  ]
+}

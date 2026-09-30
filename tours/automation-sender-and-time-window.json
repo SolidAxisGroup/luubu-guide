@@ -1,0 +1,144 @@
+{
+  "id": "automation-sender-and-time-window",
+  "kind": "howto",
+  "area": "automation",
+  "screen": "automation.workflow",
+  "title": "Set the sender and quiet hours",
+  "blurb": "Choose who messages come from and only send during business hours.",
+  "icon": "cog",
+  "minutes": 3,
+  "keywords": [
+    "sender",
+    "from name",
+    "from email",
+    "time window",
+    "quiet hours",
+    "business hours",
+    "timezone"
+  ],
+  "steps": [
+    {
+      "id": "open-automation",
+      "title": "Open Automation",
+      "body": "Click **Automation** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_automation"
+        },
+        {
+          "text": "Automation",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/automation/"
+      }
+    },
+    {
+      "id": "open-workflow",
+      "title": "Open Workflows",
+      "body": "Click **Workflows** at the top.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "css": "#tb_workflow"
+        },
+        {
+          "text": "Workflows"
+        }
+      ],
+      "advance": {
+        "route": "^/automation/workflows(?!/settings)"
+      }
+    },
+    {
+      "id": "open",
+      "title": "Open the workflow",
+      "body": "Open the workflow you want to adjust.",
+      "route": "^/automation/workflows(?!/settings)",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "settings",
+      "title": "Open its settings",
+      "body": "Click the **Settings** tab at the top of the builder.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Settings"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Settings"
+    },
+    {
+      "id": "window",
+      "title": "Set a time window",
+      "body": "Under **Time Window**, choose the days and hours messages may go out, for example weekdays 8am to 6pm. Anything due outside waits until the window opens.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Time Window"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Time Window"
+    },
+    {
+      "id": "sender",
+      "title": "Set the sender",
+      "body": "Fill in **From Name**, **From Email** and **From Number** so replies come back to the right person.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "From Name"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "From Name"
+    },
+    {
+      "id": "timezone",
+      "title": "Pick the timezone",
+      "body": "Under **Timezone**, use the account timezone for NZ customers, or the contact's timezone if you have clients overseas. Then click **Save**.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Timezone"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Timezone"
+    }
+  ]
+}

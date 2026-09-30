@@ -1,0 +1,122 @@
+{
+  "id": "ai-page-agent-logs",
+  "kind": "page",
+  "area": "ai",
+  "screen": "ai.agent-logs",
+  "title": "Tour Agent Logs",
+  "blurb": "See exactly what your AI agents said and did.",
+  "icon": "chart",
+  "minutes": 2,
+  "keywords": [
+    "agent logs",
+    "ai logs",
+    "history",
+    "what bot said",
+    "debug",
+    "tour"
+  ],
+  "steps": [
+    {
+      "id": "open-ai-agents",
+      "title": "Open AI Agents",
+      "body": "Click **AI Agents** in the left menu.",
+      "target": [
+        {
+          "css": "[id='sb_AI Agents']"
+        },
+        {
+          "text": "AI Agents",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/"
+      }
+    },
+    {
+      "id": "open-agent-logs",
+      "title": "Open Agent Logs",
+      "body": "Click the **Agent Logs** tab.",
+      "route": "^/ai-agents/",
+      "go": "/ai-agents/agent-logs",
+      "target": [
+        {
+          "css": "#tb_agent-logs"
+        },
+        {
+          "text": "Agent Logs"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/agent-logs"
+      }
+    },
+    {
+      "id": "list",
+      "title": "Every conversation",
+      "body": "Each row is one conversation an AI agent had, with the time, channel and status.",
+      "route": "^/ai-agents/agent-logs",
+      "go": "/ai-agents/agent-logs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "filters",
+      "title": "Filter",
+      "body": "Filter by agent, AI product, channel, contact or date to find what you need.",
+      "route": "^/ai-agents/agent-logs",
+      "go": "/ai-agents/agent-logs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "detail",
+      "title": "Open one up",
+      "body": "Click a row to see the messages side by side with what the AI did behind the scenes: knowledge it looked up and actions it took.",
+      "route": "^/ai-agents/agent-logs",
+      "go": "/ai-agents/agent-logs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "metrics",
+      "title": "Metrics",
+      "body": "**Metrics** shows conversation volume, response times, and your busiest agents and channels.",
+      "route": "^/ai-agents/agent-logs",
+      "go": "/ai-agents/agent-logs",
+      "target": [
+        {
+          "text": "Metrics"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Metrics"
+    },
+    {
+      "id": "next",
+      "title": "Next step",
+      "body": "Next: try **Improve your AI from the logs** from the Guide.",
+      "route": "^/ai-agents/agent-logs",
+      "go": "/ai-agents/agent-logs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

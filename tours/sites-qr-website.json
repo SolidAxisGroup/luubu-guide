@@ -1,0 +1,126 @@
+{
+  "id": "sites-qr-website",
+  "kind": "howto",
+  "area": "sites",
+  "screen": "sites.qr-codes",
+  "title": "Make a QR code for a page or form",
+  "blurb": "Create a branded QR code that opens your website, funnel or form.",
+  "icon": "grid",
+  "minutes": 4,
+  "keywords": [
+    "qr code",
+    "website qr",
+    "funnel qr",
+    "form qr",
+    "flyer",
+    "print"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open QR Codes",
+      "body": "Click **QR Codes**.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/qr-codes",
+      "target": [
+        {
+          "css": "#tb_qr-codes"
+        },
+        {
+          "text": "QR Codes",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/qr-codes"
+      }
+    },
+    {
+      "id": "create",
+      "title": "Start a code",
+      "body": "Click **Create QR Code**.",
+      "route": "^/qr-codes",
+      "go": "/qr-codes",
+      "target": [
+        {
+          "text": "Create QR Code",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create QR Code",
+      "advance": "click"
+    },
+    {
+      "id": "type",
+      "title": "Name it and pick the type",
+      "body": "Name it after where it will be printed, like **Van signage**. Choose **Website**, **Funnel** or **Form** as the type and click **Next**.",
+      "route": "^/qr-codes",
+      "go": "/qr-codes",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "One code per flyer or sign lets you see which one gets scanned most."
+    },
+    {
+      "id": "target",
+      "title": "Set where it goes",
+      "body": "Paste the page link or pick the funnel or form.",
+      "route": "^/qr-codes",
+      "go": "/qr-codes",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "design",
+      "title": "Brand it",
+      "body": "Set the colours and shape, and add your logo in the centre. Keep strong contrast so it scans easily.",
+      "route": "^/qr-codes",
+      "go": "/qr-codes",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Test, save and download",
+      "body": "Scan it with your phone, click **Save**, then download a PNG for screens or a PDF or SVG for print.",
+      "route": "^/qr-codes",
+      "go": "/qr-codes",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

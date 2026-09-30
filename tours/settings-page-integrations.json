@@ -1,0 +1,106 @@
+{
+  "id": "settings-page-integrations",
+  "kind": "page",
+  "area": "settings",
+  "screen": "settings.common.sidebar.lcIntegrations",
+  "title": "Tour: Integrations",
+  "blurb": "Connect Google, Facebook, Instagram, TikTok, Xero, QuickBooks and more.",
+  "icon": "share",
+  "minutes": 2,
+  "keywords": [
+    "integrations",
+    "connect",
+    "google",
+    "facebook",
+    "xero",
+    "quickbooks",
+    "apps"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-integrations",
+      "title": "Open Integrations",
+      "body": "Click **Integrations** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/lc-integrations",
+      "target": [
+        {
+          "css": "[id='sb_common.sidebar.lcIntegrations']"
+        },
+        {
+          "text": "Integrations",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/lc-integrations"
+      }
+    },
+    {
+      "id": "cards",
+      "title": "One card per app",
+      "body": "Each app has its own card with a **Connect** button. Connected apps show their status.",
+      "route": "^/settings/lc-integrations",
+      "go": "/settings/lc-integrations",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Connect"
+    },
+    {
+      "id": "social",
+      "title": "Leads and messages",
+      "body": "Connect Facebook, Instagram and Google Business Profile to pull leads, messages and reviews into **Conversations**.",
+      "route": "^/settings/lc-integrations",
+      "go": "/settings/lc-integrations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "accounting",
+      "title": "Accounting",
+      "body": "Connect Xero or QuickBooks so your Luubu invoices flow into your books.",
+      "route": "^/settings/lc-integrations",
+      "go": "/settings/lc-integrations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Next: try **Connect Facebook and Instagram** from the Guide.",
+      "route": "^/settings/lc-integrations",
+      "go": "/settings/lc-integrations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "id": "settings-phone-call-routing",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.phone-system",
+  "title": "Choose who answers incoming calls",
+  "blurb": "Ring your mobile, ring the team, or record calls.",
+  "icon": "phone",
+  "minutes": 4,
+  "keywords": [
+    "call routing",
+    "ring",
+    "forward calls",
+    "call recording",
+    "ring team",
+    "incoming calls",
+    "timeout"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-phone-system",
+      "title": "Open Phone System",
+      "body": "Click **Phone System** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/phone_system",
+      "target": [
+        {
+          "css": "[id='sb_phone-system']"
+        },
+        {
+          "text": "Phone System",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/phone_system"
+      }
+    },
+    {
+      "id": "numbers",
+      "title": "Open your numbers",
+      "body": "Click **Phone Numbers**.",
+      "route": "^/settings/phone_system",
+      "go": "/settings/phone_system",
+      "target": [
+        {
+          "text": "Phone Numbers"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Phone Numbers",
+      "tip": "See **Your phone system requires configuration**? We need to switch Luubu Phone on for you. Email hello@luubu.com."
+    },
+    {
+      "id": "edit",
+      "title": "Edit the number",
+      "body": "Click the three dots next to the number, then **Edit Configuration**.",
+      "route": "^/settings/phone_system",
+      "go": "/settings/phone_system",
+      "target": [
+        {
+          "text": "Edit Configuration"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Edit Configuration"
+    },
+    {
+      "id": "name",
+      "title": "Name it",
+      "body": "Give the number a friendly name like \"Main line\" so the team knows which one rang.",
+      "route": "^/settings/phone_system",
+      "go": "/settings/phone_system",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "ring",
+      "title": "Who it rings",
+      "body": "Choose where calls go: your mobile, one team member, or several team members at once.",
+      "route": "^/settings/phone_system",
+      "go": "/settings/phone_system",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "timeout",
+      "title": "Ring time",
+      "body": "Set **Incoming Call Timeout** to about 20 seconds. Longer and calls may drop into your mobile carrier's voicemail instead of Luubu's.",
+      "route": "^/settings/phone_system",
+      "go": "/settings/phone_system",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Incoming Call Timeout"
+    },
+    {
+      "id": "recording",
+      "title": "Recording (optional)",
+      "body": "Turn on **Call Recording** if you want recordings. Play a short \"this call may be recorded\" message too.",
+      "route": "^/settings/phone_system",
+      "go": "/settings/phone_system",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Call Recording"
+    },
+    {
+      "id": "save",
+      "title": "Save",
+      "body": "Save, then ring the number from another phone to test.",
+      "route": "^/settings/phone_system",
+      "go": "/settings/phone_system",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

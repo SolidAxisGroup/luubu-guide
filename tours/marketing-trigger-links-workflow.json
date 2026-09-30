@@ -1,0 +1,145 @@
+{
+  "id": "marketing-trigger-links-workflow",
+  "kind": "howto",
+  "area": "marketing",
+  "screen": "automation.workflow",
+  "title": "Follow up when someone clicks a link",
+  "blurb": "Start a workflow the moment a contact clicks your trigger link.",
+  "icon": "flow",
+  "minutes": 5,
+  "keywords": [
+    "trigger link clicked",
+    "workflow",
+    "automation",
+    "follow up",
+    "click",
+    "hot lead"
+  ],
+  "steps": [
+    {
+      "id": "open-automation",
+      "title": "Open Automation",
+      "body": "Click **Automation** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_automation"
+        },
+        {
+          "text": "Automation",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/automation/"
+      }
+    },
+    {
+      "id": "open-workflows",
+      "title": "Open Workflows",
+      "body": "Click **Workflows**.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "css": "#tb_workflow"
+        },
+        {
+          "text": "Workflows",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/automation/workflows"
+      }
+    },
+    {
+      "id": "create",
+      "title": "Create a workflow",
+      "body": "Click **Create workflow**, then **Start from scratch**.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Create workflow"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create workflow"
+    },
+    {
+      "id": "trigger",
+      "title": "Add the trigger",
+      "body": "Click **Add New Trigger** and choose **Trigger Link Clicked**.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Trigger Link Clicked"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Trigger Link Clicked"
+    },
+    {
+      "id": "filter",
+      "title": "Pick your link",
+      "body": "Add a filter for **Trigger link** and choose the link to watch. Save the trigger.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Trigger link"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Trigger link"
+    },
+    {
+      "id": "actions",
+      "title": "Add what happens next",
+      "body": "Press **+** to add actions. Good ideas: add a \"hot lead\" tag, create a task to call them, or send a follow-up text.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "publish",
+      "title": "Publish it",
+      "body": "Switch **Draft** to **Publish** at the top right and click **Save**.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Publish"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Publish",
+      "tip": "Test it by clicking the link yourself from a message sent to your own contact."
+    }
+  ]
+}

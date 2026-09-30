@@ -1,0 +1,132 @@
+{
+  "id": "reputation-automate-requests",
+  "kind": "howto",
+  "area": "reputation",
+  "screen": "automation.workflow",
+  "title": "Ask for a review automatically after a job",
+  "blurb": "Send a review request by itself when a job or appointment is done.",
+  "icon": "flow",
+  "minutes": 5,
+  "keywords": [
+    "automate",
+    "review request",
+    "workflow",
+    "after job",
+    "automatic",
+    "reviews",
+    "appointment"
+  ],
+  "steps": [
+    {
+      "id": "open-automation",
+      "title": "Open Automation",
+      "body": "Click **Automation** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_automation"
+        },
+        {
+          "text": "Automation",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/automation/"
+      }
+    },
+    {
+      "id": "open-workflows",
+      "title": "Open Workflows",
+      "body": "Click **Workflows**.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "css": "#tb_workflow"
+        },
+        {
+          "text": "Workflows",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/automation/workflows"
+      }
+    },
+    {
+      "id": "create",
+      "title": "Create a workflow",
+      "body": "Click **Create Workflow** and start from scratch.",
+      "route": "^/automation/workflows",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Create Workflow",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create Workflow"
+    },
+    {
+      "id": "trigger",
+      "title": "Choose the trigger",
+      "body": "Click **Add New Trigger**. Pick the moment a job is done, such as **Appointment Status** (showed) or **Opportunity Status Changed** (won).",
+      "route": "^/automation/workflows",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Add New Trigger"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add New Trigger"
+    },
+    {
+      "id": "wait",
+      "title": "Add a short wait",
+      "body": "Add a **Wait** step of a couple of hours so the request arrives while the job is fresh.",
+      "route": "^/automation/workflows",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "action",
+      "title": "Add the review request",
+      "body": "Add the **Review Request** action (search for \"review\") and choose SMS or email.",
+      "route": "^/automation/workflows",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "publish",
+      "title": "Turn it on",
+      "body": "Name the workflow, switch it to **Publish** and click **Save**.",
+      "route": "^/automation/workflows",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

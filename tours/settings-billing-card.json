@@ -1,0 +1,103 @@
+{
+  "id": "settings-billing-card",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.saas-billing",
+  "title": "Update the card on file",
+  "blurb": "Add a new card or change which card we charge.",
+  "icon": "card",
+  "minutes": 2,
+  "keywords": [
+    "card",
+    "credit card",
+    "payment method",
+    "update card",
+    "expired card",
+    "billing"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-billing",
+      "title": "Open Billing",
+      "body": "Click **Billing** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/company-billing/billing",
+      "target": [
+        {
+          "css": "[id='sb_saas-billing']"
+        },
+        {
+          "text": "Billing",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/company-billing/billing"
+      }
+    },
+    {
+      "id": "methods",
+      "title": "Find Payment Methods",
+      "body": "Scroll to **Payment Methods**.",
+      "route": "^/settings/company-billing/billing",
+      "go": "/settings/company-billing/billing",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Payment Methods"
+    },
+    {
+      "id": "add-card",
+      "title": "Add a card",
+      "body": "Click **Add New Card** and enter the card details.",
+      "route": "^/settings/company-billing/billing",
+      "go": "/settings/company-billing/billing",
+      "target": [
+        {
+          "text": "Add New Card",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add New Card",
+      "advance": "click"
+    },
+    {
+      "id": "primary",
+      "title": "Make it the main card",
+      "body": "Set the new card as primary so plan charges and wallet top-ups use it. You can then delete the old one.",
+      "route": "^/settings/company-billing/billing",
+      "go": "/settings/company-billing/billing",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Card declined? Email hello@luubu.com and we will sort it."
+    }
+  ]
+}

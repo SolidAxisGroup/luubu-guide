@@ -1,0 +1,118 @@
+{
+  "id": "reputation-video-request",
+  "kind": "howto",
+  "area": "reputation",
+  "screen": "reputation.reputation-video-testimonials",
+  "title": "Ask a customer for a video testimonial",
+  "blurb": "Send your collector link by text, email or WhatsApp.",
+  "icon": "star",
+  "minutes": 2,
+  "keywords": [
+    "video testimonial",
+    "send",
+    "ask",
+    "link",
+    "video review",
+    "request"
+  ],
+  "steps": [
+    {
+      "id": "open-reputation",
+      "title": "Open Reputation",
+      "body": "Click **Reputation** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reputation"
+        },
+        {
+          "text": "Reputation",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reputation/"
+      }
+    },
+    {
+      "id": "open-video-testimonials",
+      "title": "Open Video Testimonials",
+      "body": "Click **Video Testimonials**.",
+      "route": "^/reputation/",
+      "go": "/reputation/video-testimonials",
+      "target": [
+        {
+          "css": "#tb_reputation-video-testimonials"
+        },
+        {
+          "text": "Video Testimonials",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reputation/video-testimonials"
+      }
+    },
+    {
+      "id": "find",
+      "title": "Find your collector",
+      "body": "Find the collector you want to send.",
+      "route": "^/reputation/video-testimonials",
+      "go": "/reputation/video-testimonials",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "copy",
+      "title": "Copy the link",
+      "body": "Click **Copy Link** and paste it anywhere: a text, an invoice note or your email signature.",
+      "route": "^/reputation/video-testimonials",
+      "go": "/reputation/video-testimonials",
+      "target": [
+        {
+          "text": "Copy Link"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Copy Link"
+    },
+    {
+      "id": "send",
+      "title": "Or send it from here",
+      "body": "Or use **Send Review Request** to send it by email, SMS or WhatsApp.",
+      "route": "^/reputation/video-testimonials",
+      "go": "/reputation/video-testimonials",
+      "target": [
+        {
+          "text": "Send Review Request"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Send Review Request"
+    },
+    {
+      "id": "length",
+      "title": "Keep it short",
+      "body": "Videos can run up to 2 minutes 30 seconds. Tell customers 30 seconds is plenty.",
+      "route": "^/reputation/video-testimonials",
+      "go": "/reputation/video-testimonials",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

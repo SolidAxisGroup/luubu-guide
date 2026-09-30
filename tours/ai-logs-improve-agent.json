@@ -1,0 +1,104 @@
+{
+  "id": "ai-logs-improve-agent",
+  "kind": "howto",
+  "area": "ai",
+  "screen": "ai.agent-logs",
+  "title": "Improve your AI from the logs",
+  "blurb": "Spot weak answers and fill the gaps in a weekly ten-minute check.",
+  "icon": "star",
+  "minutes": 5,
+  "keywords": [
+    "improve",
+    "better answers",
+    "knowledge gaps",
+    "logs",
+    "train",
+    "review"
+  ],
+  "steps": [
+    {
+      "id": "open-ai-agents",
+      "title": "Open AI Agents",
+      "body": "Click **AI Agents** in the left menu.",
+      "target": [
+        {
+          "css": "[id='sb_AI Agents']"
+        },
+        {
+          "text": "AI Agents",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/"
+      }
+    },
+    {
+      "id": "open-agent-logs",
+      "title": "Open Agent Logs",
+      "body": "Click the **Agent Logs** tab.",
+      "route": "^/ai-agents/",
+      "go": "/ai-agents/agent-logs",
+      "target": [
+        {
+          "css": "#tb_agent-logs"
+        },
+        {
+          "text": "Agent Logs"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/agent-logs"
+      }
+    },
+    {
+      "id": "filter",
+      "title": "Look at the last week",
+      "body": "Set the date filter to the last 7 days.",
+      "route": "^/ai-agents/agent-logs",
+      "go": "/ai-agents/agent-logs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "scan",
+      "title": "Scan for trouble",
+      "body": "Open conversations that ended without a booking, or where the customer asked for a person.",
+      "route": "^/ai-agents/agent-logs",
+      "go": "/ai-agents/agent-logs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "why",
+      "title": "Find the cause",
+      "body": "Check whether it found knowledge for the question. No knowledge usually means a missing FAQ.",
+      "route": "^/ai-agents/agent-logs",
+      "go": "/ai-agents/agent-logs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "fix",
+      "title": "Fill the gap",
+      "body": "Add the missing answer in **Knowledge Base** as an FAQ, or tighten the bot's instructions.",
+      "route": "^/ai-agents/agent-logs",
+      "go": "/ai-agents/agent-logs",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Repeat weekly for the first month. Answers improve fast."
+    }
+  ]
+}

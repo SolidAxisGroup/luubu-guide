@@ -1,0 +1,138 @@
+{
+  "id": "settings-page-custom-fields",
+  "kind": "page",
+  "area": "settings",
+  "screen": "settings.custom-fields-settings",
+  "title": "Tour: Custom Fields",
+  "blurb": "Extra details you store on contacts, deals and companies.",
+  "icon": "grid",
+  "minutes": 2,
+  "keywords": [
+    "custom fields",
+    "fields",
+    "contact fields",
+    "folders",
+    "data",
+    "forms"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-custom-fields",
+      "title": "Open Custom Fields",
+      "body": "Click **Custom Fields** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/fields",
+      "target": [
+        {
+          "css": "[id='sb_custom-fields-settings']"
+        },
+        {
+          "text": "Custom Fields",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/fields"
+      }
+    },
+    {
+      "id": "object",
+      "title": "Pick the record type",
+      "body": "Choose whether you are working on Contact, Opportunity or Company fields.",
+      "route": "^/settings/fields",
+      "go": "/settings/fields",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "fields",
+      "title": "Fields",
+      "body": "The **Fields** list shows every custom field, its type and its folder.",
+      "route": "^/settings/fields",
+      "go": "/settings/fields",
+      "target": [
+        {
+          "text": "Fields"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Fields"
+    },
+    {
+      "id": "folders",
+      "title": "Folders",
+      "body": "**Folders** group fields so contact records stay tidy.",
+      "route": "^/settings/fields",
+      "go": "/settings/fields",
+      "target": [
+        {
+          "text": "Folders"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Folders"
+    },
+    {
+      "id": "create",
+      "title": "Add a field",
+      "body": "**Create field** adds a new field.",
+      "route": "^/settings/fields",
+      "go": "/settings/fields",
+      "target": [
+        {
+          "text": "Create field",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create field"
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Next: try **Create a custom field** from the Guide.",
+      "route": "^/settings/fields",
+      "go": "/settings/fields",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

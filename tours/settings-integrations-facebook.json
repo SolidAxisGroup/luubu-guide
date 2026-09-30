@@ -1,0 +1,126 @@
+{
+  "id": "settings-integrations-facebook",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.common.sidebar.lcIntegrations",
+  "title": "Connect Facebook and Instagram",
+  "blurb": "Get Facebook leads, Messenger and Instagram DMs in Luubu.",
+  "icon": "share",
+  "minutes": 4,
+  "keywords": [
+    "facebook",
+    "instagram",
+    "messenger",
+    "lead ads",
+    "meta",
+    "dms",
+    "connect"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-integrations",
+      "title": "Open Integrations",
+      "body": "Click **Integrations** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/lc-integrations",
+      "target": [
+        {
+          "css": "[id='sb_common.sidebar.lcIntegrations']"
+        },
+        {
+          "text": "Integrations",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/lc-integrations"
+      }
+    },
+    {
+      "id": "card",
+      "title": "Find the Facebook card",
+      "body": "Find the **Facebook** card and click **Connect**.",
+      "route": "^/settings/lc-integrations",
+      "go": "/settings/lc-integrations",
+      "target": [
+        {
+          "text": "Facebook"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Facebook",
+      "tip": "You need to be an admin of the Facebook Page and its Business account."
+    },
+    {
+      "id": "login",
+      "title": "Log in and allow",
+      "body": "Log in to Facebook and accept every permission asked for. Skipping one can stop leads coming through.",
+      "route": "^/settings/lc-integrations",
+      "go": "/settings/lc-integrations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "page",
+      "title": "Pick your Page",
+      "body": "Choose your business Page. Your linked Instagram business account comes with it.",
+      "route": "^/settings/lc-integrations",
+      "go": "/settings/lc-integrations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "leads",
+      "title": "Choose leads",
+      "body": "Pick all leads or new leads only, then click **Connect and Continue**.",
+      "route": "^/settings/lc-integrations",
+      "go": "/settings/lc-integrations",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Connect and Continue"
+    },
+    {
+      "id": "map",
+      "title": "Match form fields",
+      "body": "If you run lead ads, match each form question to a Luubu field.",
+      "route": "^/settings/lc-integrations",
+      "go": "/settings/lc-integrations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "id": "settings-page-opportunities-and-pipelines",
+  "kind": "page",
+  "area": "settings",
+  "screen": "settings.Opportunities-Pipelines",
+  "title": "Tour: Opportunities & Pipelines",
+  "blurb": "Set up your sales pipelines and how deals are tracked.",
+  "icon": "chart",
+  "minutes": 2,
+  "keywords": [
+    "pipeline",
+    "opportunities",
+    "stages",
+    "deals",
+    "sales",
+    "settings"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-opportunities-and-pipelines",
+      "title": "Open Opportunities & Pipelines",
+      "body": "Click **Opportunities & Pipelines** in the Settings menu.",
+      "route": "^/(settings/|crm-settings)",
+      "go": "/crm-settings",
+      "target": [
+        {
+          "css": "[id='sb_Opportunities-Pipelines']"
+        },
+        {
+          "text": "Opportunities & Pipelines",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/crm-settings"
+      }
+    },
+    {
+      "id": "pipelines",
+      "title": "Your pipelines",
+      "body": "A pipeline is the set of steps a job or sale moves through, like New Lead, Quoted, Booked, Won. Your pipelines are listed here.",
+      "route": "^/(crm-settings|opportunities/pipeline)",
+      "go": "/crm-settings",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "stages",
+      "title": "Stages",
+      "body": "Open a pipeline to add, rename, reorder or remove its stages.",
+      "route": "^/(crm-settings|opportunities/pipeline)",
+      "go": "/crm-settings",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "reporting",
+      "title": "Reporting",
+      "body": "Each stage can be shown or hidden in the dashboard funnel and pie charts.",
+      "route": "^/(crm-settings|opportunities/pipeline)",
+      "go": "/crm-settings",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Next: try **Create a sales pipeline** from the Guide.",
+      "route": "^/(crm-settings|opportunities/pipeline)",
+      "go": "/crm-settings",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

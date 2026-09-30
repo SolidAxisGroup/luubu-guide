@@ -1,0 +1,144 @@
+{
+  "id": "reporting-custom-report-schedule",
+  "kind": "howto",
+  "area": "reporting",
+  "screen": "reporting.custom-reports",
+  "title": "Email a report on a schedule",
+  "blurb": "Get a report in your inbox every week or month, automatically.",
+  "icon": "mail",
+  "minutes": 3,
+  "keywords": [
+    "schedule report",
+    "email report",
+    "weekly report",
+    "monthly report",
+    "recipients",
+    "automatic"
+  ],
+  "steps": [
+    {
+      "id": "open-reporting",
+      "title": "Open Reporting",
+      "body": "Click **Reporting** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reporting"
+        },
+        {
+          "text": "Reporting",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/"
+      }
+    },
+    {
+      "id": "open-custom-reports",
+      "title": "Open Custom Reports",
+      "body": "Click **Custom Reports**.",
+      "route": "^/reporting/",
+      "go": "/reporting/reports",
+      "target": [
+        {
+          "css": "#tb_custom-reports"
+        },
+        {
+          "text": "Custom Reports",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/reports"
+      }
+    },
+    {
+      "id": "open",
+      "title": "Open your report",
+      "body": "Open the report you want to send.",
+      "route": "^/reporting/reports",
+      "go": "/reporting/reports",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "schedule",
+      "title": "Schedule it",
+      "body": "Click **Save**, then **Schedule**.",
+      "route": "^/reporting/reports",
+      "go": "/reporting/reports",
+      "target": [
+        {
+          "text": "Schedule"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Schedule",
+      "advance": "click"
+    },
+    {
+      "id": "frequency",
+      "title": "When to send",
+      "body": "Set the frequency, time and date range. Monday morning, covering last week, works well.",
+      "route": "^/reporting/reports",
+      "go": "/reporting/reports",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "recipients",
+      "title": "Who gets it",
+      "body": "Add recipient emails, then edit the subject and message. They do not need a Luubu login.",
+      "route": "^/reporting/reports",
+      "go": "/reporting/reports",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "test",
+      "title": "Send a test",
+      "body": "Send yourself a test email to check it looks right.",
+      "route": "^/reporting/reports",
+      "go": "/reporting/reports",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "confirm",
+      "title": "Confirm",
+      "body": "Click **Save and Schedule**.",
+      "route": "^/reporting/reports",
+      "go": "/reporting/reports",
+      "target": [
+        {
+          "text": "Save and Schedule",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Save and Schedule"
+    }
+  ]
+}

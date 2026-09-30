@@ -1,0 +1,119 @@
+{
+  "id": "payments-setup-gst",
+  "kind": "howto",
+  "area": "payments",
+  "screen": "payments.payment-settings",
+  "title": "Set up GST",
+  "blurb": "Create the 15% GST rate for products and invoices.",
+  "icon": "cog",
+  "minutes": 2,
+  "keywords": [
+    "gst",
+    "tax",
+    "15%",
+    "tax rate",
+    "gst number",
+    "ird"
+  ],
+  "steps": [
+    {
+      "id": "open-payments",
+      "title": "Open Payments",
+      "body": "Click **Payments** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_payments"
+        },
+        {
+          "text": "Payments",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/"
+      }
+    },
+    {
+      "id": "tab-payment-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** along the top.",
+      "route": "^/payments/",
+      "go": "/payments/settings/receipts",
+      "target": [
+        {
+          "css": "#tb_payment-settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/settings/receipts"
+      }
+    },
+    {
+      "id": "tab",
+      "title": "Open Taxes",
+      "body": "Click the **Taxes** tab.",
+      "route": "^/payments/settings",
+      "go": "/payments/settings/receipts",
+      "target": [
+        {
+          "text": "Taxes"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Taxes"
+    },
+    {
+      "id": "create",
+      "title": "Create a tax",
+      "body": "Click **Create Tax**.",
+      "route": "^/payments/settings",
+      "go": "/payments/settings/receipts",
+      "target": [
+        {
+          "text": "Create Tax",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create Tax"
+    },
+    {
+      "id": "fill",
+      "title": "Fill it in",
+      "body": "Name it \"GST\", set the rate to 15, and add your GST number as the tax ID so it shows on invoices.",
+      "route": "^/payments/settings",
+      "go": "/payments/settings/receipts",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save",
+      "body": "Save it. Now you can tick GST on invoices and attach it to products.",
+      "route": "^/payments/settings",
+      "go": "/payments/settings/receipts",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

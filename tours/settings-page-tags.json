@@ -1,0 +1,116 @@
+{
+  "id": "settings-page-tags",
+  "kind": "page",
+  "area": "settings",
+  "screen": "settings.tags",
+  "title": "Tour: Tags",
+  "blurb": "Labels that group contacts and trigger automations.",
+  "icon": "users",
+  "minutes": 2,
+  "keywords": [
+    "tags",
+    "labels",
+    "groups",
+    "contacts",
+    "segments",
+    "categories"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-tags",
+      "title": "Open Tags",
+      "body": "Click **Tags** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/tags",
+      "target": [
+        {
+          "css": "[id='sb_tags']"
+        },
+        {
+          "text": "Tags",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/tags"
+      }
+    },
+    {
+      "id": "what",
+      "title": "What tags do",
+      "body": "Tags are labels on contacts, like \"VIP\", \"quote sent\" or \"Christchurch\". Use them to filter lists and start workflows.",
+      "route": "^/settings/tags",
+      "go": "/settings/tags",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "list",
+      "title": "Your tags",
+      "body": "Every tag in your account is listed here, with its category and colour if set.",
+      "route": "^/settings/tags",
+      "go": "/settings/tags",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "new",
+      "title": "Add a tag",
+      "body": "**Create tag** creates one.",
+      "route": "^/settings/tags",
+      "go": "/settings/tags",
+      "target": [
+        {
+          "text": "Create tag",
+          "tag": "button"
+        },
+        {
+          "text": "New tag",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create tag"
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Next: try **Create and organise tags** from the Guide.",
+      "route": "^/settings/tags",
+      "go": "/settings/tags",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

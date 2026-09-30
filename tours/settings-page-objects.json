@@ -1,0 +1,124 @@
+{
+  "id": "settings-page-objects",
+  "kind": "page",
+  "area": "settings",
+  "screen": "settings.objects",
+  "title": "Tour: Objects",
+  "blurb": "Contacts, companies, opportunities and your own custom record types.",
+  "icon": "grid",
+  "minutes": 2,
+  "keywords": [
+    "objects",
+    "custom objects",
+    "records",
+    "companies",
+    "opportunities",
+    "data"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-objects",
+      "title": "Open Objects",
+      "body": "Click **Objects** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/objects",
+      "target": [
+        {
+          "css": "[id='sb_objects']"
+        },
+        {
+          "text": "Objects",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/objects"
+      }
+    },
+    {
+      "id": "standard",
+      "title": "Built-in objects",
+      "body": "Objects are the types of records you keep. Contacts, Companies and Opportunities come built in.",
+      "route": "^/settings/objects",
+      "go": "/settings/objects",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "custom",
+      "title": "Custom objects",
+      "body": "You can add your own, like Vehicles for a mechanic, Properties for a property manager, or Pets for a vet.",
+      "route": "^/settings/objects",
+      "go": "/settings/objects",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "add",
+      "title": "Add one",
+      "body": "**Add Custom Object** starts a new record type.",
+      "route": "^/settings/objects",
+      "go": "/settings/objects",
+      "target": [
+        {
+          "text": "Add Custom Object",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add Custom Object"
+    },
+    {
+      "id": "settings",
+      "title": "Object settings",
+      "body": "Click an object to see its fields and settings. The Opportunities object is where you allow more than one deal per contact.",
+      "route": "^/settings/objects",
+      "go": "/settings/objects",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Next: try **Create a custom object** from the Guide.",
+      "route": "^/settings/objects",
+      "go": "/settings/objects",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "id": "ai-conversation-bot-instructions",
+  "kind": "howto",
+  "area": "ai",
+  "screen": "ai.ai-agents-conversation-ai",
+  "title": "Set rules for what your bot says",
+  "blurb": "Add instructions so the bot stays on topic and hands over when needed.",
+  "icon": "chat",
+  "minutes": 4,
+  "keywords": [
+    "instructions",
+    "rules",
+    "handover",
+    "human",
+    "prompt",
+    "conversation ai"
+  ],
+  "steps": [
+    {
+      "id": "open-ai-agents",
+      "title": "Open AI Agents",
+      "body": "Click **AI Agents** in the left menu.",
+      "target": [
+        {
+          "css": "[id='sb_AI Agents']"
+        },
+        {
+          "text": "AI Agents",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/"
+      }
+    },
+    {
+      "id": "open-ai-agents-conversation-ai",
+      "title": "Open Conversation AI",
+      "body": "Click the **Conversation AI** tab.",
+      "route": "^/ai-agents/",
+      "go": "/ai-agents/conversation-ai",
+      "target": [
+        {
+          "css": "#tb_ai-agents-conversation-ai"
+        },
+        {
+          "text": "Conversation AI"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/conversation-ai"
+      }
+    },
+    {
+      "id": "open",
+      "title": "Open the bot",
+      "body": "Click the bot you want to adjust.",
+      "route": "^/ai-agents/conversation-ai",
+      "go": "/ai-agents/conversation-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "instructions",
+      "title": "Open Additional Instructions",
+      "body": "Find **Additional Instructions**.",
+      "route": "^/ai-agents/conversation-ai",
+      "go": "/ai-agents/conversation-ai",
+      "target": [
+        {
+          "text": "Additional Instructions"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Additional Instructions"
+    },
+    {
+      "id": "rules",
+      "title": "Write clear rules",
+      "body": "Use short lines: \"Never quote exact prices. Say a tradesperson will confirm.\" \"If someone is upset, say a person will call them.\"",
+      "route": "^/ai-agents/conversation-ai",
+      "go": "/ai-agents/conversation-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "notify",
+      "title": "Get told about gaps",
+      "body": "Turn on email alerts for questions the bot cannot answer, then add those answers to your knowledge base.",
+      "route": "^/ai-agents/conversation-ai",
+      "go": "/ai-agents/conversation-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "test",
+      "title": "Test and save",
+      "body": "Save, then send the bot a few tricky questions from your own phone to check it follows the rules.",
+      "route": "^/ai-agents/conversation-ai",
+      "go": "/ai-agents/conversation-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

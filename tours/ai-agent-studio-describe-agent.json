@@ -1,0 +1,149 @@
+{
+  "id": "ai-agent-studio-describe-agent",
+  "kind": "howto",
+  "area": "ai",
+  "screen": "ai.ai-agents-agent-studio",
+  "title": "Build an agent by describing it",
+  "blurb": "Tell Luubu what the agent should do and it sets up the rest.",
+  "icon": "bot",
+  "minutes": 6,
+  "keywords": [
+    "managed agent",
+    "describe",
+    "natural language",
+    "agent studio",
+    "create agent",
+    "ai"
+  ],
+  "steps": [
+    {
+      "id": "open-ai-agents",
+      "title": "Open AI Agents",
+      "body": "Click **AI Agents** in the left menu.",
+      "target": [
+        {
+          "css": "[id='sb_AI Agents']"
+        },
+        {
+          "text": "AI Agents",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/"
+      }
+    },
+    {
+      "id": "open-ai-agents-agent-studio",
+      "title": "Open Agent Studio",
+      "body": "Click the **Agent Studio** tab.",
+      "route": "^/ai-agents/",
+      "go": "/ai-agents/agent-studio",
+      "target": [
+        {
+          "css": "#tb_ai-agents-agent-studio"
+        },
+        {
+          "text": "Agent Studio"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/agent-studio"
+      }
+    },
+    {
+      "id": "managed",
+      "title": "Open Managed Agents",
+      "body": "Click the **Managed Agents** tab.",
+      "route": "^/ai-agents/agent-studio",
+      "go": "/ai-agents/agent-studio",
+      "target": [
+        {
+          "text": "Managed Agents"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Managed Agents"
+    },
+    {
+      "id": "create",
+      "title": "Start a new agent",
+      "body": "Click **Create Agent**.",
+      "route": "^/ai-agents/agent-studio",
+      "go": "/ai-agents/agent-studio",
+      "target": [
+        {
+          "text": "Create Agent",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create Agent"
+    },
+    {
+      "id": "describe",
+      "title": "Describe the job",
+      "body": "Say what it should achieve, which channels, which knowledge base to use, and what it may do in the CRM. For example: \"When a quote form comes in, tag the job type and text the lead to book a site visit.\"",
+      "route": "^/ai-agents/agent-studio",
+      "go": "/ai-agents/agent-studio",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "triggers",
+      "title": "Check when it runs",
+      "body": "Review the triggers it set, such as **Form Submitted** or **Tag Changed**. Ask the side chat to change anything.",
+      "route": "^/ai-agents/agent-studio",
+      "go": "/ai-agents/agent-studio",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "test",
+      "title": "Test it",
+      "body": "Use the test panel to try a few real examples. Check the replies and the actions it takes.",
+      "route": "^/ai-agents/agent-studio",
+      "go": "/ai-agents/agent-studio",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "publish",
+      "title": "Publish",
+      "body": "When happy, change the status from **Draft** to **Published**.",
+      "route": "^/ai-agents/agent-studio",
+      "go": "/ai-agents/agent-studio",
+      "target": [
+        {
+          "text": "Published"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Published"
+    }
+  ]
+}

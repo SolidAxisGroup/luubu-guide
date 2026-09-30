@@ -1,0 +1,101 @@
+{
+  "id": "connect-email",
+  "kind": "howto",
+  "area": "start",
+  "screen": "settings.location-email-services",
+  "title": "Connect your email",
+  "blurb": "Send from your own domain and sync your Gmail or Outlook inbox.",
+  "icon": "mail",
+  "minutes": 5,
+  "keywords": [
+    "email",
+    "gmail",
+    "outlook",
+    "inbox",
+    "domain",
+    "smtp",
+    "sending"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Everything to do with email lives in **Settings**, at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "email-services",
+      "title": "Open Email Services",
+      "body": "Click **Email Services**. This is where Luubu sends your emails from.",
+      "route": "^/settings/",
+      "go": "/settings/company",
+      "target": [
+        {
+          "css": "#sb_location-email-services"
+        },
+        {
+          "text": "Email Services",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/smtp_service"
+      }
+    },
+    {
+      "id": "sending-domain",
+      "title": "Send from your own domain",
+      "body": "Your account can already send email. For the best delivery, send from your own domain: click **Dedicated Domain And IP**, enter a subdomain like **mail.yourbusiness.co.nz**, then add the records it shows you at your domain provider.",
+      "tip": "Not sure where your domain is managed? Common ones are Crazy Domains, GoDaddy, Cloudflare and 1st Domains.",
+      "route": "^/settings/smtp_service",
+      "go": "/settings/smtp_service",
+      "awayText": "Next we'll set up your sending domain in Email Services.",
+      "target": {
+        "frame": true
+      },
+      "lookFor": "Dedicated Domain And IP"
+    },
+    {
+      "id": "open-integrations",
+      "title": "Now sync your inbox",
+      "body": "To see and reply to your emails inside Luubu, connect your Gmail or Outlook. Click **Integrations** in the left menu.",
+      "route": "^/settings/",
+      "go": "/settings/lc-integrations",
+      "target": [
+        {
+          "css": "[id='sb_common.sidebar.lcIntegrations']"
+        },
+        {
+          "text": "Integrations",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/lc-integrations"
+      }
+    },
+    {
+      "id": "connect-inbox",
+      "title": "Connect Google or Microsoft",
+      "body": "On the **Google** card (for Gmail) or the **Outlook** card, click **Connect**. Sign in with your business email and allow access when asked.",
+      "tip": "Once connected, new emails show up in **Conversations** alongside your texts and messages.",
+      "route": "^/settings/lc-integrations",
+      "go": "/settings/lc-integrations",
+      "target": {
+        "frame": true
+      },
+      "lookFor": "Google"
+    }
+  ]
+}

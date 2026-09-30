@@ -1,0 +1,131 @@
+{
+  "id": "sites-funnel-edit-builder",
+  "kind": "howto",
+  "area": "sites",
+  "screen": "sites.funnels",
+  "title": "Edit a page in the builder",
+  "blurb": "Change text and images, and add sections, rows and elements to a page.",
+  "icon": "page",
+  "minutes": 5,
+  "keywords": [
+    "edit page",
+    "builder",
+    "section",
+    "row",
+    "element",
+    "drag and drop",
+    "text",
+    "image"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Funnels",
+      "body": "Click **Funnels**. (Website pages use the same builder.)",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/funnels-websites/funnels",
+      "target": [
+        {
+          "css": "#tb_funnels"
+        },
+        {
+          "text": "Funnels",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/funnels"
+      }
+    },
+    {
+      "id": "open-funnel",
+      "title": "Open a funnel",
+      "body": "Click the funnel you want to change. Its steps are listed down the left. Pick a step and click **Edit** to open the builder.",
+      "route": "^/funnels-websites/funnels",
+      "go": "/funnels-websites/funnels",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "structure",
+      "title": "How a page is built",
+      "body": "Pages stack in layers: a **section** is a full-width band, a **row** sits inside it and splits into columns, and **elements** (headline, image, button, form) sit in the columns.",
+      "route": "^/",
+      "go": "/funnels-websites/funnels",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "You can drop an element straight onto the page and the builder makes the section and row for you."
+    },
+    {
+      "id": "add-section",
+      "title": "Add a section",
+      "body": "Hover between two sections and click the plus, or open the add panel on the left. Pick a blank section or a ready-made one, like a hero, testimonials or pricing.",
+      "route": "^/",
+      "go": "/funnels-websites/funnels",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "add-element",
+      "title": "Add an element",
+      "body": "Open the elements list on the left and drag in what you need: text, image, video, button or form. Drop it where the blue line shows.",
+      "route": "^/",
+      "go": "/funnels-websites/funnels",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "edit-element",
+      "title": "Change the details",
+      "body": "Click any element to edit it. The panel on the right has **General** for content and links, and **Styles** for colour, spacing and borders.",
+      "route": "^/",
+      "go": "/funnels-websites/funnels",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save and check",
+      "body": "Click **Save** often, then **Preview** to see it as a visitor would. Saving does not change the live page until you click **Publish**.",
+      "route": "^/",
+      "go": "/funnels-websites/funnels",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

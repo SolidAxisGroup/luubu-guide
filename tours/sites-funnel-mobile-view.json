@@ -1,0 +1,117 @@
+{
+  "id": "sites-funnel-mobile-view",
+  "kind": "howto",
+  "area": "sites",
+  "screen": "sites.funnels",
+  "title": "Make your page look right on phones",
+  "blurb": "Check the mobile layout and fix text, spacing and hidden bits for small screens.",
+  "icon": "page",
+  "minutes": 4,
+  "keywords": [
+    "mobile",
+    "phone",
+    "responsive",
+    "tablet",
+    "hide on mobile",
+    "layout"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Funnels",
+      "body": "Click **Funnels**, or **Websites** for a website page.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/funnels-websites/funnels",
+      "target": [
+        {
+          "css": "#tb_funnels"
+        },
+        {
+          "text": "Funnels",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/funnels"
+      }
+    },
+    {
+      "id": "open-page",
+      "title": "Open the page",
+      "body": "Open your funnel, pick the step and click **Edit**.",
+      "route": "^/funnels-websites/funnels",
+      "go": "/funnels-websites/funnels",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "toggle",
+      "title": "Switch to mobile",
+      "body": "At the top of the builder, click the phone icon. The page shrinks to phone width so you can see what most visitors see.",
+      "route": "^/",
+      "go": "/funnels-websites/funnels",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Most local customers will open your page on a phone, so check this every time."
+    },
+    {
+      "id": "fix-text",
+      "title": "Fix text size and spacing",
+      "body": "Click any element while in mobile view and adjust font size, padding and margins. Many of these changes apply to mobile only, so desktop stays as it was.",
+      "route": "^/",
+      "go": "/funnels-websites/funnels",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "hide",
+      "title": "Hide what does not fit",
+      "body": "Select a section or element, open **Styles** in the right panel and use **Visibility** to show it on desktop only or mobile only.",
+      "route": "^/",
+      "go": "/funnels-websites/funnels",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "check",
+      "title": "Check on a real phone",
+      "body": "Click **Save**, then **Preview** and open the link on your own phone. Tap every button and fill in the form.",
+      "route": "^/",
+      "go": "/funnels-websites/funnels",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

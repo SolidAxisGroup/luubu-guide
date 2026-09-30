@@ -1,0 +1,114 @@
+{
+  "id": "conversations-page-manual-actions",
+  "kind": "page",
+  "area": "conversations",
+  "screen": "conversations.manial-actions",
+  "title": "Tour: Manual Actions",
+  "blurb": "Your to-do queue of calls and texts that your workflows asked a person to make.",
+  "icon": "phone",
+  "minutes": 2,
+  "keywords": [
+    "manual actions",
+    "call queue",
+    "sms queue",
+    "follow up",
+    "to do",
+    "calls",
+    "dialler"
+  ],
+  "steps": [
+    {
+      "id": "open-conversations",
+      "title": "Open Conversations",
+      "body": "Click **Conversations** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_conversations"
+        },
+        {
+          "text": "Conversations",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/conversations/"
+      }
+    },
+    {
+      "id": "tab-manial-actions",
+      "title": "Open Manual Actions",
+      "body": "Click **Manual Actions** along the top.",
+      "route": "^/conversations/",
+      "go": "/conversations/manual_actions",
+      "target": [
+        {
+          "css": "#tb_manial-actions"
+        },
+        {
+          "text": "Manual Actions",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/conversations/manual_actions"
+      }
+    },
+    {
+      "id": "what",
+      "title": "What lands here",
+      "body": "Some follow-ups need a human, like a personal call to a new lead. When a workflow hits a manual call or manual SMS step, the job queues up here for your team.",
+      "route": "^/conversations/manual_actions",
+      "go": "/conversations/manual_actions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "filters",
+      "title": "Filter the queue",
+      "body": "Filter by type (Call or SMS), by who it's assigned to, by the workflow it came from, or by status such as **Yet to Call**, **Completed** or **Skipped**.",
+      "route": "^/conversations/manual_actions",
+      "go": "/conversations/manual_actions",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Yet to Call"
+    },
+    {
+      "id": "start",
+      "title": "Work through it",
+      "body": "Click **Let's Start** to go through the queue one by one.",
+      "route": "^/conversations/manual_actions",
+      "go": "/conversations/manual_actions",
+      "target": [
+        {
+          "text": "Let's Start",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Let's Start"
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Next: try **Work through your call and text queue** from the Guide.",
+      "route": "^/conversations/manual_actions",
+      "go": "/conversations/manual_actions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

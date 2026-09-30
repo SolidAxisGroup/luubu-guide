@@ -1,0 +1,130 @@
+{
+  "id": "sites-quiz-build",
+  "kind": "howto",
+  "area": "sites",
+  "screen": "sites.quiz-builder",
+  "title": "Build a quiz with results",
+  "blurb": "Create a scored quiz that shows each person a tailored result.",
+  "icon": "star",
+  "minutes": 7,
+  "keywords": [
+    "quiz",
+    "score",
+    "points",
+    "results",
+    "assessment",
+    "lead magnet"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Quizzes",
+      "body": "Click **Quizzes**.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/quiz-builder/main",
+      "target": [
+        {
+          "css": "#tb_quiz-builder"
+        },
+        {
+          "text": "Quizzes",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/quiz-builder"
+      }
+    },
+    {
+      "id": "add",
+      "title": "Create a quiz",
+      "body": "Click **Create quiz** and start blank or from a template.",
+      "route": "^/quiz-builder",
+      "go": "/quiz-builder/main",
+      "target": [
+        {
+          "text": "Create quiz",
+          "tag": "button"
+        },
+        {
+          "text": "Add Quiz",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create quiz",
+      "advance": "click"
+    },
+    {
+      "id": "questions",
+      "title": "Add questions",
+      "body": "On **Edit**, add single choice or multiple choice questions. Keep them quick to answer.",
+      "route": "^/",
+      "go": "/quiz-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Example: Is your home ready for winter? Six questions, scored out of 30."
+    },
+    {
+      "id": "points",
+      "title": "Give answers points",
+      "body": "Assign points to each answer option. The total becomes the person\u2019s score.",
+      "route": "^/",
+      "go": "/quiz-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "title": "Ask for contact details",
+      "body": "Add name and email before the result, so every result creates a contact.",
+      "route": "^/",
+      "go": "/quiz-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save",
+      "body": "Click **Save**, then set up results. See **Customise quiz results** in the Guide.",
+      "route": "^/",
+      "go": "/quiz-builder/main",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

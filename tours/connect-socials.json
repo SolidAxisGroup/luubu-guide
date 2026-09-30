@@ -1,0 +1,109 @@
+{
+  "id": "connect-socials",
+  "kind": "howto",
+  "area": "start",
+  "screen": "marketing.social-planner",
+  "title": "Connect your social accounts",
+  "blurb": "Link Facebook, Instagram, LinkedIn, TikTok and Google Business.",
+  "icon": "share",
+  "minutes": 4,
+  "keywords": [
+    "social",
+    "facebook",
+    "instagram",
+    "linkedin",
+    "tiktok",
+    "google",
+    "gbp",
+    "youtube",
+    "page"
+  ],
+  "steps": [
+    {
+      "id": "open-marketing",
+      "title": "Open Marketing",
+      "body": "Click **Marketing** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_email-marketing"
+        },
+        {
+          "text": "Marketing",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/"
+      }
+    },
+    {
+      "id": "social-planner",
+      "title": "Open Social Planner",
+      "body": "Click **Social Planner**. This is where you connect your accounts and schedule posts.",
+      "route": "^/marketing/",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "css": "#tb_social-planner"
+        },
+        {
+          "text": "Social Planner",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/social-planner"
+      }
+    },
+    {
+      "id": "networks",
+      "title": "Pick your networks",
+      "body": "These are the networks you can connect. You can add or remove any of them later.",
+      "route": "^/marketing/social-planner",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "css": "#sp-v3-platform-list"
+        },
+        {
+          "text": "Connect your social accounts"
+        }
+      ],
+      "lookFor": "Connect your social accounts"
+    },
+    {
+      "id": "facebook",
+      "title": "Start with Facebook",
+      "body": "Click **Connect** on Facebook. Log in with the Facebook profile that has **full control** of your business Page, and choose **Opt in to all current and future Pages** when asked.",
+      "tip": "Page list comes up empty? You need full control of the Page. Email hello@luubu.com and we'll sort it with you.",
+      "route": "^/marketing/social-planner",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "css": "#sp-v3-platform-facebook"
+        },
+        {
+          "text": "Facebook",
+          "tag": "button"
+        }
+      ]
+    },
+    {
+      "id": "the-rest",
+      "title": "Add the rest the same way",
+      "body": "Repeat for **Instagram**, **LinkedIn**, **TikTok** and **GBP** (your Google Business Profile). Each one opens a login window. Sign in and allow access.",
+      "tip": "Instagram must be a Business or Creator account linked to your Facebook Page.",
+      "route": "^/marketing/social-planner",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "css": "#sp-v3-platform-instagram"
+        },
+        {
+          "text": "Instagram",
+          "tag": "button"
+        }
+      ]
+    }
+  ]
+}

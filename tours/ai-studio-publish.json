@@ -1,0 +1,100 @@
+{
+  "id": "ai-studio-publish",
+  "kind": "howto",
+  "area": "ai",
+  "screen": "ai.vibe",
+  "title": "Publish your AI Studio site",
+  "blurb": "Put your page live on a preview link, then on your own domain.",
+  "icon": "globe",
+  "minutes": 4,
+  "keywords": [
+    "publish",
+    "domain",
+    "go live",
+    "ai studio",
+    "website address",
+    "url"
+  ],
+  "steps": [
+    {
+      "id": "open-ai-studio",
+      "title": "Open AI Studio",
+      "body": "Click **AI Studio** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_vibe"
+        },
+        {
+          "text": "AI Studio",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/vibe"
+      }
+    },
+    {
+      "id": "open",
+      "title": "Open your project",
+      "body": "Open it from **My Projects**.",
+      "route": "^/vibe",
+      "go": "/vibe",
+      "target": [
+        {
+          "text": "My Projects"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "My Projects"
+    },
+    {
+      "id": "publish",
+      "title": "Publish to a preview link",
+      "body": "Click **Publish**. It goes live on a preview address first so you can share and check it.",
+      "route": "^/vibe",
+      "go": "/vibe",
+      "target": [
+        {
+          "text": "Publish"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Publish"
+    },
+    {
+      "id": "domain",
+      "title": "Connect your domain",
+      "body": "In the publish options, connect your own domain, for example yourbusiness.co.nz. You will need access to where your domain is registered.",
+      "route": "^/vibe",
+      "go": "/vibe",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Need a hand with the domain records? Email hello@luubu.com."
+    },
+    {
+      "id": "forms",
+      "title": "Connect forms and bookings",
+      "body": "Check any form or booking section is linked to your Luubu forms and calendar so enquiries land in Contacts.",
+      "route": "^/vibe",
+      "go": "/vibe",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "id": "conversations-page-inbox",
+  "kind": "page",
+  "area": "conversations",
+  "screen": "conversations.conversations-tab",
+  "title": "Tour: Conversations inbox",
+  "blurb": "Every text, email, Facebook and Instagram message in one inbox.",
+  "icon": "chat",
+  "minutes": 3,
+  "keywords": [
+    "conversations",
+    "inbox",
+    "messages",
+    "sms",
+    "email",
+    "facebook",
+    "instagram",
+    "reply"
+  ],
+  "steps": [
+    {
+      "id": "open-conversations",
+      "title": "Open Conversations",
+      "body": "Click **Conversations** in the left menu. This is your shared inbox.",
+      "target": [
+        {
+          "css": "#sb_conversations"
+        },
+        {
+          "text": "Conversations",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/conversations/"
+      }
+    },
+    {
+      "id": "inboxes",
+      "title": "Pick an inbox",
+      "body": "On the far left, **My Inbox** shows chats assigned to you. **Team Inbox** shows everyone's. **Internal Chat** is for private messages between your team.",
+      "route": "^/conversations/conversations",
+      "go": "/conversations/conversations",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Team Inbox"
+    },
+    {
+      "id": "list",
+      "title": "Your chat list",
+      "body": "The next column lists your conversations, newest first. Unread ones are in bold. Use the filter icon at the top to narrow it down by channel, tag or who it's assigned to.",
+      "route": "^/conversations/conversations",
+      "go": "/conversations/conversations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "thread",
+      "title": "The message thread",
+      "body": "Click a chat to open it in the middle. You'll see every text, email, call and DM with that person in one timeline.",
+      "route": "^/conversations/conversations",
+      "go": "/conversations/conversations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "composer",
+      "title": "Reply box",
+      "body": "Type your reply at the bottom. The channel switcher next to it lets you choose SMS, Email, Facebook, Instagram or an **Internal Comment** only your team can see.",
+      "route": "^/conversations/conversations",
+      "go": "/conversations/conversations",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Internal Comment"
+    },
+    {
+      "id": "right-panel",
+      "title": "Contact details",
+      "body": "The right panel shows the person's details, tags, activity, appointments and payments, so you never have to leave the chat to look something up.",
+      "route": "^/conversations/conversations",
+      "go": "/conversations/conversations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Next: try **Reply to a text message** from the Guide.",
+      "route": "^/conversations/conversations",
+      "go": "/conversations/conversations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

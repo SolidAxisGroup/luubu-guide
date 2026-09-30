@@ -1,0 +1,101 @@
+{
+  "id": "settings-integrations-stripe",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "payments.payment-integrations",
+  "title": "Connect Stripe to take payments",
+  "blurb": "Take card payments on invoices, bookings and forms.",
+  "icon": "card",
+  "minutes": 4,
+  "keywords": [
+    "stripe",
+    "payments",
+    "card payments",
+    "connect stripe",
+    "invoices",
+    "online payments"
+  ],
+  "steps": [
+    {
+      "id": "open-payments",
+      "title": "Open Payments",
+      "body": "Click **Payments** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_payments"
+        },
+        {
+          "text": "Payments",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/"
+      }
+    },
+    {
+      "id": "integrations-tab",
+      "title": "Open Integrations",
+      "body": "Click **Integrations**.",
+      "route": "^/payments/",
+      "go": "/payments/integrations",
+      "target": [
+        {
+          "css": "#tb_payment-integrations"
+        },
+        {
+          "text": "Integrations",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/integrations"
+      }
+    },
+    {
+      "id": "connect",
+      "title": "Connect Stripe",
+      "body": "On the Stripe card, click **Connect**.",
+      "route": "^/payments/integrations",
+      "go": "/payments/integrations",
+      "target": [
+        {
+          "text": "Connect",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Connect"
+    },
+    {
+      "id": "stripe",
+      "title": "Sign in to Stripe",
+      "body": "Log in to your Stripe account, or create one with your NZBN and bank details. Follow Stripe's steps to the end.",
+      "route": "^/payments/integrations",
+      "go": "/payments/integrations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "mode",
+      "title": "Live, not test",
+      "body": "Make sure you are in live mode before you send real invoices.",
+      "route": "^/payments/integrations",
+      "go": "/payments/integrations",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Test mode is handy for a practice run with a Stripe test card."
+    }
+  ]
+}

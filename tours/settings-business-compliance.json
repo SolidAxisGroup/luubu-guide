@@ -1,0 +1,109 @@
+{
+  "id": "settings-business-compliance",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.business_info",
+  "title": "Turn on opt-out and unsubscribe settings",
+  "blurb": "Keep texts and emails within NZ anti-spam rules.",
+  "icon": "mail",
+  "minutes": 3,
+  "keywords": [
+    "unsubscribe",
+    "opt out",
+    "stop",
+    "spam",
+    "compliance",
+    "uema",
+    "sms rules"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-business-profile",
+      "title": "Open Business Profile",
+      "body": "Click **Business Profile** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/company",
+      "target": [
+        {
+          "css": "[id='sb_business_info']"
+        },
+        {
+          "text": "Business Profile",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/company/?$"
+      }
+    },
+    {
+      "id": "general",
+      "title": "Find the General section",
+      "body": "Scroll down to the **General** section of Business Profile.",
+      "route": "^/settings/company/?$",
+      "go": "/settings/company",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "General"
+    },
+    {
+      "id": "sms",
+      "title": "SMS opt-out",
+      "body": "Under **SMS Compliance Settings**, turn on the opt-out message so marketing texts tell people how to stop them (for example \"Reply STOP to opt out\").",
+      "route": "^/settings/company/?$",
+      "go": "/settings/company",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "SMS Compliance Settings"
+    },
+    {
+      "id": "email",
+      "title": "Email unsubscribe link",
+      "body": "Turn on **Make Email compliant by adding an Unsubscribe link in your email**. Luubu then adds an unsubscribe link to your marketing emails.",
+      "route": "^/settings/company/?$",
+      "go": "/settings/company",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Unsubscribe",
+      "tip": "NZ law (the Unsolicited Electronic Messages Act) needs consent, your business name and a working unsubscribe on every commercial message."
+    },
+    {
+      "id": "save",
+      "title": "Save",
+      "body": "Save the section. These settings apply to everyone in your account.",
+      "route": "^/settings/company/?$",
+      "go": "/settings/company",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

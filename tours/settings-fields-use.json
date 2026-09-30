@@ -1,0 +1,93 @@
+{
+  "id": "settings-fields-use",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.custom-fields-settings",
+  "title": "Use a custom field in messages",
+  "blurb": "Drop a contact's own details into emails and texts.",
+  "icon": "mail",
+  "minutes": 2,
+  "keywords": [
+    "merge field",
+    "personalise",
+    "field key",
+    "custom field",
+    "email",
+    "sms"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-custom-fields",
+      "title": "Open Custom Fields",
+      "body": "Click **Custom Fields** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/fields",
+      "target": [
+        {
+          "css": "[id='sb_custom-fields-settings']"
+        },
+        {
+          "text": "Custom Fields",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/fields"
+      }
+    },
+    {
+      "id": "key",
+      "title": "Find the field key",
+      "body": "Find your field in the list. Each has a key like {{contact.job_type}}.",
+      "route": "^/settings/fields",
+      "go": "/settings/fields",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "copy",
+      "title": "Copy it",
+      "body": "Copy the key.",
+      "route": "^/settings/fields",
+      "go": "/settings/fields",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "paste",
+      "title": "Paste it in a message",
+      "body": "Paste it into an email, text or workflow. Luubu swaps in each contact's own answer when it sends.",
+      "route": "^/settings/fields",
+      "go": "/settings/fields",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Most editors also have a merge field button so you can pick fields without copying."
+    }
+  ]
+}

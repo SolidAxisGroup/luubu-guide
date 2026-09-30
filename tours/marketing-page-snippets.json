@@ -1,0 +1,120 @@
+{
+  "id": "marketing-page-snippets",
+  "kind": "page",
+  "area": "marketing",
+  "screen": "marketing.email-templates",
+  "title": "Tour: Snippets",
+  "blurb": "Saved text and email replies your team can drop into any message.",
+  "icon": "chat",
+  "minutes": 2,
+  "keywords": [
+    "snippets",
+    "templates",
+    "canned reply",
+    "saved message",
+    "overview",
+    "tour"
+  ],
+  "steps": [
+    {
+      "id": "open-marketing",
+      "title": "Open Marketing",
+      "body": "Click **Marketing** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_email-marketing"
+        },
+        {
+          "text": "Marketing",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/"
+      }
+    },
+    {
+      "id": "open-email-templates",
+      "title": "Open Snippets",
+      "body": "Click **Snippets**. These are saved messages you can reuse, so nobody has to retype the same reply.",
+      "route": "^/marketing/",
+      "go": "/marketing/templates",
+      "target": [
+        {
+          "css": "#tb_email-templates"
+        },
+        {
+          "text": "Snippets",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/templates"
+      }
+    },
+    {
+      "id": "new",
+      "title": "Make a snippet",
+      "body": "**+ New Snippet** creates a text or email snippet.",
+      "route": "^/marketing/templates",
+      "go": "/marketing/templates",
+      "target": [
+        {
+          "text": "New Snippet",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New Snippet"
+    },
+    {
+      "id": "folder",
+      "title": "Keep them tidy",
+      "body": "Use **New Folder** to group snippets, for example Quotes, Bookings and Reminders.",
+      "route": "^/marketing/templates",
+      "go": "/marketing/templates",
+      "target": [
+        {
+          "text": "New Folder",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New Folder"
+    },
+    {
+      "id": "list",
+      "title": "Manage your snippets",
+      "body": "Search by name to find one fast. Each snippet has a three-dot menu to edit, duplicate, move or delete it.",
+      "route": "^/marketing/templates",
+      "go": "/marketing/templates",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What to do first",
+      "body": "Start with the reply you type most often. Next: try **Create a text snippet** from the Guide.",
+      "route": "^/marketing/templates",
+      "go": "/marketing/templates",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

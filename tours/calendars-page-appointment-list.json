@@ -1,0 +1,131 @@
+{
+  "id": "calendars-page-appointment-list",
+  "kind": "page",
+  "area": "calendars",
+  "screen": "calendars.apppontment-tab",
+  "title": "Tour: Appointment list",
+  "blurb": "A searchable list of every booking, with filters and quick status changes.",
+  "icon": "calendar",
+  "minutes": 2,
+  "keywords": [
+    "appointments",
+    "list",
+    "bookings",
+    "upcoming",
+    "cancelled",
+    "filter",
+    "no show"
+  ],
+  "steps": [
+    {
+      "id": "open-calendars",
+      "title": "Open Calendars",
+      "body": "Click **Calendars** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_calendars"
+        },
+        {
+          "text": "Calendars",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/calendars/"
+      }
+    },
+    {
+      "id": "tab-apppontment-tab",
+      "title": "Open Appointment list view",
+      "body": "Click **Appointment list view** along the top.",
+      "route": "^/calendars/",
+      "go": "/calendars/appointments",
+      "target": [
+        {
+          "css": "#tb_apppontment-tab"
+        },
+        {
+          "text": "Appointment list view",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/calendars/appointments"
+      }
+    },
+    {
+      "id": "tabs",
+      "title": "Quick views",
+      "body": "Use **Upcoming**, **Cancelled** and **All** to flip between the most common lists.",
+      "route": "^/calendars/appointments",
+      "go": "/calendars/appointments",
+      "target": [
+        {
+          "text": "Upcoming"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Upcoming"
+    },
+    {
+      "id": "smart-list",
+      "title": "Save your own views",
+      "body": "**+ Smart list** saves a filtered view, like \"No shows this month\", so you can open it in one click.",
+      "route": "^/calendars/appointments",
+      "go": "/calendars/appointments",
+      "target": [
+        {
+          "text": "Smart list"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Smart list"
+    },
+    {
+      "id": "row-menu",
+      "title": "Act on a booking",
+      "body": "The three-dot menu on each row lets you view details, edit, reschedule or delete that appointment.",
+      "route": "^/calendars/appointments",
+      "go": "/calendars/appointments",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "status",
+      "title": "Update the status",
+      "body": "Change a booking to **Confirmed**, **Showed**, **No Show** or **Cancelled** straight from the list. Workflows can react to these changes.",
+      "route": "^/calendars/appointments",
+      "go": "/calendars/appointments",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "Next step",
+      "body": "Next: try **Filter your appointment list** from the Guide.",
+      "route": "^/calendars/appointments",
+      "go": "/calendars/appointments",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

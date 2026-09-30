@@ -1,0 +1,107 @@
+{
+  "id": "settings-fields-folders",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.custom-fields-settings",
+  "title": "Organise custom fields into folders",
+  "blurb": "Group related fields so contact records are easier to read.",
+  "icon": "grid",
+  "minutes": 2,
+  "keywords": [
+    "folders",
+    "organise fields",
+    "group fields",
+    "custom fields",
+    "tidy"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-custom-fields",
+      "title": "Open Custom Fields",
+      "body": "Click **Custom Fields** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/fields",
+      "target": [
+        {
+          "css": "[id='sb_custom-fields-settings']"
+        },
+        {
+          "text": "Custom Fields",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/fields"
+      }
+    },
+    {
+      "id": "folders",
+      "title": "Open Folders",
+      "body": "Click **Folders**.",
+      "route": "^/settings/fields",
+      "go": "/settings/fields",
+      "target": [
+        {
+          "text": "Folders"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Folders",
+      "advance": "click"
+    },
+    {
+      "id": "create",
+      "title": "New folder",
+      "body": "Click **Create folder** and give it a name, like \"Property Details\".",
+      "route": "^/settings/fields",
+      "go": "/settings/fields",
+      "target": [
+        {
+          "text": "Create folder",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create folder"
+    },
+    {
+      "id": "move",
+      "title": "Move fields in",
+      "body": "Edit a field and choose the new folder to move it.",
+      "route": "^/settings/fields",
+      "go": "/settings/fields",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

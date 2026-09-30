@@ -1,0 +1,121 @@
+{
+  "id": "conversations-manual-actions-reassign",
+  "kind": "howto",
+  "area": "conversations",
+  "screen": "conversations.manial-actions",
+  "title": "Hand queued calls to a teammate",
+  "blurb": "Move manual call and text tasks to someone else in bulk.",
+  "icon": "users",
+  "minutes": 2,
+  "keywords": [
+    "manual actions",
+    "reassign",
+    "assign user",
+    "team",
+    "bulk",
+    "hand over",
+    "holiday"
+  ],
+  "steps": [
+    {
+      "id": "open-conversations",
+      "title": "Open Conversations",
+      "body": "Click **Conversations** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_conversations"
+        },
+        {
+          "text": "Conversations",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/conversations/"
+      }
+    },
+    {
+      "id": "tab-manial-actions",
+      "title": "Open Manual Actions",
+      "body": "Click **Manual Actions** along the top.",
+      "route": "^/conversations/",
+      "go": "/conversations/manual_actions",
+      "target": [
+        {
+          "css": "#tb_manial-actions"
+        },
+        {
+          "text": "Manual Actions",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/conversations/manual_actions"
+      }
+    },
+    {
+      "id": "filter",
+      "title": "Find the tasks",
+      "body": "Filter the queue by assignee to see the tasks sitting with the person who's away or overloaded.",
+      "route": "^/conversations/manual_actions",
+      "go": "/conversations/manual_actions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "select",
+      "title": "Select them",
+      "body": "Tick the boxes next to the tasks you want to move.",
+      "route": "^/conversations/manual_actions",
+      "go": "/conversations/manual_actions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "bulk",
+      "title": "Open bulk actions",
+      "body": "Click **Bulk Actions**.",
+      "route": "^/conversations/manual_actions",
+      "go": "/conversations/manual_actions",
+      "target": [
+        {
+          "text": "Bulk Actions",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Bulk Actions"
+    },
+    {
+      "id": "assign",
+      "title": "Assign someone new",
+      "body": "Choose **Assign User**, pick the teammate and confirm.",
+      "route": "^/conversations/manual_actions",
+      "go": "/conversations/manual_actions",
+      "target": [
+        {
+          "text": "Assign User"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Assign User",
+      "tip": "The filtered queue's web address can be copied and shared. Your teammate will see exactly the same list."
+    }
+  ]
+}

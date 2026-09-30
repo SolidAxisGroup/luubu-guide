@@ -1,0 +1,125 @@
+{
+  "id": "ai-page-conversation-ai",
+  "kind": "page",
+  "area": "ai",
+  "screen": "ai.ai-agents-conversation-ai",
+  "title": "Tour Conversation AI",
+  "blurb": "An AI assistant that answers chat, text and social messages for you.",
+  "icon": "chat",
+  "minutes": 2,
+  "keywords": [
+    "conversation ai",
+    "chatbot",
+    "bot",
+    "ai replies",
+    "website chat",
+    "tour"
+  ],
+  "steps": [
+    {
+      "id": "open-ai-agents",
+      "title": "Open AI Agents",
+      "body": "Click **AI Agents** in the left menu.",
+      "target": [
+        {
+          "css": "[id='sb_AI Agents']"
+        },
+        {
+          "text": "AI Agents",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/"
+      }
+    },
+    {
+      "id": "open-ai-agents-conversation-ai",
+      "title": "Open Conversation AI",
+      "body": "Click the **Conversation AI** tab.",
+      "route": "^/ai-agents/",
+      "go": "/ai-agents/conversation-ai",
+      "target": [
+        {
+          "css": "#tb_ai-agents-conversation-ai"
+        },
+        {
+          "text": "Conversation AI"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/conversation-ai"
+      }
+    },
+    {
+      "id": "what",
+      "title": "What it does",
+      "body": "Conversation AI replies to website chat, SMS, Facebook, Instagram and WhatsApp. It can answer questions, collect details and book appointments.",
+      "route": "^/ai-agents/conversation-ai",
+      "go": "/ai-agents/conversation-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "create",
+      "title": "Create a bot",
+      "body": "**Create Agent** starts a new assistant with a guided setup.",
+      "route": "^/ai-agents/conversation-ai",
+      "go": "/ai-agents/conversation-ai",
+      "target": [
+        {
+          "text": "Create Agent"
+        },
+        {
+          "text": "Create Bot"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create Agent"
+    },
+    {
+      "id": "modes",
+      "title": "Three modes",
+      "body": "Each bot is **Off**, **Suggestive** (drafts replies for you to send) or **Auto-Pilot** (replies on its own).",
+      "route": "^/ai-agents/conversation-ai",
+      "go": "/ai-agents/conversation-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "tabs",
+      "title": "Inside a bot",
+      "body": "**Bot Settings** sets channels and mode. **Bot Goals** says what to achieve. **Bot Training** links your knowledge base.",
+      "route": "^/ai-agents/conversation-ai",
+      "go": "/ai-agents/conversation-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What to do first",
+      "body": "Next: try **Create a website chat and SMS bot** from the Guide.",
+      "route": "^/ai-agents/conversation-ai",
+      "go": "/ai-agents/conversation-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

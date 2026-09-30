@@ -1,0 +1,147 @@
+{
+  "id": "ai-voice-receptionist-setup",
+  "kind": "howto",
+  "area": "ai",
+  "screen": "ai.ai-agents-voice-ai",
+  "title": "Set up an AI receptionist",
+  "blurb": "Create a voice agent that greets callers, answers questions and takes details.",
+  "icon": "phone",
+  "minutes": 8,
+  "keywords": [
+    "receptionist",
+    "voice ai",
+    "answer phone",
+    "greeting",
+    "ai calls",
+    "setup"
+  ],
+  "steps": [
+    {
+      "id": "open-ai-agents",
+      "title": "Open AI Agents",
+      "body": "Click **AI Agents** in the left menu.",
+      "target": [
+        {
+          "css": "[id='sb_AI Agents']"
+        },
+        {
+          "text": "AI Agents",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/"
+      }
+    },
+    {
+      "id": "open-ai-agents-voice-ai",
+      "title": "Open Voice AI",
+      "body": "Click the **Voice AI** tab.",
+      "route": "^/ai-agents/",
+      "go": "/ai-agents/voice-ai",
+      "target": [
+        {
+          "css": "#tb_ai-agents-voice-ai"
+        },
+        {
+          "text": "Voice AI"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/voice-ai"
+      }
+    },
+    {
+      "id": "create",
+      "title": "Create an agent",
+      "body": "Click **Create from scratch**.",
+      "route": "^/ai-agents/voice-ai",
+      "go": "/ai-agents/voice-ai",
+      "target": [
+        {
+          "text": "Create from scratch",
+          "tag": "button"
+        },
+        {
+          "text": "Create Agent",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create from scratch"
+    },
+    {
+      "id": "template",
+      "title": "Pick a starting point",
+      "body": "Choose a template such as **Front Desk Receptionist**, or **Create Custom Agent** to start blank. The template is the easy path.",
+      "route": "^/ai-agents/voice-ai",
+      "go": "/ai-agents/voice-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "basics",
+      "title": "Name, voice and language",
+      "body": "Name the agent, pick a voice you like, and set the language to English. Play the samples first.",
+      "route": "^/ai-agents/voice-ai",
+      "go": "/ai-agents/voice-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "greeting",
+      "title": "Write the greeting",
+      "body": "Set the welcome message callers hear, like: \"Kia ora, you have reached Smith Plumbing. How can I help today?\" Keep it short.",
+      "route": "^/ai-agents/voice-ai",
+      "go": "/ai-agents/voice-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "prompt",
+      "title": "Tell it how to behave",
+      "body": "In the instructions, list what it should do (take name, address and job details) and what it must not do (quote prices, promise times).",
+      "route": "^/ai-agents/voice-ai",
+      "go": "/ai-agents/voice-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "knowledge",
+      "title": "Connect your knowledge base and save",
+      "body": "Attach your knowledge base so it can answer questions about services, areas and hours, then click **Save**.",
+      "route": "^/ai-agents/voice-ai",
+      "go": "/ai-agents/voice-ai",
+      "target": [
+        {
+          "text": "Save"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Save",
+      "tip": "Next, set its hours, actions and phone number. Each has its own guide."
+    }
+  ]
+}

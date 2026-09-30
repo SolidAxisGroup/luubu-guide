@@ -1,0 +1,136 @@
+{
+  "id": "automation-wait-steps",
+  "kind": "howto",
+  "area": "automation",
+  "screen": "automation.workflow",
+  "title": "Add a wait step",
+  "blurb": "Space out messages, or pause until a reply, a date or a booking.",
+  "icon": "flow",
+  "minutes": 3,
+  "keywords": [
+    "wait",
+    "delay",
+    "pause",
+    "timer",
+    "follow up later",
+    "schedule"
+  ],
+  "steps": [
+    {
+      "id": "open-automation",
+      "title": "Open Automation",
+      "body": "Click **Automation** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_automation"
+        },
+        {
+          "text": "Automation",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/automation/"
+      }
+    },
+    {
+      "id": "open-workflow",
+      "title": "Open Workflows",
+      "body": "Click **Workflows** at the top.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "css": "#tb_workflow"
+        },
+        {
+          "text": "Workflows"
+        }
+      ],
+      "advance": {
+        "route": "^/automation/workflows(?!/settings)"
+      }
+    },
+    {
+      "id": "open",
+      "title": "Open your workflow",
+      "body": "Open the workflow and find where the pause should go.",
+      "route": "^/automation/workflows(?!/settings)",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "add-wait",
+      "title": "Add the Wait",
+      "body": "Click **+** between two steps and choose **Wait**.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Wait"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Wait"
+    },
+    {
+      "id": "type",
+      "title": "Choose what to wait for",
+      "body": "Pick an option. **A set period of time** is the everyday one, like 2 days. **The contact to reply** holds until they answer. **An upcoming appointment or booking** counts back from a booking.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "A set period of time"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "A set period of time"
+    },
+    {
+      "id": "window",
+      "title": "Only send at sensible hours",
+      "body": "Turn on **Advance Window** to resume only on chosen days and between set hours, so nobody gets a text at 2am.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Advance Window"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Advance Window"
+    },
+    {
+      "id": "timeout",
+      "title": "Set a timeout for replies",
+      "body": "When waiting for a reply, add a timeout so people who never answer still move on, for example to a second follow-up.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

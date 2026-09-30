@@ -1,0 +1,113 @@
+{
+  "id": "sites-chat-widget-install",
+  "kind": "howto",
+  "area": "sites",
+  "screen": "sites.chat-widget",
+  "title": "Install the chat widget on your website",
+  "blurb": "Add the chat bubble to your Luubu site or any other website.",
+  "icon": "chat",
+  "minutes": 4,
+  "keywords": [
+    "install chat",
+    "chat code",
+    "embed chat",
+    "wordpress chat",
+    "website chat",
+    "add widget"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Chat Widget",
+      "body": "Click **Chat Widget** and open your widget.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/funnels-websites/chat-widget",
+      "target": [
+        {
+          "css": "#tb_chat-widget"
+        },
+        {
+          "text": "Chat Widget",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/chat-widget"
+      }
+    },
+    {
+      "id": "get-code",
+      "title": "Get the code",
+      "body": "Click **Get Code**, then copy it.",
+      "route": "^/funnels-websites/chat-widget",
+      "go": "/funnels-websites/chat-widget",
+      "target": [
+        {
+          "text": "Get Code",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Get Code",
+      "advance": "click"
+    },
+    {
+      "id": "luubu-site",
+      "title": "On a Luubu site or funnel",
+      "body": "Open the website or funnel **Settings**, find the **Chat Widget** setting, choose your widget and save. It then shows on every page.",
+      "route": "^/funnels-websites/chat-widget",
+      "go": "/funnels-websites/chat-widget",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "other-site",
+      "title": "On another website",
+      "body": "Paste the code just before the closing body tag. In WordPress, use a header and footer code plugin; in Wix or Squarespace, use custom code in site settings.",
+      "route": "^/funnels-websites/chat-widget",
+      "go": "/funnels-websites/chat-widget",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "test",
+      "title": "Test it",
+      "body": "Open your live site on your phone, send a chat, and check it arrives in **Conversations**.",
+      "route": "^/funnels-websites/chat-widget",
+      "go": "/funnels-websites/chat-widget",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

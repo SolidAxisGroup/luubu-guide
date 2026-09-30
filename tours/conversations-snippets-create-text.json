@@ -1,0 +1,131 @@
+{
+  "id": "conversations-snippets-create-text",
+  "kind": "howto",
+  "area": "conversations",
+  "screen": "conversations.conversations-templates",
+  "title": "Create a text snippet",
+  "blurb": "Save an SMS reply you send often, with the customer's name filled in automatically.",
+  "icon": "chat",
+  "minutes": 3,
+  "keywords": [
+    "snippet",
+    "sms template",
+    "text template",
+    "saved reply",
+    "create snippet",
+    "custom values"
+  ],
+  "steps": [
+    {
+      "id": "open-conversations",
+      "title": "Open Conversations",
+      "body": "Click **Conversations** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_conversations"
+        },
+        {
+          "text": "Conversations",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/conversations/"
+      }
+    },
+    {
+      "id": "tab-conversations-templates",
+      "title": "Open Snippets",
+      "body": "Click **Snippets** along the top.",
+      "route": "^/conversations/",
+      "go": "/conversations/templates",
+      "target": [
+        {
+          "css": "#tb_conversations-templates"
+        },
+        {
+          "text": "Snippets",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/conversations/templates"
+      }
+    },
+    {
+      "id": "new",
+      "title": "Start a snippet",
+      "body": "Click **New Snippet** at the top right.",
+      "route": "^/conversations/templates",
+      "go": "/conversations/templates",
+      "target": [
+        {
+          "text": "New Snippet",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New Snippet"
+    },
+    {
+      "id": "type",
+      "title": "Choose text",
+      "body": "Pick **Add Text Snippet**.",
+      "route": "^/conversations/templates",
+      "go": "/conversations/templates",
+      "target": [
+        {
+          "text": "Add Text Snippet"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add Text Snippet"
+    },
+    {
+      "id": "name",
+      "title": "Name it",
+      "body": "Give it a name you'll recognise when searching, like \"Directions to workshop\".",
+      "route": "^/conversations/templates",
+      "go": "/conversations/templates",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "body",
+      "title": "Write the message",
+      "body": "Type the message. Use the custom values option to add the contact's first name or your business details so each text is personalised.",
+      "route": "^/conversations/templates",
+      "go": "/conversations/templates",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save",
+      "body": "Save the snippet. It's now ready in the Snippets icon of the reply box.",
+      "route": "^/conversations/templates",
+      "go": "/conversations/templates",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

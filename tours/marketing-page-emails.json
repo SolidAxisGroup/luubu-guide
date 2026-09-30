@@ -1,0 +1,138 @@
+{
+  "id": "marketing-page-emails",
+  "kind": "page",
+  "area": "marketing",
+  "screen": "marketing.email-builder",
+  "title": "Tour: Emails",
+  "blurb": "Where email campaigns, templates and results live.",
+  "icon": "mail",
+  "minutes": 2,
+  "keywords": [
+    "emails",
+    "email marketing",
+    "campaigns",
+    "templates",
+    "newsletter",
+    "overview",
+    "tour"
+  ],
+  "steps": [
+    {
+      "id": "open-marketing",
+      "title": "Open Marketing",
+      "body": "Click **Marketing** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_email-marketing"
+        },
+        {
+          "text": "Marketing",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/"
+      }
+    },
+    {
+      "id": "open-email-builder",
+      "title": "Open Emails",
+      "body": "Click **Emails**. This area sits in a secure frame, so we will point out each part rather than click it for you.",
+      "route": "^/marketing/",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "css": "#tb_email-builder"
+        },
+        {
+          "text": "Emails",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/emails"
+      }
+    },
+    {
+      "id": "campaigns",
+      "title": "Campaigns",
+      "body": "**Campaigns** is where you build a one-off email and send or schedule it to a list, tag or smart list.",
+      "route": "^/(marketing/)?emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "text": "Campaigns"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Campaigns"
+    },
+    {
+      "id": "templates",
+      "title": "Templates",
+      "body": "**Templates** holds designs you reuse, like your newsletter layout or a promo. Start campaigns from these to save time.",
+      "route": "^/(marketing/)?emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "text": "Templates"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Templates"
+    },
+    {
+      "id": "statistics",
+      "title": "Statistics",
+      "body": "**Statistics** shows how your emails are doing: delivered, opened, clicked, bounced and unsubscribed.",
+      "route": "^/(marketing/)?emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "text": "Statistics"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Statistics"
+    },
+    {
+      "id": "before",
+      "title": "Before your first send",
+      "body": "Make sure your sending email is set up so emails come from your own domain. The Guide has **Connect your email** for that.",
+      "route": "^/(marketing/)?emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What to do first",
+      "body": "Build a reusable design first. Next: try **Build an email template** from the Guide.",
+      "route": "^/(marketing/)?emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "id": "reporting-meta-ads-utm",
+  "kind": "howto",
+  "area": "reporting",
+  "screen": "reporting.facebook-ads",
+  "title": "Tag your Facebook ads so leads are tracked",
+  "blurb": "Add URL tags in Ads Manager so every lead is matched to its ad.",
+  "icon": "chart",
+  "minutes": 5,
+  "keywords": [
+    "utm",
+    "url parameters",
+    "facebook ads",
+    "tracking",
+    "attribution",
+    "ads manager"
+  ],
+  "steps": [
+    {
+      "id": "open-reporting",
+      "title": "Open Reporting",
+      "body": "Click **Reporting** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reporting"
+        },
+        {
+          "text": "Reporting",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/"
+      }
+    },
+    {
+      "id": "open-facebook-ads",
+      "title": "Open Facebook Ads",
+      "body": "Click **Facebook Ads**.",
+      "route": "^/reporting/",
+      "go": "/reporting/facebook-ads",
+      "target": [
+        {
+          "css": "#tb_facebook-ads"
+        },
+        {
+          "text": "Facebook Ads",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/facebook-ads"
+      }
+    },
+    {
+      "id": "open",
+      "title": "Open Ads Manager",
+      "body": "In another tab, open Meta Ads Manager and edit the ad. Find the URL parameters box.",
+      "route": "^/reporting/facebook-ads",
+      "go": "/reporting/facebook-ads",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "params",
+      "title": "Add the tags",
+      "body": "Set source to fb_ad, medium to {{adset.name}}, campaign to {{campaign.name}} and content to {{ad.name}}. Add campaign_id with the value {{campaign.id}}.",
+      "route": "^/reporting/facebook-ads",
+      "go": "/reporting/facebook-ads",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "names",
+      "title": "Keep names unique",
+      "body": "Give every campaign, ad set and ad a unique name, and do not rename them while they run.",
+      "route": "^/reporting/facebook-ads",
+      "go": "/reporting/facebook-ads",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "preview",
+      "title": "Test it live",
+      "body": "Ad previews do not show the tags. Only live ads do, so check with a real click.",
+      "route": "^/reporting/facebook-ads",
+      "go": "/reporting/facebook-ads",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

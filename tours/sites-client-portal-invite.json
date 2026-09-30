@@ -1,0 +1,93 @@
+{
+  "id": "sites-client-portal-invite",
+  "kind": "howto",
+  "area": "sites",
+  "screen": "sites.clientportal",
+  "title": "Choose portal apps and invite clients",
+  "blurb": "Pick what clients see in the portal and send them the login link.",
+  "icon": "users",
+  "minutes": 4,
+  "keywords": [
+    "invite clients",
+    "portal access",
+    "app permissions",
+    "courses",
+    "invoices",
+    "login link"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Client Portal",
+      "body": "Click **Client Portal**.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/funnels-websites/client-portal/dashboard",
+      "target": [
+        {
+          "css": "#tb_clientportal"
+        },
+        {
+          "text": "Client Portal",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/client-portal"
+      }
+    },
+    {
+      "id": "apps",
+      "title": "Choose the apps",
+      "body": "Open **App Permissions** and switch on what your clients need: courses, communities, invoices, documents or affiliates. Turn on Google sign-in if you want it.",
+      "route": "^/funnels-websites/client-portal",
+      "go": "/funnels-websites/client-portal/dashboard",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "copy",
+      "title": "Copy the portal link",
+      "body": "From **Domain Setup**, copy your portal address.",
+      "route": "^/funnels-websites/client-portal",
+      "go": "/funnels-websites/client-portal/dashboard",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "send",
+      "title": "Send it to clients",
+      "body": "Share the link by email or text. Clients who buy a course or get an invoice can also be sent straight to it.",
+      "route": "^/funnels-websites/client-portal",
+      "go": "/funnels-websites/client-portal/dashboard",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Add the portal link to your website menu as Client login."
+    }
+  ]
+}

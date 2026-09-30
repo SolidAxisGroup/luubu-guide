@@ -1,0 +1,171 @@
+{
+  "id": "automation-appointment-reminders",
+  "kind": "howto",
+  "area": "automation",
+  "screen": "automation.workflow",
+  "title": "Send appointment reminders",
+  "blurb": "Cut no-shows with a reminder the day before and a nudge on the day.",
+  "icon": "calendar",
+  "minutes": 6,
+  "keywords": [
+    "appointment",
+    "reminder",
+    "no show",
+    "booking",
+    "calendar",
+    "sms reminder"
+  ],
+  "steps": [
+    {
+      "id": "open-automation",
+      "title": "Open Automation",
+      "body": "Click **Automation** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_automation"
+        },
+        {
+          "text": "Automation",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/automation/"
+      }
+    },
+    {
+      "id": "open-workflow",
+      "title": "Open Workflows",
+      "body": "Click **Workflows** at the top.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "css": "#tb_workflow"
+        },
+        {
+          "text": "Workflows"
+        }
+      ],
+      "advance": {
+        "route": "^/automation/workflows(?!/settings)"
+      }
+    },
+    {
+      "id": "new-workflow",
+      "title": "Start a new workflow",
+      "body": "Click **Create Workflow** and start from scratch. At the top, rename it to something you will recognise later, like \"Appointment reminders\".",
+      "route": "^/automation/workflows(?!/settings)",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Create Workflow"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create Workflow"
+    },
+    {
+      "id": "trigger",
+      "title": "Trigger on a booking",
+      "body": "Click **Add New Trigger**, choose **Appointment Status**, and filter it to the calendar you want reminders for.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Appointment Status"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Appointment Status"
+    },
+    {
+      "id": "wait-day",
+      "title": "Wait until the day before",
+      "body": "Add a **Wait** step and choose **An upcoming appointment or booking**. Set it to 1 day before the appointment.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "An upcoming appointment or booking"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "An upcoming appointment or booking"
+    },
+    {
+      "id": "sms-day",
+      "title": "Send the reminder",
+      "body": "Add **Send SMS** with the date and time, and ask them to reply if they need to change it.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Send SMS"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Send SMS",
+      "tip": "Use the appointment date and time fields from the custom values picker so every text is correct."
+    },
+    {
+      "id": "wait-hours",
+      "title": "Add a same-day nudge",
+      "body": "Add another **Wait** set to 2 hours before, then another **Send SMS**. Two reminders catch most no-shows.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Wait"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Wait"
+    },
+    {
+      "id": "publish",
+      "title": "Save, test and publish",
+      "body": "Click **Save**. Run **Test Workflow** on your own contact, then switch **Draft** to **Publish** and save again.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Publish"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Publish",
+      "tip": "Bookings made less than a day ahead skip the first reminder automatically."
+    }
+  ]
+}

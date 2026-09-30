@@ -1,0 +1,116 @@
+{
+  "id": "contacts-page-companies",
+  "kind": "page",
+  "area": "contacts",
+  "screen": "contacts.business",
+  "title": "Tour: Companies",
+  "blurb": "Group contacts by the business they work for.",
+  "icon": "users",
+  "minutes": 2,
+  "keywords": [
+    "companies",
+    "business",
+    "b2b",
+    "organisation",
+    "accounts",
+    "company list"
+  ],
+  "steps": [
+    {
+      "id": "open-contacts",
+      "title": "Open Contacts",
+      "body": "Click **Contacts** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_contacts"
+        },
+        {
+          "text": "Contacts",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/contacts/"
+      }
+    },
+    {
+      "id": "tab-business",
+      "title": "Open Companies",
+      "body": "Click **Companies** along the top.",
+      "route": "^/(contacts/|tasks|businesses/|settings/fields)",
+      "go": "/businesses/list",
+      "target": [
+        {
+          "css": "#tb_business"
+        },
+        {
+          "text": "Companies",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/businesses/"
+      }
+    },
+    {
+      "id": "what",
+      "title": "Why use companies",
+      "body": "If you sell to other businesses, companies let you keep everyone from the same business together: the owner, the accounts person, the site manager.",
+      "route": "^/businesses/",
+      "go": "/businesses/list",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "list",
+      "title": "Your company list",
+      "body": "Each row is a company. Click one to see its details and the contacts linked to it. Use search and filters to find one fast.",
+      "route": "^/businesses/",
+      "go": "/businesses/list",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "add",
+      "title": "Add a company",
+      "body": "Click **New Company** to add one.",
+      "route": "^/businesses/",
+      "go": "/businesses/list",
+      "target": [
+        {
+          "text": "New Company",
+          "tag": "button"
+        },
+        {
+          "text": "Add Company",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New Company"
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Next: try **Link contacts to a company** from the Guide.",
+      "route": "^/businesses/",
+      "go": "/businesses/list",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

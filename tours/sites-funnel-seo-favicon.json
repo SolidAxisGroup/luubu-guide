@@ -1,0 +1,119 @@
+{
+  "id": "sites-funnel-seo-favicon",
+  "kind": "howto",
+  "area": "sites",
+  "screen": "sites.funnels",
+  "title": "Set SEO details and a favicon",
+  "blurb": "Control how your page shows up in Google, on social media and in the browser tab.",
+  "icon": "globe",
+  "minutes": 4,
+  "keywords": [
+    "seo",
+    "google",
+    "meta description",
+    "title",
+    "favicon",
+    "social image",
+    "search"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Funnels",
+      "body": "Click **Funnels**, or **Websites** for a website.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/funnels-websites/funnels",
+      "target": [
+        {
+          "css": "#tb_funnels"
+        },
+        {
+          "text": "Funnels",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/funnels"
+      }
+    },
+    {
+      "id": "open-page",
+      "title": "Open the page",
+      "body": "Open your funnel, pick the step and click **Edit** to open the builder.",
+      "route": "^/funnels-websites/funnels",
+      "go": "/funnels-websites/funnels",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "seo-panel",
+      "title": "Open SEO settings",
+      "body": "In the builder, open **Settings** and choose **SEO Meta Data**.",
+      "route": "^/",
+      "go": "/funnels-websites/funnels",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "seo-fields",
+      "title": "Fill in the details",
+      "body": "Add a **Title** (about 60 characters, include your service and town), a **Description** (one or two sentences that make people click) and a **Social Image** for when the link is shared.",
+      "route": "^/",
+      "go": "/funnels-websites/funnels",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Example title: Heat Pump Installs Hamilton | Your Business"
+    },
+    {
+      "id": "save-seo",
+      "title": "Save and publish",
+      "body": "Click **Save**, then **Publish** so search engines can see the new details.",
+      "route": "^/",
+      "go": "/funnels-websites/funnels",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "favicon",
+      "title": "Add a favicon",
+      "body": "The favicon is the tiny logo in the browser tab. Go back to the funnel, open its **Settings** tab and add your favicon image, then save.",
+      "route": "^/funnels-websites/funnels",
+      "go": "/funnels-websites/funnels",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Use a square logo, at least 32 by 32 pixels, on a plain background."
+    }
+  ]
+}

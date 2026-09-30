@@ -1,0 +1,145 @@
+{
+  "id": "settings-import-contacts",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.import-data",
+  "title": "Import contacts from a spreadsheet",
+  "blurb": "Move your customer list from Excel or another system into Luubu.",
+  "icon": "users",
+  "minutes": 5,
+  "keywords": [
+    "import contacts",
+    "csv",
+    "excel",
+    "upload",
+    "customer list",
+    "migrate"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-import-data",
+      "title": "Open Import Data",
+      "body": "Click **Import Data** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/import-data",
+      "target": [
+        {
+          "css": "[id='sb_import-data']"
+        },
+        {
+          "text": "Import Data",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/import-data"
+      }
+    },
+    {
+      "id": "prep",
+      "title": "Prepare the file",
+      "body": "Save your list as CSV with a header row. Each row needs a name, email or phone. Files must be under 30MB.",
+      "route": "^/settings/import-data",
+      "go": "/settings/import-data",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "start",
+      "title": "Start the import",
+      "body": "Click **Import** and choose Contacts.",
+      "route": "^/settings/import-data",
+      "go": "/settings/import-data",
+      "target": [
+        {
+          "text": "Import",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Import"
+    },
+    {
+      "id": "upload",
+      "title": "Upload the file",
+      "body": "Click **Upload File** and pick your CSV.",
+      "route": "^/settings/import-data",
+      "go": "/settings/import-data",
+      "target": [
+        {
+          "text": "Upload File",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Upload File"
+    },
+    {
+      "id": "mode",
+      "title": "New or update",
+      "body": "Choose whether to create new contacts, update existing ones, or both. Luubu matches by email first, then phone.",
+      "route": "^/settings/import-data",
+      "go": "/settings/import-data",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "map",
+      "title": "Match the columns",
+      "body": "Check each column is matched to the right field. Map anything extra to a custom field or skip it.",
+      "route": "^/settings/import-data",
+      "go": "/settings/import-data",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "finish",
+      "title": "Finish",
+      "body": "Add a tag like \"imported\" so you can find them later, then start the import.",
+      "route": "^/settings/import-data",
+      "go": "/settings/import-data",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Only import people who agreed to hear from you if you plan to market to them."
+    }
+  ]
+}

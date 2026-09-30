@@ -1,0 +1,113 @@
+{
+  "id": "marketing-page-countdown-timers",
+  "kind": "page",
+  "area": "marketing",
+  "screen": "marketing.countdown-timer",
+  "title": "Tour: Countdown Timers",
+  "blurb": "Live ticking timers for sales and deadlines, for emails and pages.",
+  "icon": "calendar",
+  "minutes": 2,
+  "keywords": [
+    "countdown",
+    "timer",
+    "deadline",
+    "sale",
+    "urgency",
+    "overview",
+    "tour"
+  ],
+  "steps": [
+    {
+      "id": "open-marketing",
+      "title": "Open Marketing",
+      "body": "Click **Marketing** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_email-marketing"
+        },
+        {
+          "text": "Marketing",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/"
+      }
+    },
+    {
+      "id": "open-countdown-timer",
+      "title": "Open Countdown Timers",
+      "body": "Click **Countdown Timers**. A timer counts down to a deadline, which gives people a reason to act now.",
+      "route": "^/marketing/",
+      "go": "/marketing/countdown-timer",
+      "target": [
+        {
+          "css": "#tb_countdown-timer"
+        },
+        {
+          "text": "Countdown Timers",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/countdown-timer"
+      }
+    },
+    {
+      "id": "new",
+      "title": "Make a timer",
+      "body": "**New** starts a timer.",
+      "route": "^/marketing/countdown-timer",
+      "go": "/marketing/countdown-timer",
+      "target": [
+        {
+          "text": "New",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New"
+    },
+    {
+      "id": "types",
+      "title": "Three kinds",
+      "body": "A **Fixed Timer** counts to one date, like a sale end. A **Recurring Timer** resets on a loop. A **Dynamic Timer** starts per person, for example when they open the email.",
+      "route": "^/marketing/countdown-timer",
+      "go": "/marketing/countdown-timer",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "list",
+      "title": "Your timers",
+      "body": "Saved timers are listed here. Open one to change its date, links or look.",
+      "route": "^/marketing/countdown-timer",
+      "go": "/marketing/countdown-timer",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What to do first",
+      "body": "Next: try **Create a countdown timer**, then **Add a countdown timer to an email**.",
+      "route": "^/marketing/countdown-timer",
+      "go": "/marketing/countdown-timer",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

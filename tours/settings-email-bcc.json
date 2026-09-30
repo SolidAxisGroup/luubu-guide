@@ -1,0 +1,111 @@
+{
+  "id": "settings-email-bcc",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.location-email-services",
+  "title": "BCC yourself on emails",
+  "blurb": "Keep a hidden copy of one-on-one and workflow emails.",
+  "icon": "mail",
+  "minutes": 2,
+  "keywords": [
+    "bcc",
+    "copy",
+    "email record",
+    "archive",
+    "blind copy"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-email-services",
+      "title": "Open Email Services",
+      "body": "Click **Email Services** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/smtp_service",
+      "target": [
+        {
+          "css": "[id='sb_location-email-services']"
+        },
+        {
+          "text": "Email Services",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/smtp_service"
+      }
+    },
+    {
+      "id": "open",
+      "title": "Open reply settings",
+      "body": "Click **Reply & Forward Settings**.",
+      "route": "^/settings/smtp_service",
+      "go": "/settings/smtp_service",
+      "target": [
+        {
+          "text": "Reply & Forward Settings"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Reply & Forward Settings",
+      "advance": "click"
+    },
+    {
+      "id": "bcc",
+      "title": "Add a BCC address",
+      "body": "In the BCC field, add the address that should get a hidden copy.",
+      "route": "^/settings/smtp_service",
+      "go": "/settings/smtp_service",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "scope",
+      "title": "What gets copied",
+      "body": "BCC covers one-on-one emails, workflow emails and billing emails. Bulk campaigns are not copied.",
+      "route": "^/settings/smtp_service",
+      "go": "/settings/smtp_service",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save",
+      "body": "Save your changes.",
+      "route": "^/settings/smtp_service",
+      "go": "/settings/smtp_service",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

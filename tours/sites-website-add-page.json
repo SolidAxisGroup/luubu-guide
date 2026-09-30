@@ -1,0 +1,104 @@
+{
+  "id": "sites-website-add-page",
+  "kind": "howto",
+  "area": "sites",
+  "screen": "sites.websites",
+  "title": "Add a new page to your website",
+  "blurb": "Add a Services, About or Contact page and link it up.",
+  "icon": "page",
+  "minutes": 3,
+  "keywords": [
+    "add page",
+    "new page",
+    "about page",
+    "contact page",
+    "services page",
+    "website pages"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Websites",
+      "body": "Click **Websites** and open your site.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/funnels-websites/websites",
+      "target": [
+        {
+          "css": "#tb_websites"
+        },
+        {
+          "text": "Websites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/websites"
+      }
+    },
+    {
+      "id": "pages",
+      "title": "See your pages",
+      "body": "The website opens on its list of pages. Use the add page option to create a new one.",
+      "route": "^/funnels-websites/websites",
+      "go": "/funnels-websites/websites",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "name",
+      "title": "Name the page",
+      "body": "Give it a clear name and path, like **Contact** and **/contact**. Pick a template or start blank.",
+      "route": "^/funnels-websites/websites",
+      "go": "/funnels-websites/websites",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "build",
+      "title": "Build it",
+      "body": "Click **Edit**. Reuse your saved header and footer so it matches the rest of the site, then add the page content.",
+      "route": "^/",
+      "go": "/funnels-websites/websites",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "link",
+      "title": "Link it in the menu",
+      "body": "Add the new page to your **Navigation Menu**, then **Save** and **Publish**.",
+      "route": "^/",
+      "go": "/funnels-websites/websites",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "id": "sites-chat-widget-conversation-ai",
+  "kind": "howto",
+  "area": "sites",
+  "screen": "sites.chat-widget",
+  "title": "Let AI answer your website chat",
+  "blurb": "Link Conversation AI to your chat widget so visitors get instant replies.",
+  "icon": "bot",
+  "minutes": 6,
+  "keywords": [
+    "conversation ai",
+    "chat bot",
+    "ai chat",
+    "auto reply",
+    "live chat",
+    "bot"
+  ],
+  "steps": [
+    {
+      "id": "open-conversation-ai",
+      "title": "Open Conversation AI",
+      "body": "Head to **AI Agents** and click **Conversation AI**. This is where your chat bot lives.",
+      "route": "^/ai-agents/",
+      "go": "/ai-agents/conversation-ai",
+      "target": [
+        {
+          "css": "#tb_ai-agents-conversation-ai"
+        },
+        {
+          "text": "Conversation AI",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/conversation-ai"
+      }
+    },
+    {
+      "id": "bot",
+      "title": "Open your bot",
+      "body": "Open your bot, or create one. Give it your services, areas, hours and prices so it answers accurately.",
+      "route": "^/ai-agents/conversation-ai",
+      "go": "/ai-agents/conversation-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Add your website and FAQs to the Knowledge Base so the bot can look things up."
+    },
+    {
+      "id": "channel",
+      "title": "Turn on Live Chat",
+      "body": "In the bot settings, make sure **Live Chat** is one of its channels.",
+      "route": "^/ai-agents/conversation-ai",
+      "go": "/ai-agents/conversation-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "mode",
+      "title": "Choose the mode",
+      "body": "Pick **Suggestive** to have it draft replies for you to approve, or **Auto-Pilot** to reply on its own. Save.",
+      "route": "^/ai-agents/conversation-ai",
+      "go": "/ai-agents/conversation-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "widget",
+      "title": "Check your widget type",
+      "body": "Your chat widget should be a **Live Chat** or all-in-one type, installed on your site. See **Install the chat widget on your website** in the Guide.",
+      "route": "^/",
+      "go": "/funnels-websites/chat-widget",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "test",
+      "title": "Test it",
+      "body": "Open your website in a private window and ask the bot a question a customer would. Adjust its instructions if the answer is off.",
+      "route": "^/",
+      "go": "/funnels-websites/chat-widget",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

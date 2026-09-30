@@ -1,0 +1,143 @@
+{
+  "id": "automation-page-workflows",
+  "kind": "page",
+  "area": "automation",
+  "screen": "automation.workflow",
+  "title": "Tour the Workflows screen",
+  "blurb": "Where your automations live, and the three ways to start one.",
+  "icon": "flow",
+  "minutes": 2,
+  "keywords": [
+    "workflows",
+    "automation",
+    "tour",
+    "overview",
+    "templates",
+    "folders"
+  ],
+  "steps": [
+    {
+      "id": "open-automation",
+      "title": "Open Automation",
+      "body": "Workflows send your texts, emails and reminders for you. Click **Automation** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_automation"
+        },
+        {
+          "text": "Automation",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/automation/"
+      }
+    },
+    {
+      "id": "open-workflow",
+      "title": "Open Workflows",
+      "body": "Click **Workflows** at the top.",
+      "route": "^/automation/",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "css": "#tb_workflow"
+        },
+        {
+          "text": "Workflows"
+        }
+      ],
+      "advance": {
+        "route": "^/automation/workflows(?!/settings)"
+      }
+    },
+    {
+      "id": "ai-box",
+      "title": "Describe it to AI",
+      "body": "Type the job in plain words in **What do you want to automate?** For example: text every new enquiry within a minute. AI drafts a workflow you can check before it goes live.",
+      "route": "^/automation/workflows(?!/settings)",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "What do you want to automate?"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "What do you want to automate?"
+    },
+    {
+      "id": "templates",
+      "title": "Start from a template",
+      "body": "**View All Templates** opens ready-made recipes for bookings, follow-ups and reviews. Pick the closest one and adjust it.",
+      "route": "^/automation/workflows(?!/settings)",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "View All Templates"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "View All Templates"
+    },
+    {
+      "id": "create",
+      "title": "Build your own",
+      "body": "**Create Workflow** gives you a blank workflow, or a template to start from.",
+      "route": "^/automation/workflows(?!/settings)",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Create Workflow"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create Workflow"
+    },
+    {
+      "id": "folders",
+      "title": "Your workflows and folders",
+      "body": "Your workflows are listed below with their status. Use **Create Folder** to group them, for example Sales, Bookings and Reviews.",
+      "route": "^/automation/workflows(?!/settings)",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "text": "Create Folder"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create Folder"
+    },
+    {
+      "id": "next",
+      "title": "What to do first",
+      "body": "Next: try **Reply to new leads instantly** from the Guide. It is the one workflow every business should have.",
+      "route": "^/automation/workflows(?!/settings)",
+      "go": "/automation/workflows",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

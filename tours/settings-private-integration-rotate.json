@@ -1,0 +1,91 @@
+{
+  "id": "settings-private-integration-rotate",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.common.sidebar.privateIntegrations",
+  "title": "Rotate or delete a token",
+  "blurb": "Swap out a token regularly or if it may have leaked.",
+  "icon": "cog",
+  "minutes": 2,
+  "keywords": [
+    "rotate token",
+    "delete token",
+    "api",
+    "security",
+    "revoke"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-private-integrations",
+      "title": "Open Private Integrations",
+      "body": "Click **Private Integrations** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/private-integrations",
+      "target": [
+        {
+          "css": "[id='sb_common.sidebar.privateIntegrations']"
+        },
+        {
+          "text": "Private Integrations",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/private-integrations"
+      }
+    },
+    {
+      "id": "find",
+      "title": "Find the token",
+      "body": "Find the integration in the list and open its menu.",
+      "route": "^/settings/private-integrations",
+      "go": "/settings/private-integrations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "rotate",
+      "title": "Rotate",
+      "body": "Rotate to make a new token. The old one keeps working for 7 days so your developer can swap it over.",
+      "route": "^/settings/private-integrations",
+      "go": "/settings/private-integrations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "delete",
+      "title": "Delete",
+      "body": "If a token leaks or is no longer used, delete it to cut access straight away.",
+      "route": "^/settings/private-integrations",
+      "go": "/settings/private-integrations",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

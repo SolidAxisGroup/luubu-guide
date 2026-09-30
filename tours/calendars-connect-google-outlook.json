@@ -1,0 +1,141 @@
+{
+  "id": "calendars-connect-google-outlook",
+  "kind": "howto",
+  "area": "calendars",
+  "screen": "calendars.calendar-settings-top",
+  "title": "Connect Google or Outlook calendar",
+  "blurb": "Sync your own calendar so you are never double-booked.",
+  "icon": "calendar",
+  "minutes": 3,
+  "keywords": [
+    "google calendar",
+    "outlook",
+    "sync",
+    "connect",
+    "office 365",
+    "double booking",
+    "conflict"
+  ],
+  "steps": [
+    {
+      "id": "open-calendars",
+      "title": "Open Calendars",
+      "body": "Click **Calendars** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_calendars"
+        },
+        {
+          "text": "Calendars",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/calendars/"
+      }
+    },
+    {
+      "id": "tab-calendar-settings-top",
+      "title": "Open Calendar Settings",
+      "body": "Click **Calendar Settings** along the top. This is where every booking calendar is built and edited.",
+      "route": "^/calendars/",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "css": "#tb_calendar-settings-top"
+        },
+        {
+          "text": "Calendar settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/calendars"
+      }
+    },
+    {
+      "id": "tab",
+      "title": "Open Connections",
+      "body": "Click the **Connections** tab.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "text": "Connections"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Connections"
+    },
+    {
+      "id": "add",
+      "title": "Add a connection",
+      "body": "Click **+ Add New**.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "text": "Add New",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add New"
+    },
+    {
+      "id": "connect",
+      "title": "Pick Google or Outlook",
+      "body": "Click **Connect** next to Google Calendar or Outlook, then sign in.",
+      "tip": "Tick every permission Google asks for. Without full calendar access the sync breaks.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "text": "Connect",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Connect"
+    },
+    {
+      "id": "linked",
+      "title": "Choose where bookings go",
+      "body": "Set one calendar as your **Linked Calendar**. New Luubu bookings are written there.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "conflict",
+      "title": "Block busy times",
+      "body": "Add any other calendars (family, personal) as **Conflict Calendars**. Busy times there block bookings. Click **Save**.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

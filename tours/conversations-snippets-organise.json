@@ -1,0 +1,101 @@
+{
+  "id": "conversations-snippets-organise",
+  "kind": "howto",
+  "area": "conversations",
+  "screen": "conversations.conversations-templates",
+  "title": "Organise snippets into folders",
+  "blurb": "Group your saved replies so the team finds the right one fast.",
+  "icon": "chat",
+  "minutes": 2,
+  "keywords": [
+    "snippets",
+    "folders",
+    "organise",
+    "move",
+    "duplicate",
+    "tidy"
+  ],
+  "steps": [
+    {
+      "id": "open-conversations",
+      "title": "Open Conversations",
+      "body": "Click **Conversations** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_conversations"
+        },
+        {
+          "text": "Conversations",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/conversations/"
+      }
+    },
+    {
+      "id": "tab-conversations-templates",
+      "title": "Open Snippets",
+      "body": "Click **Snippets** along the top.",
+      "route": "^/conversations/",
+      "go": "/conversations/templates",
+      "target": [
+        {
+          "css": "#tb_conversations-templates"
+        },
+        {
+          "text": "Snippets",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/conversations/templates"
+      }
+    },
+    {
+      "id": "folder",
+      "title": "Create a folder",
+      "body": "Click **New Folder** and name it, like \"Bookings\".",
+      "route": "^/conversations/templates",
+      "go": "/conversations/templates",
+      "target": [
+        {
+          "text": "New Folder",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New Folder"
+    },
+    {
+      "id": "move",
+      "title": "Move snippets in",
+      "body": "On a snippet, open the three-dot menu and choose **Move to Folder**. Pick the folder.",
+      "route": "^/conversations/templates",
+      "go": "/conversations/templates",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Move to Folder"
+    },
+    {
+      "id": "search",
+      "title": "Find one quickly",
+      "body": "Use the search bar to find a snippet by name or a word in it.",
+      "route": "^/conversations/templates",
+      "go": "/conversations/templates",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

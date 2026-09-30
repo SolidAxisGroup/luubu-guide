@@ -1,0 +1,132 @@
+{
+  "id": "conversations-page-snippets",
+  "kind": "page",
+  "area": "conversations",
+  "screen": "conversations.conversations-templates",
+  "title": "Tour: Snippets",
+  "blurb": "Saved replies you can drop into texts and emails in one click.",
+  "icon": "chat",
+  "minutes": 2,
+  "keywords": [
+    "snippets",
+    "templates",
+    "saved replies",
+    "canned responses",
+    "sms templates",
+    "email templates"
+  ],
+  "steps": [
+    {
+      "id": "open-conversations",
+      "title": "Open Conversations",
+      "body": "Click **Conversations** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_conversations"
+        },
+        {
+          "text": "Conversations",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/conversations/"
+      }
+    },
+    {
+      "id": "tab-conversations-templates",
+      "title": "Open Snippets",
+      "body": "Click **Snippets** along the top.",
+      "route": "^/conversations/",
+      "go": "/conversations/templates",
+      "target": [
+        {
+          "css": "#tb_conversations-templates"
+        },
+        {
+          "text": "Snippets",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/conversations/templates"
+      }
+    },
+    {
+      "id": "what",
+      "title": "What snippets are for",
+      "body": "Snippets are saved messages for the things you say every day: directions, pricing, \"thanks for your enquiry\". Insert them from the reply box in Conversations.",
+      "route": "^/conversations/templates",
+      "go": "/conversations/templates",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "list",
+      "title": "Your snippet list",
+      "body": "All your snippets are listed here. Use the three-dot menu on any snippet to edit, duplicate, move or delete it.",
+      "route": "^/conversations/templates",
+      "go": "/conversations/templates",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "folders",
+      "title": "Keep them tidy",
+      "body": "Click **New Folder** to group snippets, for example Quotes, Bookings and After-sales.",
+      "route": "^/conversations/templates",
+      "go": "/conversations/templates",
+      "target": [
+        {
+          "text": "New Folder",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New Folder"
+    },
+    {
+      "id": "new",
+      "title": "Make a new one",
+      "body": "Click **New Snippet** to create a text or email snippet.",
+      "route": "^/conversations/templates",
+      "go": "/conversations/templates",
+      "target": [
+        {
+          "text": "New Snippet",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New Snippet"
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Next: try **Create a text snippet** from the Guide.",
+      "route": "^/conversations/templates",
+      "go": "/conversations/templates",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

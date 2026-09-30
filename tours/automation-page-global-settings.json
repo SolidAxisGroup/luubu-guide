@@ -1,0 +1,109 @@
+{
+  "id": "automation-page-global-settings",
+  "kind": "page",
+  "area": "automation",
+  "screen": "automation.workflow-settings-top",
+  "title": "Tour Global Workflow Settings",
+  "blurb": "Account-wide controls that apply across your workflows, like pausing them over the holidays.",
+  "icon": "cog",
+  "minutes": 2,
+  "keywords": [
+    "global settings",
+    "workflow settings",
+    "pause",
+    "holiday",
+    "automation settings"
+  ],
+  "steps": [
+    {
+      "id": "open-automation",
+      "title": "Open Automation",
+      "body": "Click **Automation** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_automation"
+        },
+        {
+          "text": "Automation",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/automation/"
+      }
+    },
+    {
+      "id": "open-workflow-settings-top",
+      "title": "Open Global Workflow Settings",
+      "body": "Click **Global Workflow Settings** at the top.",
+      "route": "^/automation/",
+      "go": "/automation/workflows/settings",
+      "target": [
+        {
+          "css": "#tb_workflow-settings-top"
+        },
+        {
+          "text": "Global Workflow Settings"
+        }
+      ],
+      "advance": {
+        "route": "^/automation/workflows/settings"
+      }
+    },
+    {
+      "id": "pause",
+      "title": "Pause workflows on set dates",
+      "body": "Under **Pause Workflow** you choose date ranges when selected workflows stop sending. Handy for the Christmas shutdown or a long weekend.",
+      "route": "^/automation/workflows/settings",
+      "go": "/automation/workflows/settings",
+      "target": [
+        {
+          "text": "Pause Workflow"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Pause Workflow"
+    },
+    {
+      "id": "rules",
+      "title": "How pauses work",
+      "body": "You can add up to 15 date ranges. Each range can be up to 15 days long, and only published workflows can be paused. Tick the yearly repeat option for holidays that come round every year.",
+      "route": "^/automation/workflows/settings",
+      "go": "/automation/workflows/settings",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "per-workflow",
+      "title": "Per-workflow settings live elsewhere",
+      "body": "Sender name, quiet hours and re-entry rules are set inside each workflow, on its **Settings** tab.",
+      "route": "^/automation/workflows/settings",
+      "go": "/automation/workflows/settings",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "Next step",
+      "body": "Next: try **Pause workflows over the holidays** from the Guide.",
+      "route": "^/automation/workflows/settings",
+      "go": "/automation/workflows/settings",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

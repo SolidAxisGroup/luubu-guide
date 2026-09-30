@@ -1,0 +1,104 @@
+{
+  "id": "sites-page-stores",
+  "kind": "page",
+  "area": "sites",
+  "screen": "sites.stores",
+  "title": "Tour the Stores page",
+  "blurb": "See where your online shop is set up and managed.",
+  "icon": "card",
+  "minutes": 2,
+  "keywords": [
+    "store",
+    "shop",
+    "ecommerce",
+    "online store",
+    "sell online",
+    "tour"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Stores",
+      "body": "Click **Stores**. This is your online shop, with product, cart and checkout pages built for you.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/funnels-websites/stores",
+      "target": [
+        {
+          "css": "#tb_stores"
+        },
+        {
+          "text": "Stores",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/stores"
+      }
+    },
+    {
+      "id": "what",
+      "title": "How a store works",
+      "body": "Your products live in **Payments** > **Products**. Any product set to show in the online store appears here, on pages you design with the site builder.",
+      "route": "^/funnels-websites/stores",
+      "go": "/funnels-websites/stores",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "pages",
+      "title": "The store pages",
+      "body": "A store has a fixed set of pages: product list, product details, cart, checkout and thank you. You can restyle them but not reorder them.",
+      "route": "^/funnels-websites/stores",
+      "go": "/funnels-websites/stores",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "setup",
+      "title": "Before you sell",
+      "body": "You need a payment provider connected in **Payments**, shipping rates if you post goods, and a domain.",
+      "route": "^/funnels-websites/stores",
+      "go": "/funnels-websites/stores",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Next: try **Set up your online store** from the Guide.",
+      "route": "^/funnels-websites/stores",
+      "go": "/funnels-websites/stores",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

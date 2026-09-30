@@ -1,0 +1,114 @@
+{
+  "id": "settings-tracking-external-forms",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.external-tracking",
+  "title": "Capture forms from your other website",
+  "blurb": "Send enquiries from your WordPress or Wix site straight into Luubu.",
+  "icon": "chart",
+  "minutes": 4,
+  "keywords": [
+    "external forms",
+    "tracking script",
+    "wordpress",
+    "wix",
+    "squarespace",
+    "website forms",
+    "leads"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-external-tracking",
+      "title": "Open External Tracking",
+      "body": "Click **External Tracking** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/external-tracking",
+      "target": [
+        {
+          "css": "[id='sb_external-tracking']"
+        },
+        {
+          "text": "External Tracking",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/external-tracking"
+      }
+    },
+    {
+      "id": "copy",
+      "title": "Copy your script",
+      "body": "Click **Copy Script**.",
+      "route": "^/settings/external-tracking",
+      "go": "/settings/external-tracking",
+      "target": [
+        {
+          "text": "Copy Script",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Copy Script"
+    },
+    {
+      "id": "paste",
+      "title": "Add it to your site",
+      "body": "In your website editor, paste the script just before the closing </body> tag, or into a site-wide footer code box.",
+      "route": "^/settings/external-tracking",
+      "go": "/settings/external-tracking",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Not sure how? Send the script to your web person, it is a two-minute job."
+    },
+    {
+      "id": "test",
+      "title": "Test a form",
+      "body": "Fill in a form on your website with your own details.",
+      "route": "^/settings/external-tracking",
+      "go": "/settings/external-tracking",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "check",
+      "title": "Check it arrived",
+      "body": "Look in **Contacts** for yourself, or in form submissions under **Sites**.",
+      "route": "^/settings/external-tracking",
+      "go": "/settings/external-tracking",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": "settings-labs-disable",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.labs",
+  "title": "Turn off a Labs feature",
+  "blurb": "Go back to the usual version if a new feature is not working for you.",
+  "icon": "bot",
+  "minutes": 2,
+  "keywords": [
+    "labs",
+    "turn off",
+    "disable",
+    "revert",
+    "old version"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-labs",
+      "title": "Open Labs",
+      "body": "Click **Labs** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/labs",
+      "target": [
+        {
+          "css": "[id='sb_labs']"
+        },
+        {
+          "text": "Labs",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/labs"
+      }
+    },
+    {
+      "id": "find",
+      "title": "Find the feature",
+      "body": "Find the feature you switched on.",
+      "route": "^/settings/labs",
+      "go": "/settings/labs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "off",
+      "title": "Switch it off",
+      "body": "Turn its switch off, then refresh.",
+      "route": "^/settings/labs",
+      "go": "/settings/labs",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Something broke after turning a feature on? Email hello@luubu.com with what happened."
+    }
+  ]
+}

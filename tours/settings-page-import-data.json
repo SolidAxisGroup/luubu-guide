@@ -1,0 +1,112 @@
+{
+  "id": "settings-page-import-data",
+  "kind": "page",
+  "area": "settings",
+  "screen": "settings.import-data",
+  "title": "Tour: Import Data",
+  "blurb": "Bring contacts and deals in from a spreadsheet.",
+  "icon": "users",
+  "minutes": 2,
+  "keywords": [
+    "import",
+    "csv",
+    "spreadsheet",
+    "upload",
+    "contacts",
+    "excel"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-import-data",
+      "title": "Open Import Data",
+      "body": "Click **Import Data** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/import-data",
+      "target": [
+        {
+          "css": "[id='sb_import-data']"
+        },
+        {
+          "text": "Import Data",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/import-data"
+      }
+    },
+    {
+      "id": "what",
+      "title": "What this is for",
+      "body": "Import contacts, opportunities or both from a CSV file.",
+      "route": "^/settings/import-data",
+      "go": "/settings/import-data",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "start",
+      "title": "Start an import",
+      "body": "The import button starts a new upload.",
+      "route": "^/settings/import-data",
+      "go": "/settings/import-data",
+      "target": [
+        {
+          "text": "Import",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Import"
+    },
+    {
+      "id": "history",
+      "title": "Past imports",
+      "body": "Check progress and errors for past imports under **Bulk Actions** in Contacts.",
+      "route": "^/settings/import-data",
+      "go": "/settings/import-data",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Next: try **Import contacts from a spreadsheet** from the Guide.",
+      "route": "^/settings/import-data",
+      "go": "/settings/import-data",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

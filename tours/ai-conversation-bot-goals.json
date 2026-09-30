@@ -1,0 +1,144 @@
+{
+  "id": "ai-conversation-bot-goals",
+  "kind": "howto",
+  "area": "ai",
+  "screen": "ai.ai-agents-conversation-ai",
+  "title": "Have your bot book appointments",
+  "blurb": "Give the bot goals: collect details, book a time, and start a workflow.",
+  "icon": "calendar",
+  "minutes": 5,
+  "keywords": [
+    "bot goals",
+    "book appointment",
+    "collect info",
+    "trigger workflow",
+    "qualify",
+    "conversation ai"
+  ],
+  "steps": [
+    {
+      "id": "open-ai-agents",
+      "title": "Open AI Agents",
+      "body": "Click **AI Agents** in the left menu.",
+      "target": [
+        {
+          "css": "[id='sb_AI Agents']"
+        },
+        {
+          "text": "AI Agents",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/"
+      }
+    },
+    {
+      "id": "open-ai-agents-conversation-ai",
+      "title": "Open Conversation AI",
+      "body": "Click the **Conversation AI** tab.",
+      "route": "^/ai-agents/",
+      "go": "/ai-agents/conversation-ai",
+      "target": [
+        {
+          "css": "#tb_ai-agents-conversation-ai"
+        },
+        {
+          "text": "Conversation AI"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/conversation-ai"
+      }
+    },
+    {
+      "id": "open",
+      "title": "Open the bot",
+      "body": "Click the bot you want to set goals for.",
+      "route": "^/ai-agents/conversation-ai",
+      "go": "/ai-agents/conversation-ai",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "goals",
+      "title": "Open Bot Goals",
+      "body": "Click **Bot Goals**.",
+      "route": "^/ai-agents/conversation-ai",
+      "go": "/ai-agents/conversation-ai",
+      "target": [
+        {
+          "text": "Bot Goals"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Bot Goals"
+    },
+    {
+      "id": "collect",
+      "title": "Collect details",
+      "body": "Add **Collect Info** for name, phone, address and job details. Turn on **Skip if Already Filled** so it does not re-ask.",
+      "route": "^/ai-agents/conversation-ai",
+      "go": "/ai-agents/conversation-ai",
+      "target": [
+        {
+          "text": "Collect Info"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Collect Info"
+    },
+    {
+      "id": "book",
+      "title": "Book a time",
+      "body": "Add **Book Appointment** and pick your calendar. It will offer real free times.",
+      "route": "^/ai-agents/conversation-ai",
+      "go": "/ai-agents/conversation-ai",
+      "target": [
+        {
+          "text": "Book Appointment"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Book Appointment",
+      "tip": "Set up your calendar hours first, or the bot has no times to offer."
+    },
+    {
+      "id": "workflow",
+      "title": "Start a workflow",
+      "body": "Add **Trigger Workflow** to kick off your confirmation texts or notify your team. Save.",
+      "route": "^/ai-agents/conversation-ai",
+      "go": "/ai-agents/conversation-ai",
+      "target": [
+        {
+          "text": "Trigger Workflow"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Trigger Workflow"
+    }
+  ]
+}

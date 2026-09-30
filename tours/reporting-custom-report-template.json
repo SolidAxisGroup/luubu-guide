@@ -1,0 +1,143 @@
+{
+  "id": "reporting-custom-report-template",
+  "kind": "howto",
+  "area": "reporting",
+  "screen": "reporting.custom-reports",
+  "title": "Start a report from a template",
+  "blurb": "Pick a ready-made report layout and tweak it.",
+  "icon": "chart",
+  "minutes": 3,
+  "keywords": [
+    "template",
+    "report template",
+    "custom report",
+    "quick report",
+    "reporting"
+  ],
+  "steps": [
+    {
+      "id": "open-reporting",
+      "title": "Open Reporting",
+      "body": "Click **Reporting** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reporting"
+        },
+        {
+          "text": "Reporting",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/"
+      }
+    },
+    {
+      "id": "open-custom-reports",
+      "title": "Open Custom Reports",
+      "body": "Click **Custom Reports**.",
+      "route": "^/reporting/",
+      "go": "/reporting/reports",
+      "target": [
+        {
+          "css": "#tb_custom-reports"
+        },
+        {
+          "text": "Custom Reports",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/reports"
+      }
+    },
+    {
+      "id": "new",
+      "title": "Start a report",
+      "body": "Click **Create your first report**.",
+      "route": "^/reporting/reports",
+      "go": "/reporting/reports",
+      "target": [
+        {
+          "text": "Create your first report",
+          "tag": "button"
+        },
+        {
+          "text": "New Report",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create your first report",
+      "advance": "click"
+    },
+    {
+      "id": "library",
+      "title": "Open the library",
+      "body": "Choose **From Template Library**.",
+      "route": "^/reporting/reports",
+      "go": "/reporting/reports",
+      "target": [
+        {
+          "text": "From Template Library"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "From Template Library"
+    },
+    {
+      "id": "filter",
+      "title": "Find a fit",
+      "body": "Filter by industry and tags to find a layout that suits your business.",
+      "route": "^/reporting/reports",
+      "go": "/reporting/reports",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "apply",
+      "title": "Apply and tweak",
+      "body": "Apply it, then change any widget, filter or colour you like.",
+      "route": "^/reporting/reports",
+      "go": "/reporting/reports",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save it",
+      "body": "Click **Save**.",
+      "route": "^/reporting/reports",
+      "go": "/reporting/reports",
+      "target": [
+        {
+          "text": "Save",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Save"
+    }
+  ]
+}

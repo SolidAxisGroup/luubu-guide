@@ -1,0 +1,159 @@
+{
+  "id": "marketing-email-build-template",
+  "kind": "howto",
+  "area": "marketing",
+  "screen": "marketing.email-builder",
+  "title": "Build an email template",
+  "blurb": "Design a reusable email with your logo, colours and a clear button.",
+  "icon": "mail",
+  "minutes": 6,
+  "keywords": [
+    "email template",
+    "design email",
+    "newsletter",
+    "email builder",
+    "layout",
+    "drag and drop"
+  ],
+  "steps": [
+    {
+      "id": "open-marketing",
+      "title": "Open Marketing",
+      "body": "Click **Marketing** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_email-marketing"
+        },
+        {
+          "text": "Marketing",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/"
+      }
+    },
+    {
+      "id": "open-email-builder",
+      "title": "Open Emails",
+      "body": "Click **Emails** along the top.",
+      "route": "^/marketing/",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "css": "#tb_email-builder"
+        },
+        {
+          "text": "Emails",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/emails"
+      }
+    },
+    {
+      "id": "templates",
+      "title": "Go to Templates",
+      "body": "Click the **Templates** tab near the top.",
+      "route": "^/(marketing/)?emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "text": "Templates"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Templates"
+    },
+    {
+      "id": "new",
+      "title": "Start a new template",
+      "body": "Click **New**. Browse the template library, or start blank if you prefer.",
+      "route": "^/(marketing/)?emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "text": "New",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New"
+    },
+    {
+      "id": "choose",
+      "title": "Pick a design",
+      "body": "Click **Choose template** on a design you like. It opens in the email editor.",
+      "route": "^/(marketing/)?emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "text": "Choose template"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Choose template"
+    },
+    {
+      "id": "edit",
+      "title": "Make it yours",
+      "body": "Click any block to change the words, images and buttons. Add more from the elements panel: text, image, button, divider, video and more.",
+      "route": "^/(marketing/)?emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "One message and one button per email works best."
+    },
+    {
+      "id": "brand",
+      "title": "Use your brand",
+      "body": "Your brand colours and fonts show at the top of the colour and font pickers, once you have a default brand board.",
+      "route": "^/(marketing/)?emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save and test",
+      "body": "Click **Save Template**. Then use the three-dot menu and **Test Email** to send yourself a copy.",
+      "route": "^/(marketing/)?emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "text": "Save Template"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Save Template",
+      "tip": "Check it on your phone too. Most people read email there."
+    }
+  ]
+}

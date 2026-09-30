@@ -1,0 +1,104 @@
+{
+  "id": "ai-setup-checklist",
+  "kind": "howto",
+  "area": "ai",
+  "screen": "ai.ai-agents-getting-started",
+  "title": "Set up AI in the right order",
+  "blurb": "A five-step plan to get your first AI agent live without surprises.",
+  "icon": "bot",
+  "minutes": 3,
+  "keywords": [
+    "setup",
+    "checklist",
+    "start ai",
+    "first agent",
+    "plan",
+    "order"
+  ],
+  "steps": [
+    {
+      "id": "open-ai-agents",
+      "title": "Open AI Agents",
+      "body": "Click **AI Agents** in the left menu.",
+      "target": [
+        {
+          "css": "[id='sb_AI Agents']"
+        },
+        {
+          "text": "AI Agents",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/"
+      }
+    },
+    {
+      "id": "open-ai-agents-getting-started",
+      "title": "Open Getting Started",
+      "body": "Click the **Getting Started** tab.",
+      "route": "^/ai-agents/",
+      "go": "/ai-agents/getting-started",
+      "target": [
+        {
+          "css": "#tb_ai-agents-getting-started"
+        },
+        {
+          "text": "Getting Started"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/getting-started"
+      }
+    },
+    {
+      "id": "kb",
+      "title": "1. Build the knowledge base",
+      "body": "Add your website, FAQs, prices and policies in **Knowledge Base**. The AI can only be as good as what you teach it.",
+      "route": "^/ai-agents/getting-started",
+      "go": "/ai-agents/getting-started",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "bot",
+      "title": "2. Create one agent",
+      "body": "Start with one: a website chat bot or a phone receptionist.",
+      "route": "^/ai-agents/getting-started",
+      "go": "/ai-agents/getting-started",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "suggest",
+      "title": "3. Start in Suggestive",
+      "body": "Let it draft replies for you to approve for a week before switching to **Auto-Pilot**.",
+      "route": "^/ai-agents/getting-started",
+      "go": "/ai-agents/getting-started",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "logs",
+      "title": "4. Review the logs",
+      "body": "Check **Agent Logs** and fill any gaps in the knowledge base.",
+      "route": "^/ai-agents/getting-started",
+      "go": "/ai-agents/getting-started",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "AI use is billed on usage. Ask us about your plan: hello@luubu.com"
+    }
+  ]
+}

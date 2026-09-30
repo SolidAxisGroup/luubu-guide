@@ -1,0 +1,112 @@
+{
+  "id": "payments-document-payment",
+  "kind": "howto",
+  "area": "payments",
+  "screen": "payments.proposals-estimates",
+  "title": "Take payment when a contract is signed",
+  "blurb": "Ask for a deposit as part of signing.",
+  "icon": "page",
+  "minutes": 4,
+  "keywords": [
+    "deposit",
+    "pay on sign",
+    "contract payment",
+    "proposal",
+    "invoice"
+  ],
+  "steps": [
+    {
+      "id": "open-payments",
+      "title": "Open Payments",
+      "body": "Click **Payments** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_payments"
+        },
+        {
+          "text": "Payments",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/"
+      }
+    },
+    {
+      "id": "tab-proposals-estimates",
+      "title": "Open Documents & Contracts",
+      "body": "Click **Documents & Contracts** along the top.",
+      "route": "^/payments/",
+      "go": "/payments/proposals-estimates",
+      "target": [
+        {
+          "css": "#tb_proposals-estimates"
+        },
+        {
+          "text": "Documents & Contracts",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/proposals-estimates"
+      }
+    },
+    {
+      "id": "open",
+      "title": "Open a draft",
+      "body": "Open the draft document you want to charge for.",
+      "route": "^/payments/proposals-estimates",
+      "go": "/payments/proposals-estimates",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "products",
+      "title": "Add a product list",
+      "body": "Add a product list block and pick the items, with GST.",
+      "route": "^/payments/proposals-estimates",
+      "go": "/payments/proposals-estimates",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "payment",
+      "title": "Turn on payment",
+      "body": "In the payment settings for the document, set it up as a one-off or recurring charge.",
+      "route": "^/payments/proposals-estimates",
+      "go": "/payments/proposals-estimates",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "send",
+      "title": "Send it",
+      "body": "Click **Send**. Once the client signs, they are asked to pay, and an invoice is created.",
+      "tip": "Stripe must be connected first.",
+      "route": "^/payments/proposals-estimates",
+      "go": "/payments/proposals-estimates",
+      "target": [
+        {
+          "text": "Send",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Send"
+    }
+  ]
+}

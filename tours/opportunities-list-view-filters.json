@@ -1,0 +1,86 @@
+{
+  "id": "opportunities-list-view-filters",
+  "kind": "howto",
+  "area": "opportunities",
+  "screen": "opportunities.opportunities-tab",
+  "title": "Filter and sort your deals",
+  "blurb": "Use the list view to find stale quotes or big deals fast.",
+  "icon": "card",
+  "minutes": 3,
+  "keywords": [
+    "list view",
+    "filter",
+    "sort",
+    "search deals",
+    "all pipelines",
+    "columns"
+  ],
+  "steps": [
+    {
+      "id": "open-opportunities",
+      "title": "Open Opportunities",
+      "body": "Click **Opportunities** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_opportunities"
+        },
+        {
+          "text": "Opportunities",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/opportunities/"
+      }
+    },
+    {
+      "id": "list",
+      "title": "Switch to list view",
+      "body": "Switch from the card board to the list view at the top of the page.",
+      "route": "^/opportunities/list",
+      "go": "/opportunities/list",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "all",
+      "title": "See every pipeline",
+      "body": "In the pipeline dropdown choose **All Pipelines** to see every deal in one table.",
+      "route": "^/opportunities/list",
+      "go": "/opportunities/list",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "All Pipelines"
+    },
+    {
+      "id": "filter",
+      "title": "Filter",
+      "body": "Open the filters and add rules, like stage is Quote Sent and last updated more than 14 days ago. Those are your quotes to chase.",
+      "route": "^/opportunities/list",
+      "go": "/opportunities/list",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "sort",
+      "title": "Sort and pick columns",
+      "body": "Click a column header to sort, for example by value. Use the column settings to show or hide columns.",
+      "route": "^/opportunities/list",
+      "go": "/opportunities/list",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

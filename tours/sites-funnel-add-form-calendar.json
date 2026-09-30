@@ -1,0 +1,107 @@
+{
+  "id": "sites-funnel-add-form-calendar",
+  "kind": "howto",
+  "area": "sites",
+  "screen": "sites.funnels",
+  "title": "Add a form or booking calendar to a page",
+  "blurb": "Capture leads or take bookings straight from your funnel or website.",
+  "icon": "calendar",
+  "minutes": 4,
+  "keywords": [
+    "form",
+    "calendar",
+    "booking",
+    "appointment",
+    "lead capture",
+    "embed",
+    "opt in"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Funnels",
+      "body": "Click **Funnels**, or **Websites** if the page is on your website.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/funnels-websites/funnels",
+      "target": [
+        {
+          "css": "#tb_funnels"
+        },
+        {
+          "text": "Funnels",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/funnels"
+      }
+    },
+    {
+      "id": "open-page",
+      "title": "Open the page",
+      "body": "Open your funnel, pick the step and click **Edit** to open the builder.",
+      "route": "^/funnels-websites/funnels",
+      "go": "/funnels-websites/funnels",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Build the form in **Sites** > **Forms** first, and the calendar in **Calendars**, so they are ready to pick."
+    },
+    {
+      "id": "drag-form",
+      "title": "Drop in a form",
+      "body": "In the elements list on the left, find **Form** and drag it onto the page. In the right panel, choose which of your forms it shows.",
+      "route": "^/",
+      "go": "/funnels-websites/funnels",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "drag-calendar",
+      "title": "Or drop in a calendar",
+      "body": "For bookings, drag the **Calendar** element onto the page instead, then choose which calendar it shows in the right panel.",
+      "route": "^/",
+      "go": "/funnels-websites/funnels",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "test",
+      "title": "Test it",
+      "body": "Click **Save**, then **Preview**. Fill in the form or make a test booking. It should land in **Contacts** within a minute.",
+      "route": "^/",
+      "go": "/funnels-websites/funnels",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Send new leads an instant reply with a workflow that starts on form submitted or appointment booked."
+    }
+  ]
+}

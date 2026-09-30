@@ -1,0 +1,16 @@
+<!-- Luubu Guide: in-app walkthroughs. Remove `locations` to switch on for every client. -->
+<script>
+  window.LUUBU_GUIDE_CONFIG = {
+    locations: ["zRK0moceMCOayumGoB8R"],
+    support: "hello@luubu.com",
+    base: "https://solidaxisgroup.github.io/luubu-guide/"
+  };
+</script>
+<script>
+  (function () {
+    var s = document.createElement("script");
+    s.src = window.LUUBU_GUIDE_CONFIG.base + "src/guide.min.js?v=" + Math.floor(Date.now() / 600000);
+    s.async = true;
+    document.head.appendChild(s);
+  })();
+</script>

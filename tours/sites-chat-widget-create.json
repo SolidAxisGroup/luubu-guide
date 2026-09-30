@@ -1,0 +1,126 @@
+{
+  "id": "sites-chat-widget-create",
+  "kind": "howto",
+  "area": "sites",
+  "screen": "sites.chat-widget",
+  "title": "Create your chat widget",
+  "blurb": "Set up a website chat bubble with your colours and greeting.",
+  "icon": "chat",
+  "minutes": 5,
+  "keywords": [
+    "chat widget",
+    "live chat",
+    "website chat",
+    "greeting",
+    "style",
+    "colour"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Chat Widget",
+      "body": "Click **Chat Widget**.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/funnels-websites/chat-widget",
+      "target": [
+        {
+          "css": "#tb_chat-widget"
+        },
+        {
+          "text": "Chat Widget",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/chat-widget"
+      }
+    },
+    {
+      "id": "new",
+      "title": "Create a widget",
+      "body": "Click **New**.",
+      "route": "^/funnels-websites/chat-widget",
+      "go": "/funnels-websites/chat-widget",
+      "target": [
+        {
+          "text": "New",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New",
+      "advance": "click"
+    },
+    {
+      "id": "type",
+      "title": "Pick the type",
+      "body": "Choose **Live Chat** for real-time chat, or the all-in-one option to also offer SMS, WhatsApp and Facebook.",
+      "route": "^/funnels-websites/chat-widget",
+      "go": "/funnels-websites/chat-widget",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "style",
+      "title": "Style it",
+      "body": "On **Style**, set your colour, icon, avatar and where the bubble sits on the page.",
+      "route": "^/funnels-websites/chat-widget",
+      "go": "/funnels-websites/chat-widget",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "window",
+      "title": "Write the greeting",
+      "body": "On **Chat Window**, set the title and intro, like Kia ora, how can we help? Keep the contact form short.",
+      "route": "^/funnels-websites/chat-widget",
+      "go": "/funnels-websites/chat-widget",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save",
+      "body": "Click **Save**. Next, install it on your site.",
+      "route": "^/funnels-websites/chat-widget",
+      "go": "/funnels-websites/chat-widget",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Set your business hours so people know when to expect a reply."
+    }
+  ]
+}

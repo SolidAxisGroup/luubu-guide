@@ -1,0 +1,104 @@
+{
+  "id": "reporting-appointments-read",
+  "kind": "howto",
+  "area": "reporting",
+  "screen": "reporting.appointment-report",
+  "title": "See how bookings are going",
+  "blurb": "Check bookings by status, source and day to plan staff and marketing.",
+  "icon": "calendar",
+  "minutes": 3,
+  "keywords": [
+    "appointments",
+    "bookings",
+    "busy days",
+    "roster",
+    "report",
+    "sources"
+  ],
+  "steps": [
+    {
+      "id": "open-reporting",
+      "title": "Open Reporting",
+      "body": "Click **Reporting** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reporting"
+        },
+        {
+          "text": "Reporting",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/"
+      }
+    },
+    {
+      "id": "open-appointment-report",
+      "title": "Open Appointment Report",
+      "body": "Click **Appointment Report**.",
+      "route": "^/reporting/",
+      "go": "/reporting/appointment",
+      "target": [
+        {
+          "css": "#tb_appointment-report"
+        },
+        {
+          "text": "Appointment Report",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/appointment"
+      }
+    },
+    {
+      "id": "dates",
+      "title": "Pick a period",
+      "body": "Set the date range to last month.",
+      "route": "^/reporting/appointment",
+      "go": "/reporting/appointment",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "status",
+      "title": "Read the totals",
+      "body": "Check booked and confirmed against cancelled. A high cancel count is worth a look.",
+      "route": "^/reporting/appointment",
+      "go": "/reporting/appointment",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "sources",
+      "title": "Find what works",
+      "body": "See which sources bring bookings. Do more of what works.",
+      "route": "^/reporting/appointment",
+      "go": "/reporting/appointment",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "days",
+      "title": "Plan your roster",
+      "body": "Use the busiest booking days to plan staff and opening hours.",
+      "route": "^/reporting/appointment",
+      "go": "/reporting/appointment",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

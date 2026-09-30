@@ -1,0 +1,119 @@
+{
+  "id": "settings-page-domains-and-url-redirects",
+  "kind": "page",
+  "area": "settings",
+  "screen": "settings.domains-urlRedirects",
+  "title": "Tour: Domains & URL Redirects",
+  "blurb": "Connect your web address and send old links to new pages.",
+  "icon": "globe",
+  "minutes": 2,
+  "keywords": [
+    "domain",
+    "website address",
+    "dns",
+    "redirect",
+    "url",
+    "co.nz"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-domains-and-url-redirects",
+      "title": "Open Domains & URL Redirects",
+      "body": "Click **Domains & URL Redirects** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/domain",
+      "target": [
+        {
+          "css": "[id='sb_domains-urlRedirects']"
+        },
+        {
+          "text": "Domains & URL Redirects",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/domain"
+      }
+    },
+    {
+      "id": "connect",
+      "title": "Connect a domain",
+      "body": "**Connect a domain** links your web address (like yourbusiness.co.nz) to a Luubu website or funnel.",
+      "route": "^/settings/domain",
+      "go": "/settings/domain",
+      "target": [
+        {
+          "text": "Connect a domain",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Connect a domain"
+    },
+    {
+      "id": "list",
+      "title": "Your domains",
+      "body": "Connected domains are listed with their status and what they point to.",
+      "route": "^/settings/domain",
+      "go": "/settings/domain",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "redirects",
+      "title": "Redirects",
+      "body": "**URL Redirects** sends people from an old link to a new page, so nothing breaks.",
+      "route": "^/settings/domain",
+      "go": "/settings/domain",
+      "target": [
+        {
+          "text": "URL Redirects"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "URL Redirects"
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Next: try **Connect your domain** from the Guide.",
+      "route": "^/settings/domain",
+      "go": "/settings/domain",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

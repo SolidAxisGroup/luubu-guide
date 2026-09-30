@@ -1,0 +1,112 @@
+{
+  "id": "sites-page-blogs",
+  "kind": "page",
+  "area": "sites",
+  "screen": "sites.blogs",
+  "title": "Tour the Blogs page",
+  "blurb": "See where you write, schedule and organise blog posts.",
+  "icon": "book",
+  "minutes": 2,
+  "keywords": [
+    "blog",
+    "posts",
+    "articles",
+    "news",
+    "content",
+    "tour"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Blogs",
+      "body": "Click **Blogs**. Blog posts help people find you on Google and give you something to share.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/blogs",
+      "target": [
+        {
+          "css": "#tb_blogs"
+        },
+        {
+          "text": "Blogs",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/blogs"
+      }
+    },
+    {
+      "id": "blogs",
+      "title": "Your blogs",
+      "body": "Most businesses need one blog. Open it to see all posts with their status: draft, scheduled or published.",
+      "route": "^/blogs",
+      "go": "/blogs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "new-post",
+      "title": "Write a post",
+      "body": "**New Post** opens the editor. **Content AI** in the editor can draft an outline or paragraphs for you.",
+      "route": "^/blogs",
+      "go": "/blogs",
+      "target": [
+        {
+          "text": "New Post",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New Post"
+    },
+    {
+      "id": "settings",
+      "title": "Categories and authors",
+      "body": "The gear icon next to the new post button holds your categories and authors. Every post needs one of each.",
+      "route": "^/blogs",
+      "go": "/blogs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Next: try **Write and publish a blog post** from the Guide.",
+      "route": "^/blogs",
+      "go": "/blogs",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

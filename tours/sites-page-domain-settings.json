@@ -1,0 +1,123 @@
+{
+  "id": "sites-page-domain-settings",
+  "kind": "page",
+  "area": "sites",
+  "screen": "sites.sites-domain-settings",
+  "title": "Tour Domain Settings",
+  "blurb": "See where your web addresses are connected and managed.",
+  "icon": "cog",
+  "minutes": 2,
+  "keywords": [
+    "domain",
+    "domain settings",
+    "dns",
+    "web address",
+    "url redirects",
+    "tour"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Domain Settings",
+      "body": "Click the gear icon at the end of the Sites menu. It opens Domain Settings.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/settings/domain",
+      "target": [
+        {
+          "css": "#tb_sites-domain-settings"
+        },
+        {
+          "coach": true
+        }
+      ],
+      "advance": {
+        "route": "^/settings/domain"
+      }
+    },
+    {
+      "id": "connect",
+      "title": "Connect a domain",
+      "body": "**Connect a Domain** adds your web address, like yourbusiness.co.nz, for a website, funnel, store, blog or client portal.",
+      "route": "^/settings/domain",
+      "go": "/settings/domain",
+      "target": [
+        {
+          "text": "Connect a Domain",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Connect a Domain"
+    },
+    {
+      "id": "list",
+      "title": "Your domains",
+      "body": "Connected domains are listed with their status. Pending means the records are still spreading, which can take up to a day.",
+      "route": "^/settings/domain",
+      "go": "/settings/domain",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "manage",
+      "title": "Manage a domain",
+      "body": "Use **Manage** on a domain to choose its default page and its not-found page.",
+      "route": "^/settings/domain",
+      "go": "/settings/domain",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "redirects",
+      "title": "URL redirects",
+      "body": "Redirects send an old address to a new one, handy after you move from an old website.",
+      "route": "^/settings/domain",
+      "go": "/settings/domain",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Next: try **Connect your own domain** from the Guide.",
+      "route": "^/settings/domain",
+      "go": "/settings/domain",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

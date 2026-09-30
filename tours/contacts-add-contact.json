@@ -1,0 +1,108 @@
+{
+  "id": "contacts-add-contact",
+  "kind": "howto",
+  "area": "contacts",
+  "screen": "contacts.lists",
+  "title": "Add a contact",
+  "blurb": "Save a new customer or lead with their phone, email and tags.",
+  "icon": "users",
+  "minutes": 2,
+  "keywords": [
+    "add contact",
+    "new contact",
+    "create contact",
+    "new customer",
+    "new lead",
+    "save"
+  ],
+  "steps": [
+    {
+      "id": "open-contacts",
+      "title": "Open Contacts",
+      "body": "Click **Contacts** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_contacts"
+        },
+        {
+          "text": "Contacts",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/contacts/"
+      }
+    },
+    {
+      "id": "add",
+      "title": "Add a contact",
+      "body": "Click the **add contact** icon (a person with a plus) at the top right. A form slides out.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "css": "#add-contact-btn"
+        },
+        {
+          "text": "Add Contact",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "add contact icon"
+    },
+    {
+      "id": "details",
+      "title": "Fill in their details",
+      "body": "Enter their name, mobile and email. Use the +64 format for NZ mobiles, like +64 21 555 123, so texts go through.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "extras",
+      "title": "Add tags and extras",
+      "body": "Add any tags, like \"quote-sent\" or \"residential\", and fill in any other fields you use.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save",
+      "body": "Click **Save**. Adding a few in a row? Use **Save & Add Another** instead.",
+      "route": "^/contacts/smart_list",
+      "go": "/contacts/smart_list/All",
+      "target": [
+        {
+          "text": "Save",
+          "tag": "button"
+        },
+        {
+          "text": "Save & Add Another",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Save"
+    }
+  ]
+}

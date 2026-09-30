@@ -1,0 +1,146 @@
+{
+  "id": "settings-business-hours",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.calendars",
+  "title": "Set your business hours",
+  "blurb": "Set the days and hours customers can book you.",
+  "icon": "calendar",
+  "minutes": 4,
+  "keywords": [
+    "business hours",
+    "opening hours",
+    "working hours",
+    "schedule",
+    "availability",
+    "closed",
+    "public holidays"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-calendars",
+      "title": "Open Calendars",
+      "body": "Click **Calendars** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "css": "[id='sb_calendars']"
+        },
+        {
+          "text": "Calendars",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/calendars"
+      }
+    },
+    {
+      "id": "availability",
+      "title": "Open Availability",
+      "body": "Click **Availability**.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "text": "Availability"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Availability",
+      "advance": "click"
+    },
+    {
+      "id": "create",
+      "title": "Create a schedule",
+      "body": "Click **Create Schedule**, name it (for example \"Business Hours\"), then click **Create**.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "text": "Create Schedule",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create Schedule"
+    },
+    {
+      "id": "weekly",
+      "title": "Set the week",
+      "body": "Set your working days and opening hours. Leave days you are closed switched off.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "timezone",
+      "title": "Check the time zone",
+      "body": "Make sure the time zone is **Pacific/Auckland**.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "holidays",
+      "title": "Public holidays",
+      "body": "Add date-specific hours to close for Waitangi Day, Anzac Day, Matariki and other holidays.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "active",
+      "title": "Apply it",
+      "body": "Use **Active On** to pick which calendars follow this schedule, then save.",
+      "route": "^/settings/calendars",
+      "go": "/settings/calendars",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Active On"
+    }
+  ]
+}

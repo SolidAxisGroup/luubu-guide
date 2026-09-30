@@ -1,0 +1,103 @@
+{
+  "id": "automation-check-enrolment-trends",
+  "kind": "howto",
+  "area": "automation",
+  "screen": "automation.workflow-overview",
+  "title": "Check how your workflows are performing",
+  "blurb": "See enrolment trends and compare triggers over a date range.",
+  "icon": "chart",
+  "minutes": 3,
+  "keywords": [
+    "stats",
+    "performance",
+    "enrolments",
+    "trend",
+    "report",
+    "date range"
+  ],
+  "steps": [
+    {
+      "id": "open-automation",
+      "title": "Open Automation",
+      "body": "Click **Automation** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_automation"
+        },
+        {
+          "text": "Automation",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/automation/"
+      }
+    },
+    {
+      "id": "open-workflow-overview",
+      "title": "Open Overview",
+      "body": "Click **Overview** at the top.",
+      "route": "^/automation/",
+      "go": "/automation/overview",
+      "target": [
+        {
+          "css": "#tb_workflow-overview"
+        },
+        {
+          "text": "Overview"
+        }
+      ],
+      "advance": {
+        "route": "^/automation/overview"
+      }
+    },
+    {
+      "id": "dates",
+      "title": "Pick a date range",
+      "body": "Set the date range at the top, for example the last 30 days. Everything shows in your account timezone.",
+      "route": "^/automation/overview",
+      "go": "/automation/overview",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "trend",
+      "title": "Read the trend",
+      "body": "Look at enrolments week by week. A dip usually means fewer leads came in, or a trigger stopped firing.",
+      "route": "^/automation/overview",
+      "go": "/automation/overview",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "filter",
+      "title": "Drill into one trigger",
+      "body": "Filter by trigger type, form or survey to see which source feeds your workflows most.",
+      "route": "^/automation/overview",
+      "go": "/automation/overview",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "act",
+      "title": "Act on it",
+      "body": "If a form shows no enrolments, open that workflow and check its trigger and filters.",
+      "route": "^/automation/overview",
+      "go": "/automation/overview",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

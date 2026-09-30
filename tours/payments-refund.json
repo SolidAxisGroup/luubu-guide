@@ -1,0 +1,123 @@
+{
+  "id": "payments-refund",
+  "kind": "howto",
+  "area": "payments",
+  "screen": "payments.payment-transactions-new",
+  "title": "Refund a payment",
+  "blurb": "Give back all or part of a card payment.",
+  "icon": "card",
+  "minutes": 2,
+  "keywords": [
+    "refund",
+    "money back",
+    "partial refund",
+    "return",
+    "transaction"
+  ],
+  "steps": [
+    {
+      "id": "open-payments",
+      "title": "Open Payments",
+      "body": "Click **Payments** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_payments"
+        },
+        {
+          "text": "Payments",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/"
+      }
+    },
+    {
+      "id": "tab-payment-transactions-new",
+      "title": "Open Transactions",
+      "body": "Click **Transactions** along the top.",
+      "route": "^/payments/",
+      "go": "/payments/v2/transactions",
+      "target": [
+        {
+          "css": "#tb_payment-transactions-new"
+        },
+        {
+          "text": "Transactions",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/payments/v2/transactions"
+      }
+    },
+    {
+      "id": "find",
+      "title": "Find the payment",
+      "body": "Search for the customer or amount.",
+      "route": "^/payments/v2/transactions",
+      "go": "/payments/v2/transactions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "menu",
+      "title": "Open the menu",
+      "body": "Click the three dots on that transaction.",
+      "route": "^/payments/v2/transactions",
+      "go": "/payments/v2/transactions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "refund",
+      "title": "Choose Refund",
+      "body": "Click **Refund**.",
+      "route": "^/payments/v2/transactions",
+      "go": "/payments/v2/transactions",
+      "target": [
+        {
+          "text": "Refund"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Refund"
+    },
+    {
+      "id": "amount",
+      "title": "Set the amount",
+      "body": "The full amount is filled in. Lower it for a partial refund, then confirm.",
+      "tip": "Refunds take about 4 to 6 business days to reach the customer.",
+      "route": "^/payments/v2/transactions",
+      "go": "/payments/v2/transactions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "note",
+      "title": "Add a note",
+      "body": "Open the transaction and add an internal note saying why.",
+      "route": "^/payments/v2/transactions",
+      "go": "/payments/v2/transactions",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

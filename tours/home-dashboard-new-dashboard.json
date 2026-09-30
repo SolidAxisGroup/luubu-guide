@@ -1,0 +1,99 @@
+{
+  "id": "home-dashboard-new-dashboard",
+  "kind": "howto",
+  "area": "home",
+  "screen": "home.dashboard",
+  "title": "Create a second dashboard",
+  "blurb": "Set up separate views for sales, admin or each team member.",
+  "icon": "chart",
+  "minutes": 3,
+  "keywords": [
+    "dashboard",
+    "new dashboard",
+    "create dashboard",
+    "switch",
+    "share",
+    "team view"
+  ],
+  "steps": [
+    {
+      "id": "open-dashboard",
+      "title": "Open Dashboard",
+      "body": "Click **Dashboard** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_dashboard"
+        },
+        {
+          "text": "Dashboard",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/dashboard"
+      }
+    },
+    {
+      "id": "menu",
+      "title": "Open the dashboard menu",
+      "body": "Click the dashboard selector at the top left. You'll see **My Dashboards** and **Shared With Me**.",
+      "route": "^/dashboard",
+      "go": "/dashboard",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "My Dashboards"
+    },
+    {
+      "id": "create",
+      "title": "Create a new one",
+      "body": "Choose to create a new dashboard, give it a name like \"Sales this month\", and start with a blank page or a copy of an existing one.",
+      "route": "^/dashboard",
+      "go": "/dashboard",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "widgets",
+      "title": "Add your widgets",
+      "body": "Click **Add Widget** to fill it with the numbers that matter for this view.",
+      "route": "^/dashboard",
+      "go": "/dashboard",
+      "target": [
+        {
+          "text": "Add Widget",
+          "tag": "button"
+        },
+        {
+          "text": "Edit dashboard",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Add Widget",
+      "tip": "Don't see **Add Widget**? Click **Edit dashboard** first."
+    },
+    {
+      "id": "share",
+      "title": "Share or set as default",
+      "body": "Use the three-dot menu on the dashboard to share it with your team or make it the default one people see.",
+      "route": "^/dashboard",
+      "go": "/dashboard",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

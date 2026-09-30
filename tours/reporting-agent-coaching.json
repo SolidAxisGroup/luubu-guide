@@ -1,0 +1,92 @@
+{
+  "id": "reporting-agent-coaching",
+  "kind": "howto",
+  "area": "reporting",
+  "screen": "reporting.agent-reporting",
+  "title": "Use the agent report to coach your team",
+  "blurb": "Turn the numbers into a short, useful team chat.",
+  "icon": "users",
+  "minutes": 3,
+  "keywords": [
+    "coaching",
+    "team",
+    "win rate",
+    "agent report",
+    "staff",
+    "one on one"
+  ],
+  "steps": [
+    {
+      "id": "open-reporting",
+      "title": "Open Reporting",
+      "body": "Click **Reporting** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_reporting"
+        },
+        {
+          "text": "Reporting",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/"
+      }
+    },
+    {
+      "id": "open-agent-reporting",
+      "title": "Open Agent Reporting",
+      "body": "Click **Agent Reporting**.",
+      "route": "^/reporting/",
+      "go": "/reporting/agent",
+      "target": [
+        {
+          "css": "#tb_agent-reporting"
+        },
+        {
+          "text": "Agent Reporting",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/reporting/agent"
+      }
+    },
+    {
+      "id": "winrate",
+      "title": "Look at win rates",
+      "body": "Find who wins the highest share of their opportunities. Ask them what they do differently.",
+      "route": "^/reporting/agent",
+      "go": "/reporting/agent",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "gaps",
+      "title": "Find the gaps",
+      "body": "Someone with lots of leads but few wins may need help with quoting or follow-up.",
+      "route": "^/reporting/agent",
+      "go": "/reporting/agent",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "share",
+      "title": "Share it",
+      "body": "Build the key numbers into a custom report and email it to the team each week.",
+      "route": "^/reporting/agent",
+      "go": "/reporting/agent",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

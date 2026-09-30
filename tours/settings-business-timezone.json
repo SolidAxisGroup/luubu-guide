@@ -1,0 +1,108 @@
+{
+  "id": "settings-business-timezone",
+  "kind": "howto",
+  "area": "settings",
+  "screen": "settings.business_info",
+  "title": "Set your time zone to New Zealand",
+  "blurb": "Make sure reminders, bookings and scheduled messages run on NZ time.",
+  "icon": "calendar",
+  "minutes": 2,
+  "keywords": [
+    "time zone",
+    "timezone",
+    "nz time",
+    "auckland",
+    "daylight saving",
+    "address",
+    "wrong time"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-business-profile",
+      "title": "Open Business Profile",
+      "body": "Click **Business Profile** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/company",
+      "target": [
+        {
+          "css": "[id='sb_business_info']"
+        },
+        {
+          "text": "Business Profile",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/company/?$"
+      }
+    },
+    {
+      "id": "scroll",
+      "title": "Go to the address section",
+      "body": "Scroll down to **Business Physical Address**.",
+      "route": "^/settings/company/?$",
+      "go": "/settings/company",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Business Physical Address"
+    },
+    {
+      "id": "address",
+      "title": "Enter your address",
+      "body": "Fill in your street address, city, region and postcode, and set the country to New Zealand.",
+      "route": "^/settings/company/?$",
+      "go": "/settings/company",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "timezone",
+      "title": "Pick the time zone",
+      "body": "In the **Time Zone** list, choose **Pacific/Auckland**. It covers all of mainland New Zealand and handles daylight saving on its own.",
+      "route": "^/settings/company/?$",
+      "go": "/settings/company",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Time Zone",
+      "tip": "On the Chatham Islands? Pick Pacific/Chatham instead."
+    },
+    {
+      "id": "save",
+      "title": "Save the section",
+      "body": "Click the save button at the bottom of this section. Then send yourself a test booking or text to check the times look right.",
+      "route": "^/settings/company/?$",
+      "go": "/settings/company",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

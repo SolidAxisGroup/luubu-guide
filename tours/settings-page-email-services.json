@@ -1,0 +1,119 @@
+{
+  "id": "settings-page-email-services",
+  "kind": "page",
+  "area": "settings",
+  "screen": "settings.location-email-services",
+  "title": "Tour: Email Services",
+  "blurb": "How Luubu Email sends, and where replies go.",
+  "icon": "mail",
+  "minutes": 2,
+  "keywords": [
+    "email services",
+    "sending domain",
+    "luubu email",
+    "reply",
+    "forward",
+    "deliverability"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Click **Settings** at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-email-services",
+      "title": "Open Email Services",
+      "body": "Click **Email Services** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/smtp_service",
+      "target": [
+        {
+          "css": "[id='sb_location-email-services']"
+        },
+        {
+          "text": "Email Services",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/smtp_service"
+      }
+    },
+    {
+      "id": "sending",
+      "title": "How you send",
+      "body": "Your account sends through **Luubu Email** out of the box. This page shows how email is set up.",
+      "route": "^/settings/smtp_service",
+      "go": "/settings/smtp_service",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "domain",
+      "title": "Your own domain",
+      "body": "**Dedicated Domain And IP** is where you set up sending from your own domain, which helps emails land in the inbox.",
+      "route": "^/settings/smtp_service",
+      "go": "/settings/smtp_service",
+      "target": [
+        {
+          "text": "Dedicated Domain And IP",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Dedicated Domain And IP"
+    },
+    {
+      "id": "reply",
+      "title": "Replies and copies",
+      "body": "**Reply & Forward Settings** controls where customer replies go and who gets copies.",
+      "route": "^/settings/smtp_service",
+      "go": "/settings/smtp_service",
+      "target": [
+        {
+          "text": "Reply & Forward Settings"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Reply & Forward Settings"
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Next: try **Connect your email** from the Guide to set up your domain and inbox.",
+      "route": "^/settings/smtp_service",
+      "go": "/settings/smtp_service",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

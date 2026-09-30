@@ -1,0 +1,106 @@
+{
+  "id": "sites-funnel-publish-domain",
+  "kind": "howto",
+  "area": "sites",
+  "screen": "sites.funnels",
+  "title": "Publish a funnel on your domain",
+  "blurb": "Put your funnel live on your own web address with a tidy link.",
+  "icon": "globe",
+  "minutes": 4,
+  "keywords": [
+    "publish",
+    "domain",
+    "go live",
+    "url",
+    "link",
+    "path",
+    "funnel settings"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Connect your domain first under the gear icon (Domain Settings). Then click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Funnels",
+      "body": "Click **Funnels** and open the funnel.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/funnels-websites/funnels",
+      "target": [
+        {
+          "css": "#tb_funnels"
+        },
+        {
+          "text": "Funnels",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/funnels"
+      }
+    },
+    {
+      "id": "settings-tab",
+      "title": "Open funnel settings",
+      "body": "Open the funnel’s **Settings** tab.",
+      "route": "^/funnels-websites/funnels",
+      "go": "/funnels-websites/funnels",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "pick-domain",
+      "title": "Choose the domain",
+      "body": "Pick your domain from the domain list and give the funnel a short path, like **/free-quote**. Save.",
+      "route": "^/funnels-websites/funnels",
+      "go": "/funnels-websites/funnels",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Keep paths short and readable. People type them off flyers."
+    },
+    {
+      "id": "publish",
+      "title": "Publish each step",
+      "body": "Open each step in the builder and click **Publish**. Saved changes only go live once published.",
+      "route": "^/",
+      "go": "/funnels-websites/funnels",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "copy-link",
+      "title": "Copy the live link",
+      "body": "Back on the **Steps** tab, open the first step’s live link and check it loads on your domain. Use that link in ads, emails and QR codes.",
+      "route": "^/funnels-websites/funnels",
+      "go": "/funnels-websites/funnels",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

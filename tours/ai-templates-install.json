@@ -1,0 +1,123 @@
+{
+  "id": "ai-templates-install",
+  "kind": "howto",
+  "area": "ai",
+  "screen": "ai.ai-agents-agent-templates",
+  "title": "Install an agent template",
+  "blurb": "Get a working chat or voice agent in a few clicks, then make it yours.",
+  "icon": "bot",
+  "minutes": 5,
+  "keywords": [
+    "install",
+    "template",
+    "agent",
+    "ready made",
+    "quick start",
+    "ai"
+  ],
+  "steps": [
+    {
+      "id": "open-ai-agents",
+      "title": "Open AI Agents",
+      "body": "Click **AI Agents** in the left menu.",
+      "target": [
+        {
+          "css": "[id='sb_AI Agents']"
+        },
+        {
+          "text": "AI Agents",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/"
+      }
+    },
+    {
+      "id": "open-ai-agents-agent-templates",
+      "title": "Open Agent Templates",
+      "body": "Click the **Agent Templates** tab.",
+      "route": "^/ai-agents/",
+      "go": "/ai-agents/agent-templates",
+      "target": [
+        {
+          "css": "#tb_ai-agents-agent-templates"
+        },
+        {
+          "text": "Agent Templates"
+        }
+      ],
+      "advance": {
+        "route": "^/ai-agents/agent-templates"
+      }
+    },
+    {
+      "id": "browse",
+      "title": "Find one that fits",
+      "body": "Browse or search for your job, like \"appointment booking\" or \"receptionist\".",
+      "route": "^/ai-agents/agent-templates",
+      "go": "/ai-agents/agent-templates",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "preview",
+      "title": "Preview it",
+      "body": "Open the template and read what it does. Chat with the preview if there is one.",
+      "route": "^/ai-agents/agent-templates",
+      "go": "/ai-agents/agent-templates",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "install",
+      "title": "Install it",
+      "body": "Click **Install** and confirm.",
+      "route": "^/ai-agents/agent-templates",
+      "go": "/ai-agents/agent-templates",
+      "target": [
+        {
+          "text": "Install"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Install"
+    },
+    {
+      "id": "customise",
+      "title": "Make it yours",
+      "body": "Open the new agent in **Conversation AI** or **Voice AI**. Update the business name, services, hours and calendar.",
+      "route": "^/ai-agents/agent-templates",
+      "go": "/ai-agents/agent-templates",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Attach your own knowledge base or it will not know your details."
+    },
+    {
+      "id": "test",
+      "title": "Test before going live",
+      "body": "Keep it in Suggestive or test mode until you have tried a few real questions.",
+      "route": "^/ai-agents/agent-templates",
+      "go": "/ai-agents/agent-templates",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

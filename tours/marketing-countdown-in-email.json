@@ -1,0 +1,143 @@
+{
+  "id": "marketing-countdown-in-email",
+  "kind": "howto",
+  "area": "marketing",
+  "screen": "marketing.email-builder",
+  "title": "Add a countdown timer to an email",
+  "blurb": "Show a live ticking deadline inside your campaign or template.",
+  "icon": "mail",
+  "minutes": 4,
+  "keywords": [
+    "countdown in email",
+    "timer",
+    "email",
+    "deadline",
+    "sale",
+    "urgency"
+  ],
+  "steps": [
+    {
+      "id": "open-marketing",
+      "title": "Open Marketing",
+      "body": "Click **Marketing** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_email-marketing"
+        },
+        {
+          "text": "Marketing",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/"
+      }
+    },
+    {
+      "id": "open-email-builder",
+      "title": "Open Emails",
+      "body": "Click **Emails** along the top.",
+      "route": "^/marketing/",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "css": "#tb_email-builder"
+        },
+        {
+          "text": "Emails",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/emails"
+      }
+    },
+    {
+      "id": "templates",
+      "title": "Open your email",
+      "body": "Click **Templates** (or **Campaigns**) and open the email you want to add a timer to.",
+      "route": "^/(marketing/)?emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "text": "Templates"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Templates",
+      "tip": "Make the timer first in **Countdown Timers**."
+    },
+    {
+      "id": "add",
+      "title": "Add the timer element",
+      "body": "In the editor, drag the countdown timer element into your email, just above your main button.",
+      "route": "^/(marketing/)?emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "select",
+      "title": "Pick your timer",
+      "body": "Choose one of the timers you made. Check the preview looks right.",
+      "route": "^/(marketing/)?emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "timezone",
+      "title": "Match their time zone",
+      "body": "Turn on **Adapt to Contact Time Zone** so each person sees their own local deadline. Adjust alignment, background and padding if needed.",
+      "route": "^/(marketing/)?emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "text": "Adapt to Contact Time Zone"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Adapt to Contact Time Zone"
+    },
+    {
+      "id": "link",
+      "title": "Link your button",
+      "body": "Copy the timer’s redirect link and use it on your main button. After the deadline, clicks go to your expired page.",
+      "route": "^/(marketing/)?emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save and test",
+      "body": "Save the email and send yourself a test to see the timer ticking.",
+      "route": "^/(marketing/)?emails",
+      "go": "/marketing/emails/statistics",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

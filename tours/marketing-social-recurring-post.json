@@ -1,0 +1,160 @@
+{
+  "id": "marketing-social-recurring-post",
+  "kind": "howto",
+  "area": "marketing",
+  "screen": "marketing.social-planner",
+  "title": "Set up a recurring social post",
+  "blurb": "Repeat a post every day, week, month or year without redoing it.",
+  "icon": "share",
+  "minutes": 4,
+  "keywords": [
+    "recurring",
+    "repeat post",
+    "weekly post",
+    "evergreen",
+    "regular",
+    "social planner"
+  ],
+  "steps": [
+    {
+      "id": "open-marketing",
+      "title": "Open Marketing",
+      "body": "Click **Marketing** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_email-marketing"
+        },
+        {
+          "text": "Marketing",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/"
+      }
+    },
+    {
+      "id": "open-social-planner",
+      "title": "Open Social Planner",
+      "body": "Click **Social Planner** along the top.",
+      "route": "^/marketing/",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "css": "#tb_social-planner"
+        },
+        {
+          "text": "Social Planner",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/marketing/social-planner"
+      }
+    },
+    {
+      "id": "new-post",
+      "title": "Start a post",
+      "body": "Click **+ New Post**.",
+      "route": "^/marketing/social-planner",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "text": "New Post",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "New Post",
+      "advance": "click"
+    },
+    {
+      "id": "create-new",
+      "title": "Choose a custom post",
+      "body": "Pick **Create New Post**.",
+      "route": "^/marketing/social-planner",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "text": "Create New Post"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Create New Post",
+      "advance": "click"
+    },
+    {
+      "id": "compose",
+      "title": "Write the post",
+      "body": "Pick your accounts, then write the post and add any photos. Keep it timeless, as it will go out again and again.",
+      "route": "^/marketing/social-planner",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "recurring",
+      "title": "Make it repeat",
+      "body": "Open the options on the post button and choose **Schedule Recurring Posts**.",
+      "route": "^/marketing/social-planner",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "text": "Schedule Recurring Posts"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Schedule Recurring Posts"
+    },
+    {
+      "id": "frequency",
+      "title": "Choose how often",
+      "body": "Pick **Day**, **Week**, **Month** or **Year**. Set the time, the start date and the end date, then confirm.",
+      "route": "^/marketing/social-planner",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "There is no pause button, so choose an end date you are happy with."
+    },
+    {
+      "id": "manage",
+      "title": "Edit the series later",
+      "body": "Find the series under **Content**, in the **Recurring** tab. Change the parent post to update every repeat.",
+      "route": "^/marketing/social-planner",
+      "go": "/marketing/social-planner",
+      "target": [
+        {
+          "text": "Content"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Content"
+    }
+  ]
+}

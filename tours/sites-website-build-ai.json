@@ -1,0 +1,126 @@
+{
+  "id": "sites-website-build-ai",
+  "kind": "howto",
+  "area": "sites",
+  "screen": "sites.websites",
+  "title": "Draft a website with AI",
+  "blurb": "Describe your business and get a first draft of your site in minutes.",
+  "icon": "bot",
+  "minutes": 5,
+  "keywords": [
+    "ai",
+    "build with ai",
+    "generate website",
+    "draft",
+    "quick website",
+    "template"
+  ],
+  "steps": [
+    {
+      "id": "open-sites",
+      "title": "Open Sites",
+      "body": "Click **Sites** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_sites"
+        },
+        {
+          "text": "Sites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/"
+      }
+    },
+    {
+      "id": "open-tab",
+      "title": "Open Websites",
+      "body": "Click **Websites**.",
+      "route": "^/(funnels-websites|analytics|blogs|wordpress|form-builder|survey-builder|quiz-builder|qr-codes|settings/domain)",
+      "go": "/funnels-websites/websites",
+      "target": [
+        {
+          "css": "#tb_websites"
+        },
+        {
+          "text": "Websites",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/funnels-websites/websites"
+      }
+    },
+    {
+      "id": "build-ai",
+      "title": "Start with AI",
+      "body": "Click **Build with AI**.",
+      "route": "^/funnels-websites/websites",
+      "go": "/funnels-websites/websites",
+      "target": [
+        {
+          "text": "Build with AI",
+          "tag": "button"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Build with AI",
+      "advance": "click"
+    },
+    {
+      "id": "describe",
+      "title": "Describe your business",
+      "body": "Tell it what you do, where you work, who your customers are and what you want visitors to do, like book a job or call you. More detail gives a better draft.",
+      "route": "^/",
+      "go": "/funnels-websites/websites",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "tip": "Example: Plumber in Tauranga, residential and small commercial, wants quote requests and phone calls."
+    },
+    {
+      "id": "generate",
+      "title": "Generate the draft",
+      "body": "Click **Generate** and wait while it builds the pages, copy and layout.",
+      "route": "^/",
+      "go": "/funnels-websites/websites",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Make it yours",
+      "body": "Open each page and check every word. Swap stock photos for your own work, and fix prices, areas and phone numbers.",
+      "route": "^/",
+      "go": "/funnels-websites/websites",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "save",
+      "title": "Save and preview",
+      "body": "Click **Save**, then **Preview** on desktop and phone before you publish.",
+      "route": "^/",
+      "go": "/funnels-websites/websites",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

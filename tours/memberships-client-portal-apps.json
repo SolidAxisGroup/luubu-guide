@@ -1,0 +1,139 @@
+{
+  "id": "memberships-client-portal-apps",
+  "kind": "howto",
+  "area": "memberships",
+  "screen": "memberships.clientportalCommunities",
+  "title": "Choose what clients see in the portal",
+  "blurb": "Switch courses, sign-in options and other portal apps on or off.",
+  "icon": "users",
+  "minutes": 3,
+  "keywords": [
+    "client portal",
+    "apps",
+    "permissions",
+    "google sign in",
+    "language",
+    "affiliate",
+    "courses"
+  ],
+  "steps": [
+    {
+      "id": "open-memberships",
+      "title": "Open Memberships",
+      "body": "Click **Memberships** in the left menu.",
+      "target": [
+        {
+          "css": "#sb_memberships"
+        },
+        {
+          "text": "Memberships",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/memberships/"
+      }
+    },
+    {
+      "id": "open-client-portal",
+      "title": "Open Client Portal",
+      "body": "Click **Client Portal**.",
+      "route": "^/memberships/",
+      "go": "/memberships/client-portal/dashboard",
+      "target": [
+        {
+          "css": "#tb_clientportalCommunities"
+        },
+        {
+          "text": "Client Portal",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/memberships/client-portal"
+      }
+    },
+    {
+      "id": "settings",
+      "title": "Open portal settings",
+      "body": "Click **Settings**.",
+      "route": "^/memberships/client-portal",
+      "go": "/memberships/client-portal/dashboard",
+      "target": [
+        {
+          "text": "Settings"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Settings",
+      "advance": "click"
+    },
+    {
+      "id": "app-permissions",
+      "title": "Open App Permissions",
+      "body": "Open **App Permissions**. This is where you switch portal features on or off, such as courses, Google sign-in and your affiliate program.",
+      "route": "^/memberships/client-portal",
+      "go": "/memberships/client-portal/dashboard",
+      "target": [
+        {
+          "text": "App Permissions"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "App Permissions"
+    },
+    {
+      "id": "toggle",
+      "title": "Pick your apps",
+      "body": "Turn on what your clients should use. Turn off anything you don't offer yet so the portal stays tidy, then save.",
+      "route": "^/memberships/client-portal",
+      "go": "/memberships/client-portal/dashboard",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    },
+    {
+      "id": "language",
+      "title": "Change the language (optional)",
+      "body": "Need another language? Open **Language Settings**, pick it and save.",
+      "route": "^/memberships/client-portal",
+      "go": "/memberships/client-portal/dashboard",
+      "target": [
+        {
+          "text": "Language Settings"
+        },
+        {
+          "frame": true
+        },
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Language Settings"
+    },
+    {
+      "id": "check",
+      "title": "Check it as a client",
+      "body": "Open your portal link in a private browser window to see exactly what clients see.",
+      "route": "^/memberships/client-portal",
+      "go": "/memberships/client-portal/dashboard",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}

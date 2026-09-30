@@ -1,0 +1,121 @@
+{
+  "id": "settings-page-business-profile",
+  "kind": "page",
+  "area": "settings",
+  "screen": "settings.business_info",
+  "title": "Tour: Business Profile",
+  "blurb": "Your business name, logo, contact details, address and time zone.",
+  "icon": "cog",
+  "minutes": 2,
+  "keywords": [
+    "business profile",
+    "company",
+    "logo",
+    "address",
+    "time zone",
+    "details",
+    "settings"
+  ],
+  "steps": [
+    {
+      "id": "open-settings",
+      "title": "Open Settings",
+      "body": "Your business details live in **Settings**, at the bottom of the left menu.",
+      "target": [
+        {
+          "css": "#sb_settings"
+        },
+        {
+          "text": "Settings",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/"
+      }
+    },
+    {
+      "id": "open-business-profile",
+      "title": "Open Business Profile",
+      "body": "Click **Business Profile** in the Settings menu.",
+      "route": "^/settings/",
+      "go": "/settings/company",
+      "target": [
+        {
+          "css": "[id='sb_business_info']"
+        },
+        {
+          "text": "Business Profile",
+          "tag": "a"
+        }
+      ],
+      "advance": {
+        "route": "^/settings/company/?$"
+      }
+    },
+    {
+      "id": "general-info",
+      "title": "Your business details",
+      "body": "The top section, **General Information**, holds your logo, business names, email, phone, website and currency. These show up on invoices, emails and booking pages.",
+      "route": "^/settings/company/?$",
+      "go": "/settings/company",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "General Information"
+    },
+    {
+      "id": "address",
+      "title": "Address and time zone",
+      "body": "Scroll to **Business Physical Address**. Your address and time zone sit here. The time zone controls when reminders and scheduled messages go out, so it matters.",
+      "route": "^/settings/company/?$",
+      "go": "/settings/company",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Business Physical Address"
+    },
+    {
+      "id": "general-switches",
+      "title": "General switches",
+      "body": "Further down, **General** has switches for duplicate handling, SMS opt-out wording and unsubscribe links. Leave them alone unless a Luubu guide or our team tells you to change one.",
+      "route": "^/settings/company/?$",
+      "go": "/settings/company",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "General"
+    },
+    {
+      "id": "save",
+      "title": "Save each section",
+      "body": "Each section saves on its own. After changing the top section, click **Update Information** before you scroll on.",
+      "route": "^/settings/company/?$",
+      "go": "/settings/company",
+      "target": [
+        {
+          "coach": true
+        }
+      ],
+      "lookFor": "Update Information"
+    },
+    {
+      "id": "next",
+      "title": "What next",
+      "body": "Next: try **Set your time zone to New Zealand** from the Guide. It only takes a minute.",
+      "route": "^/settings/company/?$",
+      "go": "/settings/company",
+      "target": [
+        {
+          "coach": true
+        }
+      ]
+    }
+  ]
+}
