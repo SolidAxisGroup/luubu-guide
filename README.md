@@ -68,5 +68,6 @@ Every night it logs into the demo account, opens each of the 108 screens once, a
 ## Handy
 
 - Alt+H brings the Guide back if a client hid it.
+- The Guide button moves itself off any button it would cover (Save bars, chat widgets). On screens it can't see into, it shrinks to a small tab on the right edge. Clients can also drag it up or down the edge and it remembers the spot.
 - `window.__luubuGuide.start('phone-number')` launches a tour from anywhere, for example from a workflow email link or the AI chat later.
 - Every start, step, finish and missing anchor fires a `luubu-guide` browser event. Set `telemetry` in the config to a URL to collect them.

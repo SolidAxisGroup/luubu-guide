@@ -1,5 +1,5 @@
 /*!
- * Luubu Guide v2.0
+ * Luubu Guide v2.1
  * Script-driven walkthroughs for Luubu.
  * Tours live in /tours/*.json. The nightly watcher keeps their anchors current.
  */
@@ -127,8 +127,9 @@
     '.fab{position:fixed;right:22px;bottom:22px;z-index:2147483000;pointer-events:auto;display:flex;align-items:center;gap:8px;height:46px;padding:0 18px 0 14px;border-radius:23px;border:0;cursor:pointer;background:' + NAVY + ';color:#fff;font-size:14px;font-weight:600;box-shadow:0 8px 24px rgba(0,30,80,.35);transition:transform .15s}',
     '.fab:hover{transform:translateY(-2px)}',
     '.fab svg{width:26px;height:14px}',
-    '.fab.hid{right:-4px;bottom:120px;height:40px;width:34px;padding:0;justify-content:center;border-radius:10px 0 0 10px}',
-    '.fab.hid span{display:none}',
+    '.fab.hid,.fab.dock{right:-4px;height:40px;width:34px;padding:0;justify-content:center;border-radius:10px 0 0 10px}',
+    '.fab.hid span,.fab.dock span{display:none}',
+    '.fab.drag{transition:none;cursor:grabbing;transform:none}',
     '.panel{position:fixed;right:22px;bottom:80px;width:380px;max-height:calc(100vh - 120px);display:flex;flex-direction:column;z-index:2147483001;pointer-events:auto;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,30,80,.35);color:#1B2433}',
     '.ph{background:' + NAVY + ';color:#fff;padding:18px 18px 14px}',
     '.ph .k{color:' + GOLD + ';font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:600}',
@@ -225,12 +226,84 @@
     b.title = st.hidden ? 'Show Luubu Guide (Alt+H)' : 'Luubu Guide';
     b.innerHTML = INF + '<span>Guide</span>';
     b.onclick = function () {
+      if (dragged) { dragged = false; return; }
       var s = load();
       if (s.hidden) { s.hidden = false; save(s); renderFab(); }
       togglePanel();
     };
+    // drag up or down the right edge to park it somewhere else; the spot is remembered
+    b.onpointerdown = function (e) {
+      if (e.button) return;
+      var y0 = e.clientY, b0 = fabBottom, moved = false;
+      function mv(ev) {
+        var d = y0 - ev.clientY;
+        if (!moved && Math.abs(d) < 5) return;
+        moved = true; b.classList.add('drag');
+        setBottom(Math.max(10, Math.min(innerHeight - 60, b0 + d)));
+      }
+      function up() {
+        removeEventListener('pointermove', mv); removeEventListener('pointerup', up);
+        b.classList.remove('drag');
+        if (moved) { dragged = true; var s = load(); s.fabB = fabBottom; save(s); }
+      }
+      addEventListener('pointermove', mv); addEventListener('pointerup', up);
+    };
     els.layer.appendChild(b);
     els.fab = b;
+    fabBottom = -1; dodge(true);
+  }
+
+  // ---------- keep the launcher off the page's own buttons ----------
+  var fabBottom = -1, dragged = false;
+  var CLICKY = 'button,a,input,select,textarea,label,summary,[role=button],[role=link],[role=tab],[role=menuitem],[role=checkbox],[role=switch],[onclick],[contenteditable=""],[contenteditable=true]';
+  function setBottom(v) {
+    fabBottom = v;
+    if (els.fab) els.fab.style.bottom = v + 'px';
+    if (els.panel) { els.panel.style.bottom = (v + 58) + 'px'; els.panel.style.maxHeight = Math.max(240, innerHeight - v - 90) + 'px'; }
+  }
+  // what the page has under a point, ignoring the Guide itself
+  function under(x, y) {
+    var list = document.elementsFromPoint(x, y);
+    for (var i = 0; i < list.length; i++) if (list[i] !== host && list[i] !== document.documentElement && list[i] !== document.body) return list[i];
+    return null;
+  }
+  function busy(x, y) {
+    var el = under(x, y);
+    if (!el) return 0;
+    if (el.tagName === 'IFRAME') return 1; // can't see inside a secure frame, so treat it as unknown
+    if (el.closest(CLICKY)) return 2;
+    try { if (getComputedStyle(el).cursor === 'pointer') return 2; } catch (e) {}
+    return 0;
+  }
+  // score a launcher position: 0 clear, 1 over a frame, 2 over something clickable
+  function spotScore(bottom, w, h) {
+    var right = innerWidth - 22, left = right - w, top = innerHeight - bottom - h, worst = 0;
+    var pts = [[left + 3, top + 3], [right - 3, top + 3], [left + 3, top + h - 3], [right - 3, top + h - 3], [left + w / 2, top + h / 2], [left + w / 2, top + 3], [left + w / 2, top + h - 3]];
+    for (var i = 0; i < pts.length && worst < 2; i++) worst = Math.max(worst, busy(pts[i][0], pts[i][1]));
+    return worst;
+  }
+  function dodge(force) {
+    var b = els.fab;
+    if (!b || !b.isConnected || b.classList.contains('drag')) return;
+    var st = load(), H = innerHeight, home = st.hidden ? 120 : 22;
+    var want = st.fabB != null ? Math.max(10, Math.min(H - 60, st.fabB)) : home;
+    var docked = b.classList.contains('dock');
+    b.classList.remove('dock');
+    var w = st.hidden ? 34 : (b.offsetWidth || 110), h = st.hidden ? 40 : 46;
+    // stay put if the current spot is still clear
+    if (!force && !docked && fabBottom >= 0 && spotScore(fabBottom, w, h) === 0) return;
+    var cands = [want];
+    for (var y = 22; y < H - 120; y += 62) if (y !== want) cands.push(y);
+    var best = null, bestScore = 3;
+    for (var i = 0; i < cands.length; i++) {
+      var sc = spotScore(cands[i], w, h);
+      if (sc < bestScore) { best = cands[i]; bestScore = sc; }
+      if (sc === 0) break;
+    }
+    if (bestScore === 0) { setBottom(best); return; }
+    // nowhere clear: shrink to a small tab on the right edge, halfway up
+    b.classList.add('dock');
+    setBottom(st.fabB != null ? want : Math.round(H * 0.45));
   }
 
   // ---------- panel ----------
@@ -247,6 +320,7 @@
       '<div class="pf"><span>Stuck? <a href="mailto:' + esc(CFG.support) + '">' + esc(CFG.support) + '</a></span><button data-hide>Hide button</button></div>';
     els.layer.appendChild(p);
     els.panel = p;
+    if (fabBottom >= 0) setBottom(fabBottom);
     p.querySelector('.x').onclick = function () { togglePanel(false); };
     p.querySelector('[data-hide]').onclick = function () { var s = load(); s.hidden = true; save(s); togglePanel(false); renderFab(); };
     var input = p.querySelector('input');
@@ -533,11 +607,12 @@
   function tick() { if (window.__luubuGen !== GEN) return; if (els.panel && relPath() !== lastPath) { lastPath = relPath(); var inp = els.panel.querySelector('input'); renderList(inp ? inp.value : ''); } var l = locId(); if (l !== lastLoc) { lastLoc = l; boot(); } }
   window.addEventListener('routeChangeEvent', tick);
   setInterval(tick, 1000);
+  setInterval(function () { if (window.__luubuGen === GEN && host && host.isConnected && !els.panel) dodge(false); }, 700);
   document.addEventListener('keydown', function (e) {
     if (e.altKey && (e.key === 'h' || e.key === 'H') && allowed()) { var s = load(); s.hidden = false; save(s); mount(); renderFab(); togglePanel(); }
   });
-  addEventListener('resize', function () { if (run && !run.el) place(null, false); });
+  addEventListener('resize', function () { if (run && !run.el) place(null, false); dodge(true); });
 
-  window.__luubuGuide = { start: start, stop: function () { stop(); }, open: function () { mount(); togglePanel(true); }, resolve: resolve, config: CFG, version: '2.0.0', screen: function () { return hereScreens(); } };
+  window.__luubuGuide = { start: start, stop: function () { stop(); }, open: function () { mount(); togglePanel(true); }, resolve: resolve, config: CFG, version: '2.1.0', screen: function () { return hereScreens(); } };
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', tick); else tick();
 })();
