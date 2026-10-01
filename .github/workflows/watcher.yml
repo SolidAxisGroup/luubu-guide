@@ -44,6 +44,7 @@ jobs:
           git config user.name "luubu-guide-watcher"
           git config user.email "hello@luubu.com"
           git add tours watcher/confirmed.json
+          [ -f watcher/missing.json ] && git add watcher/missing.json
           [ -f watcher/fingerprint.json ] && git add watcher/fingerprint.json
           if ! git diff --cached --quiet; then
             git commit -m "watcher: repoint tour anchors after Luubu UI changes"

@@ -25,6 +25,7 @@ import { fileURLToPath } from 'node:url';
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(HERE, '..');
 const TOURS = path.join(ROOT, 'tours');
+const SCREENS = JSON.parse(fs.readFileSync(path.join(ROOT, 'inventory', 'screens.json'), 'utf8')).map(x => x.path.split('?')[0]);
 const OUT = path.join(HERE, 'out');
 fs.mkdirSync(OUT, { recursive: true });
 
@@ -218,6 +219,9 @@ async function main() {
   const index = JSON.parse(fs.readFileSync(path.join(TOURS, 'index.json'), 'utf8'));
   const confFile = path.join(HERE, 'confirmed.json');
   const confirmed = fs.existsSync(confFile) ? JSON.parse(fs.readFileSync(confFile, 'utf8')) : {};
+  // a step must be missing two runs in a row before anything is changed or proposed (screens load flakily)
+  const missFile = path.join(HERE, 'missing.json');
+  const missing = fs.existsSync(missFile) ? JSON.parse(fs.readFileSync(missFile, 'utf8')) : {};
   const { browser, page } = await openSession();
   const fpNow = {};
   // group every checkable step by the screen it lives on, so each screen loads once
@@ -226,12 +230,12 @@ async function main() {
     const tour = JSON.parse(fs.readFileSync(path.join(TOURS, meta.id + '.json'), 'utf8'));
     tours[meta.id] = { tour, changed: false };
     tour.steps.forEach(st => {
-      const where = (st.go || guessPath(st) || '').split('?')[0];
+      const where = (checkPath(st) || '').split('?')[0];
       if (!where || !st.target) return;
       (byWhere[where] = byWhere[where] || []).push({ id: meta.id, st });
     });
   }
-  report.unverified = [];
+  report.unverified = []; report.recheck = [];
   try {
     for (const [where, items] of Object.entries(byWhere).slice(0, +process.env.WATCH_LIMIT || Infinity)) {
       log(`checking ${where} (${items.length} steps)`);
@@ -245,7 +249,9 @@ async function main() {
         let seen = precise.length ? !!(await resolves(page, precise)) : false;
         if (!seen && label) seen = await frameHasText(page, label);
         if (!precise.length && !label) { report.ok.push(key); continue; }   // explanation-only step
-        if (seen) { report.ok.push(key); confirmed[key] = new Date().toISOString().slice(0, 10); continue; }
+        if (seen) { report.ok.push(key); confirmed[key] = new Date().toISOString().slice(0, 10); delete missing[key]; continue; }
+        missing[key] = (missing[key] || 0) + 1;
+        if (missing[key] < 2 && (precise[0] && precise[0].css || confirmed[key])) { report.recheck.push(key); continue; }
 
         const first = precise[0];
         if (first && first.css) {
@@ -277,6 +283,7 @@ async function main() {
     await browser.close();
   }
   if (!DRY) fs.writeFileSync(confFile, JSON.stringify(confirmed, null, 0) + '\n');
+  if (!DRY) fs.writeFileSync(missFile, JSON.stringify(missing, null, 0) + '\n');
 
   // UI change detection against last run
   const fpFile = path.join(HERE, 'fingerprint.json');
@@ -318,6 +325,21 @@ function sameThing(st, list, hit) {
   return false;
 }
 
+// The screen a step is checked on: where the client is when they see it. That's the step's
+// "go" page when it satisfies the step's route, otherwise the page its route points at.
+function checkPath(st) {
+  const rx = r => { try { return r ? new RegExp(r, 'i') : null; } catch { return null; } };
+  const re = rx(st.route), adv = rx(st.advance && st.advance.route);
+  const alts = (String(st.route || '').match(/^\^?\/\(([a-z0-9_\-\/|]+)\)/i) || [, ''])[1].split('|').filter(Boolean).map(a => '/' + a);
+  const cands = [st.go, guessPath(st), ...alts].filter(Boolean);
+  // prefer real screens from the inventory (a bare prefix like /funnels-websites isn't a page)
+  const real = SCREENS.filter(p => cands.some(c => p.startsWith(c.split('?')[0])));
+  cands.splice(1, 0, ...real.filter(p => cands.slice(1).some(c => p.startsWith(c))));
+  // the engine skips a step when the client is already where it leads, so never check it there
+  for (const c of cands) { const p = c.split('?')[0]; if ((!re || re.test(p)) && !(adv && adv.test(p))) return c; }
+  return st.go;
+}
+
 function guessPath(st) {
   if (!st.route) return null;
   const m = st.route.replace(/^\^/, '').match(/^\/[a-z0-9_\-\/]+/i);
@@ -337,7 +359,7 @@ async function releaseScan(index) {
 function summary(r) {
   const L = [];
   L.push(`# Luubu Guide watcher report`, '', `${r.at}`, '');
-  L.push(`**${r.ok.length}** steps confirmed on screen, **${(r.unverified||[]).length}** inside dialogs (coach card), **${r.fixed.length}** auto-repointed, **${r.broken.length}** broken, **${r.proposals.length}** copy proposals, **${r.uiChanges.length}** UI changes.`, '');
+  L.push(`**${r.ok.length}** steps confirmed on screen, **${(r.unverified||[]).length}** inside dialogs (coach card), **${r.fixed.length}** auto-repointed, **${r.broken.length}** broken, **${r.proposals.length}** copy proposals, **${r.uiChanges.length}** UI changes, **${(r.recheck||[]).length}** missing once (rechecked next run).`, '');
   if (r.fixed.length) { L.push('## Auto-fixed (already live)'); r.fixed.forEach(f => L.push(`- \`${f.key}\` now points at ${JSON.stringify(f.to)} (${f.why || ''})`)); L.push(''); }
   if (r.broken.length) { L.push('## Needs a look'); r.broken.forEach(b => L.push(`- \`${b.key}\`: ${b.suggestion && b.suggestion.reason ? b.suggestion.reason : 'no confident match'}`)); L.push(''); }
   if (r.proposals.length) { L.push('## Copy changes for your approval'); r.proposals.forEach(p => L.push(`- \`${p.key}\` (${p.reason})\n  \`\`\`json\n  ${JSON.stringify(p.proposal)}\n  \`\`\``)); L.push(''); }
