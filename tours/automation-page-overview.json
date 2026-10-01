@@ -41,9 +41,6 @@
       "go": "/automation/overview",
       "target": [
         {
-          "css": "#tb_workflow"
-        },
-        {
           "css": "#tb_workflow-overview"
         },
         {

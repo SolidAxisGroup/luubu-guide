@@ -234,6 +234,7 @@ async function main() {
   report.unverified = [];
   try {
     for (const [where, items] of Object.entries(byWhere).slice(0, +process.env.WATCH_LIMIT || Infinity)) {
+      log(`checking ${where} (${items.length} steps)`);
       await gotoRel(page, where);
       fpNow[where] = await fingerprint(page);
       for (const { id, st } of items) {
@@ -251,11 +252,12 @@ async function main() {
           // a stable id vanished: a real UI change. Repoint with Claude, prove it, keep old as backup.
           const cands = await candidates(page);
           const fix = await claude(SYS_ANCHOR, JSON.stringify({ step: { title: st.title, body: st.body, lookFor: st.lookFor, oldTarget: st.target }, candidates: cands }), 600).catch(e => ({ error: e.message }));
-          if (fix && fix.strategy && (fix.confidence || 0) >= 0.75 && await resolves(page, fix.strategy)) {
+          const hit = fix && fix.strategy && (fix.confidence || 0) >= 0.75 ? await resolves(page, fix.strategy) : null;
+          if (hit && sameThing(st, list, hit)) {
             st.target = [fix.strategy, ...list.filter(o => JSON.stringify(o) !== JSON.stringify(fix.strategy))].slice(0, 5);
             tours[id].changed = true;
             report.fixed.push({ key, to: fix.strategy, why: fix.reason });
-          } else report.broken.push({ key, target: st.target, suggestion: fix });
+          } else report.broken.push({ key, target: st.target, suggestion: hit ? { ...fix, reason: `Best match was "${hit.text || hit.id}", which doesn't match what the step describes. If the checker user can't see this, give it full permissions. ` + (fix.reason || '') } : fix });
           continue;
         }
         if (confirmed[key]) {
@@ -295,6 +297,25 @@ async function main() {
   fs.writeFileSync(path.join(OUT, 'report.json'), JSON.stringify(report, null, 2));
   fs.writeFileSync(path.join(OUT, 'summary.md'), summary(report));
   log(`ok ${report.ok.length} | fixed ${report.fixed.length} | broken ${report.broken.length} | proposals ${report.proposals.length} | unverified ${report.unverified.length} | ui changes ${report.uiChanges.length}`);
+}
+
+// Only auto-repoint when the new element is clearly the same control: its label must match a
+// label the step already names. A different control (another tab, another button) is never
+// swapped in automatically; it goes to "Needs a look" instead.
+function norm(x) { return String(x || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim(); }
+function sameThing(st, list, hit) {
+  const want = new Set();
+  list.forEach(o => { if (o.text) want.add(norm(o.text)); });
+  if (st.lookFor) want.add(norm(st.lookFor));
+  (String(st.body || '').match(/\*\*([^*]+)\*\*/g) || []).forEach(b => want.add(norm(b)));
+  const got = norm(hit.text);
+  for (const w of want) if (w && got && (got === w || (got.length >= 4 && w.includes(got)) || (w.length >= 4 && got.includes(w)))) return true;
+  if (!want.size || !got) {
+    // icon-only controls: accept only a near-identical id (e.g. a suffix change)
+    const id = norm((hit.id || '').replace(/^(tb|sb)_/, ''));
+    return list.some(o => { const old = norm((o.css || '').replace(/^#(tb|sb)_/, '#').replace(/^#/, '')); let n = 0; while (n < old.length && n < id.length && old[n] === id[n]) n++; return old.length >= 6 && n >= Math.max(6, Math.ceil(old.length * 0.75)); });
+  }
+  return false;
 }
 
 function guessPath(st) {

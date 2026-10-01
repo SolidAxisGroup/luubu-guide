@@ -42,9 +42,6 @@
       "go": "/settings/calendars",
       "target": [
         {
-          "css": "#tb_preferences"
-        },
-        {
           "css": "#tb_calendar-settings-top"
         },
         {
