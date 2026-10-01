@@ -101,6 +101,12 @@
     var full = '/v2/location/' + locId() + path;
     var a = document.querySelector('a[href="' + full + '"]');
     if (a && visible(a)) { a.click(); return; }
+    // some screens only open from their menu item (a direct load bounces to the dashboard)
+    var bare = path.split('?')[0].toLowerCase();
+    for (var i = 0; i < SCREENS.length; i++) {
+      var sc = SCREENS[i];
+      if (sc.sb && sc.path.split('?')[0].toLowerCase() === bare) { var m = document.getElementById(sc.sb); if (m && visible(m)) { m.click(); return; } }
+    }
     // Luubu is several apps stitched together; a real page load is the only
     // cross-app jump that is always safe. The active step resumes after load.
     location.assign(full);

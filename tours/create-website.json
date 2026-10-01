@@ -75,7 +75,7 @@
     {
       "id": "template",
       "title": "Pick how to start",
-      "body": "Choose **From templates** for a ready-made site, **Build with AI** to have it drafted for you, or **From blank**. Name it, like **Your Business Website**, then click **Create**.",
+      "body": "Choose **From templates** for a ready-made site, or **From blank**. Name it, like **Your Business Website**, then click **Create**.",
       "tip": "Templates save hours. You can change every word, image and colour.",
       "target": null
     },

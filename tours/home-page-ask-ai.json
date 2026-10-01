@@ -74,12 +74,12 @@
     {
       "id": "new-chat",
       "title": "Start fresh",
-      "body": "Click **New Chat** when you switch to a different job. Your past chats are kept in the history list so you can pick up where you left off.",
+      "body": "Click **New chat** when you switch to a different job. Your past chats are kept in the history list so you can pick up where you left off.",
       "route": "^/ask-ai",
       "go": "/ask-ai",
       "target": [
         {
-          "text": "New Chat"
+          "text": "New chat"
         },
         {
           "frame": true
@@ -88,7 +88,7 @@
           "coach": true
         }
       ],
-      "lookFor": "New Chat"
+      "lookFor": "New chat"
     },
     {
       "id": "next",

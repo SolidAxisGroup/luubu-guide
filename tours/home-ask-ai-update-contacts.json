@@ -37,12 +37,12 @@
     {
       "id": "new-chat",
       "title": "Start a new chat",
-      "body": "Click **New Chat** so the assistant starts with a clean slate.",
+      "body": "Click **New chat** so the assistant starts with a clean slate.",
       "route": "^/ask-ai",
       "go": "/ask-ai",
       "target": [
         {
-          "text": "New Chat"
+          "text": "New chat"
         },
         {
           "frame": true
@@ -51,7 +51,7 @@
           "coach": true
         }
       ],
-      "lookFor": "New Chat"
+      "lookFor": "New chat"
     },
     {
       "id": "ask",

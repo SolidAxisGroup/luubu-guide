@@ -577,7 +577,7 @@
   "label": "Overview",
   "path": "/automation/overview",
   "anchor": {
-   "css": "#tb_workflow-overview"
+   "css": "#sb_automation"
   },
   "sidebar": "#sb_automation",
   "framed": null
@@ -853,17 +853,6 @@
   "path": "/reputation/listing",
   "anchor": {
    "css": "#tb_online-listings"
-  },
-  "sidebar": "#sb_reputation",
-  "framed": null
- },
- {
-  "area": "reputation",
-  "key": "reputation.gbp-optimization",
-  "label": "GBP Optimization",
-  "path": "/reputation/gbp",
-  "anchor": {
-   "css": "#tb_gbp-optimization"
   },
   "sidebar": "#sb_reputation",
   "framed": null

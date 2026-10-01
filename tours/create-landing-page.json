@@ -75,9 +75,9 @@
     {
       "id": "template",
       "title": "Pick how to start",
-      "body": "Choose **From templates** for a ready-made offer or lead capture page, **Build with AI** to have it drafted for you, or **From blank**. Name it after your offer, like **Free Quote**, then click **Create**.",
+      "body": "Choose **From templates** for a ready-made offer or lead capture page, or **From blank**. Name it after your offer, like **Free Quote**, then click **Create**.",
       "target": null,
-      "tip": "Build with AI is the fastest: describe your business and offer, and it writes the first draft."
+      "tip": "Templates are the fastest start: pick one close to your business and swap in your own words and photos."
     },
     {
       "id": "form",

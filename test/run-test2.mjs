@@ -17,7 +17,7 @@ await sh('input').fill('');
 await sh('.hero').click(); await p.waitForTimeout(1500);
 console.log('page tour card:', await sh('.card h4').innerText());
 // go through steps quickly timing coach
-for (let i=0;i<3;i++){ const t0=Date.now(); await sh('.card [data-a=next]').click(); await p.waitForFunction(()=>{const r=document.getElementById('luubu-guide-root').shadowRoot.querySelector('.card .hint .wait');return !r},null,{timeout:15000}).catch(()=>{}); console.log(' step', await sh('.card .n').innerText(), '|', await sh('.card h4').innerText(), '|', Date.now()-t0,'ms', '| spot', await sh('.spot').count()); }
+for (let i=0;i<2;i++){ const t0=Date.now(); await sh('.card [data-a=next]').click(); await p.waitForFunction(()=>{const r=document.getElementById('luubu-guide-root').shadowRoot.querySelector('.card .hint .wait');return !r},null,{timeout:15000}).catch(()=>{}); console.log(' step', await sh('.card .n').innerText(), '|', await sh('.card h4').innerText(), '|', Date.now()-t0,'ms', '| spot', await sh('.spot').count()); }
 await p.screenshot({path:'v2-3-step.png'});
 await sh('.card .x').click();
 await boot(U+'/dashboard'); await sh('.fab').click(); await p.waitForTimeout(1000);

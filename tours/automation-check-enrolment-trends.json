@@ -4,7 +4,7 @@
   "area": "automation",
   "screen": "automation.workflow-overview",
   "title": "Check how your workflows are performing",
-  "blurb": "See enrolment trends and compare triggers over a date range.",
+  "blurb": "See weekly enrolments for the last 7 weeks and spot a trigger that has stopped firing.",
   "icon": "chart",
   "minutes": 3,
   "keywords": [
@@ -35,26 +35,8 @@
     },
     {
       "id": "open-workflow-overview",
-      "title": "Open Overview",
-      "body": "Click **Overview** at the top.",
-      "route": "^/automation/",
-      "go": "/automation/overview",
-      "target": [
-        {
-          "css": "#tb_workflow-overview"
-        },
-        {
-          "text": "Overview"
-        }
-      ],
-      "advance": {
-        "route": "^/automation/overview"
-      }
-    },
-    {
-      "id": "dates",
-      "title": "Pick a date range",
-      "body": "Set the date range at the top, for example the last 30 days. Everything shows in your account timezone.",
+      "title": "Open the Overview",
+      "body": "The Overview opens from here rather than a tab at the top. If you're not on it yet, click **Take me there**.",
       "route": "^/automation/overview",
       "go": "/automation/overview",
       "target": [
@@ -66,19 +48,7 @@
     {
       "id": "trend",
       "title": "Read the trend",
-      "body": "Look at enrolments week by week. A dip usually means fewer leads came in, or a trigger stopped firing.",
-      "route": "^/automation/overview",
-      "go": "/automation/overview",
-      "target": [
-        {
-          "coach": true
-        }
-      ]
-    },
-    {
-      "id": "filter",
-      "title": "Drill into one trigger",
-      "body": "Filter by trigger type, form or survey to see which source feeds your workflows most.",
+      "body": "Look at enrolments week by week across the last 7 weeks. A dip usually means fewer leads came in, or a trigger stopped firing.",
       "route": "^/automation/overview",
       "go": "/automation/overview",
       "target": [
@@ -90,7 +60,7 @@
     {
       "id": "act",
       "title": "Act on it",
-      "body": "If a form shows no enrolments, open that workflow and check its trigger and filters.",
+      "body": "If enrolments drop, open the workflow behind that lead source and check its trigger and filters. **Troubleshoot with execution logs** in the Guide shows you how.",
       "route": "^/automation/overview",
       "go": "/automation/overview",
       "target": [

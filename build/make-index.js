@@ -3,7 +3,11 @@
 const fs = require('fs'), path = require('path');
 const ROOT = path.resolve(__dirname, '..'), T = path.join(ROOT, 'tours');
 const screens = JSON.parse(fs.readFileSync(path.join(ROOT, 'inventory', 'screens.json'), 'utf8'))
-  .map(s => ({ key: s.key, label: s.label.replace(/ \(gear icon\)/, ''), path: s.path, area: s.area }));
+  .map(s => {
+    // a sidebar id that opens this exact screen lets the Guide navigate by clicking it (no page reload)
+    const m = ((s.anchor && s.anchor.css) || '').match(/^(?:#|\[id='?)(sb_[^'\]]+)/);
+    return { key: s.key, label: s.label.replace(/ \(gear icon\)/, ''), path: s.path, area: s.area, ...(m ? { sb: m[1] } : {}) };
+  });
 const tours = fs.readdirSync(T).filter(f => f.endsWith('.json') && f !== 'index.json').map(f => {
   const t = JSON.parse(fs.readFileSync(path.join(T, f), 'utf8'));
   return { id: t.id, kind: t.kind || 'howto', area: t.area, screen: t.screen, title: t.title, blurb: t.blurb, icon: t.icon, minutes: t.minutes, keywords: t.keywords, steps: t.steps.length };

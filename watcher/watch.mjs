@@ -25,7 +25,9 @@ import { fileURLToPath } from 'node:url';
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(HERE, '..');
 const TOURS = path.join(ROOT, 'tours');
-const SCREENS = JSON.parse(fs.readFileSync(path.join(ROOT, 'inventory', 'screens.json'), 'utf8')).map(x => x.path.split('?')[0]);
+const SCREEN_LIST = JSON.parse(fs.readFileSync(path.join(ROOT, 'inventory', 'screens.json'), 'utf8'));
+const SCREENS = SCREEN_LIST.map(x => x.path.split('?')[0]);
+const SCREEN_SB = SCREEN_LIST.map(x => ({ path: x.path.split('?')[0].toLowerCase(), sb: (((x.anchor && x.anchor.css) || '').match(/^(?:#|\[id='?)(sb_[^'\]]+)/) || [])[1] })).filter(x => x.sb);
 const OUT = path.join(HERE, 'out');
 fs.mkdirSync(OUT, { recursive: true });
 
@@ -166,6 +168,12 @@ async function appReady(page) {
 async function gotoRel(page, rel) {
   await page.goto(`${BASE}/v2/location/${LOC}${rel}`, { waitUntil: 'domcontentloaded' });
   await appReady(page);
+  // some screens (e.g. Ask AI) bounce to the dashboard on a direct load; open them from the menu like a client would
+  const want = rel.split('?')[0].toLowerCase(), at = new URL(page.url()).pathname.toLowerCase();
+  if (!at.includes(want)) {
+    const sc = SCREEN_SB.find(x => x.path === want);
+    if (sc) { await page.locator(`[id="${sc.sb}"]`).first().click().catch(() => {}); await page.waitForTimeout(5000); }
+  }
 }
 
 async function resolves(page, target) {

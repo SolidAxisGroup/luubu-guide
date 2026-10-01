@@ -55,7 +55,7 @@
     {
       "id": "new-button",
       "title": "Start a funnel",
-      "body": "**New funnel** starts a fresh one. You can begin **From blank**, **From templates** or with **Build with AI**.",
+      "body": "**New funnel** starts a fresh one. Start **From blank** or pick one **From templates**.",
       "route": "^/funnels-websites/funnels",
       "go": "/funnels-websites/funnels",
       "target": [
@@ -77,26 +77,6 @@
         }
       ],
       "lookFor": "New funnel"
-    },
-    {
-      "id": "ai-button",
-      "title": "Let AI draft it",
-      "body": "**Build with AI** writes a first draft from a short description of your business and offer. Handy when you are staring at a blank page.",
-      "route": "^/funnels-websites/funnels",
-      "go": "/funnels-websites/funnels",
-      "target": [
-        {
-          "text": "Build with AI",
-          "tag": "button"
-        },
-        {
-          "frame": true
-        },
-        {
-          "coach": true
-        }
-      ],
-      "lookFor": "Build with AI"
     },
     {
       "id": "list",

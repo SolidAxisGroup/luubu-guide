@@ -55,7 +55,7 @@
     {
       "id": "new-button",
       "title": "Start a website",
-      "body": "**New website** opens the create dialog. Pick **From templates**, **Build with AI** or **From blank**, name it and click **Create**.",
+      "body": "**New website** opens the create dialog. Name it, pick **From templates** or **From blank**, then click **Create**.",
       "route": "^/funnels-websites/websites",
       "go": "/funnels-websites/websites",
       "target": [
@@ -77,26 +77,6 @@
         }
       ],
       "lookFor": "New website"
-    },
-    {
-      "id": "ai-button",
-      "title": "Draft it with AI",
-      "body": "**Build with AI** drafts pages, headings and copy from a short description of your business. You then edit it like any other site.",
-      "route": "^/funnels-websites/websites",
-      "go": "/funnels-websites/websites",
-      "target": [
-        {
-          "text": "Build with AI",
-          "tag": "button"
-        },
-        {
-          "frame": true
-        },
-        {
-          "coach": true
-        }
-      ],
-      "lookFor": "Build with AI"
     },
     {
       "id": "list",
