@@ -33,6 +33,9 @@ jobs:
           LUUBU_STORAGE_STATE: ${{ secrets.LUUBU_STORAGE_STATE }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           PLATFORM_CHANGELOG_URL: ${{ secrets.PLATFORM_CHANGELOG_URL }}
+          OTP_IMAP_USER: ${{ secrets.OTP_IMAP_USER }}
+          OTP_IMAP_PASSWORD: ${{ secrets.OTP_IMAP_PASSWORD }}
+          OTP_IMAP_HOST: ${{ secrets.OTP_IMAP_HOST }}
         run: node watch.mjs
 
       - name: Ship anchor fixes (auto)
@@ -40,7 +43,8 @@ jobs:
         run: |
           git config user.name "luubu-guide-watcher"
           git config user.email "hello@luubu.com"
-          git add tours watcher/fingerprint.json watcher/confirmed.json
+          git add tours watcher/confirmed.json
+          [ -f watcher/fingerprint.json ] && git add watcher/fingerprint.json
           if ! git diff --cached --quiet; then
             git commit -m "watcher: repoint tour anchors after Luubu UI changes"
             git push
@@ -63,4 +67,7 @@ jobs:
         if: always()
         with:
           name: watcher-report
-          path: watcher/out/report.json
+          path: |
+            watcher/out/report.json
+            watcher/out/login-code-screen.png
+          if-no-files-found: ignore

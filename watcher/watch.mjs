@@ -9,6 +9,9 @@
 //   LUUBU_EMAIL          watcher user email
 //   LUUBU_PASSWORD       watcher user password
 //   LUUBU_STORAGE_STATE  optional base64 Playwright session (skips login / OTP)
+//   OTP_IMAP_USER        inbox that receives the checker's login codes (e.g. a Gmail address)
+//   OTP_IMAP_PASSWORD    that inbox's app password
+//   OTP_IMAP_HOST        optional, defaults to imap.gmail.com
 //   ANTHROPIC_API_KEY    Claude API key
 //   CLAUDE_MODEL         optional, defaults below
 //   DRY_RUN=1            report only, change nothing
@@ -67,16 +70,85 @@ async function openSession() {
     log('logging in');
     await page.locator('input[type=email], input[name=email]').first().fill(process.env.LUUBU_EMAIL);
     await page.locator('input[type=password]').first().fill(process.env.LUUBU_PASSWORD || '');
+    const since = new Date(Date.now() - 60000);
     await page.getByRole('button', { name: /sign in|log in/i }).first().click();
     await page.waitForTimeout(8000);
     if (await page.getByText(/verification code|one.time|otp|security code/i).count()) {
-      throw new Error('LOGIN_NEEDS_OTP: refresh LUUBU_STORAGE_STATE (see README)');
+      await enterLoginCode(page, since);
     }
     await page.goto(`${BASE}/v2/location/${LOC}/dashboard`, { waitUntil: 'domcontentloaded' });
   }
-  // keep the session fresh for next run
-  fs.writeFileSync(path.join(OUT, 'storage-state.b64'), Buffer.from(JSON.stringify(await ctx.storageState())).toString('base64'));
+  if (!/\/v2\/location\//.test(page.url())) throw new Error('LOGIN_FAILED: still on ' + new URL(page.url()).pathname);
+  // keep the session for local runs only; never written in CI
+  if (!process.env.CI) fs.writeFileSync(path.join(OUT, 'storage-state.b64'), Buffer.from(JSON.stringify(await ctx.storageState())).toString('base64'));
   return { browser, ctx, page };
+}
+
+// ---------- one-time login code ----------
+// The platform emails a security code when the checker logs in from a new browser,
+// which is every night in CI. We read it from the checker's inbox over IMAP.
+async function enterLoginCode(page, since) {
+  if (!process.env.OTP_IMAP_USER || !process.env.OTP_IMAP_PASSWORD) {
+    await page.screenshot({ path: path.join(OUT, 'login-code-screen.png') }).catch(() => {});
+    throw new Error('LOGIN_NEEDS_OTP: add the OTP_IMAP_USER and OTP_IMAP_PASSWORD secrets (see README)');
+  }
+  log('login code needed, sending to email');
+  // pick email if there's a choice, then ask for the code
+  const emailOpt = page.getByText(/^\s*email\s*$/i).first();
+  if (await emailOpt.count()) await emailOpt.click().catch(() => {});
+  const send = page.getByRole('button', { name: /send|get code|email me/i }).first();
+  if (await send.count()) { await send.click().catch(() => {}); await page.waitForTimeout(3000); }
+  const code = await waitForCode(since);
+  log('code received');
+  const boxes = page.locator('input[maxlength="1"]');
+  if (await boxes.count() >= code.length) {
+    for (let i = 0; i < code.length; i++) await boxes.nth(i).fill(code[i]);
+  } else {
+    const box = page.locator('input[autocomplete="one-time-code"], input[inputmode="numeric"], input[type="tel"], input[type="number"], input[type="text"]').first();
+    await box.click(); await page.keyboard.type(code, { delay: 60 });
+  }
+  await page.waitForTimeout(800);
+  const confirm = page.getByRole('button', { name: /confirm|verify|submit|continue|sign in|log in/i }).first();
+  if (await confirm.count()) await confirm.click().catch(() => {});
+  await page.waitForTimeout(8000);
+}
+
+async function waitForCode(since) {
+  const { ImapFlow } = await import('imapflow');
+  const deadline = Date.now() + 150000;
+  while (Date.now() < deadline) {
+    const client = new ImapFlow({ host: process.env.OTP_IMAP_HOST || 'imap.gmail.com', port: 993, secure: true, logger: false,
+      auth: { user: process.env.OTP_IMAP_USER, pass: process.env.OTP_IMAP_PASSWORD } });
+    try {
+      await client.connect();
+      const lock = await client.getMailboxLock('INBOX');
+      try {
+        const uids = await client.search({ since }, { uid: true });
+        let best = null;
+        for (const uid of (uids || []).slice(-10)) {
+          const m = await client.fetchOne(uid, { source: true, internalDate: true }, { uid: true });
+          if (!m || m.internalDate < since) continue;
+          const text = decodeMail(m.source.toString('utf8'));
+          if (!/code|verif|otp|sign.?in|log.?in/i.test(text)) continue;
+          const c = text.match(/(?:code|otp)[^0-9]{0,80}(\d{6})\b/i) || text.match(/\b(\d{6})\b/);
+          if (c && (!best || m.internalDate > best.at)) best = { code: c[1], at: m.internalDate };
+        }
+        if (best) return best.code;
+      } finally { lock.release(); }
+    } catch (e) {
+      if (/auth|credentials|login/i.test(e.message || '')) throw new Error('OTP_IMAP_LOGIN_FAILED: check OTP_IMAP_USER / OTP_IMAP_PASSWORD');
+    } finally { await client.logout().catch(() => {}); }
+    await new Promise(r => setTimeout(r, 6000));
+  }
+  throw new Error('LOGIN_CODE_NOT_RECEIVED: no code email arrived within 2.5 minutes');
+}
+
+// plain text out of a raw email: undo quoted-printable and base64 parts, strip tags
+function decodeMail(raw) {
+  let out = raw.replace(/=\r?\n/g, '').replace(/=([0-9A-F]{2})/g, (_, h) => String.fromCharCode(parseInt(h, 16)));
+  out += '\n' + [...raw.matchAll(/Content-Transfer-Encoding:\s*base64[\s\S]*?\r?\n\r?\n([A-Za-z0-9+\/=\r\n]+)/gi)]
+    .map(m => { try { return Buffer.from(m[1].replace(/\s/g, ''), 'base64').toString('utf8'); } catch { return ''; } }).join('\n');
+  return out.replace(/<style[\s\S]*?<\/style>/gi, ' ').replace(/<[^>]+>/g, ' ').replace(/&nbsp;/g, ' ').replace(/#[0-9a-f]{6}\b/gi, ' ');
 }
 
 async function appReady(page) {

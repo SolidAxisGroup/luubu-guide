@@ -62,7 +62,10 @@ Every night it logs into the demo account, opens each of the 108 screens once, a
 
 1. **Watcher login:** in hey-FYI, add a user (for example watcher@luubu.com) with access to Settings, Marketing, Automation and Sites.
 2. **Repo secrets** (Settings > Secrets and variables > Actions): `LUUBU_EMAIL`, `LUUBU_PASSWORD`, `ANTHROPIC_API_KEY`.
-   If the login asks for a one-time code, also add `LUUBU_STORAGE_STATE`: run the watcher once locally, log in, and paste the contents of `watcher/out/storage-state.b64`.
+   The platform emails a one-time login code every time the watcher logs in. Point the checker user at an inbox the watcher can read, and add:
+   - `OTP_IMAP_USER`: that inbox's address (a Gmail account works best)
+   - `OTP_IMAP_PASSWORD`: a Gmail **app password** for it (Google Account > Security > 2-Step Verification > App passwords), not the normal password
+   - `OTP_IMAP_HOST`: only if it isn't Gmail, e.g. `imap.fastmail.com`
 3. **Run it once by hand:** Actions > Luubu Guide watcher > Run workflow. After that it runs at 2:07am NZ time every night.
 
 ## Handy
