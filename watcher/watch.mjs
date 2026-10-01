@@ -203,7 +203,10 @@ async function snapshot(page) {
     log('snapshot ' + entry);
     await gotoRel(page, where);
     if (click) {
-      const b = page.getByRole('button', { name: click }).first();
+      // ">#css" clicks a selector, ">Label" clicks a button or link with that label
+      const b = click.startsWith('#') ? page.locator(click).first()
+        : (await page.getByRole('button', { name: click }).count()) ? page.getByRole('button', { name: click }).first()
+        : page.getByRole('link', { name: click }).first();
       if (await b.count()) { await b.click().catch(() => {}); await page.waitForTimeout(4000); }
       else md.push(`_couldn't find "${click}" to click_`);
     }
