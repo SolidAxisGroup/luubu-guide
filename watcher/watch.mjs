@@ -194,6 +194,40 @@ async function candidates(page) {
   });
 }
 
+// What a client admin actually sees on given screens: buttons, tabs and headings (no table data).
+// SNAPSHOT_PATHS="/a,/b>Button to click first". Written to the run summary.
+async function snapshot(page) {
+  const md = ['# Client view snapshot', ''];
+  for (const entry of process.env.SNAPSHOT_PATHS.split(',').map(x => x.trim()).filter(Boolean)) {
+    const [where, click] = entry.split('>').map(x => x.trim());
+    log('snapshot ' + entry);
+    await gotoRel(page, where);
+    if (click) {
+      const b = page.getByRole('button', { name: click }).first();
+      if (await b.count()) { await b.click().catch(() => {}); await page.waitForTimeout(4000); }
+      else md.push(`_couldn't find "${click}" to click_`);
+    }
+    const at = new URL(page.url()).pathname.replace(/^.*\/location\/[^/]+/, '');
+    const seen = new Set();
+    for (const f of page.frames()) {
+      try {
+        const labels = await f.evaluate(() => {
+          const vis = e => { const r = e.getBoundingClientRect(); const cs = getComputedStyle(e); return r.width > 1 && r.height > 1 && cs.visibility !== 'hidden'; };
+          return [...document.querySelectorAll('button,[role=button],[role=tab],[role=menuitem],[id^=tb_],h1,h2,h3,[role=dialog] a,[role=dialog] label')]
+            .filter(e => vis(e) && !e.closest('table,tbody,[role=row],[role=grid],[id^=sb_]'))
+            .map(e => ((e.id && e.id.startsWith('tb_') ? '[' + e.id + '] ' : '') + (e.innerText || e.getAttribute('aria-label') || '').replace(/\s+/g, ' ').trim()).slice(0, 60))
+            .filter(t => t.replace(/\[[^\]]+\]/, '').trim());
+        });
+        labels.forEach(l => seen.add(l));
+      } catch {}
+    }
+    md.push(`## ${entry}`, `landed on \`${at}\``, '', [...seen].slice(0, 120).map(l => '- ' + l.replace(/[<>]/g, '')).join('\n'), '');
+  }
+  const out = md.join('\n');
+  fs.writeFileSync(path.join(OUT, 'snapshot.md'), out);
+  if (process.env.GITHUB_STEP_SUMMARY) fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, out + '\n');
+}
+
 async function frameTexts(page) {
   const out = [];
   for (const f of page.frames()) {
@@ -223,6 +257,7 @@ async function main() {
   const missFile = path.join(HERE, 'missing.json');
   const missing = fs.existsSync(missFile) ? JSON.parse(fs.readFileSync(missFile, 'utf8')) : {};
   const { browser, page } = await openSession();
+  if (process.env.SNAPSHOT_PATHS) { try { await snapshot(page); } finally { await browser.close(); } return; }
   const fpNow = {};
   // group every checkable step by the screen it lives on, so each screen loads once
   const tours = {}, byWhere = {};
