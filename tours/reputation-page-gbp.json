@@ -41,6 +41,9 @@
       "go": "/reputation/gbp",
       "target": [
         {
+          "css": "#tb_online-listings"
+        },
+        {
           "css": "#tb_gbp-optimization"
         },
         {

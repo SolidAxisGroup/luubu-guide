@@ -42,6 +42,9 @@
       "go": "/settings/domain",
       "target": [
         {
+          "css": "#manage-domain"
+        },
+        {
           "css": "#tb_sites-domain-settings"
         },
         {
