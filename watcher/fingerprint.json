@@ -25,7 +25,8 @@
   "tb_ai-agents-knowledge-base": "Knowledge Base",
   "tb_ai-agents-agent-templates": "Agent Templates",
   "tb_ai-agents-content-ai": "Content AI",
-  "tb_agent-logs": "Agent Logs"
+  "tb_agent-logs": "Agent Logs",
+  "tb_ai-agents-ai-usage": "AI Usage"
  },
  "/ai-agents/agent-studio": {
   "sb_ask-ai": "Ask AI",
@@ -53,7 +54,8 @@
   "tb_ai-agents-knowledge-base": "Knowledge Base",
   "tb_ai-agents-agent-templates": "Agent Templates",
   "tb_ai-agents-content-ai": "Content AI",
-  "tb_agent-logs": "Agent Logs"
+  "tb_agent-logs": "Agent Logs",
+  "tb_ai-agents-ai-usage": "AI Usage"
  },
  "/funnels-websites/funnels": {
   "sb_ask-ai": "Ask AI",
@@ -216,7 +218,8 @@
   "tb_ai-agents-knowledge-base": "Knowledge Base",
   "tb_ai-agents-agent-templates": "Agent Templates",
   "tb_ai-agents-content-ai": "Content AI",
-  "tb_agent-logs": "Agent Logs"
+  "tb_agent-logs": "Agent Logs",
+  "tb_ai-agents-ai-usage": "AI Usage"
  },
  "/ai-agents/industry-agents": {
   "sb_ask-ai": "Ask AI",
@@ -264,7 +267,8 @@
   "tb_ai-agents-knowledge-base": "Knowledge Base",
   "tb_ai-agents-agent-templates": "Agent Templates",
   "tb_ai-agents-content-ai": "Content AI",
-  "tb_agent-logs": "Agent Logs"
+  "tb_agent-logs": "Agent Logs",
+  "tb_ai-agents-ai-usage": "AI Usage"
  },
  "/ai-agents/agent-logs": {
   "sb_ask-ai": "Ask AI",
@@ -292,7 +296,8 @@
   "tb_ai-agents-knowledge-base": "Knowledge Base",
   "tb_ai-agents-agent-templates": "Agent Templates",
   "tb_ai-agents-content-ai": "Content AI",
-  "tb_agent-logs": "Agent Logs"
+  "tb_agent-logs": "Agent Logs",
+  "tb_ai-agents-ai-usage": "AI Usage"
  },
  "/ai-agents/agent-templates": {
   "sb_ask-ai": "Ask AI",
@@ -320,7 +325,8 @@
   "tb_ai-agents-knowledge-base": "Knowledge Base",
   "tb_ai-agents-agent-templates": "Agent Templates",
   "tb_ai-agents-content-ai": "Content AI",
-  "tb_agent-logs": "Agent Logs"
+  "tb_agent-logs": "Agent Logs",
+  "tb_ai-agents-ai-usage": "AI Usage"
  },
  "/vibe": {
   "sb_ask-ai": "Ask AI",
@@ -368,7 +374,8 @@
   "tb_ai-agents-knowledge-base": "Knowledge Base",
   "tb_ai-agents-agent-templates": "Agent Templates",
   "tb_ai-agents-content-ai": "Content AI",
-  "tb_agent-logs": "Agent Logs"
+  "tb_agent-logs": "Agent Logs",
+  "tb_ai-agents-ai-usage": "AI Usage"
  },
  "/ai-agents/voice-ai": {
   "sb_ask-ai": "Ask AI",
@@ -396,7 +403,8 @@
   "tb_ai-agents-knowledge-base": "Knowledge Base",
   "tb_ai-agents-agent-templates": "Agent Templates",
   "tb_ai-agents-content-ai": "Content AI",
-  "tb_agent-logs": "Agent Logs"
+  "tb_agent-logs": "Agent Logs",
+  "tb_ai-agents-ai-usage": "AI Usage"
  },
  "/automation/overview": {
   "sb_ask-ai": "Ask AI",
