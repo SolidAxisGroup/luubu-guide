@@ -25,28 +25,27 @@
   "tb_ai-agents-knowledge-base": "Knowledge Base",
   "tb_ai-agents-agent-templates": "Agent Templates",
   "tb_ai-agents-content-ai": "Content AI",
-  "tb_agent-logs": "Agent Logs",
-  "tb_ai-agents-ai-usage": "AI Usage"
+  "tb_agent-logs": "Agent Logs"
  },
  "/ai-agents/agent-studio": {
-  "sb_ask-ai": "Ask AI",
-  "sb_dashboard": "Dashboard",
-  "sb_conversations": "Conversations",
-  "sb_calendars": "Calendars",
-  "sb_contacts": "Contacts",
-  "sb_opportunities": "Opportunities",
-  "sb_payments": "Payments",
-  "sb_vibe": "AI Studio Beta",
-  "sb_AI Agents": "AI Agents",
-  "sb_email-marketing": "Marketing",
-  "sb_automation": "Automation",
-  "sb_sites": "Sites",
-  "sb_memberships": "Memberships",
-  "sb_app-media": "Media Storage",
-  "sb_reputation": "Reputation",
-  "sb_reporting": "Reporting",
-  "sb_app-marketplace": "App Marketplace",
-  "sb_settings": "Settings",
+  "sb_ask-ai": "",
+  "sb_dashboard": "",
+  "sb_conversations": "",
+  "sb_calendars": "",
+  "sb_contacts": "",
+  "sb_opportunities": "",
+  "sb_payments": "",
+  "sb_vibe": "",
+  "sb_AI Agents": "",
+  "sb_email-marketing": "",
+  "sb_automation": "",
+  "sb_sites": "",
+  "sb_memberships": "",
+  "sb_app-media": "",
+  "sb_reputation": "",
+  "sb_reporting": "",
+  "sb_app-marketplace": "",
+  "sb_settings": "",
   "tb_ai-agents-getting-started": "Getting Started",
   "tb_ai-agents-agent-studio": "Agent Studio",
   "tb_ai-agents-voice-ai": "Voice AI",
@@ -54,8 +53,7 @@
   "tb_ai-agents-knowledge-base": "Knowledge Base",
   "tb_ai-agents-agent-templates": "Agent Templates",
   "tb_ai-agents-content-ai": "Content AI",
-  "tb_agent-logs": "Agent Logs",
-  "tb_ai-agents-ai-usage": "AI Usage"
+  "tb_agent-logs": "Agent Logs"
  },
  "/funnels-websites/funnels": {
   "sb_ask-ai": "Ask AI",
@@ -218,8 +216,7 @@
   "tb_ai-agents-knowledge-base": "Knowledge Base",
   "tb_ai-agents-agent-templates": "Agent Templates",
   "tb_ai-agents-content-ai": "Content AI",
-  "tb_agent-logs": "Agent Logs",
-  "tb_ai-agents-ai-usage": "AI Usage"
+  "tb_agent-logs": "Agent Logs"
  },
  "/ai-agents/industry-agents": {
   "sb_ask-ai": "Ask AI",
@@ -267,8 +264,7 @@
   "tb_ai-agents-knowledge-base": "Knowledge Base",
   "tb_ai-agents-agent-templates": "Agent Templates",
   "tb_ai-agents-content-ai": "Content AI",
-  "tb_agent-logs": "Agent Logs",
-  "tb_ai-agents-ai-usage": "AI Usage"
+  "tb_agent-logs": "Agent Logs"
  },
  "/ai-agents/agent-logs": {
   "sb_ask-ai": "Ask AI",
@@ -296,8 +292,7 @@
   "tb_ai-agents-knowledge-base": "Knowledge Base",
   "tb_ai-agents-agent-templates": "Agent Templates",
   "tb_ai-agents-content-ai": "Content AI",
-  "tb_agent-logs": "Agent Logs",
-  "tb_ai-agents-ai-usage": "AI Usage"
+  "tb_agent-logs": "Agent Logs"
  },
  "/ai-agents/agent-templates": {
   "sb_ask-ai": "Ask AI",
@@ -325,8 +320,7 @@
   "tb_ai-agents-knowledge-base": "Knowledge Base",
   "tb_ai-agents-agent-templates": "Agent Templates",
   "tb_ai-agents-content-ai": "Content AI",
-  "tb_agent-logs": "Agent Logs",
-  "tb_ai-agents-ai-usage": "AI Usage"
+  "tb_agent-logs": "Agent Logs"
  },
  "/vibe": {
   "sb_ask-ai": "Ask AI",
@@ -374,8 +368,7 @@
   "tb_ai-agents-knowledge-base": "Knowledge Base",
   "tb_ai-agents-agent-templates": "Agent Templates",
   "tb_ai-agents-content-ai": "Content AI",
-  "tb_agent-logs": "Agent Logs",
-  "tb_ai-agents-ai-usage": "AI Usage"
+  "tb_agent-logs": "Agent Logs"
  },
  "/ai-agents/voice-ai": {
   "sb_ask-ai": "Ask AI",
@@ -403,8 +396,7 @@
   "tb_ai-agents-knowledge-base": "Knowledge Base",
   "tb_ai-agents-agent-templates": "Agent Templates",
   "tb_ai-agents-content-ai": "Content AI",
-  "tb_agent-logs": "Agent Logs",
-  "tb_ai-agents-ai-usage": "AI Usage"
+  "tb_agent-logs": "Agent Logs"
  },
  "/automation/overview": {
   "sb_ask-ai": "Ask AI",
