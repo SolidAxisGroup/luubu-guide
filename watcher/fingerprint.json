@@ -1082,8 +1082,7 @@
   "tb_countdown-timer": "Countdown Timers",
   "tb_trigger-links": "Trigger Links",
   "tb_affiliate-manager": "Affiliate Manager",
-  "tb_brand-boards": "Brand Boards",
-  "tb_ad-manager-home": "Ad Manager"
+  "tb_brand-boards": "Brand Boards"
  },
  "/marketing/countdown-timer": {
   "sb_ask-ai": "Ask AI",
@@ -1220,6 +1219,7 @@
   "tb_gokollab": "Gokollab Marketplace New"
  },
  "/memberships/certificates/create-certificates": {
+  "sb_ask-ai": "Ask AI",
   "sb_dashboard": "Dashboard",
   "sb_conversations": "Conversations",
   "sb_calendars": "Calendars",
